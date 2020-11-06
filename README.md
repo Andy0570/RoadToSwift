@@ -2,6 +2,7 @@
 Swift 教程搬运
 
 ### 目录
+* Swift 编程语言
 * （进行中）介绍：完全初学者的 Swift 编程
 
 
@@ -18,8 +19,8 @@ Swift 教程搬运
 
 
 
-### 友链
-
-* [中文版 Apple 官方 Swift 教程《The Swift Programming Language》](https://github.com/SwiftGGTeam/the-swift-programming-language-in-chinese)
-* [Swift 编程语言 - 可能是最用心的翻译了吧。](https://www.cnswift.org/)
+### 友情链接
 * [一些使用 Swift 的 iOS 教程 @GitHub](https://github.com/yrq110/some-ios-tutorials-with-swift-cn)
+* [[译] Swift 标准库源码阅读指南](https://xiaozhuanlan.com/topic/8732549601)
+* [[译] SE-0206 Hashable 加强](https://xiaozhuanlan.com/topic/1470362958)
+* [[译] 在 Codable 中实践类型推断](https://xiaozhuanlan.com/topic/8954630721)
