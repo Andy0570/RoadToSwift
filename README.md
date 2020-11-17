@@ -2,8 +2,11 @@
 Swift 教程搬运
 
 ### 目录
-* Swift 编程语言
+
 * （进行中）介绍：完全初学者的 Swift 编程
+* iOS 编程（第7版）
+* RayWenderlich.com
+* Swift 编程语言
 
 
 
@@ -16,6 +19,8 @@ Swift 教程搬运
 * [AppCoda](http://www.appcoda.com/)
 * [iOS-Blog](http://www.ios-blog.co.uk/)
 * [Jameson Quave](http://jamesonquave.com/)
+* [Swift Development Center](https://www.swiftdevcenter.com/)
+* [App Code Labs](https://appcodelabs.com/)
 
 
 
