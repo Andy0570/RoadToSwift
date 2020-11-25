@@ -29,3 +29,5 @@ Swift 教程搬运
 * [[译] Swift 标准库源码阅读指南](https://xiaozhuanlan.com/topic/8732549601)
 * [[译] SE-0206 Hashable 加强](https://xiaozhuanlan.com/topic/1470362958)
 * [[译] 在 Codable 中实践类型推断](https://xiaozhuanlan.com/topic/8954630721)
+* [Using Swift with Cocoa and Objective-C 中文手册](https://github.com/CocoaChina-editors/Welcome-to-Swift/blob/master/UsingSwiftwithCocoaandObjective-C%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C.md)
+
