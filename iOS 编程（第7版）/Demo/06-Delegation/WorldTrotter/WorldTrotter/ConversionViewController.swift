@@ -68,8 +68,12 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     
     // 在 storyboard 上添加一个手势识别器，并关联此方法
     // 关联动作：让文本输入框释放第一响应者，收起键盘
-    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
-        textField.resignFirstResponder()
+    @IBAction func dismissKeyboard(_ gestureRecognizer: UITapGestureRecognizer) {
+        guard gestureRecognizer.view != nil else { return }
+        
+        if gestureRecognizer.state == .ended {
+            textField.resignFirstResponder()
+        }
     }
     
     func updateCelsiusValue() {
