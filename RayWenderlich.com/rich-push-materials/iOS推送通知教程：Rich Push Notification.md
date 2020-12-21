@@ -566,7 +566,39 @@ private func loadPodcast(from notification: UNNotification) {
 将 `didReceive(_:)` 的方法体替换为以下内容：
 
 ```swift
+func didReceive(_ notification: UNNotification) {
+    // 1. 调用便捷方法从 Core Data 存储中加载 podcast. 这样就可以设置 podcast，以便以后使用。
+    loadPodcast(from: notification)
 
+    // 2. 将标题和正文标签设置为从推送通知中接收到的值。
+    let content = notification.request.content
+    podcastTitleLabel.text = content.subtitle
+    podcastBodyLabel.text = content.body
+
+    // 3. 尝试访问附加到服务扩展的媒体。如果没有，则提前返回。
+    // 调用 startAccessingSecurityScopedResource() 允许你访问附件。
+    guard
+      let attachment = content.attachments.first,
+      attachment.url.startAccessingSecurityScopedResource()
+      else {
+        return
+    }
+
+    // 4. 获取附件的URL。试图从磁盘中检索它，并将数据转换为图像。如果失败，提前返回。
+    let fileURLString = attachment.url
+
+    guard
+      let imageData = try? Data(contentsOf: fileURLString),
+      let image = UIImage(data: imageData)
+      else {
+        attachment.url.stopAccessingSecurityScopedResource()
+        return
+    }
+
+    // 5. 如果图像检索成功，设置播客图像并停止访问资源。
+    imageView.image = image
+    attachment.url.stopAccessingSecurityScopedResource()
+}
 ```
 
 一旦有推送通知进来，你要做的就是上面的事情。

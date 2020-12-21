@@ -72,7 +72,6 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
         // 5. 如果图像检索成功，设置播客图像并停止访问资源。
         imageView.image = image
         attachment.url.stopAccessingSecurityScopedResource()
-
     }
     
     // 从共享数据存储中加载播客
