@@ -1,0 +1,797 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		180DC61523C78D9800486B1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180DC61423C78D9800486B1A /* LaunchScreen.storyboard */; };
+		185CB1FC23C78CE6009F7571 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185CB1FB23C78CE6009F7571 /* AppDelegate.swift */; };
+		185CB1FE23C78CE6009F7571 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185CB1FD23C78CE6009F7571 /* SceneDelegate.swift */; };
+		185CB20323C78CE6009F7571 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185CB20123C78CE6009F7571 /* Main.storyboard */; };
+		185CB20523C78CE8009F7571 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 185CB20423C78CE8009F7571 /* Assets.xcassets */; };
+		22B5CAEA2590731F00C78FA1 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B5CAE92590731F00C78FA1 /* NotificationService.swift */; };
+		22B5CAEE2590731F00C78FA1 /* WendercastNotificationService.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 22B5CAE72590731F00C78FA1 /* WendercastNotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		22B5CAF42590732F00C78FA1 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998BDA9C23DE3615006336AE /* ImageDownloader.swift */; };
+		22B5CAF72590733100C78FA1 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998BDA9D23DE3615006336AE /* NetworkError.swift */; };
+		22B5CB0D259081C000C78FA1 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99929E5A23DE838900642305 /* UserNotifications.framework */; };
+		22B5CB0E259081C000C78FA1 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99929E5C23DE838900642305 /* UserNotificationsUI.framework */; };
+		22B5CB11259081C000C78FA1 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B5CB10259081C000C78FA1 /* NotificationViewController.swift */; };
+		22B5CB18259081C000C78FA1 /* WendercastNotificationContent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 22B5CB0C259081C000C78FA1 /* WendercastNotificationContent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		22B5CB24259085C300C78FA1 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22B5CB23259085C300C78FA1 /* MainInterface.storyboard */; };
+		22B5CB28259086AB00C78FA1 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B0DC7523DE342B001FEFB3 /* CoreDataManager.swift */; };
+		22B5CB2C259086B100C78FA1 /* PodcastItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B0DC7E23DE3490001FEFB3 /* PodcastItem.swift */; };
+		22B5CB30259086B400C78FA1 /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B0DC7223DE338A001FEFB3 /* Podcast.swift */; };
+		22B5CB34259086BC00C78FA1 /* DiskCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B0DC8023DE349D001FEFB3 /* DiskCacheManager.swift */; };
+		22B5CB38259086C900C78FA1 /* Wendercast.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 998BDAA023DE3776006336AE /* Wendercast.xcdatamodeld */; };
+		992BBBFD23DFB77A0089DA6F /* Notification+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992BBBFC23DFB77A0089DA6F /* Notification+Name.swift */; };
+		998BDA9E23DE3615006336AE /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998BDA9C23DE3615006336AE /* ImageDownloader.swift */; };
+		998BDA9F23DE3615006336AE /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998BDA9D23DE3615006336AE /* NetworkError.swift */; };
+		998BDAA223DE3776006336AE /* Wendercast.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 998BDAA023DE3776006336AE /* Wendercast.xcdatamodeld */; };
+		9997375523DB61F0004664BB /* PushIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9997375423DB61F0004664BB /* PushIdentifiers.swift */; };
+		9997376023DB6365004664BB /* PodcastStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9997375F23DB6365004664BB /* PodcastStore.swift */; };
+		9997376223DB6383004664BB /* PodcastFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9997376123DB6383004664BB /* PodcastFeedLoader.swift */; };
+		9997376423DB639E004664BB /* DateParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9997376323DB639E004664BB /* DateParser.swift */; };
+		9997376623DB63D4004664BB /* SWXMLHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9997376523DB63D4004664BB /* SWXMLHash.swift */; };
+		9997376823DB6421004664BB /* UIColor+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9997376723DB6421004664BB /* UIColor+Theme.swift */; };
+		9997378823DB658A004664BB /* PodcastFeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9997378723DB658A004664BB /* PodcastFeedTableViewController.swift */; };
+		9997378A23DB65A4004664BB /* PodcastItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9997378923DB65A4004664BB /* PodcastItemViewController.swift */; };
+		9997378D23DB65C1004664BB /* PodcastItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9997378C23DB65C1004664BB /* PodcastItemCell.swift */; };
+		99B0DC7323DE338A001FEFB3 /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B0DC7223DE338A001FEFB3 /* Podcast.swift */; };
+		99B0DC7623DE342B001FEFB3 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B0DC7523DE342B001FEFB3 /* CoreDataManager.swift */; };
+		99B0DC7F23DE3490001FEFB3 /* PodcastItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B0DC7E23DE3490001FEFB3 /* PodcastItem.swift */; };
+		99B0DC8223DE349E001FEFB3 /* DiskCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B0DC8023DE349D001FEFB3 /* DiskCacheManager.swift */; };
+		99B0DC8323DE349E001FEFB3 /* PodcastCacheLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B0DC8123DE349E001FEFB3 /* PodcastCacheLoader.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		22B5CAEC2590731F00C78FA1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 185CB1F023C78CE6009F7571 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22B5CAE62590731F00C78FA1;
+			remoteInfo = WendercastNotificationService;
+		};
+		22B5CB16259081C000C78FA1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 185CB1F023C78CE6009F7571 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22B5CB0B259081C000C78FA1;
+			remoteInfo = WendercastNotificationContent;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		99929E4F23DE809D00642305 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				22B5CAEE2590731F00C78FA1 /* WendercastNotificationService.appex in Embed App Extensions */,
+				22B5CB18259081C000C78FA1 /* WendercastNotificationContent.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		180DC61423C78D9800486B1A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		185CB1F823C78CE6009F7571 /* Wendercast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wendercast.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		185CB1FB23C78CE6009F7571 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		185CB1FD23C78CE6009F7571 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		185CB20223C78CE6009F7571 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		185CB20423C78CE8009F7571 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		185CB20923C78CE8009F7571 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22B5CAE72590731F00C78FA1 /* WendercastNotificationService.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WendercastNotificationService.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		22B5CAE92590731F00C78FA1 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		22B5CAEB2590731F00C78FA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22B5CB0C259081C000C78FA1 /* WendercastNotificationContent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WendercastNotificationContent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		22B5CB10259081C000C78FA1 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		22B5CB15259081C000C78FA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22B5CB1F2590848100C78FA1 /* WendercastNotificationContent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WendercastNotificationContent.entitlements; sourceTree = "<group>"; };
+		22B5CB23259085C300C78FA1 /* MainInterface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		992BBBFC23DFB77A0089DA6F /* Notification+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Name.swift"; sourceTree = "<group>"; };
+		998BDA9C23DE3615006336AE /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		998BDA9D23DE3615006336AE /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		998BDAA123DE3776006336AE /* Wendercast.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Wendercast.xcdatamodel; sourceTree = "<group>"; };
+		99929E5A23DE838900642305 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		99929E5C23DE838900642305 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
+		99929E7223DF5ABA00642305 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		9997375223DB6182004664BB /* Wendercast.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Wendercast.entitlements; sourceTree = "<group>"; };
+		9997375423DB61F0004664BB /* PushIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushIdentifiers.swift; sourceTree = "<group>"; };
+		9997375F23DB6365004664BB /* PodcastStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastStore.swift; sourceTree = "<group>"; };
+		9997376123DB6383004664BB /* PodcastFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastFeedLoader.swift; sourceTree = "<group>"; };
+		9997376323DB639E004664BB /* DateParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateParser.swift; sourceTree = "<group>"; };
+		9997376523DB63D4004664BB /* SWXMLHash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWXMLHash.swift; sourceTree = "<group>"; };
+		9997376723DB6421004664BB /* UIColor+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Theme.swift"; sourceTree = "<group>"; };
+		9997378723DB658A004664BB /* PodcastFeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastFeedTableViewController.swift; sourceTree = "<group>"; };
+		9997378923DB65A4004664BB /* PodcastItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastItemViewController.swift; sourceTree = "<group>"; };
+		9997378C23DB65C1004664BB /* PodcastItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastItemCell.swift; sourceTree = "<group>"; };
+		99B0DC7223DE338A001FEFB3 /* Podcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcast.swift; sourceTree = "<group>"; };
+		99B0DC7523DE342B001FEFB3 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		99B0DC7E23DE3490001FEFB3 /* PodcastItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodcastItem.swift; sourceTree = "<group>"; };
+		99B0DC8023DE349D001FEFB3 /* DiskCacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskCacheManager.swift; sourceTree = "<group>"; };
+		99B0DC8123DE349E001FEFB3 /* PodcastCacheLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodcastCacheLoader.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		185CB1F523C78CE6009F7571 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22B5CAE42590731F00C78FA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22B5CB09259081C000C78FA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22B5CB0E259081C000C78FA1 /* UserNotificationsUI.framework in Frameworks */,
+				22B5CB0D259081C000C78FA1 /* UserNotifications.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		185CB1EF23C78CE6009F7571 = {
+			isa = PBXGroup;
+			children = (
+				185CB1FA23C78CE6009F7571 /* Wendercast */,
+				22B5CAE82590731F00C78FA1 /* WendercastNotificationService */,
+				22B5CB0F259081C000C78FA1 /* WendercastNotificationContent */,
+				185CB1F923C78CE6009F7571 /* Products */,
+				9997379023DB65E8004664BB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		185CB1F923C78CE6009F7571 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				185CB1F823C78CE6009F7571 /* Wendercast.app */,
+				22B5CAE72590731F00C78FA1 /* WendercastNotificationService.appex */,
+				22B5CB0C259081C000C78FA1 /* WendercastNotificationContent.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		185CB1FA23C78CE6009F7571 /* Wendercast */ = {
+			isa = PBXGroup;
+			children = (
+				9997375023DB6097004664BB /* App */,
+				9997378423DB6545004664BB /* ViewControllers */,
+				9997378B23DB65AD004664BB /* Views */,
+				9997375323DB61E0004664BB /* Model */,
+				9997375C23DB6328004664BB /* Helpers */,
+				99B0DC7923DE3486001FEFB3 /* Network */,
+				9997375123DB60A7004664BB /* Resources */,
+			);
+			path = Wendercast;
+			sourceTree = "<group>";
+		};
+		22B5CAE82590731F00C78FA1 /* WendercastNotificationService */ = {
+			isa = PBXGroup;
+			children = (
+				22B5CAE92590731F00C78FA1 /* NotificationService.swift */,
+				22B5CAEB2590731F00C78FA1 /* Info.plist */,
+			);
+			path = WendercastNotificationService;
+			sourceTree = "<group>";
+		};
+		22B5CB0F259081C000C78FA1 /* WendercastNotificationContent */ = {
+			isa = PBXGroup;
+			children = (
+				22B5CB23259085C300C78FA1 /* MainInterface.storyboard */,
+				22B5CB1F2590848100C78FA1 /* WendercastNotificationContent.entitlements */,
+				22B5CB10259081C000C78FA1 /* NotificationViewController.swift */,
+				22B5CB15259081C000C78FA1 /* Info.plist */,
+			);
+			path = WendercastNotificationContent;
+			sourceTree = "<group>";
+		};
+		9997375023DB6097004664BB /* App */ = {
+			isa = PBXGroup;
+			children = (
+				185CB1FB23C78CE6009F7571 /* AppDelegate.swift */,
+				185CB1FD23C78CE6009F7571 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		9997375123DB60A7004664BB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				185CB20123C78CE6009F7571 /* Main.storyboard */,
+				185CB20423C78CE8009F7571 /* Assets.xcassets */,
+				180DC61423C78D9800486B1A /* LaunchScreen.storyboard */,
+				9997375223DB6182004664BB /* Wendercast.entitlements */,
+				185CB20923C78CE8009F7571 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9997375323DB61E0004664BB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				99B0DC7523DE342B001FEFB3 /* CoreDataManager.swift */,
+				9997375423DB61F0004664BB /* PushIdentifiers.swift */,
+				99B0DC7223DE338A001FEFB3 /* Podcast.swift */,
+				99B0DC7E23DE3490001FEFB3 /* PodcastItem.swift */,
+				998BDAA023DE3776006336AE /* Wendercast.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9997375C23DB6328004664BB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9997375F23DB6365004664BB /* PodcastStore.swift */,
+				9997376123DB6383004664BB /* PodcastFeedLoader.swift */,
+				9997376523DB63D4004664BB /* SWXMLHash.swift */,
+				9997376723DB6421004664BB /* UIColor+Theme.swift */,
+				9997376323DB639E004664BB /* DateParser.swift */,
+				99B0DC8123DE349E001FEFB3 /* PodcastCacheLoader.swift */,
+				99B0DC8023DE349D001FEFB3 /* DiskCacheManager.swift */,
+				992BBBFC23DFB77A0089DA6F /* Notification+Name.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9997378423DB6545004664BB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9997378723DB658A004664BB /* PodcastFeedTableViewController.swift */,
+				9997378923DB65A4004664BB /* PodcastItemViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9997378B23DB65AD004664BB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9997378C23DB65C1004664BB /* PodcastItemCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9997379023DB65E8004664BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99929E7223DF5ABA00642305 /* CoreData.framework */,
+				99929E5A23DE838900642305 /* UserNotifications.framework */,
+				99929E5C23DE838900642305 /* UserNotificationsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		99B0DC7923DE3486001FEFB3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				998BDA9C23DE3615006336AE /* ImageDownloader.swift */,
+				998BDA9D23DE3615006336AE /* NetworkError.swift */,
+			);
+			name = Network;
+			path = WendercastUtils/WendercastUtils/Network;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		185CB1F723C78CE6009F7571 /* Wendercast */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 185CB20C23C78CE8009F7571 /* Build configuration list for PBXNativeTarget "Wendercast" */;
+			buildPhases = (
+				185CB1F423C78CE6009F7571 /* Sources */,
+				185CB1F523C78CE6009F7571 /* Frameworks */,
+				185CB1F623C78CE6009F7571 /* Resources */,
+				99929E4F23DE809D00642305 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22B5CAED2590731F00C78FA1 /* PBXTargetDependency */,
+				22B5CB17259081C000C78FA1 /* PBXTargetDependency */,
+			);
+			name = Wendercast;
+			productName = MyRWTutorial;
+			productReference = 185CB1F823C78CE6009F7571 /* Wendercast.app */;
+			productType = "com.apple.product-type.application";
+		};
+		22B5CAE62590731F00C78FA1 /* WendercastNotificationService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22B5CAEF2590731F00C78FA1 /* Build configuration list for PBXNativeTarget "WendercastNotificationService" */;
+			buildPhases = (
+				22B5CAE32590731F00C78FA1 /* Sources */,
+				22B5CAE42590731F00C78FA1 /* Frameworks */,
+				22B5CAE52590731F00C78FA1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WendercastNotificationService;
+			productName = WendercastNotificationService;
+			productReference = 22B5CAE72590731F00C78FA1 /* WendercastNotificationService.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		22B5CB0B259081C000C78FA1 /* WendercastNotificationContent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22B5CB19259081C000C78FA1 /* Build configuration list for PBXNativeTarget "WendercastNotificationContent" */;
+			buildPhases = (
+				22B5CB08259081C000C78FA1 /* Sources */,
+				22B5CB09259081C000C78FA1 /* Frameworks */,
+				22B5CB0A259081C000C78FA1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WendercastNotificationContent;
+			productName = WendercastNotificationContent;
+			productReference = 22B5CB0C259081C000C78FA1 /* WendercastNotificationContent.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		185CB1F023C78CE6009F7571 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Ray Wenderlich";
+				TargetAttributes = {
+					185CB1F723C78CE6009F7571 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					22B5CAE62590731F00C78FA1 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					22B5CB0B259081C000C78FA1 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+				};
+			};
+			buildConfigurationList = 185CB1F323C78CE6009F7571 /* Build configuration list for PBXProject "Wendercast" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 185CB1EF23C78CE6009F7571;
+			productRefGroup = 185CB1F923C78CE6009F7571 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				185CB1F723C78CE6009F7571 /* Wendercast */,
+				22B5CAE62590731F00C78FA1 /* WendercastNotificationService */,
+				22B5CB0B259081C000C78FA1 /* WendercastNotificationContent */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		185CB1F623C78CE6009F7571 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				180DC61523C78D9800486B1A /* LaunchScreen.storyboard in Resources */,
+				185CB20523C78CE8009F7571 /* Assets.xcassets in Resources */,
+				185CB20323C78CE6009F7571 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22B5CAE52590731F00C78FA1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22B5CB0A259081C000C78FA1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22B5CB24259085C300C78FA1 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		185CB1F423C78CE6009F7571 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				998BDAA223DE3776006336AE /* Wendercast.xcdatamodeld in Sources */,
+				9997376023DB6365004664BB /* PodcastStore.swift in Sources */,
+				998BDA9E23DE3615006336AE /* ImageDownloader.swift in Sources */,
+				99B0DC7623DE342B001FEFB3 /* CoreDataManager.swift in Sources */,
+				99B0DC8323DE349E001FEFB3 /* PodcastCacheLoader.swift in Sources */,
+				9997378823DB658A004664BB /* PodcastFeedTableViewController.swift in Sources */,
+				9997376623DB63D4004664BB /* SWXMLHash.swift in Sources */,
+				998BDA9F23DE3615006336AE /* NetworkError.swift in Sources */,
+				9997378A23DB65A4004664BB /* PodcastItemViewController.swift in Sources */,
+				9997375523DB61F0004664BB /* PushIdentifiers.swift in Sources */,
+				185CB1FC23C78CE6009F7571 /* AppDelegate.swift in Sources */,
+				9997378D23DB65C1004664BB /* PodcastItemCell.swift in Sources */,
+				185CB1FE23C78CE6009F7571 /* SceneDelegate.swift in Sources */,
+				99B0DC7F23DE3490001FEFB3 /* PodcastItem.swift in Sources */,
+				99B0DC7323DE338A001FEFB3 /* Podcast.swift in Sources */,
+				9997376823DB6421004664BB /* UIColor+Theme.swift in Sources */,
+				99B0DC8223DE349E001FEFB3 /* DiskCacheManager.swift in Sources */,
+				992BBBFD23DFB77A0089DA6F /* Notification+Name.swift in Sources */,
+				9997376423DB639E004664BB /* DateParser.swift in Sources */,
+				9997376223DB6383004664BB /* PodcastFeedLoader.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22B5CAE32590731F00C78FA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22B5CAF72590733100C78FA1 /* NetworkError.swift in Sources */,
+				22B5CAF42590732F00C78FA1 /* ImageDownloader.swift in Sources */,
+				22B5CAEA2590731F00C78FA1 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22B5CB08259081C000C78FA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22B5CB28259086AB00C78FA1 /* CoreDataManager.swift in Sources */,
+				22B5CB38259086C900C78FA1 /* Wendercast.xcdatamodeld in Sources */,
+				22B5CB2C259086B100C78FA1 /* PodcastItem.swift in Sources */,
+				22B5CB34259086BC00C78FA1 /* DiskCacheManager.swift in Sources */,
+				22B5CB30259086B400C78FA1 /* Podcast.swift in Sources */,
+				22B5CB11259081C000C78FA1 /* NotificationViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		22B5CAED2590731F00C78FA1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22B5CAE62590731F00C78FA1 /* WendercastNotificationService */;
+			targetProxy = 22B5CAEC2590731F00C78FA1 /* PBXContainerItemProxy */;
+		};
+		22B5CB17259081C000C78FA1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22B5CB0B259081C000C78FA1 /* WendercastNotificationContent */;
+			targetProxy = 22B5CB16259081C000C78FA1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		185CB20123C78CE6009F7571 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				185CB20223C78CE6009F7571 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		185CB20A23C78CE8009F7571 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		185CB20B23C78CE8009F7571 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		185CB20D23C78CE8009F7571 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Wendercast/Resources/Wendercast.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A8F7U6DN75;
+				INFOPLIST_FILE = Wendercast/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Haidian.WenderCast;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		185CB20E23C78CE8009F7571 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Wendercast/Resources/Wendercast.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A8F7U6DN75;
+				INFOPLIST_FILE = Wendercast/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Haidian.WenderCast;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		22B5CAF02590731F00C78FA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A8F7U6DN75;
+				INFOPLIST_FILE = WendercastNotificationService/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Haidian.WenderCast.WendercastNotificationService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		22B5CAF12590731F00C78FA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A8F7U6DN75;
+				INFOPLIST_FILE = WendercastNotificationService/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Haidian.WenderCast.WendercastNotificationService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		22B5CB1A259081C000C78FA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = WendercastNotificationContent/WendercastNotificationContent.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A8F7U6DN75;
+				INFOPLIST_FILE = WendercastNotificationContent/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Haidian.WenderCast.WendercastNotificationContent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		22B5CB1B259081C000C78FA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = WendercastNotificationContent/WendercastNotificationContent.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A8F7U6DN75;
+				INFOPLIST_FILE = WendercastNotificationContent/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Haidian.WenderCast.WendercastNotificationContent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		185CB1F323C78CE6009F7571 /* Build configuration list for PBXProject "Wendercast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				185CB20A23C78CE8009F7571 /* Debug */,
+				185CB20B23C78CE8009F7571 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		185CB20C23C78CE8009F7571 /* Build configuration list for PBXNativeTarget "Wendercast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				185CB20D23C78CE8009F7571 /* Debug */,
+				185CB20E23C78CE8009F7571 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22B5CAEF2590731F00C78FA1 /* Build configuration list for PBXNativeTarget "WendercastNotificationService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22B5CAF02590731F00C78FA1 /* Debug */,
+				22B5CAF12590731F00C78FA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22B5CB19259081C000C78FA1 /* Build configuration list for PBXNativeTarget "WendercastNotificationContent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22B5CB1A259081C000C78FA1 /* Debug */,
+				22B5CB1B259081C000C78FA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		998BDAA023DE3776006336AE /* Wendercast.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				998BDAA123DE3776006336AE /* Wendercast.xcdatamodel */,
+			);
+			currentVersion = 998BDAA123DE3776006336AE /* Wendercast.xcdatamodel */;
+			path = Wendercast.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 185CB1F023C78CE6009F7571 /* Project object */;
+}

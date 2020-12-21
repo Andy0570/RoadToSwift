@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19C57" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Podcast" representedClassName="Podcast" syncable="YES" codeGenerationType="category">
+        <attribute name="detail" attributeType="String"/>
+        <attribute name="isFavorite" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="link" attributeType="String"/>
+        <attribute name="publishedDate" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="streamingURL" attributeType="URI"/>
+        <attribute name="title" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="Podcast" positionX="-63" positionY="-18" width="128" height="133"/>
+    </elements>
+</model>
