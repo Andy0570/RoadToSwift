@@ -127,7 +127,7 @@ print("min is \(bounds.min) and max is \(bounds.max)")
 
 ### 可选元组返回类型
 
-如果函数返回的元组类型有可能整个元组都“没有值”，你可以使用可选的 元组返回类型反映整个元组可以是 `nil` 的事实。
+如果函数返回的元组类型有可能整个元组都“没有值”，你可以使用可选的元组返回类型反映整个元组可以是 `nil` 的事实。
 
 > 可选元组类型如 `(Int, Int)?` 与元组包含可选类型如 `(Int?, Int?)` 是不同的。可选的元组类型，整个元组是可选的，而不只是元组中的每个元素值。
 
@@ -135,6 +135,7 @@ print("min is \(bounds.min) and max is \(bounds.max)")
 ```swift
 func minMax(array: [Int]) -> (min: Int, max: Int)? {
     if array.isEmpty { return nil }
+  
     var currentMin = array[0]
     var currentMax = array[0]
     for value in array[1..<array.count] {
@@ -398,6 +399,7 @@ func chooseStepFunction(backward: Bool) -> (Int) -> Int {
     func stepBackward(input: Int) -> Int { return input - 1 }
     return backward ? stepBackward : stepForward
 }
+
 var currentValue = -4
 let moveNearerToZero = chooseStepFunction(backward: currentValue > 0)
 // moveNearerToZero now refers to the nested stepForward() function

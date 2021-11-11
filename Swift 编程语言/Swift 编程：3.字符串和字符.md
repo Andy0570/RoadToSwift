@@ -48,9 +48,9 @@ till you come to the end; then stop."
 ## 初始化空字符串
 
 ```swift
+// 两个字符串均为空并且等价
 var emptyString = ""               // 空字符串字面量
 var anotherEmptyString = String()  // 初始化方法
-// 两个字符串均为空并等价。
 ```
 
 你可以通过检查 `Bool` 类型的 `isEmpty` 属性来判断该字符串是否为空：

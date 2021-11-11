@@ -6,7 +6,7 @@
 * 定义方法用于提供功能；
 * 定义下标脚本用来允许使用下标语法访问值；
 * 定义初始化器用于初始化状态；
-* 可以被扩展来默认所没有的功能；
+* 通过扩展以增加默认实现之外的功能；
 * 遵循协议来针对特定类型提供标准功能。
 
 类有而结构体没有的额外功能：
@@ -46,7 +46,7 @@ class VideoMode {
     var name: String?      // 视频名称，可选项 String 类型。
 }
 
-// 通过初始化器语法创建结构体和类的实例
+// 通过「初始化器语法」创建结构体和类的实例
 let someResolution = Resolution()
 let someVideoMode = VideoMode()
 
@@ -56,7 +56,6 @@ let vga = Resolution(width: 640, height: 480)
 
 
 💡 结构体和枚举是值类型，类是引用类型。
-
 
 
 

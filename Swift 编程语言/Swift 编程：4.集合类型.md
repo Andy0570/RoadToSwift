@@ -9,18 +9,15 @@ Swift 中数组的完整写法为 `Array<Element>`，其中 Element 是这个数
 // 使用构造语法来创建一个由特定数据类型构成的空数组
 var someInts = [Int]()
 
-
 // 创建一个带有默认值的数组
 // threeDoubles 是一种 [Double] 数组，等价于 [0.0, 0.0, 0.0]
 var threeDoubles = Array(repeating: 0.0, count: 3)
-
 
 // 通过两个数组相加（+）创建一个数组
 var threeDoubles = Array(repeating: 0.0, count: 3)        // [0.0, 0.0, 0.0]
 var anotherThreeDoubles = Array(repeating: 2.5, count: 3) // [2.5, 2.5, 2.5]
 // sixDoubles 被推断为 [Double]，等价于 [0.0, 0.0, 0.0, 2.5, 2.5, 2.5]
 var sixDoubles = threeDoubles + anotherThreeDoubles
-
 
 // 数组字面量
 var arrays = [value1, value2, value3]
@@ -33,7 +30,6 @@ var shoppingList = ["Eggs", "Milk"]
 // 使用数组的只读属性 count 来获取数组中的数据项数量
 Array.count
 
-
 // 使用布尔属性 isEmpty 作为一个缩写形式去检查 count 属性是否为 0：
 if shoppingList.isEmpty {
     print("The shopping list is empty.")
@@ -41,31 +37,24 @@ if shoppingList.isEmpty {
     print("The shopping list is not empty.")
 }
 
-
 // 使用 append(_:) 方法在数组后面添加新的数据项
 Array.append(_:)
-
 
 // 使用加法赋值运算符（+=）直接将另一个相同类型数组中的数据添加到该数组后面
 shoppingList += ["Baking Powder"]
 
-
 // 使用下标语法获取/改变数组中的数据项
 Array[index]
 
-
 // 利用下标来一次改变一系列数据值
 shoppingList[4...6] = ["Bananas", "Apples"]
-
 
 // 使用 insert(_:at:) 方法在某个指定索引值之前添加数据项
 // 现在是这个列表中的第一项是“Maple Syrup”
 shoppingList.insert("Maple Syrup", at: 0)
 
-
 // 使用 remove(at:) 方法移除数组中的某一项
 let mapleSyrup = shoppingList.remove(at: 0)
-
 
 // 使用 removeLast() 方法移除数组中的最后一项
 let apples = shoppingList.removeLast()
@@ -98,7 +87,6 @@ Swift 中的集合类型被写为 `Set<Element>`，这里的 Element 表示集�
 // 创建和构造一个空的集合
 var letters = Set<Character>()
 
-
 // 数组字面量，Set 类型必须显式声明
 var favoriteGenres: Set<String> = ["Rock", "Classical", "Hip hop"]
 // 简化方式
@@ -112,7 +100,6 @@ var favoriteGenres: Set = ["Rock", "Classical", "Hip hop"]
 // 获取集合中元素的数量
 Set.count
 
-
 // 使用布尔属性 isEmpty 作为一个缩写形式去检查 count 属性是否为 0
 if favoriteGenres.isEmpty {
     print("As far as music goes, I'm not picky.")
@@ -120,10 +107,8 @@ if favoriteGenres.isEmpty {
     print("I have particular music preferences.")
 }
 
-
 // 添加元素 insert(_:)
 favoriteGenres.insert("Jazz")
-
 
 // 删除元素 remove(_:)
 if let removedGenre = favoriteGenres.remove("Rock") {
@@ -132,9 +117,7 @@ if let removedGenre = favoriteGenres.remove("Rock") {
     print("I never much cared for that.")
 }
 
-
 // 删除所有元素 removeAll()
-
 
 // 检查是否包含一个特定元素 contains(_:)
 if favoriteGenres.contains("Funk") {
@@ -151,7 +134,6 @@ if favoriteGenres.contains("Funk") {
 for genre in favoriteGenres {
     print("\(genre)")
 }
-
 
 // 按照特定顺序遍历 sorted() 
 for genre in favoriteGenres.sorted() {
@@ -191,7 +173,6 @@ for genre in favoriteGenres.sorted() {
 // namesOfIntegers 是一个空的 [Int: String] 字典
 var namesOfIntegers = [Int: String]()
 
-
 // 字典字面量
 var airports: [String: String] = ["YYZ": "Toronto Pearson", "DUB": "Dublin"]
 // 简化形式
@@ -205,14 +186,12 @@ var airports = ["YYZ": "Toronto Pearson", "DUB": "Dublin"]
 // 获取字典的数据项数量
 Dictionary.count
 
-
 // 使用布尔属性 isEmpty 作为一个缩写形式去检查 count 属性是否为 0
 if airports.isEmpty {
     print("The airports dictionary is empty.")
 } else {
     print("The airports dictionary is not empty.")
 }
-
 
 // 使用 updateValue(_:forKey:) 方法添加/修改数据项
 // 使用下标语法添加/修改数据项
@@ -249,14 +228,12 @@ for value in dictionary.values {
     print(value)
 }
 
-
 // 直接使用 keys 或者 values 属性构造一个新数组
 let airportCodes = [String](airports.keys)
 // airportCodes 是 ["YYZ", "LHR"]
 
 let airportNames = [String](airports.values)
 // airportNames 是 ["Toronto Pearson", "London Heathrow"]
-
 
 // 使用 sorted() 方法以特定的顺序遍历字典的键或值
 ```

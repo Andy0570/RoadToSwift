@@ -28,7 +28,7 @@ func swapTwoValues<T>(_ a: inout T, _ b: inout T) {
 
 > 💡 
 > 类型参数就是，在泛型函数中，用尖括号 `<>` 扩起来的首字母大写的参数。
-> 相当于一个类型的占位符，声明的时候咱也不知道它是什么类型，它只是充当类似“形式参数”的作用，起一个占位符作用，因此可以用于任意类型，抽象程度高了，适用性就广
+> 相当于一个类型的占位符，声明的时候咱也不知道它是什么类型，它只是充当类似“形式参数”的作用，起一个占位符作用，因此可以用于任意类型，抽象程度高了，适用性就广。
 
 
 
@@ -128,6 +128,7 @@ func someFunction<T: SomeClass, U: SomeProtocol>(someT: T, someU: U) {
 #### 普通函数：在一个 `String` 数组中查找给定 `String` 值的索引
 
 ```swift
+// 这个查找函数只支持 String 类型
 func findIndex(ofString valueToFind: String, in array: [String]) -> Int? {
     for (index, value) in array.enumerated() {
         if value == valueToFind {

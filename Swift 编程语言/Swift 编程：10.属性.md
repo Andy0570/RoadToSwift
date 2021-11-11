@@ -8,13 +8,13 @@
 ```Swift
 // 定义一个名为 FixedLengthRange 固定长度范围的结构体
 struct FixedLengthRange {
-    var firstVale: Int // 变量存储属性
+    var firstValue: Int // 变量存储属性
     let length: Int    // 常量存储属性
 }
 
-var rangeOfThreeItems = FixedLengthRange(firstVale: 0, length: 3)
+var rangeOfThreeItems = FixedLengthRange(firstValue: 0, length: 3)
 // 该范围代表了整形值 0，1 和 2
-rangeOfThreeItems.firstVale = 6
+rangeOfThreeItems.firstValue = 6
 // 现在，该范围代表了整形值 6，7 和 8
 ```
 
@@ -23,9 +23,14 @@ rangeOfThreeItems.firstVale = 6
 **如果你创建了一个结构体的实例并且把这个实例赋给常量，你不能修改这个实例的属性，即使是声明为变量的属性**：
 
 ```Swift
-let rangeofFourItems = FixedLengthRange(firstVale: 0, length: 4)
+struct FixedLengthRange {
+    var firstValue: Int
+    let length: Int
+}
+
+let rangeofFourItems = FixedLengthRange(firstValue: 0, length: 4)
 // 该范围代表了整形值 0，1，2 和 3
-rangeofFourItems.firstVale = 6
+rangeofFourItems.firstValue = 6
 // error: cannot assign to property: 'rangeofFourItems' is a 'let' constant
 ```
 
@@ -48,18 +53,16 @@ rangeofFourItems.firstVale = 6
 > 💡 类似 Objective-C 中的 Lazy Loading 机制（通过重写属性的 `Getter` 方法实现），很显然，Swift 中的语法更简洁。
 
 ```Swift
-class DataImporter {
-    
-    // DataImporter 是一个用于从外部文件中导入数据的类
-    // 假定该类需要花费大量的时间来初始化
-    
+// DataImporter 是一个用于从外部文件中导入数据的类
+// 假定该类需要花费大量的时间来初始化
+class DataImporter {    
     var fileNmae = "data.txt"
     // DataImporter 类将在这里提供数据导入功能
 }
 
 class DataManager {
     lazy var importer = DataImporter()
-    var data = [String]()
+    var data = [String]() // 存储属性，初始化为一个包含 String 类型的空数组
     // DataManager 类将在这里提供数据管理功能
 }
 
@@ -114,8 +117,10 @@ struct Size {
 // Rect 结构体，封装了一个长方形，包括原点坐标和大小
 // Rect 结构还有个名为 center 的计算属性
 struct Rect {
-    var origin = Point()
-    var size = Size()
+    var origin = Point() // 原点坐标
+    var size = Size()    // 尺寸大小
+  
+    // center 是一个计算属性
     var center: Point {
         get {
             let centerX = origin.x + (size.width / 2)
@@ -205,6 +210,7 @@ struct CompactRect {
 ```swift
 struct Cuboid {
     var width = 0.0, height = 0.0, depth = 0.0
+  
     // 该长方体的体积（volume）是一个只读计算属性
     var volume: Double {
         return width * height * depth
@@ -227,7 +233,7 @@ print("the volume of fourByFiveByTwo is \(fourByFiveByTwo.volume)")
 * 你继承的存储属性；
 * 你继承的计算属性。
 
-对于继承的属性，你可以通过在子类里重写属性来添加属性观察者。对于你定义的计算属性，使用属性的设置器来观察和响应值变化，而不是创建观察者。
+对于继承的属性，你可以通过在子类里重写属性来添加属性观察者。对于你定义的计算属性，使用属性的设置器来观察和响应值的变化，而不是创建观察者。
 
 你可以选择将这些观察者或其中之一定义在属性上：
 
@@ -281,6 +287,7 @@ stepCounter.totalSteps = 896
 要定义一个包装，你可创建一个**结构体**、**枚举**或者**定义了 `wrappedValue` 属性的类**。
 
 ```swift
+// 声明该结构体遵守 @propertyWrapper 协议，并定义 wrappedValue 属性。
 // 定义一个 TwelveOrLess 结构体，它确保内部的数字永远小于 12.
 @propertyWrapper
 struct TwelveOrLess {
@@ -317,12 +324,16 @@ print(rectangle.height)
 当你给属性应用包装时，编译器会**为包装生成提供存储的代码**以及**通过包装访问属性**的代码。（属性包装负责存储包装了的值，所以不需要合成代码。）你也可以自己写应用属性包装行为的代码，不使用特殊特性语法带来的优势。比如，这里有一个前面 `SmallRectangle` 的例子，它在 `TwelveOrLess` 结构体中显式地包装了自己的属性，而不是用 `@TwelveOrLess` 这个特性：
 
 ```swift
+// 自己实现属性包装行为，不使用 @propertyWrapper 特性
+
 // 一个保存四边形的结构体
 struct SmallRectangle {
+    // 计算属性
     // _height、_width 属性存储了一个属性包装的实例 TwelveOrLess
     private var _height = TwelveOrLess()
     private var _width = TwelveOrLess()
     
+    // 存储属性
     // height、width 的 getter 和 setter 包装了 wrappedValue 属性的值
     var height: Int {
         get { return _height.wrappedValue }
@@ -337,7 +348,7 @@ struct SmallRectangle {
 
 ### 设定包装属性的初始值
 
-上面例子中的代码通过在结构体 `TwelveOrLess` 的定义中给 `number` 初始值来给包装属性设定初始值。使用属性包装的代码，不能为被 `TwelveOrLess` 包装的属性设置不同的初始值 —— 比如过， `SmallRectangle` 的定义中，不能给 `height` 或者 `width` 初始值。要支持设置初始值或者其他自定义，属性包装必须**添加初始化器**。这里有一个 `TwelveOrLess` 的扩展版本叫做 `SmallNumber` ，它定义了一个初始化器来设置包装了的最大值：
+上面例子中的代码通过在结构体 `TwelveOrLess` 的定义中给 `number` 初始值来给包装属性设定初始值。使用属性包装的代码，不能为被 `TwelveOrLess` 包装的属性设置不同的初始值 —— 比如说， `SmallRectangle` 的定义中，不能给 `height` 或者 `width` 初始值。要支持设置初始值或者其他自定义，属性包装必须**添加初始化器**。这里有一个 `TwelveOrLess` 的扩展版本叫做 `SmallNumber` ，它定义了一个初始化器来设置包装了的最大值：
 
 > 💡 为「属性包装」添加初始化方法。
 
@@ -352,7 +363,7 @@ struct SmallNumber {
         set { number = min(newValue, maximum) }
     }
     
-    // MARK: 添加三个初始化器
+    // 为「属性包装」添加初始化器
     init() {
         maximum = 12
         number = 0

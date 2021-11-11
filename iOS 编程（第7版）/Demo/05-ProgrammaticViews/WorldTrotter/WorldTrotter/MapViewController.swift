@@ -21,7 +21,7 @@ class MapViewController: UIViewController {
         
         // 添加一个 segmentedController
         let segmentedController = UISegmentedControl(items: ["Standard", "Hybrid", "Satellite"])
-        segmentedController.backgroundColor = UIColor.systemBackground;
+        segmentedController.backgroundColor = UIColor.systemBackground
         segmentedController.selectedSegmentIndex = 0
         
         // 添加 target-action
@@ -53,10 +53,13 @@ class MapViewController: UIViewController {
     @objc func mapTypeChanged(_ segControl: UISegmentedControl) {
         switch segControl.selectedSegmentIndex {
         case 0:
+            // 标准地图
             mapView.mapType = .standard
         case 1:
+            // 混合地图
             mapView.mapType = .hybrid
         case 2:
+            // 卫星地图
             mapView.mapType = .satellite
         default:
             break

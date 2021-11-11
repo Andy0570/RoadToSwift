@@ -2,7 +2,6 @@
 
 ## 实例方法
 
-
 **实例方法** 是属于特定类实例、结构体实例或者枚举实例的函数。他们为这些实例提供功能性，要么通过提供访问和修改实例属性的方法，要么通过提供与实例目的相关的功能。实例方法与**函数**的语法完全相同。
 
 要写一个实例方法，你需要把它放在对应类的花括号之间。实例方法默认可以访问同类下所有其他实例方法和属性。实例方法只能在类型的具体实例里被调用。它不能在独立于实例而被调用。
@@ -45,7 +44,7 @@ func increment() {
 
 实际上，你不需要经常在代码中写 `self`。如果你没有显式地写出 `self`，Swift 会在你于方法中使用已知属性或者方法的时候假定你是调用了当前实例中的属性或者方法。这个假定通过在 `Counter` 的三个实例中使用 `count`（而不是 `self.count`）来做了示范。
 
-对于这个规则的一个重要例外就是**当一个实例方法的形式参数名与实例中某个属性拥有相同的名字的时候**。在这种情况下，**形式参数名具有优先权**，并且调用属性的时候使用更加严谨的方式就很有必要了。你可以使用 self 属性来区分形式参数名和属性名。
+对于这个规则的一个重要例外就是**当一个实例方法的形式参数名与实例中某个属性拥有相同的名字的时候**。在这种情况下，**形式参数名具有优先权**，并且调用属性的时候使用更加严谨的方式就很有必要了。你可以使用 `self` 属性来区分形式参数名和属性名。
 这时， `self` 就避免了叫做 x 的方法形式参数还是同样叫做 x 的实例属性这样的歧义。
 
 
@@ -132,7 +131,7 @@ orenLight.next()
 
 ## 类型方法
 
-如上文描述的那样，实例方法是特定类型实例中调用的方法。你同样可以定义在类型本身调用的方法。这类方法被称作类型方法。你可以通过在 `func` 关键字之前使用 `static` 关键字来明确一个**类型方法**。类同样可以使用 `class` 关键字来**允许子类重写父类对类型方法的实现**。
+实例方法是特定类型实例中调用的方法。你同样可以定义在类型本身调用的方法。这类方法被称作类型方法。你可以通过在 `func` 关键字之前使用 `static` 关键字来明确一个**类型方法**。类同样可以使用 `class` 关键字来**允许子类重写父类对类型方法的实现**。
 
 类型方法和实例方法一样使用点语法调用。不过，你得在类上调用类型方法，而不是这个类的实例。接下来是一个在 `SomeClass` 类里调用类型方法的栗子：
 
@@ -144,5 +143,57 @@ class SomeClass {
 }
 
 SomeClass.someTypeMethod()
+```
+
+示例：
+
+```swift
+// LevelTracker 结构体持续追踪任意玩家解锁的最高等级
+struct LevelTracker {
+    static var highestUnlockedLevel = 1
+    var currentLevel = 1
+    
+    // 类型函数 unlock(_:) 在新等级解锁时更新 highestUnlockedLevel
+    static func unlock(_ level: Int) {
+        if level > highestUnlockedLevel { highestUnlockedLevel = level }
+    }
+    
+    // 类型函数 isUnlocked(_:) 返回特定等级是否解锁
+    static func isUnlocked(_ level: Int) -> Bool {
+        return level <= highestUnlockedLevel
+    }
+    
+    // 实例方法 advance(to:) 更新当前游戏中的游戏等级
+    // @discardableResult 忽略返回值
+    @discardableResult
+    mutating func advance(to level: Int) -> Bool {
+        // 判断是否已解锁当前等级
+        if LevelTracker.isUnlocked(level) {
+            currentLevel = level
+            return true
+        } else {
+            return false
+        }
+    }
+}
+
+// LevelTracker 结构体与 Player 类共同使用来追踪和更新每一个玩家的进度
+class Player {
+    var tracker = LevelTracker()
+    let playerName: String
+    // 玩家每完成一个特定等级，就解锁下一个等级并更新玩家的进度到下一个等级
+    func complete(level: Int) {
+        LevelTracker.unlock(level + 1)
+        tracker.advance(to: level + 1)
+    }
+    init(name: String) {
+        playerName = name
+    }
+}
+
+var player = Player(name: "Argyrios")
+player.complete(level: 1)
+print("highest unlocked level is now \(LevelTracker.highestUnlockedLevel)")
+// highest unlocked level is now 2
 ```
 

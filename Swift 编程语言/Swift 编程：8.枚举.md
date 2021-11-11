@@ -15,7 +15,7 @@ enum CompassPoint {
     case west
 }
 
-// 每个枚举定义了一个全新的类型。
+// 每个枚举定义了一个全新的类型
 var directionToHead = CompassPoint.west
 // 当 directionToHead 的类型已知时，再次为其赋值可以省略枚举类型名。
 directionToHead = .east
@@ -77,13 +77,19 @@ for beverage in Beverage.allCases {
 在 Swift 中，使用如下方式定义表示两种商品条形码的枚举：
 
 ```swift
+// 定义一个名为 Barcode 的枚举类型，
+// 它要么用 (Int, Int, Int, Int) 类型的关联值获取 upc （条形码）值，
+// 要么用 String 类型的关联值获取 qrCode（二维码） 值。
 enum Barcode {
     case upc(Int, Int, Int, Int)
     case qrCode(String)
 }
 
+// 创建、修改枚举类型
 var productBarcode = Barcode.upc(8, 85909, 51226, 3)
+productBarCode = .qrCode("ABCDEFGHIJKLMNOP")
 
+// 使用 Switch 提取枚举类型的关联值
 switch productBarcode {
 case .upc(let numberSystem, let manufacturer, let product, let check):
     print("UPC: \(numberSystem), \(manufacturer), \(product), \(check).")
@@ -92,6 +98,7 @@ case .qrCode(let productCode):
 }
 // 打印“QR code: ABCDEFGHIJKLMNOP.”
 
+// 简洁方式，将一个枚举成员的所有值都提取为常量，或者变量
 switch productBarcode {
 case let .upc(numberSystem, manufacturer, product, check):
     print("UPC: \(numberSystem), \(manufacturer), \(product), \(check).")
@@ -109,6 +116,7 @@ case let .qrCode(productCode):
 ## 原始值
 
 ```swift
+// 原始值，用相同类型的默认值预先填充枚举成员
 enum ASCIIControlCharacter: Character {
     case tab = "\t"
     case lineFeed = "\n"
@@ -150,6 +158,7 @@ let sunsetDirection = CompassPoint.west.rawValue
 递归枚举是一种枚举类型，它有一个或多个枚举成员使用该枚举类型的实例作为关联值。使用递归枚举时，编译器会插入一个间接层。你可以在枚举成员前加上 `indirect` 来表示该成员可递归。
 
 ```swift
+// 这个枚举可以储存三种数学运算表达式：单一的数字，两个表达式的加法，以及两个表达式的乘法。
 enum ArithmeticExpression {
     case number(Int)
     indirect case addition(ArithmeticExpression, ArithmeticExpression)
@@ -167,5 +176,30 @@ indirect enum ArithmeticExpression {
 }
 ```
 
+下边的代码展示了为 `(5 + 4) * 2` 创建的递归枚举 `ArithmeticExpression` ：
 
+```swift
+let five = ArithmeticExpression.number(5)
+let four = ArithmeticExpression.number(4)
+let sum = ArithmeticExpression.addition(five, four)
+let product = ArithmeticExpression.multiplication(sum, ArithmeticExpression.number(2))
+```
+
+**递归函数**是一种操作递归结构数据的简单方法。比如说，这里有一个判断数学表达式的函数：
+
+```swift
+func evaluate(_ expression: ArithmeticExpression) -> Int {
+    switch expression {
+    case let .number(value):
+        return value
+    case let .addition(left, right):
+        return evaluate(left) + evaluate(right)
+    case let .multiplication(left, right):
+        return evaluate(left) * evaluate(right)
+    }
+}
+
+print(evaluate(product))
+// Prints "18"
+```
 

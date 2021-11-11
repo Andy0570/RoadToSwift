@@ -38,7 +38,7 @@ class ViewController: UIViewController {
     }
     
     // 声明并实现动作方法
-    // 点击 UIButton 对象时，该按钮可以调用某个对象的某个方法
+    // 点击 UIButton 对象时，该按钮可以调用某个对象的某个方法：
     // 被调用的对象：目标（targer）
     // 被调用的方法：动作（action）
     // @IBAction 关键字，告诉 Xcode，之后会使用 Interface Builder 关联该动作。
@@ -58,4 +58,3 @@ class ViewController: UIViewController {
         answerLabel.text = answer;
     }
 }
-

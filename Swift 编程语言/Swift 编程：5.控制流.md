@@ -2,7 +2,7 @@
 
 你可以使用 `for-in` 循环来遍历一个集合中的所有元素，例如数组中的元素、范围内的数字或者字符串中的字符。
 
-使用 `for-in` 遍历一个数组所有元素：
+使用 `for-in` 遍历一个数组中的所有元素：
 
 ```swift
 let names = ["Anna", "Alex", "Brian", "Jack"]
@@ -362,7 +362,6 @@ if #available(iOS 10, macOS 10.12, *) {
     // 使用先前版本的 iOS 和 macOS 的 API
 }
 ```
-
 
 
 

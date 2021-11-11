@@ -1,6 +1,7 @@
 import UIKit
 import Foundation
 
+
 // MARK: 使用快速帮助（Quick Help）查看类型推断信息：按住 Option，然后点击变量名
 // 字符串字面量
 var str = "Hello, playground"
@@ -72,18 +73,19 @@ emptyString2.isEmpty
 
 
 // MARK: 实例方法
+// 实例方法是指通过类的实例调用的方法
 var countingUp3 = ["one","two"]
 countingUp3.append("three")
 // ["one", "two", "three"]
 
 
+// MARK: 可选类型
 /**
-//
- MARK: 可选类型
  可选类型可以让你表达一个变量可能根本没有值。可选类型的值要么是指定类型的实例，要么是 nil。
 
  可选类型解析
- 你将尝试两种解包可选变量的方法：可选绑定和强制解包。你将首先实现强制解包。这并不是因为它是更好的选择--事实上，它是不太安全的选择。但先实现强制解包会让你看到危险，并理解为什么可选绑定通常更好。
+ 你将尝试两种解包可选变量的方法：可选绑定和强制解包。你将首先实现强制解包。这并不是因为它是更好的选择--事实上，它是不太安全的选择。
+ 但先实现强制解包会让你看到危险，并理解为什么可选绑定通常更好。
  */
 var reading1: Float?
 var reading2: Float?
@@ -96,7 +98,8 @@ reading3 = 9.7
 // 强制解析可选类型
 let avgReading = (reading1! + reading2! + reading3!) / 3
 
-// MARK:可选绑定
+
+// MARK: 可选绑定
 if let r1 = reading1, let r2 = reading2, let r3 = reading3 {
     let averageReading = (r1 + r2 + r3) / 3
     print(averageReading)
@@ -112,13 +115,13 @@ if let space13Assignee = nameByParkingSpace[13] {
 }
 
 
+// MARK: 循环和字符串插值
 /**
- MARK: 循环和字符串插值
-
  Swift拥有所有你可能从其他语言中熟悉的控制流语句：if-else、while、for、for-in、repeat-while和switch。然而，即使它们很熟悉，也可能与你所习惯的有一些不同。Swift中的这些语句与C类语言中的关键区别在于，虽然这些语句的表达式不需要括号，但Swift却需要在子句上加括号。此外，if-和while-like语句的表达式必须评估为Bool。
  */
 
 for (index, value) in countingUp.enumerated() {
+    print("Item \(String(index)): \(value)")
     // (0, "one"), (1, "two")
 }
 /**
@@ -163,9 +166,9 @@ case .pecan:
  Switch 语句可以在许多类型上进行匹配，包括范围。
  */
 
-// MARK: 枚举和原始值
+// MARK: 枚举和初始值
 enum PieType2: Int {
-    case apple = 0 // 枚举类型可以关联原始值
+    case apple = 0 // 枚举类型可以关联初始值
     case cherry
     case pecan
 }
