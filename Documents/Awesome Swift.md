@@ -223,6 +223,7 @@ Swift中的异步编程参考：[【译】SE-0296 Async/await](https://kemchenj.
 * [SwiftTask](https://github.com/ReactKit/SwiftTask) - Promise + progress + pause + cancel, using SwiftState (state machine).
 * [Async](https://github.com/duemunk/Async) - Syntactic sugar in Swift for asynchronous dispatches in Grand Central Dispatch.
 
+
 ## 正则表达式
 
 * [PhoneNumberKit](https://github.com/marmelroy/PhoneNumberKit) ⭐️4.3K - 一个用于解析、格式化和验证国际电话号码的 Swift 框架。
@@ -365,7 +366,7 @@ Swift中的异步编程参考：[【译】SE-0296 Async/await](https://kemchenj.
 * [lowmad](https://github.com/bangerang/lowmad)，一个用于管理 LLDB 中的脚本和配置的命令行工具。
 
 
-## 函数响应式编程
+## 函数式响应式编程s
 
 * [RxSwift](https://github.com/ReactiveX/RxSwift)
 * [ReactiveSwift](https://github.com/ReactiveCocoa/ReactiveSwift)
@@ -373,7 +374,18 @@ Swift中的异步编程参考：[【译】SE-0296 Async/await](https://kemchenj.
 * [ReactiveAPI](https://github.com/sky-uk/ReactiveAPI) - Write clean, concise and declarative network code relying on URLSession, with the power of RxSwift. Inspired by Retrofit.
 
 
+### Combine
+
+> Apple 在 iOS 13 中发布了 [Combine](https://developer.apple.com/documentation/combine) 框架。Combine 是 Apple 的**函数式响应式编程框架**，与 RxSwift 类似，但也有很大不同。Combine 的主要卖点是它是一个第一方框架。这意味着它将由 Apple 维护，并随着 Apple 操作系统的发布而更新，这既有好处，也有缺点。不可否认，Apple 对 Combine 押下重注，值得一看。特别是因为 SwiftUI 大量使用了 Combine。
+
+* [CombineSwiftPlayground](https://github.com/AvdLee/CombineSwiftPlayground)
+* [OpenCombine](https://github.com/OpenCombine/OpenCombine)
+* [CombineExt](https://github.com/CombineCommunity/CombineExt)
+* [swiftui-notes](https://github.com/heckj/swiftui-notes) ⭐️1.4K - 关于用 UIKit 和 SwiftUI 学习 Combine 的笔记。
+
+
 # 资源
+
 各种资源，如书籍，网站和文章，提高 Swift 开发技能和知识。
 
 ## Swift 网站

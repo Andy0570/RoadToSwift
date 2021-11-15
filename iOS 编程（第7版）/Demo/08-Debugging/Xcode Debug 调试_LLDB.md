@@ -231,6 +231,55 @@ po $arg1
 
 ![](https://tva1.sinaimg.cn/large/008i3skNgy1gwcgmhv85hj30d807vdg4.jpg)
 
+### 添加符号断点（Symbolic Breakpoint）
+
+Symbolic Breakpoint 为符号断点，可以针对某一个方法 (函数) 设置断点并暂停执行；有时候，我们并不清楚会在什么情况下调用某一个函数，那我们可以通过符号断点来跟踪获取调用该函数的程序堆栈。
+
+示例，为 CoreText 框架的 `CTFontLogSystemFontNameRequest` 函数设置符号断点：
+
+![](https://tva1.sinaimg.cn/large/008i3skNgy1gwdjfq4eoaj30d806j3yr.jpg)
+
+
+### 解决 CUICatalog: Invalid asset name supplied: (null) 问题
+
+参考：<https://stackoverflow.com/questions/22011106/error-cuicatalog-invalid-asset-name-supplied-null-or-invalid-scale-factor>
+
+当调用 `[UIImage imageNamed:]` 方法时，可能存在图片不存在或者传入的图片名为 nil。就可以通过添加符号断点（Symbolic Breakpoint）解决该问题：
+
+Symbol 设置为：`[UIImage imageNamed:]` 捕获需要拦截的方法。
+
+Condition 设置为：`[(NSString*)$x2 length] == 0` 判断方法传入参数字符串长度是否为 0 或者为 `nil`。
+
+![](https://tva1.sinaimg.cn/large/008i3skNgy1gwdjojzv9fj30d806jaac.jpg)
+
+### 解决视图布局约束歧义问题
+
+![](https://tva1.sinaimg.cn/large/008i3skNgy1gwdjtegoe4j30d80803yt.jpg)
+
+
+
+1. 添加 Symbolic Breakpoint 符号断点，`UIViewAlertForUnsatisfiableConstraints`
+2. Action 设置：
+
+```bash
+# Objective-C
+po [[UIWindow keyWindow] _autolayoutTrace]
+
+# Swift
+expr -l objc++ -O -- [[UIWindow keyWindow] _autolayoutTrace]
+```
+
+`_autolayoutTrace ` 用于查找存在的 Ambiguous Layouts.
+
+3. 显示自动布局存在问题的视图：
+
+```bash
+expr ((UIView *)0x282f46210).backgroundColor = [UIColor redColor]
+
+expression ((UIView *)address).backgroundColor = [UIColor redColor]
+```
+
+
 
 
 ## 其他工具
