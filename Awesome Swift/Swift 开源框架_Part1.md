@@ -164,6 +164,7 @@
 
 * [TagListView](https://github.com/xhacker/TagListView) ⭐️2.3k - Simple but highly customizable iOS tag list view.
 * [TagCellLayout](https://github.com/riteshhgupta/TagCellLayout) ⭐️297 - UICollectionView layout for Tags with Left, Center & Right alignments.
+* [TTGTagCollectionView](https://github.com/zekunyan/TTGTagCollectionView) ⭐️1.6k
 
 
 
@@ -216,6 +217,7 @@
 * [AnimatedCollectionViewLayout](https://github.com/KelvinJin/AnimatedCollectionViewLayout)
 * [MagazineLayout](https://github.com/airbnb/MagazineLayout) ⭐️3k - A collection view layout capable of laying out views in vertically scrolling grids and lists.
 * [KelvinJin/AnimatedCollectionViewLayout](https://github.com/KelvinJin/AnimatedCollectionViewLayout) ⭐️4.3k
+* [BouncyLayout](https://github.com/roberthein/BouncyLayout) ⭐️4k - 为集合视图 cell 添加 bounce 效果。
 
 
 
@@ -304,6 +306,7 @@
 * [Ramotion/folding-cell](https://github.com/Ramotion/folding-cell) ⭐️10k
 * [Gemini](https://github.com/shoheiyokoyama/Gemini) ⭐️3k - Gemini is rich scroll based animation framework for iOS, written in Swift.
 * 【Archived】[pop](https://github.com/facebookarchive/pop) ⭐️19.8k - 一个可扩展的 iOS 和 osx 动画库，对基于物理的交互很有用。
+* [JHChainableAnimations](https://github.com/jhurray/JHChainableAnimations) ⭐️3.2k - Easy to read and write chainable animations in Objective-C and Swift. 通过链式语法实现动画。
 
 
 
@@ -437,9 +440,10 @@
 
 ## 调试
 
-* [chisel](https://github.com/facebook/chisel)，⭐️8.7k - FaceBook 开源的 lldb 调试命令集合。
-* [FLEX](https://github.com/FLEXTool/FLEX)，⭐️12.6k - Flipboard 开源的一系列在应用中调试的工具集。
-* [lowmad](https://github.com/bangerang/lowmad)，一个用于管理 LLDB 中的脚本和配置的命令行工具。
+* [chisel](https://github.com/facebook/chisel) ⭐️8.7k - FaceBook 开源的 lldb 调试命令集合。
+* [FLEX](https://github.com/FLEXTool/FLEX) ⭐️12.6k - Flipboard 开源的一系列在应用中调试的工具集。
+* [lowmad](https://github.com/bangerang/lowmad) 一个用于管理 LLDB 中的脚本和配置的命令行工具。
+* [PAirSandbox-Swift](https://github.com/TeacherXue/PAirSandbox-Swift) ⭐️4 - PAirSandbox Swift 版 仿照 MrPeak 的 PAirSandbox  可方便实时查看沙盒中的文件并传送给 mac
 
 
 ---
@@ -527,79 +531,6 @@
 * [swiftui-notes](https://github.com/heckj/swiftui-notes) ⭐️1.4k - 关于用 UIKit 和 SwiftUI 学习 Combine 的笔记。
 
 
-# 资源
-
-各种资源，如书籍，网站和文章，提高 Swift 开发技能和知识。
-
-## Swift 网站
-
-* [Official website](https://developer.apple.com/swift/) - A home page of Swift programming language.
-* [Official blog](https://developer.apple.com/swift/blog/) - Official Swift Blog.
-* [Jameson Quave's blog](http://jamesonquave.com/blog/category/swift/) - Tips for everyday work with Swift.
-* [Swift Collection on Medium](https://medium.com/swift-programming) - Collection of blog posts about Swift on Medium.
-* [Swift Collection on raywenderlich.com](http://www.raywenderlich.com/?s=swift) - Collection of blog posts about Swift on raywenderlich.
-* [SwiftInFlux](https://github.com/ksm/SwiftInFlux) - An attempt to gather all that is in flux in Swift.
-* [We ❤ Swift](http://www.weheartswift.com/) - Tutorials and guides.
-* [Natasha The Robot](http://natashatherobot.com/) - Nice blog about Swift by Natasha The Robot.
-* [LearnSwift.tips](http://www.learnswift.tips/) - A curated list of helpful resources to learn Swift. Tutorials, Code Samples, References.
-* [Hacking with Swift](https://www.hackingwithswift.com/) - a complete Swift training course that teaches you app development through 36 hands-on projects, for free.
-* [SwiftLang](http://swiftlang.eu) - a Swift Resource Center & Community.
-* [WWDC-Recap](https://erenkabakci.github.io/WWDC-Recap/) - A collection of session summaries in markdown format, from WWDC 19 & 17.
-* [Cocoacasts](https://cocoacasts.com/) - Tutorials and videos about Swift and Cocoa development.
-
-## Swift 书籍
-
-* [The Swift Programming Language](https://itunes.apple.com/us/book/the-swift-programming-language/id881256329?mt=11)
-* [Using Swift with Cocoa and Objective-C](https://itunes.apple.com/us/book/using-swift-cocoa-objective/id888894773?mt=11)
-* [Swift Standard Library Reference](https://developer.apple.com/library/prerelease/ios/documentation/General/Reference/SwiftStandardLibraryReference/)
-* [Learn to Program iOS and OS X with Apple Swift](https://www.kickstarter.com/projects/alanforbes/learn-to-program-ios-and-os-x-with-apple-swift?utm_medium=referral&utm_source=swift.zeef.com%2Frobin.eggenkamp&utm_campaign=ZEEF)
-
-## Swift 视频
-
-* [TheSwiftLanguage youtube channel](https://www.youtube.com/user/TheSwiftLanguage/) - Videos about the Swift programming language by Apple.
-* [Brian Advent youtube channel](https://www.youtube.com/channel/UCysEngjfeIYapEER9K8aikw/videos) - High quality Swift tutorials.
-* [SkipCasts youtube channel](https://www.youtube.com/user/SkipCasts/videos) - Skip Wilson's casts on Swift.
-* [Developing iOS 8 Apps with Swift](https://itunes.apple.com/us/course/developing-ios-8-apps-swift/id961180099) - Stanford course by Paul Hegarty.
-
-## Swift Playgrounds
-
-* [Learn-swift playground](https://github.com/nettlep/learn-swift) - Learn Swift interactively through these playgrounds.
-* [Design-Patterns-In-Swift](https://github.com/ochococo/Design-Patterns-In-Swift) - Design Patterns implemented in Swift.
-* [SwiftStub](http://swiftstub.com) - an online Swift playground and REPL.
-
-## 编码规范&最佳实践
-
-* :heart: [raywenderlich/swift-style-guide](https://github.com/raywenderlich/swift-style-guide) ⭐️11.8k - Ray Wenderlich 官方 Swift 代码风格指南。[中文版](https://github.com/SketchK/swift-style-guide-by-raywenderlich-in-chinese)
-* [airbnb/swift](https://github.com/airbnb/swift) ⭐️1.4k
-* [linkedin/swift-style-guide](https://github.com/linkedin/swift-style-guide) ⭐️1.3k
-* [github/swift-style-guide](https://github.com/github/swift-style-guide) ⭐️4.7k
-* [prolificinteractive/swift-style-guide](https://github.com/prolificinteractive/swift-style-guide)
-* [SlideShareInc/swift-style-guide](https://github.com/SlideShareInc/swift-style-guide)
-* :heart: [SwiftLint](https://github.com/realm/SwiftLint) ⭐️ 15.4k - A tool to enforce Swift style and conventions.
-* [如何编写高性能的 Swift 代码 @Apple](https://github.com/apple/swift/blob/main/docs/OptimizationTips.rst) ⭐️57.8k
-* [iOS Good Practices](https://github.com/futurice/ios-good-practices) ⭐️10.4k - iOS 初学者的最佳实践。
-
-
-
-## 设计模式
-
-* :heart: [Design Patterns implemented in Swift 5.0](https://github.com/ochococo/Design-Patterns-In-Swift) ⭐️13.1k
-* [Trip-to-iOS-Design-Patterns](https://github.com/skyming/Trip-to-iOS-Design-Patterns)
-
-## Swift 版本更新内容
-
-* [swift](https://github.com/apple/swift) ⭐️57.8k - The Swift Programming Language.
-* [swift-evolution](https://github.com/apple/swift-evolution) - 这个库用来放置用户对 Swift 的反馈和建议，同时也用来记录 Swift 的重要改变。
-* [Swift 编程语言:文档修订历史 @cnswift.org](https://www.cnswift.org/document-revision-history)
-* [InfoQ：Swift 5.3 又更新了什么新奇爽快的语法？](https://www.infoq.cn/article/Sv1ropcrVfCefYP707dS)
-* [掘金：Swift 5 新特性预览 (最低支持 Xcode 10.2 beta 版)](https://juejin.im/post/6844903767792435208)
-* [详解 WWDC 20 SwiftUI 的重大改变及核心优势](https://www.infoq.cn/article/vYYtkGTqkWDJtEYrg0aP?utm_source=related_read_bottom&utm_medium=article)
-* [What's new in Swift 2.0](https://www.hackingwithswift.com/swift2)
-* [What's new in Swift 2.2](https://www.hackingwithswift.com/swift2-2)
-* [What's new in Swift 3.0](https://www.hackingwithswift.com/swift3)
-* [What's new in Swift 3.1](https://www.hackingwithswift.com/swift3-1)
-* [What's new in Swift 4.0](https://www.hackingwithswift.com/swift4)
-* [What’s new in Swift 5.2](https://www.hackingwithswift.com/articles/212/whats-new-in-swift-5-2)
 
 
 
@@ -613,3 +544,4 @@
 * [trip-to-iOS](https://github.com/Aufree/trip-to-iOS) ⭐️7.8k - iOS 学习资料整理。
 * [awesome-ios-cn](https://github.com/jobbole/awesome-ios-cn) ⭐️4k - iOS 资源大全中文版，内容包括：框架、组件、测试、Apple Store、SDK、Xcode、网站、书籍等。
 * [kechengsou/awesome-ios](https://github.com/kechengsou/awesome-ios) ⭐️300 - iOS 开发者资源大全
+
