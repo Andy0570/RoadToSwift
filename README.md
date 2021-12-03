@@ -31,3 +31,14 @@ Swift 教程搬运
 * [[译] 在 Codable 中实践类型推断](https://xiaozhuanlan.com/topic/8954630721)
 * [Using Swift with Cocoa and Objective-C 中文手册](https://github.com/CocoaChina-editors/Welcome-to-Swift/blob/master/UsingSwiftwithCocoaandObjective-C%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C.md)
 
+
+
+### 统计信息
+
+![Alt](https://repobeats.axiom.co/api/embed/e6d86c8eea5e9b7642304078ca785841cbb32cf8.svg "Repobeats analytics image")
+
+
+
+### 使用许可
+
+本项目基于 [MIT](https://opensource.org/licenses/MIT) 许可协议，详情请参见 [LICENSE](https://github.com/Andy0570/ios-tutorials-with-swift/blob/master/LICENSE)。

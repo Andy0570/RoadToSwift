@@ -91,7 +91,9 @@
 * [GoogleMaterialIconFont](https://github.com/kitasuke/GoogleMaterialIconFont) - Google Material Icon Font for Swift and ObjC.
 * [epoxy-iOS](https://github.com/airbnb/epoxy-ios) ⭐️776 - Epoxy 是一套用于在 Swift 中构建 UIKit 应用程序的声明式 UI 框架。
 * [Aspects](https://github.com/steipete/Aspects) ⭐️8.2k - 面向切片编程（aspect oriented programming）框架。
-
+* [IGListKit](https://github.com/Instagram/IGListKit) ⭐️12.2k - 一个数据驱动的 `UICollectionView` 框架，用于构建快速灵活的列表。
+* :heart: [SwiftGen](https://github.com/SwiftGen/SwiftGen) ⭐️7.5k - 为你的 assets、storyboards、Localizable.strings 等提供 Swift 代码生成器 - 摆脱所有基于字符串的 API!
+* :heart: [Reusable](https://github.com/AliSoftware/Reusable) ⭐️2.7k - 一个 Swift mixin，可以轻松地以类型安全的方式重用视图。
 
 ## UI
 
@@ -369,7 +371,7 @@
 
 
 
-## 数据结构&算法&安全
+## 数据结构&算法
 *用于生成安全随机数、加密数据和扫描漏洞的框架*
 
 * :heart: [wift-algorithms](https://github.com/apple/swift-algorithms) ⭐️3.7k - Apple 官方维护的一套 Swift 中常用的序列和集合算法。
@@ -380,9 +382,17 @@
 * [SwiftyRSA](https://github.com/TakeScoop/SwiftyRSA) - RSA public/private key encryption in Swift
 * [Surge](https://github.com/Jounce/Surge) ⭐️4.9k - 使用 Accelerate 框架的 Swift 库，为矩阵数学、数字信号处理和图像处理提供高性能函数。
 * [Euler](https://github.com/mattt/Euler) ⭐️1.1k - 直观、简洁的数学表达式 `∛27÷3+∑[3,1,2]`。
+* [Algorithm-Guide](https://github.com/Xunzhuo/Algorithm-Guide) ⭐️1.4K - 循卓的算法与数据结构教程。
+
+
+
+
+## 安全
+
+* :heart: [cocoapods-keys](https://github.com/orta/cocoapods-keys) ⭐️1.5k - 一款 CocoaPods 插件，他将你要加密的信息储存在钥匙串中，而不是硬编码在代码里。
 * [KeychainAccess](https://github.com/kishikawakatsumi/KeychainAccess) ⭐️6k - Keychain 钥匙串访问。
 * [SwiftPasscodeLock](https://github.com/yankodimitrov/SwiftPasscodeLock) ⭐️672 - 一个用 Swift 写的 TouchID 身份验证的 iOS 密码锁。
-* [Algorithm-Guide](https://github.com/Xunzhuo/Algorithm-Guide) ⭐️1.4K - 循卓的算法与数据结构教程。
+* [dumpdecrypted](https://github.com/stefanesser/dumpdecrypted) ⭐️2.7k - 将加密的 iPhone 应用程序中的解密的 mach-o 文件从内存转储到磁盘。
 
 
 
@@ -504,7 +514,6 @@
 *生成文档文件的框架*
 
 * [jazzy](https://github.com/realm/jazzy) - A soulful way to generate docs for Swift & Objective-C
-* [SwiftGen](https://github.com/SwiftGen/SwiftGen) ⭐️7.5k - 为你的 assets、storyboards、Localizable.strings 等提供 Swift 代码生成器 - 摆脱所有基于字符串的 API!
 
 
 ## 命令行
