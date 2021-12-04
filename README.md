@@ -1,12 +1,14 @@
 # ios-tutorials-with-swift
-Swift 教程搬运
+:construction: Swift 教程搬运
+
+
 
 ### 目录
 
 * 介绍：完全初学者的 Swift 编程
 * iOS 编程（第7版）
 * RayWenderlich.com
-* Swift 编程语言
+* Awesome Swift：Swift 编程资源和常用的开源框架。
 
 
 
@@ -41,4 +43,4 @@ Swift 教程搬运
 
 ### 使用许可
 
-本项目基于 [MIT](https://opensource.org/licenses/MIT) 许可协议，详情请参见 [LICENSE](https://github.com/Andy0570/ios-tutorials-with-swift/blob/master/LICENSE)。
+本项目基于 [MIT](https://opensource.org/licenses/MIT) 许可协议，详情请参见 [LICENSE](https://github.com/Andy0570/ios-tutorials-with-swift/blob/main/LICENSE)。
