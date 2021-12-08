@@ -89,7 +89,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5dq-Kb-HVZ">
-                                <rect key="frame" x="20" y="96" width="374" height="758"/>
+                                <rect key="frame" x="20" y="96" width="374" height="709"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gYE-0O-0DO">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
@@ -149,7 +149,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Buz-EU-496">
-                                        <rect key="frame" x="0.0" y="126" width="374" height="632"/>
+                                        <rect key="frame" x="0.0" y="126" width="374" height="583"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -160,15 +160,28 @@
                                     <constraint firstItem="woG-3d-j88" firstAttribute="leading" secondItem="grH-cj-nnf" secondAttribute="leading" id="zE9-Ys-7uL"/>
                                 </constraints>
                             </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yJt-oV-ERd">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="f06-L2-qja">
+                                        <connections>
+                                            <action selector="choosePhotoSource:" destination="Jl5-yD-J0M" id="nLa-Zf-ca8"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OPf-gg-apd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="5dq-Kb-HVZ" secondAttribute="trailing" id="2Pg-x5-OMh"/>
-                            <constraint firstItem="OPf-gg-apd" firstAttribute="bottom" secondItem="5dq-Kb-HVZ" secondAttribute="bottom" constant="8" id="D6x-BM-ILs"/>
                             <constraint firstItem="5dq-Kb-HVZ" firstAttribute="leading" secondItem="aYd-Qg-dya" secondAttribute="leadingMargin" id="JlB-N7-apQ"/>
+                            <constraint firstItem="yJt-oV-ERd" firstAttribute="leading" secondItem="aYd-Qg-dya" secondAttribute="leading" id="Yc5-Wc-j1l"/>
+                            <constraint firstItem="yJt-oV-ERd" firstAttribute="top" secondItem="5dq-Kb-HVZ" secondAttribute="bottom" constant="8" id="ePk-jd-Bev"/>
+                            <constraint firstItem="yJt-oV-ERd" firstAttribute="bottom" secondItem="OPf-gg-apd" secondAttribute="bottom" id="oHu-za-sHT"/>
                             <constraint firstItem="5dq-Kb-HVZ" firstAttribute="top" secondItem="OPf-gg-apd" secondAttribute="top" constant="8" id="ppJ-fK-m2G"/>
+                            <constraint firstAttribute="trailing" secondItem="yJt-oV-ERd" secondAttribute="trailing" id="ruH-Nw-RL2"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Nwr-l0-a5d" appends="YES" id="eJb-gp-UP4"/>
