@@ -10,6 +10,9 @@ import UIKit
 class ItemsViewController: UITableViewController {
     
     var itemStore: ItemStore!
+    var imageStore: ImageStore!
+    
+    // MARK: - Initializers
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -17,6 +20,8 @@ class ItemsViewController: UITableViewController {
         navigationItem.leftBarButtonItem = editButtonItem
         navigationItem.backButtonTitle = "Back"
     }
+    
+    // MARK: - View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,25 +35,8 @@ class ItemsViewController: UITableViewController {
         
         tableView.reloadData()
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // 如果被触发的 segue 是 "showItem" segue
-        switch segue.identifier {
-        case "showItem":
-            // 找出刚才点击的是哪一行
-            if let row = tableView.indexPathForSelectedRow?.row {
-                
-                // 获取与此行关联的 item 并将其传递
-                let item = itemStore.allItems[row]
-                let detailViewController = segue.destination as! DetailViewController
-                detailViewController.item = item
-            }
-        default:
-            preconditionFailure("Unexpected segue identifier.")
-        }
-    }
-    
-    // MARK: Actions
+        
+    // MARK: - Actions
     
     @IBAction func addNewItem(_ sender: UIBarButtonItem) {
         
@@ -63,26 +51,26 @@ class ItemsViewController: UITableViewController {
             tableView.insertRows(at: [indexPath], with: .automatic)
         }
     }
+        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // 如果被触发的 segue 是 "showItem" segue
+        switch segue.identifier {
+        case "showItem":
+            // 找出刚才点击的是哪一行
+            if let row = tableView.indexPathForSelectedRow?.row {
+                
+                // 获取与此行关联的 item 并将其传递
+                let item = itemStore.allItems[row]
+                let detailViewController = segue.destination as! DetailViewController
+                detailViewController.item = item
+                detailViewController.imageStore = imageStore
+            }
+        default:
+            preconditionFailure("Unexpected segue identifier.")
+        }
+    }
     
-    // 编辑模式
-//    @IBAction func toggleEditingMode(_ sender: UIButton) {
-//        if isEditing {
-//            // 更改按钮文本以通知用户状态
-//            sender.setTitle("Edit", for: .normal)
-//
-//            // 关闭编辑模式
-//            setEditing(false, animated: true)
-//        } else {
-//            // 更改按钮文本以通知用户状态
-//            sender.setTitle("Done", for: .normal)
-//
-//            // 开启编辑模式
-//            setEditing(true, animated: true)
-//        }
-//    }
-    
-    
-    // MARK: UITableViewDataSource
+    // MARK: - Table View Data Source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemStore.allItems.count
@@ -112,6 +100,9 @@ class ItemsViewController: UITableViewController {
             
             // 更新模型，从 Store 中移除该 Item
             itemStore.removeItem(item)
+            
+            // 更新模型，从 ImageStore 中移除关联的图片
+            imageStore.deleteImage(forkey: item.itemKey)
             
             // 更新 UI，用动画从 table view 中移除该行
             tableView.deleteRows(at: [indexPath], with: .automatic)

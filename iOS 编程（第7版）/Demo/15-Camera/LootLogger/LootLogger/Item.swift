@@ -12,6 +12,7 @@ class Item: Equatable, Codable {
     var valueInDollars: Int
     var serialNumber: String?
     let dateCreated: Date
+    let itemKey: String
     
     // 指定初始化方法
     init(name: String, serialNumber: String?, valueInDollars: Int) {
@@ -19,6 +20,7 @@ class Item: Equatable, Codable {
         self.valueInDollars = valueInDollars
         self.serialNumber = serialNumber
         self.dateCreated = Date()
+        self.itemKey = UUID().uuidString
     }
     
     // 便捷初始化方法

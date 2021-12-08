@@ -21,6 +21,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
             navigationItem.title = item.name
         }
     }
+    var imageStore: ImageStore!
+    
     
     let numberFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
@@ -44,6 +46,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         serialNumberField.text = item.serialNumber
         valueField.text = numberFormatter.string(from: NSNumber(value: item.valueInDollars))
         dateLabel.text = dateFormatter.string(from: item.dateCreated)
+        imageView.image = imageStore.image(forKey: item.itemKey)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -72,6 +75,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         alertController.modalPresentationStyle = .popover
         alertController.popoverPresentationController?.barButtonItem = sender
         
+        // 通过系统相机拍摄照片
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             let cameraAction = UIAlertAction(title: "Camera", style: .default) { _ in
                 let imagePicker = self.imagePicker(for: .camera)
@@ -80,6 +84,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
             alertController.addAction(cameraAction)
         }
         
+        // 从相册中选择照片
         let photoLibraryAction = UIAlertAction(title: "Photo Library", style: .default) { _ in
             let imagePicker = self.imagePicker(for: .photoLibrary)
             imagePicker.popoverPresentationController?.barButtonItem = sender
@@ -104,6 +109,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[.originalImage] as! UIImage
+        // 将图片缓存到 ImageStore，并使用 itemKey 作为 key 关联
+        imageStore.setImage(image, forKey: item.itemKey)
         imageView.image = image
         dismiss(animated: true, completion: nil)
     }

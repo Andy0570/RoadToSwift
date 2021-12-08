@@ -18,6 +18,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         
+        // 创建 ImageStore
+        let imageStore = ImageStore()
+        
         // 创建 ItemStore
         let itemStore = ItemStore()
         
@@ -25,6 +28,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let navController = window!.rootViewController as! UINavigationController
         let itemViewController = navController.topViewController as! ItemsViewController
         itemViewController.itemStore = itemStore;
+        itemViewController.imageStore = imageStore;
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

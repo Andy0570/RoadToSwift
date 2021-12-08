@@ -40,7 +40,7 @@ class Item: Equatable {
         }
     }
     
-    // MARK: <Equatable>
+    // MARK: - Equatable
     
     static func ==(lhs: Item, rhs: Item) -> Bool {
         return lhs.name == rhs.name

@@ -437,6 +437,8 @@
 
 ## Misc
 
+*与Swift相关的各种项目*
+
 * [acli](https://github.com/eugenpirogoff/acli) - commandline tool to download curated libraries from github (very beta)
 * [Compass](https://github.com/hyperoslo/Compass) - Compass helps you setup a central navigation system for your application.
 * [R.swift](https://github.com/mac-cain13/R.swift/) - tool to get strong typed, autocompleted resources like images and segues in your Swift project
@@ -446,6 +448,7 @@
 * [SwiftValidators](https://github.com/gkaimakas/SwiftValidators) - String validation for iOS developed in Swift. Inspired by validator.js
 * [Versions](https://github.com/zenangst/Versions) - Helping you find inner peace when comparing version numbers in Swift
 * [Swift 4 Module Template](https://github.com/fulldecent/swift4-module-template) - An opinionated starting point for awesome, reusable Swift 4 modules
+* [XcodeGen](https://github.com/yonaskolb/XcodeGen) ⭐️5k - 一个用 Swift 编写的命令行工具，它使用文件夹结构和项目规范生成您的 Xcode 项目。
 
 
 ## 调试
