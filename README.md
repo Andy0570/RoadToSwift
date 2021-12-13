@@ -8,7 +8,8 @@
 * 介绍：完全初学者的 Swift 编程
 * iOS 编程（第7版）
 * RayWenderlich.com
-* Awesome Swift：Swift 编程资源和常用的开源框架。
+* Awesome Swift: Swift 编程资源和常用的开源框架。
+* Drafts: 草稿箱。
 
 
 
