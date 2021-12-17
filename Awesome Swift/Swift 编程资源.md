@@ -18,19 +18,6 @@ Swift 是苹果于 2014 年 WWDC 苹果开发者大会发布的新开发语言�
 Swift 是一款易学易用的编程语言，而且它还是第一套具有与脚本语言同样的表现力和趣味性的系统编程语言。Swift 的设计以安全为出发点，以避免各种常见的编程错误类型。
 
 
-
-## TODO List
-
-* [x] 阅读 [Swift 编程语言](https://www.cnswift.org/) 
-* [x] [学习 Swift @阿里云大学](https://edu.aliyun.com/course/492?spm=5176.10731542.0.0.3b1e6cd6DoIKKa)
-* [x] 阅读 iOS 编程（第 7 版）
-* [ ] 阅读 [Introduction: Swift for Complete Beginners @hackingwithswift](https://www.hackingwithswift.com/read/0/overview)
-* [ ] 阅读并翻译 [Learn Swift - Tutorials, Courses, and Books](https://gitconnected.com/learn/ios-swift)
-* [ ] [30 Days of Swift](https://github.com/allenwong/30DaysofSwift)
-* [ ] TenThousandHoursofSwift
-
-
-
 ## 官方文档
 
 * [Swift 官网 @Swift.org](https://swift.org/)

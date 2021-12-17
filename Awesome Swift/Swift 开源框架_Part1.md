@@ -45,7 +45,7 @@
 ### 图片加载&图片处理
 * [Kingfisher](https://github.com/onevcat/Kingfisher) ⭐️19.3k - 轻量级，纯 Swift 实现的网络图片下载和缓存框架。
 * [KingfisherWebP](https://github.com/Yeatse/KingfisherWebP) - WebP 图片解码
-* [Nuke](https://github.com/kean/Nuke) ⭐️6.4k - Advanced framework for loading and caching images
+* [Nuke](https://github.com/kean/Nuke) ⭐️6.4k - 用于加载和缓存图像的高级框架
 * [HanekeSwift](https://github.com/Haneke/HanekeSwift) ⭐️5.1k - 轻量带缓存高性能图片加载组件
 * [ImageScout](https://github.com/kaishin/ImageScout) ⭐️953 - 最小网络代价获得图片大小及类型
 * [DominantColor](https://github.com/indragiek/DominantColor) ⭐️865 - 提取图片主色示例项目
@@ -212,6 +212,7 @@
 ### UITableView
 
 * [WobbleView](https://github.com/inFullMobile/WobbleView) ⭐️2.2k - Implementation of wobble effect for any view in app.
+* [Preheat](https://github.com/kean/Preheat) ⭐️633 - 自动预取 UITableView 和 UICollectionView 中的内容。
 
 ### UICollection
 * [IGListKit](https://github.com/Instagram/IGListKit) ⭐️12k 一个数据驱动的 UICollectionView 框架，用于构建快速而灵活的列表。 
@@ -276,6 +277,7 @@
 ## 正则表达式
 
 * [PhoneNumberKit](https://github.com/marmelroy/PhoneNumberKit) ⭐️4.3k - 一个用于解析、格式化和验证国际电话号码的 Swift 框架。
+* [Regex](https://github.com/kean/Regex) ⭐️171 - Open source regex engine
 
 
 
