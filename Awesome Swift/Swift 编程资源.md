@@ -23,21 +23,18 @@ Swift 是一款易学易用的编程语言，而且它还是第一套具有与�
 
 * [x] 阅读 [Swift 编程语言](https://www.cnswift.org/) 
 * [x] [学习 Swift @阿里云大学](https://edu.aliyun.com/course/492?spm=5176.10731542.0.0.3b1e6cd6DoIKKa)
+* [x] 阅读 iOS 编程（第 7 版）
 * [ ] 阅读 [Introduction: Swift for Complete Beginners @hackingwithswift](https://www.hackingwithswift.com/read/0/overview)
 * [ ] 阅读并翻译 [Learn Swift - Tutorials, Courses, and Books](https://gitconnected.com/learn/ios-swift)
-* [ ] 阅读 iOS 编程（第 7 版）
-* [ ] [30 Days of Swift](https://github.com/allenwong/30DaysofSwift) | 
+* [ ] [30 Days of Swift](https://github.com/allenwong/30DaysofSwift)
 * [ ] TenThousandHoursofSwift
-* [ ] [Swift 新手指南](https://juejin.cn/post/6844903427034578951)
 
 
 
 ## 官方文档
 
 * [Swift 官网 @Swift.org](https://swift.org/)
-* [The Swift Programming Language](https://docs.swift.org/swift-book/index.html)
-* [中文版 Apple 官方 Swift 教程《The Swift Programming Language》 @SwiftGG](https://swiftgg.gitbook.io/swift/)
-* [Swift 编程语言 @cnswift.org](https://www.cnswift.org/)
+* [The Swift Programming Language](https://docs.swift.org/swift-book/index.html) | [Swift 编程语言 @SwiftGG](https://swiftgg.gitbook.io/swift/) | [Swift 编程语言 @cnswift.org](https://www.cnswift.org/)
 * [Apple: Swift Development Resources](https://developer.apple.com/swift/resources/)
 * [Apple: Start Developing iOS Apps (Swift)](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/#//apple_ref/doc/uid/TP40015214-CH2-SW1)
 * [Apple：WWDC 视频](https://developer.apple.com/videos/all-videos/)
@@ -67,6 +64,7 @@ Swift 是一款易学易用的编程语言，而且它还是第一套具有与�
 * [Developing iOS 8 Apps with Swift](https://itunes.apple.com/us/course/developing-ios-8-apps-swift/id961180099) - Stanford course by Paul Hegarty.
 
 
+
 ## Swift 网站
 
 * [Official website](https://developer.apple.com/swift/) - A home page of Swift programming language.
@@ -84,8 +82,10 @@ Swift 是一款易学易用的编程语言，而且它还是第一套具有与�
 * [Cocoacasts](https://cocoacasts.com/) - Tutorials and videos about Swift and Cocoa development.
 
 
+
 ## Swift 书籍
 
+* [iOS Programming The Big Nerd Ranch Guide, 7th Edition](https://mega.nz/file/JOo20AQJ#fokX1urccP-Qc_30BDChUW8EEQWlynr7IfpoQuks5lc)，英文原版电子书，**更新至 Xcode 11、Swift 5、iOS 13**。
 * [The Swift Programming Language](https://itunes.apple.com/us/book/the-swift-programming-language/id881256329?mt=11)
 * [Using Swift with Cocoa and Objective-C](https://itunes.apple.com/us/book/using-swift-cocoa-objective/id888894773?mt=11)
 * [Swift Standard Library Reference](https://developer.apple.com/library/prerelease/ios/documentation/General/Reference/SwiftStandardLibraryReference/)
@@ -97,6 +97,7 @@ Swift 是一款易学易用的编程语言，而且它还是第一套具有与�
 
 ## Swift Playgrounds
 
+* [swift-summary](https://github.com/jakarmy/swift-summary) - ⭐️1.7k，在 Playgrounds 上写的 Swift 编程语言摘要，很久没更新啦！
 * [Learn-swift playground](https://github.com/nettlep/learn-swift) - Learn Swift interactively through these playgrounds.
 * [Design-Patterns-In-Swift](https://github.com/ochococo/Design-Patterns-In-Swift) - Design Patterns implemented in Swift.
 * [SwiftStub](http://swiftstub.com) - an online Swift playground and REPL.
@@ -141,9 +142,19 @@ Swift 是一款易学易用的编程语言，而且它还是第一套具有与�
 
 
 
-# 资源列表
+## SwiftUI
 
-* [iOS Programming The Big Nerd Ranch Guide, 7th Edition](https://mega.nz/file/JOo20AQJ#fokX1urccP-Qc_30BDChUW8EEQWlynr7IfpoQuks5lc)，英文原版电子书，**更新至 Xcode 11、Swift 5、iOS 13**。
+* [SwiftUI by Example v1.0.0](https://jaywcjlove.gitee.io/swiftui-example/)
+* [SwiftUI by Example @hackingwithswift](https://www.hackingwithswift.com/quick-start/swiftui)
+* [SwiftUI Tutorials 一个 SwiftUI 的示例、翻译的教程项目](https://github.com/WillieWangWei/SwiftUI-Tutorials)
+* [SwiftUIViews: SwiftUI 所有基本视图用例和讲解](https://github.com/WillieWangWei/SwiftUI-Tutorials)
+* [About SwiftUI ⭐️ 6k+](https://github.com/Juanpe/About-SwiftUI)
+* [在 iOS 15 中為 SwiftUI 按鈕設置樣式　大大節省開發時間 | AppCoda](https://www.appcoda.com.tw/swiftui-buttons-ios-15/)
+
+
+
+# 其他资源
+
 * [一些使用 Swift 的 iOS 教程 @GitHub](https://github.com/yrq110/some-ios-tutorials-with-swift-cn)
 * [InfoQ: 学习苹果 Swift 语言的一些在线资源（2014 年 9 月 10 日更新）](https://www.infoq.cn/article/2014/06/apple-swift-learning-resources/)
 * [Using Swift with Cocoa and Objective-C 中文手册](https://github.com/CocoaChina-editors/Welcome-to-Swift/blob/master/UsingSwiftwithCocoaandObjective-C%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C.md)
