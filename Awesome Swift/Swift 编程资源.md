@@ -20,6 +20,8 @@ Swift 是一款易学易用的编程语言，而且它还是第一套具有与�
 
 ## 官方文档
 
+* [swift](https://github.com/apple/swift) ⭐️57.8k - The Swift Programming Language.
+* [swift-evolution](https://github.com/apple/swift-evolution) - 这个库用来放置用户对 Swift 的反馈和建议，同时也用来记录 Swift 的重要改变。
 * [Swift 官网 @Swift.org](https://swift.org/)
 * [The Swift Programming Language](https://docs.swift.org/swift-book/index.html) | [Swift 编程语言 @SwiftGG](https://swiftgg.gitbook.io/swift/) | [Swift 编程语言 @cnswift.org](https://www.cnswift.org/)
 * [Apple: Swift Development Resources](https://developer.apple.com/swift/resources/)
@@ -114,8 +116,6 @@ Swift 是一款易学易用的编程语言，而且它还是第一套具有与�
 
 ## Swift 版本更新内容
 
-* [swift](https://github.com/apple/swift) ⭐️57.8k - The Swift Programming Language.
-* [swift-evolution](https://github.com/apple/swift-evolution) - 这个库用来放置用户对 Swift 的反馈和建议，同时也用来记录 Swift 的重要改变。
 * [Swift 编程语言:文档修订历史 @cnswift.org](https://www.cnswift.org/document-revision-history)
 * [InfoQ：Swift 5.3 又更新了什么新奇爽快的语法？](https://www.infoq.cn/article/Sv1ropcrVfCefYP707dS)
 * [掘金：Swift 5 新特性预览 (最低支持 Xcode 10.2 beta 版)](https://juejin.im/post/6844903767792435208)

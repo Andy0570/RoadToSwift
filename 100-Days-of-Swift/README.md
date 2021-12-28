@@ -1,10 +1,11 @@
 > 原文：[100 Days of Swift](https://www.hackingwithswift.com/100)
-
+>
+> 通过 [DeepL](https://www.deepl.com/translator) 翻译并由本人校对。
 
 
 ## How it works
 
-欢迎来到 Swift 的100天！这是一个免费的视频、教程、测试和其他内容的集合，所有内容都来自于我在 Hacking with Swift 上的现有工作，而且都是为了帮助你学习 Swift。
+欢迎来到 Swift 的100天！这是一个免费的视频、教程、测试和其他内容的集合，所有内容都来自于我在 [Hacking with Swift](https://www.hackingwithswift.com/) 上的现有工作，而且都是为了帮助你学习 Swift。
 
 它的目标是针对那些想学习编写真正的 iOS 应用，但又苦于找不到好的免费课程来帮助他们实现目标的初学者。如果你是这样的人，欢迎你——我希望你已经准备好向 iOS 世界展示你的实力了!
 
@@ -75,13 +76,13 @@
 
 现在你已经掌握了 Swift 的基础知识，在这几天里，你将开始用你所学的知识构建真正的 iOS 应用程序。
 
-* [Day 16](https://www.hackingwithswift.com/100/16) – Project 1, part 1
-* [Day 17](https://www.hackingwithswift.com/100/17) – Project 1, part 2
+* [Day 16](https://www.hackingwithswift.com/100/16) – Project 1, part 1：FileManager
+* [Day 17](https://www.hackingwithswift.com/100/17) – Project 1, part 2：UIImageView、UIImage、UINavigationBar
 * [Day 18](https://www.hackingwithswift.com/100/18) – Project 1, part 3
-* [Day 19](https://www.hackingwithswift.com/100/19) – Project 2, part 1
-* [Day 20](https://www.hackingwithswift.com/100/20) – Project 2, part 2
+* [Day 19](https://www.hackingwithswift.com/100/19) – Project 2, part 1：asset catalogs, buttons, colors
+* [Day 20](https://www.hackingwithswift.com/100/20) – Project 2, part 2：UIAlertController
 * [Day 21](https://www.hackingwithswift.com/100/21) – Project 2, part 3
-* [Day 22](https://www.hackingwithswift.com/100/22) – Project 3
+* [Day 22](https://www.hackingwithswift.com/100/22) – Project 3：UIActivityViewController
 
 
 
@@ -97,13 +98,13 @@
 
 接下来的三个项目将使你的 iOS 技能更进一步，因为你将使用代码创建一些用户界面，更仔细地管理列表视图，并获得一些使用闭包的经验。
 
-* [Day 24](https://www.hackingwithswift.com/100/24) – Project 4, part 1
-* [Day 25](https://www.hackingwithswift.com/100/25) – Project 4, part 2
+* [Day 24](https://www.hackingwithswift.com/100/24) – Project 4, part 1：WKWebView
+* [Day 25](https://www.hackingwithswift.com/100/25) – Project 4, part 2：UIToolbar、UIProgressView、KVO
 * [Day 26](https://www.hackingwithswift.com/100/26) – Project 4, part 3
-* [Day 27](https://www.hackingwithswift.com/100/27) – Project 5, part 1
-* [Day 28](https://www.hackingwithswift.com/100/28) – Project 5, part 2
+* [Day 27](https://www.hackingwithswift.com/100/27) – Project 5, part 1：闭包
+* [Day 28](https://www.hackingwithswift.com/100/28) – Project 5, part 2：UITextChecker
 * [Day 29](https://www.hackingwithswift.com/100/29) – Project 5, part 3
-* [Day 30](https://www.hackingwithswift.com/100/30) – Project 6, part 1
+* [Day 30](https://www.hackingwithswift.com/100/30) – Project 6, part 1：Auto Layout、VFL
 * [Day 31](https://www.hackingwithswift.com/100/31) – Project 6, part 2
 
 

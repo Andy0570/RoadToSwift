@@ -43,7 +43,7 @@
 
 
 ### 图片加载&图片处理
-* [Kingfisher](https://github.com/onevcat/Kingfisher) ⭐️19.3k - 轻量级，纯 Swift 实现的网络图片下载和缓存框架。
+* [Kingfisher](https://github.com/onevcat/Kingfisher) ⭐️19.5k - 轻量级、纯 Swift 实现的网络图片下载和缓存框架。
 * [KingfisherWebP](https://github.com/Yeatse/KingfisherWebP) - WebP 图片解码
 * [Nuke](https://github.com/kean/Nuke) ⭐️6.4k - 用于加载和缓存图像的高级框架
 * [HanekeSwift](https://github.com/Haneke/HanekeSwift) ⭐️5.1k - 轻量带缓存高性能图片加载组件
@@ -323,7 +323,7 @@
 ## 数据库
 *使用 Swift 语言实现的数据库*
 
-* [Realm](https://github.com/realm/realm-cocoa) - 志向代替 Core Data 和 SQLite 的移动数据库。
+* [Realm](https://github.com/realm/realm-swift) ⭐️14.8k - 志向代替 Core Data 和 SQLite 的移动端数据库。
 * [SQLite.swift](https://github.com/stephencelis/SQLite.swift) - 简单、轻量，使用上最 SQL 的 SQLite 封装库。
 * [SwiftData](https://github.com/ryanfowler/SwiftData) - A simple and effective wrapper around the SQLite3 C API written completely in Swift.
 * [Squeal](https://github.com/nerdyc/Squeal) - A Swift wrapper for SQLite databases.
