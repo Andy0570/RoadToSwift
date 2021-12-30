@@ -296,6 +296,7 @@
 
 * [SwiftDate](https://github.com/malcommac/SwiftDate) ⭐️6.6k - 解析，验证，操作，比较和显示日期，时间和时区的工具包。
 * [DateTools](https://github.com/MatthewYork/DateTools) ⭐️7.2k - Dates and times made easy in iOS。
+* [Time](https://github.com/davedelong/time) ⭐️2k - Building a better date/time library for Swift
 * [Timepiece](https://github.com/naoty/Timepiece) ⭐️2.7k - 直观的日期处理。
 * [DateHelper](https://github.com/melvitax/DateHelper) ⭐️1.3k - A Swift Date extension helper.
 * [DateTimePicker](https://github.com/itsmeichigo/DateTimePicker) ⭐️1.8k - 一个漂亮的 iOS UI 组件，用于选择日期和时间。
@@ -363,6 +364,7 @@
 * [SwiftTask](https://github.com/ReactKit/SwiftTask) ⭐️1.9k - Promise + progress + pause + cancel + retry for Swift.
 * [Promissum](https://github.com/tomlokhorst/Promissum) ⭐️67 - Promise library with functional combinators like `map`, `flatMap`, `whenAll` & `whenAny`.
 * [PureFutures](https://github.com/wiruzx/PureFutures) ⭐️17 - Futures and Promises library
+* [CollectionConcurrencyKit](https://github.com/JohnSundell/CollectionConcurrencyKit) ⭐️561 - Swift 的 forEach、map、flatMap 和 compactMap API 的异步和并发版本。
 
 
 推荐阅读：
@@ -385,13 +387,14 @@
 * [Surge](https://github.com/Jounce/Surge) ⭐️4.9k - 使用 Accelerate 框架的 Swift 库，为矩阵数学、数字信号处理和图像处理提供高性能函数。
 * [Euler](https://github.com/mattt/Euler) ⭐️1.1k - 直观、简洁的数学表达式 `∛27÷3+∑[3,1,2]`。
 * [Algorithm-Guide](https://github.com/Xunzhuo/Algorithm-Guide) ⭐️1.4K - 循卓的算法与数据结构教程。
+* [EllipticCurveKeyPair](https://github.com/agens-no/EllipticCurveKeyPair) ⭐️641 - 使用 Secure Enclave 进行签名、验证、加密和解密。
 
 
 
 
 ## 安全
 
-* :heart: [cocoapods-keys](https://github.com/orta/cocoapods-keys) ⭐️1.5k - 一款 CocoaPods 插件，他将你要加密的信息储存在钥匙串中，而不是硬编码在代码里。
+* :heart: [cocoapods-keys](https://github.com/orta/cocoapods-keys) ⭐️1.5k - 一款 CocoaPods 插件，将你要加密的信息储存在钥匙串中，而不是硬编码在项目代码里。
 * [KeychainAccess](https://github.com/kishikawakatsumi/KeychainAccess) ⭐️6k - Keychain 钥匙串访问。
 * [SwiftPasscodeLock](https://github.com/yankodimitrov/SwiftPasscodeLock) ⭐️672 - 一个用 Swift 写的 TouchID 身份验证的 iOS 密码锁。
 * [dumpdecrypted](https://github.com/stefanesser/dumpdecrypted) ⭐️2.7k - 将加密的 iPhone 应用程序中的解密的 mach-o 文件从内存转储到磁盘。
@@ -406,7 +409,7 @@
 
 ## 视频
 
-
+* [ARVideoKit](https://github.com/AFathi/ARVideoKit) ⭐️1.4k - 捕捉和记录ARKit视频、照片、实时照片和GIFs。
 
 ## 通知中心
 

@@ -1,0 +1,1 @@
+> 原文：[Grand Central Dispatch Tutorial Swift 5](https://www.swiftdevcenter.com/grand-central-dispatch-tutorial-swift-5/)

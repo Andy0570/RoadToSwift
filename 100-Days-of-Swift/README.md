@@ -121,13 +121,13 @@
 
 在接下来的三个项目中，我们将构建一些项目，在这些项目中，你将遇到 iOS 开发中的一些最重要的主题：处理来自互联网的数据，以及利用 iOS 设备的能力。当然，在此过程中，你也会生产出有用的产品！
 
-* [Day 33](https://www.hackingwithswift.com/100/33) – Project 7, part 1
-* [Day 34](https://www.hackingwithswift.com/100/34) – Project 7, part 2
+* [Day 33](https://www.hackingwithswift.com/100/33) – Project 7, part 1：UITabBarController、UITableViewController、Data、Codable、JSONDecoder
+* [Day 34](https://www.hackingwithswift.com/100/34) – Project 7, part 2：WKWebView、HTML
 * [Day 35](https://www.hackingwithswift.com/100/35) – Project 7, part 3
-* [Day 36](https://www.hackingwithswift.com/100/36) – Project 8, part 1
+* [Day 36](https://www.hackingwithswift.com/100/36) – Project 8, part 1：text aligment、layout margins、UIFont
 * [Day 37](https://www.hackingwithswift.com/100/37) – Project 8, part 2
 * [Day 38](https://www.hackingwithswift.com/100/38) – Project 8, part 3
-* [Day 39](https://www.hackingwithswift.com/100/39) – Project 9, part 1
+* [Day 39](https://www.hackingwithswift.com/100/39) – Project 9, part 1：GCD、quality of service queues、performSelector()
 * [Day 40](https://www.hackingwithswift.com/100/40) – Project 9, part 2
 
 
@@ -144,13 +144,13 @@
 
 我们接下来要做的三个项目与之前的 9 个项目明显不同--你将学习制作集合视图而不是列表视图，学习如何使用 SpriteKit 制作高性能的 2D 游戏，最后，学习如何保存用户数据。
 
-* [Day 42](https://www.hackingwithswift.com/100/42) – Project 10, part 1
-* [Day 43](https://www.hackingwithswift.com/100/43) – Project 10, part 2
+* [Day 42](https://www.hackingwithswift.com/100/42) – Project 10, part 1：UICollectionView、UICollectionViewCell
+* [Day 43](https://www.hackingwithswift.com/100/43) – Project 10, part 2：UIImagePickerController、NSObject
 * [Day 44](https://www.hackingwithswift.com/100/44) – Project 10, part 3
-* [Day 45](https://www.hackingwithswift.com/100/45) – Project 11, part 1
+* [Day 45](https://www.hackingwithswift.com/100/45) – Project 11, part 1：SKSpriteNode、SKPhysicsBody
 * [Day 46](https://www.hackingwithswift.com/100/46) – Project 11, part 2
 * [Day 47](https://www.hackingwithswift.com/100/47) – Project 11, part 3
-* [Day 48](https://www.hackingwithswift.com/100/48) – Project 12, part 1
+* [Day 48](https://www.hackingwithswift.com/100/48) – Project 12, part 1：UserDefaults、NSCoding
 * [Day 49](https://www.hackingwithswift.com/100/49) – Project 12, part 2
 
 
