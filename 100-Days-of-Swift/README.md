@@ -76,13 +76,13 @@
 
 现在你已经掌握了 Swift 的基础知识，在这几天里，你将开始用你所学的知识构建真正的 iOS 应用程序。
 
-* [Day 16](https://www.hackingwithswift.com/100/16) – Project 1, part 1：FileManager
-* [Day 17](https://www.hackingwithswift.com/100/17) – Project 1, part 2：UIImageView、UIImage、UINavigationBar
+* [Day 16](https://www.hackingwithswift.com/100/16) – Project 1, part 1：`FileManager`
+* [Day 17](https://www.hackingwithswift.com/100/17) – Project 1, part 2：`UIImageView`, `UIImage`, `UINavigationBar`
 * [Day 18](https://www.hackingwithswift.com/100/18) – Project 1, part 3
-* [Day 19](https://www.hackingwithswift.com/100/19) – Project 2, part 1：asset catalogs, buttons, colors
-* [Day 20](https://www.hackingwithswift.com/100/20) – Project 2, part 2：UIAlertController
+* [Day 19](https://www.hackingwithswift.com/100/19) – Project 2, part 1：asset catalogs、`UIButton`, `UIColor`
+* [Day 20](https://www.hackingwithswift.com/100/20) – Project 2, part 2：`UIAlertController`
 * [Day 21](https://www.hackingwithswift.com/100/21) – Project 2, part 3
-* [Day 22](https://www.hackingwithswift.com/100/22) – Project 3：UIActivityViewController
+* [Day 22](https://www.hackingwithswift.com/100/22) – Project 3：`UIActivityViewController`
 
 
 
@@ -98,11 +98,11 @@
 
 接下来的三个项目将使你的 iOS 技能更进一步，因为你将使用代码创建一些用户界面，更仔细地管理列表视图，并获得一些使用闭包的经验。
 
-* [Day 24](https://www.hackingwithswift.com/100/24) – Project 4, part 1：WKWebView
-* [Day 25](https://www.hackingwithswift.com/100/25) – Project 4, part 2：UIToolbar、UIProgressView、KVO
+* [Day 24](https://www.hackingwithswift.com/100/24) – Project 4, part 1：`WKWebView`
+* [Day 25](https://www.hackingwithswift.com/100/25) – Project 4, part 2：`UIToolbar`, `UIProgressView`, KVO
 * [Day 26](https://www.hackingwithswift.com/100/26) – Project 4, part 3
 * [Day 27](https://www.hackingwithswift.com/100/27) – Project 5, part 1：闭包
-* [Day 28](https://www.hackingwithswift.com/100/28) – Project 5, part 2：UITextChecker
+* [Day 28](https://www.hackingwithswift.com/100/28) – Project 5, part 2：`UITextChecker`
 * [Day 29](https://www.hackingwithswift.com/100/29) – Project 5, part 3
 * [Day 30](https://www.hackingwithswift.com/100/30) – Project 6, part 1：Auto Layout、VFL
 * [Day 31](https://www.hackingwithswift.com/100/31) – Project 6, part 2
@@ -121,13 +121,13 @@
 
 在接下来的三个项目中，我们将构建一些项目，在这些项目中，你将遇到 iOS 开发中的一些最重要的主题：处理来自互联网的数据，以及利用 iOS 设备的能力。当然，在此过程中，你也会生产出有用的产品！
 
-* [Day 33](https://www.hackingwithswift.com/100/33) – Project 7, part 1：UITabBarController、UITableViewController、Data、Codable、JSONDecoder
-* [Day 34](https://www.hackingwithswift.com/100/34) – Project 7, part 2：WKWebView、HTML
+* [Day 33](https://www.hackingwithswift.com/100/33) – Project 7, part 1：`UITabBarController`, `UITableViewController`, `Data`, `Codable`, `JSONDecoder`
+* [Day 34](https://www.hackingwithswift.com/100/34) – Project 7, part 2：`WKWebView`, HTML
 * [Day 35](https://www.hackingwithswift.com/100/35) – Project 7, part 3
-* [Day 36](https://www.hackingwithswift.com/100/36) – Project 8, part 1：text aligment、layout margins、UIFont
+* [Day 36](https://www.hackingwithswift.com/100/36) – Project 8, part 1：text aligment, layout margins, `UIFont`
 * [Day 37](https://www.hackingwithswift.com/100/37) – Project 8, part 2
 * [Day 38](https://www.hackingwithswift.com/100/38) – Project 8, part 3
-* [Day 39](https://www.hackingwithswift.com/100/39) – Project 9, part 1：GCD、quality of service queues、performSelector()
+* [Day 39](https://www.hackingwithswift.com/100/39) – Project 9, part 1：GCD, quality of service queues, `performSelector()`
 * [Day 40](https://www.hackingwithswift.com/100/40) – Project 9, part 2
 
 
@@ -144,13 +144,13 @@
 
 我们接下来要做的三个项目与之前的 9 个项目明显不同--你将学习制作集合视图而不是列表视图，学习如何使用 SpriteKit 制作高性能的 2D 游戏，最后，学习如何保存用户数据。
 
-* [Day 42](https://www.hackingwithswift.com/100/42) – Project 10, part 1：UICollectionView、UICollectionViewCell
-* [Day 43](https://www.hackingwithswift.com/100/43) – Project 10, part 2：UIImagePickerController、NSObject
+* [Day 42](https://www.hackingwithswift.com/100/42) – Project 10, part 1：`UICollectionView`, `UICollectionViewCell`
+* [Day 43](https://www.hackingwithswift.com/100/43) – Project 10, part 2：`UIImagePickerController`, `NSObject`
 * [Day 44](https://www.hackingwithswift.com/100/44) – Project 10, part 3
-* [Day 45](https://www.hackingwithswift.com/100/45) – Project 11, part 1：SKSpriteNode、SKPhysicsBody
+* [Day 45](https://www.hackingwithswift.com/100/45) – Project 11, part 1：`SKSpriteNode`, `SKPhysicsBody`
 * [Day 46](https://www.hackingwithswift.com/100/46) – Project 11, part 2
 * [Day 47](https://www.hackingwithswift.com/100/47) – Project 11, part 3
-* [Day 48](https://www.hackingwithswift.com/100/48) – Project 12, part 1：UserDefaults、NSCoding
+* [Day 48](https://www.hackingwithswift.com/100/48) – Project 12, part 1：`UserDefaults`, `NSCoding`
 * [Day 49](https://www.hackingwithswift.com/100/49) – Project 12, part 2
 
 
@@ -160,7 +160,7 @@
 现在你已经征服了 `UICollectionViewController` 和 `Codable`，是时候暂停一天，回顾一下你所学到的东西了--同时也要解决一个新的挑战。
 
 * [Day 50](https://www.hackingwithswift.com/100/50) – 里程碑: Projects 10-12
-* [Day 51](https://www.hackingwithswift.com/100/51) – 拓展你的视野
+* [Day 51](https://www.hackingwithswift.com/100/51) – 拓展你的视野：`map()`, `flatMap()`, `filter()`
 
 
 
@@ -168,12 +168,12 @@
 
 接下来我们要做的三个项目将探讨更丰富的用户界面领域——你将学习使用 Core Image 操作图片，动画视图等。
 
-* [Day 52](https://www.hackingwithswift.com/100/52) – Project 13, part 1
-* [Day 53](https://www.hackingwithswift.com/100/53) – Project 13, part 2
+* [Day 52](https://www.hackingwithswift.com/100/52) – Project 13, part 1：`UISlider`, `UIImagePickerController`, Core Image
+* [Day 53](https://www.hackingwithswift.com/100/53) – Project 13, part 2：`CIContext`, `CIFilter`
 * [Day 54](https://www.hackingwithswift.com/100/54) – Project 13, part 3
-* [Day 55](https://www.hackingwithswift.com/100/55) – Project 14, part 1
+* [Day 55](https://www.hackingwithswift.com/100/55) – Project 14, part 1：`SKCropNode`, `SKTexture`
 * [Day 56](https://www.hackingwithswift.com/100/56) – Project 14, part 2
-* [Day 57](https://www.hackingwithswift.com/100/57) – Project 15, part 1
+* [Day 57](https://www.hackingwithswift.com/100/57) – Project 15, part 1：`animate(withDuration:)`, `CGAffineTransform`, `alpha`
 * [Day 58](https://www.hackingwithswift.com/100/58) – Project 15, part 2
 
 
@@ -190,7 +190,7 @@
 
 在接下来的三个项目中，我们将离 UIKit 更远一些，因为我们将探索 MapKit，苹果强大而灵活的地图框架，然后我们将使用一个你已经准备好的技能：调试。
 
-* [Day 60](https://www.hackingwithswift.com/100/60) – Project 16, part 1
+* [Day 60](https://www.hackingwithswift.com/100/60) – Project 16, part 1：`MKMapView`, `MKAnnotation`, `CLLocationCoordinate2D`
 * [Day 61](https://www.hackingwithswift.com/100/61) – Project 16, part 2
 * [Day 62](https://www.hackingwithswift.com/100/62) – Project 17, part 1
 * [Day 63](https://www.hackingwithswift.com/100/63) – Project 17, part 2
