@@ -192,7 +192,7 @@
 
 * [Day 60](https://www.hackingwithswift.com/100/60) – Project 16, part 1：`MKMapView`, `MKAnnotation`, `CLLocationCoordinate2D`
 * [Day 61](https://www.hackingwithswift.com/100/61) – Project 16, part 2
-* [Day 62](https://www.hackingwithswift.com/100/62) – Project 17, part 1
+* [Day 62](https://www.hackingwithswift.com/100/62) – Project 17, part 1：`SKEmitterNode`, `SKSpriteNode`, `SKLabelNode`
 * [Day 63](https://www.hackingwithswift.com/100/63) – Project 17, part 2
 * [Day 64](https://www.hackingwithswift.com/100/64) – Project 18, part 1
 * [Day 65](https://www.hackingwithswift.com/100/65) – Project 18, part 2
@@ -211,7 +211,7 @@
 
 我们将并肩解决两个艰难的项目，但在这样做的过程中，你会开始真正惊讶于你可以在 iOS 上构建的东西--为自己鼓掌吧！
 
-* [Day 67](https://www.hackingwithswift.com/100/67) – Project 19, part 1
+* [Day 67](https://www.hackingwithswift.com/100/67) – Project 19, part 1：Extension, `NSExtensionItem`, JavaScript
 * [Day 68](https://www.hackingwithswift.com/100/68) – Project 19, part 2
 * [Day 69](https://www.hackingwithswift.com/100/69) – Project 19, part 3
 * [Day 70](https://www.hackingwithswift.com/100/70) – Project 20, part 1
