@@ -1,9 +1,9 @@
 # ios-tutorials-with-swift
-:construction: Swift 教程搬运
+我的 Swift 自学之旅
 
 
 
-### 目录
+### 参考
 
 * 介绍：完全初学者的 Swift 编程
 * iOS 编程（第7版）
