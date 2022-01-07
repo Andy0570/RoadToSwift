@@ -1,12 +1,10 @@
 > 原文：[Encoding and Decoding in Swift](https://www.raywenderlich.com/3418439-encoding-and-decoding-in-swift)
+>
+> 在本教程中，你将学习所有关于 Swift 中的编码和解码，探索基础知识和高级主题，如自定义日期和自定义编码。
 
 
 
 [TOC]
-
-
-
-在本教程中，你将学习所有关于 Swift 中的编码和解码，探索基础知识和高级主题，如自定义日期和自定义编码。
 
 iOS 应用程序中的一个常见任务是通过网络发送并保存数据。但在此之前，你需要通过一个称为编码（*encoding*）或序列化（*serialization*）的过程将数据转换为合适的格式。
 

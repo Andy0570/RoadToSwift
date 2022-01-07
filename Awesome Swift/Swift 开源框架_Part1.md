@@ -51,6 +51,7 @@
 * [DominantColor](https://github.com/indragiek/DominantColor) ⭐️865 - 提取图片主色示例项目
 * [Toucan](https://github.com/gavinbunney/Toucan) ⭐️2.4k - 小而美的图片变换及处理类
 * [gifu](https://github.com/kaishin/gifu) ⭐️2.7k - 高性能 GIF 显示类库
+* [FaceAware](https://github.com/BeauNouvelle/FaceAware) ⭐️3k - 这个插件帮助 UIImageView 将中心聚焦到照片的脸上，前提是这个照片使用了 AspectFill
 
 
 
@@ -80,20 +81,33 @@
 * [Cartography](https://github.com/robb/Cartography) ⭐️7.3k - 基于代码级的自动布局封装框架
 * [PinLayout](https://github.com/mirego/PinLayout) ⭐️1.8k - Extremely Fast views layouting without auto layout. No magic, pure code, full control and blazing fast. Concise syntax, intuitive, readable & chainable.
 * [Swiftstraints](https://github.com/Skyvive/Swiftstraints) - 强大的自动布局框架，让你在一行代码中编写约束。
+* [Neon](https://github.com/mamaral/Neon) ⭐️4.6k - 适用于 iPhone 和 iPad ，更强大 UI 布局框架
 
 ## 框架
 
 * [AsyncDisplayKit](https://github.com/facebookarchive/AsyncDisplayKit) ⭐️13.5k - 提供界面的高流畅性切换及更灵敏的响应。
+
 * [MMWormhole](https://github.com/mutualmobile/MMWormhole) ⭐️3.8k - iOS 扩展与宿主应用的通讯框架。
+
 * [Whisper](https://github.com/hyperoslo/Whisper) 3.7k - Whisper 是一个组件，可以简化显示消息和应用内通知的任务。
+
 * [NetworkObjects](https://github.com/colemancda/NetworkObjects) ⭐️266 - 轻量版 HttpServer 框架，跨平台解决方案。
+
 * [FontAwesome.Swift](https://github.com/thii/FontAwesome.swift) ⭐️1.5k - Use FontAwesome in your Swift projects.
+
 * [GoogleMaterialIconFont](https://github.com/kitasuke/GoogleMaterialIconFont) - Google Material Icon Font for Swift and ObjC.
+
 * [epoxy-iOS](https://github.com/airbnb/epoxy-ios) ⭐️776 - Epoxy 是一套用于在 Swift 中构建 UIKit 应用程序的声明式 UI 框架。
+
 * [Aspects](https://github.com/steipete/Aspects) ⭐️8.2k - 面向切片编程（aspect oriented programming）框架。
+
 * [IGListKit](https://github.com/Instagram/IGListKit) ⭐️12.2k - 一个数据驱动的 `UICollectionView` 框架，用于构建快速灵活的列表。
+
 * :heart: [SwiftGen](https://github.com/SwiftGen/SwiftGen) ⭐️7.5k - 为你的 assets、storyboards、Localizable.strings 等提供 Swift 代码生成器 - 摆脱所有基于字符串的 API!
+
 * :heart: [Reusable](https://github.com/AliSoftware/Reusable) ⭐️2.7k - 一个 Swift mixin，可以轻松地以类型安全的方式重用视图。
+
+  
 
 ## UI
 
@@ -112,15 +126,16 @@
 * :heart: [SPPermissions](https://github.com/ivanvorobei/SPPermissions) ⭐️4.7k - 通过列表、Dialog 对话框和原生界面的方式向用户请求访问权限。可以检查权限状态。支持 SwiftUI。
 * [BulletinBoard](https://github.com/alexisakers/BulletinBoard) ⭐️5.2k - 创建显示在屏幕底部的卡片视图
 * [Toast-Swift](https://github.com/scalessec/Toast-Swift) ⭐️3k
-* [SwiftMessages](https://github.com/SwiftKickMobile/SwiftMessages) ⭐️6.3k - A very flexible message bar for iOS written in Swift.
+* :heart: [SwiftMessages](https://github.com/SwiftKickMobile/SwiftMessages) ⭐️6.4k - A very flexible message bar for iOS written in Swift.
 * [WMZDialog](https://github.com/wwmz/WMZDialog) ⭐️800 - 功能最多样式最多的弹窗。
-* [XLActionController](https://github.com/xmartlabs/XLActionController) ⭐️3k
+* [XLActionController](https://github.com/xmartlabs/XLActionController) ⭐️3.2k - 基于 Swift 的完全自定义并且可扩展的 action sheet controller
 * [PopupView](https://github.com/exyte/PopupView) 【SwiftUI】⭐️1.1k
 * [Ribbon](https://github.com/chriszielinski/Ribbon) - 🎀 A simple cross-platform toolbar/custom input accessory view library for iOS & macOS.
 * [SimpleAlert](https://github.com/KyoheiG3/SimpleAlert) - Customizable simple Alert and simple ActionSheet for Swift
 * [EZAlertController](https://github.com/thellimist/EZAlertController) - Easy Swift UIAlertController
 * [TTGSnackbar](https://github.com/zekunyan/TTGSnackbar) ⭐️579
 * [SweetAlert-iOS](https://github.com/codestergit/SweetAlert-iOS) ⭐️2k - 带动画效果弹窗封装类。
+* [Popover](https://github.com/corin8823/Popover) ⭐️1.9k - 像 Facebook 应用里的气球呼出框，用纯 Swift 语言编写
 
 
 ### 活动指示器、UIActivityIndicatorView
@@ -139,6 +154,9 @@
 * [BWWalkthrough](https://github.com/ariok/BWWalkthrough) ⭐️2.8k - 界面切换中加入灵动的动画效果。
 * [VideoSplashKit](https://github.com/sahin/VideoSplashKit) - 用于创建简单的背景视频介绍页面的 UIViewController 库
 * [Onboard](https://github.com/mamaral/Onboard) ⭐️6.5k
+* [RazzleDazzle](https://github.com/IFTTT/RazzleDazzle) ⭐️3.3k
+* :heart: [Instructions](https://github.com/ephread/Instructions) ⭐️4.8k - 首次使用的教程指导
+* [Presentation](https://github.com/hyperoslo/Presentation) ⭐️3k - 新手引导页，欢迎页及其动效
 
 ### 分页菜单、UISegmentedControl
 
@@ -146,6 +164,9 @@
 * 【Archived】[PagingMenuController](https://github.com/kitasuke/PagingMenuController) ⭐️2.5k - Paging view controller with customizable menu in Swift
 * [twicketapp/TwicketSegmentedControl](https://github.com/twicketapp/TwicketSegmentedControl) ⭐️1.7k
 * [JNDropDownMenu](https://github.com/javalnanda/JNDropDownMenu) ⭐️65 下拉菜单
+* [TwicketSegmentedControl](https://github.com/polqf/TwicketSegmentedControl) ⭐️1.7k - 用于替代 iOS 默认组件的自定义 UISegmentedControl
+* [Persei](https://github.com/Yalantis/Persei) ⭐️3.4k - 基于 Swift 语言，顶部菜单的动效，针对于 UITableView 、 UICollectionView 、 UIScrollView
+* [circle-menu](https://github.com/Ramotion/circle-menu) ⭐️3.3k - 简单优雅的环形布局菜单
 
 
 ### 表单
@@ -155,11 +176,12 @@
 
 ### 日历/图表
 
-* [Charts](https://github.com/danielgindi/Charts) ⭐️24.8k - A powerful chart / graph framework, the iOS equivalent to [MPAndroidChart](https://github.com/PhilJay/MPAndroidChart).
+* [Charts](https://github.com/danielgindi/Charts) ⭐️24.8k - iOS 应用的漂亮图表
 * [FSCalendar](https://github.com/WenchaoD/FSCalendar) ⭐️9.8k - 一个完全可定制的iOS日历库，与 Objective-C 和 Swift 兼容。
 * [CalendarKit](https://github.com/richardtop/CalendarKit) ⭐️2k - Calendar for Apple platforms in Swift.
 * [PNChart-Swift](https://github.com/kevinzhow/PNChart-Swift) ⭐️1.4k - 带动画效果的图表控件库。
 * [CrispyCalendar](https://github.com/CleverPumpkin/CrispyCalendar) ⭐️312 - 日历 UI 框架。
+* [ScrollableGraphView](https://github.com/philackm/ScrollableGraphView) ⭐️5.2k - 针对于 iOS 应用的自适应滚动图形，用于将离散的数据集进行可视化
 
 
 ### Tag
@@ -175,6 +197,7 @@
 * [SlideMenuControllerSwift](https://github.com/dekatotoro/SlideMenuControllerSwift) ⭐️3.3k - 基于 Google + ，iQON，Feedly，Ameba iOS 应用的 iOS 侧划抽屉菜单视图。
 * [SAHistoryNavigationViewController](https://github.com/szk-atmosphere/SAHistoryNavigationViewController) ⭐️1.6k - 在 UINavigationContoller 中实现了类似iOS任务管理器的用户界面，支持3DTouch。
 * [Interactive Side Menu](https://github.com/handsomecode/InteractiveSideMenu) - Customizable iOS Interactive Side Menu written in Swift 3.0.
+* [Presentr](https://github.com/IcaliaLabs/Presentr) ⭐️2.8k - 对传统 ViewController present 的封装
 
 
 
@@ -197,7 +220,14 @@
 * [NFDownloadButton](https://github.com/LeonardoCardoso/NFDownloadButton) - Revamped Download Button.
 * [SwiftyButton](https://github.com/TakeScoop/SwiftyButton) - Simple and customizable button in Swift
 
+### UISwitch
+
+* [paper-switch](https://github.com/Ramotion/paper-switch) ⭐️2.9k - 这是一个 Swift 的模块组件，当页面中的开关打开后该页面填充底色
+
+
+
 ### UITextField、UITextView
+
 * [HTYTextField](https://github.com/hanton/HTYTextField) - A UITextField with bouncy placeholder in Swift.
 * [NextGrowingTextView](https://github.com/muukii/NextGrowingTextView) ⭐️1.5k
 * [InputBarAccessoryView](https://github.com/nathantannar4/InputBarAccessoryView) ⭐️880 一个简单和容易定制的输入框辅助视图（InputAccessoryView），用于实现具有自动完成和附件功能的强大的输入框。
@@ -236,11 +266,20 @@
 * [KYCircularProgress](https://github.com/kentya6/KYCircularProgress) ⭐️1.1k - 简单、实用路径可定制进度条。
 
 
+
+### UIRefresh/ Pull to Refresh
+
+* [DGElasticPullToRefresh](https://github.com/gontovnik/DGElasticPullToRefresh) ⭐️3.6k - 基于 Swift 语言，富含弹性及延展性的下拉刷新组件
+* [PullToMakeSoup](https://github.com/Yalantis/PullToMakeSoup) ⭐️1.9k - 能够被很简单的增加到 UIScrollView 中的自定义下拉刷新动效。
+
+
+
 ## 文件
 
 * [FileKit](https://github.com/nvzqz/FileKit/) ⭐️2.2k - Swift 中简单易懂的文件管理。
 * [PathKit](https://github.com/kylef/PathKit) ⭐️1.3k - 小而美的路径管理类。
 * [PDFXKit](https://github.com/PSPDFKit/PDFXKit) ⭐️204 - 苹果 PDFKit 替代框架。
+* [Vaux](https://github.com/dokun1/Vaux) - 一个允许你使用 Swift 生成 HTML 的库。
 
 
 ## Extensions
@@ -287,9 +326,10 @@
 * [SwiftTheme](https://github.com/wxxsw/SwiftTheme) ⭐️2.2k Powerful theme/skin manager for iOS 8+ 主题/换肤，暗色模式
 * [FluentDarkModeKit](https://github.com/microsoft/FluentDarkModeKit) ⭐️1.6k - 微软开源的 Dark Mode 框架
 * [DKNightVersion](https://github.com/draveness/DKNightVersion) ⭐️3.6k
-* [Hue](https://github.com/zenangst/Hue) ⭐️3.3k - Hue is the all-in-one coloring utility that you'll ever need.
-* [DynamicColor](https://github.com/yannickl/DynamicColor) ⭐️2.7k - Yet another extension to manipulate colors easily in Swift and SwiftUI
+* [Hue](https://github.com/zenangst/Hue) ⭐️3.3k - 万能的颜色工具，以后再也不用写 Swift 代码啦
+* [DynamicColor](https://github.com/yannickl/DynamicColor) ⭐️2.7k - 更简单的控制颜色的 Swift 拓展插件
 * [SwiftColors](https://github.com/thii/SwiftColors) - HEX color handling as an extension for UIColor.
+* [ComplimentaryGradientView](https://github.com/gkye/ComplimentaryGradientView) ⭐️707 - 通过源图片的主要颜色生成颜色渐变
 
 
 ## 时间
@@ -312,6 +352,10 @@
 * [Gemini](https://github.com/shoheiyokoyama/Gemini) ⭐️3k - Gemini is rich scroll based animation framework for iOS, written in Swift.
 * 【Archived】[pop](https://github.com/facebookarchive/pop) ⭐️19.8k - 一个可扩展的 iOS 和 osx 动画库，对基于物理的交互很有用。
 * [JHChainableAnimations](https://github.com/jhurray/JHChainableAnimations) ⭐️3.2k - Easy to read and write chainable animations in Objective-C and Swift. 通过链式语法实现动画。
+* [Stellar](https://github.com/AugustRush/Stellar) ⭐️2.9k
+* [Macaw](https://github.com/exyte/Macaw) ⭐️5.8k - 强大且易用的矢量图形库，并且支持 SVG
+* [Preview-Transition](https://github.com/Ramotion/Preview-Transition) ⭐️2.1k - 预览过渡动画？
+* [PinterestSwift](https://github.com/demonnico/PinterestSwift) ⭐️1.9k - 跟 Pinterest 一样的转场动画
 
 
 
@@ -410,6 +454,7 @@
 ## 视频
 
 * [ARVideoKit](https://github.com/AFathi/ARVideoKit) ⭐️1.4k - 捕捉和记录ARKit视频、照片、实时照片和GIFs。
+* [youtube-iOS](https://github.com/aslanyanhaik/youtube-iOS) ⭐️2.4k - 像 YouTube iOS 应用一样在右侧观看缩略视频，用 Swift 3 编写。
 
 ## 通知中心
 
@@ -437,6 +482,7 @@
 * [MessageKit](https://github.com/MessageKit/MessageKit) ⭐️5k
 * [aurora-imui](https://github.com/jpush/aurora-imui) ⭐️5.5k - 通用 IM 聊天 UI 组件，已经同时支持 Android/iOS/RN
 * [Messenger](https://github.com/relatedcode/Messenger) ⭐️4.2k - Open source, native iOS Messenger, with realtime chat conversations (full offline support).
+* 【Archived】[NMessenger](https://github.com/eBay/NMessenger) ⭐️2.5k - 更快更轻量级的消息组件，构建于 AsyncDisplaykit 并且由 Swift 编写
 
 
 
@@ -543,9 +589,10 @@
 > Apple 在 iOS 13 中发布了 [Combine](https://developer.apple.com/documentation/combine) 框架。Combine 是 Apple 的**函数式响应式编程框架**，与 RxSwift 类似，但也有很大不同。Combine 的主要卖点是它是一个第一方框架。这意味着它将由 Apple 维护，并随着 Apple 操作系统的发布而更新，这既有好处，也有缺点。不可否认，Apple 对 Combine 押下重注，值得一看。特别是因为 SwiftUI 大量使用了 Combine。
 
 * [CombineSwiftPlayground](https://github.com/AvdLee/CombineSwiftPlayground)
-* [OpenCombine](https://github.com/OpenCombine/OpenCombine)
+* [OpenCombine](https://github.com/OpenCombine/OpenCombine) ⭐️2.1k - 用于随时间处理值的 Apple Combine 框架的开源实现。
 * [CombineExt](https://github.com/CombineCommunity/CombineExt)
 * [swiftui-notes](https://github.com/heckj/swiftui-notes) ⭐️1.4k - 关于用 UIKit 和 SwiftUI 学习 Combine 的笔记。
+* [RxCombine](https://github.com/CombineCommunity/RxCombine) ⭐️871 - RxSwift 和 Apple Combine 框架之间的双向桥接类型
 
 
 

@@ -125,7 +125,10 @@ Swift 是一款易学易用的编程语言，而且它还是第一套具有与�
 * [What's new in Swift 3.0](https://www.hackingwithswift.com/swift3)
 * [What's new in Swift 3.1](https://www.hackingwithswift.com/swift3-1)
 * [What's new in Swift 4.0](https://www.hackingwithswift.com/swift4)
+* [[译] Swift 5.0 新特性](https://juejin.im/post/5ca41d766fb9a05e6d61ad2b)
 * [What’s new in Swift 5.2](https://www.hackingwithswift.com/articles/212/whats-new-in-swift-5-2)
+* [Swift 5.3 的新功能，你了解吗？](https://juejin.cn/post/6854573212555182093)
+* [Swift 5.4 的新特性](https://juejin.cn/post/6937481372772597767)
 
 
 

@@ -1,10 +1,10 @@
-# Swift 语言亮点：一名 Objective-C 开发者的视角
-
 > 原文：[Swift Language Highlights: An Objective-C Developer’s Perspective](https://www.raywenderlich.com/2380-swift-language-highlights-an-objective-c-developer-s-perspective)
+>
+> 本文从一名 Objective-C 程序员的视角介绍 Swift 中引入的部分新特性：类型推断、泛型、switch 语句和常量。
+>
+> **2014 年 5 月 8 日更新**：更新为 Xcode6-Beta5。
 
-本文从一名 Objective-C 程序员的视角介绍 Swift 中引入的部分新特性：类型推断、泛型、switch 语句和常量。
 
-**2014 年 5 月 8 日更新**：更新为 Xcode6-Beta5。
 
 如果这个星期一你和我一样，正坐在那里享受着主题演讲，并兴奋地开始尝试所有新的可爱的 API。然后，当你听到关于一门新语言的话题时，你的耳朵就竖了起来：Swift! 你突然想到，这不是 Objective-C 的扩展，而是一门全新的语言。也许你很兴奋？也许你很高兴？也许你不知道该如何是好。
 
@@ -264,7 +264,7 @@ default:
 
 最后一点是能够定义一个案例作为输入的计算。在这种情况下，如果值不符合从 0 到 10 的任何东西，如果是偶数，它就打印 "Even"，如果是奇数，就打印 "Odd"。神奇!
 
-## 接下来学习什么？
+## 何去何从？
 
 希望这能让你感受到 Swift 语言的魅力，以及其中的精彩。但还有更多的东西! 我鼓励你去阅读Apple的书和其他Apple的文档，它们将帮助你学习这门新语言。你迟早要做的!
 

@@ -1,6 +1,8 @@
 > 原文：[Swift Tutorial: Initialization In Depth, Part 2/2](https://www.raywenderlich.com/1219-swift-tutorial-initialization-in-depth-part-)
+>
+> 继续学习初始化，涵盖类的初始化、子类和便捷初始化方法，使你的 Swift 技能更上一层楼。
 
-继续学习初始化，涵盖类的初始化、子类和便捷初始化方法，使你的 Swift 技能更上一层楼。
+
 
 在本教程的第一部分，你学习了 Swift 中结构体的初始化，并通过为NASA的火星载人任务创建一个发射序列数据模块来应用它。你实现了结构体的初始化，尝试了初始化委托，并了解了何时以及为何使用可失败和可抛出错误的初始化。
 
@@ -649,7 +651,7 @@ convenience init?(identifier: String, reusable: Bool, encasingMaterial: String,
 
 
 
-## 何去何从
+## 何去何从？
 
 呼，要讲的东西太多了! 在这个两段式的教程中，你已经学到了很多关于初始化的知识......而且多亏了你，第一个前往火星的载人任务已经准备好起飞了。伟大的工作!
 
@@ -662,28 +664,3 @@ convenience init?(identifier: String, reusable: Bool, encasingMaterial: String,
 现在 Swift 是开源的，你可以在 [Swift GitHub repo](https://github.com/apple/swift) 的 docs 文件夹下找到很多与初始化有关的有趣文档。通过阅读这些文档，你可以了解到 Swift 团队对初始化功能和安全检查的理由。关注 Swift-evolution 和 Swift-evolution-announce 邮件列表，可以了解到即将到来的内容。
 
 我们希望你喜欢这个教程，如果你有任何问题或意见，请加入下面的论坛讨论!
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

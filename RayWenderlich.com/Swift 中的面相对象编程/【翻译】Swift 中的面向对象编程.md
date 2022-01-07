@@ -1,8 +1,8 @@
 > 原文：[Object Oriented Programming in Swift](https://www.raywenderlich.com/599-object-oriented-programming-in-swift)
+>
+> 通过将事物分解成可以继承和组合的对象，学习面向对象的编程在 Swift 中是如何工作的。
 
 
-
-通过将事物分解成可以继承和组合的对象，学习面向对象的编程在 Swift 中是如何工作的。
 
 **面向对象编程（Object oriented programming）**是一种基本的编程范式，如果你认真学习 Swift，就必须掌握这种范式。这是因为面向对象编程是你将要使用的大多数框架的核心。将一个问题分解成相互发送消息的对象，起初可能看起来很奇怪，但这是一种简化复杂系统的成熟方法，可以追溯到20世纪50年代。
 
@@ -526,21 +526,13 @@ open class Instrument {
 5. 方法可以被标记为 `final`，所以没有人可以覆盖它们。这可能是一个有用的保证。
 
 
-## 何去何从
+
+## 何去何从？
 
 你可以下载本教程的最终 Playground，其中包含了本教程的示例代码。
 
 你可以在我们的[《swift Apprentice》](https://www.raywenderlich.com/books/swift-apprentice)一书中阅读更多关于面向对象编程的内容，或者通过我们的[《设计模式教程》](https://www.raywenderlich.com/books/design-patterns-by-tutorials)一书来进一步挑战自己。
 
 我希望你喜欢这个教程，如果你有任何问题或意见，请加入下面的论坛讨论!
-
-
-
-
-
-
-
-
-
 
 

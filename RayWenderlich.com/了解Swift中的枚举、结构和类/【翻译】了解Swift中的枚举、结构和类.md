@@ -1,7 +1,8 @@
 > 原文：[Getting to Know Enum, Struct and Class Types in Swift](https://www.raywenderlich.com/7320-getting-to-know-enum-struct-and-class-types-in-swift)
+>
+> 了解 Swift 中枚举、结构和类的所有信息，包括值与引用语义、动态成员查找和协议一致性。
 
 
-了解 Swift 中枚举、结构和类的所有信息，包括值与引用语义、动态成员查找和协议一致性。
 
 在只有 Objective-C 的时代，封装仅限于与类一起工作。然而，在使用 Swift 的现代 iOS 和 macOS 编程中，有三种选择：枚举、结构和类。
 
@@ -829,7 +830,8 @@ totalPerimeter(shapes: [circle, rectangle])
 这使用 `reduce` 来计算周长之和。你可以在 [函数式编程入门](https://www.raywenderlich.com/9222-an-introduction-to-functional-programming-in-swift) 中了解更多关于它的工作原理。
 
 
-## 何去何从
+
+## 何去何从？
 
 在本教程中，你了解了 enum、struct 和 class——Swift 的命名模型类型。
 

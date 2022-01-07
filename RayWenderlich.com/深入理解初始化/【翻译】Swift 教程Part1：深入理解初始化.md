@@ -1,7 +1,8 @@
 > 原文：[Swift Tutorial: Initialization In Depth, Part 1/2](https://www.raywenderlich.com/1220-swift-tutorial-initialization-in-depth-part-1-2)
+>
+> 在这个关于深入探讨初始化的两部分教程中，通过了解你的实例是如何被初始化的，将你的 Swift 技能提高到一个新的水平!
 
 
-在这个关于深入探讨初始化的两部分教程中，通过了解你的实例是如何被初始化的，将你的 Swift 技能提高到一个新的水平!
 
 有些东西天生就很厉害：火箭、火星任务、Swift 的初始化。本教程将这三者结合在一起，让你了解到初始化的威力。
 Swift 中的初始化是关于当你命名并创建一个新的实例类型时会发生什么：
@@ -590,8 +591,4 @@ let johnny = try? Astronaut(name: "Johnny Cosmoseed", age: 17)
 要了解所有关于Swift类初始化的知识，请继续阅读本教程的第二部分。
 
 你可以在苹果《Swift编程语言指南》的[初始化章节](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Initialization.html#//apple_ref/doc/uid/TP40014097-CH18-ID203)中找到更多关于初始化的信息。如果你有任何问题或意见，请在下面的论坛中加入讨论!
-
-
-
-
 

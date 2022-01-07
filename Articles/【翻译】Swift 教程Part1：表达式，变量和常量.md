@@ -490,8 +490,3 @@ counter /= 2 // Same as counter = counter / 2
 本教程摘自《Swift Apprentice》第四版第1章和第2章，可在 raywenderlich.com 商店购买。
 
 请看一下，并让我们知道你的想法!
-
-
-
-
-
