@@ -97,7 +97,7 @@ Swift 是一款易学易用的编程语言，而且它还是第一套具有与�
 * [github/swift-style-guide](https://github.com/github/swift-style-guide) ⭐️4.7k
 * [prolificinteractive/swift-style-guide](https://github.com/prolificinteractive/swift-style-guide)
 * [SlideShareInc/swift-style-guide](https://github.com/SlideShareInc/swift-style-guide)
-* :heart: [SwiftLint](https://github.com/realm/SwiftLint) ⭐️ 15.4k - A tool to enforce Swift style and conventions.
+* :heart: [SwiftLint](https://github.com/realm/SwiftLint) ⭐️ 15.6k - SwiftLint 是一个用于强制检查 Swift 代码风格和规定的一个工具。
 * [如何编写高性能的 Swift 代码 @Apple](https://github.com/apple/swift/blob/main/docs/OptimizationTips.rst) ⭐️57.8k
 * [iOS Good Practices](https://github.com/futurice/ios-good-practices) ⭐️10.4k - iOS 初学者的最佳实践。
 
