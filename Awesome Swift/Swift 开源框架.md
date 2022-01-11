@@ -8,7 +8,7 @@
 
 ### HTTP
 
-* :heart: [Alamofire/Alamofire](https://github.com/Alamofire/Alamofire) ⭐️36.7k - Alamofire 是 AFNetworking 的作者 mattt 新写的网络请求的 swift 库。[Alamofire 最佳实践](https://github.com/ipader/SwiftGuide/wiki/Alamofire%20%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5)
+* :heart: [Alamofire/Alamofire](https://github.com/Alamofire/Alamofire) ⭐️36.7k - Alamofire 是 AFNetworking 的作者 mattt 新写的网络请求的 swift 库。
 * :heart: [Moya](https://github.com/ashfurrow/Moya) ⭐️13.6k - 对 Alamofire 的封装，使用枚举将网络层实现细节与页面逻辑代码分离，方便单元测试，支持 stub 测试，配合 RxSwift 食用更佳。[官方中文文档](https://github.com/Moya/Moya/blob/master/Readme_CN.md)
 * [SwiftHTTP](https://github.com/daltoniam/SwiftHTTP) - Thin wrapper around NSURLSession in swift. Simplifies HTTP requests.
 * [apple/swift-nio](https://github.com/apple/swift-nio) ⭐️6.8k - SwiftNIO  是一个跨平台的异步事件驱动的网络应用框架，用于快速开发可维护的高性能协议服务器和客户端
@@ -58,6 +58,7 @@
 * [xquic](https://github.com/alibaba/xquic) ⭐️581 - **XQUIC 是基于 IETF QUIC 协议实现的 UDP 传输框架**，包含加密可靠传输、HTTP/3 两大块主要内容，为应用提供可靠、安全、高效的数据传输功能，可以极大改善弱网和移动网络下产品的用户网络体验。
 
 
+
 ### 图片加载&图片处理
 
 * [Kingfisher](https://github.com/onevcat/Kingfisher) ⭐️19.5k - 轻量级、纯 Swift 实现的网络图片下载和缓存框架。
@@ -90,7 +91,7 @@
 * :heart: [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) ⭐️21k - GitHub 上最为开发者认可的 JSON 解析类。
 * [Alamofire-SwiftyJSON](https://github.com/SwiftyJSON/Alamofire-SwiftyJSON) ⭐️1.4k - Alamofire extension for serialize NSData to SwiftyJSON.
 * [ObjectMapper](https://github.com/Hearst-DD/ObjectMapper) ⭐️8.9k - JSON Object mapping written in Swift.
-* [HandyJSON](https://github.com/alibaba/HandyJSON) ⭐️3.9k - 阿里开源的 JSON 解析框架
+* [HandyJSON](https://github.com/alibaba/HandyJSON) ⭐️3.9k - 阿里开源的 JSON 解析框架。
 * [Argo](https://github.com/thoughtbot/Argo) ⭐️3.5k - Swift 下的 JSON 解析框架。
 * [json-Swift](https://github.com/owensd/json-swift) ⭐️731 - A basic library for working with JSON in Swift.
 * [DynamicJSON](https://github.com/saoudrizwan/DynamicJSON) ⭐️696 - 采用 Swift 4.2 新特性 （@dynamicMemberLookup） 实现轻便访问 JSON 数据。
@@ -484,7 +485,7 @@
 * [SHA256-Swift](https://github.com/CryptoCoinSwift/SHA256-Swift) - Swift framework wrapping CommonCrypto's SHA256 methods.
 * [SwiftSSL](https://github.com/SwiftP2P/SwiftSSL) - An Elegant crypto toolkit in Swift.
 * [SwiftyRSA](https://github.com/TakeScoop/SwiftyRSA) - RSA public/private key encryption in Swift
-* [Surge](https://github.com/Jounce/Surge) ⭐️4.9k - 使用 Accelerate 框架的 Swift 库，为矩阵数学、数字信号处理和图像处理提供高性能函数。
+* [Surge](https://github.com/Jounce/Surge) ⭐️5k - 使用 Accelerate 框架，为矩阵数学、数字信号处理和图像处理提供高性能函数。
 * [Euler](https://github.com/mattt/Euler) ⭐️1.1k - 直观、简洁的数学表达式 `∛27÷3+∑[3,1,2]`。
 * [Algorithm-Guide](https://github.com/Xunzhuo/Algorithm-Guide) ⭐️1.4K - 循卓的算法与数据结构教程。
 * [EllipticCurveKeyPair](https://github.com/agens-no/EllipticCurveKeyPair) ⭐️641 - 使用 Secure Enclave 进行签名、验证、加密和解密。
