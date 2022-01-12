@@ -1,0 +1,6 @@
+framework module Pods_TableViewWithMultipleCellTypes {
+  umbrella header "Pods-TableViewWithMultipleCellTypes-umbrella.h"
+
+  export *
+  module * { export * }
+}
