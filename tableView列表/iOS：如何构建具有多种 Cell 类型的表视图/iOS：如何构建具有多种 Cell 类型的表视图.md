@@ -5,4 +5,7 @@
 > GitHub 源码：[Stan-Ost/TableViewMVVM](https://github.com/Stan-Ost/TableViewMVVM)
 
 
+* 使用 MVVM 设计模式搭建 TableView 列表视图；
+* 每个 section 都封装成一个遵守 ProfileViewModelItem 协议的类；
+* 使用 `ProfileViewModel` ViewModel 管理数据源；
 
