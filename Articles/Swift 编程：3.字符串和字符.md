@@ -174,7 +174,7 @@ print("unusualMenagerie has \(unusualMenagerie.count) characters")
 ```
 
 
-> 需要注意的是通过 `count` 属性返回的字符数量并不总是与包含相同字符的 `NSString` 的 `length` 属性相同。`NSString` 的 `length` 属性是利用 UTF-16 表示的十六位代码单元数字，而不是 Unicode 可扩展的字符群集。
+> 需要注意的是通过 `count` 属性返回的字符数量并不总是与包含相同字符的 `NSString` 的 `length` 属性相同。`NSString` 的 `length` 属性是利用 UTF-16 表示的十六位编码单元数字，而不是 Unicode 可扩展的字符群集。
 
 
 

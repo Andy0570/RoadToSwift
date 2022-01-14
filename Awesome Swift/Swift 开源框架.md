@@ -321,7 +321,7 @@
 
 * :heart: [SwifterSwift/SwifterSwift](https://github.com/SwifterSwift/SwifterSwift) ⭐️ 10.4k — 包含 500 多个原生 Swift 扩展的便捷集合，以提高你的工作效率。
 * [HandySwift](https://github.com/Flinesoft/HandySwift) ⭐️415 - 由于某些原因 Swift 标准库仍未收入且很好用的功能特性扩展。
-* [Then](https://github.com/devxoul/Then) ⭐️3.6k - 为 Swift 初始化方法提供甜蜜的语法糖
+* [Then](https://github.com/devxoul/Then) ⭐️3.7k - 为 Swift 初始化方法提供甜蜜的语法糖
 * [ExSwift](https://github.com/pNre/ExSwift) - JavaScript (Lo-Dash, Underscore) & Ruby inspired set of Swift extensions for standard types and classes.
 * [Observable-Swift](https://github.com/slazyk/Observable-Swift) - Value Observing and Events for Swift.
 * [Pythonic.swift](https://github.com/practicalswift/Pythonic.swift) - Pythonic tool-belt for Swift – a Swift implementation of selected parts of Python standard library.
