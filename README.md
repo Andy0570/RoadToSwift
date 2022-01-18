@@ -2,6 +2,11 @@
 
 > **Stay Hungry, Stay Foolish.**
 
+[![Platform](https://img.shields.io/badge/platform-iOS-yellowgreen?style=flat-square)](https://developer.apple.com/iphone/)&nbsp;
+[![Swift Support](https://img.shields.io/badge/Swift-5.5-orange.svg)](https://www.swift.org/)&nbsp;
+[![Lincese](https://img.shields.io/badge/License-MIT-informational?style=flat-square)](https://www.apache.org/licenses/LICENSE-2.0.html)&nbsp;
+[![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square)](https://gitmoji.dev)
+
 
 
 ## 概述
@@ -19,12 +24,12 @@ Swift 是一款易学易用的编程语言，而且它还是第一套具有与�
 ## 官方文档
 
 * [Swift.org](https://swift.org/) - Swift 官网
-* [GitHub: Apple/Swift](https://github.com/apple/swift) ⭐️57.8k - The Swift Programming Language.
+* [GitHub: Apple/Swift](https://github.com/apple/swift) ⭐️57.8k - Swift 编程语言
 * [GitHub: Apple/swift-evolution](https://github.com/apple/swift-evolution) - 这个库用来放置用户对 Swift 的反馈和建议，同时也用来记录 Swift 的重要改变。
 * [The Swift Programming Language](https://docs.swift.org/swift-book/index.html) | [Swift 编程语言 @SwiftGG](https://swiftgg.gitbook.io/swift/) | [Swift 编程语言 @cnswift.org](https://www.cnswift.org/)
 * [Apple: Swift Development Resources](https://developer.apple.com/swift/resources/)
 * [Apple: Start Developing iOS Apps (Swift)](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/#//apple_ref/doc/uid/TP40015214-CH2-SW1)
-* [Apple：WWDC 视频](https://developer.apple.com/videos/all-videos/)
+* [Apple WWDC 视频](https://developer.apple.com/videos/all-videos/)
 * [Apple 的 Swift 博客](https://developer.apple.com/swift/blog/)
 
 
