@@ -645,13 +645,13 @@
 
 * [apple/swift-metrics](https://github.com/apple/swift-metrics) ⭐️470 - 苹果开源并逐步固定 Metrics API，以方便用户对应用的运行及资源状态进行有效跟踪。
 * [apple/swift-log](https://github.com/apple/swift-log) ⭐️2.6k - A Logging API for Swift
-* [XCGLogger](https://github.com/DaveWoodCom/XCGLogger) ⭐️3.7k - 功能完整的日志管理类库。
-* [SwiftyBeaver](https://github.com/SwiftyBeaver/SwiftyBeaver) ⭐️5.4k - Swift 多彩日志记录。
-* [Rainbow](https://github.com/onevcat/Rainbow) ⭐️1.6k - Delightful console output for Swift developers.
-* [QorumLogs](https://github.com/goktugyil/QorumLogs) — Swift Logging Utility for Xcode & Google Docs.
-* [CleanroomLogger](https://github.com/emaloney/CleanroomLogger) - A configurable and extensible pure Swift logging API that is simple, lightweight and performant.
+* [SwiftyBeaver](https://github.com/SwiftyBeaver/SwiftyBeaver) ⭐️5.4k - SwiftyBeaver 是 Swift 的一款丰富多彩的，可扩展的，轻量级日志记录器。
+* [XCGLogger](https://github.com/DaveWoodCom/XCGLogger) ⭐️3.7k - 允许你将细节记录到控制台，并且包含日期、函数名、文件名和行数等额外信息。
+* [Rainbow](https://github.com/onevcat/Rainbow) ⭐️1.6k - Rainbow 为 Swift 中的控制台和命令行输出增加了文本颜色、背景颜色和样式。它是为跨平台的软件终端记录而诞生的，在苹果的平台和Linux中都能工作。
+* [CleanroomLogger](https://github.com/emaloney/CleanroomLogger) ⭐️1.3k - 简单、轻量级且高性能的可配置和可扩展的纯SWIFT日志记录API。
 * [Swell](https://github.com/hubertr/Swell) - A logging utility for Swift and Objective C.
 * [Log](https://github.com/delba/Log) - A logging tool with built-in themes, formatters, and a nice API to define your owns.
+* [QorumLogs](https://github.com/goktugyil/QorumLogs) ⭐️781 - Swift Logging Utility for Xcode & Google Docs.
 * [NSLogger](https://github.com/fpillet/NSLogger) ⭐️4.9k - A high perfomance logging utility which displays traces emitted by client applications running on Mac OS X, iOS and Android.
 
 
