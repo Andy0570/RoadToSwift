@@ -214,6 +214,7 @@
 * [PNChart-Swift](https://github.com/kevinzhow/PNChart-Swift) ⭐️1.4k - 带动画效果的图表控件库。
 * [CrispyCalendar](https://github.com/CleverPumpkin/CrispyCalendar) ⭐️312 - 日历 UI 框架。
 * [ScrollableGraphView](https://github.com/philackm/ScrollableGraphView) ⭐️5.2k - 针对于 iOS 应用的自适应滚动图形，用于将离散的数据集进行可视化
+* [SwiftUIChart](https://github.com/willdale/SwiftUIChart) ⭐️384 - 一个用于 SwiftUI 的图表/绘图库。支持在 macOS、iOS、watchOS 和 tableViewOS 上运行，并内置了无障碍功能。
 
 
 ### Tag
@@ -287,11 +288,10 @@
 * [Carbon](https://github.com/ra1028/Carbon) ⭐️1.1k - 在 UITableView 和 UICollectionView 中构建基于组件声明式界面库。提供 API 文档及丰富示例。
 * [Owl](https://github.com/malcommac/Owl) ⭐️439 - 一个声明式、类型安全的框架，用于搭建快速而灵活的 UITableViews 和 UICollectionViews 列表。
 * [CollectionKit](https://github.com/SoySauceLab/CollectionKit)
-* [AnimatedCollectionViewLayout](https://github.com/KelvinJin/AnimatedCollectionViewLayout)
-* [MagazineLayout](https://github.com/airbnb/MagazineLayout) ⭐️3k - 出自 Airbnb 栅格级 CollectionView 布局库。
-* [KelvinJin/AnimatedCollectionViewLayout](https://github.com/KelvinJin/AnimatedCollectionViewLayout) ⭐️4.3k
+* :heart: [CHTCollectionViewWaterfallLayout](https://github.com/chiahsien/CHTCollectionViewWaterfallLayout) ⭐️4.3k - 瀑布流布局
+* [MagazineLayout](https://github.com/airbnb/MagazineLayout) ⭐️3k - Airbnb 开源的集合视图布局框架，能够以垂直滚动的网格和列表的方式布置视图。
+* [AnimatedCollectionViewLayout](https://github.com/KelvinJin/AnimatedCollectionViewLayout) ⭐️4.3k - 一个 UICollectionViewLayout 子类，在不影响你现有代码的前提下，为UICollectionView 添加自定义过渡动画。
 * [BouncyLayout](https://github.com/roberthein/BouncyLayout) ⭐️4k - 为集合视图 cell 添加 bounce 效果。
-
 
 
 
@@ -388,17 +388,22 @@
 
 
 ## 动画
-* [Spring](https://github.com/MengTo/Spring) ⭐️13.9k
+* [Spring](https://github.com/MengTo/Spring) ⭐️14k
 * [EasyAnimation](https://github.com/icanzilb/EasyAnimation) ⭐️2.9k
 * [lottie-ios](https://github.com/airbnb/lottie-ios) ⭐️22.2k - Airbnb 开源的一个动画渲染库，用于渲染播放 After Effects 矢量动画。
-* [Ramotion/folding-cell](https://github.com/Ramotion/folding-cell) ⭐️10k
+* [Ramotion/folding-cell](https://github.com/Ramotion/folding-cell) ⭐️10k - 卡片折叠动画
 * [Gemini](https://github.com/shoheiyokoyama/Gemini) ⭐️3k - Gemini is rich scroll based animation framework for iOS, written in Swift.
-* 【Archived】[pop](https://github.com/facebookarchive/pop) ⭐️19.8k - 一个可扩展的 iOS 和 osx 动画库，对基于物理的交互很有用。
+* 【Archived】[pop](https://github.com/facebookarchive/pop) ⭐️19.8k - Pop是一个可扩展的动画引擎，适用于iOS、tvOS和OS X。除了基本的静态动画，它还支持弹簧和衰减的动态动画，使其对建立现实的、基于物理的互动非常有用。
 * [JHChainableAnimations](https://github.com/jhurray/JHChainableAnimations) ⭐️3.2k - Easy to read and write chainable animations in Objective-C and Swift. 通过链式语法实现动画。
-* [Stellar](https://github.com/AugustRush/Stellar) ⭐️2.9k
+* [Stellar](https://github.com/AugustRush/Stellar) ⭐️2.9k - 适用于 Swift 的奇妙的物理动画库
 * [Macaw](https://github.com/exyte/Macaw) ⭐️5.8k - 强大且易用的矢量图形库，并且支持 SVG
+
+### 转场动画
+
 * [Preview-Transition](https://github.com/Ramotion/Preview-Transition) ⭐️2.1k - 预览过渡动画？
 * [PinterestSwift](https://github.com/demonnico/PinterestSwift) ⭐️1.9k - 跟 Pinterest 一样的转场动画
+* 【objc】[VCTransitionsLibrary](https://github.com/ColinEberhardt/VCTransitionsLibrary) ⭐️4.6k - 一个 iOS7 动画控制器和交互控制器的集合，提供翻转、折叠和其他各种转场动画。
+
 
 
 
@@ -709,6 +714,7 @@
 * [Inception-Core](https://github.com/hollance/Inception-Core) ⭐️92 - Inception-v3 运行在 CoreML 框架内
 * [visual-recognition-coreml](https://github.com/watson-developer-cloud/visual-recognition-coreml) ⭐️491 - 来自 IBM Watson 的视觉识别及机器学习示例。 使用 Watson Swift SDK 管理和执行定制的训练模型。
 * [NSFWDetector](https://github.com/lovoo/NSFWDetector) ⭐️1.4k - 用 CoreML 扫描、过滤不雅图片。
+* [waifu2x-ios](https://github.com/imxieyi/waifu2x-ios) ⭐️ 395 - [waifu2x](https://github.com/nagadomi/waifu2x) 是一个用于动漫风格图像的图像缩放和图像降噪程序，也支持处理普通图片。[文章](https://mp.weixin.qq.com/s/51p62kRXwL4MiAWrZ1jtyg)
 
 
 
