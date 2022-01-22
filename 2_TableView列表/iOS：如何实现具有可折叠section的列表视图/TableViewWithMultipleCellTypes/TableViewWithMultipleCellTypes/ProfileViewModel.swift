@@ -26,6 +26,12 @@ protocol ProfileViewModelItem {
 
     // 每个 section 的标题
     var sectionTitle: String { get }
+
+    // 当前 section 是否可折叠
+    var isCollaspible: Bool { get }
+
+    // 当前 section 的折叠状态
+    var isCollapsed: Bool { get set }
 }
 
 // MARK: 使用协议扩展为协议提供默认值
@@ -34,6 +40,10 @@ protocol ProfileViewModelItem {
 extension ProfileViewModelItem {
     var rowCount: Int {
         return 1
+    }
+
+    var isCollaspible: Bool {
+        return true
     }
 }
 
@@ -48,6 +58,8 @@ class ProfileViewModelNameAndPictureItem: ProfileViewModelItem {
         return "Main Info"
     }
 
+    var isCollapsed = true
+
     var name: String
     var pictureUrl: String
 
@@ -58,80 +70,91 @@ class ProfileViewModelNameAndPictureItem: ProfileViewModelItem {
 }
 
 class ProfileViewModelAboutItem: ProfileViewModelItem {
-   var type: ProfileViewModelItemType {
-      return .about
-   }
+    var type: ProfileViewModelItemType {
+        return .about
+    }
 
-   var sectionTitle: String {
-      return "About"
-   }
+    var sectionTitle: String {
+        return "About"
+    }
 
-   var about: String
+    var isCollapsed = true
 
-   init(about: String) {
-      self.about = about
-   }
+    var about: String
+
+    init(about: String) {
+        self.about = about
+    }
 }
 
 class ProfileViewModelEmailItem: ProfileViewModelItem {
-   var type: ProfileViewModelItemType {
-      return .email
-   }
+    var type: ProfileViewModelItemType {
+        return .email
+    }
 
-   var sectionTitle: String {
-      return "Email"
-   }
+    var sectionTitle: String {
+        return "Email"
+    }
 
-   var email: String
+    var isCollapsed = true
 
-   init(email: String) {
-      self.email = email
-   }
+    var email: String
+
+    init(email: String) {
+        self.email = email
+    }
 }
 
 class ProfileViewModelAttributeItem: ProfileViewModelItem {
-   var type: ProfileViewModelItemType {
-      return .attribute
-   }
+    var type: ProfileViewModelItemType {
+        return .attribute
+    }
 
-   var sectionTitle: String {
-      return "Attributes"
-   }
+    var sectionTitle: String {
+        return "Attributes"
+    }
 
-   var rowCount: Int {
-      return attributes.count
-   }
+    var isCollapsed = true
 
-   var attributes: [Attribute]
+    var rowCount: Int {
+        return attributes.count
+    }
 
-   init(attributes: [Attribute]) {
-      self.attributes = attributes
-   }
+    var attributes: [Attribute]
+
+    init(attributes: [Attribute]) {
+        self.attributes = attributes
+    }
 }
 
 class ProfileViewModeFriendsItem: ProfileViewModelItem {
-   var type: ProfileViewModelItemType {
-      return .friend
-   }
+    var type: ProfileViewModelItemType {
+        return .friend
+    }
 
-   var sectionTitle: String {
-      return "Friends"
-   }
+    var sectionTitle: String {
+        return "Friends"
+    }
 
-   var rowCount: Int {
-      return friends.count
-   }
+    var isCollapsed = true
 
-   var friends: [Friend]
+    var rowCount: Int {
+        return friends.count
+    }
 
-   init(friends: [Friend]) {
-      self.friends = friends
-   }
+    var friends: [Friend]
+
+    init(friends: [Friend]) {
+        self.friends = friends
+    }
 }
 
 // MARK: MVVM 结构背后的关键思想之一：你的 ViewModel 对 View 一无所知，但它提供了 View 可能需要的所有数据。
 class ProfileViewModel: NSObject {
     var items = [ProfileViewModelItem]()
+
+    // block 回调，用于 tableView 刷新 section
+    var reloadSections: ((_ section: Int) -> Void)?
 
     override init() {
         super.init()
@@ -181,7 +204,12 @@ extension ProfileViewModel: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items[section].rowCount
+        // 当 section 处于折叠状态，返回 0；否则返回 item.rowCount
+        let item = items[section]
+        if item.isCollaspible && item.isCollapsed {
+            return 0
+        }
+        return item.rowCount
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -219,9 +247,35 @@ extension ProfileViewModel: UITableViewDataSource {
         }
         return UITableViewCell()
     }
+}
 
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return items[section].sectionTitle
+extension ProfileViewModel: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+
+        if let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: HeaderView.identifier) as? HeaderView {
+            headerView.item = items[section]
+            headerView.section = section
+            headerView.delegate = self
+            return headerView
+        }
+
+        return UIView()
+    }
+}
+
+extension ProfileViewModel: HeaderViewDelegate {
+    func toggleSection(header: HeaderView, section: Int) {
+        var item = items[section]
+
+        if item.isCollaspible {
+            // 响应触摸事件，更新模型的折叠状态
+            let collasped = !item.isCollapsed
+            item.isCollapsed = collasped
+            header.setCollapsed(collaposd: collasped)
+
+            // Adjust the number of the rows inside the section
+            reloadSections?(section)
+        }
     }
 }
 
