@@ -143,7 +143,6 @@
 
 ## UI
 
-* :heart: [Hero](https://github.com/HeroTransitions/Hero) ⭐️20.5k - Hero is a library for building iOS view controller transitions.
 * [Material](https://github.com/CosmicMind/Material) ⭐️11.9k - 用于创建漂亮应用程序的 UI/UX 框架。
 * [Sejima](https://github.com/MoveUpwards/Sejima) ⭐️63 - User Interface Library components for iOS.
 * [FlourishUI](https://github.com/unicorn/FlourishUI)  ⭐️224 - Framework for modals, color exensions and buttons.
@@ -400,10 +399,12 @@
 
 ### 转场动画
 
+* [Hero](https://github.com/HeroTransitions/Hero) ⭐️20.5k - Hero is a library for building iOS view controller transitions.
 * [Preview-Transition](https://github.com/Ramotion/Preview-Transition) ⭐️2.1k - 预览过渡动画？
 * [PinterestSwift](https://github.com/demonnico/PinterestSwift) ⭐️1.9k - 跟 Pinterest 一样的转场动画
+* [BubbleTransition](https://github.com/andreamazz/BubbleTransition) ⭐️3.3k - 自定义的气泡转场效果。
+* [StarWars.iOS](https://github.com/Yalantis/StarWars.iOS) ⭐️3.7k - 炫酷的过渡动画，把视图控制器粉碎成小块（🤔就像灭霸打了个响指）。
 * 【objc】[VCTransitionsLibrary](https://github.com/ColinEberhardt/VCTransitionsLibrary) ⭐️4.6k - 一个 iOS7 动画控制器和交互控制器的集合，提供翻转、折叠和其他各种转场动画。
-
 
 
 
