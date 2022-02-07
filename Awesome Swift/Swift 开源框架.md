@@ -118,25 +118,15 @@
 ## 框架
 
 * [AsyncDisplayKit](https://github.com/facebookarchive/AsyncDisplayKit) ⭐️13.5k - 提供界面的高流畅性切换及更灵敏的响应。
-
 * [MMWormhole](https://github.com/mutualmobile/MMWormhole) ⭐️3.8k - iOS 扩展与宿主应用的通讯框架。
-
 * [Whisper](https://github.com/hyperoslo/Whisper) 3.7k - Whisper 是一个组件，可以简化显示消息和应用内通知的任务。
-
 * [NetworkObjects](https://github.com/colemancda/NetworkObjects) ⭐️266 - 轻量版 HttpServer 框架，跨平台解决方案。
-
 * [FontAwesome.Swift](https://github.com/thii/FontAwesome.swift) ⭐️1.5k - Use FontAwesome in your Swift projects.
-
 * [GoogleMaterialIconFont](https://github.com/kitasuke/GoogleMaterialIconFont) - Google Material Icon Font for Swift and ObjC.
-
 * [epoxy-iOS](https://github.com/airbnb/epoxy-ios) ⭐️776 - Epoxy 是一套用于在 Swift 中构建 UIKit 应用程序的声明式 UI 框架。
-
 * [Aspects](https://github.com/steipete/Aspects) ⭐️8.2k - 面向切片编程（aspect oriented programming）框架。
-
 * [IGListKit](https://github.com/Instagram/IGListKit) ⭐️12.2k - 一个数据驱动的 `UICollectionView` 框架，用于构建快速灵活的列表。
-
 * :heart: [SwiftGen](https://github.com/SwiftGen/SwiftGen) ⭐️7.5k - 为你的 assets、storyboards、Localizable.strings 等提供 Swift 代码生成器 - 摆脱所有基于字符串的 API!
-
 * :heart: [Reusable](https://github.com/AliSoftware/Reusable) ⭐️2.7k - 一个 Swift mixin，可以轻松地以类型安全的方式重用视图。
 
   
@@ -181,13 +171,14 @@
 
 ### 启动引导页
 
-* [SwiftyOnboard](https://github.com/juanpablofernandez/SwiftyOnboard) ⭐️1k
-* [BWWalkthrough](https://github.com/ariok/BWWalkthrough) ⭐️2.8k - 界面切换中加入灵动的动画效果。
-* [VideoSplashKit](https://github.com/sahin/VideoSplashKit) - 用于创建简单的背景视频介绍页面的 UIViewController 库
-* [Onboard](https://github.com/mamaral/Onboard) ⭐️6.5k
-* [RazzleDazzle](https://github.com/IFTTT/RazzleDazzle) ⭐️3.3k
+* [SwiftyOnboard](https://github.com/juanpablofernandez/SwiftyOnboard) ⭐️1.1k
 * :heart: [Instructions](https://github.com/ephread/Instructions) ⭐️4.8k - 首次使用的教程指导
-* [Presentation](https://github.com/hyperoslo/Presentation) ⭐️3k - 新手引导页，欢迎页及其动效
+* [BWWalkthrough](https://github.com/ariok/BWWalkthrough) ⭐️2.8k - 界面切换中加入灵动的动画效果。
+* [VideoSplashKit](https://github.com/sahin/VideoSplashKit) ⭐️1.2k - 用于创建简单的背景视频介绍页面的 UIViewController 库
+* [RazzleDazzle](https://github.com/IFTTT/RazzleDazzle) ⭐️3.3k
+* 【objc】[Onboard](https://github.com/mamaral/Onboard) ⭐️6.5k
+* 【Deprecated】[Presentation](https://github.com/hyperoslo/Presentation) ⭐️3k - 新手引导页，欢迎页及其动效
+
 
 ### 分页菜单、UISegmentedControl
 
