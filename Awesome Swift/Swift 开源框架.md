@@ -4,6 +4,10 @@
 # Awesome Swift
 精心编写的 Swift 框架、库和软件集合。
 
+> 注：:heart: 表示推荐框架，:warning: 表示已归档或不再维护的框架。
+
+
+
 ## 网络
 
 ### HTTP
@@ -36,7 +40,7 @@
 ### Socket
 
 * [socket.io-client-swift](https://github.com/socketio/socket.io-client-swift) ⭐️4.6k
-* 【Archived】[SocketIO-Kit](https://github.com/ricardopereira/SocketIO-Kit) - Socket.io iOS/OSX Client compatible with v1.0 and later
+* :warning: [SocketIO-Kit](https://github.com/ricardopereira/SocketIO-Kit) - Socket.io iOS/OSX Client compatible with v1.0 and later
 * [CocoaAsyncSocket](https://github.com/robbiehanson/CocoaAsyncSocket) ⭐️11.8k
 
 
@@ -66,7 +70,7 @@
 * [Nuke](https://github.com/kean/Nuke) ⭐️6.4k - 用于加载和缓存图像的高级框架
 * [HanekeSwift](https://github.com/Haneke/HanekeSwift) ⭐️5.1k - 轻量带缓存高性能图片加载组件
 * [ImageScout](https://github.com/kaishin/ImageScout) ⭐️954 - 最小网络代价获得图片大小及类型
-* [archived] [ImageSizeFetcher](https://github.com/malcommac/ImageSizeFetcher) ⭐️441 - 通过 URL 获取图像类型或尺寸。
+* :warning: [ImageSizeFetcher](https://github.com/malcommac/ImageSizeFetcher) ⭐️441 - 通过 URL 获取图像类型或尺寸。
 * [Toucan](https://github.com/gavinbunney/Toucan) ⭐️2.4k - 小而美的图片变换及处理类
 * [FaceAware](https://github.com/BeauNouvelle/FaceAware) ⭐️3k - 这个插件帮助 UIImageView 将中心聚焦到照片的脸上，前提是这个照片使用了 AspectFill
 * [UIImageColors](https://github.com/jathu/UIImageColors) ⭐️3k - 图片色系决定界面背景色及字体显示颜色。获取主色、次色、背景色、详细色。
@@ -177,13 +181,13 @@
 * [VideoSplashKit](https://github.com/sahin/VideoSplashKit) ⭐️1.2k - 用于创建简单的背景视频介绍页面的 UIViewController 库
 * [RazzleDazzle](https://github.com/IFTTT/RazzleDazzle) ⭐️3.3k
 * 【objc】[Onboard](https://github.com/mamaral/Onboard) ⭐️6.5k
-* 【Deprecated】[Presentation](https://github.com/hyperoslo/Presentation) ⭐️3k - 新手引导页，欢迎页及其动效
+* :warning: [Presentation](https://github.com/hyperoslo/Presentation) ⭐️3k - 新手引导页，欢迎页及其动效
 
 
 ### 分页菜单、UISegmentedControl
 
 * :heart: [JXSegmentedView](https://github.com/pujiaxin33/JXSegmentedView) ⭐️1.9k - 分类切换滚动视图
-* 【Archived】[PagingMenuController](https://github.com/kitasuke/PagingMenuController) ⭐️2.5k - Paging view controller with customizable menu in Swift
+* :warning: [PagingMenuController](https://github.com/kitasuke/PagingMenuController) ⭐️2.5k - Paging view controller with customizable menu in Swift
 * [twicketapp/TwicketSegmentedControl](https://github.com/twicketapp/TwicketSegmentedControl) ⭐️1.7k
 * [JNDropDownMenu](https://github.com/javalnanda/JNDropDownMenu) ⭐️65 下拉菜单
 * [TwicketSegmentedControl](https://github.com/polqf/TwicketSegmentedControl) ⭐️1.7k - 用于替代 iOS 默认组件的自定义 UISegmentedControl
@@ -194,7 +198,7 @@
 ### 表单
 
 * :heart: [Eureka](https://github.com/xmartlabs/Eureka) ⭐️11.3k - iOS 表单框架，是 XLForm 的 Swift 版本。
-* 【Archived】[SwiftForms](https://github.com/ortuman/SwiftForms) ⭐️1.3k - 表单递交库，快速开发利器
+* :warning: [SwiftForms](https://github.com/ortuman/SwiftForms) ⭐️1.3k - 表单递交库，快速开发利器
 
 ### 日历/图表
 
@@ -743,4 +747,7 @@
 * [trip-to-iOS](https://github.com/Aufree/trip-to-iOS) ⭐️7.8k - iOS 学习资料整理。
 * [awesome-ios-cn](https://github.com/jobbole/awesome-ios-cn) ⭐️4k - iOS 资源大全中文版，内容包括：框架、组件、测试、Apple Store、SDK、Xcode、网站、书籍等。
 * [kechengsou/awesome-ios](https://github.com/kechengsou/awesome-ios) ⭐️300 - iOS 开发者资源大全
+* [Design-Patterns-In-Swift](https://github.com/ochococo/Design-Patterns-In-Swift) ⭐️13.2k - Swift 5.0 设计模式
+* [awesome-ios-architecture](https://github.com/onmyway133/awesome-ios-architecture) ⭐️4.5k - Better ways to structure iOS apps
+* [Awesome-Swift-Playgrounds](https://github.com/uraimo/Awesome-Swift-Playgrounds) ⭐️3.6k - A List of Awesome Swift Playgrounds
 
