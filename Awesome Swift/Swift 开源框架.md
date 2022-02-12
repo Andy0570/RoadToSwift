@@ -4,7 +4,7 @@
 # Awesome Swift
 精心编写的 Swift 框架、库和软件集合。
 
-> 注：:heart: 表示推荐框架，:warning: 表示已归档或不再维护的框架。
+> 注：:heart: 表示推荐框架，:warning: 表示已归档或不再维护框架。
 
 
 
@@ -63,14 +63,14 @@
 
 
 
-### 图片加载&图片处理
+## 图片加载&图片处理
 
-* [Kingfisher](https://github.com/onevcat/Kingfisher) ⭐️19.5k - 轻量级、纯 Swift 实现的网络图片下载和缓存框架。
+* [Kingfisher](https://github.com/onevcat/Kingfisher) ⭐️19.7k - 轻量级、纯 Swift 实现的网络图片下载和缓存框架。
 * [KingfisherWebP](https://github.com/Yeatse/KingfisherWebP) - WebP 图片解码
-* [Nuke](https://github.com/kean/Nuke) ⭐️6.4k - 用于加载和缓存图像的高级框架
+* [Nuke](https://github.com/kean/Nuke) ⭐️6.5k - 用于加载和缓存图像的高级框架
 * [HanekeSwift](https://github.com/Haneke/HanekeSwift) ⭐️5.1k - 轻量带缓存高性能图片加载组件
-* [ImageScout](https://github.com/kaishin/ImageScout) ⭐️954 - 最小网络代价获得图片大小及类型
-* :warning: [ImageSizeFetcher](https://github.com/malcommac/ImageSizeFetcher) ⭐️441 - 通过 URL 获取图像类型或尺寸。
+* [ImageScout](https://github.com/kaishin/ImageScout) ⭐️955 - 最小网络代价获得图片大小及类型
+* :warning: [ImageSizeFetcher](https://github.com/malcommac/ImageSizeFetcher) ⭐️440 - 通过 URL 获取图像类型或尺寸。
 * [Toucan](https://github.com/gavinbunney/Toucan) ⭐️2.4k - 小而美的图片变换及处理类
 * [FaceAware](https://github.com/BeauNouvelle/FaceAware) ⭐️3k - 这个插件帮助 UIImageView 将中心聚焦到照片的脸上，前提是这个照片使用了 AspectFill
 * [UIImageColors](https://github.com/jathu/UIImageColors) ⭐️3k - 图片色系决定界面背景色及字体显示颜色。获取主色、次色、背景色、详细色。
@@ -82,11 +82,6 @@
 * [AImage](https://github.com/wangjwchn/AImage) ⭐️1k - GIF/APNG 播放引擎。
 * [SwiftSVG](https://github.com/mchoe/SwiftSVG) ⭐️1.7k - 支持多种接口绘制 SVG 类库。
 * [MetalFilters](https://github.com/alexiscn/MetalFilters) ⭐️310 - 基于 Metal 框架实现的 Instagram 风格图片滤镜库。
-
-
-
-
-
 
 
 
@@ -129,7 +124,6 @@
 * [GoogleMaterialIconFont](https://github.com/kitasuke/GoogleMaterialIconFont) - Google Material Icon Font for Swift and ObjC.
 * [epoxy-iOS](https://github.com/airbnb/epoxy-ios) ⭐️776 - Epoxy 是一套用于在 Swift 中构建 UIKit 应用程序的声明式 UI 框架。
 * [Aspects](https://github.com/steipete/Aspects) ⭐️8.2k - 面向切片编程（aspect oriented programming）框架。
-* [IGListKit](https://github.com/Instagram/IGListKit) ⭐️12.2k - 一个数据驱动的 `UICollectionView` 框架，用于构建快速灵活的列表。
 * :heart: [SwiftGen](https://github.com/SwiftGen/SwiftGen) ⭐️7.5k - 为你的 assets、storyboards、Localizable.strings 等提供 Swift 代码生成器 - 摆脱所有基于字符串的 API!
 * :heart: [Reusable](https://github.com/AliSoftware/Reusable) ⭐️2.7k - 一个 Swift mixin，可以轻松地以类型安全的方式重用视图。
 
@@ -278,10 +272,10 @@
 
 ### UICollection
 
-* [IGListKit](https://github.com/Instagram/IGListKit) ⭐️12k 一个数据驱动的 UICollectionView 框架，用于构建快速而灵活的列表。 
-* [Carbon](https://github.com/ra1028/Carbon) ⭐️1.1k - 在 UITableView 和 UICollectionView 中构建基于组件声明式界面库。提供 API 文档及丰富示例。
-* [Owl](https://github.com/malcommac/Owl) ⭐️439 - 一个声明式、类型安全的框架，用于搭建快速而灵活的 UITableViews 和 UICollectionViews 列表。
-* [CollectionKit](https://github.com/SoySauceLab/CollectionKit)
+* :heart: [IGListKit](https://github.com/Instagram/IGListKit) ⭐️12.2k - 一个数据驱动的 `UICollectionView` 框架，用于构建快速灵活的列表。 
+* [Carbon](https://github.com/ra1028/Carbon) ⭐️1.1k - 一个声明式框架，在 `UITableView` 和 `UICollectionView` 中构建基于组件的界面。提供 API 文档及丰富示例。
+* [Owl](https://github.com/malcommac/Owl) ⭐️439 - 一个声明式、类型安全的框架，用于搭建快速而灵活的 `UITableView` 和 `UICollectionView`。
+* [CollectionKit](https://github.com/SoySauceLab/CollectionKit) ⭐️4.2k - 重构 `UICollectionView`
 * :heart: [CHTCollectionViewWaterfallLayout](https://github.com/chiahsien/CHTCollectionViewWaterfallLayout) ⭐️4.3k - 瀑布流布局
 * [MagazineLayout](https://github.com/airbnb/MagazineLayout) ⭐️3k - Airbnb 开源的集合视图布局框架，能够以垂直滚动的网格和列表的方式布置视图。
 * [AnimatedCollectionViewLayout](https://github.com/KelvinJin/AnimatedCollectionViewLayout) ⭐️4.3k - 一个 UICollectionViewLayout 子类，在不影响你现有代码的前提下，为UICollectionView 添加自定义过渡动画。
