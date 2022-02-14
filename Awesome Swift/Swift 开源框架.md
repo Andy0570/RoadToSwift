@@ -30,12 +30,12 @@
 
 * [vapor](https://github.com/vapor/vapor) ⭐️21.3k - 最活跃的 Web 服务器框架。[Vapor, Perfect, Kitura 比较](https://www.jianshu.com/p/a9ca47e844d7)
 * [Perfect](https://github.com/PerfectlySoft/Perfect) ⭐️13.9k - 功能更强大，性能更好的 Web 服务器框架。有完整的[中文开发文档](https://github.com/PerfectlySoft/Perfect/blob/master/README.zh_CN.md)支持。
-* [Taylor](https://github.com/izqui/Taylor) - a web server library in Swift. 
-* [Swifter](https://github.com/glock45/swifter) - an HTTP server engine in Swift.
 * [Kitura](https://github.com/Kitura/Kitura) ⭐️7.5k - 与 IBM Bluemix 最佳云集成，功能强大的 Web 服务器框架。CGI 支持。
 * [dockSwiftOnARM](https://github.com/helje5/dockSwiftOnARM) ⭐️120 -将 Swift 编译运行于 ARM 平台 Docker 上。
 * [amzn/smoke-framework](https://github.com/amzn/smoke-framework) ⭐️1.3k - 一个用 Swift 编写的轻量级服务器端服务框架。
-
+* [Swifter](https://github.com/glock45/swifter) ⭐️3.4k - an HTTP server engine in Swift.
+* [Taylor](https://github.com/izqui/Taylor) ⭐️931 - A lightweight library for writing HTTP web servers with Swift
+* [NetworkObjects](https://github.com/colemancda/NetworkObjects) ⭐️266 - Swift 后端/服务器框架（纯 Swift，支持 Linux）。
 
 ### Socket
 
@@ -52,7 +52,7 @@
 
 ### OAuth
 * [OAuthSwift](https://github.com/dongri/OAuthSwift) ⭐️2.9k - 国外主流网站 OAuth 授权类库。 
-* [AppAuth-iOS](https://github.com/openid/AppAuth-iOS) ⭐️1.2k - iOS and macOS SDK for communicating with OAuth 2.0 and OpenID Connect providers.
+* [AppAuth-iOS](https://github.com/openid/AppAuth-iOS) ⭐️1.3k - iOS and macOS SDK for communicating with OAuth 2.0 and OpenID Connect providers.
 
 
 ### MQTT
@@ -117,14 +117,21 @@
 ## 框架
 
 * [AsyncDisplayKit](https://github.com/facebookarchive/AsyncDisplayKit) ⭐️13.5k - 提供界面的高流畅性切换及更灵敏的响应。
+
 * [MMWormhole](https://github.com/mutualmobile/MMWormhole) ⭐️3.8k - iOS 扩展与宿主应用的通讯框架。
+
 * [Whisper](https://github.com/hyperoslo/Whisper) 3.7k - Whisper 是一个组件，可以简化显示消息和应用内通知的任务。
-* [NetworkObjects](https://github.com/colemancda/NetworkObjects) ⭐️266 - 轻量版 HttpServer 框架，跨平台解决方案。
+
 * [FontAwesome.Swift](https://github.com/thii/FontAwesome.swift) ⭐️1.5k - Use FontAwesome in your Swift projects.
+
 * [GoogleMaterialIconFont](https://github.com/kitasuke/GoogleMaterialIconFont) - Google Material Icon Font for Swift and ObjC.
+
 * [epoxy-iOS](https://github.com/airbnb/epoxy-ios) ⭐️776 - Epoxy 是一套用于在 Swift 中构建 UIKit 应用程序的声明式 UI 框架。
+
 * [Aspects](https://github.com/steipete/Aspects) ⭐️8.2k - 面向切片编程（aspect oriented programming）框架。
+
 * :heart: [SwiftGen](https://github.com/SwiftGen/SwiftGen) ⭐️7.5k - 为你的 assets、storyboards、Localizable.strings 等提供 Swift 代码生成器 - 摆脱所有基于字符串的 API!
+
 * :heart: [Reusable](https://github.com/AliSoftware/Reusable) ⭐️2.7k - 一个 Swift mixin，可以轻松地以类型安全的方式重用视图。
 
   
@@ -174,7 +181,7 @@
 * [BWWalkthrough](https://github.com/ariok/BWWalkthrough) ⭐️2.8k - 界面切换中加入灵动的动画效果。
 * [VideoSplashKit](https://github.com/sahin/VideoSplashKit) ⭐️1.2k - 用于创建简单的背景视频介绍页面的 UIViewController 库
 * [RazzleDazzle](https://github.com/IFTTT/RazzleDazzle) ⭐️3.3k
-* 【objc】[Onboard](https://github.com/mamaral/Onboard) ⭐️6.5k
+* [Onboard](https://github.com/mamaral/Onboard) ⭐️6.5k
 * :warning: [Presentation](https://github.com/hyperoslo/Presentation) ⭐️3k - 新手引导页，欢迎页及其动效
 
 
@@ -381,7 +388,7 @@
 * [lottie-ios](https://github.com/airbnb/lottie-ios) ⭐️22.2k - Airbnb 开源的一个动画渲染库，用于渲染播放 After Effects 矢量动画。
 * [Ramotion/folding-cell](https://github.com/Ramotion/folding-cell) ⭐️10k - 卡片折叠动画
 * [Gemini](https://github.com/shoheiyokoyama/Gemini) ⭐️3k - Gemini is rich scroll based animation framework for iOS, written in Swift.
-* 【Archived】[pop](https://github.com/facebookarchive/pop) ⭐️19.8k - Pop是一个可扩展的动画引擎，适用于iOS、tvOS和OS X。除了基本的静态动画，它还支持弹簧和衰减的动态动画，使其对建立现实的、基于物理的互动非常有用。
+* :warning: [pop](https://github.com/facebookarchive/pop) ⭐️19.8k - Pop是一个可扩展的动画引擎，适用于iOS、tvOS和OS X。除了基本的静态动画，它还支持弹簧和衰减的动态动画，使其对建立现实的、基于物理的互动非常有用。
 * [JHChainableAnimations](https://github.com/jhurray/JHChainableAnimations) ⭐️3.2k - Easy to read and write chainable animations in Objective-C and Swift. 通过链式语法实现动画。
 * [Stellar](https://github.com/AugustRush/Stellar) ⭐️2.9k - 适用于 Swift 的奇妙的物理动画库
 * [Macaw](https://github.com/exyte/Macaw) ⭐️5.8k - 强大且易用的矢量图形库，并且支持 SVG
@@ -393,7 +400,7 @@
 * [PinterestSwift](https://github.com/demonnico/PinterestSwift) ⭐️1.9k - 跟 Pinterest 一样的转场动画
 * [BubbleTransition](https://github.com/andreamazz/BubbleTransition) ⭐️3.3k - 自定义的气泡转场效果。
 * [StarWars.iOS](https://github.com/Yalantis/StarWars.iOS) ⭐️3.7k - 炫酷的过渡动画，把视图控制器粉碎成小块（🤔就像灭霸打了个响指）。
-* 【objc】[VCTransitionsLibrary](https://github.com/ColinEberhardt/VCTransitionsLibrary) ⭐️4.6k - 一个 iOS7 动画控制器和交互控制器的集合，提供翻转、折叠和其他各种转场动画。
+* [VCTransitionsLibrary](https://github.com/ColinEberhardt/VCTransitionsLibrary) ⭐️4.6k - 一个 iOS7 动画控制器和交互控制器的集合，提供翻转、折叠和其他各种转场动画。
 
 
 
@@ -521,6 +528,12 @@
 * [Notie](https://github.com/thii/Notie) - In-app notification in Swift, with customizable buttons and input text field.
 
 
+## KVO
+
+* :heart: [Bond](https://github.com/DeclarativeHub/Bond) ⭐️4.2k - A Swift binding framework
+* [RZDataBinding](https://github.com/Rightpoint/RZDataBinding) ⭐️551 - Lightweight KVO-based data binding options.
+
+
 
 ## 定位&地图
 
@@ -593,6 +606,10 @@
 * [PAirSandbox-Swift](https://github.com/TeacherXue/PAirSandbox-Swift) ⭐️4 - PAirSandbox Swift 版 仿照 MrPeak 的 PAirSandbox  可方便实时查看沙盒中的文件并传送给 mac
 * [LayoutInspector](https://github.com/isavynskyi/LayoutInspector) ⭐️490 - 3D 视角 iOS 应用布局视图检查器。
 * [Pulse](https://github.com/kean/Pulse) ⭐️3.9k - Apple 平台的网络检查器和记录器。
+* [SwiftTweaks](https://github.com/Khan/SwiftTweaks) ⭐️1.3k - 调整你的iOS应用，而不需要重新编译。
+* [TweaKit](https://github.com/Cokile/TweaKit) ⭐️3 - 类似于 SwiftTweaks, 另一个用于调整参数和特征标记的库。
+
+
 
 ---
 
@@ -673,15 +690,14 @@
 
 
 
-
-
 ## 函数式响应式编程
 
 何为响应式编程？面向数据流和变化传播（时间和事件非代码顺序）的编程范式。
 
-* [RxSwift](https://github.com/ReactiveX/RxSwift) - 简单、高效，活泼的函数响应式编程框架。
-* [ReactiveSwift](https://github.com/ReactiveCocoa/ReactiveSwift)
-* [ReactKit](https://github.com/ReactKit/ReactKit) - Swift Reactive Programming.
+* [RxSwift](https://github.com/ReactiveX/RxSwift) ⭐️21.6k - 简单、高效，活泼的函数响应式编程框架。
+* [ReactiveSwift](https://github.com/ReactiveCocoa/ReactiveSwift) ⭐️2.8k - Streams of values over time
+* [ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa) ⭐️20k - Cocoa 框架和 Obj-C 动态绑定，用于 ReactiveSwift。
+* [ReactKit](https://github.com/ReactKit/ReactKit) ⭐️1.2k - Swift Reactive Programming.
 * [ReactiveAPI](https://github.com/sky-uk/ReactiveAPI) - Write clean, concise and declarative network code relying on URLSession, with the power of RxSwift. Inspired by Retrofit.
 * [Dollar](https://github.com/ankurp/Dollar) ⭐️4.2k - Swift 版 Lo-Dash (或 underscore) 函数式工具库。
 * [ReSwift](https://github.com/ReSwift/ReSwift) ⭐️7.1k - 该框架主要针对单页面应用状态及单向数据流管理。
