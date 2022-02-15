@@ -4,7 +4,13 @@
 # Awesome Swift
 精心编写的 Swift 框架、库和软件集合。
 
-> 注：:heart: 表示推荐框架，:warning: 表示已归档或不再维护框架。
+
+
+> **注**：
+> 
+> :heart: 表示推荐框架；
+> :orange: 表示该框架使用 Objective-C 语言；
+> :warning: 表示已归档或不再维护框架；
 
 
 
@@ -12,7 +18,7 @@
 
 ### HTTP
 
-* :heart: [Alamofire/Alamofire](https://github.com/Alamofire/Alamofire) ⭐️36.7k - Alamofire 是 AFNetworking 的作者 mattt 新写的网络请求的 swift 库。
+* :heart: [Alamofire](https://github.com/Alamofire/Alamofire) ⭐️36.7k - Alamofire 是 AFNetworking 的作者 mattt 新写的网络请求的 swift 库。
 * :heart: [Moya](https://github.com/ashfurrow/Moya) ⭐️13.6k - 对 Alamofire 的封装，使用枚举将网络层实现细节与页面逻辑代码分离，方便单元测试，支持 stub 测试，配合 RxSwift 食用更佳。[官方中文文档](https://github.com/Moya/Moya/blob/master/Readme_CN.md)
 * [SwiftHTTP](https://github.com/daltoniam/SwiftHTTP) - Thin wrapper around NSURLSession in swift. Simplifies HTTP requests.
 * [apple/swift-nio](https://github.com/apple/swift-nio) ⭐️6.8k - SwiftNIO  是一个跨平台的异步事件驱动的网络应用框架，用于快速开发可维护的高性能协议服务器和客户端
@@ -60,29 +66,6 @@
 * [MQTT-Client-Framework](https://github.com/novastone-media/MQTT-Client-Framework) ⭐️1.7k - iOS, macOS, tvOS native ObjectiveC MQTT Client Framework
 * [CocoaMQTT](https://github.com/emqx/CocoaMQTT) ⭐️1.2k - MQTT 5.0 Client Library for iOS and macOS written in Swift
 * [xquic](https://github.com/alibaba/xquic) ⭐️581 - **XQUIC 是基于 IETF QUIC 协议实现的 UDP 传输框架**，包含加密可靠传输、HTTP/3 两大块主要内容，为应用提供可靠、安全、高效的数据传输功能，可以极大改善弱网和移动网络下产品的用户网络体验。
-
-
-
-## 图片加载&图片处理
-
-* [Kingfisher](https://github.com/onevcat/Kingfisher) ⭐️19.7k - 轻量级、纯 Swift 实现的网络图片下载和缓存框架。
-* [KingfisherWebP](https://github.com/Yeatse/KingfisherWebP) - WebP 图片解码
-* [Nuke](https://github.com/kean/Nuke) ⭐️6.5k - 用于加载和缓存图像的高级框架
-* [HanekeSwift](https://github.com/Haneke/HanekeSwift) ⭐️5.1k - 轻量带缓存高性能图片加载组件
-* [ImageScout](https://github.com/kaishin/ImageScout) ⭐️955 - 最小网络代价获得图片大小及类型
-* :warning: [ImageSizeFetcher](https://github.com/malcommac/ImageSizeFetcher) ⭐️440 - 通过 URL 获取图像类型或尺寸。
-* [Toucan](https://github.com/gavinbunney/Toucan) ⭐️2.4k - 小而美的图片变换及处理类
-* [FaceAware](https://github.com/BeauNouvelle/FaceAware) ⭐️3k - 这个插件帮助 UIImageView 将中心聚焦到照片的脸上，前提是这个照片使用了 AspectFill
-* [UIImageColors](https://github.com/jathu/UIImageColors) ⭐️3k - 图片色系决定界面背景色及字体显示颜色。获取主色、次色、背景色、详细色。
-* [DominantColor](https://github.com/indragiek/DominantColor) ⭐️865 - 提取图片主色示例项目
-* [gifu](https://github.com/kaishin/gifu) ⭐️2.7k - 高性能 GIF 显示类库
-* [SwiftyGif](https://github.com/kirualex/SwiftyGif) ⭐️1.5k - 高性能 GIF 引擎。
-* [png](https://github.com/kelvin13/png) ⭐️255 - 纯 Swift 代码解析 PNG 格式，返回图像原始像素数据和尺寸。
-* [APNGKit](https://github.com/onevcat/APNGKit) ⭐️1.9k - 解析和显示 APNG 的框架
-* [AImage](https://github.com/wangjwchn/AImage) ⭐️1k - GIF/APNG 播放引擎。
-* [SwiftSVG](https://github.com/mchoe/SwiftSVG) ⭐️1.7k - 支持多种接口绘制 SVG 类库。
-* [MetalFilters](https://github.com/alexiscn/MetalFilters) ⭐️310 - 基于 Metal 框架实现的 Instagram 风格图片滤镜库。
-
 
 
 ## JSON/XML 操作
@@ -183,6 +166,7 @@
 * [RazzleDazzle](https://github.com/IFTTT/RazzleDazzle) ⭐️3.3k
 * [Onboard](https://github.com/mamaral/Onboard) ⭐️6.5k
 * :warning: [Presentation](https://github.com/hyperoslo/Presentation) ⭐️3k - 新手引导页，欢迎页及其动效
+* [KSGuideController](https://github.com/skx926/KSGuideController) ⭐️323 - 一个漂亮的新手引导库。
 
 
 ### 分页菜单、UISegmentedControl
@@ -279,7 +263,7 @@
 
 ### UICollection
 
-* :heart: [IGListKit](https://github.com/Instagram/IGListKit) ⭐️12.2k - 一个数据驱动的 `UICollectionView` 框架，用于构建快速灵活的列表。 
+* :heart::orange: [IGListKit](https://github.com/Instagram/IGListKit) ⭐️12.2k - 一个数据驱动的 `UICollectionView` 框架，用于构建快速灵活的列表。 
 * [Carbon](https://github.com/ra1028/Carbon) ⭐️1.1k - 一个声明式框架，在 `UITableView` 和 `UICollectionView` 中构建基于组件的界面。提供 API 文档及丰富示例。
 * [Owl](https://github.com/malcommac/Owl) ⭐️439 - 一个声明式、类型安全的框架，用于搭建快速而灵活的 `UITableView` 和 `UICollectionView`。
 * [CollectionKit](https://github.com/SoySauceLab/CollectionKit) ⭐️4.2k - 重构 `UICollectionView`
@@ -400,9 +384,7 @@
 * [PinterestSwift](https://github.com/demonnico/PinterestSwift) ⭐️1.9k - 跟 Pinterest 一样的转场动画
 * [BubbleTransition](https://github.com/andreamazz/BubbleTransition) ⭐️3.3k - 自定义的气泡转场效果。
 * [StarWars.iOS](https://github.com/Yalantis/StarWars.iOS) ⭐️3.7k - 炫酷的过渡动画，把视图控制器粉碎成小块（🤔就像灭霸打了个响指）。
-* [VCTransitionsLibrary](https://github.com/ColinEberhardt/VCTransitionsLibrary) ⭐️4.6k - 一个 iOS7 动画控制器和交互控制器的集合，提供翻转、折叠和其他各种转场动画。
-
-
+* :orange: [VCTransitionsLibrary](https://github.com/ColinEberhardt/VCTransitionsLibrary) ⭐️4.6k - 一个 iOS7 动画控制器和交互控制器的集合，提供翻转、折叠和其他各种转场动画。
 
 参考：
 * [10 个让你相见恨晚的 iOS Swift 动画框架！](https://juejin.cn/post/6844903789833486350)
@@ -510,17 +492,76 @@
 
 
 
+## 图片加载&图片显示
+
+* [Kingfisher](https://github.com/onevcat/Kingfisher) ⭐️19.7k - 轻量级、纯 Swift 实现的网络图片下载和缓存框架。
+* [Nuke](https://github.com/kean/Nuke) ⭐️6.5k - 用于加载和缓存图像的高级框架。
+* [HanekeSwift](https://github.com/Haneke/HanekeSwift) ⭐️5.1k - 轻量带缓存高性能图片加载组件。
+* [Concorde](https://github.com/contentful-labs/Concorde) ⭐️1.4k - 
+  渐进式下载和解码 JPEG 格式图片。
+* [ImageScout](https://github.com/kaishin/ImageScout) ⭐️955 - 最小网络代价获得图片大小及类型。
+* :warning: [ImageSizeFetcher](https://github.com/malcommac/ImageSizeFetcher) ⭐️440 - 通过 URL 获取图像类型或尺寸
+* [FaceAware](https://github.com/BeauNouvelle/FaceAware) ⭐️3k - 这个插件帮助 UIImageView 将中心聚焦到照片的脸上，前提是这个照片使用了 AspectFill
+* [ZoomTransition](https://github.com/tristanhimmelman/ZoomTransition) ⭐️267 - 通过手势操控图片的放大、缩小、旋转等自由变化效果的组件及示例。
+* :orange: [VIPhotoView](https://github.com/vitoziv/VIPhotoView) ⭐️227 - 用于展示图片的工具类，因为是个 View，所以你可以放在任何地方显示。支持旋转，双击指定位置放大等。
+* :orange: [MWPhotoBrowser](https://github.com/mwaterfall/MWPhotoBrowser) ⭐️8.8k - 一个简单的 iOS 照片和视频浏览器，具有网格视图、导航栏标题和多选功能。
+* :orange: [RKSwipeCards](https://github.com/cwRichardKim/RKSwipeCards) ⭐️2.2k - 基于手势的照片显示，左滑删除，右滑喜欢，你懂的！
+
+
+
+### 图片编辑&图片滤镜
+
+* [Toucan](https://github.com/gavinbunney/Toucan) ⭐️2.4k - 图片变换及处理框架，简化了图片制作，支持调整大小、裁剪和风格化你的图像。
+* [MetalFilters](https://github.com/alexiscn/MetalFilters) ⭐️316 - 基于 Metal 框架实现的 Instagram 风格图片滤镜库。
+* [UIImageColors](https://github.com/jathu/UIImageColors) ⭐️3k - 图片色系决定界面背景色及字体显示颜色。获取主色、次色、背景色、详细色。
+* [DominantColor](https://github.com/indragiek/DominantColor) ⭐️865 - 提取图片主色示例项目
+* [issue-21-core-image-explorer](https://github.com/objcio/issue-21-core-image-explorer) ⭐️209 - objc.io 示例，Core Image 滤镜处理图片
+* :orange: [CoreImageShop](https://github.com/rFlex/CoreImageShop) ⭐️418 - Mac 应用程序，让你创建一个 Core Image Filter 并轻松生成底层 Objective-C 代码。
+* :orange: [CLImageEditor](https://github.com/yackle/CLImageEditor) ⭐️2.2k - 超强的图片编辑库，快速帮你实现旋转，防缩，滤镜等等一系列麻烦的事情。
+* [MarkingMen](https://github.com/FlexMonkey/MarkingMen) ⭐️217 - 允许用户使用一个手势来浏览和选择菜单层次，该手势在屏幕上显示为一个连续的标记。
+
+
+### 图片编解码&图片压缩
+
+* [KingfisherWebP](https://github.com/Yeatse/KingfisherWebP) ⭐️227 - Kingfisher 扩展，处理 WebP 格式图片。
+* [png](https://github.com/kelvin13/png) ⭐️259 - 纯 Swift 代码解析 PNG 格式，返回图像原始像素数据和尺寸。
+* [APNGKit](https://github.com/onevcat/APNGKit) ⭐️2k - 解析和显示 APNG 的框架。
+* [AImage](https://github.com/wangjwchn/AImage) ⭐️1k - GIF/APNG 播放引擎。
+* [gifu](https://github.com/kaishin/gifu) ⭐️2.7k - 高性能 GIF 显示类库
+* [SwiftyGif](https://github.com/kirualex/SwiftyGif) ⭐️1.5k - 高性能 GIF 引擎。
+* :orange: [FLAnimatedImage](https://github.com/Flipboard/FLAnimatedImage) ⭐️7.7k - Flipboard 开源的高性能 GIF 引擎
+* [SwiftSVG](https://github.com/mchoe/SwiftSVG) ⭐️1.7k - 支持多种接口绘制 SVG 类库。
+* :orange: [GPUImage](https://github.com/BradLarson/GPUImage) ⭐️19.9k - 一个开源iOS框架，基于 GPU 处理图像和视频。
+
+
+
 ## 音频
+
 * [AudioKit](https://github.com/audiokit/AudioKit) - Audio synthesis, processing, and analysis platform
 * [MusicKit](https://github.com/benzguo/MusicKit) - Framework and DSL for creating, analyzing, and transforming music in Swift
 * [WebMIDIKit](https://github.com/adamnemecek/WebMIDIKit/) - Simplest MIDI Swift framework
+* :orange: [EZAudio](https://github.com/syedhali/EZAudio) ⭐️4.8k - 一个 iOS 和 OSX 上简单易用的音频框架，根据音量实时显示波形图，基于 Core Audio，适合实时低延迟音频处理，非常直观。
+* :orange: [DOUAudioStreamer](https://github.com/douban/DOUAudioStreamer) ⭐️2.8k - 豆瓣开源的音乐流媒体播放器。
+
 
 
 ## 视频
 
 * [episode-code-samples](https://github.com/pointfreeco/episode-code-samples) ⭐️622 - 专注于学习 Swift 编程的视频聊天系列。
-* [ARVideoKit](https://github.com/AFathi/ARVideoKit) ⭐️1.4k - 捕捉和记录ARKit视频、照片、实时照片和GIFs。
+* [ARVideoKit](https://github.com/AFathi/ARVideoKit) ⭐️1.4k - 捕捉和记录 ARKit 视频、照片、实时照片和 GIFs。
 * [youtube-iOS](https://github.com/aslanyanhaik/youtube-iOS) ⭐️2.4k - 像 YouTube iOS 应用一样在右侧观看缩略视频，用 Swift 3 编写。
+* :orange: [ZFPlayer](https://github.com/renzifeng/ZFPlayer) ⭐️6.7k - 基于 AVPlayer，支持竖屏、横屏（横屏可锁定屏幕方向），上下滑动调节音量、屏幕亮度，左右滑动调节播放进度 [iOS 视频播放器之 ZFPlayer 剖析](https://www.jianshu.com/p/5566077bb25f)
+* :orange: [ijkplayer](https://github.com/bilibili/ijkplayer) ⭐️30k - Bilibili 开源的视频播放器
+* [FFmpeg](https://github.com/FFmpeg/FFmpeg) ⭐️28.2k - FFmpeg 是一个库和工具的集合，用于处理多媒体内容，如音频、视频、字幕和相关元数据。
+* :orange: [kxmovie](https://github.com/kolyvan/kxmovie) ⭐️2.8k - 基于 ffmpeg 的影片播放器。
+* [VLC](http://www.videolan.org/) - VLC 是一款自由、开源的跨平台多媒体播放器及框架，可播放大多数多媒体文件，以及 DVD、音频 CD、VCD 及各类流媒体协议。
+* :orange: [StreamingKit](https://github.com/tumtumtum/StreamingKit) ⭐️2.3k - 流媒体音乐播放器
+* :orange: [FreeStreamer](https://github.com/muhku/FreeStreamer) ⭐️2.1k - 流媒体音乐播放器，cpu 占用非常小。
+* :orange: [SCRecorder](https://github.com/rFlex/SCRecorder) ⭐️3.1k - 酷似 Instagram/Vine 的音频 / 视频摄像记录器，以 Objective-C 为基础的过滤器框架。 你可以做很多如下的操作：记录多个视频录像片段。删除任何你不想要的记录段。可以使用任何视频播放器播放片段。保存的记录可以在序列化的 NSDictionary 中使用。（在 NSUserDefaults 的中操作）添加使用 Core Image 的视频滤波器。可自由选择你需要的 parameters 合并和导出视频。
+* :orange: [LLSimpleCamera](https://github.com/omergul/LLSimpleCamera) ⭐️1.2k - 一个简单的、可定制的相机控制--iOS的视频记录器。
+* :orange: [ICGVideoTrimmer](https://github.com/itsmeichigo/ICGVideoTrimmer) ⭐️630 - 模仿 Instagram，用于快速修剪视频。
+
+
 
 ## 通知中心
 
@@ -549,6 +590,7 @@
 * [EFQRCode](https://github.com/EyreFree/EFQRCode) ⭐️4.1k - A better way to operate quick response code in Swift.
 * [swiftScan](https://github.com/MxABC/swiftScan) ⭐️1.4k - iOS 二维码、条形码 Swift 版本
 * [Portrait-without-Depth-iOS]( koooootake/Portrait-without-Depth-iOS) ⭐️171 - 实现单摄人像模式。
+* [CameraManager](https://github.com/imaginary-cloud/CameraManager) ⭐️1.2k - 相机管理封装类库，提供所有你需要的配置，以在你的应用程序中创建自定义相机视图。
 
 
 ## 即时通讯 IM

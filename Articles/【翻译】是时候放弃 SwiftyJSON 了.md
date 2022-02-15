@@ -37,7 +37,7 @@ Swift 4 宣布了 `JSONDecoder` ，它具有更多高级功能和有前途的功
 }
 ```
 
-`Tweet` 和 `Comment` 对象是反序列化并映射到的 JSON，它们采用 `Codable` 协议来支持 `JSONDecoder` 。 他们也有两个初始化器，一个用于 `Dictionary` 从 `JSONSerialization` ，另一个用于 `JSON` 的对象 `SwiftyJSON` 。
+`Tweet` 和 `Comment` 对象是反序列化并映射到的 JSON，它们采用 `Codable` 协议来支持 `JSONDecoder` 。 他们也有两个初始化器，一个用于从 `JSONSerialization` 中获取 `Dictionary`，另一个用于从 `JSON` 对象中获取 `SwiftyJSON` 。
 
 ```swift
 struct Tweet: Codable {
