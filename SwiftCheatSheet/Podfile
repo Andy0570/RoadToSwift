@@ -1,0 +1,16 @@
+# 指明依赖库的来源地址，不使用默认 CDN
+# source 'https://gitee.com/mirrors/CocoaPods-Specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
+# Uncomment the next line to define a global platform for your project
+platform :ios, '15.0'
+
+target 'SwiftCheatSheet' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for SwiftCheatSheet
+  pod 'Kingfisher', '~> 7.0'
+  pod 'SwifterSwift'
+
+end

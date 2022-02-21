@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BlueLibraryViewController" customModule="SwiftCheatSheet" customModuleProvider="target">
+            <connections>
+                <outlet property="horizontalScrollerView" destination="r5j-Tu-LXU" id="vgo-9k-QCK"/>
+                <outlet property="tableView" destination="ph6-2R-1PA" id="Oa4-gZ-aTg"/>
+                <outlet property="trashBarButtonItem" destination="kuz-Mq-XU6" id="1i8-4v-9YO"/>
+                <outlet property="undoBarButtonItem" destination="GWu-Q5-0D3" id="Gm6-4F-ltI"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" restorationIdentifier="HorizontalScrollerView" translatesAutoresizingMaskIntoConstraints="NO" id="r5j-Tu-LXU" customClass="HorizontalScrollerView" customModule="SwiftCheatSheet" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="44" width="414" height="120"/>
+                    <color key="backgroundColor" red="0.78823529411764703" green="0.78823529411764703" blue="0.81176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="usl-g0-q8W"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ph6-2R-1PA">
+                    <rect key="frame" x="0.0" y="164" width="414" height="654"/>
+                </tableView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LQP-Lg-Su3">
+                    <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="6xJ-C7-9XN"/>
+                    </constraints>
+                    <items>
+                        <barButtonItem systemItem="undo" id="GWu-Q5-0D3" userLabel="Undo Bar Button Item"/>
+                        <barButtonItem width="301" style="plain" systemItem="fixedSpace" id="YgZ-eZ-2Af"/>
+                        <barButtonItem systemItem="trash" id="kuz-Mq-XU6" userLabel="Trash Bar Button Item"/>
+                    </items>
+                </toolbar>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="r5j-Tu-LXU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="7oe-Kk-Ax4"/>
+                <constraint firstItem="r5j-Tu-LXU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Fgr-76-B91"/>
+                <constraint firstItem="LQP-Lg-Su3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Hfa-hJ-XFQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="LQP-Lg-Su3" secondAttribute="bottom" id="OqA-cz-hel"/>
+                <constraint firstItem="ph6-2R-1PA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Sgl-B3-Iv4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ph6-2R-1PA" secondAttribute="trailing" id="Yth-KE-NVx"/>
+                <constraint firstItem="ph6-2R-1PA" firstAttribute="top" secondItem="r5j-Tu-LXU" secondAttribute="bottom" id="jOX-RO-ihc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="r5j-Tu-LXU" secondAttribute="trailing" id="nQA-ru-rd4"/>
+                <constraint firstItem="LQP-Lg-Su3" firstAttribute="top" secondItem="ph6-2R-1PA" secondAttribute="bottom" id="nb6-vO-YaH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LQP-Lg-Su3" secondAttribute="trailing" id="pbg-p7-lpp"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="130.58035714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

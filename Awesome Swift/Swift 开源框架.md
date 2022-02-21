@@ -279,7 +279,9 @@
 
 ### UIScrollView
 
-* [ScrollStackController](https://github.com/malcommac/ScrollStackController)
+* :heart: [FSPagerView](https://github.com/WenchaoD/FSPagerView) ⭐️6.3k - FSPagerView 是一个优雅的屏幕滚动框架。它对于制作 Banner View、Product Show、Welcome/Guide Pages、Screen/ViewController Sliders 非常有帮助。
+* [ScrollStackController](https://github.com/malcommac/ScrollStackController) ⭐️378 - Easy scrollable layouts in UIKit
+
 
 
 
@@ -385,6 +387,7 @@
 * [BubbleTransition](https://github.com/andreamazz/BubbleTransition) ⭐️3.3k - 自定义的气泡转场效果。
 * [StarWars.iOS](https://github.com/Yalantis/StarWars.iOS) ⭐️3.7k - 炫酷的过渡动画，把视图控制器粉碎成小块（🤔就像灭霸打了个响指）。
 * :orange: [VCTransitionsLibrary](https://github.com/ColinEberhardt/VCTransitionsLibrary) ⭐️4.6k - 一个 iOS7 动画控制器和交互控制器的集合，提供翻转、折叠和其他各种转场动画。
+* :orange: [RZTransitions](https://github.com/Rightpoint/RZTransitions) ⭐️1.9k - 自定义的 iOS 视图控制器动画和交互。
 
 参考：
 * [10 个让你相见恨晚的 iOS Swift 动画框架！](https://juejin.cn/post/6844903789833486350)
@@ -586,11 +589,14 @@
 
 ## 相机&相册&二维码
 
-* [ImagePicker](https://github.com/hyperoslo/ImagePicker) ⭐️4.6k - A nicely designed and super easy to use ImagePicker. :camera:
+* [ImagePicker](https://github.com/hyperoslo/ImagePicker) ⭐️4.6k - A nicely designed and super easy to use ImagePicker.
+* [HXPHPicker](https://github.com/SilenceLove/HXPHPicker) ⭐️138 - 照片/视频选择器-支持选择 LivePhoto，GIF，在线下载 iCloud 资源，以及编辑照片/视频。
 * [EFQRCode](https://github.com/EyreFree/EFQRCode) ⭐️4.1k - A better way to operate quick response code in Swift.
 * [swiftScan](https://github.com/MxABC/swiftScan) ⭐️1.4k - iOS 二维码、条形码 Swift 版本
 * [Portrait-without-Depth-iOS]( koooootake/Portrait-without-Depth-iOS) ⭐️171 - 实现单摄人像模式。
 * [CameraManager](https://github.com/imaginary-cloud/CameraManager) ⭐️1.2k - 相机管理封装类库，提供所有你需要的配置，以在你的应用程序中创建自定义相机视图。
+
+
 
 
 ## 即时通讯 IM
@@ -650,6 +656,7 @@
 * [Pulse](https://github.com/kean/Pulse) ⭐️3.9k - Apple 平台的网络检查器和记录器。
 * [SwiftTweaks](https://github.com/Khan/SwiftTweaks) ⭐️1.3k - 调整你的iOS应用，而不需要重新编译。
 * [TweaKit](https://github.com/Cokile/TweaKit) ⭐️3 - 类似于 SwiftTweaks, 另一个用于调整参数和特征标记的库。
+* [GDPerformanceView-Swift](https://github.com/dani-gavrilov/GDPerformanceView-Swift) ⭐️2.1k - 在状态栏上显示 FPS、CPU 和内存使用率、设备型号、应用程序和iOS版本，并通过委托报告 FPS、CPU 和内存使用率。
 
 
 
