@@ -117,6 +117,8 @@
 
 * :heart: [Reusable](https://github.com/AliSoftware/Reusable) ⭐️2.7k - 一个 Swift mixin，可以轻松地以类型安全的方式重用视图。
 
+* [CarbonGraph](https://github.com/baidu/CarbonGraph) ⭐️43 - 百度网盘开源依赖注入框架 CarbonGraph，框架使用 Swift 编写同时兼容 ObjC，提供完整的依赖注入能力（构造器注入、属性注入、方法注入、工厂注入）。你可以将类之间的依赖关系交给 IOC 容器来构建，使用框架定义的 DSL 能够方便地进行配置。构建更有利于测试和替换的松散耦合关系，可以实现不同业务对中台服务的个性化配置，也可以仅仅用来解决组件化中模块间直接依赖的问题。
+
   
 
 ## UI
@@ -563,6 +565,7 @@
 * :orange: [SCRecorder](https://github.com/rFlex/SCRecorder) ⭐️3.1k - 酷似 Instagram/Vine 的音频 / 视频摄像记录器，以 Objective-C 为基础的过滤器框架。 你可以做很多如下的操作：记录多个视频录像片段。删除任何你不想要的记录段。可以使用任何视频播放器播放片段。保存的记录可以在序列化的 NSDictionary 中使用。（在 NSUserDefaults 的中操作）添加使用 Core Image 的视频滤波器。可自由选择你需要的 parameters 合并和导出视频。
 * :orange: [LLSimpleCamera](https://github.com/omergul/LLSimpleCamera) ⭐️1.2k - 一个简单的、可定制的相机控制--iOS的视频记录器。
 * :orange: [ICGVideoTrimmer](https://github.com/itsmeichigo/ICGVideoTrimmer) ⭐️630 - 模仿 Instagram，用于快速修剪视频。
+* [Learning-AV-Foundation-Swift](https://github.com/tapharmonic/Learning-AV-Foundation-Swift) ⭐️201，学习 AVFoundation 框架。
 
 
 
