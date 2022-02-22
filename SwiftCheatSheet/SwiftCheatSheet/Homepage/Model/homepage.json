@@ -41,9 +41,19 @@
     "title": "集合视图",
     "cells": [{
         "image": "image",
-        "title": "title1",
+        "title": "使用 UICollectionView.CellRegistration 配置集合视图",
         "description": "description",
-        "className": ""
+        "className": "MyCollectionViewController"
+    },{
+        "image": "image",
+        "title": "可折叠展开的集合视图",
+        "description": "description",
+        "className": "CollaspibleCollectionViewController"
+    },{
+        "image": "image",
+        "title": "Diffable Data Source",
+        "description": "description",
+        "className": "IconCollectionViewController"
     }]
 }, {
     "title": "自动布局",

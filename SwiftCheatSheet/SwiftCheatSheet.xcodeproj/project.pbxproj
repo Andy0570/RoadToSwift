@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2246DD0927C474E9006A3AC1 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2246DD0827C474E9006A3AC1 /* MyCollectionViewCell.swift */; };
+		2246DD0B27C4768D006A3AC1 /* MyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2246DD0A27C4768D006A3AC1 /* MyCollectionViewController.swift */; };
+		2246DD1727C49402006A3AC1 /* CollaspibleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2246DD1627C49402006A3AC1 /* CollaspibleCollectionViewController.swift */; };
+		2246DD1C27C4BA35006A3AC1 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2246DD1B27C4BA35006A3AC1 /* Icon.swift */; };
+		2246DD2127C4BB48006A3AC1 /* IconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2246DD1F27C4BB48006A3AC1 /* IconCollectionViewCell.swift */; };
+		2246DD2227C4BB48006A3AC1 /* IconCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2246DD2027C4BB48006A3AC1 /* IconCollectionViewCell.xib */; };
+		225A1C1327C4C00000F8215F /* IconCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A1C1127C4C00000F8215F /* IconCollectionViewController.swift */; };
 		225F202327C332F0008FCC29 /* TurnStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225F202227C332F0008FCC29 /* TurnStrategy.swift */; };
 		225F202527C33642008FCC29 /* Scorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225F202427C33642008FCC29 /* Scorer.swift */; };
 		22BF2E1427BDFE0D009027E3 /* NotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BF2E1327BDFE0D009027E3 /* NotificationExtension.swift */; };
@@ -47,6 +54,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2246DD0827C474E9006A3AC1 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		2246DD0A27C4768D006A3AC1 /* MyCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewController.swift; sourceTree = "<group>"; };
+		2246DD1627C49402006A3AC1 /* CollaspibleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollaspibleCollectionViewController.swift; sourceTree = "<group>"; };
+		2246DD1B27C4BA35006A3AC1 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
+		2246DD1F27C4BB48006A3AC1 /* IconCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCollectionViewCell.swift; sourceTree = "<group>"; };
+		2246DD2027C4BB48006A3AC1 /* IconCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IconCollectionViewCell.xib; sourceTree = "<group>"; };
+		225A1C1127C4C00000F8215F /* IconCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCollectionViewController.swift; sourceTree = "<group>"; };
 		225F202227C332F0008FCC29 /* TurnStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnStrategy.swift; sourceTree = "<group>"; };
 		225F202427C33642008FCC29 /* Scorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scorer.swift; sourceTree = "<group>"; };
 		22BF2E1327BDFE0D009027E3 /* NotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExtension.swift; sourceTree = "<group>"; };
@@ -109,6 +123,60 @@
 				7056DC84DBAA37CC30BED016 /* Pods-SwiftCheatSheet.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		2246DD0727C474B6006A3AC1 /* UICollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				2246DD1527C493CC006A3AC1 /* MyCollectionViewController */,
+				2246DD1427C493BA006A3AC1 /* CollaspibleUICollectionView */,
+				2246DD1827C4B9F7006A3AC1 /* IconCollectionView */,
+			);
+			path = UICollectionView;
+			sourceTree = "<group>";
+		};
+		2246DD0C27C489D0006A3AC1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2246DD0A27C4768D006A3AC1 /* MyCollectionViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2246DD0D27C489DB006A3AC1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2246DD0827C474E9006A3AC1 /* MyCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2246DD1427C493BA006A3AC1 /* CollaspibleUICollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				2246DD1627C49402006A3AC1 /* CollaspibleCollectionViewController.swift */,
+			);
+			path = CollaspibleUICollectionView;
+			sourceTree = "<group>";
+		};
+		2246DD1527C493CC006A3AC1 /* MyCollectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2246DD0C27C489D0006A3AC1 /* Controller */,
+				2246DD0D27C489DB006A3AC1 /* View */,
+			);
+			path = MyCollectionViewController;
+			sourceTree = "<group>";
+		};
+		2246DD1827C4B9F7006A3AC1 /* IconCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				225A1C1127C4C00000F8215F /* IconCollectionViewController.swift */,
+				2246DD1F27C4BB48006A3AC1 /* IconCollectionViewCell.swift */,
+				2246DD2027C4BB48006A3AC1 /* IconCollectionViewCell.xib */,
+				2246DD1B27C4BA35006A3AC1 /* Icon.swift */,
+			);
+			path = IconCollectionView;
 			sourceTree = "<group>";
 		};
 		22BF2E0C27BDFD8B009027E3 /* 设计模式 */ = {
@@ -258,6 +326,7 @@
 		22D2233427BCEB89000EAD0F /* SwiftCheatSheet */ = {
 			isa = PBXGroup;
 			children = (
+				2246DD0727C474B6006A3AC1 /* UICollectionView */,
 				22BF2E0C27BDFD8B009027E3 /* 设计模式 */,
 				22D2234927BCF061000EAD0F /* Homepage */,
 				22D2233527BCEB89000EAD0F /* AppDelegate.swift */,
@@ -388,6 +457,7 @@
 				22BF2E1E27BE207C009027E3 /* BlueLibraryViewController.xib in Resources */,
 				22D2234227BCEB8A000EAD0F /* LaunchScreen.storyboard in Resources */,
 				22D2233F27BCEB8A000EAD0F /* Assets.xcassets in Resources */,
+				2246DD2227C4BB48006A3AC1 /* IconCollectionViewCell.xib in Resources */,
 				22BF2E2C27BF42E6009027E3 /* albums.json in Resources */,
 				22BF2E3E27BF87CD009027E3 /* GameViewController.xib in Resources */,
 				22D2233D27BCEB89000EAD0F /* Main.storyboard in Resources */,
@@ -445,6 +515,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22BF2E1A27BE1E8D009027E3 /* AlbumView.swift in Sources */,
+				225A1C1327C4C00000F8215F /* IconCollectionViewController.swift in Sources */,
 				22BF2E2A27BF3B8D009027E3 /* HorizontalScrollerView.swift in Sources */,
 				22D2234D27BCF20A000EAD0F /* Item.swift in Sources */,
 				22BF2E1D27BE207C009027E3 /* BlueLibraryViewController.swift in Sources */,
@@ -461,6 +532,7 @@
 				22D2235127BCF689000EAD0F /* ArrayDataSource.swift in Sources */,
 				22BF2E3D27BF87CD009027E3 /* GameViewController.swift in Sources */,
 				22D2233827BCEB89000EAD0F /* SceneDelegate.swift in Sources */,
+				2246DD1C27C4BA35006A3AC1 /* Icon.swift in Sources */,
 				22BF2E1827BDFF35009027E3 /* Album.swift in Sources */,
 				22BF2E3A27BF774D009027E3 /* GameView.swift in Sources */,
 				22BF2E4927BFA08A009027E3 /* Turn.swift in Sources */,
@@ -468,11 +540,15 @@
 				22BF2E3627BF750C009027E3 /* Shape.swift in Sources */,
 				22BF2E2627BE5468009027E3 /* StringExtensions.swift in Sources */,
 				22BF2E4727BF9D1B009027E3 /* ShapeViewBuilder.swift in Sources */,
+				2246DD2127C4BB48006A3AC1 /* IconCollectionViewCell.swift in Sources */,
 				225F202527C33642008FCC29 /* Scorer.swift in Sources */,
+				2246DD1727C49402006A3AC1 /* CollaspibleCollectionViewController.swift in Sources */,
 				22BF2E2227BE26B9009027E3 /* PersistencyManager.swift in Sources */,
+				2246DD0927C474E9006A3AC1 /* MyCollectionViewCell.swift in Sources */,
 				22BF2E3427BF7479009027E3 /* Utils.swift in Sources */,
 				22BF2E2427BE48CF009027E3 /* UITableViewCellExtensions.swift in Sources */,
 				22BF2E4B27BFA3F8009027E3 /* TurnController.swift in Sources */,
+				2246DD0B27C4768D006A3AC1 /* MyCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
