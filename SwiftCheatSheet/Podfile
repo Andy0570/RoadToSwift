@@ -12,5 +12,6 @@ target 'SwiftCheatSheet' do
   # Pods for SwiftCheatSheet
   pod 'Kingfisher', '~> 7.0'
   pod 'SwifterSwift'
+  pod 'IGListKit'
 
 end

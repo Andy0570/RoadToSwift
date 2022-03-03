@@ -12,8 +12,6 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
-
 enum SectionType {
     case all
 }
@@ -79,7 +77,7 @@ class IconCollectionViewController: UIViewController {
         }
 
         // 注册重用 cell for nib
-        collectionView.register(UINib(nibName: "IconCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: reuseIdentifier)
+        collectionView.register(IconCollectionViewCell.nib, forCellWithReuseIdentifier: IconCollectionViewCell.identifier)
 
         // 连接集合视图与数据源
         collectionView.dataSource = dataSource
@@ -93,7 +91,7 @@ class IconCollectionViewController: UIViewController {
         // <Section, Icon> 中的 Icon 表示我们使用 Icon 类型处理 cell 数据。
         let dataSource = UICollectionViewDiffableDataSource<SectionType, Icon>(collectionView: collectionView) { (collectionView, indexPath, icon) -> UICollectionViewCell? in
 
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! IconCollectionViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: IconCollectionViewCell.identifier, for: indexPath) as! IconCollectionViewCell
             cell.iconImageView.image = UIImage(named: icon.name)
             cell.iconPriceLabel.text = "$\(icon.price)"
 

@@ -1,11 +1,11 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
 CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Kingfisher" "${PODS_CONFIGURATION_BUILD_DIR}/SwifterSwift"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/IGListDiffKit" "${PODS_CONFIGURATION_BUILD_DIR}/IGListKit" "${PODS_CONFIGURATION_BUILD_DIR}/Kingfisher" "${PODS_CONFIGURATION_BUILD_DIR}/SwifterSwift"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Kingfisher/Kingfisher.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SwifterSwift/SwifterSwift.framework/Headers"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/IGListDiffKit/IGListDiffKit.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/IGListKit/IGListKit.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Kingfisher/Kingfisher.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SwifterSwift/SwifterSwift.framework/Headers"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) /usr/lib/swift '@executable_path/Frameworks' '@loader_path/Frameworks'
 LIBRARY_SEARCH_PATHS = $(inherited) "${DT_TOOLCHAIN_DIR}/usr/lib/swift/${PLATFORM_NAME}" /usr/lib/swift
-OTHER_LDFLAGS = $(inherited) -framework "Accelerate" -framework "CFNetwork" -framework "Kingfisher" -framework "SwifterSwift" -weak_framework "Combine" -weak_framework "SwiftUI"
+OTHER_LDFLAGS = $(inherited) -l"c++" -framework "Accelerate" -framework "CFNetwork" -framework "IGListDiffKit" -framework "IGListKit" -framework "Kingfisher" -framework "SwifterSwift" -framework "UIKit" -weak_framework "Combine" -weak_framework "SwiftUI"
 OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)

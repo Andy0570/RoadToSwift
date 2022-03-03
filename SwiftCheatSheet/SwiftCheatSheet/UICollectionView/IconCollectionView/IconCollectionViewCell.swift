@@ -7,7 +7,16 @@
 
 import UIKit
 
-class IconCollectionViewCell: UICollectionViewCell {
+final class IconCollectionViewCell: UICollectionViewCell {
+
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var iconPriceLabel: UILabel!
+
+    static var identifier: String {
+        return String(describing: self)
+    }
+
+    static var nib: UINib {
+        return UINib(nibName: identifier, bundle: .main)
+    }
 }

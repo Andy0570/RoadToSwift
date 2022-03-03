@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FlagViewController" customModule="SwiftCheatSheet" customModuleProvider="target">
+            <connections>
+                <outlet property="button1" destination="IMT-m0-WvM" id="JA4-xp-wCz"/>
+                <outlet property="button2" destination="6lr-ZQ-BEy" id="f0Q-8y-QGP"/>
+                <outlet property="button3" destination="4Cn-9D-U6B" id="tfa-Mj-Eyr"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMT-m0-WvM" userLabel="Button1">
+                    <rect key="frame" x="95" y="100" width="224" height="114"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="IMT-m0-WvM" secondAttribute="height" multiplier="112:57" id="9gS-Dj-vcb"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="us"/>
+                    <connections>
+                        <action selector="buttonTapped:" destination="-1" eventType="touchUpInside" id="DiT-6i-81Q"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6lr-ZQ-BEy" userLabel="Button2">
+                    <rect key="frame" x="95" y="244" width="224" height="114"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="6lr-ZQ-BEy" secondAttribute="height" multiplier="112:57" id="o9n-JG-yhr"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="us"/>
+                    <connections>
+                        <action selector="buttonTapped:" destination="-1" eventType="touchUpInside" id="3OP-KU-VZX"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Cn-9D-U6B" userLabel="Button3">
+                    <rect key="frame" x="95" y="388" width="224" height="114"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="4Cn-9D-U6B" secondAttribute="height" multiplier="112:57" id="V3k-sT-V3V"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="us"/>
+                    <connections>
+                        <action selector="buttonTapped:" destination="-1" eventType="touchUpInside" id="cLZ-Sy-cIi"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="6lr-ZQ-BEy" firstAttribute="height" secondItem="IMT-m0-WvM" secondAttribute="height" id="53j-MZ-ChE"/>
+                <constraint firstItem="IMT-m0-WvM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="56" id="5Sy-oc-yDj"/>
+                <constraint firstItem="4Cn-9D-U6B" firstAttribute="height" secondItem="6lr-ZQ-BEy" secondAttribute="height" id="CPY-gv-AMw"/>
+                <constraint firstItem="6lr-ZQ-BEy" firstAttribute="centerX" secondItem="IMT-m0-WvM" secondAttribute="centerX" id="NQT-QQ-ZmF"/>
+                <constraint firstItem="4Cn-9D-U6B" firstAttribute="top" secondItem="6lr-ZQ-BEy" secondAttribute="bottom" constant="30" id="SMb-2v-G8w"/>
+                <constraint firstItem="4Cn-9D-U6B" firstAttribute="centerX" secondItem="6lr-ZQ-BEy" secondAttribute="centerX" id="WGN-eJ-UfV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4Cn-9D-U6B" secondAttribute="bottom" constant="20" id="jkg-Zg-l1O"/>
+                <constraint firstItem="6lr-ZQ-BEy" firstAttribute="top" secondItem="IMT-m0-WvM" secondAttribute="bottom" constant="30" id="oHb-PW-nbS"/>
+                <constraint firstItem="IMT-m0-WvM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="yzV-B4-ZMT"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="131"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="us" width="200" height="100"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

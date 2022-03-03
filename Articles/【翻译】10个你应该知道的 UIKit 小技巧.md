@@ -8,7 +8,7 @@
 
 深色模式和浅色模式不应该遵循完全相同的设计模式，有时你想在你的应用程序处于浅色模式时使用边框，但在深色模式下你可能想隐藏多余的线条。
 
-一个可能的解决方案是基于给定的 `UITraitCollection` 定义一个自定义的 `UIColor`。你可以检查 `trait` 的 `userInterfaceStyle` 属性来检查黑暗模式的外观风格。
+一个可能的解决方案是基于给定的 `UITraitCollection` 定义一个自定义的 `UIColor`。你可以检查 `trait` 的 `userInterfaceStyle` 属性来检查并设置深色模式的外观样式。
 
 ```swift
 extension UIColor {
@@ -24,13 +24,13 @@ extension UIColor {
 }
 ```
 
-基于这个条件，你可以很容易地返回浅色和深色模式的不同颜色。你可以通过扩展 `UIColor` 对象来创建你自己的一组静态颜色变量。如果你打算支持暗色模式，并且你想创建自定义颜色，这是一个必须的小技巧。
+基于这个条件，你可以很容易地返回浅色和深色模式的不同颜色。你可以通过扩展 `UIColor` 对象来创建你自己的一组静态颜色变量。如果你打算支持深色模式，并且你想创建自定义颜色，这是一个很有必要的小技巧。
 
 
 ## 监听 trait collection 的变化
 
 
-下一个问题也与黑暗模式支持有关，有时你想检测用户界面的外观变化，这时`traitCollectionDidChange`函数就会有帮助。它在视图、控制器和 cell 中也可用，所以它是一个相当通用的解决方案。
+下一个问题也与深色模式支持有关，有时你想检测用户界面的外观变化，这时`traitCollectionDidChange`函数就会有帮助。它在视图、控制器和 cell 中也可用，所以它是一个相当通用的解决方案。
 
 ```swift
 class MyCustomView: UIView {

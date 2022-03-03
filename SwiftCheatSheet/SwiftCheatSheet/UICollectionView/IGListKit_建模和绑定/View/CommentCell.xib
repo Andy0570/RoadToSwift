@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CommentCell" customModule="SwiftCheatSheet" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="35"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="35"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WmO-QX-daP" userLabel="Username Label">
+                        <rect key="frame" x="15" y="8.5" width="87" height="18"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEU-0V-yQQ" userLabel="Comment Label">
+                        <rect key="frame" x="106" y="8.5" width="37" height="18"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                        <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="eEU-0V-yQQ" firstAttribute="leading" secondItem="WmO-QX-daP" secondAttribute="trailing" constant="4" id="0dw-2e-pjG"/>
+                <constraint firstItem="eEU-0V-yQQ" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="87I-em-4qQ"/>
+                <constraint firstItem="WmO-QX-daP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="h5s-la-7Xe"/>
+                <constraint firstItem="WmO-QX-daP" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="iLG-dV-LQ9"/>
+            </constraints>
+            <connections>
+                <outlet property="commentLabel" destination="eEU-0V-yQQ" id="ltI-qB-sVI"/>
+                <outlet property="usernameLabel" destination="WmO-QX-daP" id="Ubi-uD-xiA"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="131"/>
+        </collectionViewCell>
+    </objects>
+</document>

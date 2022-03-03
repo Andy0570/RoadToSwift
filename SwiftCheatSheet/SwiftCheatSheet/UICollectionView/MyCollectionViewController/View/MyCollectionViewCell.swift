@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MyCollectionViewCell: UICollectionViewCell {
+final class MyCollectionViewCell: UICollectionViewCell {
 
     let label = UILabel()
 

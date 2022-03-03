@@ -125,10 +125,10 @@
 
 * [Material](https://github.com/CosmicMind/Material) ⭐️11.9k - 用于创建漂亮应用程序的 UI/UX 框架。
 * [Sejima](https://github.com/MoveUpwards/Sejima) ⭐️63 - User Interface Library components for iOS.
-* [FlourishUI](https://github.com/unicorn/FlourishUI)  ⭐️224 - Framework for modals, color exensions and buttons.
-* [SectionedSlider](https://github.com/LeonardoCardoso/SectionedSlider) - iOS 11 Control Center Slider.
-* [Cupcake](https://github.com/nerdycat/Cupcake) ⭐️281 - An easy way to create and layout UI components for iOS.
+* [SectionedSlider](https://github.com/LeonardoCardoso/SectionedSlider) ⭐️349 - iOS 11 控制中心音量滑块。
+* [Cupcake](https://github.com/nerdycat/Cupcake) ⭐️285 - An easy way to create and layout UI components for iOS.
 * [EZSwipeController](https://github.com/goktugyil/EZSwipeController) ⭐️849 -  UIPageViewController like Snapchat/Tinder/iOS Main Pages
+* [Swifty](https://github.com/RyukieSama/Swifty) ⭐️41 - ScreenShield 是极其轻量化的截屏防护方案，任何需要被保护的 View 作为子视图放入保护的视图中即可达到截屏时隐藏内容的效果。
 
 
 ### Alert 弹窗、Toast
@@ -147,6 +147,7 @@
 * [TTGSnackbar](https://github.com/zekunyan/TTGSnackbar) ⭐️579
 * [SweetAlert-iOS](https://github.com/codestergit/SweetAlert-iOS) ⭐️2k - 带动画效果弹窗封装类。
 * [Popover](https://github.com/corin8823/Popover) ⭐️1.9k - 像 Facebook 应用里的气球呼出框，用纯 Swift 语言编写
+* [FlourishUI](https://github.com/unicorn/FlourishUI)  ⭐️224 - 一个高度可配置的、开箱即用的漂亮UI框架。
 
 
 ### 活动指示器、UIActivityIndicatorView
@@ -265,7 +266,7 @@
 
 ### UICollection
 
-* :heart::orange: [IGListKit](https://github.com/Instagram/IGListKit) ⭐️12.2k - 一个数据驱动的 `UICollectionView` 框架，用于构建快速灵活的列表。 
+* :orange: [IGListKit](https://github.com/Instagram/IGListKit) ⭐️12.2k - Instagram 开源的一个数据驱动的 `UICollectionView` 框架，用于构建快速灵活的集合列表。 
 * [Carbon](https://github.com/ra1028/Carbon) ⭐️1.1k - 一个声明式框架，在 `UITableView` 和 `UICollectionView` 中构建基于组件的界面。提供 API 文档及丰富示例。
 * [Owl](https://github.com/malcommac/Owl) ⭐️439 - 一个声明式、类型安全的框架，用于搭建快速而灵活的 `UITableView` 和 `UICollectionView`。
 * [CollectionKit](https://github.com/SoySauceLab/CollectionKit) ⭐️4.2k - 重构 `UICollectionView`
@@ -273,6 +274,7 @@
 * [MagazineLayout](https://github.com/airbnb/MagazineLayout) ⭐️3k - Airbnb 开源的集合视图布局框架，能够以垂直滚动的网格和列表的方式布置视图。
 * [AnimatedCollectionViewLayout](https://github.com/KelvinJin/AnimatedCollectionViewLayout) ⭐️4.3k - 一个 UICollectionViewLayout 子类，在不影响你现有代码的前提下，为UICollectionView 添加自定义过渡动画。
 * [BouncyLayout](https://github.com/roberthein/BouncyLayout) ⭐️4k - 为集合视图 cell 添加 bounce 效果。
+* [MSPeekCollectionViewDelegateImplementation](https://github.com/MaherKSantina/MSPeekCollectionViewDelegateImplementation) ⭐️341 - 在集合视图中查看上一项和下一项的自定义分页实现。
 
 
 
@@ -343,6 +345,7 @@
 
 * [SwiftRichString](https://github.com/malcommac/SwiftRichString) ⭐️2.8k - Elegant Attributed String composition in Swift。
 * [SwiftScanner](https://github.com/malcommac/SwiftScanner) ⭐️172 - String Scanner in pure Swift (supports unicode)
+* [Highlightr](https://github.com/raspu/Highlightr) ⭐️1.3k - iOS & OSX 语法高亮.
 
 
 
@@ -356,6 +359,7 @@
 * [DynamicColor](https://github.com/yannickl/DynamicColor) ⭐️2.7k - 更简单的控制颜色的 Swift 拓展插件
 * [SwiftColors](https://github.com/thii/SwiftColors) - HEX color handling as an extension for UIColor.
 * [ComplimentaryGradientView](https://github.com/gkye/ComplimentaryGradientView) ⭐️707 - 通过源图片的主要颜色生成颜色渐变
+
 
 
 ## 时间
@@ -654,12 +658,15 @@
 * [chisel](https://github.com/facebook/chisel) ⭐️8.7k - FaceBook 开源的 lldb 调试命令集合。
 * [FLEX](https://github.com/FLEXTool/FLEX) ⭐️12.6k - Flipboard 开源的一系列在应用中调试的工具集。
 * [lowmad](https://github.com/bangerang/lowmad) 一个用于管理 LLDB 中的脚本和配置的命令行工具。
-* [PAirSandbox-Swift](https://github.com/TeacherXue/PAirSandbox-Swift) ⭐️4 - PAirSandbox Swift 版 仿照 MrPeak 的 PAirSandbox  可方便实时查看沙盒中的文件并传送给 mac
+* [GDPerformanceView-Swift](https://github.com/dani-gavrilov/GDPerformanceView-Swift) ⭐️2.1k - 在状态栏上显示 FPS、CPU 和内存使用率、设备型号、应用程序和iOS版本，并通过委托（Delegate）报告 FPS、CPU 和内存使用率。
+* [PAirSandbox-Swift](https://github.com/TeacherXue/PAirSandbox-Swift) ⭐️4 - PAirSandbox Swift 版，仿照 MrPeak 的 PAirSandbox 可方便实时查看沙盒中的文件并传送给 mac。
 * [LayoutInspector](https://github.com/isavynskyi/LayoutInspector) ⭐️490 - 3D 视角 iOS 应用布局视图检查器。
 * [Pulse](https://github.com/kean/Pulse) ⭐️3.9k - Apple 平台的网络检查器和记录器。
 * [SwiftTweaks](https://github.com/Khan/SwiftTweaks) ⭐️1.3k - 调整你的iOS应用，而不需要重新编译。
 * [TweaKit](https://github.com/Cokile/TweaKit) ⭐️3 - 类似于 SwiftTweaks, 另一个用于调整参数和特征标记的库。
-* [GDPerformanceView-Swift](https://github.com/dani-gavrilov/GDPerformanceView-Swift) ⭐️2.1k - 在状态栏上显示 FPS、CPU 和内存使用率、设备型号、应用程序和iOS版本，并通过委托报告 FPS、CPU 和内存使用率。
+* [mocha](https://github.com/White-White/mocha) ⭐️31 - Mocha 是一款 Swift 编写的 Mach-O 文件可视化工具，通过解释 Mach-O 文件中每一个字节的含义，帮助使用者理解 Mach-O。
+* [Optimizing-Swift-Build-Times](https://github.com/fastred/Optimizing-Swift-Build-Times) ⭐️3.5k - 收集关于优化 Swift 项目编译时间的建议。
+* [ipatool](https://github.com/majd/ipatool) ⭐️1.6k - 允许从 iOS App Store 搜索和下载应用包（ipa 文件）的命令行工具。
 
 
 
@@ -719,13 +726,17 @@
 * [NSLogger](https://github.com/fpillet/NSLogger) ⭐️4.9k - A high perfomance logging utility which displays traces emitted by client applications running on Mac OS X, iOS and Android.
 
 
+
 ## 文档
+
 *生成文档文件的框架*
 
 * [jazzy](https://github.com/realm/jazzy) - A soulful way to generate docs for Swift & Objective-C
 
 
+
 ## 命令行
+
 *用于创建命令行应用程序的框架*
 
 * [CommandCougar](https://github.com/surfandneptune/CommandCougar) - An elegant pure Swift library for building command line applications.
@@ -754,6 +765,8 @@
 * [Dollar](https://github.com/ankurp/Dollar) ⭐️4.2k - Swift 版 Lo-Dash (或 underscore) 函数式工具库。
 * [ReSwift](https://github.com/ReSwift/ReSwift) ⭐️7.1k - 该框架主要针对单页面应用状态及单向数据流管理。
 * [swiftz](https://github.com/maxpow4h/swiftz) - A Swift library for functional programming.
+
+
 
 ## Combine
 

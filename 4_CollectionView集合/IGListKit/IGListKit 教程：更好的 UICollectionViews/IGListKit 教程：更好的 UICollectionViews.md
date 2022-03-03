@@ -4,7 +4,7 @@
 >
 > 更新日期：20220211
 
-在这个 IGListKit 教程中，你将学习使用 Instagram 开源的数据驱动框架来构建一个更好、更动态的 UICollectionViews。
+在这个 IGListKit 教程中，你将学习使用 Instagram 开源的数据驱动框架来构建一个更友好、更动态的 UICollectionViews。
 
 [下载素材](https://koenig-media.raywenderlich.com/uploads/2019/01/MarsLink_Materials.zip)
 
