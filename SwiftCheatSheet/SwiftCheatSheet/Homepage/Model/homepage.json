@@ -65,18 +65,33 @@
     "cells": [{
         "image": "image",
         "title": "Nib示例，支持屏幕旋转",
-        "description": "",
+        "description": "nib 方式设置自动布局约束",
         "className": "FlagViewController"
     }, {
         "image": "image",
         "title": "Visual Format Language",
-        "description": "",
+        "description": "视觉格式化语言",
         "className": "VFLViewController"
     }, {
         "image": "image",
         "title": "Auto Layout anchors",
-        "description": "",
+        "description": "自动布局锚点",
         "className": "AnchorsViewController"
+    }, {
+        "image": "image",
+        "title": "演示通过编程创建约束的三种方式",
+        "description": "",
+        "className": "Anchors2ViewController"
+    }, {
+        "image": "image",
+        "title": "动画更新约束",
+        "description": "动画方式更新自动布局约束",
+        "className": "AnimationConstraintsViewController"
+    }, {
+        "image": "image",
+        "title": "UITraitCollection更新约束",
+        "description": "特征集合更新自动布局约束",
+        "className": "TraitCollectionViewController"
     }]
 }, {
     "title": "动画",

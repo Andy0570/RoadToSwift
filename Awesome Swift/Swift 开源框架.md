@@ -275,6 +275,7 @@
 * [AnimatedCollectionViewLayout](https://github.com/KelvinJin/AnimatedCollectionViewLayout) ⭐️4.3k - 一个 UICollectionViewLayout 子类，在不影响你现有代码的前提下，为UICollectionView 添加自定义过渡动画。
 * [BouncyLayout](https://github.com/roberthein/BouncyLayout) ⭐️4k - 为集合视图 cell 添加 bounce 效果。
 * [MSPeekCollectionViewDelegateImplementation](https://github.com/MaherKSantina/MSPeekCollectionViewDelegateImplementation) ⭐️341 - 在集合视图中查看上一项和下一项的自定义分页实现。
+* [collectionview](https://github.com/corekit/collectionview) ⭐️28 - CollectionViews with ease.
 
 
 

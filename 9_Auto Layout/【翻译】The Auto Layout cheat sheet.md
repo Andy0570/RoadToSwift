@@ -4,7 +4,7 @@
 
 在寻找一些快速修复自动布局的例子吗？不要再看了!
 
-![](https://www.hackingwithswift.com/uploads/app-blueprint-1.jpg)
+<img src="https://www.hackingwithswift.com/uploads/app-blueprint-1.jpg" alt="cover" style="zoom:50%;" />
 
 自动布局是一个强大的工具，可以为你的用户界面创建灵活、可维护的规则。如果你不走运的话，它也会成为一个真正的大脑漩涡——它可以让困难的事情变得简单，也可以让简单的事情变得困难，正所谓，水能载舟，亦能覆舟。
 
@@ -271,6 +271,17 @@ UIView.animate(withDuration: 1.0) { [weak self] in
 }
 ```
 
+**动画更新圆角**
+
+使用 iOS 10 提供的 `UIViewPropertyAnimator` API：
+
+```swift
+self.imageView.layer.cornerRadius = 16
+UIViewPropertyAnimator(duration: 2.5, curve: .easeInOut) {
+    self.imageView.layer.cornerRadius = 32
+}.startAnimation()
+```
+
 
 
 ### 总结
@@ -282,3 +293,4 @@ UIView.animate(withDuration: 1.0) { [weak self] in
 通常来说，你会希望尽可能地使用锚点，因为它们是最简单和最常用的约束方法。VFL一开始可能看起来不错，但它不能表达的东西太多了，你很快就会对它感到厌倦。
 
 如果你有更多的自动布局技巧和窍门，请把它们[发送到我的 Twitter](https://twitter.com/twostraws) 上。
+

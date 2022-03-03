@@ -62,6 +62,9 @@
 		22DBC8E627CB632F00E14468 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DBC8E527CB632F00E14468 /* MenuButton.swift */; };
 		22EE32C627D08E1300A9A66F /* VFLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EE32C527D08E1300A9A66F /* VFLViewController.swift */; };
 		22EE32C927D0925D00A9A66F /* AnchorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EE32C827D0925D00A9A66F /* AnchorsViewController.swift */; };
+		22EE32CB27D0999500A9A66F /* Anchors2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EE32CA27D0999500A9A66F /* Anchors2ViewController.swift */; };
+		22EE32D127D0B7DB00A9A66F /* AnimationConstraintsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EE32D027D0B7DB00A9A66F /* AnimationConstraintsViewController.swift */; };
+		22EE32D327D0BC5E00A9A66F /* TraitCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EE32D227D0BC5E00A9A66F /* TraitCollectionViewController.swift */; };
 		22FF1B5427C88B0F007214EB /* ModelAndBingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FF1B5327C88B0F007214EB /* ModelAndBingViewController.swift */; };
 		22FF1B5727C89FE4007214EB /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FF1B5527C89FE4007214EB /* UserCell.swift */; };
 		22FF1B5827C89FE4007214EB /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22FF1B5627C89FE4007214EB /* UserCell.xib */; };
@@ -132,6 +135,9 @@
 		22DBC8E527CB632F00E14468 /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
 		22EE32C527D08E1300A9A66F /* VFLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VFLViewController.swift; sourceTree = "<group>"; };
 		22EE32C827D0925D00A9A66F /* AnchorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorsViewController.swift; sourceTree = "<group>"; };
+		22EE32CA27D0999500A9A66F /* Anchors2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anchors2ViewController.swift; sourceTree = "<group>"; };
+		22EE32D027D0B7DB00A9A66F /* AnimationConstraintsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationConstraintsViewController.swift; sourceTree = "<group>"; };
+		22EE32D227D0BC5E00A9A66F /* TraitCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitCollectionViewController.swift; sourceTree = "<group>"; };
 		22FF1B5327C88B0F007214EB /* ModelAndBingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelAndBingViewController.swift; sourceTree = "<group>"; };
 		22FF1B5527C89FE4007214EB /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		22FF1B5627C89FE4007214EB /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
@@ -482,6 +488,9 @@
 			isa = PBXGroup;
 			children = (
 				22EE32C827D0925D00A9A66F /* AnchorsViewController.swift */,
+				22EE32CA27D0999500A9A66F /* Anchors2ViewController.swift */,
+				22EE32D027D0B7DB00A9A66F /* AnimationConstraintsViewController.swift */,
+				22EE32D227D0BC5E00A9A66F /* TraitCollectionViewController.swift */,
 			);
 			path = "Auto Layout anchors";
 			sourceTree = "<group>";
@@ -680,11 +689,14 @@
 				22BF2E2027BE2597009027E3 /* LibraryAPI.swift in Sources */,
 				22D2233A27BCEB89000EAD0F /* ViewController.swift in Sources */,
 				22D2233627BCEB89000EAD0F /* AppDelegate.swift in Sources */,
+				22EE32CB27D0999500A9A66F /* Anchors2ViewController.swift in Sources */,
+				22EE32D127D0B7DB00A9A66F /* AnimationConstraintsViewController.swift in Sources */,
 				22DBC8E327CB631000E14468 /* MenuButtonViewController.swift in Sources */,
 				228B38F227D0614700BCF963 /* FlagViewController.swift in Sources */,
 				22BF2E1627BDFE51009027E3 /* HTTPClient.swift in Sources */,
 				22FF1B6327C8A00C007214EB /* CommentCell.swift in Sources */,
 				22BF2E2827BF2FF9009027E3 /* NavigationController.swift in Sources */,
+				22EE32D327D0BC5E00A9A66F /* TraitCollectionViewController.swift in Sources */,
 				225F202327C332F0008FCC29 /* TurnStrategy.swift in Sources */,
 				22D2235127BCF689000EAD0F /* ArrayDataSource.swift in Sources */,
 				22BF2E3D27BF87CD009027E3 /* GameViewController.swift in Sources */,

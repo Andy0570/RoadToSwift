@@ -14,7 +14,7 @@ class AnchorsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor.systemBackground
 
         let label1 = UILabel()
         // 默认情况下，iOS 会基于视图的尺寸和大小自动为你生成自动布局约束
@@ -54,7 +54,7 @@ class AnchorsViewController: UIViewController {
         view.addSubview(label4)
         view.addSubview(label5)
 
-        // MARK: Auto Layout anchors
+        // MARK: Auto Layout Anchors 自动布局锚点
 
         var previous: UILabel?
 
