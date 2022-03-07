@@ -26,7 +26,6 @@ class PhotoListViewController: UIViewController {
         
         // 初始化 ViewModel
         initViewModel()
-        
     }
     
     func initView() {

@@ -12,9 +12,9 @@ Alamofire 和 URLSession 都能帮助你在 Swift 中进行网络请求。URLSes
 
 最高赞回答：
 
-NSURLConnection 是苹果公司的旧 API，用于进行联网（例如，提出 HTTP 请求和接收响应），而NSURLSession 是他们的新 API。后者是更高层次的，对于大多数应用程序开发人员来说，通常更容易使用，涉及的模板代码也更少--基本上没有理由使用前者，除非你不想更新的旧代码。
+NSURLConnection 是苹果公司的旧 API，用于进行联网（例如，发起 HTTP 请求并接收响应），而 NSURLSession 是他们的新 API。后者是更高层次的，对于大多数应用程序开发人员来说，通常更容易使用，涉及的模板代码也更少--基本上没有理由使用前者，除非你不想更新的旧代码。
 
-有一段历史。在 NSURLSession 出现之前，一个第三方库 AFNetworking 成为在 Objective-C 中做网络的事实标准，因为它提供了一个比 NSURLConnection（它是一个包装器--我想现在它包装了NSURLSession）更简单和更方便的 API。同一个开发者后来为 Swift 做了一个类似的库，叫做AlamoFire，以便充分利用 "Swift 的做事方式"（而不是仅仅为 AFNetworking 增加 Swift 绑定）。大约在同一时间，NSURLSession 出现了，很明显，苹果公司受到了 AFNetworking 的启发，想让他们的新网络 API 同样方便使用，总的来说，我认为他们成功了。这意味着，虽然以前使用 AFNetworking 而不是 NSURLConnection 是大多数开发者的唯一合理选择，但今天使用AFNetworkin g 或AlamoFire 比 NSURLSession 的优势要小得多，对于大多数开始新项目的开发者来说，我建议从使用 NSURLSession 开始，只有当他们觉得遇到一些限制或不便，足以证明添加另一个依赖关系时，才会考虑 AlamoFire。
+有一段历史。在 NSURLSession 出现之前，一个第三方库 AFNetworking 成为在 Objective-C 中实现网络功能的事实标准，因为它提供了一个比 NSURLConnection（它是一个包装器--我想现在它包装了NSURLSession）更简单和更方便的 API。同一个开发者后来为 Swift 做了一个类似的库，叫做 Alamofire，以便充分利用 "Swift 的做事方式"（而不是仅仅为 AFNetworking 增加 Swift 绑定）。大约在同一时间，NSURLSession 出现了，很明显，苹果公司受到了 AFNetworking 的启发，想让他们的新网络 API 同样方便使用，总的来说，我认为他们成功了。这意味着，虽然以前使用 AFNetworking 而不是 NSURLConnection 是大多数开发者的唯一合理选择，但今天使用 AFNetworking 或 Alamofire 比 NSURLSession 的优势要小得多，对于大多数开始新项目的开发者来说，我建议从使用 NSURLSession 开始，只有当他们觉得遇到一些限制或不便，足以证明添加另一个依赖关系时，才会考虑 Alamofire。
 
 ---
 
@@ -132,7 +132,7 @@ URLSession.shared.dataTask(with: request) { (data, response, error) in
 
 ## 结论：如何做出取舍？
 
-Alamofire 经常与 AFNetworking 相提并论，AFNetworking 是一个相当于 Objective-C 的网络框架。当时，在没有 URLsession API 的情况下，联网是非常困难的，而 URLsession API 只在iOS 7 中存在。因此，选择像 AFNetworking 这样的框架来使你的生活更容易一些，是比较明显的。
+Alamofire 经常与 AFNetworking 相提并论，AFNetworking 是一个相当于 Objective-C 的网络框架。当时，在没有 URLsession API 的情况下，网络请求是非常困难的，而 URLsession API 只在iOS 7 中存在。因此，选择像 AFNetworking 这样的框架来使你的生活更容易一些，是比较明显的。
 
 如今，看着可用的 URLSession API，建立网络请求就容易多了。然而，这样做很可能会使你在 URLSession 的基础上建立自己的网络层。这个层需要进行测试，并且随着你的项目的发展，有可能向更复杂的层发展。
 
