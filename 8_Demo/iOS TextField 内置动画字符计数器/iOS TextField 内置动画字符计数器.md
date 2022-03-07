@@ -9,7 +9,7 @@
 
 在我最近的应用程序中，我需要限制 `UITextField` 的文本长度。
 
-在 `UITextFieldDelegate` 方法 `ShouldReturnCharacterInRange` 中，有一个直接的方法，只有几行代码：
+在 `UITextFieldDelegate` 方法 `shouldChangeCharactersInRange` 中，有一个直接的方法，只有几行代码：
 
 ```swift
 func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {

@@ -58,6 +58,9 @@
 		22D2234F27BCF483000EAD0F /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D2234E27BCF483000EAD0F /* ItemStore.swift */; };
 		22D2235127BCF689000EAD0F /* ArrayDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D2235027BCF689000EAD0F /* ArrayDataSource.swift */; };
 		22D2235527BCFFE3000EAD0F /* homepage.json in Resources */ = {isa = PBXBuildFile; fileRef = 22D2235427BCFFE3000EAD0F /* homepage.json */; };
+		22D9330627D59F7C00D1B0B4 /* DRHTextFieldWithCharacterCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D9330527D59F7C00D1B0B4 /* DRHTextFieldWithCharacterCount.swift */; };
+		22D9330B27D5A55900D1B0B4 /* DRHTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D9330927D5A55900D1B0B4 /* DRHTextFieldViewController.swift */; };
+		22D9330C27D5A55900D1B0B4 /* DRHTextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22D9330A27D5A55900D1B0B4 /* DRHTextFieldViewController.xib */; };
 		22DBC8E327CB631000E14468 /* MenuButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DBC8E227CB631000E14468 /* MenuButtonViewController.swift */; };
 		22DBC8E627CB632F00E14468 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DBC8E527CB632F00E14468 /* MenuButton.swift */; };
 		22EE32C627D08E1300A9A66F /* VFLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EE32C527D08E1300A9A66F /* VFLViewController.swift */; };
@@ -131,6 +134,9 @@
 		22D2234E27BCF483000EAD0F /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
 		22D2235027BCF689000EAD0F /* ArrayDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayDataSource.swift; sourceTree = "<group>"; };
 		22D2235427BCFFE3000EAD0F /* homepage.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = homepage.json; sourceTree = "<group>"; };
+		22D9330527D59F7C00D1B0B4 /* DRHTextFieldWithCharacterCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRHTextFieldWithCharacterCount.swift; sourceTree = "<group>"; };
+		22D9330927D5A55900D1B0B4 /* DRHTextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRHTextFieldViewController.swift; sourceTree = "<group>"; };
+		22D9330A27D5A55900D1B0B4 /* DRHTextFieldViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DRHTextFieldViewController.xib; sourceTree = "<group>"; };
 		22DBC8E227CB631000E14468 /* MenuButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtonViewController.swift; sourceTree = "<group>"; };
 		22DBC8E527CB632F00E14468 /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
 		22EE32C527D08E1300A9A66F /* VFLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VFLViewController.swift; sourceTree = "<group>"; };
@@ -398,6 +404,7 @@
 			children = (
 				228B38EF27D05E0000BCF963 /* 自动布局 */,
 				22DBC8E127CB620F00E14468 /* UIButton */,
+				22D9330427D59F4000D1B0B4 /* UITextField */,
 				2246DD0727C474B6006A3AC1 /* UICollectionView */,
 				22BF2E0C27BDFD8B009027E3 /* 设计模式 */,
 				22D2234927BCF061000EAD0F /* Homepage */,
@@ -456,6 +463,16 @@
 				22BF2E2527BE5468009027E3 /* StringExtensions.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		22D9330427D59F4000D1B0B4 /* UITextField */ = {
+			isa = PBXGroup;
+			children = (
+				22D9330527D59F7C00D1B0B4 /* DRHTextFieldWithCharacterCount.swift */,
+				22D9330927D5A55900D1B0B4 /* DRHTextFieldViewController.swift */,
+				22D9330A27D5A55900D1B0B4 /* DRHTextFieldViewController.xib */,
+			);
+			path = UITextField;
 			sourceTree = "<group>";
 		};
 		22DBC8E127CB620F00E14468 /* UIButton */ = {
@@ -607,6 +624,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22BF2E1E27BE207C009027E3 /* BlueLibraryViewController.xib in Resources */,
+				22D9330C27D5A55900D1B0B4 /* DRHTextFieldViewController.xib in Resources */,
 				22D2234227BCEB8A000EAD0F /* LaunchScreen.storyboard in Resources */,
 				22D2233F27BCEB8A000EAD0F /* Assets.xcassets in Resources */,
 				22FF1B6427C8A00C007214EB /* CommentCell.xib in Resources */,
@@ -686,6 +704,7 @@
 				22BF2E3827BF7544009027E3 /* ShapeView.swift in Sources */,
 				22BF2E4427BF944C009027E3 /* ShapeFactory.swift in Sources */,
 				22BF2E1427BDFE0D009027E3 /* NotificationExtension.swift in Sources */,
+				22D9330627D59F7C00D1B0B4 /* DRHTextFieldWithCharacterCount.swift in Sources */,
 				22BF2E2027BE2597009027E3 /* LibraryAPI.swift in Sources */,
 				22D2233A27BCEB89000EAD0F /* ViewController.swift in Sources */,
 				22D2233627BCEB89000EAD0F /* AppDelegate.swift in Sources */,
@@ -704,6 +723,7 @@
 				22D2233827BCEB89000EAD0F /* SceneDelegate.swift in Sources */,
 				2246DD1C27C4BA35006A3AC1 /* Icon.swift in Sources */,
 				22BF2E1827BDFF35009027E3 /* Album.swift in Sources */,
+				22D9330B27D5A55900D1B0B4 /* DRHTextFieldViewController.swift in Sources */,
 				22BF2E3A27BF774D009027E3 /* GameView.swift in Sources */,
 				22BF2E4927BFA08A009027E3 /* Turn.swift in Sources */,
 				22BF2E4227BF91B9009027E3 /* ShapeViewFactory.swift in Sources */,

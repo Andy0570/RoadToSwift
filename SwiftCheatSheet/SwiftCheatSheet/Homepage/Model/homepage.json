@@ -111,12 +111,12 @@
     "cells": [{
         "image": "image",
         "title": "UIButton 弹出菜单（iOS 15特性）",
-        "description": "description",
+        "description": "-",
         "className": "MenuButtonViewController"
     }, {
         "image": "image",
-        "title": "title2",
-        "description": "description",
-        "className": ""
+        "title": "UITextField 字符计数器",
+        "description": "-",
+        "className": "DRHTextFieldViewController"
     }]
 }]

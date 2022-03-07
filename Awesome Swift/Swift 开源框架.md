@@ -541,6 +541,7 @@
 * [SwiftyGif](https://github.com/kirualex/SwiftyGif) ⭐️1.5k - 高性能 GIF 引擎。
 * :orange: [FLAnimatedImage](https://github.com/Flipboard/FLAnimatedImage) ⭐️7.7k - Flipboard 开源的高性能 GIF 引擎
 * [SwiftSVG](https://github.com/mchoe/SwiftSVG) ⭐️1.7k - 支持多种接口绘制 SVG 类库。
+* [MetalPetal](https://github.com/MetalPetal/MetalPetal) ⭐️1.3k - MetalPetal 是一个用 Metal 做图像处理的框架。GPU 的图像处理框架，我们很容易想到的就是大名鼎鼎的 GPUImage，MetalPetal 可以说就是一个 Metal 版的 GPUImage。苹果近几年推广 Metal 的决心相信大家都有目共睹，Metal 不仅能提供了现代化的 API，也提供了碾压 OpenGL 的性能，是 iOS 上做 GPU 计算的不二之选。但如果我们希望用 Metal 来做图像和视频处理的时候，你会发现需要写非常多的代码才能够完成功能，比如图片加载，上传成纹理，创建 GPU 的 Pipelie 等等，而视频则更复杂，涉及到解码、调度、丢帧等一系列逻辑。MetalPetal 这类框架就是为了这个这样的问题而生，让你通过简单的函数调用就完成 GPU 的计算。大幅提升开发效率。
 * :orange: [GPUImage](https://github.com/BradLarson/GPUImage) ⭐️19.9k - 一个开源iOS框架，基于 GPU 处理图像和视频。
 
 
@@ -560,6 +561,7 @@
 * [episode-code-samples](https://github.com/pointfreeco/episode-code-samples) ⭐️622 - 专注于学习 Swift 编程的视频聊天系列。
 * [ARVideoKit](https://github.com/AFathi/ARVideoKit) ⭐️1.4k - 捕捉和记录 ARKit 视频、照片、实时照片和 GIFs。
 * [youtube-iOS](https://github.com/aslanyanhaik/youtube-iOS) ⭐️2.4k - 像 YouTube iOS 应用一样在右侧观看缩略视频，用 Swift 3 编写。
+* [BMPlayer](https://github.com/BrikerMan/BMPlayer) ⭐️1.8k
 * :orange: [ZFPlayer](https://github.com/renzifeng/ZFPlayer) ⭐️6.7k - 基于 AVPlayer，支持竖屏、横屏（横屏可锁定屏幕方向），上下滑动调节音量、屏幕亮度，左右滑动调节播放进度 [iOS 视频播放器之 ZFPlayer 剖析](https://www.jianshu.com/p/5566077bb25f)
 * :orange: [ijkplayer](https://github.com/bilibili/ijkplayer) ⭐️30k - Bilibili 开源的视频播放器
 * [FFmpeg](https://github.com/FFmpeg/FFmpeg) ⭐️28.2k - FFmpeg 是一个库和工具的集合，用于处理多媒体内容，如音频、视频、字幕和相关元数据。
@@ -802,6 +804,11 @@
 ## TensorFlow
 
 * [tensorflow/swift](https://github.com/tensorflow/swift) ⭐️6k - 集成使用 TensorFlow 专用版 Swift。
+
+
+## Metal
+
+* [Satin](https://github.com/Hi-Rez/Satin) - ⭐️329 基于 Metal API 实现的一个 3D 引擎
 
 
 ## Xcode 扩展

@@ -61,14 +61,17 @@ class TraitCollectionViewController: UIViewController {
 
     // MARK: - rotation support
 
+    //  是否支持自动转屏
     override var shouldAutorotate: Bool {
         return true
     }
 
+    // 支持哪些转屏方向
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return .allButUpsideDown
     }
 
+    // 页面展示的时候默认屏幕方向（当前ViewController必须是通过模态ViewController（模态带导航的无效）方式展现出来的，才会调用这个方法）
     override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
         return .portrait
     }

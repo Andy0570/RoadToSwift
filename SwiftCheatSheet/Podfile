@@ -13,5 +13,6 @@ target 'SwiftCheatSheet' do
   pod 'Kingfisher', '~> 7.0'
   pod 'SwifterSwift'
   pod 'IGListKit'
+  pod 'SwiftyBeaver' # 日志记录
 
 end
