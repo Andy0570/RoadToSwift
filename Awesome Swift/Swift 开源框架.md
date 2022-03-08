@@ -542,7 +542,8 @@
 * :orange: [FLAnimatedImage](https://github.com/Flipboard/FLAnimatedImage) ⭐️7.7k - Flipboard 开源的高性能 GIF 引擎
 * [SwiftSVG](https://github.com/mchoe/SwiftSVG) ⭐️1.7k - 支持多种接口绘制 SVG 类库。
 * [MetalPetal](https://github.com/MetalPetal/MetalPetal) ⭐️1.3k - MetalPetal 是一个用 Metal 做图像处理的框架。GPU 的图像处理框架，我们很容易想到的就是大名鼎鼎的 GPUImage，MetalPetal 可以说就是一个 Metal 版的 GPUImage。苹果近几年推广 Metal 的决心相信大家都有目共睹，Metal 不仅能提供了现代化的 API，也提供了碾压 OpenGL 的性能，是 iOS 上做 GPU 计算的不二之选。但如果我们希望用 Metal 来做图像和视频处理的时候，你会发现需要写非常多的代码才能够完成功能，比如图片加载，上传成纹理，创建 GPU 的 Pipelie 等等，而视频则更复杂，涉及到解码、调度、丢帧等一系列逻辑。MetalPetal 这类框架就是为了这个这样的问题而生，让你通过简单的函数调用就完成 GPU 的计算。大幅提升开发效率。
-* :orange: [GPUImage](https://github.com/BradLarson/GPUImage) ⭐️19.9k - 一个开源iOS框架，基于 GPU 处理图像和视频。
+* [GPUImage3](https://github.com/BradLarson/GPUImage3) ⭐️2.3k - GPUImage3 是一个基于 BSD 许可协议的 Swift 框架，用于使用 Metal 进行 GPU 加速的视频和图像处理。
+* :orange: [GPUImage](https://github.com/BradLarson/GPUImage) ⭐️19.9k - 一个开源 iOS 框架，基于 GPU 处理图像和视频。
 
 
 

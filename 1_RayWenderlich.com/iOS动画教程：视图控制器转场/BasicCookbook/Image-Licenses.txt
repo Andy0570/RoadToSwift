@@ -1,0 +1,15 @@
+Pizza image:
+* author https://unsplash.com/@studio754
+* license https://unsplash.com/license
+
+Spaghetti image:
+* author https://unsplash.com/@kristastucchio
+* license https://unsplash.com/license
+
+Meatballs image:
+* author https://unsplash.com/@emilianovittoriosi
+* license https://unsplash.com/license
+
+Cookies image:
+* author https://unsplash.com/@whitney_wright
+* license https://unsplash.com/license
