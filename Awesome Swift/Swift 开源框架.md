@@ -360,6 +360,7 @@
 * [DynamicColor](https://github.com/yannickl/DynamicColor) ⭐️2.7k - 更简单的控制颜色的 Swift 拓展插件
 * [SwiftColors](https://github.com/thii/SwiftColors) - HEX color handling as an extension for UIColor.
 * [ComplimentaryGradientView](https://github.com/gkye/ComplimentaryGradientView) ⭐️707 - 通过源图片的主要颜色生成颜色渐变
+* [ColorSet](https://github.com/DigiDNA/ColorSet) ⭐️144 - ColorSet 是一个 macOS 实用程序和框架，允许开发人员轻松管理自定义界面颜色。
 
 
 
@@ -759,11 +760,11 @@
 
 何为响应式编程？面向数据流和变化传播（时间和事件非代码顺序）的编程范式。
 
-* [RxSwift](https://github.com/ReactiveX/RxSwift) ⭐️21.6k - 简单、高效，活泼的函数响应式编程框架。
-* [ReactiveSwift](https://github.com/ReactiveCocoa/ReactiveSwift) ⭐️2.8k - Streams of values over time
-* [ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa) ⭐️20k - Cocoa 框架和 Obj-C 动态绑定，用于 ReactiveSwift。
+* :heart: [RxSwift](https://github.com/ReactiveX/RxSwift) ⭐️21.7k - 简单、高效，活泼的函数响应式编程框架。
+* [ReactiveSwift](https://github.com/ReactiveCocoa/ReactiveSwift) ⭐️2.8k - ReactiveSwift 提供了可组合的、声明式的和灵活的基本类型。
+* [ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa) ⭐️20k - ReactiveCocoa 使用 ReactiveSwift 的基本类型来封装 Cocoa 框架的方方面面。
 * [ReactKit](https://github.com/ReactKit/ReactKit) ⭐️1.2k - Swift Reactive Programming.
-* [ReactiveAPI](https://github.com/sky-uk/ReactiveAPI) - Write clean, concise and declarative network code relying on URLSession, with the power of RxSwift. Inspired by Retrofit.
+* [ReactiveAPI](https://github.com/sky-uk/ReactiveAPI) ⭐️74 - 借助 RxSwift 的强大功能，依靠 URLSession 编写干净、简洁和声明式的网络代码。灵感来自 Retrofit。
 * [Dollar](https://github.com/ankurp/Dollar) ⭐️4.2k - Swift 版 Lo-Dash (或 underscore) 函数式工具库。
 * [ReSwift](https://github.com/ReSwift/ReSwift) ⭐️7.1k - 该框架主要针对单页面应用状态及单向数据流管理。
 * [swiftz](https://github.com/maxpow4h/swiftz) - A Swift library for functional programming.
@@ -833,4 +834,7 @@
 * [awesome-ios-architecture](https://github.com/onmyway133/awesome-ios-architecture) ⭐️4.5k - Better ways to structure iOS apps
 * [Awesome-Swift-Playgrounds](https://github.com/uraimo/Awesome-Swift-Playgrounds) ⭐️3.6k - A List of Awesome Swift Playgrounds
 * [Optimizing-Swift-Build-Times](https://github.com/fastred/Optimizing-Swift-Build-Times) ⭐️3.5k - 化Swift项目编译时间。
+* [FRP iOS Learning resources](https://gist.github.com/JaviLorbada/4a7bd6129275ebefd5a6) ⭐️1.3k - 函数响应式编程学习资源
+
+
 
