@@ -7,11 +7,11 @@
 
 ![](https://miro.medium.com/max/1400/0*dimasCJZK4A_X2_6)
 
-有许多著名的项目都在使用各种方法和理念来处理 JSON 解析。 `SwiftyJSON` 可能是其中最早，最受欢迎的一种。 它不那么冗长，也不那么容易出错，并且利用 Swift 强大的类型系统来处理所有细节。
+有许多著名的项目都在使用各种方法和理念来处理 JSON 解析。 `SwiftyJSON` 可能是其中最早，最受欢迎的一种。 它不那么冗长，也不那么容易出错，并且利用 Swift 强大的类型系统来处理所有的细节。
 
-`JSONSerialization` 是大多数 JSON 解析项目的核心。 它来自 Swift 的 [Foundation](https://developer.apple.com/documentation/foundation) 框架，并将 JSON 转换为不同的 Swift 数据类型。 在 `SwiftyJSON`  出现之前，人们使用原始的 `JSONSerialization` 解析 JSON 对象。 但这可能会很痛苦，因为值类型和 JSON 结构可能会有所不同。 你需要手动处理错误，并将 `Any` 类型转换为 Swift 基础类型。这是更容易出错的。
+`JSONSerialization` 是大多数 JSON 解析项目的核心。 它来自 Swift 的 [Foundation](https://developer.apple.com/documentation/foundation) 框架，并将 JSON 转换为不同的 Swift 数据类型。 在 `SwiftyJSON`  出现之前，人们使用原始的 `JSONSerialization` 解析 JSON 对象。 但这可能会很痛苦，因为值类型和 JSON 结构可能会有所不同。 你需要手动处理错误，并将 `Any` 类型转换为 Swift 基础类型，这里是更容易出错的地方。
 
-Swift 4 宣布了 `JSONDecoder` ，它具有更多高级功能和有前途的功能。 它将 JSON 对象解码为 Swift 对象，并采用 `Decodable` 协议。
+Swift 4 宣布了 `JSONDecoder` ，它具有更多高级、有前途的功能。 它将 JSON 对象解码为 Swift 对象，并采用 `Decodable` 协议。
 
 
 

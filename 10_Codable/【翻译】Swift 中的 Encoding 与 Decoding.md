@@ -83,7 +83,7 @@ public struct Employee: Codable {
 
 不管是 `favoriteToy` 里面 JSON 嵌套的 `name` ，还是所有 JSON keys 都与 `Employee` 和 `Toy` 的存储属性名称相同，所以你可以根据你的数据类型的层次结构轻松地理解 JSON 结构。如果你的属性名称与你的 JSON 字段名称相匹配，而且你的属性都是 `Codable`，那么你就可以非常容易地转换为 JSON 或从 JSON 转换回来。现在就试试吧。
 
-礼物部门希望给员工最喜欢的玩具作为生日礼物。添加以下代码，将员工的数据发送到礼物部：
+礼物部门希望给员工最喜欢的玩具作为生日礼物。添加以下代码，将员工的数据发送到礼物部门：
 
 ```swift
 let data = try encoder.encode(employee)
