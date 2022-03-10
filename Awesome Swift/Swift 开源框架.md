@@ -70,7 +70,7 @@
 
 ## JSON/XML 操作
 
-* :heart: [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) ⭐️21k - GitHub 上最为开发者认可的 JSON 解析类。
+* :heart: [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) ⭐️21.2k - GitHub 上最为开发者认可的 JSON 解析类。
 * [Alamofire-SwiftyJSON](https://github.com/SwiftyJSON/Alamofire-SwiftyJSON) ⭐️1.4k - Alamofire extension for serialize NSData to SwiftyJSON.
 * [ObjectMapper](https://github.com/Hearst-DD/ObjectMapper) ⭐️8.9k - JSON Object mapping written in Swift.
 * [HandyJSON](https://github.com/alibaba/HandyJSON) ⭐️3.9k - 阿里开源的 JSON 解析框架。
