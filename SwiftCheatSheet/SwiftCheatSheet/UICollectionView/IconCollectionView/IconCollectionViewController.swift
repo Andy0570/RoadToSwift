@@ -106,7 +106,6 @@ class IconCollectionViewController: UIViewController {
         var snapshot = NSDiffableDataSourceSnapshot<SectionType, Icon>()
         snapshot.appendSections([.all])
         snapshot.appendItems(iconSet, toSection: .all)
-
         // 将快照应用到数据源
         dataSource.apply(snapshot, animatingDifferences: false, completion: nil)
     }

@@ -28,9 +28,9 @@
     "title": "列表",
     "cells": [{
         "image": "image",
-        "title": "",
+        "title": "Diffable Datasource with UITableView",
         "description": "",
-        "className": ""
+        "className": "DiffableDatasourceTableView"
     }, {
         "image": "image",
         "title": "",
@@ -51,7 +51,7 @@
         "className": "CollaspibleCollectionViewController"
     },{
         "image": "image",
-        "title": "Diffable Data Source",
+        "title": "Diffable Data Source with UICollectionView",
         "description": "",
         "className": "IconCollectionViewController"
     },{
