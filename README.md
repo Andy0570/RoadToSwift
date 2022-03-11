@@ -152,6 +152,8 @@ Swift 非常容易学习。Swift 代码被简化并且更像英语，这使得�
 * [Swift 5.3 的新功能，你了解吗？](https://juejin.cn/post/6854573212555182093)
 * [InfoQ：Swift 5.3 又更新了什么新奇爽快的语法？](https://www.infoq.cn/article/Sv1ropcrVfCefYP707dS)
 * [Swift 5.4 的新特性](https://juejin.cn/post/6937481372772597767)
+* [Swift 5.5 新特性（下）](https://zhuanlan.zhihu.com/p/384192523)
+* [What’s new in Swift 5.6?](https://www.hackingwithswift.com/articles/247/whats-new-in-swift-5-6)
 
 
 
