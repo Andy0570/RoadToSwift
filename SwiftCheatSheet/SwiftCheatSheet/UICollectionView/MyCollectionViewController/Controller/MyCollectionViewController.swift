@@ -74,8 +74,8 @@ extension MyCollectionViewController: UICollectionViewDataSource {
 
 extension MyCollectionViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
         let alertController = UIAlertController.init(title: "Tapped \(indexPath.row) row", message: nil, defaultActionButtonTitle: "OK", tintColor: UIColor.systemBlue)
         alertController.show(animated: true, vibrate: true, completion: nil)
     }
+
 }

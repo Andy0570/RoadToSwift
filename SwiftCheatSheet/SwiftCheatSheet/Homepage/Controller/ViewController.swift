@@ -15,7 +15,8 @@ class ViewController: UIViewController {
         static let CellIdentifier = "Cell"
     }
 
-    private var arrayDataSource: ArrayDataSource? {
+    private let sections = Section.sectionsFromBundle()
+    private var arrayDataSource: ArrayDataSource! {
         didSet {
             tableView.dataSource = arrayDataSource
         }
@@ -52,14 +53,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         // 加载数据源，设置代理
-        let itemStore = ItemStore()
-        itemStore.fetchItems(form: "homepage") { [weak self] sections in
-            self?.arrayDataSource = ArrayDataSource(sections: sections, cellReuseIdentifier: Constants.CellIdentifier)
-            self?.arrayDataSource?.cellConfigureClosure = { (tableViewCell, cell) in
-                tableViewCell.configureForCell(cell: cell)
-            }
-            self?.tableView.reloadData()
+        arrayDataSource = ArrayDataSource(sections: sections, cellReuseIdentifier: Constants.CellIdentifier)
+        arrayDataSource.cellConfigureClosure = { (tableViewCell, cell) in
+            tableViewCell.configureForCell(cell: cell)
         }
+        self.tableView.reloadData()
     }
 }
 

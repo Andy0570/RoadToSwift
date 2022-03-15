@@ -4,6 +4,10 @@
 
 
 
+> 对于 App 内的网络状态监控，大家常用的是 `Reachability` 或 `Alamofire` 内部的 `NetworkReachabilityManager`。本文介绍了基于 iOS 12 后 `Network.framework` 内置的 `NWPathMonitor` 实现的网络状态监控。
+
+
+
 你会发现大多数用于监控你的 iOS 设备的网络连接的实现都依赖于使用第三方依赖库，如 [Reachability](https://github.com/ashleymills/Reachability.swift)、Alamofire的`NetworkReachabilityManager`，或者建议你创建一个工具，定期尝试进行 HTTP 网络请求，作为确定网络连接状态的方法。
 
 相反，我想介绍一种替代方法，利用 iOS 12 中引入的一个不太知名的本地框架。

@@ -307,5 +307,5 @@ expression ((UIView *)address).backgroundColor = [UIColor redColor]
 * [二进制文件分析之常用命令](https://xiaozhuanlan.com/topic/8604312975)
 * [iOS Crash 分析：符号化系统库方法](http://www.cocoachina.com/articles/897588?filter=ios)
 * [iOS 常用调试方法：静态分析](https://www.jianshu.com/p/d0b9fd8ffadc)
-
+* [通过断点技巧让调试更高效](https://mp.weixin.qq.com/s/kv2dfh6L06RQghwkQupi1w)
 

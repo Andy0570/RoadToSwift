@@ -6,7 +6,7 @@
 
 让我们面对现实吧——我们都写过无法正常运行的代码，而调试可能很困难。当你通过网络与其他系统交互时，就更难了。
 
-幸运的是，[Charles Proxy](https://www.charlesproxy.com/) 可以使网络调试更容易。
+幸运的是，[Charles Proxy](https://www.charlesproxy.com/) 可以使网络调试变得容易。
 
 Charles Proxy 工作于你的应用程序和网络之间。你配置你的模拟器或 iOS 设备，通过 Charles Proxy 传递所有的网络请求和响应，所以你能够检查，甚至在中途改变数据，以测试你的应用程序如何响应。
 
@@ -32,17 +32,17 @@ Charles  Proxy 不是免费的，但有 30 天的免费试用期。Charles 在�
 
 > **Note**：Charles  是一款基于 Java 的应用程序，支持 macOS、Windows 和 Linux。本 Charles Proxy 教程是针对macOS 平台的，在其他平台上有些东西可能会有所不同。
 
-启动 Charles。它应该要求允许自动配置你的网络设置。如果没有，按 Command-Shift-P 键，手动让 Charles 询问这个权限。
+启动 Charles。它会请求允许自动配置你的网络设置。如果没有，按 Command-Shift-P 键，手动让 Charles 询问这个权限。
 
 ![](https://koenig-media.raywenderlich.com/uploads/2017/02/2017-02-04_08-59-52.png)
 
-点击 **Grant Privileges** 授予权限，如果有提示，请输入密码。Charles 一启动就开始记录网络事件，所以你应该已经看到事件弹出到左边的窗格。
+点击 **Grant Privileges** 授予权限，如果有提示，请输入密码。Charles 一启动就会开始记录网络事件，所以你应该已经看到事件弹出到左边的窗格。
 
 ![](https://koenig-media.raywenderlich.com/uploads/2021/04/Screenshot-2021-04-09-at-18.23.15.png)
 
 
 
-> **Note**：如果你没有看到任何事件，你可能没有授予权限，或者可能已经设置了其他代理。VPN也会产生问题。参见 Charles 的 "常见问题" 页面，以获得故障排除帮助。
+> **Note**：如果你没有看到任何事件，你可能没有授予权限，或者可能已经设置了其他代理。VPN 也会产生问题。参见 Charles [常见问题](https://www.charlesproxy.com/documentation/faqs/)页面，以获得故障排除帮助。
 
 
 
@@ -52,7 +52,7 @@ Charles  Proxy 不是免费的，但有 30 天的免费试用期。Charles 在�
 
 ![](https://koenig-media.raywenderlich.com/uploads/2021/04/Screenshot-2021-04-09-at-18.23.36.png)
 
-许多好东西都隐藏在按钮和菜单后面，而工具栏上有几个项目你应该知道。
+许多好东西都隐藏在按钮和菜单后面，而工具栏上有几个项目你应该知道：
 
 * "扫帚" 清除当前会话和所有记录的活动。
 * "记录/暂停" 在 Charles 记录事件时为红色，停止时为灰色。
@@ -70,9 +70,9 @@ Charles  Proxy 不是免费的，但有 30 天的免费试用期。Charles 在�
 
 选择 **Sequence** 可以在一个连续的列表中看到按时间排序的所有事件。当你调试自己的应用程序时，你大部分的时间可能会花费在这个页面上。
 
-Charles 默认将请求和响应合并为一个事件。然而，你可以把它们分成独立的事件。
+Charles 默认将请求和响应合并为一个事件。但是，你也可以把它们分成独立的事件。
 
-选择 **Charles** ▸ **Preferences**，选择 **Viewers**。取消勾选 **Combine request and response**（合并请求和响应），然后按确定。你需要重新启动 Charles，让这个改变生效。
+选择 **Charles** ▸ **Preferences**，选择 **Viewers**。取消勾选 **Combine request and response**（合并请求和响应），然后点击确定。你需要重新启动 Charles，让该设置生效。
 
 试着在用户界面上打探一下，看看事件。你会注意到一个奇怪的现象：你不能看到 HTTPS 事件的大部分细节信息。
 
@@ -82,23 +82,23 @@ SSL/TLS 会对敏感的请求和响应信息进行加密。你可能认为这使
 
 你可能想知道。"Charles 是如何施展其魔力的？"
 
-Charles 是一个代理服务器，这意味着它位于你的应用程序和计算机的网络连接之间。当 Charles 配置你的网络设置时，它改变了你的网络配置，使所有流量通过它。这使 Charles 能够检查所有进出你的电脑的网络事件。
+Charles 是一个代理服务器，这意味着它工作于你的应用程序和计算机的网络连接之间。当 Charles 配置你的网络设置时，它改变了你的网络配置，使所有流量通过它。这使 Charles 能够检查所有进出你的电脑的网络事件。
 
-代理服务器处于一个强大的位置，但这也意味着有可能被滥用。这就是为什么 SSL 是如此重要。数据加密可以防止代理服务器和其他中间件窃听敏感信息。
+代理服务器处于一个强大的位置，但这也意味着（代理服务器）有可能被滥用。这就是为什么 SSL 是如此重要的原因。数据加密可以防止代理服务器和其他中间层窃听敏感信息。
 
 ![](https://koenig-media.raywenderlich.com/uploads/2017/05/CharlesPostImg1-1.png)
 
 然而，在某些情况下，你希望 Charles 能窥探你的 SSL 信息，让你对其进行调试。
 
-SSL/TLS 使用由受信任的第三方（称为证书颁发者）生成的证书对信息进行加密。
+SSL/TLS 使用由受信任的第三方（称为证书颁发机构）生成的证书对信息进行加密。
 
-Charles 也可以生成自己的自签名证书，你可以将其安装在 Mac 和 iOS 设备上，用于 SSL/TLS 加密。由于该证书不是由受信任的证书颁发者颁发的，你需要告诉你的设备明确信任它。一旦安装并得到信任，Charles 就可以解密 SSL 事件了。
+Charles 也可以生成自己的自签名证书，你可以将其安装在 Mac 和 iOS 设备上，用于 SSL/TLS 加密。由于该证书不是由受信任的证书颁发机构颁发的，你需要主动告诉你的设备信任该证书。一旦安装并得到信任，Charles 就可以解密 SSL 事件了。
 
-当黑客使用中间件来窥探网络通信时，这被称为“man-in-the-middle”中间人攻击。一般来说，你不要相信任何随机的证书，否则你可能会危及你的网络安全
+当黑客使用中间件来窥探网络通信时，这被称为“man-in-the-middle”中间人攻击。通常来说，请不要相信任何随机的证书，否则你可能会危及你的网络安全。
 
-在某些情况下，Charles 偷偷摸摸的 man-in-the-middle 策略并不奏效。例如，一些应用程序使用 **SSL pinning**（证书锁定，将服务器提供的 SSL/TLS 证书内置到移动端开发的 APP 客户端中，当客户端发起请求时，通过比对内置的证书和服务器端证书的内容，以确定这个连接的合法性。）来提高安全性。SSL pinning 意味着应用程序有一份网络服务器公钥的副本，并在通信前使用它来验证网络连接。由于 Charles 的密钥不匹配，该应用程序将拒绝通信。
+在某些情况下，Charles 偷偷摸摸的 man-in-the-middle 策略并不奏效。例如，一些应用程序使用 **SSL pinning**（证书锁定，将服务器提供的 SSL/TLS 证书内置到移动端开发的 APP 客户端中，当客户端发起请求时，通过比对内置的证书和服务器端证书的内容，以确定这个连接的合法性。）来提高安全性。SSL pinning 意味着应用程序有一份网络服务器公钥的副本，并在通信前使用它来验证网络连接。由于 Charles 的密钥不匹配，该应用程序将拒绝执行网络通信。
 
-除了记录事件外，你还可以用 Charles 来临时修改数据，记录下来供以后查看，甚至模拟坏的网络连接。
+除了记录事件外，你还可以用 Charles 来临时修改数据，记录下来供以后查看，甚至模拟糟糕的网络连接。
 
 ![](https://koenig-media.raywenderlich.com/uploads/2017/05/CharlesPostImg2-1.png)
 
@@ -200,17 +200,17 @@ Charles 很强大！
 
 ## 使用 Charles Proxy for macOS 来代理 iOS 流量
 
-如果你想在模拟器上检查流量，或者你没有 Charles Proxy 的 iOS 应用程序，会发生什么？没问题! 设置 Charles 代理网络上任何电脑或设备的流量很简单，包括你的 iOS 设备。
+如果你想在模拟器上检查流量，或者你没有 Charles Proxy 的 iOS 应用程序，那怎么办？没问题! 设置 Charles 代理网络上任何电脑或设备的流量也很简单，包括你的 iOS 设备。
 
 
 
 ### 设置你的设备
 
-在你的 Mac 上打开 Charles Proxy，通过点击 **Proxy**（下拉菜单）▸ 取消选中 **macOS Proxy** 来关闭 macOS 代理。这样，你将只看到来自你的iOS设备的流量。
+在你的 Mac 上打开 Charles Proxy，通过点击 **Proxy**（下拉菜单）▸ 取消选中 **macOS Proxy** 来关闭 macOS 代理。这样，你将只看到来自你的 iOS 设备的流量。
 
 接下来，点击 **Proxy** ▸ **Proxy Settings**，点击 **Proxies** 选项卡，注意端口号，默认情况下应该是 **8888**。
 
-![](https://koenig-media.raywenderlich.com/uploads/2021/04/Screenshot-2021-04-09-at-19.14.34.png)
+<img src="https://koenig-media.raywenderlich.com/uploads/2021/04/Screenshot-2021-04-09-at-19.14.34.png" style="zoom:50%;" />
 
 
 然后，点击 **Help** ▸ **Local IP Address** ，记下你的计算机的 IP 地址。如果有一个以上的 IP 地址，选择 **en0**。
@@ -225,19 +225,19 @@ Charles 很强大！
 
 ![](https://koenig-media.raywenderlich.com/uploads/2021/04/Screenshot-2021-04-09-at-19.16.58.png)
 
-现在你应该开始看到你的设备在 Charles 的活动了! 但请注意，你现在还不能查看SSL流量。与iOS应用程序一样，你需要从 Charles 安装一个证书。
+现在你应该开始看到你的设备在 Charles 的活动了! 但请注意，你现在还不能查看 SSL 流量。与 iOS 应用程序一样，你需要从 Charles 安装一个证书。
 
 ### 在你的设备上安装证书
 
 > 注意：这些说明也适用于在模拟器上安装证书，但有两个区别。首先，你必须在 Charles 的代理菜单中重新启用 macOS 代理。第二，你会在设置▸常规页而不是主设置页上找到下载的配置文件。
 
-仍然在你的iOS设备上，打开Safari浏览器并导航到 <http://www.charlesproxy.com/getssl> 。在弹出的窗口中，点击允许。
+仍然在你的 iOS 设备上，打开 Safari 浏览器并导航到 <http://www.charlesproxy.com/getssl> 。在弹出的窗口中，点击允许。
 
 <img src="https://koenig-media.raywenderlich.com/uploads/2019/03/Install-a-certificate-from-the-charles-website.png" style="zoom:25%;" />
 
 
 
-> Note：同样，如果你有一个与设备配对的Apple Watch，iOS会提示你在设备和手表之间选择安装配置文件。选择iPhone。
+> Note：同样，如果你有一个与设备配对的 Apple Watch，iOS 会提示你在设备和手表之间选择安装配置文件。选择iPhone。
 
 现在对你来说应该是一个熟悉的旅程，切换到设置并安装配置文件。点击 "安装"，输入你的密码（如果设置了），并在出现警告后再次点击安装。然后，再点一次 "安装"。最后，点击 "完成"。
 
@@ -249,7 +249,7 @@ Charles 很强大！
 
 
 
-> 注意：如果你不知道在这里放什么值，你可以在应用程序中用右击点击选择一个请求，然后从那里选择启用SSL代理。
+> 注意：如果你不知道在这里放什么值，你可以在应用程序中用右击点击选择一个请求，然后从那里选择启用 SSL 代理。
 
 <img src="https://koenig-media.raywenderlich.com/uploads/2019/03/enabled-SSL-proxying-2.png" style="zoom:25%;" />
 
@@ -363,7 +363,7 @@ Charles Proxy 对于调试和测试你自己的应用程序特别好。例如，
 
 正如你在 Charles 所看到的，你使用一个三个字母的代码来获取一个国家的国旗图像。但根据 countryflags.io，你需要使用一个两个字母的国家代码来获得它的工作!
 
-现在，将 "序列" 选项卡中的过滤器改为 restcountries.eu，以监测你从这个服务中收到的数据，看看你是否可以得到代码：
+现在，将 "Sequence" 选项卡中的过滤器改为 restcountries.eu，以监测你从这个服务中收到的数据，看看你是否可以得到代码：
 
 ```json
 [{
@@ -394,7 +394,7 @@ Charles Proxy 对于调试和测试你自己的应用程序特别好。例如，
 
 ```
 
-响应包含两个国家代码，称为valpha2Codev和valpha3Code。在Xcode中，打开 Country.swift，仔细看一下CodingKeys。的确，代码是错误的！在 Xcode 中，打开Country.swift，仔细看看CodingKeys。
+响应包含两个国家代码，称为 valpha2Codev 和 valpha3Code。在 Xcode 中，打开 Country.swift，仔细看一下CodingKeys。的确，代码是错误的！在 Xcode 中，打开 Country.swift，仔细看看 CodingKeys。
 
 将以下内容：
 
@@ -414,7 +414,7 @@ case code = "alpha2Code"
 
 
 
-成功了! 这是一个微不足道但很好的示范，说明在Charles Proxy中查看网络流量可以帮助你发现网络代码中的错误。
+成功了! 这是一个微不足道但很好的示范，说明在 Charles Proxy 中查看网络流量可以帮助你发现网络代码中的错误。
 
 
 
@@ -440,30 +440,4 @@ case code = "alpha2Code"
 你还可以在维基百科上阅读更多关于SSL/TLS的内容。
 
 我们希望你喜欢这个教程。你知道有什么其他有用的网络调试应用程序吗？或者你有什么调试的战斗故事吗？如果你有任何问题或意见，请加入下面的论坛讨论!
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
