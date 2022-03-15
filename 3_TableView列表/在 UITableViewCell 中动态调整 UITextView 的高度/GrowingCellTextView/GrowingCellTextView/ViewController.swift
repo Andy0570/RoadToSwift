@@ -18,7 +18,6 @@ class ViewController: UIViewController {
         self.tableView.rowHeight = UITableView.automaticDimension
         self.tableView.tableFooterView = UIView()
         self.tableView.dataSource = self
-        self.tableView.delegate = self
     }
 }
 
@@ -42,6 +41,7 @@ extension ViewController: GrowingCellProtocol {
         let newSize = tableView.sizeThatFits(CGSize(width: size.width, height: CGFloat.greatestFiniteMagnitude))
 
         if size.height != newSize.height {
+            
             UIView.setAnimationsEnabled(false)
             tableView.beginUpdates()
             tableView.endUpdates()

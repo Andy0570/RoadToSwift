@@ -34,7 +34,7 @@
 
 ### Swift Server
 
-* [vapor](https://github.com/vapor/vapor) ⭐️21.3k - 最活跃的 Web 服务器框架。[Vapor, Perfect, Kitura 比较](https://www.jianshu.com/p/a9ca47e844d7)
+* [vapor](https://github.com/vapor/vapor) ⭐️21.4k - 最活跃的 Web 服务器框架。[Vapor, Perfect, Kitura 比较](https://www.jianshu.com/p/a9ca47e844d7)
 * [Perfect](https://github.com/PerfectlySoft/Perfect) ⭐️13.9k - 功能更强大，性能更好的 Web 服务器框架。有完整的[中文开发文档](https://github.com/PerfectlySoft/Perfect/blob/master/README.zh_CN.md)支持。
 * [Kitura](https://github.com/Kitura/Kitura) ⭐️7.5k - 与 IBM Bluemix 最佳云集成，功能强大的 Web 服务器框架。CGI 支持。
 * [dockSwiftOnARM](https://github.com/helje5/dockSwiftOnARM) ⭐️120 -将 Swift 编译运行于 ARM 平台 Docker 上。

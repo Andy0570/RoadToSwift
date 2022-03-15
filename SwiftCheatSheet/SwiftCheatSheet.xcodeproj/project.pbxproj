@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		222B3FD227E061F1009C7322 /* GrowingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B3FD027E061F1009C7322 /* GrowingCell.swift */; };
+		222B3FD327E061F1009C7322 /* GrowingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 222B3FD127E061F1009C7322 /* GrowingCell.xib */; };
+		222B3FD527E06200009C7322 /* GrowingCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B3FD427E06200009C7322 /* GrowingCellViewController.swift */; };
 		2246DD0927C474E9006A3AC1 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2246DD0827C474E9006A3AC1 /* MyCollectionViewCell.swift */; };
 		2246DD0B27C4768D006A3AC1 /* MyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2246DD0A27C4768D006A3AC1 /* MyCollectionViewController.swift */; };
 		2246DD1727C49402006A3AC1 /* CollaspibleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2246DD1627C49402006A3AC1 /* CollaspibleCollectionViewController.swift */; };
@@ -99,6 +102,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		222B3FD027E061F1009C7322 /* GrowingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowingCell.swift; sourceTree = "<group>"; };
+		222B3FD127E061F1009C7322 /* GrowingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GrowingCell.xib; sourceTree = "<group>"; };
+		222B3FD427E06200009C7322 /* GrowingCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowingCellViewController.swift; sourceTree = "<group>"; };
 		2246DD0827C474E9006A3AC1 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		2246DD0A27C4768D006A3AC1 /* MyCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewController.swift; sourceTree = "<group>"; };
 		2246DD1627C49402006A3AC1 /* CollaspibleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollaspibleCollectionViewController.swift; sourceTree = "<group>"; };
@@ -213,6 +219,16 @@
 				7056DC84DBAA37CC30BED016 /* Pods-SwiftCheatSheet.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		222B3FCF27E061B1009C7322 /* GrowingCellTextView */ = {
+			isa = PBXGroup;
+			children = (
+				222B3FD427E06200009C7322 /* GrowingCellViewController.swift */,
+				222B3FD027E061F1009C7322 /* GrowingCell.swift */,
+				222B3FD127E061F1009C7322 /* GrowingCell.xib */,
+			);
+			path = GrowingCellTextView;
 			sourceTree = "<group>";
 		};
 		2246DD0727C474B6006A3AC1 /* UICollectionView */ = {
@@ -358,6 +374,7 @@
 		22A89B4F27DB54940091304F /* UITableView */ = {
 			isa = PBXGroup;
 			children = (
+				222B3FCF27E061B1009C7322 /* GrowingCellTextView */,
 				22AC911227DF4614007260E6 /* Auteurs */,
 				22A89B5027DB54AB0091304F /* DiffableDatasourceTableView */,
 			);
@@ -806,6 +823,7 @@
 				229AC7D527D5E3BC001D81D2 /* content.json in Resources */,
 				22FF1B6027C89FFF007214EB /* ActionCell.xib in Resources */,
 				228B38F327D0614700BCF963 /* FlagViewController.xib in Resources */,
+				222B3FD327E061F1009C7322 /* GrowingCell.xib in Resources */,
 				22FF1B5C27C89FF2007214EB /* ImageCell.xib in Resources */,
 				2246DD2227C4BB48006A3AC1 /* IconCollectionViewCell.xib in Resources */,
 				229AC7E227D5EF93001D81D2 /* PhotoListTableViewCell.xib in Resources */,
@@ -915,6 +933,7 @@
 				22BF2E3A27BF774D009027E3 /* GameView.swift in Sources */,
 				22BF2E4927BFA08A009027E3 /* Turn.swift in Sources */,
 				22BF2E4227BF91B9009027E3 /* ShapeViewFactory.swift in Sources */,
+				222B3FD527E06200009C7322 /* GrowingCellViewController.swift in Sources */,
 				22BF2E3627BF750C009027E3 /* Shape.swift in Sources */,
 				22AC911B27DF48C0007260E6 /* Film.swift in Sources */,
 				22BF2E2627BE5468009027E3 /* StringExtensions.swift in Sources */,
@@ -935,6 +954,7 @@
 				22DBC8E627CB632F00E14468 /* MenuButton.swift in Sources */,
 				22BF2E4B27BFA3F8009027E3 /* TurnController.swift in Sources */,
 				22EE32C627D08E1300A9A66F /* VFLViewController.swift in Sources */,
+				222B3FD227E061F1009C7322 /* GrowingCell.swift in Sources */,
 				22A7C75727C8AE2400196326 /* ImageViewModel.swift in Sources */,
 				2246DD0B27C4768D006A3AC1 /* MyCollectionViewController.swift in Sources */,
 			);

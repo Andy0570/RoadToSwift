@@ -36,6 +36,11 @@
         "title": "自适应大小的 Table View Cells",
         "description": "",
         "className": "AuteurListViewController"
+    }, {
+        "image": "image",
+        "title": "动态调整 UITextView 的高度",
+        "description": "",
+        "className": "GrowingCellViewController"
     }]
 }, {
     "title": "集合视图",
