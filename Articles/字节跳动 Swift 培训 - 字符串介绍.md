@@ -376,4 +376,3 @@ let length = firstString.distance(from: firstString.startIndex, to: range.upperB
 * https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/Strings/Articles/stringsClusters.html
 
 
-

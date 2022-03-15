@@ -26,6 +26,9 @@
 		227E7EBB27E083B7009D5E45 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227E7EB927E083B7009D5E45 /* CustomTableViewCell.swift */; };
 		227E7EBC27E083B7009D5E45 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227E7EBA27E083B7009D5E45 /* CustomTableViewCell.xib */; };
 		227E7EBE27E08478009D5E45 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227E7EBD27E08478009D5E45 /* ViewModel.swift */; };
+		227E7EC227E09345009D5E45 /* AttributedStringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227E7EC027E09345009D5E45 /* AttributedStringViewController.swift */; };
+		227E7EC327E09345009D5E45 /* AttributedStringViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227E7EC127E09345009D5E45 /* AttributedStringViewController.xib */; };
+		227E7EC527E093AF009D5E45 /* AttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227E7EC427E093AF009D5E45 /* AttributedString.swift */; };
 		228B38F227D0614700BCF963 /* FlagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228B38F027D0614700BCF963 /* FlagViewController.swift */; };
 		228B38F327D0614700BCF963 /* FlagViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 228B38F127D0614700BCF963 /* FlagViewController.xib */; };
 		229AC7D127D5E275001D81D2 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229AC7D027D5E275001D81D2 /* Photo.swift */; };
@@ -128,6 +131,9 @@
 		227E7EB927E083B7009D5E45 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		227E7EBA27E083B7009D5E45 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		227E7EBD27E08478009D5E45 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		227E7EC027E09345009D5E45 /* AttributedStringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedStringViewController.swift; sourceTree = "<group>"; };
+		227E7EC127E09345009D5E45 /* AttributedStringViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttributedStringViewController.xib; sourceTree = "<group>"; };
+		227E7EC427E093AF009D5E45 /* AttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedString.swift; sourceTree = "<group>"; };
 		228B38F027D0614700BCF963 /* FlagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagViewController.swift; sourceTree = "<group>"; };
 		228B38F127D0614700BCF963 /* FlagViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlagViewController.xib; sourceTree = "<group>"; };
 		229AC7D027D5E275001D81D2 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
@@ -351,6 +357,16 @@
 				227E7EB327E0824F009D5E45 /* MultipleSelectionViewController.xib */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		227E7EBF27E092BA009D5E45 /* NSMutableAttributedString */ = {
+			isa = PBXGroup;
+			children = (
+				227E7EC027E09345009D5E45 /* AttributedStringViewController.swift */,
+				227E7EC127E09345009D5E45 /* AttributedStringViewController.xib */,
+				227E7EC427E093AF009D5E45 /* AttributedString.swift */,
+			);
+			path = NSMutableAttributedString;
 			sourceTree = "<group>";
 		};
 		228B38EF27D05E0000BCF963 /* 自动布局 */ = {
@@ -661,6 +677,7 @@
 		22D2233427BCEB89000EAD0F /* SwiftCheatSheet */ = {
 			isa = PBXGroup;
 			children = (
+				227E7EBF27E092BA009D5E45 /* NSMutableAttributedString */,
 				229AC7CB27D5E1F7001D81D2 /* Model-View-ViewModel */,
 				228B38EF27D05E0000BCF963 /* 自动布局 */,
 				22DBC8E127CB620F00E14468 /* UIButton */,
@@ -904,6 +921,7 @@
 				22AC911827DF46D5007260E6 /* auteurs.json in Resources */,
 				227E7EBC27E083B7009D5E45 /* CustomTableViewCell.xib in Resources */,
 				227E7EB527E0824F009D5E45 /* MultipleSelectionViewController.xib in Resources */,
+				227E7EC327E09345009D5E45 /* AttributedStringViewController.xib in Resources */,
 				22D2233D27BCEB89000EAD0F /* Main.storyboard in Resources */,
 				22D2235527BCFFE3000EAD0F /* homepage.json in Resources */,
 			);
@@ -970,6 +988,7 @@
 				22A7C75927C8AE5100196326 /* ActionViewModel.swift in Sources */,
 				22FF1B5B27C89FF2007214EB /* ImageCell.swift in Sources */,
 				22A7C75527C8AD3900196326 /* UserViewModel.swift in Sources */,
+				227E7EC527E093AF009D5E45 /* AttributedString.swift in Sources */,
 				229AC7DA27D5E4C2001D81D2 /* PhotoDetailViewController.swift in Sources */,
 				22AC912827DF9EE3007260E6 /* FilmTableViewCell.swift in Sources */,
 				22D2234D27BCF20A000EAD0F /* Item.swift in Sources */,
@@ -1003,6 +1022,7 @@
 				22A7C75B27C8AF0300196326 /* PostSectionController.swift in Sources */,
 				22D2233827BCEB89000EAD0F /* SceneDelegate.swift in Sources */,
 				2246DD1C27C4BA35006A3AC1 /* Icon.swift in Sources */,
+				227E7EC227E09345009D5E45 /* AttributedStringViewController.swift in Sources */,
 				22BF2E1827BDFF35009027E3 /* Album.swift in Sources */,
 				22D9330B27D5A55900D1B0B4 /* DRHTextFieldViewController.swift in Sources */,
 				22BF2E3A27BF774D009027E3 /* GameView.swift in Sources */,
