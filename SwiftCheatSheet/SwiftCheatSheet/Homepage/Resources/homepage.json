@@ -41,6 +41,16 @@
         "title": "动态调整 UITextView 的高度",
         "description": "",
         "className": "GrowingCellViewController"
+    }, {
+        "image": "image",
+        "title": "折叠展开 UITableView",
+        "description": "",
+        "className": "CollapsExpandViewController"
+    }, {
+        "image": "image",
+        "title": "TableView 中的多选功能",
+        "description": "",
+        "className": "MultipleSelectionViewController"
     }]
 }, {
     "title": "集合视图",

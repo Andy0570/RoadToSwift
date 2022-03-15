@@ -62,10 +62,14 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UITableViewDelegate {
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+
         if let item = self.arrayDataSource?.getCellItem(at: indexPath),
            let controller = item.className.getViewController() {
             navigationController?.pushViewController(controller, animated: true)
         }
     }
+
 }

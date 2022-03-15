@@ -2,7 +2,7 @@
 
 ![](https://miro.medium.com/max/1400/1*-OegkuQe15U29DhtVPg2-A.png)
 
-这是我的列表视图与MVVM系列的第三个教程。在前两部分中，我们[用不同类型的动态cell创建了列表视图](https://medium.com/ios-os-x-development/ios-how-to-build-a-table-view-with-multiple-cell-types-2df91a206429)，并[添加了一个可折叠的section](https://medium.com/@stasost/ios-how-to-build-a-table-view-with-collapsible-sections-96badf3387d0)功能。今天，我们将讨论另一个常用的列表视图场景：多重选择。
+这是我的列表视图与 MVVM 系列的第三个教程。在前两部分中，我们[用不同类型的动态cell创建了列表视图](https://medium.com/ios-os-x-development/ios-how-to-build-a-table-view-with-multiple-cell-types-2df91a206429)，并[添加了一个可折叠的section](https://medium.com/@stasost/ios-how-to-build-a-table-view-with-collapsible-sections-96badf3387d0)功能。今天，我们将讨论另一个常用的列表视图场景：多重选择。
 
 
 在许多用例中，我们需要创建一个列表视图，允许用户选择多个单元格。通常情况下，API 提供了 item 列表，你可以在列表视图中显示这些 item，用户可以选择其中的几个 item，以便以后使用它们（发送到后台，保存到本地存储，传递到下一个页面，等等）。有时，你想通过一定的数量来限制选择，或者你不想让用户在没有选择项目的情况下继续进行。
@@ -35,6 +35,6 @@ if let selectedIndexes = tableView.indexPathsForSelectedRows {
 // what code?
 ```
 
-这就对了。完全没有代码。一切都将由 ViewModel 和 TableViewDelegate 处理。当你重新加载整个TableView或其任何部分时，选择将保持持久性。
+这就对了。完全没有代码。一切都将由 ViewModel 和 TableViewDelegate 处理。当你重新加载整个 tableView 或其任何部分时，选择将保持持久性。
 
 听起来不错吧？让我们开始吧!

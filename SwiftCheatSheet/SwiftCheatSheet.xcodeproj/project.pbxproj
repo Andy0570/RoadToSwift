@@ -19,6 +19,13 @@
 		225A1C1327C4C00000F8215F /* IconCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A1C1127C4C00000F8215F /* IconCollectionViewController.swift */; };
 		225F202327C332F0008FCC29 /* TurnStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225F202227C332F0008FCC29 /* TurnStrategy.swift */; };
 		225F202527C33642008FCC29 /* Scorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225F202427C33642008FCC29 /* Scorer.swift */; };
+		227E7EAC27E0756C009D5E45 /* CollapsExpandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227E7EAB27E0756C009D5E45 /* CollapsExpandViewController.swift */; };
+		227E7EB427E0824F009D5E45 /* MultipleSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227E7EB227E0824F009D5E45 /* MultipleSelectionViewController.swift */; };
+		227E7EB527E0824F009D5E45 /* MultipleSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227E7EB327E0824F009D5E45 /* MultipleSelectionViewController.xib */; };
+		227E7EB827E0838E009D5E45 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227E7EB727E0838E009D5E45 /* Model.swift */; };
+		227E7EBB27E083B7009D5E45 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227E7EB927E083B7009D5E45 /* CustomTableViewCell.swift */; };
+		227E7EBC27E083B7009D5E45 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227E7EBA27E083B7009D5E45 /* CustomTableViewCell.xib */; };
+		227E7EBE27E08478009D5E45 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227E7EBD27E08478009D5E45 /* ViewModel.swift */; };
 		228B38F227D0614700BCF963 /* FlagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228B38F027D0614700BCF963 /* FlagViewController.swift */; };
 		228B38F327D0614700BCF963 /* FlagViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 228B38F127D0614700BCF963 /* FlagViewController.xib */; };
 		229AC7D127D5E275001D81D2 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229AC7D027D5E275001D81D2 /* Photo.swift */; };
@@ -114,6 +121,13 @@
 		225A1C1127C4C00000F8215F /* IconCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCollectionViewController.swift; sourceTree = "<group>"; };
 		225F202227C332F0008FCC29 /* TurnStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnStrategy.swift; sourceTree = "<group>"; };
 		225F202427C33642008FCC29 /* Scorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scorer.swift; sourceTree = "<group>"; };
+		227E7EAB27E0756C009D5E45 /* CollapsExpandViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapsExpandViewController.swift; sourceTree = "<group>"; };
+		227E7EB227E0824F009D5E45 /* MultipleSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleSelectionViewController.swift; sourceTree = "<group>"; };
+		227E7EB327E0824F009D5E45 /* MultipleSelectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultipleSelectionViewController.xib; sourceTree = "<group>"; };
+		227E7EB727E0838E009D5E45 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		227E7EB927E083B7009D5E45 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		227E7EBA27E083B7009D5E45 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		227E7EBD27E08478009D5E45 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		228B38F027D0614700BCF963 /* FlagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagViewController.swift; sourceTree = "<group>"; };
 		228B38F127D0614700BCF963 /* FlagViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlagViewController.xib; sourceTree = "<group>"; };
 		229AC7D027D5E275001D81D2 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
@@ -286,6 +300,59 @@
 			path = IconCollectionView;
 			sourceTree = "<group>";
 		};
+		227E7EAA27E07559009D5E45 /* CollapsExpand */ = {
+			isa = PBXGroup;
+			children = (
+				227E7EAB27E0756C009D5E45 /* CollapsExpandViewController.swift */,
+			);
+			path = CollapsExpand;
+			sourceTree = "<group>";
+		};
+		227E7EAD27E07F32009D5E45 /* MultipleSelection */ = {
+			isa = PBXGroup;
+			children = (
+				227E7EB127E07FCB009D5E45 /* Controller */,
+				227E7EB027E07FC8009D5E45 /* View */,
+				227E7EAF27E07FC3009D5E45 /* ViewModel */,
+				227E7EAE27E07FBD009D5E45 /* Model */,
+			);
+			path = MultipleSelection;
+			sourceTree = "<group>";
+		};
+		227E7EAE27E07FBD009D5E45 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				227E7EB727E0838E009D5E45 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		227E7EAF27E07FC3009D5E45 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				227E7EBD27E08478009D5E45 /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		227E7EB027E07FC8009D5E45 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				227E7EB927E083B7009D5E45 /* CustomTableViewCell.swift */,
+				227E7EBA27E083B7009D5E45 /* CustomTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		227E7EB127E07FCB009D5E45 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				227E7EB227E0824F009D5E45 /* MultipleSelectionViewController.swift */,
+				227E7EB327E0824F009D5E45 /* MultipleSelectionViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		228B38EF27D05E0000BCF963 /* 自动布局 */ = {
 			isa = PBXGroup;
 			children = (
@@ -374,6 +441,8 @@
 		22A89B4F27DB54940091304F /* UITableView */ = {
 			isa = PBXGroup;
 			children = (
+				227E7EAD27E07F32009D5E45 /* MultipleSelection */,
+				227E7EAA27E07559009D5E45 /* CollapsExpand */,
 				222B3FCF27E061B1009C7322 /* GrowingCellTextView */,
 				22AC911227DF4614007260E6 /* Auteurs */,
 				22A89B5027DB54AB0091304F /* DiffableDatasourceTableView */,
@@ -833,6 +902,8 @@
 				22FF1B5827C89FE4007214EB /* UserCell.xib in Resources */,
 				22BF2E3E27BF87CD009027E3 /* GameViewController.xib in Resources */,
 				22AC911827DF46D5007260E6 /* auteurs.json in Resources */,
+				227E7EBC27E083B7009D5E45 /* CustomTableViewCell.xib in Resources */,
+				227E7EB527E0824F009D5E45 /* MultipleSelectionViewController.xib in Resources */,
 				22D2233D27BCEB89000EAD0F /* Main.storyboard in Resources */,
 				22D2235527BCFFE3000EAD0F /* homepage.json in Resources */,
 			);
@@ -888,6 +959,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22AC911F27DF980A007260E6 /* AuteurListViewController.swift in Sources */,
+				227E7EB427E0824F009D5E45 /* MultipleSelectionViewController.swift in Sources */,
 				22BF2E1A27BE1E8D009027E3 /* AlbumView.swift in Sources */,
 				225A1C1327C4C00000F8215F /* IconCollectionViewController.swift in Sources */,
 				22AC912127DF981E007260E6 /* AuteurDetailViewController.swift in Sources */,
@@ -921,7 +993,10 @@
 				22FF1B6327C8A00C007214EB /* CommentCell.swift in Sources */,
 				22BF2E2827BF2FF9009027E3 /* NavigationController.swift in Sources */,
 				22EE32D327D0BC5E00A9A66F /* TraitCollectionViewController.swift in Sources */,
+				227E7EB827E0838E009D5E45 /* Model.swift in Sources */,
+				227E7EAC27E0756C009D5E45 /* CollapsExpandViewController.swift in Sources */,
 				225F202327C332F0008FCC29 /* TurnStrategy.swift in Sources */,
+				227E7EBB27E083B7009D5E45 /* CustomTableViewCell.swift in Sources */,
 				229AC7E427D5FAAB001D81D2 /* PhotoListViewModel.swift in Sources */,
 				22D2235127BCF689000EAD0F /* ArrayDataSource.swift in Sources */,
 				22BF2E3D27BF87CD009027E3 /* GameViewController.swift in Sources */,
@@ -938,6 +1013,7 @@
 				22AC911B27DF48C0007260E6 /* Film.swift in Sources */,
 				22BF2E2627BE5468009027E3 /* StringExtensions.swift in Sources */,
 				22BF2E4727BF9D1B009027E3 /* ShapeViewBuilder.swift in Sources */,
+				227E7EBE27E08478009D5E45 /* ViewModel.swift in Sources */,
 				2246DD2127C4BB48006A3AC1 /* IconCollectionViewCell.swift in Sources */,
 				22A7C75227C8AC0100196326 /* Comment.swift in Sources */,
 				22AC911D27DF4990007260E6 /* Auteur.swift in Sources */,

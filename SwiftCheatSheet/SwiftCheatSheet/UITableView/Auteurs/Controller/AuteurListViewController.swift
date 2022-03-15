@@ -8,8 +8,9 @@
 import UIKit
 
 /**
- 参考：
- [Self-Sizing Table View Cells](https://www.raywenderlich.com/24698014-self-sizing-table-view-cells)
+ 自适应大小的 Table View Cells
+
+ 参考：<https://www.raywenderlich.com/24698014-self-sizing-table-view-cells>
  */
 
 class AuteurListViewController: UIViewController {
