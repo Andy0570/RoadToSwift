@@ -14,7 +14,6 @@
 import UIKit
 
 class GrowingCellViewController: UIViewController {
-
     weak var tableView: UITableView!
 
     override func loadView() {
@@ -35,7 +34,7 @@ class GrowingCellViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "动态调整 UITextView 的高度"
-        
+
         // 自适应 Cell 高度
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 100
@@ -69,7 +68,6 @@ extension GrowingCellViewController: GrowingCellProtocol {
         let newSize = tableView.sizeThatFits(CGSize(width: size.width, height: CGFloat.greatestFiniteMagnitude))
 
         if size.height != newSize.height {
-
             UIView.setAnimationsEnabled(false)
             tableView.beginUpdates()
             tableView.endUpdates()

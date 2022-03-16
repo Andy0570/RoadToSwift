@@ -11,7 +11,6 @@ import UIKit
 // 将一个复杂对象的构建与其表示分离，使得同样的构建过程可以创建不同的表示。
 
 class ShapeViewBuilder {
-
     // 存储配置 ShapeView 的填充属性
     var showFill = true
     var fillColor = UIColor.orange

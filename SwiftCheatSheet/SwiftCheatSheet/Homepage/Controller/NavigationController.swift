@@ -8,7 +8,6 @@
 import UIKit
 
 class NavigationController: UINavigationController {
-
     override init(rootViewController: UIViewController) {
         super.init(rootViewController: rootViewController)
         initialize()
@@ -33,5 +32,4 @@ class NavigationController: UINavigationController {
         navigationBar.standardAppearance = navBarAppearance
         navigationBar.scrollEdgeAppearance = navBarAppearance
     }
-
 }

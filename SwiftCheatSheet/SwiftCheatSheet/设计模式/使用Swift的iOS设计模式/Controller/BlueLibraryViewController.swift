@@ -26,7 +26,6 @@
 import UIKit
 
 class BlueLibraryViewController: UIViewController {
-
     // 使用不带 case 的枚举的优点是：它不会被意外地实例化，并只作为一个纯命名空间。
     private enum Constants {
         static let CellIdentifier = "Cell"
@@ -38,7 +37,7 @@ class BlueLibraryViewController: UIViewController {
     @IBOutlet weak var undoBarButtonItem: UIBarButtonItem!
     @IBOutlet weak var trashBarButtonItem: UIBarButtonItem!
 
-    private var allAlbums = [Album]()
+    private var allAlbums: [Album] = []
     private var currentAlbumIndex = 0
     private var currentAlbumData: [AlbumData]?
 
@@ -59,7 +58,7 @@ class BlueLibraryViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+
         // 恢复视图时，将 scrollView 滚动到正确的位置
         horizontalScrollerView.scrollToView(at: currentAlbumIndex, animated: false)
     }
@@ -90,7 +89,6 @@ class BlueLibraryViewController: UIViewController {
         showDataForAlbum(at: currentAlbumIndex)
         horizontalScrollerView.reload()
     }
-
 }
 
 // MARK: 代理模式
@@ -105,7 +103,6 @@ extension BlueLibraryViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
         // 计算属性，在内部返回指定Style样式的 cell
         let cell: UITableViewCell = {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifier) else {

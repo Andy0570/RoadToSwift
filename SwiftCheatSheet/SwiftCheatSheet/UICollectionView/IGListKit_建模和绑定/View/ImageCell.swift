@@ -9,7 +9,6 @@ import IGListKit
 import Kingfisher
 
 final class ImageCell: UICollectionViewCell, ListBindable {
-
     @IBOutlet weak var imageView: UIImageView!
 
     static var identifier: String {
@@ -31,14 +30,16 @@ final class ImageCell: UICollectionViewCell, ListBindable {
         // 缩小图片以适应 imageView 尺寸
         let processor = DownsamplingImageProcessor(size: imageView.bounds.size)
         imageView.kf.indicatorType = .activity // 加载活动指示器
-        imageView.kf.setImage(with: viewModel.url,
-                              placeholder: nil,
-                              options: [.processor(processor),
-                                        .scaleFactor(UIScreen.main.scale),
-                                        .transition(.fade(1)), // fade in 淡入加载效果
-                                        .cacheOriginalImage // 缓存原始图像
-                                       ],
-                              completionHandler: nil);
-
+        imageView.kf.setImage(
+            with: viewModel.url,
+            placeholder: nil,
+            options: [
+                .processor(processor),
+                .scaleFactor(UIScreen.main.scale),
+                .transition(.fade(1)), // fade in 淡入加载效果
+                .cacheOriginalImage // 缓存原始图像
+            ],
+            completionHandler: nil
+        )
     }
 }

@@ -14,7 +14,6 @@ import UIKit
  */
 
 class AuteurListViewController: UIViewController {
-
     private let auteurs = Auteur.auteursFromBundle()
     // 弱引用的隐式解包可选类型变量
     weak var tableView: UITableView!

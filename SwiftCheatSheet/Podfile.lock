@@ -2,7 +2,7 @@ PODS:
   - IGListDiffKit (4.0.0)
   - IGListKit (4.0.0):
     - IGListDiffKit (= 4.0.0)
-  - Kingfisher (7.1.2)
+  - Kingfisher (7.2.0)
   - SwifterSwift (5.2.0):
     - SwifterSwift/AppKit (= 5.2.0)
     - SwifterSwift/CoreAnimation (= 5.2.0)
@@ -47,10 +47,10 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   IGListDiffKit: 665d6cf43ce726e676013db9c7d6c4294259b6b2
   IGListKit: fd5a5d21935298f5849fa49d426843cff97b77c7
-  Kingfisher: 44ed6a8504763f27bab46163adfac83f5deb240c
+  Kingfisher: 3ac0b75b155cabc0e544877d1a4deea29feece92
   SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
   SwiftyBeaver: 84069991dd5dca07d7069100985badaca7f0ce82
 
-PODFILE CHECKSUM: df452b69e16ecd76838bcf740d9a67e0a8681c8a
+PODFILE CHECKSUM: 1444af7bc519494f0970a295219f3ecf71c94074
 
 COCOAPODS: 1.11.2

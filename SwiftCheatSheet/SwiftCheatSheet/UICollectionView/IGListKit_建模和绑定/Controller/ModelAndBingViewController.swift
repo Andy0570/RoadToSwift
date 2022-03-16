@@ -14,8 +14,7 @@
 import IGListKit
 
 class ModelAndBingViewController: UIViewController {
-
-    var data = [ListDiffable]()
+    var data: [ListDiffable] = []
 
     private lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
@@ -29,22 +28,22 @@ class ModelAndBingViewController: UIViewController {
     }()
 
     private lazy var adapter: ListAdapter = {
-        return ListAdapter(updater: ListAdapterUpdater(), viewController:self)
+        return ListAdapter(updater: ListAdapterUpdater(), viewController: self)
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         data.append(Post(
-          username: "@janedoe",
-          timestamp: "15min",
-          imageURL: URL(string: "https://placekitten.com/g/375/250")!,
-          likes: 384,
-          comments: [
-            Comment(username: "@ryan", text: "this is beautiful!"),
-            Comment(username: "@jsq", text: "😱"),
-            Comment(username: "@caitlin", text: "#blessed"),
-          ]
+            username: "@janedoe",
+            timestamp: "15min",
+            imageURL: URL(string: "https://placekitten.com/g/375/250")!,
+            likes: 384,
+            comments: [
+                Comment(username: "@ryan", text: "this is beautiful!"),
+                Comment(username: "@jsq", text: "😱"),
+                Comment(username: "@caitlin", text: "#blessed")
+            ]
         ))
 
         view.addSubview(collectionView)
@@ -56,7 +55,6 @@ class ModelAndBingViewController: UIViewController {
 }
 
 extension ModelAndBingViewController: ListAdapterDataSource {
-
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
         return data
     }
@@ -68,5 +66,4 @@ extension ModelAndBingViewController: ListAdapterDataSource {
     func emptyView(for listAdapter: ListAdapter) -> UIView? {
         return nil
     }
-
 }

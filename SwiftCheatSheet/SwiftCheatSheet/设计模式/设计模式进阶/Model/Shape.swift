@@ -9,7 +9,6 @@ import UIKit
 
 // 抽象类，可点击图形的基本模型
 class Shape {
-
     // MARK: 雇工模式
     // 雇工模式（Employee Pattern）也叫作仆人模式（Servant Pattern），属于行为型设计模式。
     // 它为一组类提供通用的功能，而不需要类实现这些功能，也是命令模式的一种扩展。

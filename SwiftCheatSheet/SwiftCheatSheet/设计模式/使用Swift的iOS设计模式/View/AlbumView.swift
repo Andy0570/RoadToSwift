@@ -8,7 +8,6 @@
 import UIKit
 
 class AlbumView: UIView {
-
     private var coverImageView: UIImageView!
     private var indicatorView: UIActivityIndicatorView!
     private var valueObservation: NSKeyValueObservation!
@@ -70,5 +69,4 @@ class AlbumView: UIView {
             backgroundColor = .black
         }
     }
-
 }

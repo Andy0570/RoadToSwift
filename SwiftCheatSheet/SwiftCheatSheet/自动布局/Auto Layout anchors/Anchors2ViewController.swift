@@ -15,7 +15,6 @@
 import UIKit
 
 class Anchors2ViewController: UIViewController {
-
     // !!!: 使用弱引用处理内存管理问题
     weak var square1: UIView!
     weak var square2: UIView!
@@ -33,7 +32,7 @@ class Anchors2ViewController: UIViewController {
     // !!!: 在 viewDidLoad 中设置所有其他的属性，如背景颜色等
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         view.backgroundColor = UIColor.systemBackground
         square1.backgroundColor = .yellow
         square2.backgroundColor = .purple
@@ -54,7 +53,7 @@ class Anchors2ViewController: UIViewController {
             NSLayoutConstraint(item: square, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1.0, constant: 64),
             NSLayoutConstraint(item: square, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1.0, constant: 64),
             NSLayoutConstraint(item: square, attribute: .centerX, relatedBy: .equal, toItem: self.view, attribute: .centerX, multiplier: 1.0, constant: 0),
-            NSLayoutConstraint(item: square, attribute: .centerY, relatedBy: .equal, toItem: self.view, attribute: .centerY, multiplier: 1.0, constant: -128),
+            NSLayoutConstraint(item: square, attribute: .centerY, relatedBy: .equal, toItem: self.view, attribute: .centerY, multiplier: 1.0, constant: -128)
         ])
         self.square1 = square
     }
@@ -65,7 +64,7 @@ class Anchors2ViewController: UIViewController {
         self.view.addSubview(square)
         square.translatesAutoresizingMaskIntoConstraints = false
 
-        let views: [String: UIView] = ["view": self.view , "subview": square]
+        let views: [String: UIView] = ["view": self.view, "subview": square]
         let vertical = NSLayoutConstraint.constraints(withVisualFormat: "V:[view]-(<=128)-[subview(==64)]", options: .alignAllCenterX, metrics: nil, views: views)
         let horizontal = NSLayoutConstraint.constraints(withVisualFormat: "H:[view]-(<=1)-[subview(==64)]", options: .alignAllCenterY, metrics: nil, views: views)
         self.view.addConstraints(vertical)
@@ -87,7 +86,7 @@ class Anchors2ViewController: UIViewController {
         ])
         self.square3 = square
     }
-    
+
     // MARK: 支持屏幕旋转
 
     override var shouldAutorotate: Bool {
@@ -101,5 +100,4 @@ class Anchors2ViewController: UIViewController {
     override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
         return .portrait
     }
-
 }

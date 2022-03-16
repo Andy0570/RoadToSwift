@@ -14,13 +14,12 @@ import UIKit
 import SwifterSwift
 
 class MyCollectionViewController: UIViewController {
-
     // 弱引用的隐式解包可选类型变量
     weak var collection: UICollectionView!
 
     // 在视图控制器中定义一个实例属性
     // 使用 UICollectionView.CellRegistration 配置集合视图
-    let simpleConfig = UICollectionView.CellRegistration<MyCollectionViewCell, String> { (cell, indexPath, model) in
+    let simpleConfig = UICollectionView.CellRegistration<MyCollectionViewCell, String> { cell, indexPath, model in
         cell.label.text = model
     }
 
@@ -77,5 +76,4 @@ extension MyCollectionViewController: UICollectionViewDelegate {
         let alertController = UIAlertController.init(title: "Tapped \(indexPath.row) row", message: nil, defaultActionButtonTitle: "OK", tintColor: UIColor.systemBlue)
         alertController.show(animated: true, vibrate: true, completion: nil)
     }
-
 }

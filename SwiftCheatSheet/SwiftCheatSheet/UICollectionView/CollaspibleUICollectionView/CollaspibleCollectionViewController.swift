@@ -23,11 +23,14 @@ struct Item: Hashable {
 typealias CollectionDataSource = UICollectionViewDiffableDataSource<Int, Item>
 
 class CollaspibleCollectionViewController: UIViewController {
-
     private let data: [Item] = {
-        return [Item(title: "Programming Languages", subItems: [Item(title: "Swift", subItems: []),
-                                                             Item(title: "C++", subItems: []),
-                                                             Item(title: "C#", subItems: [])])]
+        return [
+            Item(title: "Programming Languages", subItems: [
+                Item(title: "Swift", subItems: []),
+                Item(title: "C++", subItems: []),
+                Item(title: "C#", subItems: [])
+            ])
+        ]
     }()
 
     private lazy var collectionView: UICollectionView = {
@@ -81,9 +84,10 @@ class CollaspibleCollectionViewController: UIViewController {
     }
 
     func updateSnapshot(animatingChange: Bool = false) {
-
-        let firstParentItem = data.first!
-        let subItems = data.first!.subItems
+        guard let firstParentItem = data.first else {
+            return
+        }
+        let subItems = firstParentItem.subItems
 
         // 创建一个 NSDiffableDataSourceSnapshot 快照
         var snapshot = NSDiffableDataSourceSectionSnapshot<Item>()
@@ -95,5 +99,4 @@ class CollaspibleCollectionViewController: UIViewController {
         // 将快照应用到数据源
         dataSource.apply(snapshot, to: 0)
     }
-
 }

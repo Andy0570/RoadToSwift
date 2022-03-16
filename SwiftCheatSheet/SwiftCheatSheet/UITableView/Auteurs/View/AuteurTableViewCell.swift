@@ -49,5 +49,4 @@ class AuteurTableViewCell: UITableViewCell {
         auteurImageView.image = UIImage(named: imageName)
         return self
     }
-
 }

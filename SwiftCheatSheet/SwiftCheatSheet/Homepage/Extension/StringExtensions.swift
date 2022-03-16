@@ -8,7 +8,6 @@
 import UIKit
 
 extension String {
-
     /// 通过字符串创建视图控制器实例
     ///
     /// 使用示例:

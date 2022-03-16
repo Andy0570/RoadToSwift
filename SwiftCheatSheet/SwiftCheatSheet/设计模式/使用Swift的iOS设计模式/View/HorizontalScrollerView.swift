@@ -23,7 +23,6 @@ protocol HorizontalScrollerViewDelegate: AnyObject {
 }
 
 class HorizontalScrollerView: UIView {
-
     weak var dataSource: HorizontalScrollerViewDataSource?
     weak var delegate: HorizontalScrollerViewDelegate?
 
@@ -35,7 +34,7 @@ class HorizontalScrollerView: UIView {
     }
 
     private let scroller = UIScrollView()
-    private var contentViews = [UIView]()
+    private var contentViews: [UIView] = []
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -115,8 +114,10 @@ class HorizontalScrollerView: UIView {
 
     // 当用户手指拖动 scrollView 时，计算以确保当前正在查看的专辑居中显示
     private func centerCurrentView() {
-        let centerRect = CGRect(origin: CGPoint(x: scroller.bounds.midX - ViewConstants.Padding, y: 0),
-                                size: CGSize(width: ViewConstants.Padding, height: bounds.height))
+        let centerRect = CGRect(
+            origin: CGPoint(x: scroller.bounds.midX - ViewConstants.Padding, y: 0),
+            size: CGSize(width: ViewConstants.Padding, height: bounds.height)
+        )
 
         guard let selectedIndex = contentViews.firstIndex(where: { $0.frame.intersects(centerRect) }) else {
             return
@@ -128,7 +129,6 @@ class HorizontalScrollerView: UIView {
         scroller.setContentOffset(CGPoint(x: targetOffsetX, y: 0), animated: true)
         delegate?.horizontalScrollerView(self, didSelectViewAt: selectedIndex)
     }
-
 }
 
 extension HorizontalScrollerView: UIScrollViewDelegate {

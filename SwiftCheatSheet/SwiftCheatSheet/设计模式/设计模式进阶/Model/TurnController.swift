@@ -11,7 +11,7 @@ import Foundation
 class TurnController {
     // 存储当前和过去的回合
     var currentTurn: Turn?
-    var pastTurns: [Turn] = [Turn]()
+    var pastTurns: [Turn] = []
 
     // 当前回合策略
     private let turnStrategy: TurnStrategy
@@ -39,5 +39,4 @@ class TurnController {
         let scoreIncrement = scorer.computeScoreIncrement(pastTurns.reversed())
         return scoreIncrement
     }
-
 }

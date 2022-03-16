@@ -18,7 +18,6 @@ protocol TurnStrategy {
 
 // 基本策略，描述本回合要使用的形状
 class BasicTurnStrategy: TurnStrategy {
-
     // MARK: 依赖注入，此策略不关心它使用的是哪一个（正方形/圆形）工厂或者建造者
     // 它需要的属性是由外部创建并在初始化实例时赋值注入，而不是在类内部创建的，因此称之为依赖注入。
 
@@ -36,7 +35,6 @@ class BasicTurnStrategy: TurnStrategy {
         // shapeFactory.createShapes() 方法通过抽象工厂创建并返回 Shape 模型
         return shapeViewBuilder.buildShapeViewsForShapes(shapes: shapeFactory.createShapes())
     }
-
 }
 
 // 组合模式，随机策略，描述本回合要使用哪种基本策略

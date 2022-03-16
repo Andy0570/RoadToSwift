@@ -13,7 +13,7 @@ class DRHTextFieldViewController: UIViewController {
 
     // 单击手势，点击空白区域收起键盘
     lazy var tapRecognizer: UITapGestureRecognizer = {
-        var recognizer = UITapGestureRecognizer(target:self, action: #selector(dismissKeyboard))
+        var recognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         return recognizer
     }()
 
@@ -28,8 +28,4 @@ class DRHTextFieldViewController: UIViewController {
     @objc func dismissKeyboard() {
         textField.resignFirstResponder()
     }
-
-
-
-
 }

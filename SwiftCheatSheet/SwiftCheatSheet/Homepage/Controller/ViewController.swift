@@ -8,7 +8,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     // 通过枚举的方式声明常量
     // 使用不带 case 的枚举的优点是：它不会被意外地实例化，并只作为一个纯命名空间。
     private enum Constants {
@@ -54,7 +53,7 @@ class ViewController: UIViewController {
 
         // 加载数据源，设置代理
         arrayDataSource = ArrayDataSource(sections: sections, cellReuseIdentifier: Constants.CellIdentifier)
-        arrayDataSource.cellConfigureClosure = { (tableViewCell, cell) in
+        arrayDataSource.cellConfigureClosure = { tableViewCell, cell in
             tableViewCell.configureForCell(cell: cell)
         }
         self.tableView.reloadData()
@@ -62,14 +61,12 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UITableViewDelegate {
-
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 
         if let item = self.arrayDataSource?.getCellItem(at: indexPath),
-           let controller = item.className.getViewController() {
+            let controller = item.className.getViewController() {
             navigationController?.pushViewController(controller, animated: true)
         }
     }
-
 }

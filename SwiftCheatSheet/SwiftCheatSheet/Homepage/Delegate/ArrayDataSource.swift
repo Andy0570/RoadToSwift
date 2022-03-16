@@ -8,10 +8,9 @@
 import UIKit
 
 class ArrayDataSource: NSObject, UITableViewDataSource {
-
     private var sections: [Section]!
     private var cellReuseIdentifier: String!
-    var cellConfigureClosure: ((UITableViewCell, Cell)->())?
+    var cellConfigureClosure: ((UITableViewCell, Cell) -> Void)?
 
     init(sections: [Section], cellReuseIdentifier: String) {
         self.sections = sections
@@ -28,7 +27,7 @@ class ArrayDataSource: NSObject, UITableViewDataSource {
     }
 
     // MARK: - UITableViewDataSource
-    
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
     }

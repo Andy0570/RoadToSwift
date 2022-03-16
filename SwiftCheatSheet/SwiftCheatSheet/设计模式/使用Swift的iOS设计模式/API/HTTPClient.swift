@@ -8,12 +8,13 @@
 import UIKit
 
 class HTTPClient {
-
-    @discardableResult func getRequest(_ url: String) -> AnyObject {
+    @discardableResult
+    func getRequest(_ url: String) -> AnyObject {
         return Data() as AnyObject
     }
 
-    @discardableResult func postRequest(_ url: String, body: String) -> AnyObject {
+    @discardableResult
+    func postRequest(_ url: String, body: String) -> AnyObject {
         return Data() as AnyObject
     }
 
@@ -25,5 +26,4 @@ class HTTPClient {
         }
         return image
     }
-    
 }

@@ -1,0 +1,113 @@
+excluded: # 执行 linting 时忽略的路径。优先级比 `included` 更高。
+  - ${PWD}/Carthage
+  - ${PWD}/Pods
+  - ${PWD}/DerivedData
+
+disabled_rules: # 关闭某些默认开启的规则
+  - class_delegate_protocol # 委托协议应该只能被 class 类型遵守，以便它们可以被弱引用。
+  - discarded_notification_center_observer
+  - notification_center_detachment # 对象移除通知只能在 deinit 移除 self, 函数中不能 removeObserver(self)
+  - orphaned_doc_comment # 文档注释应附加到声明中
+  - todo # TODO 和 FIXME 应该避免使用，使用 'notaTODO' 和 'notaFIXME' 代替
+  - unused_capture_list # 应删除闭包捕获列表中未使用的引用
+  - line_length # 限制每行代码的字符长度
+
+opt_in_rules: # 一些规则仅仅是可选的
+  - array_init
+  - attributes
+  - closure_end_indentation # 闭包 {} 缩进对齐
+  - closure_spacing # 闭包的 {} 中间要有空格
+  - collection_alignment # 集合中的所有元素都应垂直对齐
+  - colon # promote to error
+  - conditional_returns_on_newline # 条件的 return 语句写在新行
+  - convenience_type # 静态变量应声明为无枚举值的枚举类型，以避免实例化
+  - discouraged_optional_boolean # 不建议使用可选类型的布尔值
+  - discouraged_object_literal # 优先使用对象初始化方法，不建议使用代码块初始化
+  - empty_collection_literal # 使用 isEmpty 判断集合是否为空，而不是与一个空集合作比较
+  - empty_count # 使用 isEmpty 判断，而不是使用 count==0 判断
+  - empty_string # 使用 isEmpty 判断字符串，而不是与空字符串进行比较
+  - enum_case_associated_values_count
+  - fatal_error_message # 执行 fatalError 错误时，建议有一个提示信息；如:fatalError("Foo")
+  - first_where # 不建议在使用 filter 和 map 函数后直接使用.first
+  - force_unwrapping # 强制解包可选类型
+  # - implicitly_unwrapped_optional # 尽量避免使用隐式解包可选类型
+  - indentation_width
+  - last_where
+  - legacy_random
+  - literal_expression_end_indentation # 字典和数组的开头和结尾要有相同的缩进格式
+  - multiline_arguments # 调用函数和方法时，其参数应该在同一行上，或者每行一个
+  - multiline_function_chains
+  - multiline_literal_brackets
+  - multiline_parameters # 声明函数和方法时，其参数应该在同一行上，或者每行一个
+  - multiline_parameters_brackets # 多行参数应该在新行中包含它们的括号
+  - operator_usage_whitespace # 操作符两边应该有空格，如 let foo = 1 + 2
+  - overridden_super_call # 一些重写的方法应该调用 super (父类的) 方法
+  - pattern_matching_keywords # 在 switch-case 语句中，建议不要将 case 中的 let 和 var 等关键字放到元组内
+  - prefer_self_type_over_type_of_self
+  - redundant_nil_coalescing # 使用可能为为 nil 的可选值时，建议使用空合运算符
+  - redundant_type_annotation
+  - strict_fileprivate # extension 中不建议使用 fileprivate 修饰方法和属性
+  - toggle_bool
+  # - trailing_closure # 推荐使用尾随闭包语法
+  - unneeded_parentheses_in_closure_argument # 在定义或使用闭包时，闭包参数不建议使用括号 () 包裹
+  - unused_import
+  - vertical_whitespace_closing_braces
+  - vertical_whitespace_opening_braces
+  - yoda_condition # 禁用尤达条件语句，执行判断语句时，变量名应该放在运算符的左边
+
+
+custom_rules: # 自定义规则
+  array_constructor:
+    name: "Array/Dictionary initializer"
+    regex: '[let,var] .+ = (\[.+\]\(\))'
+    capture_group: 1
+    message: "Use explicit type annotation when initializing empty arrays and dictionaries"
+    severity: warning
+
+
+attributes:
+  always_on_same_line:
+    - "@IBSegueAction"
+    - "@IBAction"
+    - "@NSManaged"
+    - "@objc"
+
+force_cast: warning # 不建议使用强制类型转换 as!
+force_try: warning # 对于可能抛出异常 (throws) 的方法，不建议使用 try! 强解
+function_body_length: # 函数体默认超过40行警告，超过100行报错
+    warning: 60
+
+legacy_hashing: error
+
+# 变量命名规则
+identifier_name:
+  excluded: # 排除某些名字
+    - i
+    - id
+    - x
+    - y
+    - z
+    - GlobalAPIKey
+
+# 代码缩进
+indentation_width:
+  indentation_width: 4
+  include_comments: false
+
+# 调用函数和方法时，其参数应该在同一行上，或者每行一个
+multiline_arguments:
+  first_argument_location: next_line
+  only_enforce_after_first_closure_on_first_line: true
+
+# private 比 fileprivate 的私有程度更高
+private_over_fileprivate:
+  validate_extensions: true
+
+# 函数方法结束后，不建议添加空格行
+trailing_whitespace:
+  ignores_empty_lines: false
+  ignores_comments: true
+
+# 垂直方向上的空格行，限制为一行
+vertical_whitespace:
+  max_empty_lines: 2

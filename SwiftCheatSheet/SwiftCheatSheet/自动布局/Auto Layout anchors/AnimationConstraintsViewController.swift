@@ -11,7 +11,6 @@
 import UIKit
 
 class AnimationConstraintsViewController: UIViewController {
-
     // !!!: 使用弱引用处理内存管理问题
     weak var testView: UIView!
     weak var topConstraint: NSLayoutConstraint!
@@ -33,7 +32,7 @@ class AnimationConstraintsViewController: UIViewController {
             topConstraint,
             testView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
             testView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
-            bottomConstraint,
+            bottomConstraint
         ])
 
         let heightConstraint = testView.heightAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.heightAnchor, multiplier: 0.5)
@@ -47,7 +46,7 @@ class AnimationConstraintsViewController: UIViewController {
     // !!!: 在 viewDidLoad 中设置所有其他的属性，如背景颜色等
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         view.backgroundColor = UIColor.systemBackground
         self.testView.backgroundColor = UIColor.red
 

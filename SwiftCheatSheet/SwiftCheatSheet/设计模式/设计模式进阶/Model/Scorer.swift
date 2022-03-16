@@ -11,20 +11,18 @@ import Foundation
 
 // 使用 「命令」来确定一个回合的胜负，并计算游戏的分数
 protocol Scorer {
-
     // MARK: 责任链模式
-    var nextScorer: Scorer? { set get }
+    var nextScorer: Scorer? { get set }
 
     // 计算回合得分，接收参数是一个可以用「迭代器」迭代的过去所有回合的集合
     func computeScoreIncrement<S>(_ pastTurnsReversed: S) -> Int where S: Sequence, Turn == S.Iterator.Element
 }
 
 class MatchScorer: Scorer {
-
     // 通过 nextScorer 属性实现了责任链模式
-    var nextScorer: Scorer? = nil
+    var nextScorer: Scorer?
 
-    func computeScoreIncrement<S>(_ pastTurnsReversed: S) -> Int where S : Sequence, S.Element == Turn {
+    func computeScoreIncrement<S>(_ pastTurnsReversed: S) -> Int where S: Sequence, S.Element == Turn {
         var scoreIncrement: Int?
 
         // 使用迭代器迭代过去的回合
@@ -41,9 +39,9 @@ class MatchScorer: Scorer {
 }
 
 class StreakScorer: Scorer {
-    var nextScorer: Scorer? = nil
+    var nextScorer: Scorer?
 
-    func computeScoreIncrement<S>(_ pastTurnsReversed: S) -> Int where S : Sequence, S.Element == Turn {
+    func computeScoreIncrement<S>(_ pastTurnsReversed: S) -> Int where S: Sequence, S.Element == Turn {
         // 记录连续获胜的次数
         var streakLength = 0
 

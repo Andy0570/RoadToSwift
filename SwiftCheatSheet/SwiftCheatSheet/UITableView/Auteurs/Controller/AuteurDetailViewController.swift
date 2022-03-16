@@ -8,7 +8,6 @@
 import UIKit
 
 class AuteurDetailViewController: UIViewController {
-
     var selectedAuteur: Auteur?
     // 弱引用的隐式解包可选类型变量
     weak var tableView: UITableView!

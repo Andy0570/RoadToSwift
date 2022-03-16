@@ -8,7 +8,6 @@
 import IGListKit
 
 final class UserCell: UICollectionViewCell, ListBindable {
-
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
 
@@ -29,5 +28,4 @@ final class UserCell: UICollectionViewCell, ListBindable {
         usernameLabel.text = viewModel.username
         dateLabel.text = viewModel.timestamp
     }
-
 }

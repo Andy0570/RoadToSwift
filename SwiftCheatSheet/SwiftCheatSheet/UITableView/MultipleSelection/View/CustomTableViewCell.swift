@@ -40,5 +40,4 @@ class CustomTableViewCell: UITableViewCell {
         // update UI
         accessoryType = selected ? .checkmark : .none
     }
-    
 }

@@ -8,7 +8,6 @@
 import UIKit
 
 final class MyCollectionViewCell: UICollectionViewCell {
-
     let label = UILabel()
 
     override init(frame: CGRect) {
@@ -39,9 +38,6 @@ final class MyCollectionViewCell: UICollectionViewCell {
 
 extension UIColor {
     static var random: UIColor {
-        .init(red: .random(in: 0...1),
-              green: .random(in: 0...1),
-              blue: .random(in: 0...1),
-              alpha: 1)
+        .init(red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1), alpha: 1)
     }
 }

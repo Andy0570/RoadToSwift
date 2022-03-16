@@ -9,7 +9,6 @@ import UIKit
 import Kingfisher
 
 class PhotoListTableViewCell: UITableViewCell {
-
     @IBOutlet weak var mainImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
@@ -47,19 +46,18 @@ class PhotoListTableViewCell: UITableViewCell {
                 // 缩小图片以适应 imageView 尺寸
                 let processor = DownsamplingImageProcessor(size: mainImageView.bounds.size)
                 mainImageView.kf.indicatorType = .activity // 加载活动指示器
-                mainImageView.kf.setImage(with: URL(string: imageUrl),
-                                          placeholder: nil,
-                                          options: [
-                                            .processor(processor),
-                                            .scaleFactor(UIScreen.main.scale),
-                                            .transition(.fade(1)), // fade in 淡入加载效果
-                                            .cacheOriginalImage // 缓存原始图像
-                                          ],
-                                          completionHandler: nil)
-
+                mainImageView.kf.setImage(
+                    with: URL(string: imageUrl),
+                    placeholder: nil,
+                    options: [
+                        .processor(processor),
+                        .scaleFactor(UIScreen.main.scale),
+                        .transition(.fade(1)), // fade in 淡入加载效果
+                        .cacheOriginalImage // 缓存原始图像
+                    ],
+                    completionHandler: nil
+                )
             }
-
         }
     }
-
 }

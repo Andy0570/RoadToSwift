@@ -9,9 +9,8 @@ import UIKit
 
 // 持久化数据
 final class PersistencyManager {
-
     // 私有属性，用于保存专辑数据的可变数组
-    private var albums = [Album]()
+    private var albums: [Album] = []
 
     // 返回缓存目录的 URL
     private var cache: URL {
@@ -90,5 +89,4 @@ final class PersistencyManager {
         }
         return UIImage(data: data)
     }
-
 }

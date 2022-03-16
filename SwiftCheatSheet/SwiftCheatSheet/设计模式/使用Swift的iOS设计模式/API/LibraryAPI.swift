@@ -49,11 +49,11 @@ final class LibraryAPI {
 
     @objc func downloadImage(with notification: Notification) {
         guard let userInfo = notification.userInfo,
-              let imageView = userInfo["imageView"] as? UIImageView,
-              let coverUrl = userInfo["coverUrl"] as? String,
-              let filename = URL(string: coverUrl)?.lastPathComponent else {
-                  return
-              }
+        let imageView = userInfo["imageView"] as? UIImageView,
+        let coverUrl = userInfo["coverUrl"] as? String,
+        let filename = URL(string: coverUrl)?.lastPathComponent else {
+            return
+        }
 
         // 尝试从缓存中获取图片
         if let savedImage = persistencyManager.getImage(with: filename) {
@@ -71,7 +71,5 @@ final class LibraryAPI {
                 self.persistencyManager.saveImage(downloadedImage, filename: filename)
             }
         }
-
     }
-
 }

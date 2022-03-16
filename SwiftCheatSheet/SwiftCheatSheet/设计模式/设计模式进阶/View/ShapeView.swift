@@ -14,31 +14,31 @@ class ShapeView: UIView {
     let halfLineWidth: CGFloat = 3.0
 
     // 是否显示填充色
-    var showFill: Bool = true {
+    var showFill = true {
         didSet {
             setNeedsDisplay()
         }
     }
-    var fillColor: UIColor = UIColor.orange {
+    var fillColor = UIColor.orange {
         didSet {
             setNeedsDisplay()
         }
     }
 
     // 是否显示边框
-    var showOutline: Bool = true {
+    var showOutline = true {
         didSet {
             setNeedsDisplay()
         }
     }
-    var outlineColor: UIColor = UIColor.gray {
+    var outlineColor = UIColor.gray {
         didSet {
             setNeedsDisplay()
         }
     }
 
     // 处理点击事件的闭包
-    var tapHandler: ((ShapeView)->())?
+    var tapHandler: ((ShapeView) -> Void)?
 
     override init(frame: CGRect) {
         super.init(frame: frame)

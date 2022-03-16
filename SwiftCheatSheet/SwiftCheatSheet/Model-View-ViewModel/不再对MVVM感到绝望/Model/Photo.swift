@@ -16,8 +16,10 @@ struct Photo: Codable {
     let id: Int
     let name: String
     let description: String?
+    // swiftlint:disable identifier_name
     let created_at: Date
     let image_url: String
     let for_sale: Bool
     let camera: String?
+    // swiftlint:enable identifier_name
 }

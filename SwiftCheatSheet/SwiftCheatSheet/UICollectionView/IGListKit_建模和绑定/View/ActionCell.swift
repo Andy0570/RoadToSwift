@@ -12,11 +12,10 @@ protocol ActionCellDelegate: AnyObject {
 }
 
 final class ActionCell: UICollectionViewCell, ListBindable {
-
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var likesLabel: UILabel!
 
-    weak var delegate: ActionCellDelegate? = nil
+    weak var delegate: ActionCellDelegate?
 
     static var identifier: String {
         return String(describing: self)
@@ -46,5 +45,4 @@ final class ActionCell: UICollectionViewCell, ListBindable {
         }
         likesLabel.text = "\(viewModel.likes)"
     }
-
 }

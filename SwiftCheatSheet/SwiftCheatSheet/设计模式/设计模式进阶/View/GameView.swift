@@ -8,7 +8,6 @@
 import UIKit
 
 class GameView: UIView {
-
     var score: Int = 0 {
         didSet {
             scoreLabel.attributedText = attributedTextForScore(aScore: score)
@@ -21,7 +20,7 @@ class GameView: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
 
-        backgroundColor = UIColor(red: 0x7c/255.0, green: 0xbb/255.0, blue: 0xf2/255.0, alpha: 1)
+        backgroundColor = UIColor(red: 0x7c / 255.0, green: 0xbb / 255.0, blue: 0xf2 / 255.0, alpha: 1)
 
         scoreLabel = UILabel(frame: .zero)
         scoreLabel.attributedText = attributedTextForScore(aScore: 0)
@@ -61,9 +60,7 @@ class GameView: UIView {
     }
 
     private final func attributedTextForScore(aScore: Int) -> NSAttributedString? {
-        return NSAttributedString(string: "Score: \(aScore)",
-            attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 32),
-                         NSAttributedString.Key.foregroundColor: aScore < 0 ? UIColor.red : UIColor.black])
+        return NSAttributedString(string: "Score: \(aScore)", attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 32), NSAttributedString.Key.foregroundColor: aScore < 0 ? UIColor.red : UIColor.black])
     }
 
     private var scoreLabel: UILabel!

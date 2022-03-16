@@ -11,7 +11,7 @@ import Foundation
 struct Icon: Hashable {
     var name: String = ""
     var price: Double = 0.0
-    var isFeatured: Bool = false
+    var isFeatured = false
 
     init(name: String, price: Double, isFeatured: Bool) {
         self.name = name

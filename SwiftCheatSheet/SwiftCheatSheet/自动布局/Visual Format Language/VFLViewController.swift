@@ -12,7 +12,6 @@
 import UIKit
 
 class VFLViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.systemBackground
@@ -57,11 +56,13 @@ class VFLViewController: UIViewController {
 
         // MARK: Visual Format Language
 
-        let viewsDictionary = ["label1": label1,
-                               "label2": label2,
-                               "label3": label3,
-                               "label4": label4,
-                               "label5": label5]
+        let viewsDictionary = [
+            "label1": label1,
+            "label2": label2,
+            "label3": label3,
+            "label4": label4,
+            "label5": label5
+        ]
 
         /**
          view.addConstraints(): 为我们的视图控制器的视图添加一个约束数组。使用这个数组而不是单个约束，是因为VFL可以一次生成多个约束。
@@ -85,8 +86,5 @@ class VFLViewController: UIViewController {
         let metrics = ["labelHeight": 88]
         // 优化：适配iPhone横屏模式，降低 label 的高度优先级，同时设置所有 label 的高度相等
         view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-40-[label1(labelHeight@999)]-[label2(label1)]-[label3(label1)]-[label4(label1)]-[label5(label1)]-(>=10)-|", options: [], metrics: metrics, views: viewsDictionary))
-
-
-
     }
 }

@@ -8,7 +8,6 @@
 import IGListKit
 
 final class CommentCell: UICollectionViewCell, ListBindable {
-
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var commentLabel: UILabel!
 
@@ -29,5 +28,4 @@ final class CommentCell: UICollectionViewCell, ListBindable {
         usernameLabel.text = viewModel.username
         commentLabel.text = viewModel.text
     }
-
 }

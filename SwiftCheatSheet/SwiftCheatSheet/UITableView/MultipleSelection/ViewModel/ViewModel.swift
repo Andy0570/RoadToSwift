@@ -23,7 +23,7 @@ class ViewModelItem {
 }
 
 class ViewModel: NSObject {
-    var items = [ViewModelItem]()
+    var items: [ViewModelItem] = []
 
     // MARK: 缓存选中的 Model
     var selectedItems: [ViewModelItem] {
@@ -37,15 +37,13 @@ class ViewModel: NSObject {
         super.init()
 
         // [Model] -> [ViewModelItem]
-        items = dataArray.map{ ViewModelItem(item: $0) }
+        items = dataArray.map { ViewModelItem(item: $0) }
     }
-    
 }
 
 // MARK: - UITableViewDataSource
 
 extension ViewModel: UITableViewDataSource {
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
@@ -70,13 +68,11 @@ extension ViewModel: UITableViewDataSource {
 
         return cell
     }
-
 }
 
 // MARK: - UITableViewDelegate
 
 extension ViewModel: UITableViewDelegate {
-
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // update viewModel item
         items[indexPath.row].isSelected = true
@@ -96,5 +92,4 @@ extension ViewModel: UITableViewDelegate {
         }
         return indexPath
     }
-
 }

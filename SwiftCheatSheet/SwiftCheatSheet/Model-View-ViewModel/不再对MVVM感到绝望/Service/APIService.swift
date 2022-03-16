@@ -14,12 +14,12 @@ enum APIError: String, Error {
 }
 
 protocol APIServiceProtocol {
-    func fetchPopularPhoto(complete: @escaping (_ success: Bool, _ photos: [Photo], _ error: APIError? ) -> ())
+    func fetchPopularPhoto(complete: @escaping (_ success: Bool, _ photos: [Photo], _ error: APIError? ) -> Void)
 }
 
 class APIService: APIServiceProtocol {
     // 模拟耗时操作
-    func fetchPopularPhoto(complete: @escaping (Bool, [Photo], APIError?) -> ()) {
+    func fetchPopularPhoto(complete: @escaping (Bool, [Photo], APIError?) -> Void) {
         DispatchQueue.global().async {
             sleep(3)
             // 加载Bundle包中的 content.json 文件，并使用 Codable 解析为模型

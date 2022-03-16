@@ -13,7 +13,6 @@ protocol GrowingCellProtocol: AnyObject {
 }
 
 class GrowingCell: UITableViewCell {
-
     @IBOutlet weak var textView: UITextView!
     weak var cellDelegate: GrowingCellProtocol?
 
@@ -31,7 +30,6 @@ class GrowingCell: UITableViewCell {
         textView.delegate = self
         selectionStyle = .none
     }
-
 }
 
 // MARK: - UITextViewDelegate

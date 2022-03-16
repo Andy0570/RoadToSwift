@@ -14,7 +14,6 @@
 import UIKit
 
 class CollapsExpandViewController: UIViewController {
-
     private enum Constants {
         static let CellIdentifier = "Cell"
     }
@@ -53,7 +52,6 @@ class CollapsExpandViewController: UIViewController {
 // MARK: - UITableViewDataSource
 
 extension CollapsExpandViewController: UITableViewDataSource {
-
     func numberOfSections(in tableView: UITableView) -> Int {
         return arrayHeader.count
     }
@@ -67,11 +65,9 @@ extension CollapsExpandViewController: UITableViewDataSource {
         cell.textLabel?.text = "section: \(indexPath.section) row: \(indexPath.row)"
         return cell
     }
-
 }
 
 extension CollapsExpandViewController: UITableViewDelegate {
-
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
     }
@@ -92,5 +88,4 @@ extension CollapsExpandViewController: UITableViewDelegate {
         self.arrayHeader[sender.tag] = (self.arrayHeader[sender.tag] == 0) ? 1 : 0
         self.tableView.reloadSections([sender.tag], with: .fade)
     }
-
 }

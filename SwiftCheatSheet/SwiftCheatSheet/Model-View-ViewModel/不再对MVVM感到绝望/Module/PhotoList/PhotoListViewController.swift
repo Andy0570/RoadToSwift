@@ -15,7 +15,6 @@
 import UIKit
 
 class PhotoListViewController: UIViewController {
-
     // 使用 lazy 修饰该变量，只有实例初始化完成之后，才能检索该变量
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: CGRect.zero, style: .plain)
@@ -45,14 +44,14 @@ class PhotoListViewController: UIViewController {
             tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
 
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(activityIndicator)
         NSLayoutConstraint.activate([
             activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
     }
 
@@ -77,7 +76,6 @@ class PhotoListViewController: UIViewController {
     }
 
     private func initViewModel() {
-
         // !!!: 使用闭包实现数据绑定
         viewModel.showAlertClosure = { [weak self] () in
             DispatchQueue.main.async {
@@ -121,7 +119,6 @@ class PhotoListViewController: UIViewController {
 }
 
 extension PhotoListViewController: UITableViewDataSource {
-
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -129,7 +126,7 @@ extension PhotoListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfCells
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: PhotoListTableViewCell.identifier, for: indexPath) as? PhotoListTableViewCell else {
             fatalError("Cell not exists in storyboard")
@@ -140,11 +137,9 @@ extension PhotoListViewController: UITableViewDataSource {
 
         return cell
     }
-
 }
 
 extension PhotoListViewController: UITableViewDelegate {
-
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150.0
     }
@@ -157,5 +152,4 @@ extension PhotoListViewController: UITableViewDelegate {
             navigationController?.pushViewController(photoDetailVC, animated: true)
         }
     }
-
 }

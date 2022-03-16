@@ -7,9 +7,9 @@
 
 import UIKit
 
-@IBDesignable class DRHTextFieldWithCharacterCount: UITextField {
-
-    fileprivate let countLabel = UILabel()
+@IBDesignable
+class DRHTextFieldWithCharacterCount: UITextField {
+    let countLabel = UILabel()
 
     @IBInspectable var lengthLimit: Int = 0
     @IBInspectable var countLabelTextColor: UIColor = UIColor.black
@@ -36,7 +36,7 @@ import UIKit
         }
     }
 
-    fileprivate func setCountLabel() {
+    func setCountLabel() {
         rightViewMode = .always
         countLabel.font = font?.withSize(10)
         countLabel.textColor = countLabelTextColor
@@ -46,7 +46,7 @@ import UIKit
         countLabel.text = initialCounterValue(text: text)
     }
 
-    fileprivate func initialCounterValue(text: String?) -> String {
+    func initialCounterValue(text: String?) -> String {
         if let text = text {
             return "\(text.count)/\(lengthLimit)"
         } else {

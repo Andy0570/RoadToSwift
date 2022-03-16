@@ -16,18 +16,17 @@ struct PhotoListCellViewModel {
 }
 
 class PhotoListViewModel {
-
     let apiService: APIServiceProtocol
 
-    private var photos: [Photo] = [Photo]()
+    private var photos: [Photo] = []
 
-    private var cellViewModels: [PhotoListCellViewModel] = [PhotoListCellViewModel]() {
+    private var cellViewModels: [PhotoListCellViewModel] = [] {
         didSet {
             self.reloadTableViewClosure?()
         }
     }
 
-    var isLoading: Bool = false {
+    var isLoading = false {
         didSet {
             self.updateLoadingStatus?()
         }
@@ -43,12 +42,12 @@ class PhotoListViewModel {
         return cellViewModels.count
     }
 
-    var isAllowSegue: Bool = false
+    var isAllowSegue = false
     var selectedPhoto: Photo?
 
-    var reloadTableViewClosure: (()->())?
-    var showAlertClosure: (()->())?
-    var updateLoadingStatus: (()->())?
+    var reloadTableViewClosure: (() -> Void)?
+    var showAlertClosure: (() -> Void)?
+    var updateLoadingStatus: (() -> Void)?
 
     // !!!: 依赖注入，通过 APIService 获取数据
     init(apiService: APIServiceProtocol = APIService()) {
@@ -61,7 +60,7 @@ class PhotoListViewModel {
 
     func initFetch() {
         self.isLoading = true
-        apiService.fetchPopularPhoto { [weak self] (success, photos, error) in
+        apiService.fetchPopularPhoto { [weak self] success, photos, error in
             self?.isLoading = false
             if let error = error {
                 self?.alertMessage = error.rawValue
@@ -74,7 +73,7 @@ class PhotoListViewModel {
     // [Photo] -> [PhotoListCellViewModel]
     private func processFetchedPhoto(photos: [Photo]) {
         self.photos = photos // Catch
-        var vms = [PhotoListCellViewModel]()
+        var vms: [PhotoListCellViewModel] = []
         for photo in photos {
             vms.append(createCellViewModel(photo: photo))
         }
@@ -83,9 +82,8 @@ class PhotoListViewModel {
 
     // Photo -> PhotoListCellViewModel
     func createCellViewModel(photo: Photo) -> PhotoListCellViewModel {
-
         // 包装描述信息 "[item1] - [item2]"
-        var descTextContainer: [String] = [String]()
+        var descTextContainer: [String] = []
         if let camera = photo.camera {
             descTextContainer.append(camera)
         }
@@ -97,12 +95,8 @@ class PhotoListViewModel {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
 
-        return PhotoListCellViewModel(titleText: photo.name,
-                                      descText: desc,
-                                      imageUrl: photo.image_url,
-                                      dateText: dateFormatter.string(from: photo.created_at))
+        return PhotoListCellViewModel(titleText: photo.name, descText: desc, imageUrl: photo.image_url, dateText: dateFormatter.string(from: photo.created_at))
     }
-
 }
 
 extension PhotoListViewModel {

@@ -11,13 +11,12 @@
 import UIKit
 
 class FlagViewController: UIViewController {
-
     // @IBOutlet 用于将代码连接到 storyboard 布局
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var button3: UIButton!
 
-    var countries = [String]()
+    var countries: [String] = []
     var correntAnswer = 0
     var score = 0
 
@@ -66,8 +65,8 @@ class FlagViewController: UIViewController {
         }
 
         // 3.显示玩家当前得分
-        let ac = UIAlertController(title: title, message: "Your score is \(score)", preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion(action:)))
-        present(ac, animated: true, completion: nil)
+        let alertController = UIAlertController(title: title, message: "Your score is \(score)", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion(action:)))
+        present(alertController, animated: true, completion: nil)
     }
 }

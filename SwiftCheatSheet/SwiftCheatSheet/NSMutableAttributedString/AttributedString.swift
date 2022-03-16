@@ -8,7 +8,6 @@
 import UIKit
 
 extension NSMutableAttributedString {
-
     // 将 String 更改为 NSMutableAttributedString 类型
     class func getAttributedString(fromString string: String) -> NSMutableAttributedString {
         return NSMutableAttributedString(string: string)
@@ -22,7 +21,7 @@ extension NSMutableAttributedString {
     }
 
     // 将属性应用于字符串范围
-    func apply(attribute: [NSAttributedString.Key : Any], onRange range: NSRange) {
+    func apply(attribute: [NSAttributedString.Key: Any], onRange range: NSRange) {
         if range.location != NSNotFound {
             self.setAttributes(attribute, range: range)
         }
@@ -43,7 +42,7 @@ extension NSMutableAttributedString {
 
     /************************ Font Attribute ************************/
     // Apply font on substring
-    func apply(font: UIFont, subString: String)  {
+    func apply(font: UIFont, subString: String) {
         if let range = self.string.range(of: subString) {
             self.apply(font: font, onRange: NSRange(range, in: self.string))
         }
@@ -77,22 +76,20 @@ extension NSMutableAttributedString {
 
     // Underline string on given range
     func underLine(onRange range: NSRange) {
-        self.addAttributes([NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue],
-                           range: range)
+        self.addAttributes([NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue], range: range)
     }
 
     /************************ Strikethrough Attribute ************************/
     // Apply Strikethrough on substring
-    func strikeThrough(thickness: Int, subString: String)  {
+    func strikeThrough(thickness: Int, subString: String) {
         if let range = self.string.range(of: subString) {
             self.strikeThrough(thickness: thickness, onRange: NSRange(range, in: self.string))
         }
     }
 
     // Apply Strikethrough on given range
-    func strikeThrough(thickness: Int, onRange range: NSRange)  {
-        self.addAttributes([NSAttributedString.Key.strikethroughStyle : NSUnderlineStyle.thick.rawValue],
-                           range: range)
+    func strikeThrough(thickness: Int, onRange range: NSRange) {
+        self.addAttributes([NSAttributedString.Key.strikethroughStyle: NSUnderlineStyle.thick.rawValue], range: range)
     }
 
     /************************ Stroke Attribute ************************/
@@ -105,32 +102,43 @@ extension NSMutableAttributedString {
 
     // Apply stroke on give range
     func applyStroke(color: UIColor, thickness: Int, onRange range: NSRange) {
-        self.addAttributes([NSAttributedString.Key.strokeColor : color], range: range)
-        self.addAttributes([NSAttributedString.Key.strokeWidth : thickness], range: range)
+        self.addAttributes([NSAttributedString.Key.strokeColor: color], range: range)
+        self.addAttributes([NSAttributedString.Key.strokeWidth: thickness], range: range)
     }
 
     /************************ Shadow Color Attribute ************************/
     // Apply shadow color on substring
-    func applyShadow(shadowColor: UIColor, shadowWidth: CGFloat,
-                     shadowHeigt: CGFloat, shadowRadius: CGFloat,
-                     subString: String) {
+    func applyShadow(
+        shadowColor: UIColor,
+        shadowWidth: CGFloat,
+        shadowHeigt: CGFloat,
+        shadowRadius: CGFloat,
+        subString: String
+    ) {
         if let range = self.string.range(of: subString) {
-            self.applyShadow(shadowColor: shadowColor, shadowWidth: shadowWidth,
-                             shadowHeigt: shadowHeigt, shadowRadius: shadowRadius,
-                             onRange: NSRange(range, in: self.string))
-
+            self.applyShadow(
+                shadowColor: shadowColor,
+                shadowWidth: shadowWidth,
+                shadowHeigt: shadowHeigt,
+                shadowRadius: shadowRadius,
+                onRange: NSRange(range, in: self.string)
+            )
         }
     }
 
     // Apply shadow color on given range
-    func applyShadow(shadowColor: UIColor, shadowWidth: CGFloat,
-                     shadowHeigt: CGFloat, shadowRadius: CGFloat,
-                     onRange range: NSRange) {
+    func applyShadow(
+        shadowColor: UIColor,
+        shadowWidth: CGFloat,
+        shadowHeigt: CGFloat,
+        shadowRadius: CGFloat,
+        onRange range: NSRange
+    ) {
         let shadow = NSShadow()
         shadow.shadowOffset = CGSize(width: shadowWidth, height: shadowHeigt)
         shadow.shadowColor = shadowColor
         shadow.shadowBlurRadius = shadowRadius
-        self.addAttributes([NSAttributedString.Key.shadow : shadow], range: range)
+        self.addAttributes([NSAttributedString.Key.shadow: shadow], range: range)
     }
 
     /************************ Paragraph Style  Attribute ************************/
@@ -145,7 +153,6 @@ extension NSMutableAttributedString {
     func alignment(alignment: NSTextAlignment, onRange range: NSRange) {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = alignment
-        self.addAttributes([NSAttributedString.Key.paragraphStyle : paragraphStyle], range: range)
+        self.addAttributes([NSAttributedString.Key.paragraphStyle: paragraphStyle], range: range)
     }
-
 }

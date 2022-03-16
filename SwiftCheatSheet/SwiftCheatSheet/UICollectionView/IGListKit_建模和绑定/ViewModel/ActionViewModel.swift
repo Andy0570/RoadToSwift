@@ -8,7 +8,6 @@
 import IGListKit
 
 final class ActionViewModel: ListDiffable {
-
     let likes: Int
 
     init(likes: Int) {
@@ -27,5 +26,4 @@ final class ActionViewModel: ListDiffable {
         }
         return likes == object.likes
     }
-
 }

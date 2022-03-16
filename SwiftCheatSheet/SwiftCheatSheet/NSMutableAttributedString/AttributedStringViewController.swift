@@ -14,11 +14,10 @@
 import UIKit
 
 class AttributedStringViewController: UIViewController {
-
-    let appRedColor = UIColor(red: 230.0/255.0, green: 51.0/255.0, blue: 49.0/255.0, alpha: 1.0)
-    let appBlueColor = UIColor(red: 62.0/255.0, green: 62.0/255.0, blue: 145.0/255.0, alpha: 1.0)
-    let appYellowColor = UIColor(red: 248.0/255.0, green: 175.0/255.0, blue: 0.0, alpha: 1.0)
-    let darkOrangeColor = UIColor(red: 248.0/255.0, green: 150.0/255.0, blue: 75.0/255.0, alpha: 1.0)
+    let appRedColor = UIColor(red: 230.0 / 255.0, green: 51.0 / 255.0, blue: 49.0 / 255.0, alpha: 1.0)
+    let appBlueColor = UIColor(red: 62.0 / 255.0, green: 62.0 / 255.0, blue: 145.0 / 255.0, alpha: 1.0)
+    let appYellowColor = UIColor(red: 248.0 / 255.0, green: 175.0 / 255.0, blue: 0.0, alpha: 1.0)
+    let darkOrangeColor = UIColor(red: 248.0 / 255.0, green: 150.0 / 255.0, blue: 75.0 / 255.0, alpha: 1.0)
 
     @IBOutlet weak var firstLabel: UILabel!
     @IBOutlet weak var secondLabel: UILabel!
@@ -41,7 +40,7 @@ class AttributedStringViewController: UIViewController {
         let text = "This is a colorful attributed string"
         let attributedText = NSMutableAttributedString.getAttributedString(fromString: text)
         attributedText.apply(color: appRedColor, subString: "This")
-        attributedText.apply(color: appYellowColor, onRange: NSMakeRange(5, 4)) // //Range of substring "is a"
+        attributedText.apply(color: appYellowColor, onRange: NSRange(location: 5, length: 4)) // //Range of substring "is a"
         attributedText.apply(color: .purple, subString: "colorful")
         attributedText.apply(color: appBlueColor, subString: "attributed")
         attributedText.apply(color: darkOrangeColor, subString: "string")
@@ -53,7 +52,7 @@ class AttributedStringViewController: UIViewController {
         let text = "This string is having multiple font"
         let attributedText = NSMutableAttributedString.getAttributedString(fromString: text)
         attributedText.apply(font: UIFont.boldSystemFont(ofSize: 24), subString: "This")
-        attributedText.apply(font: UIFont.boldSystemFont(ofSize: 24), onRange: NSMakeRange(5, 6))
+        attributedText.apply(font: UIFont.boldSystemFont(ofSize: 24), onRange: NSRange(location: 5, length: 6))
         attributedText.apply(font: UIFont.italicSystemFont(ofSize: 20), subString: "string")
         attributedText.apply(font: UIFont(name: "HelveticaNeue-BoldItalic", size: 20)!, subString: " is")
         attributedText.apply(font: UIFont(name: "HelveticaNeue-ThinItalic", size: 20)!, subString: "having")
@@ -91,5 +90,4 @@ class AttributedStringViewController: UIViewController {
         attributedText.applyShadow(shadowColor: .black, shadowWidth: 4.0, shadowHeigt: 4.0, shadowRadius: 4.0, subString: "a shadow")
         self.fifthLabel.attributedText = attributedText
     }
-
 }

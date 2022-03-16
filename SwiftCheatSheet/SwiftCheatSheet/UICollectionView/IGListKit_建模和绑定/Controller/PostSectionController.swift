@@ -9,8 +9,7 @@ import IGListKit
 
 //  这宣布你的 SectionController 接收一个 Post 模型。这样你就不需要对你的模型做任何特殊的铸造。
 final class PostSectionController: ListBindingSectionController<Post>, ListBindingSectionControllerDataSource, ActionCellDelegate {
-
-    var localLikes: Int? = nil
+    var localLikes: Int?
 
     override init() {
         super.init()
@@ -22,7 +21,7 @@ final class PostSectionController: ListBindingSectionController<Post>, ListBindi
     // 通过给定的 Post 模型创建并返回 ViewModel 数组
     func sectionController(_ sectionController: ListBindingSectionController<ListDiffable>, viewModelsFor object: Any) -> [ListDiffable] {
         guard let objcet = object as? Post else {
-            fatalError()
+            fatalError("需要传递 Post 类型")
         }
 
         let results: [ListDiffable] = [
@@ -36,7 +35,7 @@ final class PostSectionController: ListBindingSectionController<Post>, ListBindi
     // 返回每个 ViewModel 的 size 尺寸
     func sectionController(_ sectionController: ListBindingSectionController<ListDiffable>, sizeForViewModel viewModel: Any, at index: Int) -> CGSize {
         guard let width = collectionContext?.containerSize.width else {
-            fatalError()
+            fatalError("error")
         }
 
         let height: CGFloat
@@ -51,7 +50,6 @@ final class PostSectionController: ListBindingSectionController<Post>, ListBindi
 
     // 为每个 ViewModel 返回一个 Cell 视图实例
     func sectionController(_ sectionController: ListBindingSectionController<ListDiffable>, cellForViewModel viewModel: Any, at index: Int) -> UICollectionViewCell & ListBindable {
-
         let identifier: String
         switch viewModel {
         case is ImageViewModel: identifier = ImageCell.identifier
@@ -61,7 +59,7 @@ final class PostSectionController: ListBindingSectionController<Post>, ListBindi
         }
 
         guard let cell = collectionContext?.dequeueReusableCellFromStoryboard(withIdentifier: identifier, for: self, at: index) as? UICollectionViewCell & ListBindable else {
-            fatalError()
+            fatalError("cell 类型不不配")
         }
 
         if let cell = cell as? ActionCell {
@@ -77,5 +75,4 @@ final class PostSectionController: ListBindingSectionController<Post>, ListBindi
         localLikes = (localLikes ?? object?.likes ?? 0) + 1
         update(animated: true)
     }
-
 }

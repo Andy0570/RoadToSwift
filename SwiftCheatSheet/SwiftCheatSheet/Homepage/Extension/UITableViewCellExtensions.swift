@@ -9,14 +9,13 @@ import Foundation
 
 import UIKit
 
-protocol TableViewCellConfigureDelegate: Any {
+protocol TableViewCellConfigureDelegate {
     var image: String { get }
     var title: String { get }
     var description: String { get }
 }
 
 extension UITableViewCell {
-
     func configureForCell(cell: TableViewCellConfigureDelegate) {
         self.imageView?.image = UIImage(named: cell.image)
         self.textLabel?.text = cell.title

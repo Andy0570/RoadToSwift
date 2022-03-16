@@ -8,7 +8,6 @@
 import UIKit
 
 class MultipleSelectionViewController: UIViewController {
-
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var nextButton: UIButton!
 
@@ -34,10 +33,9 @@ class MultipleSelectionViewController: UIViewController {
         self.nextButton.isEnabled = false
     }
 
-    // MARK - Actions
+    // MARK: Actions
 
     @IBAction func nextButtonTapped(_ sender: Any) {
         print(viewModel.selectedItems.map { $0.title })
     }
-
 }

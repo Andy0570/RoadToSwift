@@ -9,7 +9,6 @@ import UIKit
 import Kingfisher
 
 class PhotoDetailViewController: UIViewController {
-
     @IBOutlet weak var imageView: UIImageView!
     var imageUrl: String?
 
@@ -20,5 +19,4 @@ class PhotoDetailViewController: UIViewController {
             imageView.kf.setImage(with: URL(string: imageUrl))
         }
     }
-
 }

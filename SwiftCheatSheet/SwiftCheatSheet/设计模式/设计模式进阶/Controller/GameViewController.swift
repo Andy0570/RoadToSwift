@@ -14,7 +14,6 @@
 import UIKit
 
 class GameViewController: UIViewController {
-
     private var gameView: GameView { return view as! GameView }
     private var turnController: TurnController!
 
@@ -62,8 +61,6 @@ class GameViewController: UIViewController {
     }
 
     private func beginNextTurn() {
-
-
         let shapeViews = turnController.beginNextTurn()
 
         shapeViews.0.tapHandler = { tappedView in
@@ -74,7 +71,4 @@ class GameViewController: UIViewController {
 
         gameView.addShapeViews(newShapeViews: shapeViews)
     }
-
-
-
 }

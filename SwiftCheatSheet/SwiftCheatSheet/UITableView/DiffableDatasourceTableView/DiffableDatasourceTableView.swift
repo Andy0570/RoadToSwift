@@ -18,11 +18,13 @@ struct VideoGame: Hashable {
 }
 
 extension VideoGame {
-    static var data = [VideoGame(name: "Mass Effect"),
-                       VideoGame(name: "Mass Effect 2"),
-                       VideoGame(name: "Mass Effect 3"),
-                       VideoGame(name: "ME: Andromeda"),
-                       VideoGame(name: "ME: Remaster")]
+    static var data = [
+        VideoGame(name: "Mass Effect"),
+        VideoGame(name: "Mass Effect 2"),
+        VideoGame(name: "Mass Effect 3"),
+        VideoGame(name: "ME: Andromeda"),
+        VideoGame(name: "ME: Remaster")
+    ]
 }
 
 /**
@@ -40,14 +42,13 @@ extension VideoGame {
 typealias TableDataSource = UITableViewDiffableDataSource<Int, VideoGame>
 
 class DiffableDatasourceTableView: UIViewController {
-
     let videogames: [VideoGame] = VideoGame.data
     let tableView = UITableView(frame: .zero, style: .insetGrouped)
 
     lazy var dataSource: TableDataSource = {
-        let dataSource = TableDataSource(tableView: tableView, cellProvider: { (tableView, IndexPath, model) -> UITableViewCell? in
+        let dataSource = TableDataSource(tableView: tableView, cellProvider: { tableView, indexPath, model -> UITableViewCell? in
             // 在 cellProvider 闭包中处理本质上是 cellForRow: 的内容
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: IndexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
             cell.textLabel?.text = model.name
             return cell
         })
@@ -71,5 +72,4 @@ class DiffableDatasourceTableView: UIViewController {
         snapshot.appendItems(videogames, toSection: 0)
         dataSource.apply(snapshot)
     }
-    
 }

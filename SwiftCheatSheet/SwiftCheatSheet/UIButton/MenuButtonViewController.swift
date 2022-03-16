@@ -8,7 +8,6 @@
 import UIKit
 
 class MenuButtonViewController: UIViewController {
-
     weak var button: MenuButton!
 
     override func loadView() {
@@ -26,5 +25,4 @@ class MenuButtonViewController: UIViewController {
 
         view.backgroundColor = UIColor.systemBackground
     }
-
 }
