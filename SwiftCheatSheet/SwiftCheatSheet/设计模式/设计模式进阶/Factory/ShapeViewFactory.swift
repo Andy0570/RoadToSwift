@@ -13,6 +13,7 @@ protocol ShapeViewFactory {
     // 创建形状的边界尺寸
     var size: CGSize { set get }
     // 工厂方法，通过 Shape 模型生成 ShapeView 视图
+    // 💡 工厂方法要以 make 开头
     func makeShapeViewsForShapes(shapes: (Shape, Shape)) -> (ShapeView, ShapeView)
 }
 

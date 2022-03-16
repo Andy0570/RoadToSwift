@@ -11,8 +11,9 @@ target 'SwiftCheatSheet' do
 
   # Pods for SwiftCheatSheet
   pod 'Kingfisher', '~> 7.0'
-  pod 'SwifterSwift'
   pod 'IGListKit'
+  pod 'SwifterSwift' # Extension扩展
   pod 'SwiftyBeaver' # 日志记录
-
+  pod 'SwiftLint'    # 代码格式化工具
+  
 end
