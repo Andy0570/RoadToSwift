@@ -41,7 +41,7 @@ opt_in_rules: # 一些规则仅仅是可选的
   - multiline_literal_brackets
   - multiline_parameters # 声明函数和方法时，其参数应该在同一行上，或者每行一个
   - multiline_parameters_brackets # 多行参数应该在新行中包含它们的括号
-  - operator_usage_whitespace # 操作符两边应该有空格，如 let foo = 1 + 2
+  # - operator_usage_whitespace # 操作符两边应该有空格，如 let foo = 1 + 2
   - overridden_super_call # 一些重写的方法应该调用 super (父类的) 方法
   - pattern_matching_keywords # 在 switch-case 语句中，建议不要将 case 中的 let 和 var 等关键字放到元组内
   - prefer_self_type_over_type_of_self

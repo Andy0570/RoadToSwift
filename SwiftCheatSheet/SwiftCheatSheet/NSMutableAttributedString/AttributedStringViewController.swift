@@ -14,10 +14,10 @@
 import UIKit
 
 class AttributedStringViewController: UIViewController {
-    let appRedColor = UIColor(red: 230.0 / 255.0, green: 51.0 / 255.0, blue: 49.0 / 255.0, alpha: 1.0)
-    let appBlueColor = UIColor(red: 62.0 / 255.0, green: 62.0 / 255.0, blue: 145.0 / 255.0, alpha: 1.0)
-    let appYellowColor = UIColor(red: 248.0 / 255.0, green: 175.0 / 255.0, blue: 0.0, alpha: 1.0)
-    let darkOrangeColor = UIColor(red: 248.0 / 255.0, green: 150.0 / 255.0, blue: 75.0 / 255.0, alpha: 1.0)
+    let appRedColor = UIColor(red: 230.0/255.0, green: 51.0/255.0, blue: 49.0/255.0, alpha: 1.0)
+    let appBlueColor = UIColor(red: 62.0/255.0, green: 62.0/255.0, blue: 145.0/255.0, alpha: 1.0)
+    let appYellowColor = UIColor(red: 248.0/255.0, green: 175.0/255.0, blue: 0.0, alpha: 1.0)
+    let darkOrangeColor = UIColor(red: 248.0/255.0, green: 150.0/255.0, blue: 75.0/255.0, alpha: 1.0)
 
     @IBOutlet weak var firstLabel: UILabel!
     @IBOutlet weak var secondLabel: UILabel!

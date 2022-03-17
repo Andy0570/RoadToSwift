@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="180" id="KGk-i7-Jjw" customClass="BirdSoundTableViewCell" customModule="SwiftCheatSheet" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WaL-SV-Q8g" userLabel="Audio Player Container">
+                        <rect key="frame" x="220" y="0.0" width="100" height="180"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MS1-D5-lih" userLabel="Playback Button">
+                                <rect key="frame" x="20" y="60" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="0fY-BE-wBY"/>
+                                    <constraint firstAttribute="height" constant="60" id="nmZ-l1-PWB"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="play"/>
+                                <connections>
+                                    <action selector="togglePlayback:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3Sc-Ws-vqm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="5u1-Qv-Zqi"/>
+                            <constraint firstItem="MS1-D5-lih" firstAttribute="centerX" secondItem="WaL-SV-Q8g" secondAttribute="centerX" id="OhH-EP-Y4q"/>
+                            <constraint firstItem="MS1-D5-lih" firstAttribute="centerY" secondItem="WaL-SV-Q8g" secondAttribute="centerY" id="SfT-Lq-7eZ"/>
+                        </constraints>
+                    </view>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Agz-eb-EUo" userLabel="Description Stack View">
+                        <rect key="frame" x="8" y="8" width="212" height="164"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lUo-5M-fKE" userLabel="Names Stack View">
+                                <rect key="frame" x="0.0" y="0.0" width="212" height="78"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVI-ly-v06" userLabel="Name Label">
+                                        <rect key="frame" x="0.0" y="0.0" width="212" height="57.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scientific Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzX-L8-cLD" userLabel="Scientific Name Label">
+                                        <rect key="frame" x="0.0" y="57.5" width="212" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eAA-r3-dIM" userLabel="Location and Date Stack View">
+                                <rect key="frame" x="0.0" y="86" width="212" height="78"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bk8-hv-YVv" userLabel="Country Label">
+                                        <rect key="frame" x="0.0" y="0.0" width="212" height="57.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYa-Aj-8Ij" userLabel="Date Label">
+                                        <rect key="frame" x="0.0" y="57.5" width="212" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Agz-eb-EUo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="AsY-uQ-Tbf"/>
+                    <constraint firstAttribute="trailing" secondItem="WaL-SV-Q8g" secondAttribute="trailing" id="BPM-mz-LvD"/>
+                    <constraint firstAttribute="bottom" secondItem="WaL-SV-Q8g" secondAttribute="bottom" id="IMF-HV-EZ7"/>
+                    <constraint firstItem="WaL-SV-Q8g" firstAttribute="leading" secondItem="Agz-eb-EUo" secondAttribute="trailing" id="J7b-6K-9ra"/>
+                    <constraint firstAttribute="bottom" secondItem="Agz-eb-EUo" secondAttribute="bottom" constant="8" id="OmR-AS-ygo"/>
+                    <constraint firstItem="Agz-eb-EUo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Ws9-XO-hHK"/>
+                    <constraint firstItem="WaL-SV-Q8g" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="lsd-Fx-99P"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="audioPlayerContainer" destination="WaL-SV-Q8g" id="gLL-Id-ZyL"/>
+                <outlet property="countryLabel" destination="bk8-hv-YVv" id="oAb-VK-wJ0"/>
+                <outlet property="dateLabel" destination="BYa-Aj-8Ij" id="Rwp-ec-rW6"/>
+                <outlet property="nameLabel" destination="GVI-ly-v06" id="1jx-gc-i1c"/>
+                <outlet property="playbackButton" destination="MS1-D5-lih" id="Sd0-13-7GT"/>
+                <outlet property="scientificNameLabel" destination="rzX-L8-cLD" id="bH7-b3-tc2"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="176.11607142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="play" width="120" height="120"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -16,6 +16,16 @@
 		2246DD1C27C4BA35006A3AC1 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2246DD1B27C4BA35006A3AC1 /* Icon.swift */; };
 		2246DD2127C4BB48006A3AC1 /* IconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2246DD1F27C4BB48006A3AC1 /* IconCollectionViewCell.swift */; };
 		2246DD2227C4BB48006A3AC1 /* IconCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2246DD2027C4BB48006A3AC1 /* IconCollectionViewCell.xib */; };
+		22569EAA27E32077009B18A3 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22569EA927E32077009B18A3 /* NetworkingService.swift */; };
+		22569EAC27E3219D009B18A3 /* Recording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22569EAB27E3219D009B18A3 /* Recording.swift */; };
+		22569EAE27E3237C009B18A3 /* ServiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22569EAD27E3237C009B18A3 /* ServiceResponse.swift */; };
+		22569EB027E3247C009B18A3 /* RecordingsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22569EAF27E3247C009B18A3 /* RecordingsResult.swift */; };
+		22569EB327E328B2009B18A3 /* BirdSoundTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22569EB127E328B2009B18A3 /* BirdSoundTableViewCell.swift */; };
+		22569EB427E328B2009B18A3 /* BirdSoundTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22569EB227E328B2009B18A3 /* BirdSoundTableViewCell.xib */; };
+		22569EB627E3364E009B18A3 /* ChirperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22569EB527E3364E009B18A3 /* ChirperViewController.swift */; };
+		22569EB827E33918009B18A3 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22569EB727E33918009B18A3 /* EmptyView.swift */; };
+		22569EBA27E33929009B18A3 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22569EB927E33929009B18A3 /* LoadingView.swift */; };
+		22569EBC27E33931009B18A3 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22569EBB27E33931009B18A3 /* ErrorView.swift */; };
 		225A1C1327C4C00000F8215F /* IconCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A1C1127C4C00000F8215F /* IconCollectionViewController.swift */; };
 		225F202327C332F0008FCC29 /* TurnStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225F202227C332F0008FCC29 /* TurnStrategy.swift */; };
 		225F202527C33642008FCC29 /* Scorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225F202427C33642008FCC29 /* Scorer.swift */; };
@@ -120,6 +130,16 @@
 		2246DD1B27C4BA35006A3AC1 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
 		2246DD1F27C4BB48006A3AC1 /* IconCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCollectionViewCell.swift; sourceTree = "<group>"; };
 		2246DD2027C4BB48006A3AC1 /* IconCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IconCollectionViewCell.xib; sourceTree = "<group>"; };
+		22569EA927E32077009B18A3 /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
+		22569EAB27E3219D009B18A3 /* Recording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recording.swift; sourceTree = "<group>"; };
+		22569EAD27E3237C009B18A3 /* ServiceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceResponse.swift; sourceTree = "<group>"; };
+		22569EAF27E3247C009B18A3 /* RecordingsResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingsResult.swift; sourceTree = "<group>"; };
+		22569EB127E328B2009B18A3 /* BirdSoundTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdSoundTableViewCell.swift; sourceTree = "<group>"; };
+		22569EB227E328B2009B18A3 /* BirdSoundTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BirdSoundTableViewCell.xib; sourceTree = "<group>"; };
+		22569EB527E3364E009B18A3 /* ChirperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChirperViewController.swift; sourceTree = "<group>"; };
+		22569EB727E33918009B18A3 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		22569EB927E33929009B18A3 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		22569EBB27E33931009B18A3 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		225A1C1127C4C00000F8215F /* IconCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCollectionViewController.swift; sourceTree = "<group>"; };
 		225F202227C332F0008FCC29 /* TurnStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnStrategy.swift; sourceTree = "<group>"; };
 		225F202427C33642008FCC29 /* Scorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scorer.swift; sourceTree = "<group>"; };
@@ -304,6 +324,55 @@
 			path = IconCollectionView;
 			sourceTree = "<group>";
 		};
+		22569EA327E31F17009B18A3 /* Chirper */ = {
+			isa = PBXGroup;
+			children = (
+				22569EA827E31F9E009B18A3 /* Controller */,
+				22569EA727E31F9A009B18A3 /* View */,
+				22569EA627E31F97009B18A3 /* Model */,
+				22569EA527E31F90009B18A3 /* Service */,
+			);
+			path = Chirper;
+			sourceTree = "<group>";
+		};
+		22569EA527E31F90009B18A3 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				22569EA927E32077009B18A3 /* NetworkingService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		22569EA627E31F97009B18A3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				22569EAB27E3219D009B18A3 /* Recording.swift */,
+				22569EAD27E3237C009B18A3 /* ServiceResponse.swift */,
+				22569EAF27E3247C009B18A3 /* RecordingsResult.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		22569EA727E31F9A009B18A3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				22569EB127E328B2009B18A3 /* BirdSoundTableViewCell.swift */,
+				22569EB227E328B2009B18A3 /* BirdSoundTableViewCell.xib */,
+				22569EB727E33918009B18A3 /* EmptyView.swift */,
+				22569EB927E33929009B18A3 /* LoadingView.swift */,
+				22569EBB27E33931009B18A3 /* ErrorView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		22569EA827E31F9E009B18A3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				22569EB527E3364E009B18A3 /* ChirperViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		227E7EAA27E07559009D5E45 /* CollapsExpand */ = {
 			isa = PBXGroup;
 			children = (
@@ -455,6 +524,7 @@
 		22A89B4F27DB54940091304F /* UITableView */ = {
 			isa = PBXGroup;
 			children = (
+				22569EA327E31F17009B18A3 /* Chirper */,
 				227E7EAD27E07F32009D5E45 /* MultipleSelection */,
 				227E7EAA27E07559009D5E45 /* CollapsExpand */,
 				222B3FCF27E061B1009C7322 /* GrowingCellTextView */,
@@ -909,6 +979,7 @@
 				228B38F327D0614700BCF963 /* FlagViewController.xib in Resources */,
 				222B3FD327E061F1009C7322 /* GrowingCell.xib in Resources */,
 				22FF1B5C27C89FF2007214EB /* ImageCell.xib in Resources */,
+				22569EB427E328B2009B18A3 /* BirdSoundTableViewCell.xib in Resources */,
 				2246DD2227C4BB48006A3AC1 /* IconCollectionViewCell.xib in Resources */,
 				229AC7E227D5EF93001D81D2 /* PhotoListTableViewCell.xib in Resources */,
 				229AC7DB27D5E4C2001D81D2 /* PhotoDetailViewController.xib in Resources */,
@@ -996,25 +1067,32 @@
 				22BF2E1A27BE1E8D009027E3 /* AlbumView.swift in Sources */,
 				225A1C1327C4C00000F8215F /* IconCollectionViewController.swift in Sources */,
 				22AC912127DF981E007260E6 /* AuteurDetailViewController.swift in Sources */,
+				22569EBA27E33929009B18A3 /* LoadingView.swift in Sources */,
 				229AC7D327D5E2EA001D81D2 /* APIService.swift in Sources */,
+				22569EB627E3364E009B18A3 /* ChirperViewController.swift in Sources */,
 				22BF2E2A27BF3B8D009027E3 /* HorizontalScrollerView.swift in Sources */,
 				22A7C75027C8AA4400196326 /* Post.swift in Sources */,
 				229AC7DE27D5E4DD001D81D2 /* PhotoListViewController.swift in Sources */,
 				22A7C75927C8AE5100196326 /* ActionViewModel.swift in Sources */,
+				22569EB327E328B2009B18A3 /* BirdSoundTableViewCell.swift in Sources */,
 				22FF1B5B27C89FF2007214EB /* ImageCell.swift in Sources */,
 				22A7C75527C8AD3900196326 /* UserViewModel.swift in Sources */,
 				227E7EC527E093AF009D5E45 /* AttributedString.swift in Sources */,
 				229AC7DA27D5E4C2001D81D2 /* PhotoDetailViewController.swift in Sources */,
 				22AC912827DF9EE3007260E6 /* FilmTableViewCell.swift in Sources */,
 				22D2234D27BCF20A000EAD0F /* Item.swift in Sources */,
+				22569EB827E33918009B18A3 /* EmptyView.swift in Sources */,
+				22569EB027E3247C009B18A3 /* RecordingsResult.swift in Sources */,
 				22EE32C927D0925D00A9A66F /* AnchorsViewController.swift in Sources */,
 				22FF1B5427C88B0F007214EB /* ModelAndBingViewController.swift in Sources */,
 				22BF2E1D27BE207C009027E3 /* BlueLibraryViewController.swift in Sources */,
+				22569EAA27E32077009B18A3 /* NetworkingService.swift in Sources */,
 				229AC7D127D5E275001D81D2 /* Photo.swift in Sources */,
 				22BF2E3827BF7544009027E3 /* ShapeView.swift in Sources */,
 				22BF2E4427BF944C009027E3 /* ShapeFactory.swift in Sources */,
 				22BF2E1427BDFE0D009027E3 /* NotificationExtension.swift in Sources */,
 				22D9330627D59F7C00D1B0B4 /* DRHTextFieldWithCharacterCount.swift in Sources */,
+				22569EAC27E3219D009B18A3 /* Recording.swift in Sources */,
 				229AC7E127D5EF93001D81D2 /* PhotoListTableViewCell.swift in Sources */,
 				22BF2E2027BE2597009027E3 /* LibraryAPI.swift in Sources */,
 				22D2233A27BCEB89000EAD0F /* ViewController.swift in Sources */,
@@ -1039,6 +1117,7 @@
 				2246DD1C27C4BA35006A3AC1 /* Icon.swift in Sources */,
 				227E7EC227E09345009D5E45 /* AttributedStringViewController.swift in Sources */,
 				22BF2E1827BDFF35009027E3 /* Album.swift in Sources */,
+				22569EBC27E33931009B18A3 /* ErrorView.swift in Sources */,
 				22D9330B27D5A55900D1B0B4 /* DRHTextFieldViewController.swift in Sources */,
 				22BF2E3A27BF774D009027E3 /* GameView.swift in Sources */,
 				22BF2E4927BFA08A009027E3 /* Turn.swift in Sources */,
@@ -1054,6 +1133,7 @@
 				22AC911D27DF4990007260E6 /* Auteur.swift in Sources */,
 				22AC912427DF9ED1007260E6 /* AuteurTableViewCell.swift in Sources */,
 				225F202527C33642008FCC29 /* Scorer.swift in Sources */,
+				22569EAE27E3237C009B18A3 /* ServiceResponse.swift in Sources */,
 				2246DD1727C49402006A3AC1 /* CollaspibleCollectionViewController.swift in Sources */,
 				22A89B5327DB54E10091304F /* DiffableDatasourceTableView.swift in Sources */,
 				22BF2E2227BE26B9009027E3 /* PersistencyManager.swift in Sources */,

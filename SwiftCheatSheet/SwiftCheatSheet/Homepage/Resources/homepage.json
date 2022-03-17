@@ -51,6 +51,11 @@
         "title": "TableView 中的多选功能",
         "description": "",
         "className": "MultipleSelectionViewController"
+    }, {
+        "image": "image",
+        "title": "枚举驱动的 TableView",
+        "description": "",
+        "className": "ChirperViewController"
     }]
 }, {
     "title": "集合视图",
