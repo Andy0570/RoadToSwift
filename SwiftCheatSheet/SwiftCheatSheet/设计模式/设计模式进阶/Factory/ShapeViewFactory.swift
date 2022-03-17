@@ -26,8 +26,12 @@ class SquareShapeViewFactory: ShapeViewFactory {
     }
 
     func makeShapeViewsForShapes(shapes: (Shape, Shape)) -> (ShapeView, ShapeView) {
+        guard let squareShape1 = shapes.0 as? SquareShape,
+            let squareShape2 = shapes.1 as? SquareShape else {
+            fatalError("向下类型转换发生错误")
+        }
+
         // 构造 shapeView1
-        let squareShape1 = shapes.0 as! SquareShape
         let shapeView1 = SquareShapeView(frame: CGRect(
             x: 0,
             y: 0,
@@ -36,7 +40,6 @@ class SquareShapeViewFactory: ShapeViewFactory {
         shapeView1.shape = squareShape1
 
         // 构造 shapeView2
-        let squareShape2 = shapes.1 as! SquareShape
         let shapeView2 = SquareShapeView(frame: CGRect(
             x: 0,
             y: 0,
@@ -57,7 +60,11 @@ class CircleShapeViewFactory: ShapeViewFactory {
     }
 
     func makeShapeViewsForShapes(shapes: (Shape, Shape)) -> (ShapeView, ShapeView) {
-        let circleShape1 = shapes.0 as! CircleShape
+        guard let circleShape1 = shapes.0 as? CircleShape,
+            let circleShape2 = shapes.1 as? CircleShape else {
+            fatalError("向下类型转换发生错误")
+        }
+
         let shapeView1 = CircleShapeView(frame: CGRect(
             x: 0,
             y: 0,
@@ -65,7 +72,6 @@ class CircleShapeViewFactory: ShapeViewFactory {
             height: circleShape1.diameter * size.height))
         shapeView1.shape = circleShape1
 
-        let circleShape2 = shapes.1 as! CircleShape
         let shapeView2 = CircleShapeView(frame: CGRect(
             x: 0,
             y: 0,

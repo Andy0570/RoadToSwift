@@ -49,15 +49,21 @@ class AttributedStringViewController: UIViewController {
 
     // 字体
     func setSecondLable() {
+        guard let boldItalicFont = UIFont(name: "HelveticaNeue-BoldItalic", size: 20),
+            let thinItalicFont = UIFont(name: "HelveticaNeue-ThinItalic", size: 20),
+            let condensedBlackFont = UIFont(name: "HelveticaNeue-CondensedBlack", size: 20) else {
+                return
+            }
+
         let text = "This string is having multiple font"
         let attributedText = NSMutableAttributedString.getAttributedString(fromString: text)
         attributedText.apply(font: UIFont.boldSystemFont(ofSize: 24), subString: "This")
         attributedText.apply(font: UIFont.boldSystemFont(ofSize: 24), onRange: NSRange(location: 5, length: 6))
         attributedText.apply(font: UIFont.italicSystemFont(ofSize: 20), subString: "string")
-        attributedText.apply(font: UIFont(name: "HelveticaNeue-BoldItalic", size: 20)!, subString: " is")
-        attributedText.apply(font: UIFont(name: "HelveticaNeue-ThinItalic", size: 20)!, subString: "having")
+        attributedText.apply(font: boldItalicFont, subString: " is")
+        attributedText.apply(font: thinItalicFont, subString: "having")
         attributedText.apply(color: UIColor.blue, subString: "having")
-        attributedText.apply(font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 20)!, subString: "multiple")
+        attributedText.apply(font: condensedBlackFont, subString: "multiple")
         attributedText.apply(color: appRedColor, subString: "multiple")
         self.secondLabel.attributedText = attributedText
     }

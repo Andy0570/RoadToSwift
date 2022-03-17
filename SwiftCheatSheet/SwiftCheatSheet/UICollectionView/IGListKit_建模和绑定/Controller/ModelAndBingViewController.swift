@@ -34,10 +34,14 @@ class ModelAndBingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        guard let url = URL(string: "https://placekitten.com/g/375/250") else {
+            return
+        }
+
         data.append(Post(
             username: "@janedoe",
             timestamp: "15min",
-            imageURL: URL(string: "https://placekitten.com/g/375/250")!,
+            imageURL: url,
             likes: 384,
             comments: [
                 Comment(username: "@ryan", text: "this is beautiful!"),

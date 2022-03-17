@@ -49,7 +49,10 @@ extension ViewModel: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.identifier, for: indexPath) as! CustomTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.identifier, for: indexPath) as? CustomTableViewCell else {
+            fatalError("Could not dequeue cell: CustomTableViewCell")
+        }
+
         let viewModelItem = items[indexPath.row]
         cell.item = viewModelItem
 

@@ -90,10 +90,12 @@ class IconCollectionViewController: UIViewController {
         // <Section, Icon> 中的 Section 表示我们使用自定义的 Section 枚举类型处理 section 部分。
         // <Section, Icon> 中的 Icon 表示我们使用 Icon 类型处理 cell 数据。
         let dataSource = UICollectionViewDiffableDataSource<SectionType, Icon>(collectionView: collectionView) { collectionView, indexPath, icon -> UICollectionViewCell? in
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: IconCollectionViewCell.identifier, for: indexPath) as! IconCollectionViewCell
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: IconCollectionViewCell.identifier, for: indexPath) as? IconCollectionViewCell else {
+                return nil
+            }
+
             cell.iconImageView.image = UIImage(named: icon.name)
             cell.iconPriceLabel.text = "$\(icon.price)"
-
             return cell
         }
 

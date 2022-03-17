@@ -1,8 +1,8 @@
 > 原文：[Swift: Banning force unwrapping optionals @Alexandre Colucci](https://blog.timac.org/2017/0628-swift-banning-force-unwrapping-optionals/)
+>
+> 在这篇文章中，我将讨论强制解包的危害，以及如何避免强制解包。
 
 
-
-在这篇文章中，我将讨论强制解包的危害，以及如何避免强制解包。
 
 # Swift 可选类型和强制解包
 
@@ -71,7 +71,7 @@ Apple 滥用强制解包的示例代码
 
 
 
-这段代码假设 textFields 的 alertController 的数组至少包含一个对象。为什么不使用更安全的东西，比如：
+这段代码假设 `textFields` 的 `alertController` 的数组至少包含一个对象。为什么不使用更安全的东西，比如：
 
 ```swift
 alertController.addAction(UIAlertAction(title: NSLocalizedString("Create", comment: ""), style: .default) { _ in
@@ -86,10 +86,10 @@ alertController.addAction(UIAlertAction(title: NSLocalizedString("Create", comme
 
 ```swift
 @IBAction func play(_ sender: AnyObject) {
-        if let player = playerLayer.player {
-            // An AVPlayerLayer has already been created for this asset; just play it.
-            player.play()
-        } else {
+    if let player = playerLayer.player {
+        // An AVPlayerLayer has already been created for this asset; just play it.
+        player.play()
+} else {
 ```
 
 ---

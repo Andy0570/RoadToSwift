@@ -139,16 +139,14 @@ extension BlueLibraryViewController: HorizontalScrollerViewDataSource {
 
 extension BlueLibraryViewController: HorizontalScrollerViewDelegate {
     func horizontalScrollerView(_ horizontalScrollerView: HorizontalScrollerView, didSelectViewAt index: Int) {
-        // 取消高亮显示旧专辑
-        let previousAlbumView = horizontalScrollerView.view(at: currentAlbumIndex) as! AlbumView
-        previousAlbumView.highlightAlbum(false)
+        guard let previousAlbumView = horizontalScrollerView.view(at: currentAlbumIndex) as? AlbumView,
+            let currentAlbumView = horizontalScrollerView.view(at: index) as? AlbumView else {
+                return
+            }
 
-        // 高亮显示新专辑
-        currentAlbumIndex = index
-        let albumView = horizontalScrollerView.view(at: currentAlbumIndex) as! AlbumView
-        albumView.highlightAlbum(true)
-
-        // 刷新 tableView
-        showDataForAlbum(at: index)
+        previousAlbumView.highlightAlbum(false) // 取消高亮显示旧专辑
+        currentAlbumView.highlightAlbum(true) // 高亮显示新专辑
+        currentAlbumIndex = index // 更新索引
+        showDataForAlbum(at: index) // 刷新 tableView
     }
 }

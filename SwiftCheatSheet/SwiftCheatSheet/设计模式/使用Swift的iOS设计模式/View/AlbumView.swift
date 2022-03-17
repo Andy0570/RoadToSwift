@@ -26,7 +26,9 @@ class AlbumView: UIView {
         // 而且发布者永远不需要了解有关订阅者的任何信息。
 
         // 发送通知，通知信息包含要填充的 UIImageview 和要下载的专题图片URL
-        NotificationCenter.default.post(name: .BLDownloadImage, object: self, userInfo: ["imageView": coverImageView!, "coverUrl": coverUrl])
+        if let coverImageView = coverImageView {
+            NotificationCenter.default.post(name: .BLDownloadImage, object: self, userInfo: ["imageView": coverImageView, "coverUrl": coverUrl])
+        }
     }
 
     private func commonInit() {
@@ -38,7 +40,7 @@ class AlbumView: UIView {
 
         // MARK: 观察者模式-键值监听（KVO）
         // 添加 KVO 监听，当 imageView 的 image 属性有值时，停止加载指示器
-        valueObservation = coverImageView.observe(\.image, options: [.new], changeHandler: { [unowned self] observed, change in
+        valueObservation = coverImageView.observe(\.image, options: [.new], changeHandler: { [unowned self] _, change in
             if change.newValue is UIImage {
                 self.indicatorView.stopAnimating()
             }

@@ -44,7 +44,7 @@ class CollaspibleCollectionViewController: UIViewController {
 
     lazy var dataSource: CollectionDataSource = {
         // 注册重用 header cell
-        let parentItemCellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, Item> { cell, indexPath, model in
+        let parentItemCellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, Item> { cell, _, model in
             var contentConfiguration = cell.defaultContentConfiguration()
             contentConfiguration.text = model.title
             contentConfiguration.textProperties.font = .preferredFont(forTextStyle: .headline)
@@ -55,7 +55,7 @@ class CollaspibleCollectionViewController: UIViewController {
         }
 
         // 注册重用 item cell
-        let subItemsCellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, Item> { cell, indexPath, model in
+        let subItemsCellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, Item> { cell, _, model in
             var contentConfiguration = cell.defaultContentConfiguration()
             contentConfiguration.text = model.title
             contentConfiguration.textProperties.font = .preferredFont(forTextStyle: .subheadline)

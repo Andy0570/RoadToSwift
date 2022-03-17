@@ -60,7 +60,7 @@ class PhotoListViewModel {
 
     func initFetch() {
         self.isLoading = true
-        apiService.fetchPopularPhoto { [weak self] success, photos, error in
+        apiService.fetchPopularPhoto { [weak self] _, photos, error in
             self?.isLoading = false
             if let error = error {
                 self?.alertMessage = error.rawValue

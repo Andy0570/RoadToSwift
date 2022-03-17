@@ -8,7 +8,6 @@
 import UIKit
 
 class DRHTextFieldViewController: UIViewController {
-
     @IBOutlet weak var textField: DRHTextFieldWithCharacterCount!
 
     // 单击手势，点击空白区域收起键盘

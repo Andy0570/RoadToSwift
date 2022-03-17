@@ -62,7 +62,10 @@ extension AuteurListViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: AuteurTableViewCell.identifier, for: indexPath) as! AuteurTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: AuteurTableViewCell.identifier, for: indexPath) as? AuteurTableViewCell else {
+            fatalError("Could not dequeue cell: AuteurTableViewCell")
+        }
+
         let auteur = auteurs[indexPath.row]
         return cell.configure(name: auteur.name, bio: auteur.bio, sourceText: auteur.source, imageName: auteur.image)
     }

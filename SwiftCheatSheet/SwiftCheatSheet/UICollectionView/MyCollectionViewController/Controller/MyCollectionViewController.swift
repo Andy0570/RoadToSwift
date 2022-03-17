@@ -19,7 +19,7 @@ class MyCollectionViewController: UIViewController {
 
     // 在视图控制器中定义一个实例属性
     // 使用 UICollectionView.CellRegistration 配置集合视图
-    let simpleConfig = UICollectionView.CellRegistration<MyCollectionViewCell, String> { cell, indexPath, model in
+    let simpleConfig = UICollectionView.CellRegistration<MyCollectionViewCell, String> { cell, _, model in
         cell.label.text = model
     }
 

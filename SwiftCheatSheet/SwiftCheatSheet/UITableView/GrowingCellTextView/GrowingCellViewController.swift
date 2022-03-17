@@ -56,7 +56,10 @@ extension GrowingCellViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: GrowingCell.identifier, for: indexPath) as! GrowingCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: GrowingCell.identifier, for: indexPath) as? GrowingCell else {
+            fatalError("Could not dequeue cell: GrowingCell")
+        }
+
         cell.cellDelegate = self
         return cell
     }

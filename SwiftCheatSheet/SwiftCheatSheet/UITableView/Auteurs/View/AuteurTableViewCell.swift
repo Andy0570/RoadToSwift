@@ -8,7 +8,6 @@
 import UIKit
 
 class AuteurTableViewCell: UITableViewCell {
-
     @IBOutlet weak var auteurImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var bioLabel: UILabel!

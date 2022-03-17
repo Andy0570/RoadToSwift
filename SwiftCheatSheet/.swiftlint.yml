@@ -9,8 +9,9 @@ disabled_rules: # 关闭某些默认开启的规则
   - notification_center_detachment # 对象移除通知只能在 deinit 移除 self, 函数中不能 removeObserver(self)
   - orphaned_doc_comment # 文档注释应附加到声明中
   - todo # TODO 和 FIXME 应该避免使用，使用 'notaTODO' 和 'notaFIXME' 代替
-  - unused_capture_list # 应删除闭包捕获列表中未使用的引用
   - line_length # 限制每行代码的字符长度
+  # - unused_capture_list # 应删除捕获列表中未使用的引用 [weak self]
+  # - unused_closure_parameter # 闭包中未使用的参数应替换为_
 
 opt_in_rules: # 一些规则仅仅是可选的
   - array_init
@@ -45,7 +46,7 @@ opt_in_rules: # 一些规则仅仅是可选的
   - pattern_matching_keywords # 在 switch-case 语句中，建议不要将 case 中的 let 和 var 等关键字放到元组内
   - prefer_self_type_over_type_of_self
   - redundant_nil_coalescing # 使用可能为为 nil 的可选值时，建议使用空合运算符
-  - redundant_type_annotation
+  - redundant_type_annotation # 变量不应该有多余的类型注解
   - strict_fileprivate # extension 中不建议使用 fileprivate 修饰方法和属性
   - toggle_bool
   # - trailing_closure # 推荐使用尾随闭包语法
@@ -79,9 +80,10 @@ function_body_length: # 函数体默认超过40行警告，超过100行报错
 
 legacy_hashing: error
 
-# 变量命名规则
+# 变量命名规则可以设置最小长度和最大程度的警告/错误
+# 此外它们也可以设置排除在外的名字
 identifier_name:
-  excluded: # 排除某些名字
+  excluded:
     - i
     - id
     - x
