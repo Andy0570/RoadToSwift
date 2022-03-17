@@ -26,12 +26,10 @@ class MatchScorer: Scorer {
         var scoreIncrement: Int?
 
         // 使用迭代器迭代过去的回合
-        for turn in pastTurnsReversed {
-            if scoreIncrement == nil {
-                // 获胜回合的得分 +1，失败回合的得分 -1
-                scoreIncrement = turn.matched! ? 1: -1
-                break
-            }
+        for turn in pastTurnsReversed where scoreIncrement == nil {
+            // 获胜回合的得分 +1，失败回合的得分 -1
+            scoreIncrement = turn.matched ? 1: -1
+            break
         }
 
         return (scoreIncrement ?? 0) + (nextScorer?.computeScoreIncrement(pastTurnsReversed) ?? 0)
@@ -47,7 +45,7 @@ class StreakScorer: Scorer {
 
         // 使用迭代器迭代过去的回合
         for turn in pastTurnsReversed {
-            if turn.matched! {
+            if turn.matched {
                 // 如果该回合获胜，则连续次数 +1
                 streakLength += 1
             } else {

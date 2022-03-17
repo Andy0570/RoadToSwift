@@ -23,7 +23,7 @@ struct Auteur: Codable {
         var auteurs: [Auteur] = []
         // 加载 Bundle 包中的 json 文件，并通过 Codable 解析为模型数据
         guard let url = Bundle.main.url(forResource: "auteurs", withExtension: "json") else {
-            return []
+            fatalError("Error: Unable to find specified file!")
         }
 
         do {

@@ -55,20 +55,20 @@ class DRHTextFieldWithCharacterCount: UITextField {
     }
 
     @objc func textDidChange(notification: Notification) {
-        guard let text = self.text, lengthLimit != 0 else {
-            return
-        }
-
         // 判断是否存在 markedText，如果存在，则不进行字数统计和字符串截断
-        guard self.markedTextRange == nil else {
+        guard let text = self.text, lengthLimit != 0, self.markedTextRange == nil else {
             return
         }
 
         if text.count <= lengthLimit {
             countLabel.text = "\(text.count)/\(lengthLimit)"
         } else {
+            guard let startPosition = self.selectedTextRange?.start else {
+                return
+            }
+
             // 记录当前光标的位置
-            let targetPosition = self.offset(from: self.beginningOfDocument, to: self.selectedTextRange!.start)
+            let targetPosition = self.offset(from: self.beginningOfDocument, to: startPosition)
 
             // 字符串截取
             let prefixIndex = text.index(text.startIndex, offsetBy: lengthLimit)

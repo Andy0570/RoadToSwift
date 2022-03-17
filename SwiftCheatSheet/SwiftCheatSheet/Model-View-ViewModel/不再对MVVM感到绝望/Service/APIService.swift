@@ -23,9 +23,8 @@ class APIService: APIServiceProtocol {
         DispatchQueue.global().async {
             sleep(3)
             // 加载Bundle包中的 content.json 文件，并使用 Codable 解析为模型
-            guard let url = Bundle.main.url(forResource: "Content", withExtension: "json") else {
-                complete(false, [], nil)
-                return
+            guard let url = Bundle.main.url(forResource: "content", withExtension: "json") else {
+                fatalError("Error: Unable to find specified file!")
             }
 
             do {

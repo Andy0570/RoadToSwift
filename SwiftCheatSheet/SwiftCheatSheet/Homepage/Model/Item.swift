@@ -16,7 +16,7 @@ struct Section: Codable {
 
         // 加载 Bundle 包中的 json 文件，并通过 Codable 解析为模型数据
         guard let url = Bundle.main.url(forResource: "homepage", withExtension: "json") else {
-            return []
+            fatalError("Error: Unable to find specified file!")
         }
 
         do {

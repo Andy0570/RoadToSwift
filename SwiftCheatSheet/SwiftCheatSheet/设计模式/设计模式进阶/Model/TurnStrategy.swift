@@ -48,7 +48,7 @@ class RandomTurnStrategy: TurnStrategy {
     }
 
     func makeShapeViewsForNextTurnGivenPastTurns(pastTurns: [Turn]) -> (ShapeView, ShapeView) {
-        if Utils.randomBetweenLower(lower: 0.0, andUpper: 100.0) < 50.0 {
+        if Int.random(in: 0...100) < 50 {
             return firstStrategy.makeShapeViewsForNextTurnGivenPastTurns(pastTurns: pastTurns)
         } else {
             return secondStrategy.makeShapeViewsForNextTurnGivenPastTurns(pastTurns: pastTurns)

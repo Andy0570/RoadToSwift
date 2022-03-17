@@ -14,7 +14,7 @@
 import UIKit
 
 class GameViewController: UIViewController {
-    private var gameView: GameView { return view as! GameView }
+    @IBOutlet var gameView: GameView!
     private var turnController: TurnController!
 
     override func viewDidLoad() {

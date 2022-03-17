@@ -69,7 +69,6 @@
 		22BF2E2827BF2FF9009027E3 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BF2E2727BF2FF9009027E3 /* NavigationController.swift */; };
 		22BF2E2A27BF3B8D009027E3 /* HorizontalScrollerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BF2E2927BF3B8D009027E3 /* HorizontalScrollerView.swift */; };
 		22BF2E2C27BF42E6009027E3 /* albums.json in Resources */ = {isa = PBXBuildFile; fileRef = 22BF2E2B27BF42E6009027E3 /* albums.json */; };
-		22BF2E3427BF7479009027E3 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BF2E3327BF7479009027E3 /* Utils.swift */; };
 		22BF2E3627BF750C009027E3 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BF2E3527BF750C009027E3 /* Shape.swift */; };
 		22BF2E3827BF7544009027E3 /* ShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BF2E3727BF7544009027E3 /* ShapeView.swift */; };
 		22BF2E3A27BF774D009027E3 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BF2E3927BF774D009027E3 /* GameView.swift */; };
@@ -174,7 +173,6 @@
 		22BF2E2727BF2FF9009027E3 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		22BF2E2927BF3B8D009027E3 /* HorizontalScrollerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollerView.swift; sourceTree = "<group>"; };
 		22BF2E2B27BF42E6009027E3 /* albums.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = albums.json; sourceTree = "<group>"; };
-		22BF2E3327BF7479009027E3 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		22BF2E3527BF750C009027E3 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
 		22BF2E3727BF7544009027E3 /* ShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeView.swift; sourceTree = "<group>"; };
 		22BF2E3927BF774D009027E3 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
@@ -643,7 +641,6 @@
 			children = (
 				22BF2E4327BF944C009027E3 /* ShapeFactory.swift */,
 				22BF2E4127BF91B9009027E3 /* ShapeViewFactory.swift */,
-				22BF2E3327BF7479009027E3 /* Utils.swift */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
@@ -1063,7 +1060,6 @@
 				2246DD0927C474E9006A3AC1 /* MyCollectionViewCell.swift in Sources */,
 				22FF1B5F27C89FFF007214EB /* ActionCell.swift in Sources */,
 				22FF1B5727C89FE4007214EB /* UserCell.swift in Sources */,
-				22BF2E3427BF7479009027E3 /* Utils.swift in Sources */,
 				22BF2E2427BE48CF009027E3 /* UITableViewCellExtensions.swift in Sources */,
 				22DBC8E627CB632F00E14468 /* MenuButton.swift in Sources */,
 				22BF2E4B27BFA3F8009027E3 /* TurnController.swift in Sources */,
@@ -1268,6 +1264,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.haidian.SwiftCheatSheet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

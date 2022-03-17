@@ -32,8 +32,12 @@ class TurnController {
 
     // 在玩家点击形状后记录回合结束，并根据该回合玩家点击的形状计算得分
     func endTurnWithTappedShape(tappedShape: Shape) -> Int {
-        currentTurn!.turnCompletedWithTappedShape(tappedShape: tappedShape)
-        pastTurns.append(currentTurn!)
+        guard let currentTurn = currentTurn else {
+            return 0
+        }
+
+        currentTurn.turnCompletedWithTappedShape(tappedShape: tappedShape)
+        pastTurns.append(currentTurn)
 
         // 需要使用 reversed() 反向遍历，因为计算得分的顺序和回合进行的顺序相反。
         let scoreIncrement = scorer.computeScoreIncrement(pastTurns.reversed())

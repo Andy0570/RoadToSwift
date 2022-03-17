@@ -27,11 +27,11 @@ class SquareShapeFactory: ShapeFactory {
     func createShapes() -> (Shape, Shape) {
         // 创建具有随机尺寸的第一个正方形
         let shape1 = SquareShape()
-        shape1.sideLength = Utils.randomBetweenLower(lower: minProportion, andUpper: maxProportion)
+        shape1.sideLength = CGFloat.random(in: minProportion...maxProportion)
 
         // 创建具有随机尺寸的第二个正方形
         let shape2 = SquareShape()
-        shape2.sideLength = Utils.randomBetweenLower(lower: minProportion, andUpper: maxProportion)
+        shape2.sideLength = CGFloat.random(in: minProportion...maxProportion)
 
         return (shape1, shape2)
     }
@@ -50,10 +50,10 @@ class CircleShapeFactory: ShapeFactory {
 
     func createShapes() -> (Shape, Shape) {
         let shape1 = CircleShape()
-        shape1.diameter = Utils.randomBetweenLower(lower: minProportion, andUpper: maxProportion)
+        shape1.diameter = CGFloat.random(in: minProportion...maxProportion)
 
         let shape2 = CircleShape()
-        shape2.diameter = Utils.randomBetweenLower(lower: minProportion, andUpper: maxProportion)
+        shape2.diameter = CGFloat.random(in: minProportion...maxProportion)
 
         return (shape1, shape2)
     }

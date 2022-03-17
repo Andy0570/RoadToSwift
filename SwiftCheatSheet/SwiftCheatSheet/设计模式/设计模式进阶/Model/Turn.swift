@@ -13,7 +13,7 @@ import Foundation
 class Turn {
     // 存储玩家每一个回合看到的形状，以及是否点击了较大的形状
     let shapes: [Shape]
-    var matched: Bool?
+    var matched = false
 
     init(shapes: [Shape]) {
         self.shapes = shapes
