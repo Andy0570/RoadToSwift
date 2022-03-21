@@ -10,7 +10,7 @@
 
 在你的应用程序中，无论是从服务器上检索应用数据，更新你的社交媒体状态，还是将远程文件下载到本地磁盘，网络请求都是实现魔法的关键。为了帮助你满足网络请求的诸多要求，苹果提供了 `URLSession`，这是一个完整的网络 API，用于上传和下载内容。
 
-在本教程中，你将学习如何构建 **HalfTunes**，一个查询 [iTunes 搜索API](https://www.apple.com/working-with-apple-services/)，然后下载30秒歌曲预览的应用程序。完成后的应用程序将支持后台传输，并让用户暂停、恢复或取消正在进行的下载任务。
+在本教程中，你将学习如何构建 **HalfTunes**，一个查询 [iTunes 搜索API](https://www.apple.com/working-with-apple-services/)，然后下载 30 秒歌曲预览的应用程序。完成后的应用程序将支持后台传输，并让用户暂停、恢复或取消正在进行的下载任务。
 
 
 
@@ -36,13 +36,13 @@
 
 `URLSession` 是负责发送和接收请求的关键对象。你通过 `URLSessionConfiguration` 来创建它，它有三种类型：
 
-* **默认会话（default）**。创建一个默认的配置对象，该对象使用磁盘托管的全局缓存、凭证和 cookie 存储对象。
-* **临时会话（ephemeral）**。与默认配置类似，只是你把所有与会话相关的数据存储在内存中。可以把它看作是一个 "private" 会话（比如，Safari 浏览器中的“无痕浏览模式”）。
+* **默认会话（default）**。创建一个默认的配置对象，该对象使用基于磁盘托管的全局缓存、凭证和 cookie 存储对象。
+* **临时会话（ephemeral）**。与默认配置类似，只是你把所有与会话相关的数据存储在内存中。可以把它看作是一个 "隐私" 会话（比如，Safari 浏览器中的“无痕浏览模式”）。
 * **后台会话（background）**。让会话在后台执行上传或下载任务。即使应用程序本身被暂停或被系统终止，传输也会继续。
 
 `URLSessionConfiguration` 还可以让你配置会话属性，如超时时间、缓存策略和 HTTP 请求头。关于配置选项的完整列表，请参考[苹果官方文档](https://developer.apple.com/reference/foundation/urlsessionconfiguration)。
 
-`URLSessionTask` 是一个抽象类，表示一个任务对象。一个会话创建一个或多个任务来完成获取数据和下载或上传文件的实际工作。
+`URLSessionTask` 是一个抽象类，表示一个任务对象。一个会话创建一个或多个任务来完成数据获取、下载或上传文件的实际工作。
 
 ### 了解会话任务类型
 
@@ -87,8 +87,8 @@ var dataTask: URLSessionDataTask?
 
 以下是你所做的：
 
-1. 创建了一个 `URLSession`，并用默认的会话配置对其进行初始化。
-2. 声明了 `URLSessionDataTask`，当用户执行搜索时，你将使用它来向 iTunes 搜索服务发出 GET 请求。每次用户输入新的搜索字符串时，data task 将被重新初始化。
+1. 创建一个 `URLSession`，并用默认的会话配置对其进行初始化。
+2. 声明 `URLSessionDataTask`，当用户执行搜索时，你将使用它来向 iTunes 搜索服务发出 GET 请求。每当用户输入新的搜索字符串时，data task 将被重新初始化。
 
 接下来，将 `getSearchResults(searchTerm:completion:)` 中的内容替换为以下内容：
 
@@ -132,12 +132,12 @@ if var urlComponents = URLComponents(string: "https://itunes.apple.com/search") 
 依次进行每个编号进行解释：
 
 1. 对于一个新的查询，你取消任何已经存在的数据任务，因为你想为这个数据任务对象重新使用新的查询。
-2. 为了在查询 URL 中包含用户的搜索字符串，你从 iTunes 搜索基础 URL 中创建`URLComponents`，然后设置其查询字符串。这可以确保你的搜索字符串使用转义后的字符。如果你得到一个错误信息，请省略媒体和实体组件。请看这个[论坛帖子](https://forums.raywenderlich.com/t/urlsession-tutorial-getting-started-raywenderlich-com/73741/13)。
+2. 为了在查询 URL 中包含用户的搜索字符串，通过 iTunes 搜索基础 URL 中创建 `URLComponents`，然后设置其查询字符串。这可以确保你的搜索字符串使用转义后的字符。如果你得到一个错误信息，请省略媒体和实体组件。请看这个[论坛帖子](https://forums.raywenderlich.com/t/urlsession-tutorial-getting-started-raywenderlich-com/73741/13)。
 3. `urlComponents` 的 `url` 属性是可选类型，所以你把它解包成 `url`，如果它是 `nil`，就提前返回。
 4. 从你创建的会话中，你用查询的 `url` 和完成处理程序初始化一个 `URLSessionDataTask`，当数据任务完成时调用。
-5. 如果请求成功，你就调用辅助方法 `updateSearchResults`，该方法将响应 `data` 解析为 `tracks` 数组。
+5. 如果请求成功，你就调用辅助方法 `updateSearchResults`，该方法将返回数据解析为 `tracks` 数组。
 6. 你切换到主队列，将 `tracks` 传递给完成处理程序。
-7. 所有的任务默认处于暂停状态。调用 `resume()` 启动数据任务。
+7. 所有的任务初始化时都默认处于暂停状态。因此你需要调用 `resume()` 以开启数据任务。
 
 
 在 `SearchViewController` 中，看看在调用 `getSearchResults(searchTerm:completion:)` 时的完成闭包。在隐藏活动指示器后，它将结果存储在 `searchResults` 中，然后更新列表视图：
@@ -232,9 +232,9 @@ lazy var downloadsSession: URLSession = {
 
 在这里，你用默认配置初始化一个单独的会话，并指定一个委托，让你通过委托调用接收 `URLSession` 事件。这对于监控任务的进展非常有用。
 
-将委托队列设置为 `nil` 会导致会话创建一个串行操作队列来执行对委托方法和完成处理程序的所有调用。
+将委托队列设置为 `nil` 会导致会话创建一个串行队列来执行对委托方法和完成处理程序的所有调用。
 
-注意 `downloadSession` 的惰性创建；这让你延迟创建会话，直到你初始化视图控制器之后。这样做允许你将 `self` 作为委托参数传递给会话初始化器。
+注意 `downloadSession` 的延迟创建；这让你延迟创建会话，直到你初始化视图控制器之后。这样做允许你将 `self` 作为委托参数传递给会话初始化器。
 
 现在将 `viewDidLoad()` 末尾的 `//TODO 7` 替换为以下一行：
 
@@ -338,7 +338,7 @@ file:///Users/mymac/Library/Developer/CoreSimulator/Devices/74A1CE9B-7C49-46CA-9
 
 ## 暂停、恢复和取消下载
 
-如果用户想暂停下载或完全取消下载该怎么办？在本节中，你将实现暂停、恢复和取消功能，让用户完全控制下载过程。
+如果用户想暂停下载或完全取消下载该怎么办？在本节中，你将实现暂停、恢复和取消下载功能，让用户完全控制下载过程。
 
 你将从允许用户取消一个正在进行的下载任务。
 
@@ -502,7 +502,7 @@ func updateDisplay(progress: Float, totalSize: String) {
 }
 ```
 
-曲目单元有 `progressView` 和 `progressLabel` 插座变量。委托方法将调用这个辅助方法来设置它们的值。
+`TrackCell` 有 `progressView` 和 `progressLabel` 两个 ` @IBOutlet` 变量。委托方法将调用这个辅助方法来设置它们的值。
 
 接下来，在 `SearchViewController.swift` 中，为 `URLSessionDownloadDelegate` 扩展添加以下委托方法：
 
@@ -527,7 +527,6 @@ func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask,
       trackCell.updateDisplay(progress: download.progress, totalSize: totalSize)
     }
   }
-
 }
 ```
 
@@ -543,7 +542,7 @@ func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask,
 
 现在，更新单元格的配置，在下载过程中显示进度视图和状态。
 
-打开 `TrackCell.swift`。在 `configure(track:download:download:)` 中，在 `if-closure` 里面，在暂停按钮的标题设置之后，添加以下一行：
+打开 `TrackCell.swift`。在 `configure(track:download:download:)` 中，在 `if` 代码块中，在暂停按钮的标题设置之后，添加以下一行：
 
 ```swift
 // 设置下载进度文本
@@ -552,7 +551,7 @@ progressLabel.text = download.isDownloading ? "正在下载中..." : "下载已�
 
 这使得单元格在来自委托方法的第一次更新之前，以及在下载暂停的时候有东西可以显示。
 
-现在，在两个按钮的 `if-closure` 和 `isHidden` 行下面添加以下代码：
+现在，在两个按钮的  `isHidden` 下面添加以下代码：
 
 ```swift
 progressView.isHidden = !showDownloadControls
@@ -607,7 +606,7 @@ let configuration = URLSessionConfiguration.background(withIdentifier: "com.rayw
 
 ### 重新启动你的应用程序
 
-如果一个后台任务在应用程序没有运行时完成，应用程序将在后台重新启动。你需要在你的应用程序委托中处理这个事件。
+当一个后台任务完成时，如果应用程序没有处于运行状态，应用程序将在后台重新启动。你需要在你的应用程序委托中处理这个事件。
 
 切换到 `AppDelegate.swift`，用以下代码替换 ``//TODO 17`：
 

@@ -5,6 +5,11 @@
 //  Created by Qilin Hu on 2022/3/17.
 //
 
+/**
+ 参考：
+ [Enum-Driven TableView Development](https://www.raywenderlich.com/5542-enum-driven-tableview-development)
+ */
+
 import UIKit
 
 // 包含关联值的枚举类型，用于描述当前列表的不同状态，同时传递 Recording 数据
@@ -64,6 +69,8 @@ class ChirperViewController: UIViewController {
     override func loadView() {
         super.loadView()
 
+        view.backgroundColor = UIColor.systemBackground
+
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(tableView)
@@ -80,7 +87,6 @@ class ChirperViewController: UIViewController {
         super.viewDidLoad()
         title = "Chirper"
 
-        view.backgroundColor = UIColor.systemBackground
         prepareNavigationBar()
         prepareSearchBar()
         prepareTableView()

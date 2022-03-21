@@ -56,6 +56,11 @@
         "title": "枚举驱动的 TableView",
         "description": "",
         "className": "ChirperViewController"
+    }, {
+        "image": "image",
+        "title": "无限滚动的 TableView",
+        "description": "",
+        "className": "ModeratorsSearchViewController"
     }]
 }, {
     "title": "集合视图",
