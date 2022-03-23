@@ -48,6 +48,7 @@ class AuteurListViewController: UIViewController {
         // !!!: 自适应 Cell 高度
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 600
+        
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(AuteurTableViewCell.nib, forCellReuseIdentifier: AuteurTableViewCell.identifier)

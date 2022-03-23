@@ -8,12 +8,12 @@
 
 首先，我想回顾一下 `UIViewController` 的生命周期方法，你可能对其中一些方法很熟悉。它们是按照以下顺序被调用的：
 
-* loadView
-* viewDidLoad
-* viewWillAppear
-* viewWillLayoutSubviews
-* viewDidLayoutSubviews
-* viewDidAppear
+* `loadView`
+* `viewDidLoad`
+* `viewWillAppear`
+* `viewWillLayoutSubviews`
+* `viewDidLayoutSubviews`
+* `viewDidAppear`
 
 在前自动布局时代，你必须在`viewDidLayoutSubviews`方法中进行布局计算，但由于这是一个专业的自动布局教程，我们将只关注`loadView`和`viewDidLoad`方法。
 
@@ -40,7 +40,7 @@ class ViewController: UIViewController {
 
         let testView = UIView(frame: .zero)
         testView.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(testView)
+        view.addSubview(testView)
         NSLayoutConstraint.activate([
             testView.widthAnchor.constraint(equalToConstant: 64),
             testView.widthAnchor.constraint(equalTo: testView.heightAnchor),
@@ -67,7 +67,7 @@ class ViewController: UIViewController {
 
 
 
-## 常见的UIKit自动布局约束用例
+## 常见的 UIKit 自动布局约束用例
 
 所以我答应过你，我将向你展示如何以编程方式制作约束，对吗？让我们现在就来做。首先，我只使用布局锚。你可以用视觉格式语言来浪费你的时间，但那绝对是个死胡同。所以记住我的话：只使用锚点或堆栈视图，而不使用其他东西
 
@@ -217,7 +217,7 @@ class ViewController: UIViewController {
 
 
 
-## 如何为iOS创建自适应布局
+## 如何为 iOS 创建自适应布局
 
 甚至苹果也在为内置的iOS应用程序的自适应布局而苦恼。如果你看看那些用集合视图制作的应用程序--比如照片--在每个设备上的布局都很好。然而，还有一些其他的，在我看来，在大屏幕上的体验是很糟糕的。
 
