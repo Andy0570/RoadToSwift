@@ -153,8 +153,8 @@
         "className": "AttributedStringViewController"
     }, {
         "image": "image",
-        "title": "-",
+        "title": "将渐变色应用于 UILabel",
         "description": "-",
-        "className": "-"
+        "className": "GradientColorViewController"
     }]
 }]

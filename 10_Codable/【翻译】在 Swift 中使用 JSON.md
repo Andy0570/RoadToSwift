@@ -1,4 +1,8 @@
-> 原文：[Working with JSON in Swift](https://developer.apple.com/swift/blog/?id=37)
+> 原文：[Working with JSON in Swift @Apple 20160912](https://developer.apple.com/swift/blog/?id=37)
+>
+> 💡 在 Swift 4 之前，你需要使用 `JSONSerialization` 将 JSON 转换为模型对象，反之亦然。但 Swift 5 之后我们有了更好的方式：[Codable](https://developer.apple.com/documentation/swift/codable)。只要让你的模型对象遵守 Codable 协议，你几乎可以自动将 JSON 转换为模型对象并返回。
+
+
 
 如果您的应用程序与 Web 应用程序通信，则从服务器返回的信息通常采用 `JSON` 格式。您可以使用 Foundation 框架的 `JSONSerialization` 类将 JSON 转换为 Swift 数据类型，如 `Dictionary`、`Array`、`String`、`Number` 和 `Bool`。但是，由于您无法确定应用程序接收到的 JSON 的结构或值，因此正确反序列化模型对象可能具有挑战性。这篇文章描述了在应用程序中使用 JSON 时可以采取的几种方法。
 

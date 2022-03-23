@@ -664,11 +664,11 @@
 
 ## 调试
 
-* [chisel](https://github.com/facebook/chisel) ⭐️8.7k - FaceBook 开源的 lldb 调试命令集合。
+* [chisel](https://github.com/facebook/chisel) ⭐️8.7k - FaceBook 开源的 LLDB 调试命令集合。
 * [FLEX](https://github.com/FLEXTool/FLEX) ⭐️12.6k - Flipboard 开源的一系列在应用中调试的工具集。
 * [lowmad](https://github.com/bangerang/lowmad) 一个用于管理 LLDB 中的脚本和配置的命令行工具。
 * [GDPerformanceView-Swift](https://github.com/dani-gavrilov/GDPerformanceView-Swift) ⭐️2.1k - 在状态栏上显示 FPS、CPU 和内存使用率、设备型号、应用程序和iOS版本，并通过委托（Delegate）报告 FPS、CPU 和内存使用率。
-* [PAirSandbox-Swift](https://github.com/TeacherXue/PAirSandbox-Swift) ⭐️4 - PAirSandbox Swift 版，仿照 MrPeak 的 PAirSandbox 可方便实时查看沙盒中的文件并传送给 mac。
+* [PAirSandbox-Swift](https://github.com/TeacherXue/PAirSandbox-Swift) ⭐️4 - PAirSandbox Swift 版，仿照 MrPeak 的 [PAirSandbox](https://github.com/music4kid/AirSandbox) 可方便实时查看沙盒中的文件并传送给 mac。
 * [LayoutInspector](https://github.com/isavynskyi/LayoutInspector) ⭐️490 - 3D 视角 iOS 应用布局视图检查器。
 * [Pulse](https://github.com/kean/Pulse) ⭐️4k - Apple 平台的网络检查器和记录器。
 * [PulsePro](https://github.com/kean/PulsePro) ⭐️200 - Pulse Pro 是一款专业的 macOS 应用程序，可让您实时查看日志。该应用程序旨在灵活、可扩展和准确，同时使用所有熟悉的 macOS 模式。它可以通过表格和文本模式、过滤器、滚动标记、全新的网络检查器、JSON 过滤器等方式轻松导航大型日志文件。[raywenderlich 教程](https://www.raywenderlich.com/30189310-pulse-sdk-integration-tutorial-for-ios-network-logger)
