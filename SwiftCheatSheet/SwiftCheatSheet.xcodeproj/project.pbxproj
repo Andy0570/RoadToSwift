@@ -325,6 +325,13 @@
 			path = GradientColor;
 			sourceTree = "<group>";
 		};
+		2246199E27EC10B30096C856 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		2246DD0727C474B6006A3AC1 /* UICollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -801,6 +808,7 @@
 		22D2233427BCEB89000EAD0F /* SwiftCheatSheet */ = {
 			isa = PBXGroup;
 			children = (
+				2246199E27EC10B30096C856 /* Extension */,
 				2246199727EAF4560096C856 /* GradientColor */,
 				227E7EBF27E092BA009D5E45 /* NSMutableAttributedString */,
 				229AC7CB27D5E1F7001D81D2 /* Model-View-ViewModel */,

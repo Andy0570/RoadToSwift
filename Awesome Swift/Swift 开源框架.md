@@ -92,11 +92,14 @@
 ## 自动布局
 
 * :heart: [SnapKit](https://github.com/SnapKit/SnapKit) ⭐️ 18k - Auto Layout 自动布局框架
+* :heart: [EasyAnchor](https://github.com/onmyway133/EasyAnchor) ⭐️445 - 声明式、可扩展、强大的自动布局
 * [PureLayout](https://github.com/PureLayout/PureLayout) - ⭐️7.5k - iOS&OS X 自动布局的终极 API ー令人印象深刻的简单、强大、兼容 Objective-C 和 Swift。
-* [Cartography](https://github.com/robb/Cartography) ⭐️7.3k - 基于代码级的自动布局封装框架
+* [Cartography](https://github.com/robb/Cartography) ⭐️7.3k - 用于 Swift 的声明式自动布局封装框架
 * [PinLayout](https://github.com/mirego/PinLayout) ⭐️1.8k - Extremely Fast views layouting without auto layout. No magic, pure code, full control and blazing fast. Concise syntax, intuitive, readable & chainable.
 * [Swiftstraints](https://github.com/Skyvive/Swiftstraints) - 强大的自动布局框架，让你在一行代码中编写约束。
 * [Neon](https://github.com/mamaral/Neon) ⭐️4.6k - 适用于 iPhone 和 iPad ，更强大 UI 布局框架
+
+
 
 ## 框架
 
@@ -315,19 +318,13 @@
 * [HandySwift](https://github.com/Flinesoft/HandySwift) ⭐️415 - 由于某些原因 Swift 标准库仍未收入且很好用的功能特性扩展。
 * [Then](https://github.com/devxoul/Then) ⭐️3.7k - 为 Swift 初始化方法提供甜蜜的语法糖
 * [ExSwift](https://github.com/pNre/ExSwift) - JavaScript (Lo-Dash, Underscore) & Ruby inspired set of Swift extensions for standard types and classes.
-* [Observable-Swift](https://github.com/slazyk/Observable-Swift) - Value Observing and Events for Swift.
 * [Pythonic.swift](https://github.com/practicalswift/Pythonic.swift) - Pythonic tool-belt for Swift – a Swift implementation of selected parts of Python standard library.
 * [SWRoute](https://github.com/rodionovd/SWRoute) - A tiny Swift wrapper. Allows you to route (hook) quite any function/method with another function/method or even a closure.
-* [Euler](https://github.com/mattt/Euler) - Swift Custom Operators for Mathematical Notation.
-* [swix](https://github.com/scottsievert/swix) - Swift Matrix and Machine Learning Library.
-* [Easy-Cal-Swift](https://github.com/onevcat/Easy-Cal-Swift) - Overload +-*/ operator for Swift, make it easier to use (and not so strict).
-* [AlecrimCoreData](https://github.com/Alecrim/AlecrimCoreData) - A simple Core Data wrapper library written in Swift.
-* [SwiftState](https://github.com/inamiy/SwiftState) - Elegant state machine for Swift.
+* [SwiftState](https://github.com/inamiy/SwiftState) ⭐️873 - 优雅的 Swift 状态机。
 * [LlamaKit](https://github.com/LlamaKit/LlamaKit) - Collection of must-have functional Swift tools.
+* :heart: [Result](https://github.com/antitypical/Result) ⭐️2.5k - Swift 类型对任意操作的成功/失败进行建模。
 * [Basis](https://github.com/typelift/Basis) - A number of foundational functions, types, and typeclasses.
 * [CAAnimation + Closure](https://github.com/honghaoz/Swift-CAAnimation-Closure) - Add start / completion closures for CAAnimation instances
-* [SwiftyUserDefaults](https://github.com/radex/SwiftyUserDefaults) — a cleaner, swiftier API for NSUserDefaults
-* [Pluralize.swift](https://github.com/joshualat/Pluralize.swift) - Great Swift String Pluralize Extension
 * [SwiftSequence](https://github.com/oisdk/SwiftSequence) - A μframework of extensions for SequenceType in Swift 2.0, inspired by Python's itertools, Haskell's standard library, and other things.
 * [BrightFutures](https://github.com/Thomvis/BrightFutures) - Write great asynchronous code in Swift using futures and promises.
 * [EZSwiftExtensions](https://github.com/goktugyil/EZSwiftExtensions) - :smirk: How Swift standard types and classes were supposed to work.
@@ -336,6 +333,7 @@
 * [ZamzamKit](https://github.com/ZamzamInc/ZamzamKit) - A collection of micro utilities and extensions for Standard Library, Foundation and UIKit.
 * [Bow](https://github.com/bow-swift/bow) - Companion library for Typed Functional Programming in Swift.
 * [SwiftCoroutine](https://github.com/belozierov/SwiftCoroutine) - Swift coroutines for iOS and macOS.
+* [Omnia](https://github.com/onmyway133/Omnia) ⭐️55 - Everything your projects need to know.
 
 
 
@@ -352,7 +350,8 @@
 
 * [SwiftRichString](https://github.com/malcommac/SwiftRichString) ⭐️2.8k - Elegant Attributed String composition in Swift。
 * [SwiftScanner](https://github.com/malcommac/SwiftScanner) ⭐️172 - String Scanner in pure Swift (supports unicode)
-* [Highlightr](https://github.com/raspu/Highlightr) ⭐️1.3k - iOS & OSX 语法高亮.
+* [Highlightr](https://github.com/raspu/Highlightr) ⭐️1.3k - Highlightr 是一个使用 Swift 构建的 iOS 和 macOS 语法荧光笔。它以 [highlight.js](https://highlightjs.org/) 为核心，支持185种语言，自带89种样式
+* [Pluralize.Swift](https://github.com/joshualat/Pluralize.swift) ⭐️188 - 伟大的 Swift 字符串扩展
 
 
 
@@ -411,7 +410,7 @@
 
 ## 文件
 
-* [SwiftyUserDefaults](https://github.com/sunshinejr/SwiftyUserDefaults) ⭐️4.6k - 轻量级数据存储类 NSUserDefaults 扩展类，它使类型数据访问和存储更为便捷、直观。
+* [SwiftyUserDefaults](https://github.com/sunshinejr/SwiftyUserDefaults) ⭐️4.6k - 轻量级数据存储类 `NSUserDefaults` 的扩展，它使类型数据访问和存储更为便捷、直观。
 * [FileKit](https://github.com/nvzqz/FileKit/) ⭐️2.2k - Swift 中简单易懂的文件管理。
 * [FileProvider](https://github.com/amosavian/FileProvider) ⭐️802 - 提供了一套完整、实用，接口统一的本地及远程文件管理封装器实现 Local, iCloud and Remote (WebDAV/FTP/Dropbox/OneDrive）
 * [PathKit](https://github.com/kylef/PathKit) ⭐️1.3k - 小而美的路径管理类。
@@ -438,6 +437,7 @@
 * [SwiftMongoDB](https://github.com/Danappelxx/SwiftMongoDB) - A Swift driver for MongoDB.
 * [ModelAssistant](https://github.com/ssamadgh/ModelAssistant) - Elegant library to manage the interactions between view and model in Swift.
 * [PostgresClientKit](https://github.com/codewinsdotcom/PostgresClientKit) - A PostgreSQL client library for Swift. Does not require libpq.
+* [AlecrimCoreData](https://github.com/Alecrim/AlecrimCoreData) - A simple Core Data wrapper library written in Swift.
 
 
 ## Events
@@ -486,12 +486,17 @@
 * [SHA256-Swift](https://github.com/CryptoCoinSwift/SHA256-Swift) - Swift framework wrapping CommonCrypto's SHA256 methods.
 * [SwiftSSL](https://github.com/SwiftP2P/SwiftSSL) - An Elegant crypto toolkit in Swift.
 * [SwiftyRSA](https://github.com/TakeScoop/SwiftyRSA) - RSA public/private key encryption in Swift
-* [Surge](https://github.com/Jounce/Surge) ⭐️5k - 使用 Accelerate 框架，为矩阵数学、数字信号处理和图像处理提供高性能函数。
-* [Euler](https://github.com/mattt/Euler) ⭐️1.1k - 直观、简洁的数学表达式 `∛27÷3+∑[3,1,2]`。
 * [Algorithm-Guide](https://github.com/Xunzhuo/Algorithm-Guide) ⭐️1.4K - 循卓的算法与数据结构教程。
 * [EllipticCurveKeyPair](https://github.com/agens-no/EllipticCurveKeyPair) ⭐️641 - 使用 Secure Enclave 进行签名、验证、加密和解密。
 * [RNCryptor](https://github.com/RNCryptor/RNCryptor) ⭐️3.3k - 针对数据的 AES 加密封装。提供多语言封装解决方案。
 
+
+## 数学计算
+
+* [Surge](https://github.com/Jounce/Surge) ⭐️5k - 使用 Accelerate 框架，为矩阵数学、数字信号处理和图像处理提供高性能函数。
+* [Euler](https://github.com/mattt/Euler) ⭐️1.1k - 直观、简洁的数学表达式 `∛27÷3+∑[3,1,2]`。
+* :warning: [Euler](https://github.com/mattt/Euler) ⭐️1.1k - 用于数学符号的 Swift 自定义运算符
+* [Easy-Cal-Swift](https://github.com/onevcat/Easy-Cal-Swift) - Overload +-*/ operator for Swift, make it easier to use (and not so strict).
 
 
 ## 安全/Keychain钥匙串
@@ -594,6 +599,7 @@
 ## KVO
 
 * :heart: [Bond](https://github.com/DeclarativeHub/Bond) ⭐️4.2k - A Swift binding framework
+* [Observable-Swift](https://github.com/slazyk/Observable-Swift) ⭐️1.2k - KVO for Swift - Value Observing and Events
 * [RZDataBinding](https://github.com/Rightpoint/RZDataBinding) ⭐️551 - Lightweight KVO-based data binding options.
 
 
@@ -814,11 +820,14 @@
 ## TensorFlow
 
 * [tensorflow/swift](https://github.com/tensorflow/swift) ⭐️6k - 集成使用 TensorFlow 专用版 Swift。
+* [swix](https://github.com/scottsievert/swix) - Swift 矩阵与机器学习库.
+
 
 
 ## Metal
 
 * [Satin](https://github.com/Hi-Rez/Satin) - ⭐️329 基于 Metal API 实现的一个 3D 引擎
+
 
 
 ## Xcode 扩展
