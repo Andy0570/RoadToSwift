@@ -20,7 +20,8 @@
 
 * :heart: [Alamofire](https://github.com/Alamofire/Alamofire) ⭐️36.7k - Alamofire 是 AFNetworking 的作者 mattt 新写的网络请求的 swift 库。
 * :heart: [Moya](https://github.com/ashfurrow/Moya) ⭐️13.6k - 对 Alamofire 的封装，使用枚举将网络层实现细节与页面逻辑代码分离，方便单元测试，支持 stub 测试，配合 RxSwift 食用更佳。[官方中文文档](https://github.com/Moya/Moya/blob/master/Readme_CN.md)
-* [SwiftHTTP](https://github.com/daltoniam/SwiftHTTP) - Thin wrapper around NSURLSession in swift. Simplifies HTTP requests.
+* [SwiftHTTP](https://github.com/daltoniam/SwiftHTTP) ⭐️1.9k - 快速围绕 `NSURLSession` 进行薄包装。简化 HTTP 请求。
+* [Swift-http](https://github.com/binarybirds/swift-http) ⭐️47 - 一个很棒的 Swift HTTP 库，可以使用 API 端点快速创建通信层。
 * [apple/swift-nio](https://github.com/apple/swift-nio) ⭐️6.8k - SwiftNIO  是一个跨平台的异步事件驱动的网络应用框架，用于快速开发可维护的高性能协议服务器和客户端
 * [apple/swift-nio-http2](https://github.com/apple/swift-nio-http2) ⭐️372 - 苹果发布 SwiftNIO 针对 HTTP/2 的开源支持库。
 * [Net](https://github.com/nghialv/Net) - HttpRequest wrapper written in Swift.
@@ -418,6 +419,7 @@
 * [Path.swift](https://github.com/mxcl/Path.swift) ⭐️890 - 功能完整的文件系统针对目录级路径的 CRUD（增删改查）。
 
 
+
 ## 缓存
 
 * [HanekeSwift](https://github.com/Haneke/HanekeSwift) ⭐️5.1k - A lightweight generic cache for iOS written in Swift with extra love for images.
@@ -425,7 +427,17 @@
 * [Cache](https://github.com/hyperoslo/Cache) ⭐️2.5k - 多类型数据混合缓存库。
 
 
+## Keychain 钥匙串
+
+* :heart: [cocoapods-keys](https://github.com/orta/cocoapods-keys) ⭐️1.5k - 一款 CocoaPods 插件，将你要加密的信息储存在钥匙串中，而不是硬编码在项目代码里。
+* [KeychainAccess](https://github.com/kishikawakatsumi/KeychainAccess) ⭐️6.8k - 适用于 iOS 和 OS X 的 Keychain 的简单 Swift 包装器。使在 Swift 中使用 Keychain API 易于接受和使用。
+* [Valet](https://github.com/square/Valet) ⭐️3.7k - 安全地将数据存储在 iOS、tvOS 或 macOS 钥匙串中，而无需了解钥匙串的工作原理。
+
+
+
+
 ## 数据库
+
 *使用 Swift 语言实现的数据库*
 
 * [Realm](https://github.com/realm/realm-swift) ⭐️14.8k - 志向代替 Core Data 和 SQLite 的移动端数据库。
@@ -440,7 +452,11 @@
 * [AlecrimCoreData](https://github.com/Alecrim/AlecrimCoreData) - A simple Core Data wrapper library written in Swift.
 
 
+
+
+
 ## Events
+
 *用于一对多（one-to-many）通信的框架*
 
 * [Caravel](https://github.com/coshx/caravel) - A Swift event bus for UIWebView and JS
@@ -499,18 +515,6 @@
 * [Easy-Cal-Swift](https://github.com/onevcat/Easy-Cal-Swift) - Overload +-*/ operator for Swift, make it easier to use (and not so strict).
 
 
-## 安全/Keychain钥匙串
-
-* :heart: [cocoapods-keys](https://github.com/orta/cocoapods-keys) ⭐️1.5k - 一款 CocoaPods 插件，将你要加密的信息储存在钥匙串中，而不是硬编码在项目代码里。
-* [KeychainAccess](https://github.com/kishikawakatsumi/KeychainAccess) ⭐️6k - Keychain 钥匙串访问。
-* [Valet](https://github.com/square/Valet) ⭐️3.7k - 在钥匙串中安全、方便的去存储你的数据。
-* [dumpdecrypted](https://github.com/stefanesser/dumpdecrypted) ⭐️2.7k - 将加密的 iPhone 应用程序中的解密的 mach-o 文件从内存转储到磁盘。
-
-
-### FaceID/TouchID
-
-* [BiometricAuthentication](https://github.com/rushisangani/BiometricAuthentication) ⭐️780 - 针对 Face ID 和 Touch ID 更简洁地封装使用。
-* [SwiftPasscodeLock](https://github.com/yankodimitrov/SwiftPasscodeLock) ⭐️672 - 一个用 Swift 写的 TouchID 身份验证的 iOS 密码锁。
 
 
 
@@ -681,9 +685,8 @@
 * :heart: [InjectionIII](https://github.com/johnno1962/InjectionIII) ⭐️2.8k - 支持 OC、Swift 以及 Swift 和 OC 混编项目的 UI 热重载工具，采取在模拟器 (真机不支持) 注入方式实现 UI 热重载，修改完 UI 直接 cmd+s，不用重新编译运行就能看到 UI 效果，堪称神器。 目前已经更新支持 Xcode13 和 iOS15。
 * [SwiftTweaks](https://github.com/Khan/SwiftTweaks) ⭐️1.3k - 调整你的iOS应用，而不需要重新编译。
 * [TweaKit](https://github.com/Cokile/TweaKit) ⭐️3 - 类似于 SwiftTweaks, 另一个用于调整参数和特征标记的库。
-* [mocha](https://github.com/White-White/mocha) ⭐️31 - Mocha 是一款 Swift 编写的 Mach-O 文件可视化工具，通过解释 Mach-O 文件中每一个字节的含义，帮助使用者理解 Mach-O。
-* [Optimizing-Swift-Build-Times](https://github.com/fastred/Optimizing-Swift-Build-Times) ⭐️3.5k - 收集关于优化 Swift 项目编译时间的建议。
-* [ipatool](https://github.com/majd/ipatool) ⭐️1.6k - 允许从 iOS App Store 搜索和下载应用包（ipa 文件）的命令行工具。
+
+
 
 
 
@@ -693,6 +696,7 @@
 * [Instruments 使用指南官方文档](https://developer.apple.com/library/archive/documentation/AnalysisTools/Conceptual/instruments_help-collection/Chapter/Chapter.html)
 * [Clang Compiler User’s Manual](https://clang.llvm.org/docs/UsersManual.html#diagnostics_pragmas)
 * [Advanced Debugging with Xcode and LLDB - WWDC 2018](https://developer.apple.com/videos/play/wwdc2018/412/)
+
 
 
 
@@ -719,12 +723,27 @@
 
 
 
-### 持续集成&持续交付
+## 持续集成&持续交付
 
 * [fastlane](https://fastlane.tools/)
 * [Travis CI](https://travis-ci.org/)
 * Jenkins
 * [IBAnimatable](https://github.com/IBAnimatable/IBAnimatable) ⭐️8.6k - 使用 IBAnimatable 为 App Store 应用程序设计和定制原型 UI、交互、导航、过渡和动画 Interface Builder。
+
+
+
+## 逆向与安全
+
+* [ipatool](https://github.com/majd/ipatool) ⭐️1.6k - 允许从 iOS App Store 搜索和下载应用包（ipa 文件）的命令行工具。
+* [dumpdecrypted](https://github.com/stefanesser/dumpdecrypted) ⭐️2.7k - 将加密的 iPhone 应用程序中的解密的 mach-o 文件从内存转储到磁盘。
+* [mocha](https://github.com/White-White/mocha) ⭐️31 - Mocha 是一款 Swift 编写的 Mach-O 文件可视化工具，通过解释 Mach-O 文件中每一个字节的含义，帮助使用者理解 Mach-O。
+
+
+### FaceID/TouchID
+
+* [BiometricAuthentication](https://github.com/rushisangani/BiometricAuthentication) ⭐️780 - 针对 Face ID 和 Touch ID 更简洁地封装使用。
+* [SwiftPasscodeLock](https://github.com/yankodimitrov/SwiftPasscodeLock) ⭐️672 - 一个用 Swift 写的 TouchID 身份验证的 iOS 密码锁。
+
 
 
 
@@ -796,7 +815,7 @@
 * [RxCombine](https://github.com/CombineCommunity/RxCombine) ⭐️871 - RxSwift 和 Apple Combine 框架之间的双向桥接类型
 
 
-## Core ML
+## CoreML
 
 * [CoreMLHelpers](https://github.com/hollance/CoreMLHelpers) ⭐️962 - 一些输入/输出类型转换和扩展，以便于更容易地去使用 CoreML。
 * [Inception-Core](https://github.com/hollance/Inception-Core) ⭐️92 - Inception-v3 运行在 CoreML 框架内
@@ -850,7 +869,7 @@
 * [Design-Patterns-In-Swift](https://github.com/ochococo/Design-Patterns-In-Swift) ⭐️13.2k - Swift 5.0 设计模式
 * [awesome-ios-architecture](https://github.com/onmyway133/awesome-ios-architecture) ⭐️4.5k - Better ways to structure iOS apps
 * [Awesome-Swift-Playgrounds](https://github.com/uraimo/Awesome-Swift-Playgrounds) ⭐️3.6k - A List of Awesome Swift Playgrounds
-* [Optimizing-Swift-Build-Times](https://github.com/fastred/Optimizing-Swift-Build-Times) ⭐️3.5k - 化Swift项目编译时间。
+* [Optimizing-Swift-Build-Times](https://github.com/fastred/Optimizing-Swift-Build-Times) ⭐️3.5k - 收集关于优化 Swift 项目编译时间的建议。
 * [FRP iOS Learning resources](https://gist.github.com/JaviLorbada/4a7bd6129275ebefd5a6) ⭐️1.3k - 函数响应式编程学习资源
 
 
