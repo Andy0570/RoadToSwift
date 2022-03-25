@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (5.5.0)
   - IGListDiffKit (4.0.0)
   - IGListKit (4.0.0):
     - IGListDiffKit (= 4.0.0)
@@ -31,6 +32,7 @@ PODS:
   - SwiftyBeaver (1.9.5)
 
 DEPENDENCIES:
+  - Alamofire
   - IGListKit
   - Kingfisher (~> 7.0)
   - SwifterSwift
@@ -38,6 +40,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - Alamofire
     - IGListDiffKit
     - IGListKit
     - Kingfisher
@@ -45,12 +48,13 @@ SPEC REPOS:
     - SwiftyBeaver
 
 SPEC CHECKSUMS:
+  Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
   IGListDiffKit: 665d6cf43ce726e676013db9c7d6c4294259b6b2
   IGListKit: fd5a5d21935298f5849fa49d426843cff97b77c7
   Kingfisher: 3ac0b75b155cabc0e544877d1a4deea29feece92
   SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
   SwiftyBeaver: 84069991dd5dca07d7069100985badaca7f0ce82
 
-PODFILE CHECKSUM: 1444af7bc519494f0970a295219f3ecf71c94074
+PODFILE CHECKSUM: 505917bf24fa66814a9cc541ef6908bc429d261e
 
 COCOAPODS: 1.11.2

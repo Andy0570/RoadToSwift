@@ -8,6 +8,10 @@
 /**
  在 UITableViewCell 中动态调整 UITextView 的高度
 
+ 要点：
+ * UITextView 使用 Auto Layout 方式布局；
+ * 让 cell 遵守 UITextViewDelegate 协议，并实现 textViewDidChange(:) 方法，当文本内容发生变化时，执行高度更新回调
+
  参考：<https://www.swiftdevcenter.com/the-dynamic-height-of-uitextview-inside-uitableviewcell-swift/>
  */
 
@@ -64,6 +68,8 @@ extension GrowingCellViewController: UITableViewDataSource {
         return cell
     }
 }
+
+// MARK: - GrowingCellProtocol
 
 extension GrowingCellViewController: GrowingCellProtocol {
     func updateHeightOfRow(_ cell: GrowingCell, _ textView: UITextView) {

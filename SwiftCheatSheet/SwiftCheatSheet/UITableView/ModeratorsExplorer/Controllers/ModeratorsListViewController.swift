@@ -66,7 +66,7 @@ class ModeratorsListViewController: UIViewController, AlertDisplayer {
 
 extension ModeratorsListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // 返回所有数据源数量
+        // !!!: 返回所有数据源的数量
         return viewModel.totalCount
     }
 

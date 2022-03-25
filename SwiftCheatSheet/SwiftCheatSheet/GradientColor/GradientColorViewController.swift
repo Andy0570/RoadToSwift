@@ -6,11 +6,12 @@
 //
 
 /**
- ### 将渐变色应用于 UILabel
+ 将渐变色应用于 UILabel
 
+ 要点：
  * 创建一个 UIStackView 子类作为容器视图，封装 UILabel
 
- ### 参考
+ 参考：
  [Always correct gradient text in UIKit](https://nemecek.be/blog/143/always-correct-gradient-text-in-uikit)
  */
 import UIKit

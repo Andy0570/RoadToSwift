@@ -7,7 +7,7 @@
 
 import UIKit
 
-// 根据页面中 UITextField 输入框的输入状态更新按钮的 enable 状态
+// 根据页面中 UITextField 的文本内容，自动更新按钮的 enable 状态
 final class ButtonEnablingBehavior: NSObject {
     let textFields: [UITextField]
     let onChange: (Bool) -> Void

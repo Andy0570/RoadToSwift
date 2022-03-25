@@ -735,8 +735,15 @@
 ## 逆向与安全
 
 * [ipatool](https://github.com/majd/ipatool) ⭐️1.6k - 允许从 iOS App Store 搜索和下载应用包（ipa 文件）的命令行工具。
-* [dumpdecrypted](https://github.com/stefanesser/dumpdecrypted) ⭐️2.7k - 将加密的 iPhone 应用程序中的解密的 mach-o 文件从内存转储到磁盘。
+* [stefanesser/dumpdecrypted](https://github.com/stefanesser/dumpdecrypted) ⭐️2.7k - 将加密的 iPhone 应用程序中的解密的 mach-o 文件从内存转储到磁盘。
+* [AloneMonkey/dumpdecrypted](https://github.com/AloneMonkey/dumpdecrypted) ⭐️252
 * [mocha](https://github.com/White-White/mocha) ⭐️31 - Mocha 是一款 Swift 编写的 Mach-O 文件可视化工具，通过解释 Mach-O 文件中每一个字节的含义，帮助使用者理解 Mach-O。
+* [MonkeyDev](https://github.com/AloneMonkey/MonkeyDev) ⭐️5.6k - CaptainHook Tweak、Logos Tweak 和命令行工具、修补 iOS 应用程序，无需越狱。
+* [frida-ios-dump](https://github.com/AloneMonkey/frida-ios-dump) ⭐️2.3k - 从越狱设备中提取解密的 ipa 文件。
+
+
+
+
 
 
 ### FaceID/TouchID
