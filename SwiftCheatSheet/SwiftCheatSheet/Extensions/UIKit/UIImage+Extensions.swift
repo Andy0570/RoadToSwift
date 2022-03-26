@@ -51,12 +51,12 @@ extension UIImage {
         var y: CGFloat = 0.0
         var edge: CGFloat = 0.0
 
-        if (originalWidth > originalHeight) {
+        if originalWidth > originalHeight {
             // landscape
             edge = originalHeight
             x = (originalWidth - edge) / 2.0
             y = 0.0
-        } else if (originalHeight > originalWidth) {
+        } else if originalHeight > originalWidth {
             // portrait
             edge = originalWidth
             x = 0.0

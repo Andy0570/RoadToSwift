@@ -535,11 +535,11 @@
 				2262189B27EE1F850052634A /* UIImage+Extensions.swift */,
 				226218B627EE25880052634A /* UIButton+Padding.swift */,
 				22E3480E27E84BD500369602 /* UITextField+Extensions.swift */,
-				22E3480827E8490600369602 /* AlertDisplayer.swift */,
-				226218B027EE238D0052634A /* UITableView+PDF.swift */,
-				226218B227EE24AF0052634A /* UIViewController+Extensions.swift */,
 				226218B827EE265A0052634A /* UISearchBar+Extensions.swift */,
 				226218BC27EE26F40052634A /* ReuseIdentifiable.swift */,
+				226218B227EE24AF0052634A /* UIViewController+Extensions.swift */,
+				22E3480827E8490600369602 /* AlertDisplayer.swift */,
+				226218B027EE238D0052634A /* UITableView+PDF.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";

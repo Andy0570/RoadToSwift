@@ -49,7 +49,7 @@ extension UIPrintPageRenderer {
     func generatePdfData() -> NSMutableData {
         let pdfData = NSMutableData()
         UIGraphicsBeginPDFContextToData(pdfData, self.paperRect, nil)
-        self.prepare(forDrawingPages: NSMakeRange(0, self.numberOfPages))
+        self.prepare(forDrawingPages: NSRange(location: 0, length: self.numberOfPages))
         let printRect = UIGraphicsGetPDFContextBounds()
         for pdfPage in 0..<(self.numberOfPages) {
             UIGraphicsBeginPDFPage()

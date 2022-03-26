@@ -52,7 +52,7 @@
 
 
 ### WebSocket
-* [Starscream](https://github.com/daltoniam/starscream) ⭐️7.1k - WebSocket 标准（RFC 6455）客户端库 Swift 实现。
+* [Starscream](https://github.com/daltoniam/starscream) ⭐️7.2k - WebSocket 标准（RFC 6455）客户端库 Swift 实现。
 * [SwiftWebSocket](https://github.com/tidwall/SwiftWebSocket) ⭐️1.5k - Fast Websockets in Swift for iOS and OSX.
 * [SocketRocket](https://github.com/facebookarchive/SocketRocket) ⭐️9.3k - A conforming Objective-C WebSocket client library.
 
@@ -94,7 +94,7 @@
 
 * :heart: [SnapKit](https://github.com/SnapKit/SnapKit) ⭐️ 18k - Auto Layout 自动布局框架
 * :heart: [EasyAnchor](https://github.com/onmyway133/EasyAnchor) ⭐️445 - 声明式、可扩展、强大的自动布局
-* [PureLayout](https://github.com/PureLayout/PureLayout) - ⭐️7.5k - iOS&OS X 自动布局的终极 API ー令人印象深刻的简单、强大、兼容 Objective-C 和 Swift。
+* [PureLayout](https://github.com/PureLayout/PureLayout) - ⭐️7.6k - iOS&OS X 自动布局的终极 API ー令人印象深刻的简单、强大、兼容 Objective-C 和 Swift。
 * [Cartography](https://github.com/robb/Cartography) ⭐️7.3k - 用于 Swift 的声明式自动布局封装框架
 * [PinLayout](https://github.com/mirego/PinLayout) ⭐️1.8k - Extremely Fast views layouting without auto layout. No magic, pure code, full control and blazing fast. Concise syntax, intuitive, readable & chainable.
 * [Swiftstraints](https://github.com/Skyvive/Swiftstraints) - 强大的自动布局框架，让你在一行代码中编写约束。
@@ -344,11 +344,13 @@
 * [Regex](https://github.com/kean/Regex) ⭐️171 - Open source regex engine
 * [Sweep](https://github.com/JohnSundell/Sweep) ⭐️508 - 比正则表达式简单很多的子字符串扫描和匹配。
 * [RegularExpressionDecoder](https://github.com/Flight-School/RegularExpressionDecoder) ⭐️173 - 针对结构化数据的正则表达式解析库。
+* [libPhoneNumber-iOS](https://github.com/iziz/libPhoneNumber-iOS) ⭐️2.3k - 来自 libphonenumber 的 iOS 端口（Google 的电话号码处理库）
 
 
 
 ## 字符串
 
+* [BonMot](https://github.com/Rightpoint/BonMot) ⭐️3.2k - Beautiful, easy attributed strings in Swift
 * [SwiftRichString](https://github.com/malcommac/SwiftRichString) ⭐️2.8k - Elegant Attributed String composition in Swift。
 * [SwiftScanner](https://github.com/malcommac/SwiftScanner) ⭐️172 - String Scanner in pure Swift (supports unicode)
 * [Highlightr](https://github.com/raspu/Highlightr) ⭐️1.3k - Highlightr 是一个使用 Swift 构建的 iOS 和 macOS 语法荧光笔。它以 [highlight.js](https://highlightjs.org/) 为核心，支持185种语言，自带89种样式
@@ -417,6 +419,7 @@
 * [PathKit](https://github.com/kylef/PathKit) ⭐️1.3k - 小而美的路径管理类。
 * [PDFXKit](https://github.com/PSPDFKit/PDFXKit) ⭐️204 - 苹果 PDFKit 替代框架。
 * [Path.swift](https://github.com/mxcl/Path.swift) ⭐️890 - 功能完整的文件系统针对目录级路径的 CRUD（增删改查）。
+* [ZipArchive](https://github.com/ZipArchive/ZipArchive) ⭐️5k - ZipArchive 是一个简单的实用程序类，用于在 iOS、macOS 和 tvOS 上压缩和解压缩文件。
 
 
 
@@ -499,12 +502,14 @@
 * :heart: [swift-algorithms](https://github.com/apple/swift-algorithms) ⭐️3.7k - Apple 官方维护的一套 Swift 中常用的序列和集合算法。
 * [swift-collections](https://github.com/apple/swift-collections) ⭐️1.9k - Swift 常用的数据结构。
 * [CryptoSwift](https://github.com/krzyzanowskim/CryptoSwift) ⭐️8.8k - CryptoSwift 是一个用 Swift 实现的标准和安全的密码算法集合。
+* [GRKOpenSSLFramework](https://github.com/signalapp/GRKOpenSSLFramework) ⭐️12 - 适用于 iOS 和 macOS 的 SPM、CocoaPod 和 Carthage 的 penSSL 包
 * [SHA256-Swift](https://github.com/CryptoCoinSwift/SHA256-Swift) - Swift framework wrapping CommonCrypto's SHA256 methods.
 * [SwiftSSL](https://github.com/SwiftP2P/SwiftSSL) - An Elegant crypto toolkit in Swift.
 * [SwiftyRSA](https://github.com/TakeScoop/SwiftyRSA) - RSA public/private key encryption in Swift
 * [Algorithm-Guide](https://github.com/Xunzhuo/Algorithm-Guide) ⭐️1.4K - 循卓的算法与数据结构教程。
 * [EllipticCurveKeyPair](https://github.com/agens-no/EllipticCurveKeyPair) ⭐️641 - 使用 Secure Enclave 进行签名、验证、加密和解密。
 * [RNCryptor](https://github.com/RNCryptor/RNCryptor) ⭐️3.3k - 针对数据的 AES 加密封装。提供多语言封装解决方案。
+
 
 
 ## 数学计算
@@ -520,7 +525,8 @@
 
 ## 图片加载&图片显示
 
-* [Kingfisher](https://github.com/onevcat/Kingfisher) ⭐️19.7k - 轻量级、纯 Swift 实现的网络图片下载和缓存框架。
+* :heart:[Kingfisher](https://github.com/onevcat/Kingfisher) ⭐️19.7k - 轻量级、纯 Swift 实现的网络图片下载和缓存框架。
+* :heart:[blurhash](https://github.com/woltapp/blurhash) ⭐️10.2k - 图像占位符的非常紧凑的表示。
 * [Nuke](https://github.com/kean/Nuke) ⭐️6.5k - 用于加载和缓存图像的高级框架。
 * [HanekeSwift](https://github.com/Haneke/HanekeSwift) ⭐️5.1k - 轻量带缓存高性能图片加载组件。
 * [Concorde](https://github.com/contentful-labs/Concorde) ⭐️1.4k - 
@@ -532,6 +538,7 @@
 * :orange: [VIPhotoView](https://github.com/vitoziv/VIPhotoView) ⭐️227 - 用于展示图片的工具类，因为是个 View，所以你可以放在任何地方显示。支持旋转，双击指定位置放大等。
 * :orange: [MWPhotoBrowser](https://github.com/mwaterfall/MWPhotoBrowser) ⭐️8.8k - 一个简单的 iOS 照片和视频浏览器，具有网格视图、导航栏标题和多选功能。
 * :orange: [RKSwipeCards](https://github.com/cwRichardKim/RKSwipeCards) ⭐️2.2k - 基于手势的照片显示，左滑删除，右滑喜欢，你懂的！
+
 
 
 
@@ -635,6 +642,7 @@
 * [Messenger](https://github.com/relatedcode/Messenger) ⭐️4.2k - Open source, native iOS Messenger, with realtime chat conversations (full offline support).
 * 【Archived】[NMessenger](https://github.com/eBay/NMessenger) ⭐️2.5k - 更快更轻量级的消息组件，构建于 AsyncDisplaykit 并且由 Swift 编写
 * [Cake](https://github.com/mxcl/Cake) ⭐️541 - 基于组件 MessageKit 及实时通讯云 Firestore 的即时通讯实现（功能参考 Facebook Messenger）。
+* [Signal-iOS](https://github.com/signalapp/Signal-iOS) ⭐️9.2k - A private messenger for iOS.
 
 
 
@@ -784,6 +792,7 @@
 
 * [CommandCougar](https://github.com/surfandneptune/CommandCougar) - An elegant pure Swift library for building command line applications.
 * [SwiftInfo](https://github.com/rockbruno/SwiftInfo) ⭐️1k - 命令行工具跟踪检查 iOS 应用版本代码级变化。
+* [Bagbutik](https://github.com/MortenGregersen/Bagbutik) ⭐️22 - 根据官方 OpenAPI 规范为 App Store Connect API 生成 Swift 代码。
 
 
 

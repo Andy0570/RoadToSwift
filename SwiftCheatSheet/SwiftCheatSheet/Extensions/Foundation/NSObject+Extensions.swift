@@ -8,7 +8,7 @@
 import Foundation
 
 extension NSObject {
-    /// String describing the class name.
+    /// 返回当前 class 名称的字符串形式
     static var className: String {
         return String(describing: self)
     }
