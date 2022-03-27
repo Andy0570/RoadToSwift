@@ -8,42 +8,24 @@
 import UIKit
 
 extension UIImage {
-    /**
-     通过颜色生成图片
+    /// 生成从左到右的渐变图片
+    static func gradientImage(bounds: CGRect, colors: [UIColor]) -> UIImage {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = bounds
+        gradientLayer.colors = colors.map { $0.cgColor }
+        // 从左到右渐变，默认是从上到下，即 (0.5, 0.0) -> (0.5, 1.0)
+        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
+        gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
 
-     let image = UIImage.imageWithColor(color: UIColor.red)
-     */
-    class func imageWithColor(color: UIColor) -> UIImage {
-        let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 1, height: 1), false, 0)
-        color.setFill()
-        UIRectFill(rect)
-        let image: UIImage? = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-
-        return image!
-    }
-
-    convenience init?(color: UIColor, size: CGSize = CGSize(width: 1, height: 1)) {
-        let rect = CGRect(origin: .zero, size: size)
-        UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
-        color.setFill()
-        UIRectFill(rect)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-
-        guard let cgImage = image?.cgImage else {
-            return nil
+        let renderer = UIGraphicsImageRenderer(bounds: bounds)
+        return renderer.image { context in
+            gradientLayer.render(in: context.cgContext)
         }
-        self.init(cgImage: cgImage)
     }
 
-    /**
-     将图片裁剪为正方形
-
-     let img = UIImage() // Must be a real UIImage
-     let imgSquared = img.squared()
-     */
+    /// 将图片裁剪为正方形
+    /// let img = UIImage() // Must be a real UIImage
+    /// let imgSquared = img.squared()
     func squared() -> UIImage? {
         let originalWidth  = size.width
         let originalHeight = size.height
@@ -74,12 +56,9 @@ extension UIImage {
         return UIImage(cgImage: imageRef, scale: scale, orientation: imageOrientation)
     }
 
-    /**
-     调整图片像素大小
-
-     let img2 = UIImage() // Must be a real UIImage
-     let img2Thumb = img2.resized(maxSize: 512)
-     */
+    /// 调整图片像素大小
+    /// let img2 = UIImage() // Must be a real UIImage
+    /// let img2Thumb = img2.resized(maxSize: 512)
     func resized(maxSize: CGFloat) -> UIImage? {
         let scale: CGFloat
         if size.width > size.height {

@@ -51,13 +51,6 @@ extension String {
         return (0..<length).map { String(format: "%02x", hash[$0]) }.joined()
     }
 
-    // 本地化字符串
-    // "string_id".localizedString
-    @available(swift, deprecated: 5.0, message: "请使用 SwifterSwift/StringExtensions.swift 中的 'localized(comment:)' 方法")
-    var localizedString: String {
-        return NSLocalizedString(self, comment: "")
-    }
-
     /**
      字符串截取，整数下标语法
 
@@ -112,43 +105,13 @@ extension String {
         return self[startIndex..<end]
     }
 
-    // 检查字符串是否只包含数字
-    var containsOnlyDigits: Bool {
-        let notDigits = NSCharacterSet.decimalDigits.inverted
-        return rangeOfCharacter(from: notDigits, options: String.CompareOptions.literal, range: nil) == nil
-    }
-
-    var containsOnlyLetters: Bool {
-        let notLetters = NSCharacterSet.letters.inverted
-        return rangeOfCharacter(from: notLetters, options: String.CompareOptions.literal, range: nil) == nil
-    }
-
-    // 字符串不是空的并且只包含字母数字字符
-    var isAlphanumeric: Bool {
-        let notAlphanumeric = NSCharacterSet.decimalDigits.union(NSCharacterSet.letters).inverted
-        return rangeOfCharacter(from: notAlphanumeric, options: String.CompareOptions.literal, range: nil) == nil
-    }
-
-    // 校验电子邮件地址有效性
-    // Usage: let approved = "test@test.com".isValidEmail // true
-    @available(swift, deprecated: 5.0, message: "请使用 SwifterSwift/StringExtensions.swift 中的 'isValidEmail' 方法")
-    var isValidEmail: Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-
-        let emailTest = NSPredicate(format: "SELF MATCHES %@", emailRegEx)
-        return emailTest.evaluate(with: self)
-    }
-
-    func toInt() -> Int {
-        Int(self)!
-    }
-
-    func toIntOrNull() -> Int? {
-        Int(self)
-    }
-
-    var asURL: URL? {
-        URL(string: self)
+    /// String -> Date
+    /// let strDate = "2020-08-10 15:00:00"
+    /// let date = strDate.toDate(format: "yyyy-MM-dd HH:mm:ss")
+    func toDate(format: String) -> Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        return dateFormatter.date(from: self)
     }
 
     /**
@@ -182,21 +145,6 @@ extension String {
     }
 
     /**
-     去掉字符串首位空格
-
-     var str1 = "  a b c d e   \n"
-     var str2 = str1.trimmed
-     str1.trim() // a b c d e
-     */
-    var trimmed: String {
-        self.trimmingCharacters(in: .whitespacesAndNewlines)
-    }
-
-    mutating func trim() {
-        self = self.trimmed
-    }
-
-    /**
      字符串转换为二维地理坐标（CLLocationCoordinate2D）
 
      let strCoordinates = "41.6168, 41.6367"
@@ -217,6 +165,7 @@ extension String {
         return nil
     }
 
+    // JSON -> [String: Any]?
     var asDict: [String: Any]? {
         guard let data = self.data(using: .utf8) else {
             return nil
@@ -224,6 +173,7 @@ extension String {
         return try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any]
     }
 
+    // JSON -> Any]?
     var asArray: [Any]? {
         guard let data = self.data(using: .utf8) else {
             return nil

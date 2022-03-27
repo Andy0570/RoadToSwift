@@ -13,11 +13,6 @@ extension Int {
         "\(self)"
     }
 
-    // Int -> Double
-    func toDouble() -> Double {
-        Double(self)
-    }
-
     // 美分转换为美元
     // let cents = 12350
     // let dollars = cents.centsToDollars()

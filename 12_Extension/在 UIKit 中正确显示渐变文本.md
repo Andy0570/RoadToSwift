@@ -4,6 +4,10 @@
 
 
 
+<img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h0oi7ulawmj20u01sxq4s.jpg" style="zoom: 25%;" />
+
+
+
 这应该是一篇关于如何在 UIKit 中使用 `UILabel` 轻松实现渐变文本的超短文章。渐变文本是我不经常使用的东西来记住如何快速做到这一点，所以我想要一个快速参考指南来帮助我自己和未来的其他人。
 
 但是，我发现我的解决方案有一个很大的缺陷。我认为了解它发生的原因以及如何正确渐变文本而没有太多麻烦是有意义的。
@@ -160,10 +164,3 @@ class GradientLabel: UIStackView {
 我认为这对我来说足够 UIKit 渐变至少一个月了。
 
 PS：上述解决方案不仅适用于 `UILabel`。它也适用于 `UITextView`。
-
-
-
-
-
-
-

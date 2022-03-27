@@ -23,11 +23,6 @@ extension Double {
         String(format: "%.02f", self)
     }
 
-    // Double -> Int
-    func toInt() -> Int {
-        Int(self)
-    }
-
     /**
      转换为价格字符串
 
@@ -35,13 +30,13 @@ extension Double {
      let strPrice = dPrice.toPrice(currency: "€")
      */
     func toPrice(currency: String) -> String {
-        let nf = NumberFormatter()
-        nf.decimalSeparator = ","
-        nf.groupingSeparator = "."
-        nf.groupingSize = 3
-        nf.usesGroupingSeparator = true
-        nf.minimumFractionDigits = 2
-        nf.maximumFractionDigits = 2
-        return (nf.string(from: NSNumber(value: self)) ?? "?") + currency
+        let numberFormatter = NumberFormatter()
+        numberFormatter.decimalSeparator = ","
+        numberFormatter.groupingSeparator = "."
+        numberFormatter.groupingSize = 3
+        numberFormatter.usesGroupingSeparator = true
+        numberFormatter.minimumFractionDigits = 2
+        numberFormatter.maximumFractionDigits = 2
+        return (numberFormatter.string(from: NSNumber(value: self)) ?? "?") + currency
     }
 }

@@ -66,8 +66,9 @@ let passwordMD5 = password.md5!
 
 ![Photo by Vladislav Klapin on Unsplash](https://upload-images.jianshu.io/upload_images/2648731-ac22a1787327a396.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-
 ## 2. 本地化字符串
+
+> Note: 请使用 SwifterSwift/StringExtensions.swift 中的 `localized(comment:)` 方法。
 
 如果你正在开发一款支持多语言的应用程序，你可能需要在代码中嵌入一些文本字符串，这些字符串将以用户的语言出现在屏幕上。编辑 storyboards 或 XIB 文件不需要编写任何代码——但动态字符串需要。
 
@@ -83,8 +84,9 @@ NSLocalizedString("string_id", comment: "")
 import Foundation
 
 extension String {
+    // 本地化字符串
     var localized: String {
-        NSLocalizedString(self, comment: "")
+        return NSLocalizedString(self, comment: "")
     }
 }
 ```

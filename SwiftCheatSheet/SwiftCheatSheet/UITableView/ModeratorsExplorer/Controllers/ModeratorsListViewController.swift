@@ -112,8 +112,8 @@ extension ModeratorsListViewController: ModeratorsViewModelDelegate {
     func onFetchFailed(with reason: String) {
         indicatorView.stopAnimating()
 
-        let title = "Warning".localizedString
-        let action = UIAlertAction(title: "OK".localizedString, style: .default)
+        let title = "Warning".localized()
+        let action = UIAlertAction(title: "OK".localized(), style: .default)
         displayAlert(with: title, message: reason, actions: [action])
     }
 }

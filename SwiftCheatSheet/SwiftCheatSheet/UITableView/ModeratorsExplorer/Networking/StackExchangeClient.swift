@@ -10,7 +10,10 @@ import Foundation
 // 网络请求客户端
 final class StackExchangeClient {
     private lazy var baseURL: URL = {
-        return URL(string: "https://api.stackexchange.com/2.3/")!
+        guard let url = URL(string: "https://api.stackexchange.com/2.3/") else {
+            fatalError("initialize baseURL error.")
+        }
+        return url
     }()
 
     let session: URLSession

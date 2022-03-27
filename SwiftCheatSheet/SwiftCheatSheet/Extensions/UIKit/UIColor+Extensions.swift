@@ -39,18 +39,22 @@ extension UniColor {
         self.init(hexString: hexString, alpha: 1.0)
     }
 
-    fileprivate convenience init?(hex3: Int, alpha: Float) {
-        self.init(red: CGFloat( ((hex3 & 0xF00) >> 8).duplicate4bits() ) / 255.0,
-                  green: CGFloat( ((hex3 & 0x0F0) >> 4).duplicate4bits() ) / 255.0,
-                  blue: CGFloat( ((hex3 & 0x00F) >> 0).duplicate4bits() ) / 255.0,
-                  alpha: CGFloat(alpha))
+    private convenience init?(hex3: Int, alpha: Float) {
+        self.init(
+            red: CGFloat( ((hex3 & 0xF00) >> 8).duplicate4bits() ) / 255.0,
+            green: CGFloat( ((hex3 & 0x0F0) >> 4).duplicate4bits() ) / 255.0,
+            blue: CGFloat( ((hex3 & 0x00F) >> 0).duplicate4bits() ) / 255.0,
+            alpha: CGFloat(alpha)
+        )
     }
 
-    fileprivate convenience init?(hex6: Int, alpha: Float) {
-        self.init(red: CGFloat( (hex6 & 0xFF0000) >> 16 ) / 255.0,
-                  green: CGFloat( (hex6 & 0x00FF00) >> 8 ) / 255.0,
-                  blue: CGFloat( (hex6 & 0x0000FF) >> 0 ) / 255.0,
-                  alpha: CGFloat(alpha))
+    private convenience init?(hex6: Int, alpha: Float) {
+        self.init(
+            red: CGFloat( (hex6 & 0xFF0000) >> 16 ) / 255.0,
+            green: CGFloat( (hex6 & 0x00FF00) >> 8 ) / 255.0,
+            blue: CGFloat( (hex6 & 0x0000FF) >> 0 ) / 255.0,
+            alpha: CGFloat(alpha)
+        )
     }
 
     convenience init?(hexString: String, alpha: Float) {
@@ -66,10 +70,13 @@ extension UniColor {
         }
 
         switch hex.count {
-            case 3: self.init(hex3: hexVal, alpha: alpha)
-            case 6: self.init(hex6: hexVal, alpha: alpha)
-            default: self.init()
-                return nil
+        case 3:
+            self.init(hex3: hexVal, alpha: alpha)
+        case 6:
+            self.init(hex6: hexVal, alpha: alpha)
+        default:
+            self.init()
+            return nil
         }
     }
 
@@ -100,20 +107,6 @@ extension Int {
 }
 
 extension UIColor {
-    /**
-     通过颜色生成图片
-
-     let image = UIColor.red.image()
-     let imageView: UIImageView = UIImageView(frame: view.bounds)
-     imageView.image = image
-     */
-    func image(_ size: CGSize = CGSize(width: 1, height: 1)) -> UIImage {
-        return UIGraphicsImageRenderer(size: size).image { rendererContext in
-            self.setFill()
-            rendererContext.fill(CGRect(origin: .zero, size: size))
-        }
-    }
-
     // !!!: 需要在 Asset catalogs 中创建相同名称的颜色
     static var accent: UIColor {
         UIColor(named: "Accent")!

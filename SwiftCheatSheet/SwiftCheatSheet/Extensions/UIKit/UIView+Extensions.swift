@@ -23,7 +23,6 @@ extension UIView {
     // Export pdf from Save pdf in drectory and return pdf file path
     // let pdfFilePath = self.view.exportAsPdfFromView()
     func exportAsPdfFromView() -> String {
-
         let pdfPageFrame = self.bounds
         let pdfData = NSMutableData()
         UIGraphicsBeginPDFContextToData(pdfData, pdfPageFrame, nil)

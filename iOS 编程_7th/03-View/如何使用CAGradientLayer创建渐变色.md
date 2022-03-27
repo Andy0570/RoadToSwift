@@ -27,7 +27,7 @@ gradientLayer.locations = [0.0, 1.0];
 self.view.layer.addSublayer(gradientLayer)
 ```
 
-![](https://www.swiftdevcenter.com/wp-content/uploads/2019/03/ColorLocation.jpg)
+<img src="https://www.swiftdevcenter.com/wp-content/uploads/2019/03/ColorLocation.jpg" style="zoom: 50%;" />
 
 对于第一张图片，我们使用下面的代码来定位：
 ```swift
@@ -47,7 +47,7 @@ gradientLayer.locations = [0.6, 1.0]
 
 如上图所示，默认的渐变色方向是从上到下。`CAGradientLayer` 有两个属性 `startPoint` 和 `endPoint`，利用这个点我们可以改变渐变色的方向，比如从上到下、从下到上、从左到右、从右到左。在进行下一步之前，我们首先要了解坐标系。请看下图。左上角从 `(0, 0)` 开始，右上角是 `(1, 0)`...
 
-![](https://www.swiftdevcenter.com/wp-content/uploads/2019/03/newCoordinates.png)
+<img src="https://www.swiftdevcenter.com/wp-content/uploads/2019/03/newCoordinates.png" style="zoom:50%;" />
 
 
 ### 从上往下
@@ -135,5 +135,4 @@ self.view.applyGradient(colors: [UIColor.red.cgColor, UIColor.blue.cgColor],
 你可以从 [GitHub](https://github.com/swiftdevcenter/GradientColorExample/tree/master/GradientColorExample/GradientColorExample) 下载源代码
 
 阅读下一篇文章：[Create PDF from UIView, WKWebView, and UITableView](https://www.swiftdevcenter.com/create-pdf-from-uiview-wkwebview-and-uitableview/)
-
 

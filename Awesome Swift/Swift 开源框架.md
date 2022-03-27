@@ -765,6 +765,7 @@
 ## 日志
 *用于生成和处理日志文件的框架*
 
+* [sentry](https://github.com/getsentry/sentry) ⭐️30.5k - Sentry 是跨平台的应用程序监控，专注于错误报告。
 * [apple/swift-metrics](https://github.com/apple/swift-metrics) ⭐️470 - 苹果开源并逐步固定 Metrics API，以方便用户对应用的运行及资源状态进行有效跟踪。
 * [apple/swift-log](https://github.com/apple/swift-log) ⭐️2.6k - A Logging API for Swift
 * [SwiftyBeaver](https://github.com/SwiftyBeaver/SwiftyBeaver) ⭐️5.4k - SwiftyBeaver 是 Swift 的一款丰富多彩的，可扩展的，轻量级日志记录器。

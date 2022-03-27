@@ -156,5 +156,10 @@
         "title": "将渐变色应用于 UILabel",
         "description": "-",
         "className": "GradientColorViewController"
+    }, {
+        "image": "image",
+        "title": "CAGradientLayer 实现渐变色",
+        "description": "-",
+        "className": "GradientViewController"
     }]
 }]

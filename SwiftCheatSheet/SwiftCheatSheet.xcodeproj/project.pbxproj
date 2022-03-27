@@ -10,7 +10,6 @@
 		222B3FD227E061F1009C7322 /* GrowingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B3FD027E061F1009C7322 /* GrowingCell.swift */; };
 		222B3FD327E061F1009C7322 /* GrowingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 222B3FD127E061F1009C7322 /* GrowingCell.xib */; };
 		222B3FD527E06200009C7322 /* GrowingCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B3FD427E06200009C7322 /* GrowingCellViewController.swift */; };
-		2246199927EAF4750096C856 /* UIImage+GradientExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2246199827EAF4750096C856 /* UIImage+GradientExtensions.swift */; };
 		2246199B27EAF5A00096C856 /* GradientColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2246199A27EAF5A00096C856 /* GradientColorViewController.swift */; };
 		2246199D27EAFE5B0096C856 /* GradientLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2246199C27EAFE5B0096C856 /* GradientLabel.swift */; };
 		2246DD0927C474E9006A3AC1 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2246DD0827C474E9006A3AC1 /* MyCollectionViewCell.swift */; };
@@ -19,6 +18,8 @@
 		2246DD1C27C4BA35006A3AC1 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2246DD1B27C4BA35006A3AC1 /* Icon.swift */; };
 		2246DD2127C4BB48006A3AC1 /* IconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2246DD1F27C4BB48006A3AC1 /* IconCollectionViewCell.swift */; };
 		2246DD2227C4BB48006A3AC1 /* IconCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2246DD2027C4BB48006A3AC1 /* IconCollectionViewCell.xib */; };
+		224EB7D327F0604F008A35DF /* GradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224EB7D127F0604F008A35DF /* GradientViewController.swift */; };
+		224EB7D427F0604F008A35DF /* GradientViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 224EB7D227F0604F008A35DF /* GradientViewController.xib */; };
 		22569EAA27E32077009B18A3 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22569EA927E32077009B18A3 /* NetworkingService.swift */; };
 		22569EAC27E3219D009B18A3 /* Recording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22569EAB27E3219D009B18A3 /* Recording.swift */; };
 		22569EAE27E3237C009B18A3 /* ServiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22569EAD27E3237C009B18A3 /* ServiceResponse.swift */; };
@@ -35,10 +36,8 @@
 		2262188527EDAEF10052634A /* SwiftCheatSheetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2262188427EDAEF10052634A /* SwiftCheatSheetTests.swift */; };
 		2262188E27EDAFFA0052634A /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2262188D27EDAFFA0052634A /* StringExtensionTests.swift */; };
 		2262189027EDB9F60052634A /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2262188F27EDB9F60052634A /* UserDefaults+Extensions.swift */; };
-		2262189227EDBEC60052634A /* JSON+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2262189127EDBEC60052634A /* JSON+Extensions.swift */; };
 		2262189427EDCA790052634A /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2262189327EDCA790052634A /* UIColor+Extensions.swift */; };
 		2262189627EE1C890052634A /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2262189527EE1C890052634A /* Int+Extensions.swift */; };
-		2262189827EE1CBB0052634A /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2262189727EE1CBB0052634A /* Date+Extensions.swift */; };
 		2262189A27EE1E1F0052634A /* UIDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2262189927EE1E1F0052634A /* UIDevice+Extensions.swift */; };
 		2262189C27EE1F850052634A /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2262189B27EE1F850052634A /* UIImage+Extensions.swift */; };
 		2262189E27EE21340052634A /* NSAttributedString+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2262189D27EE21340052634A /* NSAttributedString+Extensions.swift */; };
@@ -180,7 +179,6 @@
 		222B3FD027E061F1009C7322 /* GrowingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowingCell.swift; sourceTree = "<group>"; };
 		222B3FD127E061F1009C7322 /* GrowingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GrowingCell.xib; sourceTree = "<group>"; };
 		222B3FD427E06200009C7322 /* GrowingCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowingCellViewController.swift; sourceTree = "<group>"; };
-		2246199827EAF4750096C856 /* UIImage+GradientExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+GradientExtensions.swift"; sourceTree = "<group>"; };
 		2246199A27EAF5A00096C856 /* GradientColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientColorViewController.swift; sourceTree = "<group>"; };
 		2246199C27EAFE5B0096C856 /* GradientLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLabel.swift; sourceTree = "<group>"; };
 		2246DD0827C474E9006A3AC1 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -189,6 +187,8 @@
 		2246DD1B27C4BA35006A3AC1 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
 		2246DD1F27C4BB48006A3AC1 /* IconCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCollectionViewCell.swift; sourceTree = "<group>"; };
 		2246DD2027C4BB48006A3AC1 /* IconCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IconCollectionViewCell.xib; sourceTree = "<group>"; };
+		224EB7D127F0604F008A35DF /* GradientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientViewController.swift; sourceTree = "<group>"; };
+		224EB7D227F0604F008A35DF /* GradientViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GradientViewController.xib; sourceTree = "<group>"; };
 		22569EA927E32077009B18A3 /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
 		22569EAB27E3219D009B18A3 /* Recording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recording.swift; sourceTree = "<group>"; };
 		22569EAD27E3237C009B18A3 /* ServiceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceResponse.swift; sourceTree = "<group>"; };
@@ -207,10 +207,8 @@
 		2262188427EDAEF10052634A /* SwiftCheatSheetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCheatSheetTests.swift; sourceTree = "<group>"; };
 		2262188D27EDAFFA0052634A /* StringExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
 		2262188F27EDB9F60052634A /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
-		2262189127EDBEC60052634A /* JSON+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSON+Extensions.swift"; sourceTree = "<group>"; };
 		2262189327EDCA790052634A /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		2262189527EE1C890052634A /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
-		2262189727EE1CBB0052634A /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		2262189927EE1E1F0052634A /* UIDevice+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extensions.swift"; sourceTree = "<group>"; };
 		2262189B27EE1F850052634A /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		2262189D27EE21340052634A /* NSAttributedString+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extensions.swift"; sourceTree = "<group>"; };
@@ -385,7 +383,8 @@
 			children = (
 				2246199A27EAF5A00096C856 /* GradientColorViewController.swift */,
 				2246199C27EAFE5B0096C856 /* GradientLabel.swift */,
-				2246199827EAF4750096C856 /* UIImage+GradientExtensions.swift */,
+				224EB7D127F0604F008A35DF /* GradientViewController.swift */,
+				224EB7D227F0604F008A35DF /* GradientViewController.xib */,
 			);
 			path = GradientColor;
 			sourceTree = "<group>";
@@ -513,8 +512,6 @@
 				2262189D27EE21340052634A /* NSAttributedString+Extensions.swift */,
 				2262189527EE1C890052634A /* Int+Extensions.swift */,
 				22E3480A27E849D300369602 /* Double+Extensions.swift */,
-				2262189127EDBEC60052634A /* JSON+Extensions.swift */,
-				2262189727EE1CBB0052634A /* Date+Extensions.swift */,
 				2262189F27EE216A0052634A /* Bundle+Extensions.swift */,
 				226218A127EE219E0052634A /* URL+Extensions.swift */,
 				226218A327EE21CD0052634A /* Array+IndexPath.swift */,
@@ -1293,6 +1290,7 @@
 				227E7EBC27E083B7009D5E45 /* CustomTableViewCell.xib in Resources */,
 				227E7EB527E0824F009D5E45 /* MultipleSelectionViewController.xib in Resources */,
 				227E7EC327E09345009D5E45 /* AttributedStringViewController.xib in Resources */,
+				224EB7D427F0604F008A35DF /* GradientViewController.xib in Resources */,
 				22D2233D27BCEB89000EAD0F /* Main.storyboard in Resources */,
 				22D2235527BCFFE3000EAD0F /* homepage.json in Resources */,
 				22E3482B27E8642A00369602 /* ModeratorsSearchViewController.xib in Resources */,
@@ -1375,13 +1373,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				22AC911F27DF980A007260E6 /* AuteurListViewController.swift in Sources */,
-				2262189227EDBEC60052634A /* JSON+Extensions.swift in Sources */,
 				227E7EB427E0824F009D5E45 /* MultipleSelectionViewController.swift in Sources */,
 				2262189E27EE21340052634A /* NSAttributedString+Extensions.swift in Sources */,
 				22BF2E1A27BE1E8D009027E3 /* AlbumView.swift in Sources */,
 				225A1C1327C4C00000F8215F /* IconCollectionViewController.swift in Sources */,
 				226218B527EE252F0052634A /* UIView+Extensions.swift in Sources */,
 				22AC912127DF981E007260E6 /* AuteurDetailViewController.swift in Sources */,
+				224EB7D327F0604F008A35DF /* GradientViewController.swift in Sources */,
 				22569EBA27E33929009B18A3 /* LoadingView.swift in Sources */,
 				229AC7D327D5E2EA001D81D2 /* APIService.swift in Sources */,
 				22569EB627E3364E009B18A3 /* ChirperViewController.swift in Sources */,
@@ -1400,7 +1398,6 @@
 				22D2234D27BCF20A000EAD0F /* Item.swift in Sources */,
 				22569EB827E33918009B18A3 /* EmptyView.swift in Sources */,
 				22569EB027E3247C009B18A3 /* RecordingsResult.swift in Sources */,
-				2262189827EE1CBB0052634A /* Date+Extensions.swift in Sources */,
 				22E3481527E84F0D00369602 /* DataResponseError.swift in Sources */,
 				22EE32C927D0925D00A9A66F /* AnchorsViewController.swift in Sources */,
 				22FF1B5427C88B0F007214EB /* ModelAndBingViewController.swift in Sources */,
@@ -1418,7 +1415,6 @@
 				22E3482127E8539F00369602 /* StackExchangeClient.swift in Sources */,
 				2246199D27EAFE5B0096C856 /* GradientLabel.swift in Sources */,
 				229AC7E127D5EF93001D81D2 /* PhotoListTableViewCell.swift in Sources */,
-				2246199927EAF4750096C856 /* UIImage+GradientExtensions.swift in Sources */,
 				22E3480D27E84ACB00369602 /* String+Extensions.swift in Sources */,
 				22E3480F27E84BD500369602 /* UITextField+Extensions.swift in Sources */,
 				22BF2E2027BE2597009027E3 /* LibraryAPI.swift in Sources */,
@@ -1623,7 +1619,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1678,7 +1674,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
