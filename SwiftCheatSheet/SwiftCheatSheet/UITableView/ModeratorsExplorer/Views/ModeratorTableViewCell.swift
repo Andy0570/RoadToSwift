@@ -28,7 +28,7 @@ class ModeratorTableViewCell: UITableViewCell {
         reputationContainerView.layer.cornerRadius = 6
 
         indicatorView.hidesWhenStopped = true
-        indicatorView.color = ColorPalette.RWGreen
+        indicatorView.color = UIColor.rwGreen
     }
 
     override func prepareForReuse() {
