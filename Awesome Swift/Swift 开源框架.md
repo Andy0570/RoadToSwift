@@ -62,11 +62,13 @@
 * [AppAuth-iOS](https://github.com/openid/AppAuth-iOS) ⭐️1.3k - iOS and macOS SDK for communicating with OAuth 2.0 and OpenID Connect providers.
 
 
-### MQTT
+### MQTT/TCP
 
 * [MQTT-Client-Framework](https://github.com/novastone-media/MQTT-Client-Framework) ⭐️1.7k - iOS, macOS, tvOS native ObjectiveC MQTT Client Framework
 * [CocoaMQTT](https://github.com/emqx/CocoaMQTT) ⭐️1.2k - MQTT 5.0 Client Library for iOS and macOS written in Swift
 * [xquic](https://github.com/alibaba/xquic) ⭐️581 - **XQUIC 是基于 IETF QUIC 协议实现的 UDP 传输框架**，包含加密可靠传输、HTTP/3 两大块主要内容，为应用提供可靠、安全、高效的数据传输功能，可以极大改善弱网和移动网络下产品的用户网络体验。
+* [kcp](https://github.com/skywind3000/kcp) ⭐️10.9k - KCP 是一个快速可靠协议，能以比 TCP 浪费 10%-20% 的带宽的代价，换取平均延迟降低 30%-40%，且最大延迟降低三倍的传输效果。
+
 
 
 ## JSON/XML 操作
@@ -499,8 +501,9 @@
 *用于生成安全随机数、加密数据和扫描漏洞的框架*
 
 * :heart: [raywenderlich/swift-algorithm-club](https://github.com/raywenderlich/swift-algorithm-club) ⭐️25.8k - Swift 算法俱乐部，最全、最活跃，最具学习价值的算法库。
-* :heart: [swift-algorithms](https://github.com/apple/swift-algorithms) ⭐️3.7k - Apple 官方维护的一套 Swift 中常用的序列和集合算法。
-* [swift-collections](https://github.com/apple/swift-collections) ⭐️1.9k - Swift 常用的数据结构。
+* [apple/swift-algorithms](https://github.com/apple/swift-algorithms) ⭐️3.7k - Apple 官方维护的一套 Swift 中常用的序列和集合算法。
+* [apple/swift-async-algorithms](https://github.com/apple/swift-async-algorithms) ⭐️576 - Swift 的异步算法。
+* [apple/swift-collections](https://github.com/apple/swift-collections) ⭐️1.9k - Swift 常用的数据结构。
 * [CryptoSwift](https://github.com/krzyzanowskim/CryptoSwift) ⭐️8.8k - CryptoSwift 是一个用 Swift 实现的标准和安全的密码算法集合。
 * [GRKOpenSSLFramework](https://github.com/signalapp/GRKOpenSSLFramework) ⭐️12 - 适用于 iOS 和 macOS 的 SPM、CocoaPod 和 Carthage 的 penSSL 包
 * [SHA256-Swift](https://github.com/CryptoCoinSwift/SHA256-Swift) - Swift framework wrapping CommonCrypto's SHA256 methods.
@@ -719,6 +722,7 @@
 * [Fakery](https://github.com/vadymmarkov/Fakery) - Swift fake data generator.
 * [SwiftRandom](https://github.com/thellimist/SwiftRandom) - Generator for random data.  
 * [MockFive](https://github.com/DeliciousRaspberryPi/MockFive) - A mocking framework for Swift with runtime function stubbing.
+* [MoonLight](https://github.com/AgoraIO-Community/MoonLight) ⭐️228 - Agoral 开源框架。MoonLight 是 iOS/Mac 上的性能测试组件，它可以单独集成在任何 App 中实现自动化性能数据的采集，你可以非常轻松的获取到 App CPU、System CPU、App Memory、System GPU、GPU Info、ANR 和 iOS FPS 的数据。
 
 
 
@@ -784,6 +788,7 @@
 *生成文档文件的框架*
 
 * [jazzy](https://github.com/realm/jazzy) - A soulful way to generate docs for Swift & Objective-C
+* [swift-docc-plugin](https://github.com/apple/swift-docc-plugin) ⭐️122 - Swift-DocC 插件是一个 Swift Package Manager 命令行插件，支持为 SwiftPM 库和可执行文件构建文档。
 
 
 

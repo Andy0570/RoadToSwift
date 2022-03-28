@@ -98,7 +98,7 @@ class GitAPIManager {
 
    POST https://github.com/login/oauth/access_token (200)
    {
-       "access_token" = "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";
+       "access_token" = "";
        scope = "repo,user";
        "token_type" = bearer;
    }
