@@ -12,7 +12,7 @@ target 'SwiftCheatSheet' do
   pod 'Alamofire'
   pod 'Kingfisher', '~> 7.0'
   pod 'IGListKit'
-  pod 'SwifterSwift' # Extension扩展
+  pod 'SwifterSwift', :git => 'https://github.com/SwifterSwift/SwifterSwift.git', :branch => 'master'
   pod 'SwiftyBeaver' # 日志记录
 
 end

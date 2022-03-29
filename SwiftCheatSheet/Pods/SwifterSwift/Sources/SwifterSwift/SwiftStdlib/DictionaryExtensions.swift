@@ -1,25 +1,19 @@
-//
-//  DictionaryExtensions.swift
-//  SwifterSwift
-//
-//  Created by Omar Albeik on 8/24/16.
-//  Copyright © 2016 SwifterSwift
-//
+// DictionaryExtensions.swift - Copyright 2020 SwifterSwift
 
 #if canImport(Foundation)
 import Foundation
 #endif
 
 // MARK: - Methods
-public extension Dictionary {
 
+public extension Dictionary {
     /// SwifterSwift: Creates a Dictionary from a given sequence grouped by a given key path.
     ///
     /// - Parameters:
-    ///   - sequence: Sequence being grouped
+    ///   - sequence: Sequence being grouped.
     ///   - keypath: The key path to group by.
     init<S: Sequence>(grouping sequence: S, by keyPath: KeyPath<S.Element, Key>) where Value == [S.Element] {
-       self.init(grouping: sequence, by: { $0[keyPath: keyPath] })
+        self.init(grouping: sequence, by: { $0[keyPath: keyPath] })
     }
 
     /// SwifterSwift: Check if key exists in dictionary.
@@ -28,7 +22,7 @@ public extension Dictionary {
     ///        dict.has(key: "testKey") -> true
     ///        dict.has(key: "anotherKey") -> false
     ///
-    /// - Parameter key: key to search for
+    /// - Parameter key: key to search for.
     /// - Returns: true if key exists in dictionary.
     func has(key: Key) -> Bool {
         return index(forKey: key) != nil
@@ -42,7 +36,7 @@ public extension Dictionary {
     ///        dict.keys.contains("key1") -> false
     ///        dict.keys.contains("key2") -> false
     ///
-    /// - Parameter keys: keys to be removed
+    /// - Parameter keys: keys to be removed.
     mutating func removeAll<S: Sequence>(keys: S) where S.Element == Key {
         keys.forEach { removeValue(forKey: $0) }
     }
@@ -63,7 +57,8 @@ public extension Dictionary {
         guard JSONSerialization.isValidJSONObject(self) else {
             return nil
         }
-        let options = (prettify == true) ? JSONSerialization.WritingOptions.prettyPrinted : JSONSerialization.WritingOptions()
+        let options = (prettify == true) ? JSONSerialization.WritingOptions.prettyPrinted : JSONSerialization
+            .WritingOptions()
         return try? JSONSerialization.data(withJSONObject: self, options: options)
     }
     #endif
@@ -94,7 +89,8 @@ public extension Dictionary {
     /// - Returns: optional JSON String (if applicable).
     func jsonString(prettify: Bool = false) -> String? {
         guard JSONSerialization.isValidJSONObject(self) else { return nil }
-        let options = (prettify == true) ? JSONSerialization.WritingOptions.prettyPrinted : JSONSerialization.WritingOptions()
+        let options = (prettify == true) ? JSONSerialization.WritingOptions.prettyPrinted : JSONSerialization
+            .WritingOptions()
         guard let jsonData = try? JSONSerialization.data(withJSONObject: self, options: options) else { return nil }
         return String(data: jsonData, encoding: .utf8)
     }
@@ -115,11 +111,27 @@ public extension Dictionary {
         return [K: V](uniqueKeysWithValues: try compactMap(transform))
     }
 
+    /// SwifterSwift: Creates a new dictionary using specified keys.
+    ///
+    ///        var dict =  ["key1": 1, "key2": 2, "key3": 3, "key4": 4]
+    ///        dict.pick(keys: ["key1", "key3", "key4"]) -> ["key1": 1, "key3": 3, "key4": 4]
+    ///        dict.pick(keys: ["key2"]) -> ["key2": 2]
+    ///
+    /// - Complexity: O(K), where _K_ is the length of the keys array.
+    ///
+    /// - Parameter keys: An array of keys that will be the entries in the resulting dictionary.
+    ///
+    /// - Returns: A new dictionary that contains the specified keys only. If none of the keys exist, an empty dictionary will be returned.
+    func pick(keys: [Key]) -> [Key: Value] {
+        keys.reduce(into: [Key: Value]()) { result, item in
+            result[item] = self[item]
+        }
+    }
 }
 
 // MARK: - Methods (Value: Equatable)
-public extension Dictionary where Value: Equatable {
 
+public extension Dictionary where Value: Equatable {
     /// SwifterSwift: Returns an array of all keys that have the given value in dictionary.
     ///
     ///        let dict = ["key1": "value1", "key2": "value1", "key3": "value2"]
@@ -132,12 +144,11 @@ public extension Dictionary where Value: Equatable {
     func keys(forValue value: Value) -> [Key] {
         return keys.filter { self[$0] == value }
     }
-
 }
 
 // MARK: - Methods (ExpressibleByStringLiteral)
-public extension Dictionary where Key: StringProtocol {
 
+public extension Dictionary where Key: StringProtocol {
     /// SwifterSwift: Lowercase all keys in dictionary.
     ///
     ///        var dict = ["tEstKeY": "value"]
@@ -155,8 +166,8 @@ public extension Dictionary where Key: StringProtocol {
 }
 
 // MARK: - Subscripts
-public extension Dictionary {
 
+public extension Dictionary {
     /// SwifterSwift: Deep fetch or set a value from nested dictionaries.
     ///
     ///        var dict =  ["key": ["key1": ["key2": "value"]]]
@@ -198,8 +209,8 @@ public extension Dictionary {
 }
 
 // MARK: - Operators
-public extension Dictionary {
 
+public extension Dictionary {
     /// SwifterSwift: Merge the keys/values of two dictionaries.
     ///
     ///        let dict: [String: String] = ["key1": "value1"]
@@ -209,8 +220,8 @@ public extension Dictionary {
     ///        result["key2"] -> "value2"
     ///
     /// - Parameters:
-    ///   - lhs: dictionary
-    ///   - rhs: dictionary
+    ///   - lhs: dictionary.
+    ///   - rhs: dictionary.
     /// - Returns: An dictionary with keys and values from both.
     static func + (lhs: [Key: Value], rhs: [Key: Value]) -> [Key: Value] {
         var result = lhs
@@ -229,13 +240,13 @@ public extension Dictionary {
     ///        dict["key2"] -> "value2"
     ///
     /// - Parameters:
-    ///   - lhs: dictionary
-    ///   - rhs: dictionary
+    ///   - lhs: dictionary.
+    ///   - rhs: dictionary.
     static func += (lhs: inout [Key: Value], rhs: [Key: Value]) {
-        rhs.forEach { lhs[$0] = $1}
+        rhs.forEach { lhs[$0] = $1 }
     }
 
-    /// SwifterSwift: Remove keys contained in the sequence from the dictionary
+    /// SwifterSwift: Remove keys contained in the sequence from the dictionary.
     ///
     ///        let dict: [String: String] = ["key1": "value1", "key2": "value2", "key3": "value3"]
     ///        let result = dict-["key1", "key2"]
@@ -244,8 +255,8 @@ public extension Dictionary {
     ///        result.keys.contains("key2") -> false
     ///
     /// - Parameters:
-    ///   - lhs: dictionary
-    ///   - rhs: array with the keys to be removed.
+    ///   - lhs: dictionary.
+    ///   - keys: array with the keys to be removed.
     /// - Returns: a new dictionary with keys removed.
     static func - <S: Sequence>(lhs: [Key: Value], keys: S) -> [Key: Value] where S.Element == Key {
         var result = lhs
@@ -253,7 +264,7 @@ public extension Dictionary {
         return result
     }
 
-    /// SwifterSwift: Remove keys contained in the sequence from the dictionary
+    /// SwifterSwift: Remove keys contained in the sequence from the dictionary.
     ///
     ///        var dict: [String: String] = ["key1": "value1", "key2": "value2", "key3": "value3"]
     ///        dict-=["key1", "key2"]
@@ -262,10 +273,9 @@ public extension Dictionary {
     ///        dict.keys.contains("key2") -> false
     ///
     /// - Parameters:
-    ///   - lhs: dictionary
-    ///   - rhs: array with the keys to be removed.
+    ///   - lhs: dictionary.
+    ///   - keys: array with the keys to be removed.
     static func -= <S: Sequence>(lhs: inout [Key: Value], keys: S) where S.Element == Key {
         lhs.removeAll(keys: keys)
     }
-
 }

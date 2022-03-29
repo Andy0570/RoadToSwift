@@ -1,21 +1,15 @@
-//
-//  UINavigationBarExtensions.swift
-//  SwifterSwift
-//
-//  Created by Omar Albeik on 8/22/16.
-//  Copyright © 2016 SwifterSwift
-//
+// UINavigationBarExtensions.swift - Copyright 2020 SwifterSwift
 
 #if canImport(UIKit) && !os(watchOS)
 import UIKit
 
 // MARK: - Methods
-public extension UINavigationBar {
 
+public extension UINavigationBar {
     /// SwifterSwift: Set Navigation Bar title, title color and font.
     ///
     /// - Parameters:
-    ///   - font: title font
+    ///   - font: title font.
     ///   - color: title text color (default is .black).
     func setTitleFont(_ font: UIFont, color: UIColor = .black) {
         var attrs = [NSAttributedString.Key: Any]()
@@ -37,11 +31,11 @@ public extension UINavigationBar {
         shadowImage = UIImage()
     }
 
-    /// SwifterSwift: Set navigationBar background and text colors
+    /// SwifterSwift: Set navigationBar background and text colors.
     ///
     /// - Parameters:
-    ///   - background: backgound color
-    ///   - text: text color
+    ///   - background: background color.
+    ///   - text: text color.
     func setColors(background: UIColor, text: UIColor) {
         isTranslucent = false
         backgroundColor = background
@@ -50,7 +44,6 @@ public extension UINavigationBar {
         tintColor = text
         titleTextAttributes = [.foregroundColor: text]
     }
-
 }
 
 #endif
