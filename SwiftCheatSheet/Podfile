@@ -13,6 +13,14 @@ target 'SwiftCheatSheet' do
   pod 'Kingfisher', '~> 7.0'
   pod 'IGListKit'
   pod 'SwifterSwift', :git => 'https://github.com/SwifterSwift/SwifterSwift.git', :branch => 'master'
-  pod 'SwiftyBeaver' # 日志记录
 
+  # 服务
+  pod 'SwiftyBeaver' # 日志记录
+  pod 'SPPermissions/Camera' # 相机
+  pod 'SPPermissions/PhotoLibrary' # 相册
+  pod 'SPPermissions/Notification' # 通知
+  pod 'SPPermissions/Microphone' # 麦克风
+  pod 'SPPermissions/LocationWhenInUse' # 定位
+  pod 'SPPermissions/LocationAlways'
+  pod 'SPPermissions/Tracking' # 用户跟踪
 end

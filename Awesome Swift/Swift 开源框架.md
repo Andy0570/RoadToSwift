@@ -141,7 +141,7 @@
 ### Alert 弹窗、Toast
 
 * :heart: [Siren](https://github.com/ArtSabintsev/Siren) ⭐️3.9k - 当应用版本更新时，通知用户并提供 App Store 链接。
-* :heart: [SPPermissions](https://github.com/ivanvorobei/SPPermissions) ⭐️4.7k - 通过列表、Dialog 对话框和原生界面的方式向用户请求访问权限。可以检查权限状态。支持 SwiftUI。
+* :heart: [SPPermissions](https://github.com/ivanvorobei/SPPermissions) ⭐️4.8k - 通过列表、Dialog 对话框和原生界面的方式向用户请求访问权限。可以检查权限状态。支持 SwiftUI。
 * [BulletinBoard](https://github.com/alexisakers/BulletinBoard) ⭐️5.2k - 创建显示在屏幕底部的卡片视图
 * [Toast-Swift](https://github.com/scalessec/Toast-Swift) ⭐️3k
 * :heart: [SwiftMessages](https://github.com/SwiftKickMobile/SwiftMessages) ⭐️6.4k - A very flexible message bar for iOS written in Swift.

@@ -162,4 +162,20 @@
         "description": "-",
         "className": "GradientViewController"
     }]
+}, {
+    "title": "开源框架",
+    "cells": [{
+        "image": "image",
+        "title": "SPPermissions",
+        "description": "-",
+        "className": "PermissionsViewController"
+    }]
+}, {
+    "title": "AVFoundation 框架",
+    "cells": [{
+        "image": "image",
+        "title": "播放、录制与合并视频",
+        "description": "-",
+        "className": "VideoNinjaViewController"
+    }]
 }]

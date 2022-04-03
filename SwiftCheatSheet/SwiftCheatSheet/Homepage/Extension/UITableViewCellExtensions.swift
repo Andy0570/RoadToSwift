@@ -5,8 +5,6 @@
 //  Created by Qilin Hu on 2022/2/17.
 //
 
-import Foundation
-
 import UIKit
 
 protocol TableViewCellConfigureDelegate {

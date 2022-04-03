@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MergeVideoViewController" customModule="SwiftCheatSheet" customModuleProvider="target">
+            <connections>
+                <outlet property="activityMonitor" destination="E4J-9f-myY" id="WHt-Os-rUp"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHh-7p-XSR">
+                    <rect key="frame" x="154" y="154" width="106" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Load Asset 1"/>
+                    <connections>
+                        <action selector="loadAssetOne:" destination="-1" eventType="touchUpInside" id="Pok-rV-vmH"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PsJ-Rr-ZsV">
+                    <rect key="frame" x="153" y="193" width="108" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Load Asset 2"/>
+                    <connections>
+                        <action selector="loadAssetTwo:" destination="-1" eventType="touchUpInside" id="fCg-MZ-GIQ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bE-7a-SvB">
+                    <rect key="frame" x="158.5" y="232" width="97" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Load Audio"/>
+                    <connections>
+                        <action selector="loadAudio:" destination="-1" eventType="touchUpInside" id="ABm-Qh-Tk3"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyE-jz-7NV">
+                    <rect key="frame" x="143" y="271" width="128" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Merge and Save"/>
+                    <connections>
+                        <action selector="merge:" destination="-1" eventType="touchUpInside" id="cUf-BE-yct"/>
+                    </connections>
+                </button>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="E4J-9f-myY">
+                    <rect key="frame" x="197" y="438" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="gyE-jz-7NV" firstAttribute="top" secondItem="8bE-7a-SvB" secondAttribute="bottom" constant="8" symbolic="YES" id="7tR-Hx-I9A"/>
+                <constraint firstItem="PsJ-Rr-ZsV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9U7-Xy-vPn"/>
+                <constraint firstItem="8bE-7a-SvB" firstAttribute="top" secondItem="PsJ-Rr-ZsV" secondAttribute="bottom" constant="8" symbolic="YES" id="9zN-k8-tWJ"/>
+                <constraint firstItem="8bE-7a-SvB" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="CB4-ir-JFO"/>
+                <constraint firstItem="E4J-9f-myY" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Gma-CG-txe"/>
+                <constraint firstItem="yHh-7p-XSR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="110" id="KJj-93-Wad"/>
+                <constraint firstItem="PsJ-Rr-ZsV" firstAttribute="top" secondItem="yHh-7p-XSR" secondAttribute="bottom" constant="8" symbolic="YES" id="RGN-jw-Akz"/>
+                <constraint firstItem="yHh-7p-XSR" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="XBY-0u-jg3"/>
+                <constraint firstItem="E4J-9f-myY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="jHe-RN-bVq"/>
+                <constraint firstItem="gyE-jz-7NV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="kqf-gM-abW"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="131"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

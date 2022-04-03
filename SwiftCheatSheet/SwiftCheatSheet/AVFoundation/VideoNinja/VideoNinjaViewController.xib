@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VideoNinjaViewController" customModule="SwiftCheatSheet" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ge-Gs-G5O">
+                    <rect key="frame" x="145" y="432.5" width="124" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="录制并保存视频"/>
+                    <connections>
+                        <action selector="recordAndSaveVideo:" destination="-1" eventType="touchUpInside" id="aZh-q2-1uW"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xHU-ge-7X7">
+                    <rect key="frame" x="166" y="471.5" width="82" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="合并视频"/>
+                    <connections>
+                        <action selector="mergeVideo:" destination="-1" eventType="touchUpInside" id="Yrb-9r-p9j"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5Y-gC-KV9">
+                    <rect key="frame" x="145" y="393.5" width="124" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="选择并播放视频"/>
+                    <connections>
+                        <action selector="selectAndPlayVideo:" destination="-1" eventType="touchUpInside" id="FgY-t3-ZrL"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="4ge-Gs-G5O" firstAttribute="top" secondItem="r5Y-gC-KV9" secondAttribute="bottom" constant="8" symbolic="YES" id="0nU-vO-AKx"/>
+                <constraint firstItem="xHU-ge-7X7" firstAttribute="top" secondItem="4ge-Gs-G5O" secondAttribute="bottom" constant="8" symbolic="YES" id="4V0-kb-rwl"/>
+                <constraint firstItem="4ge-Gs-G5O" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="KqY-pd-Jlk"/>
+                <constraint firstItem="4ge-Gs-G5O" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="RV9-hk-gDT"/>
+                <constraint firstItem="xHU-ge-7X7" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Rwu-df-UO1"/>
+                <constraint firstItem="r5Y-gC-KV9" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="T7W-1F-1pS"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="131"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

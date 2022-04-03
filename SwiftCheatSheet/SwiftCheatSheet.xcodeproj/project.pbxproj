@@ -7,9 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		221C58EA27F87FF000E5D855 /* VideoNinjaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221C58E827F87FF000E5D855 /* VideoNinjaViewController.swift */; };
+		221C58EB27F87FF000E5D855 /* VideoNinjaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 221C58E927F87FF000E5D855 /* VideoNinjaViewController.xib */; };
+		221C58EE27F8894D00E5D855 /* PlayVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221C58EC27F8894D00E5D855 /* PlayVideoViewController.swift */; };
+		221C58EF27F8894D00E5D855 /* PlayVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 221C58ED27F8894D00E5D855 /* PlayVideoViewController.xib */; };
+		221C58F227F8895D00E5D855 /* RecordVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221C58F027F8895D00E5D855 /* RecordVideoViewController.swift */; };
+		221C58F327F8895D00E5D855 /* RecordVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 221C58F127F8895D00E5D855 /* RecordVideoViewController.xib */; };
+		221C58F627F8896A00E5D855 /* MergeVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221C58F427F8896A00E5D855 /* MergeVideoViewController.swift */; };
+		221C58F727F8896A00E5D855 /* MergeVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 221C58F527F8896A00E5D855 /* MergeVideoViewController.xib */; };
+		221C58F927F88E3800E5D855 /* VideoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221C58F827F88E3800E5D855 /* VideoHelper.swift */; };
 		222B3FD227E061F1009C7322 /* GrowingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B3FD027E061F1009C7322 /* GrowingCell.swift */; };
 		222B3FD327E061F1009C7322 /* GrowingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 222B3FD127E061F1009C7322 /* GrowingCell.xib */; };
 		222B3FD527E06200009C7322 /* GrowingCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B3FD427E06200009C7322 /* GrowingCellViewController.swift */; };
+		2235454727F4633D000F7ACD /* CameraControlsViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2235454627F4633D000F7ACD /* CameraControlsViewControllerProtocol.swift */; };
 		2246199B27EAF5A00096C856 /* GradientColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2246199A27EAF5A00096C856 /* GradientColorViewController.swift */; };
 		2246199D27EAFE5B0096C856 /* GradientLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2246199C27EAFE5B0096C856 /* GradientLabel.swift */; };
 		2246DD0927C474E9006A3AC1 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2246DD0827C474E9006A3AC1 /* MyCollectionViewCell.swift */; };
@@ -42,7 +52,6 @@
 		2262189C27EE1F850052634A /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2262189B27EE1F850052634A /* UIImage+Extensions.swift */; };
 		2262189E27EE21340052634A /* NSAttributedString+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2262189D27EE21340052634A /* NSAttributedString+Extensions.swift */; };
 		226218A027EE216A0052634A /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2262189F27EE216A0052634A /* Bundle+Extensions.swift */; };
-		226218A227EE219E0052634A /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226218A127EE219E0052634A /* URL+Extensions.swift */; };
 		226218A427EE21CD0052634A /* Array+IndexPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226218A327EE21CD0052634A /* Array+IndexPath.swift */; };
 		226218A627EE22250052634A /* NSError+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226218A527EE22250052634A /* NSError+Extensions.swift */; };
 		226218AA27EE227B0052634A /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226218A927EE227B0052634A /* NSObject+Extensions.swift */; };
@@ -113,6 +122,8 @@
 		22BF2E4727BF9D1B009027E3 /* ShapeViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BF2E4627BF9D1B009027E3 /* ShapeViewBuilder.swift */; };
 		22BF2E4927BFA08A009027E3 /* Turn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BF2E4827BFA08A009027E3 /* Turn.swift */; };
 		22BF2E4B27BFA3F8009027E3 /* TurnController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BF2E4A27BFA3F8009027E3 /* TurnController.swift */; };
+		22CBBD4F27F2E57B0014475E /* PermissionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CBBD4E27F2E57B0014475E /* PermissionsViewController.swift */; };
+		22CBBD5327F2FD8F0014475E /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CBBD5227F2FD8F0014475E /* CameraController.swift */; };
 		22D2233627BCEB89000EAD0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D2233527BCEB89000EAD0F /* AppDelegate.swift */; };
 		22D2233827BCEB89000EAD0F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D2233727BCEB89000EAD0F /* SceneDelegate.swift */; };
 		22D2233A27BCEB89000EAD0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D2233927BCEB89000EAD0F /* ViewController.swift */; };
@@ -174,9 +185,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		221C58E827F87FF000E5D855 /* VideoNinjaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoNinjaViewController.swift; sourceTree = "<group>"; };
+		221C58E927F87FF000E5D855 /* VideoNinjaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoNinjaViewController.xib; sourceTree = "<group>"; };
+		221C58EC27F8894D00E5D855 /* PlayVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayVideoViewController.swift; sourceTree = "<group>"; };
+		221C58ED27F8894D00E5D855 /* PlayVideoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayVideoViewController.xib; sourceTree = "<group>"; };
+		221C58F027F8895D00E5D855 /* RecordVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordVideoViewController.swift; sourceTree = "<group>"; };
+		221C58F127F8895D00E5D855 /* RecordVideoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecordVideoViewController.xib; sourceTree = "<group>"; };
+		221C58F427F8896A00E5D855 /* MergeVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeVideoViewController.swift; sourceTree = "<group>"; };
+		221C58F527F8896A00E5D855 /* MergeVideoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MergeVideoViewController.xib; sourceTree = "<group>"; };
+		221C58F827F88E3800E5D855 /* VideoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoHelper.swift; sourceTree = "<group>"; };
 		222B3FD027E061F1009C7322 /* GrowingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowingCell.swift; sourceTree = "<group>"; };
 		222B3FD127E061F1009C7322 /* GrowingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GrowingCell.xib; sourceTree = "<group>"; };
 		222B3FD427E06200009C7322 /* GrowingCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowingCellViewController.swift; sourceTree = "<group>"; };
+		2235454627F4633D000F7ACD /* CameraControlsViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraControlsViewControllerProtocol.swift; sourceTree = "<group>"; };
 		2246199A27EAF5A00096C856 /* GradientColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientColorViewController.swift; sourceTree = "<group>"; };
 		2246199C27EAFE5B0096C856 /* GradientLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLabel.swift; sourceTree = "<group>"; };
 		2246DD0827C474E9006A3AC1 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -211,7 +232,6 @@
 		2262189B27EE1F850052634A /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		2262189D27EE21340052634A /* NSAttributedString+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extensions.swift"; sourceTree = "<group>"; };
 		2262189F27EE216A0052634A /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
-		226218A127EE219E0052634A /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
 		226218A327EE21CD0052634A /* Array+IndexPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+IndexPath.swift"; sourceTree = "<group>"; };
 		226218A527EE22250052634A /* NSError+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSError+Extensions.swift"; sourceTree = "<group>"; };
 		226218A927EE227B0052634A /* NSObject+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extensions.swift"; sourceTree = "<group>"; };
@@ -282,6 +302,8 @@
 		22BF2E4627BF9D1B009027E3 /* ShapeViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeViewBuilder.swift; sourceTree = "<group>"; };
 		22BF2E4827BFA08A009027E3 /* Turn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Turn.swift; sourceTree = "<group>"; };
 		22BF2E4A27BFA3F8009027E3 /* TurnController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnController.swift; sourceTree = "<group>"; };
+		22CBBD4E27F2E57B0014475E /* PermissionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsViewController.swift; sourceTree = "<group>"; };
+		22CBBD5227F2FD8F0014475E /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
 		22D2233227BCEB89000EAD0F /* SwiftCheatSheet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCheatSheet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22D2233527BCEB89000EAD0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22D2233727BCEB89000EAD0F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -362,6 +384,22 @@
 				7056DC84DBAA37CC30BED016 /* Pods-SwiftCheatSheet.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		221C58E727F87FC700E5D855 /* VideoNinja */ = {
+			isa = PBXGroup;
+			children = (
+				221C58E827F87FF000E5D855 /* VideoNinjaViewController.swift */,
+				221C58E927F87FF000E5D855 /* VideoNinjaViewController.xib */,
+				221C58EC27F8894D00E5D855 /* PlayVideoViewController.swift */,
+				221C58ED27F8894D00E5D855 /* PlayVideoViewController.xib */,
+				221C58F027F8895D00E5D855 /* RecordVideoViewController.swift */,
+				221C58F127F8895D00E5D855 /* RecordVideoViewController.xib */,
+				221C58F427F8896A00E5D855 /* MergeVideoViewController.swift */,
+				221C58F527F8896A00E5D855 /* MergeVideoViewController.xib */,
+				221C58F827F88E3800E5D855 /* VideoHelper.swift */,
+			);
+			path = VideoNinja;
 			sourceTree = "<group>";
 		};
 		222B3FCF27E061B1009C7322 /* GrowingCellTextView */ = {
@@ -504,14 +542,13 @@
 			isa = PBXGroup;
 			children = (
 				226218A927EE227B0052634A /* NSObject+Extensions.swift */,
+				2262189F27EE216A0052634A /* Bundle+Extensions.swift */,
+				226218A527EE22250052634A /* NSError+Extensions.swift */,
 				22E3480C27E84ACB00369602 /* String+Extensions.swift */,
 				2262189D27EE21340052634A /* NSAttributedString+Extensions.swift */,
 				2262189527EE1C890052634A /* Int+Extensions.swift */,
 				22E3480A27E849D300369602 /* Double+Extensions.swift */,
-				2262189F27EE216A0052634A /* Bundle+Extensions.swift */,
-				226218A127EE219E0052634A /* URL+Extensions.swift */,
 				226218A327EE21CD0052634A /* Array+IndexPath.swift */,
-				226218A527EE22250052634A /* NSError+Extensions.swift */,
 				2262188F27EDB9F60052634A /* UserDefaults+Extensions.swift */,
 				226218BA27EE26BC0052634A /* Numeric+Extensions.swift */,
 			);
@@ -904,6 +941,56 @@
 			path = Builder;
 			sourceTree = "<group>";
 		};
+		22CBBD4A27F2DBAC0014475E /* AVFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				221C58E727F87FC700E5D855 /* VideoNinja */,
+				22CBBD4B27F2DBBB0014475E /* Camera */,
+			);
+			path = AVFoundation;
+			sourceTree = "<group>";
+		};
+		22CBBD4B27F2DBBB0014475E /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				22CBBD5127F2FD540014475E /* Controls */,
+				22CBBD5027F2FD490014475E /* Preview */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		22CBBD4C27F2E5150014475E /* 开源框架 */ = {
+			isa = PBXGroup;
+			children = (
+				22CBBD4D27F2E5290014475E /* SPPermissions */,
+			);
+			path = "开源框架";
+			sourceTree = "<group>";
+		};
+		22CBBD4D27F2E5290014475E /* SPPermissions */ = {
+			isa = PBXGroup;
+			children = (
+				22CBBD4E27F2E57B0014475E /* PermissionsViewController.swift */,
+			);
+			path = SPPermissions;
+			sourceTree = "<group>";
+		};
+		22CBBD5027F2FD490014475E /* Preview */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Preview;
+			sourceTree = "<group>";
+		};
+		22CBBD5127F2FD540014475E /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				22CBBD5227F2FD8F0014475E /* CameraController.swift */,
+				2235454627F4633D000F7ACD /* CameraControlsViewControllerProtocol.swift */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
 		22D2232927BCEB89000EAD0F = {
 			isa = PBXGroup;
 			children = (
@@ -927,8 +1014,8 @@
 		22D2233427BCEB89000EAD0F /* SwiftCheatSheet */ = {
 			isa = PBXGroup;
 			children = (
-				22E3480027E8476F00369602 /* Constants */,
-				2246199E27EC10B30096C856 /* Extensions */,
+				22CBBD4A27F2DBAC0014475E /* AVFoundation */,
+				22CBBD4C27F2E5150014475E /* 开源框架 */,
 				2246199727EAF4560096C856 /* GradientColor */,
 				227E7EBF27E092BA009D5E45 /* NSMutableAttributedString */,
 				229AC7CB27D5E1F7001D81D2 /* Model-View-ViewModel */,
@@ -945,6 +1032,7 @@
 				22D2233E27BCEB8A000EAD0F /* Assets.xcassets */,
 				22D2234027BCEB8A000EAD0F /* LaunchScreen.storyboard */,
 				22D2234327BCEB8A000EAD0F /* Info.plist */,
+				2246199E27EC10B30096C856 /* Extensions */,
 			);
 			path = SwiftCheatSheet;
 			sourceTree = "<group>";
@@ -1046,13 +1134,6 @@
 				22E3481A27E8521700369602 /* HTTPURLResponse.swift */,
 			);
 			path = Networking;
-			sourceTree = "<group>";
-		};
-		22E3480027E8476F00369602 /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Constants;
 			sourceTree = "<group>";
 		};
 		22E3480127E8477700369602 /* Models */ = {
@@ -1265,6 +1346,7 @@
 				22D2234227BCEB8A000EAD0F /* LaunchScreen.storyboard in Resources */,
 				22D2233F27BCEB8A000EAD0F /* Assets.xcassets in Resources */,
 				22FF1B6427C8A00C007214EB /* CommentCell.xib in Resources */,
+				221C58EB27F87FF000E5D855 /* VideoNinjaViewController.xib in Resources */,
 				22AC912927DF9EE3007260E6 /* FilmTableViewCell.xib in Resources */,
 				229AC7D527D5E3BC001D81D2 /* content.json in Resources */,
 				22FF1B6027C89FFF007214EB /* ActionCell.xib in Resources */,
@@ -1278,15 +1360,18 @@
 				229AC7DB27D5E4C2001D81D2 /* PhotoDetailViewController.xib in Resources */,
 				22BF2E2C27BF42E6009027E3 /* albums.json in Resources */,
 				22AC912527DF9ED1007260E6 /* AuteurTableViewCell.xib in Resources */,
+				221C58F727F8896A00E5D855 /* MergeVideoViewController.xib in Resources */,
 				22FF1B5827C89FE4007214EB /* UserCell.xib in Resources */,
 				22BF2E3E27BF87CD009027E3 /* GameViewController.xib in Resources */,
 				22AC911827DF46D5007260E6 /* auteurs.json in Resources */,
+				221C58EF27F8894D00E5D855 /* PlayVideoViewController.xib in Resources */,
 				227E7EBC27E083B7009D5E45 /* CustomTableViewCell.xib in Resources */,
 				227E7EB527E0824F009D5E45 /* MultipleSelectionViewController.xib in Resources */,
 				227E7EC327E09345009D5E45 /* AttributedStringViewController.xib in Resources */,
 				224EB7D427F0604F008A35DF /* GradientViewController.xib in Resources */,
 				22D2233D27BCEB89000EAD0F /* Main.storyboard in Resources */,
 				22D2235527BCFFE3000EAD0F /* homepage.json in Resources */,
+				221C58F327F8895D00E5D855 /* RecordVideoViewController.xib in Resources */,
 				22E3482B27E8642A00369602 /* ModeratorsSearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1378,8 +1463,10 @@
 				229AC7D327D5E2EA001D81D2 /* APIService.swift in Sources */,
 				22569EB627E3364E009B18A3 /* ChirperViewController.swift in Sources */,
 				22BF2E2A27BF3B8D009027E3 /* HorizontalScrollerView.swift in Sources */,
+				2235454727F4633D000F7ACD /* CameraControlsViewControllerProtocol.swift in Sources */,
 				2246199B27EAF5A00096C856 /* GradientColorViewController.swift in Sources */,
 				22A7C75027C8AA4400196326 /* Post.swift in Sources */,
+				221C58F227F8895D00E5D855 /* RecordVideoViewController.swift in Sources */,
 				229AC7DE27D5E4DD001D81D2 /* PhotoListViewController.swift in Sources */,
 				22A7C75927C8AE5100196326 /* ActionViewModel.swift in Sources */,
 				22569EB327E328B2009B18A3 /* BirdSoundTableViewCell.swift in Sources */,
@@ -1417,6 +1504,7 @@
 				22EE32CB27D0999500A9A66F /* Anchors2ViewController.swift in Sources */,
 				2262189027EDB9F60052634A /* UserDefaults+Extensions.swift in Sources */,
 				22EE32D127D0B7DB00A9A66F /* AnimationConstraintsViewController.swift in Sources */,
+				221C58EE27F8894D00E5D855 /* PlayVideoViewController.swift in Sources */,
 				22DBC8E327CB631000E14468 /* MenuButtonViewController.swift in Sources */,
 				228B38F227D0614700BCF963 /* FlagViewController.swift in Sources */,
 				22BF2E1627BDFE51009027E3 /* HTTPClient.swift in Sources */,
@@ -1424,7 +1512,9 @@
 				22E3481D27E852B000369602 /* Result.swift in Sources */,
 				22FF1B6327C8A00C007214EB /* CommentCell.swift in Sources */,
 				22BF2E2827BF2FF9009027E3 /* NavigationController.swift in Sources */,
+				221C58F627F8896A00E5D855 /* MergeVideoViewController.swift in Sources */,
 				22EE32D327D0BC5E00A9A66F /* TraitCollectionViewController.swift in Sources */,
+				221C58F927F88E3800E5D855 /* VideoHelper.swift in Sources */,
 				227E7EB827E0838E009D5E45 /* Model.swift in Sources */,
 				22E3480927E8490600369602 /* AlertDisplayer.swift in Sources */,
 				226218B927EE265A0052634A /* UISearchBar+Extensions.swift in Sources */,
@@ -1452,6 +1542,7 @@
 				22E3481127E84C5800369602 /* ButtonEnablingBehavior.swift in Sources */,
 				222B3FD527E06200009C7322 /* GrowingCellViewController.swift in Sources */,
 				22BF2E3627BF750C009027E3 /* Shape.swift in Sources */,
+				22CBBD4F27F2E57B0014475E /* PermissionsViewController.swift in Sources */,
 				22E3480B27E849D300369602 /* Double+Extensions.swift in Sources */,
 				2262189427EDCA790052634A /* UIColor+Extensions.swift in Sources */,
 				22AC911B27DF48C0007260E6 /* Film.swift in Sources */,
@@ -1459,17 +1550,18 @@
 				22E3482327E857D500369602 /* ModeratorsViewModel.swift in Sources */,
 				226218A027EE216A0052634A /* Bundle+Extensions.swift in Sources */,
 				227E7EBE27E08478009D5E45 /* ViewModel.swift in Sources */,
+				221C58EA27F87FF000E5D855 /* VideoNinjaViewController.swift in Sources */,
 				22E3481727E84F7E00369602 /* ModeratorRequest.swift in Sources */,
 				2246DD2127C4BB48006A3AC1 /* IconCollectionViewCell.swift in Sources */,
 				226218A427EE21CD0052634A /* Array+IndexPath.swift in Sources */,
 				22A7C75227C8AC0100196326 /* Comment.swift in Sources */,
+				22CBBD5327F2FD8F0014475E /* CameraController.swift in Sources */,
 				226218B327EE24AF0052634A /* UIViewController+Extensions.swift in Sources */,
 				22AC911D27DF4990007260E6 /* Auteur.swift in Sources */,
 				22E3481327E84E0500369602 /* Moderator.swift in Sources */,
 				22E3482627E85BB500369602 /* ModeratorTableViewCell.swift in Sources */,
 				22AC912427DF9ED1007260E6 /* AuteurTableViewCell.swift in Sources */,
 				225F202527C33642008FCC29 /* Scorer.swift in Sources */,
-				226218A227EE219E0052634A /* URL+Extensions.swift in Sources */,
 				22E3482D27E8643E00369602 /* ModeratorsListViewController.swift in Sources */,
 				22569EAE27E3237C009B18A3 /* ServiceResponse.swift in Sources */,
 				2246DD1727C49402006A3AC1 /* CollaspibleCollectionViewController.swift in Sources */,

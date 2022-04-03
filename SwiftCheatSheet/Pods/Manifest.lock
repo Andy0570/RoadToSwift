@@ -4,6 +4,24 @@ PODS:
   - IGListKit (4.0.0):
     - IGListDiffKit (= 4.0.0)
   - Kingfisher (7.2.0)
+  - SPPermissions/Camera (7.1.5):
+    - SPPermissions/Core
+  - SPPermissions/Core (7.1.5)
+  - SPPermissions/LocationAlways (7.1.5):
+    - SPPermissions/Core
+    - SPPermissions/LocationExtension
+  - SPPermissions/LocationExtension (7.1.5)
+  - SPPermissions/LocationWhenInUse (7.1.5):
+    - SPPermissions/Core
+    - SPPermissions/LocationExtension
+  - SPPermissions/Microphone (7.1.5):
+    - SPPermissions/Core
+  - SPPermissions/Notification (7.1.5):
+    - SPPermissions/Core
+  - SPPermissions/PhotoLibrary (7.1.5):
+    - SPPermissions/Core
+  - SPPermissions/Tracking (7.1.5):
+    - SPPermissions/Core
   - SwifterSwift (5.3.0):
     - SwifterSwift/AppKit (= 5.3.0)
     - SwifterSwift/CoreAnimation (= 5.3.0)
@@ -39,6 +57,13 @@ DEPENDENCIES:
   - Alamofire
   - IGListKit
   - Kingfisher (~> 7.0)
+  - SPPermissions/Camera
+  - SPPermissions/LocationAlways
+  - SPPermissions/LocationWhenInUse
+  - SPPermissions/Microphone
+  - SPPermissions/Notification
+  - SPPermissions/PhotoLibrary
+  - SPPermissions/Tracking
   - SwifterSwift (from `https://github.com/SwifterSwift/SwifterSwift.git`, branch `master`)
   - SwiftyBeaver
 
@@ -48,6 +73,7 @@ SPEC REPOS:
     - IGListDiffKit
     - IGListKit
     - Kingfisher
+    - SPPermissions
     - SwiftyBeaver
 
 EXTERNAL SOURCES:
@@ -65,9 +91,10 @@ SPEC CHECKSUMS:
   IGListDiffKit: 665d6cf43ce726e676013db9c7d6c4294259b6b2
   IGListKit: fd5a5d21935298f5849fa49d426843cff97b77c7
   Kingfisher: 3ac0b75b155cabc0e544877d1a4deea29feece92
+  SPPermissions: c63ac1132badad39917de03a3c9dc2429ace94be
   SwifterSwift: 03a3e5fe175b6696193b2c9d0dfa7f0bf9ac02cc
   SwiftyBeaver: 84069991dd5dca07d7069100985badaca7f0ce82
 
-PODFILE CHECKSUM: d269b04480d39b9727545adc907a2c748692a1f7
+PODFILE CHECKSUM: 3bec60308e9814da6a7bfe80c8bc34dd91e2261c
 
 COCOAPODS: 1.11.2
