@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NCB-d6-Xk5">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Picker View Controller-->
+        <scene sceneID="5qT-31-VGk">
+            <objects>
+                <viewController id="OcT-3a-3jW" customClass="PickerViewController" customModule="Cubica" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PlW-Ha-3k1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ac5-O8-H4W">
+                                <rect key="frame" x="87.5" y="133.5" width="200" height="444.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom Birthday Cards" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewF-dX-41j">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="102.5"/>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="32"/>
+                                        <color key="textColor" name="rw-light"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sV5-YV-jfH">
+                                        <rect key="frame" x="0.0" y="102.5" width="200" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="kn1-LF-ep7"/>
+                                        </constraints>
+                                    </view>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Friend's Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C7v-d6-LSl">
+                                        <rect key="frame" x="0.0" y="118.5" width="200" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" textContentType="name"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IRQ-h9-S7B">
+                                        <rect key="frame" x="0.0" y="152.5" width="200" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="XZI-kX-lnr"/>
+                                        </constraints>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mascot_swifty-birthday-party" translatesAutoresizingMaskIntoConstraints="NO" id="9Bv-mk-rEo">
+                                        <rect key="frame" x="0.0" y="168.5" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="9Bv-mk-rEo" secondAttribute="height" multiplier="1:1" id="RIF-Zu-c1T"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Fs-NN-RuI">
+                                        <rect key="frame" x="0.0" y="368.5" width="200" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="dqz-8o-SGI"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lr6-jq-gIr">
+                                        <rect key="frame" x="0.0" y="384.5" width="200" height="30"/>
+                                        <color key="tintColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Record a video"/>
+                                        <connections>
+                                            <action selector="recordButtonTapped:" destination="OcT-3a-3jW" eventType="touchUpInside" id="q9S-m5-5XI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90Z-ok-9VB">
+                                        <rect key="frame" x="0.0" y="414.5" width="200" height="30"/>
+                                        <color key="tintColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Pick video from Photos"/>
+                                        <connections>
+                                            <action selector="pickVideoButtonTapped:" destination="OcT-3a-3jW" eventType="touchUpInside" id="1vP-28-Vhz"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="LWK-Mp-FIi">
+                                <rect key="frame" x="169" y="383.5" width="37" height="37"/>
+                                <color key="color" name="rw-light"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" name="rw-dark"/>
+                        <constraints>
+                            <constraint firstItem="ac5-O8-H4W" firstAttribute="leading" secondItem="pVz-Zh-nyy" secondAttribute="leading" constant="87.5" id="0Pb-vY-nEw"/>
+                            <constraint firstItem="ac5-O8-H4W" firstAttribute="centerY" secondItem="pVz-Zh-nyy" secondAttribute="centerY" id="D2R-fb-fMc"/>
+                            <constraint firstItem="ac5-O8-H4W" firstAttribute="centerX" secondItem="pVz-Zh-nyy" secondAttribute="centerX" id="J4L-rt-N6y"/>
+                            <constraint firstItem="LWK-Mp-FIi" firstAttribute="centerX" secondItem="9Bv-mk-rEo" secondAttribute="centerX" id="dF9-LZ-hBe"/>
+                            <constraint firstItem="pVz-Zh-nyy" firstAttribute="trailing" secondItem="ac5-O8-H4W" secondAttribute="trailing" constant="87.5" id="mkk-Rl-2t9"/>
+                            <constraint firstItem="LWK-Mp-FIi" firstAttribute="centerY" secondItem="9Bv-mk-rEo" secondAttribute="centerY" id="xZk-FT-rE4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pVz-Zh-nyy"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PdD-hr-6AM"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="LWK-Mp-FIi" id="GSV-D9-okt"/>
+                        <outlet property="imageView" destination="9Bv-mk-rEo" id="JGm-At-aEX"/>
+                        <outlet property="nameTextField" destination="C7v-d6-LSl" id="KhR-oJ-whc"/>
+                        <outlet property="pickButton" destination="90Z-ok-9VB" id="lPx-9U-mgY"/>
+                        <outlet property="recordButton" destination="lr6-jq-gIr" id="uzL-4c-QgI"/>
+                        <segue destination="ace-YL-Zp9" kind="show" identifier="showVideo" id="ShY-Cd-c8x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YlM-BV-LbN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="871.20000000000005" y="120.98950524737631"/>
+        </scene>
+        <!--Player View Controller-->
+        <scene sceneID="KEf-r0-mCp">
+            <objects>
+                <viewController id="ace-YL-Zp9" customClass="PlayerViewController" customModule="Cubica" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yaC-Pf-Wls">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="maw-k1-43O">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UQK-Or-dTf">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="559"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltR-44-Jdk">
+                                        <rect key="frame" x="0.0" y="559" width="375" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="Ur8-s0-4uj"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Save video"/>
+                                        <connections>
+                                            <action selector="saveVideoButtonTapped:" destination="ace-YL-Zp9" eventType="touchUpInside" id="HrJ-cG-rFa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="rw-dark"/>
+                        <constraints>
+                            <constraint firstItem="jHu-3r-Dpj" firstAttribute="trailing" secondItem="maw-k1-43O" secondAttribute="trailing" id="SPS-4o-Cmw"/>
+                            <constraint firstItem="maw-k1-43O" firstAttribute="leading" secondItem="jHu-3r-Dpj" secondAttribute="leading" id="lUG-2e-w1q"/>
+                            <constraint firstItem="maw-k1-43O" firstAttribute="top" secondItem="jHu-3r-Dpj" secondAttribute="top" id="pfq-3b-voJ"/>
+                            <constraint firstItem="jHu-3r-Dpj" firstAttribute="bottom" secondItem="maw-k1-43O" secondAttribute="bottom" id="zHW-bP-74P"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jHu-3r-Dpj"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7Pj-ct-0wx"/>
+                    <connections>
+                        <outlet property="videoView" destination="UQK-Or-dTf" id="Z2I-tN-Z6B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wuh-fZ-nht" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1660" y="120.98950524737631"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hNr-HZ-ohQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NCB-d6-Xk5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sOO-ca-WNZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" name="rw-dark"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OcT-3a-3jW" kind="relationship" relationship="rootViewController" id="hSZ-Ji-V8e"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yqN-eR-v03" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-68" y="120.98950524737631"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mascot_swifty-birthday-party" width="1000" height="1000"/>
+        <namedColor name="rw-dark">
+            <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="rw-light">
+            <color red="0.94901960784313721" green="0.96470588235294119" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
