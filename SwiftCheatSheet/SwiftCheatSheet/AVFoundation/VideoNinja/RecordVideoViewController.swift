@@ -28,7 +28,7 @@ class RecordVideoViewController: UIViewController {
 // MARK: - UIImagePickerControllerDelegate
 
 extension RecordVideoViewController: UIImagePickerControllerDelegate {
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         dismiss(animated: true, completion: nil)
 
         // UIVideoAtPathIsCompatibleWithSavedPhotosAlbum() 验证应用程序是否可以将文件保存到相册中

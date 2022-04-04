@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PickerViewController" customModule="SwiftCheatSheet" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicator" destination="WwC-yk-tch" id="XcQ-09-fIJ"/>
+                <outlet property="imageView" destination="sxh-DL-Eqk" id="QB7-Yv-bwN"/>
+                <outlet property="nameTextField" destination="Usg-WX-8Q5" id="tGi-Qr-jGH"/>
+                <outlet property="pickButton" destination="iEP-nL-1Qo" id="nYC-sq-V6M"/>
+                <outlet property="recordButton" destination="xOL-7J-A48" id="d3M-u9-GWe"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6yz-kD-kSG">
+                    <rect key="frame" x="46" y="206.5" width="321.5" height="483"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom Birthday Cards" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pU3-6X-6WF">
+                            <rect key="frame" x="0.0" y="0.0" width="321.5" height="51.5"/>
+                            <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="32"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="shy-9s-z5T">
+                            <rect key="frame" x="0.0" y="51.5" width="321.5" height="16"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="16" id="Ocv-nG-wRn"/>
+                            </constraints>
+                        </view>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Friend's Name" textAlignment="center" minimumFontSize="17" id="Usg-WX-8Q5" userLabel="Name Text Field">
+                            <rect key="frame" x="0.0" y="0.0" width="321.5" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RrK-gi-B4s">
+                            <rect key="frame" x="0.0" y="67.5" width="321.5" height="16"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="16" id="U9t-E8-lB9"/>
+                            </constraints>
+                        </view>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mascot_swifty-birthday-party" translatesAutoresizingMaskIntoConstraints="NO" id="sxh-DL-Eqk">
+                            <rect key="frame" x="0.0" y="83.5" width="321.5" height="321.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="sxh-DL-Eqk" secondAttribute="height" multiplier="1:1" id="X1g-bX-jKC"/>
+                            </constraints>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BzQ-7q-VnP">
+                            <rect key="frame" x="0.0" y="405" width="321.5" height="16"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="16" id="RBr-sB-g9Y"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOL-7J-A48" userLabel="Record Button">
+                            <rect key="frame" x="0.0" y="421" width="321.5" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Record a video">
+                                <color key="baseForegroundColor" name="rw-green"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="recordButtonTapped:" destination="-1" eventType="touchUpInside" id="UF9-OI-BJX"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iEP-nL-1Qo" userLabel="Pick Button">
+                            <rect key="frame" x="0.0" y="452" width="321.5" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Pick video from Photos">
+                                <color key="baseForegroundColor" name="rw-green"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="pickVideoButtonTapped:" destination="-1" eventType="touchUpInside" id="Htx-ne-ryC"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="WwC-yk-tch">
+                    <rect key="frame" x="197" y="441" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="rw-dark"/>
+            <constraints>
+                <constraint firstItem="6yz-kD-kSG" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="RTD-bC-xyU"/>
+                <constraint firstItem="WwC-yk-tch" firstAttribute="centerX" secondItem="sxh-DL-Eqk" secondAttribute="centerX" id="Rmi-N4-XSd"/>
+                <constraint firstItem="WwC-yk-tch" firstAttribute="centerY" secondItem="sxh-DL-Eqk" secondAttribute="centerY" id="Sgy-aN-TSY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6yz-kD-kSG" secondAttribute="trailing" constant="46" id="VBB-mI-dJr"/>
+                <constraint firstItem="6yz-kD-kSG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="46" id="arB-f7-z37"/>
+                <constraint firstItem="6yz-kD-kSG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="gu5-W6-jJp"/>
+            </constraints>
+            <point key="canvasLocation" x="-59.420289855072468" y="-32.142857142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="mascot_swifty-birthday-party" width="1000" height="1000"/>
+        <namedColor name="rw-dark">
+            <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="rw-green">
+            <color red="0.0" green="0.40784313725490196" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

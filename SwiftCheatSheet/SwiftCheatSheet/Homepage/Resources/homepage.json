@@ -177,5 +177,10 @@
         "title": "播放、录制与合并视频",
         "description": "-",
         "className": "VideoNinjaViewController"
+    },{
+        "image": "image",
+        "title": "AVFoundation 教程：为视频添加叠加层和动画",
+        "description": "-",
+        "className": "PickerViewController"
     }]
 }]

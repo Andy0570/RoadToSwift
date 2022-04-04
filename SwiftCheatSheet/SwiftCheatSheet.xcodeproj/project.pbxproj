@@ -19,7 +19,12 @@
 		222B3FD227E061F1009C7322 /* GrowingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B3FD027E061F1009C7322 /* GrowingCell.swift */; };
 		222B3FD327E061F1009C7322 /* GrowingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 222B3FD127E061F1009C7322 /* GrowingCell.xib */; };
 		222B3FD527E06200009C7322 /* GrowingCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B3FD427E06200009C7322 /* GrowingCellViewController.swift */; };
+		2231431727FB2CE00006B59E /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2231431527FB2CE00006B59E /* PickerViewController.swift */; };
+		2231431827FB2CE00006B59E /* PickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2231431627FB2CE00006B59E /* PickerViewController.xib */; };
 		2235454727F4633D000F7ACD /* CameraControlsViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2235454627F4633D000F7ACD /* CameraControlsViewControllerProtocol.swift */; };
+		2240754527FB5CDC0050BEF6 /* VideoEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2240754427FB5CDC0050BEF6 /* VideoEditor.swift */; };
+		2240754827FB60390050BEF6 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2240754627FB60390050BEF6 /* PlayerViewController.swift */; };
+		2240754927FB60390050BEF6 /* PlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2240754727FB60390050BEF6 /* PlayerViewController.xib */; };
 		2246199B27EAF5A00096C856 /* GradientColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2246199A27EAF5A00096C856 /* GradientColorViewController.swift */; };
 		2246199D27EAFE5B0096C856 /* GradientLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2246199C27EAFE5B0096C856 /* GradientLabel.swift */; };
 		2246DD0927C474E9006A3AC1 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2246DD0827C474E9006A3AC1 /* MyCollectionViewCell.swift */; };
@@ -197,7 +202,12 @@
 		222B3FD027E061F1009C7322 /* GrowingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowingCell.swift; sourceTree = "<group>"; };
 		222B3FD127E061F1009C7322 /* GrowingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GrowingCell.xib; sourceTree = "<group>"; };
 		222B3FD427E06200009C7322 /* GrowingCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowingCellViewController.swift; sourceTree = "<group>"; };
+		2231431527FB2CE00006B59E /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		2231431627FB2CE00006B59E /* PickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PickerViewController.xib; sourceTree = "<group>"; };
 		2235454627F4633D000F7ACD /* CameraControlsViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraControlsViewControllerProtocol.swift; sourceTree = "<group>"; };
+		2240754427FB5CDC0050BEF6 /* VideoEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoEditor.swift; sourceTree = "<group>"; };
+		2240754627FB60390050BEF6 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		2240754727FB60390050BEF6 /* PlayerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerViewController.xib; sourceTree = "<group>"; };
 		2246199A27EAF5A00096C856 /* GradientColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientColorViewController.swift; sourceTree = "<group>"; };
 		2246199C27EAFE5B0096C856 /* GradientLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLabel.swift; sourceTree = "<group>"; };
 		2246DD0827C474E9006A3AC1 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -410,6 +420,18 @@
 				222B3FD127E061F1009C7322 /* GrowingCell.xib */,
 			);
 			path = GrowingCellTextView;
+			sourceTree = "<group>";
+		};
+		2231431427FB2CBE0006B59E /* Cubica */ = {
+			isa = PBXGroup;
+			children = (
+				2231431527FB2CE00006B59E /* PickerViewController.swift */,
+				2231431627FB2CE00006B59E /* PickerViewController.xib */,
+				2240754627FB60390050BEF6 /* PlayerViewController.swift */,
+				2240754727FB60390050BEF6 /* PlayerViewController.xib */,
+				2240754427FB5CDC0050BEF6 /* VideoEditor.swift */,
+			);
+			path = Cubica;
 			sourceTree = "<group>";
 		};
 		2246199727EAF4560096C856 /* GradientColor */ = {
@@ -944,6 +966,7 @@
 		22CBBD4A27F2DBAC0014475E /* AVFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				2231431427FB2CBE0006B59E /* Cubica */,
 				221C58E727F87FC700E5D855 /* VideoNinja */,
 				22CBBD4B27F2DBBB0014475E /* Camera */,
 			);
@@ -1366,6 +1389,8 @@
 				22AC911827DF46D5007260E6 /* auteurs.json in Resources */,
 				221C58EF27F8894D00E5D855 /* PlayVideoViewController.xib in Resources */,
 				227E7EBC27E083B7009D5E45 /* CustomTableViewCell.xib in Resources */,
+				2240754927FB60390050BEF6 /* PlayerViewController.xib in Resources */,
+				2231431827FB2CE00006B59E /* PickerViewController.xib in Resources */,
 				227E7EB527E0824F009D5E45 /* MultipleSelectionViewController.xib in Resources */,
 				227E7EC327E09345009D5E45 /* AttributedStringViewController.xib in Resources */,
 				224EB7D427F0604F008A35DF /* GradientViewController.xib in Resources */,
@@ -1496,6 +1521,7 @@
 				22E3482127E8539F00369602 /* StackExchangeClient.swift in Sources */,
 				2246199D27EAFE5B0096C856 /* GradientLabel.swift in Sources */,
 				229AC7E127D5EF93001D81D2 /* PhotoListTableViewCell.swift in Sources */,
+				2240754827FB60390050BEF6 /* PlayerViewController.swift in Sources */,
 				22E3480D27E84ACB00369602 /* String+Extensions.swift in Sources */,
 				22E3480F27E84BD500369602 /* UITextField+Extensions.swift in Sources */,
 				22BF2E2027BE2597009027E3 /* LibraryAPI.swift in Sources */,
@@ -1521,9 +1547,11 @@
 				22E3481927E84FC300369602 /* URLRequest.swift in Sources */,
 				22E3481B27E8521700369602 /* HTTPURLResponse.swift in Sources */,
 				227E7EAC27E0756C009D5E45 /* CollapsExpandViewController.swift in Sources */,
+				2240754527FB5CDC0050BEF6 /* VideoEditor.swift in Sources */,
 				225F202327C332F0008FCC29 /* TurnStrategy.swift in Sources */,
 				227E7EBB27E083B7009D5E45 /* CustomTableViewCell.swift in Sources */,
 				229AC7E427D5FAAB001D81D2 /* PhotoListViewModel.swift in Sources */,
+				2231431727FB2CE00006B59E /* PickerViewController.swift in Sources */,
 				22D2235127BCF689000EAD0F /* ArrayDataSource.swift in Sources */,
 				22E3482A27E8642A00369602 /* ModeratorsSearchViewController.swift in Sources */,
 				2262189A27EE1E1F0052634A /* UIDevice+Extensions.swift in Sources */,
