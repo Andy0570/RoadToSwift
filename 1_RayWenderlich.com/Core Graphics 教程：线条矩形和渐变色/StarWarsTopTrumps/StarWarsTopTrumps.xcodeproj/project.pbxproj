@@ -1,0 +1,459 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22D2EE1A280004D2003D69E1 /* StarshipsListCellBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D2EE19280004D2003D69E1 /* StarshipsListCellBackground.swift */; };
+		22D2EE1C28000AF6003D69E1 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D2EE1B28000AF6003D69E1 /* UIColorExtensions.swift */; };
+		22D2EE1E28000C7A003D69E1 /* CGContextExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D2EE1D28000C7A003D69E1 /* CGContextExtensions.swift */; };
+		22D2EE2028001B70003D69E1 /* StarshipTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D2EE1F28001B70003D69E1 /* StarshipTableView.swift */; };
+		22D2EE2228001CED003D69E1 /* YellowSplitterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D2EE2128001CED003D69E1 /* YellowSplitterTableViewCell.swift */; };
+		4514CDE621B46ABE0060E34F /* image_not_found.png in Resources */ = {isa = PBXBuildFile; fileRef = 4514CDE521B46ABD0060E34F /* image_not_found.png */; };
+		453CC1EE21AFC7AD0012301C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453CC1ED21AFC7AD0012301C /* AppDelegate.swift */; };
+		453CC1F021AFC7AD0012301C /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453CC1EF21AFC7AD0012301C /* MasterViewController.swift */; };
+		453CC1F221AFC7AD0012301C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453CC1F121AFC7AD0012301C /* DetailViewController.swift */; };
+		453CC1F521AFC7AD0012301C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 453CC1F321AFC7AD0012301C /* Main.storyboard */; };
+		453CC1F721AFC7AF0012301C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 453CC1F621AFC7AF0012301C /* Assets.xcassets */; };
+		453CC23E21AFCA900012301C /* Starships.json in Resources */ = {isa = PBXBuildFile; fileRef = 453CC23D21AFCA900012301C /* Starships.json */; };
+		453CC24121AFCAFB0012301C /* Starship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453CC24021AFCAFB0012301C /* Starship.swift */; };
+		453CC24421AFCC7E0012301C /* StarshipDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453CC24321AFCC7E0012301C /* StarshipDataProvider.swift */; };
+		45578FE821B7226D00F59CEC /* StarshipImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45578FE721B7226D00F59CEC /* StarshipImageFetcher.swift */; };
+		45578FEB21B74EDD00F59CEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45578FEA21B74EDD00F59CEC /* LaunchScreen.storyboard */; };
+		4588ABEA21DE7B1E0012B268 /* rebel_transport.png in Resources */ = {isa = PBXBuildFile; fileRef = 4588ABDA21DE7B1D0012B268 /* rebel_transport.png */; };
+		4588ABEB21DE7B1E0012B268 /* b-wing.png in Resources */ = {isa = PBXBuildFile; fileRef = 4588ABDB21DE7B1D0012B268 /* b-wing.png */; };
+		4588ABEC21DE7B1E0012B268 /* cr90_corvette.png in Resources */ = {isa = PBXBuildFile; fileRef = 4588ABDC21DE7B1D0012B268 /* cr90_corvette.png */; };
+		4588ABED21DE7B1E0012B268 /* a-wing.png in Resources */ = {isa = PBXBuildFile; fileRef = 4588ABDD21DE7B1D0012B268 /* a-wing.png */; };
+		4588ABEE21DE7B1E0012B268 /* y-wing.png in Resources */ = {isa = PBXBuildFile; fileRef = 4588ABDE21DE7B1D0012B268 /* y-wing.png */; };
+		4588ABEF21DE7B1E0012B268 /* executor.png in Resources */ = {isa = PBXBuildFile; fileRef = 4588ABDF21DE7B1D0012B268 /* executor.png */; };
+		4588ABF021DE7B1E0012B268 /* tie_advanced_x1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4588ABE021DE7B1D0012B268 /* tie_advanced_x1.png */; };
+		4588ABF121DE7B1E0012B268 /* death_star.png in Resources */ = {isa = PBXBuildFile; fileRef = 4588ABE121DE7B1D0012B268 /* death_star.png */; };
+		4588ABF221DE7B1E0012B268 /* x-wing.png in Resources */ = {isa = PBXBuildFile; fileRef = 4588ABE221DE7B1D0012B268 /* x-wing.png */; };
+		4588ABF321DE7B1E0012B268 /* millennium_falcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4588ABE321DE7B1D0012B268 /* millennium_falcon.png */; };
+		4588ABF421DE7B1E0012B268 /* slave_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4588ABE421DE7B1D0012B268 /* slave_1.png */; };
+		4588ABF521DE7B1E0012B268 /* calamari_cruiser.png in Resources */ = {isa = PBXBuildFile; fileRef = 4588ABE521DE7B1D0012B268 /* calamari_cruiser.png */; };
+		4588ABF621DE7B1E0012B268 /* star_destroyer.png in Resources */ = {isa = PBXBuildFile; fileRef = 4588ABE621DE7B1D0012B268 /* star_destroyer.png */; };
+		4588ABF721DE7B1E0012B268 /* imperial_shuttle.png in Resources */ = {isa = PBXBuildFile; fileRef = 4588ABE721DE7B1E0012B268 /* imperial_shuttle.png */; };
+		4588ABF821DE7B1E0012B268 /* sentinel-class_landing_craft.png in Resources */ = {isa = PBXBuildFile; fileRef = 4588ABE821DE7B1E0012B268 /* sentinel-class_landing_craft.png */; };
+		4588ABF921DE7B1E0012B268 /* ef76_nebulon-b_escort_frigate.png in Resources */ = {isa = PBXBuildFile; fileRef = 4588ABE921DE7B1E0012B268 /* ef76_nebulon-b_escort_frigate.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		22D2EE19280004D2003D69E1 /* StarshipsListCellBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipsListCellBackground.swift; sourceTree = "<group>"; };
+		22D2EE1B28000AF6003D69E1 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		22D2EE1D28000C7A003D69E1 /* CGContextExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGContextExtensions.swift; sourceTree = "<group>"; };
+		22D2EE1F28001B70003D69E1 /* StarshipTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipTableView.swift; sourceTree = "<group>"; };
+		22D2EE2128001CED003D69E1 /* YellowSplitterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowSplitterTableViewCell.swift; sourceTree = "<group>"; };
+		4514CDE521B46ABD0060E34F /* image_not_found.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_not_found.png; sourceTree = "<group>"; };
+		453CC1EA21AFC7AD0012301C /* StarWarsTopTrumps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsTopTrumps.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		453CC1ED21AFC7AD0012301C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		453CC1EF21AFC7AD0012301C /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		453CC1F121AFC7AD0012301C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		453CC1F421AFC7AD0012301C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		453CC1F621AFC7AF0012301C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
+		453CC1FB21AFC7AF0012301C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		453CC23D21AFCA900012301C /* Starships.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Starships.json; sourceTree = "<group>"; };
+		453CC24021AFCAFB0012301C /* Starship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starship.swift; sourceTree = "<group>"; };
+		453CC24321AFCC7E0012301C /* StarshipDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipDataProvider.swift; sourceTree = "<group>"; };
+		45578FE721B7226D00F59CEC /* StarshipImageFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipImageFetcher.swift; sourceTree = "<group>"; };
+		45578FEA21B74EDD00F59CEC /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4588ABDA21DE7B1D0012B268 /* rebel_transport.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rebel_transport.png; sourceTree = "<group>"; };
+		4588ABDB21DE7B1D0012B268 /* b-wing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "b-wing.png"; sourceTree = "<group>"; };
+		4588ABDC21DE7B1D0012B268 /* cr90_corvette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cr90_corvette.png; sourceTree = "<group>"; };
+		4588ABDD21DE7B1D0012B268 /* a-wing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "a-wing.png"; sourceTree = "<group>"; };
+		4588ABDE21DE7B1D0012B268 /* y-wing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "y-wing.png"; sourceTree = "<group>"; };
+		4588ABDF21DE7B1D0012B268 /* executor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = executor.png; sourceTree = "<group>"; };
+		4588ABE021DE7B1D0012B268 /* tie_advanced_x1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tie_advanced_x1.png; sourceTree = "<group>"; };
+		4588ABE121DE7B1D0012B268 /* death_star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = death_star.png; sourceTree = "<group>"; };
+		4588ABE221DE7B1D0012B268 /* x-wing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "x-wing.png"; sourceTree = "<group>"; };
+		4588ABE321DE7B1D0012B268 /* millennium_falcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = millennium_falcon.png; sourceTree = "<group>"; };
+		4588ABE421DE7B1D0012B268 /* slave_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slave_1.png; sourceTree = "<group>"; };
+		4588ABE521DE7B1D0012B268 /* calamari_cruiser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calamari_cruiser.png; sourceTree = "<group>"; };
+		4588ABE621DE7B1D0012B268 /* star_destroyer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_destroyer.png; sourceTree = "<group>"; };
+		4588ABE721DE7B1E0012B268 /* imperial_shuttle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imperial_shuttle.png; sourceTree = "<group>"; };
+		4588ABE821DE7B1E0012B268 /* sentinel-class_landing_craft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sentinel-class_landing_craft.png"; sourceTree = "<group>"; };
+		4588ABE921DE7B1E0012B268 /* ef76_nebulon-b_escort_frigate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ef76_nebulon-b_escort_frigate.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		453CC1E721AFC7AD0012301C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4514CDE021B447BF0060E34F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				4514CDE521B46ABD0060E34F /* image_not_found.png */,
+				4588ABDD21DE7B1D0012B268 /* a-wing.png */,
+				4588ABDB21DE7B1D0012B268 /* b-wing.png */,
+				4588ABE521DE7B1D0012B268 /* calamari_cruiser.png */,
+				4588ABDC21DE7B1D0012B268 /* cr90_corvette.png */,
+				4588ABE121DE7B1D0012B268 /* death_star.png */,
+				4588ABE921DE7B1E0012B268 /* ef76_nebulon-b_escort_frigate.png */,
+				4588ABDF21DE7B1D0012B268 /* executor.png */,
+				4588ABE721DE7B1E0012B268 /* imperial_shuttle.png */,
+				4588ABE321DE7B1D0012B268 /* millennium_falcon.png */,
+				4588ABDA21DE7B1D0012B268 /* rebel_transport.png */,
+				4588ABE821DE7B1E0012B268 /* sentinel-class_landing_craft.png */,
+				4588ABE421DE7B1D0012B268 /* slave_1.png */,
+				4588ABE621DE7B1D0012B268 /* star_destroyer.png */,
+				4588ABE021DE7B1D0012B268 /* tie_advanced_x1.png */,
+				4588ABE221DE7B1D0012B268 /* x-wing.png */,
+				4588ABDE21DE7B1D0012B268 /* y-wing.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		4514CDE321B464540060E34F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				45578FEA21B74EDD00F59CEC /* LaunchScreen.storyboard */,
+				453CC1F621AFC7AF0012301C /* Assets.xcassets */,
+				453CC23D21AFCA900012301C /* Starships.json */,
+				4514CDE021B447BF0060E34F /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		453CC1E121AFC7AD0012301C = {
+			isa = PBXGroup;
+			children = (
+				453CC1EC21AFC7AD0012301C /* StarWarsTopTrumps */,
+				453CC1EB21AFC7AD0012301C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		453CC1EB21AFC7AD0012301C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				453CC1EA21AFC7AD0012301C /* StarWarsTopTrumps.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		453CC1EC21AFC7AD0012301C /* StarWarsTopTrumps */ = {
+			isa = PBXGroup;
+			children = (
+				453CC1F321AFC7AD0012301C /* Main.storyboard */,
+				453CC1ED21AFC7AD0012301C /* AppDelegate.swift */,
+				453CC1EF21AFC7AD0012301C /* MasterViewController.swift */,
+				453CC1F121AFC7AD0012301C /* DetailViewController.swift */,
+				453CC24321AFCC7E0012301C /* StarshipDataProvider.swift */,
+				45578FE721B7226D00F59CEC /* StarshipImageFetcher.swift */,
+				453CC24021AFCAFB0012301C /* Starship.swift */,
+				22D2EE1F28001B70003D69E1 /* StarshipTableView.swift */,
+				22D2EE19280004D2003D69E1 /* StarshipsListCellBackground.swift */,
+				22D2EE1B28000AF6003D69E1 /* UIColorExtensions.swift */,
+				22D2EE1D28000C7A003D69E1 /* CGContextExtensions.swift */,
+				22D2EE2128001CED003D69E1 /* YellowSplitterTableViewCell.swift */,
+				4514CDE321B464540060E34F /* Resources */,
+				453CC1FB21AFC7AF0012301C /* Info.plist */,
+			);
+			path = StarWarsTopTrumps;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		453CC1E921AFC7AD0012301C /* StarWarsTopTrumps */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 453CC20921AFC7AF0012301C /* Build configuration list for PBXNativeTarget "StarWarsTopTrumps" */;
+			buildPhases = (
+				453CC1E621AFC7AD0012301C /* Sources */,
+				453CC1E721AFC7AD0012301C /* Frameworks */,
+				453CC1E821AFC7AD0012301C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StarWarsTopTrumps;
+			productName = StarWarsTopTrumps;
+			productReference = 453CC1EA21AFC7AD0012301C /* StarWarsTopTrumps.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		453CC1E221AFC7AD0012301C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Ray Wenderlich";
+				TargetAttributes = {
+					453CC1E921AFC7AD0012301C = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 453CC1E521AFC7AD0012301C /* Build configuration list for PBXProject "StarWarsTopTrumps" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 453CC1E121AFC7AD0012301C;
+			productRefGroup = 453CC1EB21AFC7AD0012301C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				453CC1E921AFC7AD0012301C /* StarWarsTopTrumps */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		453CC1E821AFC7AD0012301C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4588ABEC21DE7B1E0012B268 /* cr90_corvette.png in Resources */,
+				453CC1F721AFC7AF0012301C /* Assets.xcassets in Resources */,
+				4588ABF121DE7B1E0012B268 /* death_star.png in Resources */,
+				4588ABEF21DE7B1E0012B268 /* executor.png in Resources */,
+				4588ABF621DE7B1E0012B268 /* star_destroyer.png in Resources */,
+				4588ABF321DE7B1E0012B268 /* millennium_falcon.png in Resources */,
+				4588ABEB21DE7B1E0012B268 /* b-wing.png in Resources */,
+				4588ABED21DE7B1E0012B268 /* a-wing.png in Resources */,
+				4588ABF421DE7B1E0012B268 /* slave_1.png in Resources */,
+				453CC1F521AFC7AD0012301C /* Main.storyboard in Resources */,
+				4588ABEE21DE7B1E0012B268 /* y-wing.png in Resources */,
+				4588ABF521DE7B1E0012B268 /* calamari_cruiser.png in Resources */,
+				4588ABF021DE7B1E0012B268 /* tie_advanced_x1.png in Resources */,
+				4588ABF721DE7B1E0012B268 /* imperial_shuttle.png in Resources */,
+				45578FEB21B74EDD00F59CEC /* LaunchScreen.storyboard in Resources */,
+				4588ABEA21DE7B1E0012B268 /* rebel_transport.png in Resources */,
+				4514CDE621B46ABE0060E34F /* image_not_found.png in Resources */,
+				4588ABF821DE7B1E0012B268 /* sentinel-class_landing_craft.png in Resources */,
+				4588ABF221DE7B1E0012B268 /* x-wing.png in Resources */,
+				453CC23E21AFCA900012301C /* Starships.json in Resources */,
+				4588ABF921DE7B1E0012B268 /* ef76_nebulon-b_escort_frigate.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		453CC1E621AFC7AD0012301C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				453CC1F221AFC7AD0012301C /* DetailViewController.swift in Sources */,
+				22D2EE2028001B70003D69E1 /* StarshipTableView.swift in Sources */,
+				45578FE821B7226D00F59CEC /* StarshipImageFetcher.swift in Sources */,
+				453CC1F021AFC7AD0012301C /* MasterViewController.swift in Sources */,
+				453CC24421AFCC7E0012301C /* StarshipDataProvider.swift in Sources */,
+				22D2EE1A280004D2003D69E1 /* StarshipsListCellBackground.swift in Sources */,
+				22D2EE2228001CED003D69E1 /* YellowSplitterTableViewCell.swift in Sources */,
+				453CC1EE21AFC7AD0012301C /* AppDelegate.swift in Sources */,
+				453CC24121AFCAFB0012301C /* Starship.swift in Sources */,
+				22D2EE1E28000C7A003D69E1 /* CGContextExtensions.swift in Sources */,
+				22D2EE1C28000AF6003D69E1 /* UIColorExtensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		453CC1F321AFC7AD0012301C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				453CC1F421AFC7AD0012301C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		453CC20721AFC7AF0012301C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		453CC20821AFC7AF0012301C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		453CC20A21AFC7AF0012301C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A8F7U6DN75;
+				INFOPLIST_FILE = StarWarsTopTrumps/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.StarWarsTopTrumps;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		453CC20B21AFC7AF0012301C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A8F7U6DN75;
+				INFOPLIST_FILE = StarWarsTopTrumps/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.StarWarsTopTrumps;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		453CC1E521AFC7AD0012301C /* Build configuration list for PBXProject "StarWarsTopTrumps" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				453CC20721AFC7AF0012301C /* Debug */,
+				453CC20821AFC7AF0012301C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		453CC20921AFC7AF0012301C /* Build configuration list for PBXNativeTarget "StarWarsTopTrumps" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				453CC20A21AFC7AF0012301C /* Debug */,
+				453CC20B21AFC7AF0012301C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 453CC1E221AFC7AD0012301C /* Project object */;
+}

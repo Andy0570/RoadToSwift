@@ -1,0 +1,20 @@
+The images of starships used in this tutorial all come from http://starwars.wikia.com/.
+
+They may be subjected to copyright, but are used in this tutorial under fair use of US Copyright Law
+
+CR90 Corvette: http://starwars.wikia.com/wiki/CR90_corvette?file=Rebels-TantiveIVConceptArt-CroppedBackground.png
+Star Destroyer: http://starwars.wikia.com/wiki/Star_Destroyer?file=Finalizer_Over_Jakku.png
+Sentinel class shuttle: http://starwars.wikia.com/wiki/Sentinel-class_landing_craft?file=Imperial_Sentinel-class_shuttle.png
+Death star: https://vignette.wikia.nocookie.net/starwars/images/9/9d/DSI_hdapproach.png/revision/latest?cb=20130221005853
+Millennium  Falcon: https://vignette.wikia.nocookie.net/starwars/images/4/43/MillenniumFalconTFA-Fathead.png/revision/latest/scale-to-width-down/640
+Y-wing: https://vignette.wikia.nocookie.net/starwars/images/8/81/Y-wing.png/revision/latest/scale-to-width-down/640
+X-wing: http://starwars.wikia.com/wiki/File:Xwing-SWB.jpg
+TIE Advanced x1: https://vignette.wikia.nocookie.net/starwars/images/1/1d/Vader_TIEAdvanced_SWB.png/revision/latest?cb=20160915042032
+Executor: https://vignette.wikia.nocookie.net/starwars/images/3/30/Executor_BF2.png/revision/latest/scale-to-width-down/640
+Rebel Transport: https://vignette.wikia.nocookie.net/starwars/images/e/eb/GR-75_Medium_Transport.jpg/revision/latest?cb=20070106181949
+Slave 1: https://vignette.wikia.nocookie.net/starwars/images/b/ba/Slave_I_DICE.png/revision/latest/scale-to-width-down/640
+Imperial Shuttle: https://vignette.wikia.nocookie.net/starwars/images/a/af/Shuttle-CHRON.jpg/revision/latest?cb=20100813150543
+EF76 Nebulon-B escort frigate: https://vignette.wikia.nocookie.net/starwars/images/5/50/NBfrigate.JPG/revision/latest?cb=20061215024715
+Calamari Cruiser: https://vignette.wikia.nocookie.net/starwars/images/9/94/MCLiberty.jpg/revision/latest/scale-to-width-down/640
+A-wing: https://vignette.wikia.nocookie.net/starwars/images/e/ec/Resistance_A-wing_SWCT.png/revision/latest?cb=20181015045043
+B-wing: https://vignette.wikia.nocookie.net/starwars/images/7/71/BWingsKillISD2-ST.jpg/revision/latest/scale-to-width-down/640

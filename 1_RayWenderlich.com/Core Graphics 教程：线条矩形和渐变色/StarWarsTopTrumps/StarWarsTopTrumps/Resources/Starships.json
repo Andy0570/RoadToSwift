@@ -1,0 +1,437 @@
+{
+  "allStarships": [
+    {
+      "node": {
+        "name": "CR90 corvette",
+        "model": "CR90 corvette",
+        "starshipClass": "corvette",
+        "costInCredits": 3500000,
+        "cargoCapacity": 3000000,
+        "MGLT": 60,
+        "maxAtmospheringSpeed": 950,
+        "length": 150
+      }
+    },
+    {
+      "node": {
+        "name": "Star Destroyer",
+        "model": "Imperial I-class Star Destroyer",
+        "starshipClass": "Star Destroyer",
+        "costInCredits": 150000000,
+        "cargoCapacity": 36000000,
+        "MGLT": 60,
+        "maxAtmospheringSpeed": 975,
+        "length": 1600
+      }
+    },
+    {
+      "node": {
+        "name": "Sentinel-class landing craft",
+        "model": "Sentinel-class landing craft",
+        "starshipClass": "landing craft",
+        "costInCredits": 240000,
+        "cargoCapacity": 180000,
+        "MGLT": 70,
+        "maxAtmospheringSpeed": 1000,
+        "length": 38
+      }
+    },
+    {
+      "node": {
+        "name": "Death Star",
+        "model": "DS-1 Orbital Battle Station",
+        "starshipClass": "Deep Space Mobile Battlestation",
+        "costInCredits": 1000000000000,
+        "cargoCapacity": 1000000000000,
+        "MGLT": 10,
+        "maxAtmospheringSpeed": null,
+        "length": 120000
+      }
+    },
+    {
+      "node": {
+        "name": "Millennium Falcon",
+        "model": "YT-1300 light freighter",
+        "starshipClass": "Light freighter",
+        "costInCredits": 100000,
+        "cargoCapacity": 100000,
+        "MGLT": 75,
+        "maxAtmospheringSpeed": 1050,
+        "length": 34.37
+      }
+    },
+    {
+      "node": {
+        "name": "Y-wing",
+        "model": "BTL Y-wing",
+        "starshipClass": "assault starfighter",
+        "costInCredits": 134999,
+        "cargoCapacity": 110,
+        "MGLT": 80,
+        "maxAtmospheringSpeed": null,
+        "length": 14
+      }
+    },
+    {
+      "node": {
+        "name": "X-wing",
+        "model": "T-65 X-wing",
+        "starshipClass": "Starfighter",
+        "costInCredits": 149999,
+        "cargoCapacity": 110,
+        "MGLT": 100,
+        "maxAtmospheringSpeed": 1050,
+        "length": 12.5
+      }
+    },
+    {
+      "node": {
+        "name": "TIE Advanced x1",
+        "model": "Twin Ion Engine Advanced x1",
+        "starshipClass": "Starfighter",
+        "costInCredits": null,
+        "cargoCapacity": 150,
+        "MGLT": 105,
+        "maxAtmospheringSpeed": 1200,
+        "length": 9.2
+      }
+    },
+    {
+      "node": {
+        "name": "Executor",
+        "model": "Executor-class star dreadnought",
+        "starshipClass": "Star dreadnought",
+        "costInCredits": 1143350000,
+        "cargoCapacity": 250000000,
+        "MGLT": 40,
+        "maxAtmospheringSpeed": null,
+        "length": 19000
+      }
+    },
+    {
+      "node": {
+        "name": "Rebel transport",
+        "model": "GR-75 medium transport",
+        "starshipClass": "Medium transport",
+        "costInCredits": null,
+        "cargoCapacity": 19000000,
+        "MGLT": 20,
+        "maxAtmospheringSpeed": 650,
+        "length": 90
+      }
+    },
+    {
+      "node": {
+        "name": "Slave 1",
+        "model": "Firespray-31-class patrol and attack",
+        "starshipClass": "Patrol craft",
+        "costInCredits": null,
+        "cargoCapacity": 70000,
+        "MGLT": 70,
+        "maxAtmospheringSpeed": 1000,
+        "length": 21.5
+      }
+    },
+    {
+      "node": {
+        "name": "Imperial shuttle",
+        "model": "Lambda-class T-4a shuttle",
+        "starshipClass": "Armed government transport",
+        "costInCredits": 240000,
+        "cargoCapacity": 80000,
+        "MGLT": 50,
+        "maxAtmospheringSpeed": 850,
+        "length": 20
+      }
+    },
+    {
+      "node": {
+        "name": "EF76 Nebulon-B escort frigate",
+        "model": "EF76 Nebulon-B escort frigate",
+        "starshipClass": "Escort ship",
+        "costInCredits": 8500000,
+        "cargoCapacity": 6000000,
+        "MGLT": 40,
+        "maxAtmospheringSpeed": 800,
+        "length": 300
+      }
+    },
+    {
+      "node": {
+        "name": "Calamari Cruiser",
+        "model": "MC80 Liberty type Star Cruiser",
+        "starshipClass": "Star Cruiser",
+        "costInCredits": 104000000,
+        "cargoCapacity": null,
+        "MGLT": 60,
+        "maxAtmospheringSpeed": null,
+        "length": 1200
+      }
+    },
+    {
+      "node": {
+        "name": "A-wing",
+        "model": "RZ-1 A-wing Interceptor",
+        "starshipClass": "Starfighter",
+        "costInCredits": 175000,
+        "cargoCapacity": 40,
+        "MGLT": 120,
+        "maxAtmospheringSpeed": 1300,
+        "length": 9.6
+      }
+    },
+    {
+      "node": {
+        "name": "B-wing",
+        "model": "A/SF-01 B-wing starfighter",
+        "starshipClass": "Assault Starfighter",
+        "costInCredits": 220000,
+        "cargoCapacity": 45,
+        "MGLT": 91,
+        "maxAtmospheringSpeed": 950,
+        "length": 16.9
+      }
+    },
+    {
+      "node": {
+        "name": "Republic Cruiser",
+        "model": "Consular-class cruiser",
+        "starshipClass": "Space cruiser",
+        "costInCredits": null,
+        "cargoCapacity": null,
+        "MGLT": null,
+        "maxAtmospheringSpeed": 900,
+        "length": 115
+      }
+    },
+    {
+      "node": {
+        "name": "Droid control ship",
+        "model": "Lucrehulk-class Droid Control Ship",
+        "starshipClass": "Droid control ship",
+        "costInCredits": null,
+        "cargoCapacity": 4000000000,
+        "MGLT": null,
+        "maxAtmospheringSpeed": null,
+        "length": 3170
+      }
+    },
+    {
+      "node": {
+        "name": "Naboo fighter",
+        "model": "N-1 starfighter",
+        "starshipClass": "Starfighter",
+        "costInCredits": 200000,
+        "cargoCapacity": 65,
+        "MGLT": null,
+        "maxAtmospheringSpeed": 1100,
+        "length": 11
+      }
+    },
+    {
+      "node": {
+        "name": "Naboo Royal Starship",
+        "model": "J-type 327 Nubian royal starship",
+        "starshipClass": "yacht",
+        "costInCredits": null,
+        "cargoCapacity": null,
+        "MGLT": null,
+        "maxAtmospheringSpeed": 920,
+        "length": 76
+      }
+    },
+    {
+      "node": {
+        "name": "Scimitar",
+        "model": "Star Courier",
+        "starshipClass": "Space Transport",
+        "costInCredits": 55000000,
+        "cargoCapacity": 2500000,
+        "MGLT": null,
+        "maxAtmospheringSpeed": 1180,
+        "length": 26.5
+      }
+    },
+    {
+      "node": {
+        "name": "J-type diplomatic barge",
+        "model": "J-type diplomatic barge",
+        "starshipClass": "Diplomatic barge",
+        "costInCredits": 2000000,
+        "cargoCapacity": null,
+        "MGLT": null,
+        "maxAtmospheringSpeed": 2000,
+        "length": 39
+      }
+    },
+    {
+      "node": {
+        "name": "AA-9 Coruscant freighter",
+        "model": "Botajef AA-9 Freighter-Liner",
+        "starshipClass": "freighter",
+        "costInCredits": null,
+        "cargoCapacity": null,
+        "MGLT": null,
+        "maxAtmospheringSpeed": null,
+        "length": 390
+      }
+    },
+    {
+      "node": {
+        "name": "Jedi starfighter",
+        "model": "Delta-7 Aethersprite-class interceptor",
+        "starshipClass": "Starfighter",
+        "costInCredits": 180000,
+        "cargoCapacity": 60,
+        "MGLT": null,
+        "maxAtmospheringSpeed": 1150,
+        "length": 8
+      }
+    },
+    {
+      "node": {
+        "name": "H-type Nubian yacht",
+        "model": "H-type Nubian yacht",
+        "starshipClass": "yacht",
+        "costInCredits": null,
+        "cargoCapacity": null,
+        "MGLT": null,
+        "maxAtmospheringSpeed": 8000,
+        "length": 47.9
+      }
+    },
+    {
+      "node": {
+        "name": "Republic Assault ship",
+        "model": "Acclamator I-class assault ship",
+        "starshipClass": "assault ship",
+        "costInCredits": null,
+        "cargoCapacity": 11250000,
+        "MGLT": null,
+        "maxAtmospheringSpeed": null,
+        "length": 752
+      }
+    },
+    {
+      "node": {
+        "name": "Solar Sailer",
+        "model": "Punworcca 116-class interstellar sloop",
+        "starshipClass": "yacht",
+        "costInCredits": 35700,
+        "cargoCapacity": 240,
+        "MGLT": null,
+        "maxAtmospheringSpeed": 1600,
+        "length": 15.2
+      }
+    },
+    {
+      "node": {
+        "name": "Trade Federation cruiser",
+        "model": "Providence-class carrier/destroyer",
+        "starshipClass": "capital ship",
+        "costInCredits": 125000000,
+        "cargoCapacity": 50000000,
+        "MGLT": null,
+        "maxAtmospheringSpeed": 1050,
+        "length": 1088
+      }
+    },
+    {
+      "node": {
+        "name": "Theta-class T-2c shuttle",
+        "model": "Theta-class T-2c shuttle",
+        "starshipClass": "transport",
+        "costInCredits": 1000000,
+        "cargoCapacity": 50000,
+        "MGLT": null,
+        "maxAtmospheringSpeed": 2000,
+        "length": 18.5
+      }
+    },
+    {
+      "node": {
+        "name": "Republic attack cruiser",
+        "model": "Senator-class Star Destroyer",
+        "starshipClass": "star destroyer",
+        "costInCredits": 59000000,
+        "cargoCapacity": 20000000,
+        "MGLT": null,
+        "maxAtmospheringSpeed": 975,
+        "length": 1137
+      }
+    },
+    {
+      "node": {
+        "name": "Naboo star skiff",
+        "model": "J-type star skiff",
+        "starshipClass": "yacht",
+        "costInCredits": null,
+        "cargoCapacity": null,
+        "MGLT": null,
+        "maxAtmospheringSpeed": 1050,
+        "length": 29.2
+      }
+    },
+    {
+      "node": {
+        "name": "Jedi Interceptor",
+        "model": "Eta-2 Actis-class light interceptor",
+        "starshipClass": "starfighter",
+        "costInCredits": 320000,
+        "cargoCapacity": 60,
+        "MGLT": null,
+        "maxAtmospheringSpeed": 1500,
+        "length": 5.47
+      }
+    },
+    {
+      "node": {
+        "name": "arc-170",
+        "model": "Aggressive Reconnaissance-170 starfighte",
+        "starshipClass": "starfighter",
+        "costInCredits": 155000,
+        "cargoCapacity": 110,
+        "MGLT": 100,
+        "maxAtmospheringSpeed": 1000,
+        "length": 14.5
+      }
+    },
+    {
+      "node": {
+        "name": "Banking clan frigate",
+        "model": "Munificent-class star frigate",
+        "starshipClass": "cruiser",
+        "costInCredits": 57000000,
+        "cargoCapacity": 40000000,
+        "MGLT": null,
+        "maxAtmospheringSpeed": null,
+        "length": 825
+      }
+    },
+    {
+      "node": {
+        "name": "Belbullab-22 starfighter",
+        "model": "Belbullab-22 starfighter",
+        "starshipClass": "starfighter",
+        "costInCredits": 168000,
+        "cargoCapacity": 140,
+        "MGLT": null,
+        "maxAtmospheringSpeed": 1100,
+        "length": 6.71
+      }
+    },
+    {
+      "node": {
+        "name": "V-wing",
+        "model": "Alpha-3 Nimbus-class V-wing starfighter",
+        "starshipClass": "starfighter",
+        "costInCredits": 102500,
+        "cargoCapacity": 60,
+        "MGLT": null,
+        "maxAtmospheringSpeed": 1050,
+        "length": 7.9
+      }
+    }
+  ]
+
+}

@@ -787,7 +787,7 @@
 
 *生成文档文件的框架*
 
-* [jazzy](https://github.com/realm/jazzy) - A soulful way to generate docs for Swift & Objective-C
+* [realm/jazzy](https://github.com/realm/jazzy) ⭐️7.1k - 为 Swift 或 Objective-C 生成文档的命令行工具
 * [swift-docc-plugin](https://github.com/apple/swift-docc-plugin) ⭐️122 - Swift-DocC 插件是一个 Swift Package Manager 命令行插件，支持为 SwiftPM 库和可执行文件构建文档。
 
 
@@ -805,7 +805,7 @@
 ## 代码格式化
 
 * [SwiftFormat](https://github.com/nicklockwood/SwiftFormat) ⭐️5.3k
-* [SwiftLint](https://github.com/realm/SwiftLint) ⭐️15.6k
+* [realm/SwiftLint](https://github.com/realm/SwiftLint) ⭐️15.6k
 * [prettier](https://github.com/prettier/prettier) ⭐️41.6k
 * [SwiftRewriter](https://github.com/inamiy/SwiftRewriter) ⭐️814 - 基于 SwiftSyntax 针对代码进行自动格式化（其中包括基于代码规范进行简单的代码优化）。
 
