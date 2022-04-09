@@ -5,7 +5,8 @@
 [![Platform](https://img.shields.io/badge/platform-iOS-yellowgreen?style=flat-square)](https://developer.apple.com/iphone/)&nbsp;
 [![Swift Support](https://img.shields.io/badge/Swift-5.5-orange.svg)](https://www.swift.org/)&nbsp;
 [![Lincese](https://img.shields.io/badge/License-MIT-informational?style=flat-square)](https://www.apache.org/licenses/LICENSE-2.0.html)&nbsp;
-[![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square)](https://gitmoji.dev)
+[![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square)](https://gitmoji.dev)&nbsp;
+[![GitHub last commit](https://img.shields.io/github/last-commit/Andy0570/RoadToSwift)](https://github.com/Andy0570/RoadToSwift/commits)
 
 
 
@@ -187,13 +188,12 @@ Swift 非常容易学习。Swift 代码被简化并且更像英语，这使得�
 
 ## 统计信息
 
-![Alt](https://repobeats.axiom.co/api/embed/e6d86c8eea5e9b7642304078ca785841cbb32cf8.svg "Repobeats analytics image")
+![Alt](https://repobeats.axiom.co/api/embed/b67753c5af6b867e0ebdc78ee30cf3cafb00e52c.svg "Repobeats analytics image")
 
 
 ## Stargazers over time
 
-[![Stargazers over time](https://starchart.cc/Andy0570/ios-tutorials-with-swift.svg)](https://starchart.cc/Andy0570/ios-tutorials-with-swift)
-
+[![Stargazers over time](https://starchart.cc/Andy0570/RoadToSwift.svg)](https://starchart.cc/Andy0570/RoadToSwift)
 
 
 ## 使用许可
