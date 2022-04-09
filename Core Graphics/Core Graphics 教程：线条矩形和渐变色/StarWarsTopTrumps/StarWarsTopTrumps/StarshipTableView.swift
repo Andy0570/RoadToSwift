@@ -29,6 +29,7 @@
 import UIKit
 
 class StarshipTableView: UITableView {
+    // 添加渐变背景
     override func draw(_ rect: CGRect) {
         guard let context = UIGraphicsGetCurrentContext() else {
             return

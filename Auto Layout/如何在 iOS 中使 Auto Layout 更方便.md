@@ -39,8 +39,8 @@
 
 ```swift
 class ViewController: UIViewController {
-    
     let box = UIView()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
