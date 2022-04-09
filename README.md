@@ -198,4 +198,4 @@ Swift 非常容易学习。Swift 代码被简化并且更像英语，这使得�
 
 ## 使用许可
 
-本项目基于 [MIT](https://opensource.org/licenses/MIT) 许可协议，详情请参见 [LICENSE](https://github.com/Andy0570/ios-tutorials-with-swift/blob/main/LICENSE)。
+本项目基于 [MIT](https://opensource.org/licenses/MIT) 许可协议，详情请参见 [LICENSE](./LICENSE)。
