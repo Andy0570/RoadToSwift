@@ -1,12 +1,16 @@
 # Road-To-swift
 
-> **Stay Hungry, Stay Foolish.**
+<p align="center">
+<a href="https://developer.apple.com/xcode/"><img src="https://img.shields.io/badge/Xcode-007ACC?style=for-the-badge&logo=Xcode&logoColor=white"></a>
+<a href="https://www.swift.org/"><img src="https://img.shields.io/badge/swift-F54A2A?style=for-the-badge&logo=swift&logoColor=white"></a>
+<a href="https://developer.apple.com/iphone/"><img src="https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=ios&logoColor=white"></a>
+<a href="https://github.com/"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a>
+<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge"></a>
+<a href="https://gitmoji.dev"><img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=for-the-badge"></a>
+<a href="https://github.com/Andy0570/Data-Structures-And-Algorithms/commits"><img src="https://img.shields.io/github/last-commit/andy0570/RoadToSwift?style=for-the-badge"></a>
+</p>
 
-[![Platform](https://img.shields.io/badge/platform-iOS-yellowgreen?style=flat-square)](https://developer.apple.com/iphone/)&nbsp;
-[![Swift Support](https://img.shields.io/badge/Swift-5.5-orange.svg)](https://www.swift.org/)&nbsp;
-[![Lincese](https://img.shields.io/badge/License-MIT-informational?style=flat-square)](https://www.apache.org/licenses/LICENSE-2.0.html)&nbsp;
-[![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square)](https://gitmoji.dev)&nbsp;
-[![GitHub last commit](https://img.shields.io/github/last-commit/Andy0570/RoadToSwift)](https://github.com/Andy0570/RoadToSwift/commits)
+> **Stay Hungry, Stay Foolish.**
 
 
 
