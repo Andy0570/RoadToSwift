@@ -7,7 +7,7 @@
 <a href="https://github.com/"><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></a>
 <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge"></a>
 <a href="https://gitmoji.dev"><img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=for-the-badge"></a>
-<a href="https://github.com/Andy0570/Data-Structures-And-Algorithms/commits"><img src="https://img.shields.io/github/last-commit/andy0570/RoadToSwift?style=for-the-badge"></a>
+<a href="https://github.com/Andy0570/RoadToSwift/commits"><img src="https://img.shields.io/github/last-commit/andy0570/RoadToSwift?style=for-the-badge"></a>
 </p>
 
 > **Stay Hungry, Stay Foolish.**
