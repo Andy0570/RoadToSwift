@@ -106,25 +106,19 @@
 
 ## 框架
 
-* [AsyncDisplayKit](https://github.com/facebookarchive/AsyncDisplayKit) ⭐️13.5k - 提供界面的高流畅性切换及更灵敏的响应。
-
-* [MMWormhole](https://github.com/mutualmobile/MMWormhole) ⭐️3.8k - iOS 扩展与宿主应用的通讯框架。
-
-* [Whisper](https://github.com/hyperoslo/Whisper) 3.7k - Whisper 是一个组件，可以简化显示消息和应用内通知的任务。
-
-* [FontAwesome.Swift](https://github.com/thii/FontAwesome.swift) ⭐️1.5k - Use FontAwesome in your Swift projects.
-
-* [GoogleMaterialIconFont](https://github.com/kitasuke/GoogleMaterialIconFont) - Google Material Icon Font for Swift and ObjC.
-
-* [epoxy-iOS](https://github.com/airbnb/epoxy-ios) ⭐️776 - Epoxy 是一套用于在 Swift 中构建 UIKit 应用程序的声明式 UI 框架。
-
-* [Aspects](https://github.com/steipete/Aspects) ⭐️8.2k - 面向切片编程（aspect oriented programming）框架。
-
 * :heart: [SwiftGen](https://github.com/SwiftGen/SwiftGen) ⭐️7.5k - 为你的 assets、storyboards、Localizable.strings 等提供 Swift 代码生成器 - 摆脱所有基于字符串的 API!
-
 * :heart: [Reusable](https://github.com/AliSoftware/Reusable) ⭐️2.7k - 一个 Swift mixin，可以轻松地以类型安全的方式重用视图。
-
+* [swift-project-template](https://github.com/artemnovichkov/swift-project-template) ⭐️88 - Swift 项目模版
+* [AsyncDisplayKit](https://github.com/facebookarchive/AsyncDisplayKit) ⭐️13.5k - 提供界面的高流畅性切换及更灵敏的响应。
+* [MMWormhole](https://github.com/mutualmobile/MMWormhole) ⭐️3.8k - iOS 扩展与宿主应用的通讯框架。
+* [Whisper](https://github.com/hyperoslo/Whisper) 3.7k - Whisper 是一个组件，可以简化显示消息和应用内通知的任务。
+* [FontAwesome.Swift](https://github.com/thii/FontAwesome.swift) ⭐️1.5k - Use FontAwesome in your Swift projects.
+* [GoogleMaterialIconFont](https://github.com/kitasuke/GoogleMaterialIconFont) - Google Material Icon Font for Swift and ObjC.
+* [epoxy-iOS](https://github.com/airbnb/epoxy-ios) ⭐️776 - Epoxy 是一套用于在 Swift 中构建 UIKit 应用程序的声明式 UI 框架。
+* :orange: [Aspects](https://github.com/steipete/Aspects) ⭐️8.2k - 面向切片编程（aspect oriented programming）框架。
 * [CarbonGraph](https://github.com/baidu/CarbonGraph) ⭐️43 - 百度网盘开源依赖注入框架 CarbonGraph，框架使用 Swift 编写同时兼容 ObjC，提供完整的依赖注入能力（构造器注入、属性注入、方法注入、工厂注入）。你可以将类之间的依赖关系交给 IOC 容器来构建，使用框架定义的 DSL 能够方便地进行配置。构建更有利于测试和替换的松散耦合关系，可以实现不同业务对中台服务的个性化配置，也可以仅仅用来解决组件化中模块间直接依赖的问题。
+
+
 
   
 
@@ -250,6 +244,7 @@
 ### UISwitch
 
 * [paper-switch](https://github.com/Ramotion/paper-switch) ⭐️2.9k - 这是一个 Swift 的模块组件，当页面中的开关打开后该页面填充底色
+* [BetterSegmentedControl](https://github.com/gmarm/BetterSegmentedControl) ⭐️1.8k - 易于使用、可定制，替代 `UISegmentedControl` 和 `UISwitch`。
 
 
 
@@ -273,6 +268,7 @@
 
 * [WobbleView](https://github.com/inFullMobile/WobbleView) ⭐️2.2k - Implementation of wobble effect for any view in app.
 * [Preheat](https://github.com/kean/Preheat) ⭐️633 - 自动预取 UITableView 和 UICollectionView 中的内容。
+* [TableViewTools](https://github.com/rosberry/TableViewTools) ⭐️11
 
 
 
@@ -288,6 +284,7 @@
 * [BouncyLayout](https://github.com/roberthein/BouncyLayout) ⭐️4k - 为集合视图 cell 添加 bounce 效果。
 * [MSPeekCollectionViewDelegateImplementation](https://github.com/MaherKSantina/MSPeekCollectionViewDelegateImplementation) ⭐️341 - 在集合视图中查看上一项和下一项的自定义分页实现。
 * [collectionview](https://github.com/corekit/collectionview) ⭐️28 - CollectionViews with ease.
+* [CollectionViewTools](https://github.com/rosberry/CollectionViewTools)
 
 
 
@@ -357,6 +354,7 @@
 * [SwiftScanner](https://github.com/malcommac/SwiftScanner) ⭐️172 - String Scanner in pure Swift (supports unicode)
 * [Highlightr](https://github.com/raspu/Highlightr) ⭐️1.3k - Highlightr 是一个使用 Swift 构建的 iOS 和 macOS 语法荧光笔。它以 [highlight.js](https://highlightjs.org/) 为核心，支持185种语言，自带89种样式
 * [Pluralize.Swift](https://github.com/joshualat/Pluralize.swift) ⭐️188 - 伟大的 Swift 字符串扩展
+* [texstyle](https://github.com/rosberry/texstyle) ⭐️78
 
 
 
@@ -430,6 +428,8 @@
 * [HanekeSwift](https://github.com/Haneke/HanekeSwift) ⭐️5.1k - A lightweight generic cache for iOS written in Swift with extra love for images.
 * [Carlos](https://github.com/WeltN24/Carlos) ⭐️614 - A simple but flexible cache for iOS and WatchOS 2 apps, written in Swift.
 * [Cache](https://github.com/hyperoslo/Cache) ⭐️2.5k - 多类型数据混合缓存库。
+* [Disk](https://github.com/saoudrizwan/Disk) ⭐️2.9k - 令人愉快的 iOS 框架，可轻松持久化存储 struct、image 和 data。
+
 
 
 ## Keychain 钥匙串
@@ -576,7 +576,7 @@
 
 ## 音频
 
-* [AudioKit](https://github.com/audiokit/AudioKit) - Audio synthesis, processing, and analysis platform
+* [AudioKit](https://github.com/audiokit/AudioKit) ⭐️9.1k - AudioKit 是适用于 iOS、macOS（包括 Catalyst）和 tvOS 的音频合成、处理和分析平台。
 * [MusicKit](https://github.com/benzguo/MusicKit) - Framework and DSL for creating, analyzing, and transforming music in Swift
 * [WebMIDIKit](https://github.com/adamnemecek/WebMIDIKit/) - Simplest MIDI Swift framework
 * :orange: [EZAudio](https://github.com/syedhali/EZAudio) ⭐️4.8k - 一个 iOS 和 OSX 上简单易用的音频框架，根据音量实时显示波形图，基于 Core Audio，适合实时低延迟音频处理，非常直观。
@@ -799,6 +799,7 @@
 * [CommandCougar](https://github.com/surfandneptune/CommandCougar) - An elegant pure Swift library for building command line applications.
 * [SwiftInfo](https://github.com/rockbruno/SwiftInfo) ⭐️1k - 命令行工具跟踪检查 iOS 应用版本代码级变化。
 * [Bagbutik](https://github.com/MortenGregersen/Bagbutik) ⭐️22 - 根据官方 OpenAPI 规范为 App Store Connect API 生成 Swift 代码。
+* [LicensePlist](https://github.com/mono0926/LicensePlist) ⭐️2.1k - iOS 应用程序的所有 dependencies 的 Lincense 列表生成器。
 
 
 
