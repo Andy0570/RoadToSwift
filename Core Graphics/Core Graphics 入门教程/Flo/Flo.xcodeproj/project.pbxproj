@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		227B63482803DA8E002012A3 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227B63472803DA8E002012A3 /* GraphView.swift */; };
 		22D2EE2428016D00003D69E1 /* PushButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D2EE2328016D00003D69E1 /* PushButton.swift */; };
 		22D2EE2628017CEE003D69E1 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D2EE2528017CEE003D69E1 /* CounterView.swift */; };
 		437AE1E61F02685B001EE6E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437AE1E51F02685B001EE6E4 /* AppDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		227B63472803DA8E002012A3 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		22D2EE2328016D00003D69E1 /* PushButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushButton.swift; sourceTree = "<group>"; };
 		22D2EE2528017CEE003D69E1 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		437AE1E21F02685B001EE6E4 /* Flo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +68,7 @@
 				437AE1F11F02685B001EE6E4 /* Info.plist */,
 				22D2EE2328016D00003D69E1 /* PushButton.swift */,
 				22D2EE2528017CEE003D69E1 /* CounterView.swift */,
+				227B63472803DA8E002012A3 /* GraphView.swift */,
 			);
 			path = Flo;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				227B63482803DA8E002012A3 /* GraphView.swift in Sources */,
 				437AE1E81F02685B001EE6E4 /* ViewController.swift in Sources */,
 				437AE1E61F02685B001EE6E4 /* AppDelegate.swift in Sources */,
 				22D2EE2428016D00003D69E1 /* PushButton.swift in Sources */,

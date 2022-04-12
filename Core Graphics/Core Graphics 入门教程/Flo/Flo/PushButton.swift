@@ -52,7 +52,7 @@ import UIKit
     }
 
     override func draw(_ rect: CGRect) {
-        // 使用 UIBezierPath 创建一个椭圆形 path 路径，然后用绿色填充。
+        // 使用 UIBezierPath 创建一个椭圆形 path，然后用 fillColor 填充。
         let path = UIBezierPath(ovalIn: rect)
         fillColor.setFill()
         path.fill()

@@ -33,14 +33,25 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var graphView: GraphView!
+
     @IBOutlet weak var counterView: CounterView!
     @IBOutlet weak var counterLabel: UILabel!
 
+    // Graph Labels
+    @IBOutlet weak var averageWaterDrunk: UILabel!
+    @IBOutlet weak var maxLabel: UILabel!
+    @IBOutlet weak var stackView: UIStackView!
+
+    var isGraphViewShowing = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
         counterLabel.text = String(counterView.counter)
     }
+
+    // MARK: - Actions
 
     @IBAction func pushButtonPressed(_ button: PushButton) {
         if button.isAddButton {
@@ -51,5 +62,50 @@ class ViewController: UIViewController {
             }
         }
         counterLabel.text = String(counterView.counter)
+
+        // 如果用户在 Graph View 显示时按下加号按钮，则翻转显示 Counter View
+        if isGraphViewShowing {
+            counterViewTap(nil)
+        }
+    }
+
+    @IBAction func counterViewTap(_ gesture: UITapGestureRecognizer?) {
+        if isGraphViewShowing {
+            // Hide Graph View
+            UIView.transition(from: graphView, to: counterView, duration: 1.0, options: [.transitionFlipFromLeft, .showHideTransitionViews], completion: nil)
+        } else {
+            // Show Graph View
+            setupGraphDisplay()
+            UIView.transition(from: counterView, to: graphView, duration: 1.0, options: [.transitionFlipFromRight, .showHideTransitionViews], completion: nil)
+        }
+        isGraphViewShowing.toggle()
+    }
+
+    func setupGraphDisplay() {
+        let maxDayIndex = stackView.arrangedSubviews.count - 1
+
+        // 用今天的实际数据替换最后一天
+        graphView.graphPoints[graphView.graphPoints.count - 1] = counterView.counter
+        graphView.setNeedsDisplay()
+        maxLabel.text = "\(graphView.graphPoints.max() ?? 0)" // 更新最大值
+
+        // 通过 graphPoints 计算平均值
+        let average = graphView.graphPoints.reduce(0, +) / graphView.graphPoints.count
+        averageWaterDrunk.text = "\(average)" // 更新平均值
+
+        // Setup date formatter and calendar
+        let today = Date()
+        let calendar = Calendar.current
+
+        let formatter = DateFormatter()
+        formatter.setLocalizedDateFormatFromTemplate("EEEEE")
+
+        // 使用正确的日期设置日期名称标签
+        for i in (0...maxDayIndex) {
+            if let date = calendar.date(byAdding: .day, value: -i, to: today),
+               let label = stackView.arrangedSubviews[maxDayIndex - i] as? UILabel {
+                label.text = formatter.string(from: date)
+            }
+        }
     }
 }

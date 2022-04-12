@@ -56,18 +56,19 @@ import UIKit
     @IBInspectable var counterColor: UIColor = .orange
 
     override func draw(_ rect: CGRect) {
+        /************************ 绘制圆弧 ************************/
+
         let center = CGPoint(x: bounds.width / 2, y: bounds.height / 2)
         let radius = max(bounds.width, bounds.height)
         let startAngle: CGFloat = 3 * .pi / 4
         let endAngle: CGFloat = .pi / 4
 
         let path = UIBezierPath(arcCenter: center, radius: radius / 2 - Constants.arcWidth / 2, startAngle: startAngle, endAngle: endAngle, clockwise: true)
-
         path.lineWidth = Constants.arcWidth
         counterColor.setStroke()
         path.stroke()
 
-        // 绘制轮廓
+        /************************ 绘制轮廓 ************************/
 
         // 1.首先计算两个弧度差，并确保它是正数
         let angleDifference: CGFloat = 2 * .pi - startAngle + endAngle
@@ -90,5 +91,42 @@ import UIKit
         outlineColor.setStroke()
         outlinePath.lineWidth = Constants.lineWidth
         outlinePath.stroke()
+
+        /************************ 绘制标记 ************************/
+
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return
+        }
+
+        // 1.执行绘制之前，先保存原始状态
+        context.saveGState()
+        outlineColor.setFill()
+
+        let markerWidth: CGFloat = 5.0
+        let markerHeight: CGFloat = 10.0
+
+        // 2.位于左上角的标记矩形
+        let markerPath = UIBezierPath(rect: CGRect(x: -markerWidth / 2, y: 0, width: markerWidth, height: markerHeight))
+
+        // 3.将上下文的左上角移动到之前的中心点
+        context.translateBy(x: rect.width / 2, y: rect.height / 2)
+
+        for i in 1...Constants.numberOfGlasses {
+            // 4.保存居中的上下文
+            context.saveGState()
+            // 5.计算旋转角度
+            let angle = arcLengthPerGlass * CGFloat(i) + startAngle - .pi / 2
+            // 旋转和平移
+            context.rotate(by: angle)
+            context.translateBy(x: 0, y: rect.height / 2 - markerHeight)
+
+            // 6.填充标记矩形
+            markerPath.fill()
+            // 7.为下一次旋转恢复居中的上下文
+            context.restoreGState()
+        }
+
+        // 8. Restore the original state in case of more painting
+        context.restoreGState()
     }
 }
