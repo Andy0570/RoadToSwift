@@ -57,7 +57,9 @@ extension CGContext {
         restoreGState()
     }
 
+    // 添加光泽效果，通过叠加两层渐变简单模拟
     func drawGlossAndGradient(rect: CGRect, startColor: UIColor, endColor: UIColor) {
+        // 1.添加原始渐变
         drawLinearGradient(rect: rect, startColor: startColor, endColor: endColor)
 
         let glossColor1 = UIColor.white.withAlphaComponent(0.35)
@@ -66,6 +68,7 @@ extension CGContext {
         var topHalf = rect
         topHalf.size.height /= 2
 
+        // 2.在较小的矩形区域中绘制白色渐变
         drawLinearGradient(rect: topHalf, startColor: glossColor1, endColor: glossColor2)
     }
 

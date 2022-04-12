@@ -1,12 +1,19 @@
 参考：
 
-* [Core Graphics Tutorial: Arcs and Paths](https://www.raywenderlich.com/349664-core-graphics-tutorial-arcs-and-paths)
+[Core Graphics Tutorial: Shadows and Gloss](https://www.raywenderlich.com/9506-core-graphics-tutorial-shadows-and-gloss)
 
-* [Apple: Quartz 2D Programming Guide](https://developer.apple.com/library/archive/documentation/GraphicsImaging/Conceptual/drawingwithquartz2d/Introduction/Introduction.html#//apple_ref/doc/uid/TP40007533-SW1)
+通过应用阴影和光泽使你的 UI 元素脱颖而出。阴影营造出深度感，而光泽使您的元素闪耀。
 
+在 Section Header View 上添加阴影、光泽、边框效果。
 
+---
+
+[Core Graphics Tutorial: Arcs and Paths](https://www.raywenderlich.com/349664-core-graphics-tutorial-arcs-and-paths)
 
 在本教程中，您将学习如何绘制曲线和路径。特别是，您将通过在底部添加整齐的曲线、线性渐变和适合曲线弧度的阴影来增强分组列表的每个 footer。所有这一切都是通过使用 Core Graphics 的力量实现的！
+
+在 Section Footer View 上添加圆弧、渐变、阴影效果。
+
 
 
 

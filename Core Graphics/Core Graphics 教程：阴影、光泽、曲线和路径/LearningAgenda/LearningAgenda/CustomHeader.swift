@@ -29,36 +29,45 @@
 import UIKit
 
 class CustomHeader: UIView {
-  @IBOutlet public var titleLabel: UILabel!
-  
-  var startColor = UIColor.rwLightBlue
-  var endColor = UIColor.rwDarkBlue
-  var coloredBoxHeight: CGFloat = 40
-  
-  override func draw(_ rect: CGRect) {
-    let context = UIGraphicsGetCurrentContext()!
-    
-    var coloredBoxRect = bounds
-    coloredBoxRect.size.height = coloredBoxHeight
-    
-    var paperRect = bounds
-    paperRect.origin.y += coloredBoxHeight
-    paperRect.size.height = bounds.height - coloredBoxHeight
-    
-    context.saveGState()
-    context.setShadow(offset: CGSize(width: 0, height: 2), blur: 3.0, color: UIColor.rwShadow.cgColor)
-    context.setFillColor(startColor.cgColor)
-    context.fill(coloredBoxRect)
-    context.restoreGState()
-    
-    context.drawGlossAndGradient(rect: coloredBoxRect, startColor: startColor, endColor: endColor)
-    context.setStrokeColor(endColor.cgColor)
-    context.setLineWidth(1)
-    context.stroke(coloredBoxRect.rectFor1PxStroke())
-  } 
-  
-  class func loadViewFromNib() -> CustomHeader? {
-    let nib = UINib(nibName: "CustomHeader", bundle: nil)
-    return nib.instantiate(withOwner: CustomHeader()).first as? CustomHeader
-  }
+    @IBOutlet public var titleLabel: UILabel!
+
+    var startColor = UIColor.rwLightBlue
+    var endColor = UIColor.rwDarkBlue
+    // 提示：CustomHeader 高 50pt，40pt 显示 彩色文本，10pt 显示阴影
+    var coloredBoxHeight: CGFloat = 40
+
+    override func draw(_ rect: CGRect) {
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return
+        }
+
+        // 渐变区域 rect: (0, 0, width, 40)
+        var coloredBoxRect = bounds
+        coloredBoxRect.size.height = coloredBoxHeight
+
+        // 阴影区域 rect: (0, 40, width, 10)
+        var paperRect = bounds
+        paperRect.origin.y += coloredBoxHeight
+        paperRect.size.height = bounds.height - coloredBoxHeight
+
+        // 添加阴影
+        context.saveGState()
+        context.setShadow(offset: CGSize(width: 0, height: 2), blur: 3.0, color: UIColor.rwShadow.cgColor)
+        context.setFillColor(startColor.cgColor)
+        context.fill(coloredBoxRect)
+        context.restoreGState()
+
+        // 添加光泽效果
+        context.drawGlossAndGradient(rect: coloredBoxRect, startColor: startColor, endColor: endColor)
+
+        // 添加深色边框
+        context.setStrokeColor(endColor.cgColor)
+        context.setLineWidth(1)
+        context.stroke(coloredBoxRect.rectFor1PxStroke())
+    }
+
+    class func loadViewFromNib() -> CustomHeader? {
+        let nib = UINib(nibName: "CustomHeader", bundle: nil)
+        return nib.instantiate(withOwner: CustomHeader()).first as? CustomHeader
+    }
 }
