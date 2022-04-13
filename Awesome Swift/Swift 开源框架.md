@@ -183,6 +183,7 @@
 * [TwicketSegmentedControl](https://github.com/polqf/TwicketSegmentedControl) ⭐️1.7k - 用于替代 iOS 默认组件的自定义 UISegmentedControl
 * [Persei](https://github.com/Yalantis/Persei) ⭐️3.4k - 基于 Swift 语言，顶部菜单的动效，针对于 UITableView 、 UICollectionView 、 UIScrollView
 * [circle-menu](https://github.com/Ramotion/circle-menu) ⭐️3.3k - 简单优雅的环形布局菜单
+* [AxisSegmentedView](https://github.com/jasudev/AxisSegmentedView) ⭐️40 - A library that allows you to easily create various styles of segmented views. Supports iOS, macOS and tvOS.
 
 
 
@@ -260,6 +261,7 @@
 ### UITabBar
 
 * :heart: [animated-tab-bar](https://github.com/Ramotion/animated-tab-bar) ⭐️10.9k 灵动的动画标签栏类库。
+* [AxisTabView](https://github.com/jasudev/AxisTabView) ⭐️80 - A library that allows you to easily create various styles of tab views. Supports iOS and macOS.
 
 
 
@@ -868,7 +870,8 @@
 
 ## Metal
 
-* [Satin](https://github.com/Hi-Rez/Satin) - ⭐️329 基于 Metal API 实现的一个 3D 引擎
+* [Satin](https://github.com/Hi-Rez/Satin) ⭐️329 - 基于 Metal API 实现的一个 3D 引擎
+* [Harbeth](https://github.com/yangKJ/Harbeth) ⭐️79 - 图形处理和滤镜制作
 
 
 
