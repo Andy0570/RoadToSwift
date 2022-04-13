@@ -136,7 +136,7 @@
 
 * :heart: [Siren](https://github.com/ArtSabintsev/Siren) ⭐️3.9k - 当应用版本更新时，通知用户并提供 App Store 链接。
 * :heart: [SPPermissions](https://github.com/ivanvorobei/SPPermissions) ⭐️4.8k - 通过列表、Dialog 对话框和原生界面的方式向用户请求访问权限。可以检查权限状态。支持 SwiftUI。
-* [BulletinBoard](https://github.com/alexisakers/BulletinBoard) ⭐️5.2k - 创建显示在屏幕底部的卡片视图
+* :heart: [BulletinBoard](https://github.com/alexisakers/BulletinBoard) ⭐️5.2k - 创建显示在屏幕底部的卡片视图
 * [Toast-Swift](https://github.com/scalessec/Toast-Swift) ⭐️3k
 * :heart: [SwiftMessages](https://github.com/SwiftKickMobile/SwiftMessages) ⭐️6.4k - A very flexible message bar for iOS written in Swift.
 * [WMZDialog](https://github.com/wwmz/WMZDialog) ⭐️800 - 功能最多样式最多的弹窗。
@@ -582,7 +582,7 @@
 * [MusicKit](https://github.com/benzguo/MusicKit) - Framework and DSL for creating, analyzing, and transforming music in Swift
 * [WebMIDIKit](https://github.com/adamnemecek/WebMIDIKit/) - Simplest MIDI Swift framework
 * :orange: [EZAudio](https://github.com/syedhali/EZAudio) ⭐️4.8k - 一个 iOS 和 OSX 上简单易用的音频框架，根据音量实时显示波形图，基于 Core Audio，适合实时低延迟音频处理，非常直观。
-* :orange: [DOUAudioStreamer](https://github.com/douban/DOUAudioStreamer) ⭐️2.8k - 豆瓣开源的音乐流媒体播放器。
+* :orange: [DOUAudioStreamer](https://github.com/douban/DOUAudioStreamer) ⭐️2.8k - 豆瓣开源的基于 Core Audio 的流式音频播放器。
 
 
 
