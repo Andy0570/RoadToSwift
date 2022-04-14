@@ -181,7 +181,7 @@ class VideoEditor {
             string: text,
             attributes: [
                 .font: UIFont(name: "ArialRoundedMTBold", size: 60) as Any,
-                .foregroundColor: UIColor(named: "rw-green")!,
+                .foregroundColor: Asset.Colors.rwGreen,
                 .strokeColor: UIColor.white,
                 .strokeWidth: -3
             ]

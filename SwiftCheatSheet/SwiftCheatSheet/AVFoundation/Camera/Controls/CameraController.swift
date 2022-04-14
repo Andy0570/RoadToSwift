@@ -452,7 +452,7 @@ class CameraController: NSObject {
     func subjectAreaDidChange(notification: NSNotification) {
     }
 
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey: Any]?, context: UnsafeMutableRawPointer?) {
         var key = ""
         var newValue: AnyObject = change![NSKeyValueChangeKey.newKey]! as AnyObject
 
@@ -466,7 +466,7 @@ class CameraController: NSObject {
         case &deviceWhiteBalanceGainsContext:
             key = Constants.CameraControlObservableSettingWBGains
             if let newNSValue = newValue as? NSValue {
-                var gains: AVCaptureDevice.WhiteBalanceGains? = nil
+                var gains: AVCaptureDevice.WhiteBalanceGains?
                 newNSValue.getValue(&gains)
                 if let newGains = gains,
                     let newTemperatureAndTint = currentCameraDevice?.temperatureAndTintValues(for: newGains) {

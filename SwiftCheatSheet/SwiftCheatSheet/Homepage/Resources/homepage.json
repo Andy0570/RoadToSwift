@@ -161,6 +161,11 @@
         "title": "CAGradientLayer 实现渐变色",
         "description": "-",
         "className": "GradientViewController"
+    }, {
+        "image": "image",
+        "title": "Swift 中的原生二维码生成",
+        "description": "-",
+        "className": "BarCodeGenerateController"
     }]
 }, {
     "title": "开源框架",

@@ -1,9 +1,9 @@
 PODS:
-  - Alamofire (5.5.0)
+  - Alamofire (5.6.0)
   - IGListDiffKit (4.0.0)
   - IGListKit (4.0.0):
     - IGListDiffKit (= 4.0.0)
-  - Kingfisher (7.2.0)
+  - Kingfisher (7.2.1)
   - SPPermissions/Camera (7.1.5):
     - SPPermissions/Core
   - SPPermissions/Core (7.1.5)
@@ -51,7 +51,7 @@ PODS:
   - SwifterSwift/SwiftStdlib (5.3.0)
   - SwifterSwift/UIKit (5.3.0)
   - SwifterSwift/WebKit (5.3.0)
-  - SwiftyBeaver (1.9.5)
+  - SwiftyBeaver (1.9.6)
 
 DEPENDENCIES:
   - Alamofire
@@ -83,17 +83,17 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   SwifterSwift:
-    :commit: f0c5dcff06ee8ef2c019f9750298d20d16ced2b2
+    :commit: 64fee067b71a0e99019b49dfa122aa802729420a
     :git: https://github.com/SwifterSwift/SwifterSwift.git
 
 SPEC CHECKSUMS:
-  Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  Alamofire: 0c07058209f211e3d32824f8e0766d7c44ac83b3
   IGListDiffKit: 665d6cf43ce726e676013db9c7d6c4294259b6b2
   IGListKit: fd5a5d21935298f5849fa49d426843cff97b77c7
-  Kingfisher: 3ac0b75b155cabc0e544877d1a4deea29feece92
+  Kingfisher: 7c084bebf7d548c623ad41bcf765fb200efed369
   SPPermissions: c63ac1132badad39917de03a3c9dc2429ace94be
   SwifterSwift: 03a3e5fe175b6696193b2c9d0dfa7f0bf9ac02cc
-  SwiftyBeaver: 84069991dd5dca07d7069100985badaca7f0ce82
+  SwiftyBeaver: c8241b4745aa269a78ca5a022532c6915e948536
 
 PODFILE CHECKSUM: 3bec60308e9814da6a7bfe80c8bc34dd91e2261c
 

@@ -106,7 +106,7 @@
 
 ## 框架
 
-* :heart: [SwiftGen](https://github.com/SwiftGen/SwiftGen) ⭐️7.5k - 为你的 assets、storyboards、Localizable.strings 等提供 Swift 代码生成器 - 摆脱所有基于字符串的 API!
+* :heart: [SwiftGen](https://github.com/SwiftGen/SwiftGen) ⭐️7.8k - SwiftGen 是一个为项目中的所有资源自动生成 Swift 代码的工具，允许您以类型安全的方式访问它们。
 * :heart: [Reusable](https://github.com/AliSoftware/Reusable) ⭐️2.7k - 一个 Swift mixin，可以轻松地以类型安全的方式重用视图。
 * [swift-project-template](https://github.com/artemnovichkov/swift-project-template) ⭐️88 - Swift 项目模版
 * [AsyncDisplayKit](https://github.com/facebookarchive/AsyncDisplayKit) ⭐️13.5k - 提供界面的高流畅性切换及更灵敏的响应。

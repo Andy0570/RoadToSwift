@@ -28,8 +28,12 @@ import Foundation
 @_exported import FoundationNetworking
 #endif
 
+#if swift(<5.3)
+#error("Alamofire doesn't support Swift versions below 5.3")
+#endif
+
 /// Reference to `Session.default` for quick bootstrapping and examples.
 public let AF = Session.default
 
 /// Current Alamofire version. Necessary since SPM doesn't use dynamic libraries. Plus this will be more accurate.
-let version = "5.5.0"
+let version = "5.6.0"

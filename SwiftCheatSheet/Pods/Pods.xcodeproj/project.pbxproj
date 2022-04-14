@@ -300,7 +300,7 @@
 		C3F1FE6BB2F3E83DF225DB091D768ED3 /* IGListBatchContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 26F94A46E3EC9EB0F8837AE708615D74 /* IGListBatchContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C487164FA917D0EC4F4AA2C772BD3F94 /* DrawService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B6E62368D10EDE8C694D7A4096B025 /* DrawService.swift */; };
 		C5814CF9B5EB63D89CBE27EE2A19520A /* IGListGenericSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = D92819CCD32FB721C801D24E1AEBE201 /* IGListGenericSectionController.m */; };
-		C59FAE4F36647A27A0BADB4EE3903022 /* SPPermissions.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0211367793A2FCD536B938775CD8B81E /* SPPermissions.bundle */; };
+		C59FAE4F36647A27A0BADB4EE3903022 /* SPPermissions-SPPermissions in Resources */ = {isa = PBXBuildFile; fileRef = 0211367793A2FCD536B938775CD8B81E /* SPPermissions-SPPermissions */; };
 		C727476DB9AD4F33995DE5115D19E038 /* DecodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075EDF9652D613ECA08E844D35D10A54 /* DecodableExtensions.swift */; };
 		C78B03AD94E9ADA8E4A492D852A4036D /* IGListBindingSectionController+DebugDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = 21CFF4C0697C358C76D2BD5A01AE5EAA /* IGListBindingSectionController+DebugDescription.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		C8C63474AB8CFF25B709312336C9C4E9 /* FileDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5A30A71CD71BE739A636050AD6CF9E /* FileDestination.swift */; };
@@ -477,7 +477,7 @@
 
 /* Begin PBXFileReference section */
 		0005A6BA6633EA6039B2C9E33410DC42 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Sources/Utility/Result.swift; sourceTree = "<group>"; };
-		0211367793A2FCD536B938775CD8B81E /* SPPermissions.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SPPermissions.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		0211367793A2FCD536B938775CD8B81E /* SPPermissions-SPPermissions */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "SPPermissions-SPPermissions"; path = SPPermissions.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B861699B76C0CC0F177E1011D966FA /* KingfisherOptionsInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherOptionsInfo.swift; path = Sources/General/KingfisherOptionsInfo.swift; sourceTree = "<group>"; };
 		0510D9A5F90D4E28A75FAB9AEB859F1B /* KF.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KF.swift; path = Sources/General/KF.swift; sourceTree = "<group>"; };
 		05B7D13C138B598C5181763C55178E2F /* ImageDrawing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDrawing.swift; path = Sources/Image/ImageDrawing.swift; sourceTree = "<group>"; };
@@ -518,7 +518,7 @@
 		1813D35ACF75F4BB4192F2A95E0B01B1 /* NSAttributedStringExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSAttributedStringExtensions.swift; path = Sources/SwifterSwift/Foundation/NSAttributedStringExtensions.swift; sourceTree = "<group>"; };
 		18F2BEEF45921E4535E9D733140CB9C1 /* ArrayExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArrayExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/ArrayExtensions.swift; sourceTree = "<group>"; };
 		194B0DBE9B1E7ECAE8B6546F781B62F3 /* SPTrackingPermission.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPTrackingPermission.swift; path = Sources/SPPermissionsTracking/SPTrackingPermission.swift; sourceTree = "<group>"; };
-		195AD71F7938FEA988FDCC5B0A10FFDF /* IGListDiffKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IGListDiffKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		195AD71F7938FEA988FDCC5B0A10FFDF /* IGListDiffKit */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IGListDiffKit; path = IGListDiffKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		199439F8E61192A0C45B6CA39D06ACF0 /* SPPhotoLibraryPermission.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPPhotoLibraryPermission.swift; path = Sources/SPPermissionsPhotoLibrary/SPPhotoLibraryPermission.swift; sourceTree = "<group>"; };
 		1A00FA091AEF73A8FCDE61C6235F1478 /* IGListKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = IGListKit.modulemap; sourceTree = "<group>"; };
 		1A6190FA047211D3E85B874E2193408A /* URLRequest+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLRequest+Alamofire.swift"; path = "Source/URLRequest+Alamofire.swift"; sourceTree = "<group>"; };
@@ -591,7 +591,7 @@
 		42C5FBF237E8C38E15AE7878145B0D9B /* IGListAdapter+UICollectionView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IGListAdapter+UICollectionView.m"; path = "Source/IGListKit/Internal/IGListAdapter+UICollectionView.m"; sourceTree = "<group>"; };
 		42EB300F112D7CC3EB50AE9308C73F5C /* RedirectHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RedirectHandler.swift; path = Sources/Networking/RedirectHandler.swift; sourceTree = "<group>"; };
 		42EF0C2790A1D42BE8439BA0BD51D822 /* UITabBarExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITabBarExtensions.swift; path = Sources/SwifterSwift/UIKit/UITabBarExtensions.swift; sourceTree = "<group>"; };
-		4312DD121FF13E86EAB87188CC27573E /* IGListBatchUpdateData.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = IGListBatchUpdateData.mm; path = Source/IGListDiffKit/IGListBatchUpdateData.mm; sourceTree = "<group>"; };
+		4312DD121FF13E86EAB87188CC27573E /* IGListBatchUpdateData.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = IGListBatchUpdateData.mm; path = Source/IGListDiffKit/IGListBatchUpdateData.mm; sourceTree = "<group>"; };
 		43E98339B4241583C92194403BFB848C /* WKWebViewExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WKWebViewExtensions.swift; path = Sources/SwifterSwift/WebKit/WKWebViewExtensions.swift; sourceTree = "<group>"; };
 		4456AA170BFE0E37CB5431939234467F /* IGListCollectionViewDelegateLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListCollectionViewDelegateLayout.h; path = Source/IGListKit/IGListCollectionViewDelegateLayout.h; sourceTree = "<group>"; };
 		4492CD5C37C251C50F4A9DC1DDF8D676 /* GraphicsContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphicsContext.swift; path = Sources/Image/GraphicsContext.swift; sourceTree = "<group>"; };
@@ -639,13 +639,13 @@
 		5A0C4EF37E614E092A9DF7AD55A2A7FA /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIViewControllerExtensions.swift; path = Sources/SwifterSwift/UIKit/UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		5B3424370D5E7D7EF85E3A45E74E3ADB /* IntExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IntExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/IntExtensions.swift; sourceTree = "<group>"; };
 		5D3631226FABB46831DB6E8718028DF3 /* Image.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Image.swift; path = Sources/Image/Image.swift; sourceTree = "<group>"; };
-		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E4C578C1469CB79099BEBD2919A621F /* FileManagerExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FileManagerExtensions.swift; path = Sources/SwifterSwift/Foundation/FileManagerExtensions.swift; sourceTree = "<group>"; };
 		5E967D58E4C64897A60F44ABF77EF600 /* RedirectHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RedirectHandler.swift; path = Source/RedirectHandler.swift; sourceTree = "<group>"; };
 		5EF093081671A43C30B2B967FE6A7C3C /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5F6B8CF129898A23841AEA89A6B921DE /* DataExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataExtensions.swift; path = Sources/SwifterSwift/Foundation/DataExtensions.swift; sourceTree = "<group>"; };
-		5F6DB3E0BD1B51383F9690E6F84A0A66 /* IGListDiff.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = IGListDiff.mm; path = Source/IGListDiffKit/IGListDiff.mm; sourceTree = "<group>"; };
-		5FD8E4EBA830B51FA0871FEAA75E4DF8 /* SPPermissions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SPPermissions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F6DB3E0BD1B51383F9690E6F84A0A66 /* IGListDiff.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = IGListDiff.mm; path = Source/IGListDiffKit/IGListDiff.mm; sourceTree = "<group>"; };
+		5FD8E4EBA830B51FA0871FEAA75E4DF8 /* SPPermissions */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SPPermissions; path = SPPermissions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		600D191E991F0D516B72D547867AC1B4 /* FloatingPointExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingPointExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/FloatingPointExtensions.swift; sourceTree = "<group>"; };
 		60906509DC2F6F942215314E7C0AEEC7 /* IGListDebuggingUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListDebuggingUtilities.h; path = Source/IGListKit/Internal/IGListDebuggingUtilities.h; sourceTree = "<group>"; };
 		60B6E62368D10EDE8C694D7A4096B025 /* DrawService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DrawService.swift; path = Sources/SPPermissions/Services/DrawService.swift; sourceTree = "<group>"; };
@@ -698,7 +698,7 @@
 		7879BBC8A92CF28B467AC96DCD4CE151 /* BinaryFloatingPointExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BinaryFloatingPointExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/BinaryFloatingPointExtensions.swift; sourceTree = "<group>"; };
 		7896DBB4E7C0601DF922B8433533D34D /* IGListSectionControllerInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListSectionControllerInternal.h; path = Source/IGListKit/Internal/IGListSectionControllerInternal.h; sourceTree = "<group>"; };
 		799F587B15B6302FE3CCF399F807311B /* IGListReloadDataUpdater.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListReloadDataUpdater.h; path = Source/IGListKit/IGListReloadDataUpdater.h; sourceTree = "<group>"; };
-		7A5F7001277980B8F3EEA75BCD346E53 /* SwiftyBeaver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyBeaver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A5F7001277980B8F3EEA75BCD346E53 /* SwiftyBeaver */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyBeaver; path = SwiftyBeaver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AD2AEB91CB31077FDD4AEEC0CFD52C4 /* HKActivitySummaryExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HKActivitySummaryExtensions.swift; path = Sources/SwifterSwift/HealthKit/HKActivitySummaryExtensions.swift; sourceTree = "<group>"; };
 		7B5730102E592C0EF30C49E60305664F /* SPPermissions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SPPermissions.release.xcconfig; sourceTree = "<group>"; };
 		7BEDFF3535D46AF11160FAF5AD5C3C39 /* IGListGenericSectionController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListGenericSectionController.h; path = Source/IGListKit/IGListGenericSectionController.h; sourceTree = "<group>"; };
@@ -739,7 +739,7 @@
 		8BC7C070DC778274D24D9A121865C58B /* DateExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateExtensions.swift; path = Sources/SwifterSwift/Foundation/DateExtensions.swift; sourceTree = "<group>"; };
 		8BF5B5612E22BF90D0BE50FD7A31E982 /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8C0CC400CFBE155DC8DC4B7C02FD7198 /* RangeReplaceableCollectionExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RangeReplaceableCollectionExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/RangeReplaceableCollectionExtensions.swift; sourceTree = "<group>"; };
-		8C81A3F6D6E88BB13C101D6462262715 /* SwifterSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwifterSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C81A3F6D6E88BB13C101D6462262715 /* SwifterSwift */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwifterSwift; path = SwifterSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CC935AEE177FD6FEF18CC73902D7EE0 /* CachedResponseHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CachedResponseHandler.swift; path = Source/CachedResponseHandler.swift; sourceTree = "<group>"; };
 		8D723B032A9F7F06D800B01927AFCDC3 /* UIStackViewExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIStackViewExtensions.swift; path = Sources/SwifterSwift/UIKit/UIStackViewExtensions.swift; sourceTree = "<group>"; };
 		8E1973825CC55C0B406DED7B4B1CCE08 /* RequestInterceptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestInterceptor.swift; path = Source/RequestInterceptor.swift; sourceTree = "<group>"; };
@@ -766,7 +766,7 @@
 		9CD1AE75FE4675DB047E6BDDEAA4984F /* IGListSectionMap+DebugDescription.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IGListSectionMap+DebugDescription.h"; path = "Source/IGListKit/Internal/IGListSectionMap+DebugDescription.h"; sourceTree = "<group>"; };
 		9D007FB33141CEECFD400DC5F1EB96AC /* IGListBatchUpdateData+DebugDescription.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IGListBatchUpdateData+DebugDescription.m"; path = "Source/IGListKit/Internal/IGListBatchUpdateData+DebugDescription.m"; sourceTree = "<group>"; };
 		9D6E9E9732415AB1B11070E19EA543A8 /* Concurrency.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Concurrency.swift; path = Source/Concurrency.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DC1CA094D532F5F6A27BFCE48E4FC38 /* IGListAdapterUpdater.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListAdapterUpdater.h; path = Source/IGListKit/IGListAdapterUpdater.h; sourceTree = "<group>"; };
 		9E7CAFE5746680F7F6E084AACAA2C5E2 /* IGListIndexSetResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IGListIndexSetResult.m; path = Source/IGListDiffKit/IGListIndexSetResult.m; sourceTree = "<group>"; };
 		9E85B03EB3D836432BC386A32F6A38A2 /* IGListMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListMacros.h; path = Source/IGListDiffKit/IGListMacros.h; sourceTree = "<group>"; };
@@ -785,7 +785,7 @@
 		A359A7DBA07C6D9DD433A22063303F58 /* Resource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Resource.swift; path = Sources/General/ImageSource/Resource.swift; sourceTree = "<group>"; };
 		A362E12CB1D2CB25D12640A637F7F9BF /* IGListKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IGListKit-umbrella.h"; sourceTree = "<group>"; };
 		A3658CF2A3CB2717F3F4C801D361171B /* KFImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KFImage.swift; path = Sources/SwiftUI/KFImage.swift; sourceTree = "<group>"; };
-		A37725420361B473E3145CF2D5311194 /* IGListCollectionViewLayout.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = IGListCollectionViewLayout.mm; path = Source/IGListKit/IGListCollectionViewLayout.mm; sourceTree = "<group>"; };
+		A37725420361B473E3145CF2D5311194 /* IGListCollectionViewLayout.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = IGListCollectionViewLayout.mm; path = Source/IGListKit/IGListCollectionViewLayout.mm; sourceTree = "<group>"; };
 		A39420DB739EBCC8B9EF7714AF72B14E /* EventMonitor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EventMonitor.swift; path = Source/EventMonitor.swift; sourceTree = "<group>"; };
 		A3A62811E9D21DAE2F2C5F6BA9CE9465 /* SPPermissions-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SPPermissions-dummy.m"; sourceTree = "<group>"; };
 		A45E12E2F5B0F5C33C17D9B062ED1F49 /* UISearchBarExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UISearchBarExtensions.swift; path = Sources/SwifterSwift/UIKit/UISearchBarExtensions.swift; sourceTree = "<group>"; };
@@ -808,8 +808,8 @@
 		B16783C94B8B850308DE854FF519CD90 /* BoolExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BoolExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/BoolExtensions.swift; sourceTree = "<group>"; };
 		B2612BFFE03FE0C176E2F16492DAF217 /* SPPermissions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPPermissions.swift; path = Sources/SPPermissions/SPPermissions.swift; sourceTree = "<group>"; };
 		B3ACC7A1B09F70FFDD4A9DC93A8E5C4E /* Storage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Storage.swift; path = Sources/Cache/Storage.swift; sourceTree = "<group>"; };
-		B3C6C3E0B0FE2750FE588E0AFBA66D62 /* IGListKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IGListKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B40AF7BE2AFDF966C4A050426B39F136 /* IGListWorkingRangeHandler.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = IGListWorkingRangeHandler.mm; path = Source/IGListKit/Internal/IGListWorkingRangeHandler.mm; sourceTree = "<group>"; };
+		B3C6C3E0B0FE2750FE588E0AFBA66D62 /* IGListKit */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IGListKit; path = IGListKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B40AF7BE2AFDF966C4A050426B39F136 /* IGListWorkingRangeHandler.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = IGListWorkingRangeHandler.mm; path = Source/IGListKit/Internal/IGListWorkingRangeHandler.mm; sourceTree = "<group>"; };
 		B7F1AF2A91B3ECC21C4552C648C07426 /* SPPermissionsDialogView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SPPermissionsDialogView.swift; path = Sources/SPPermissions/Interface/Dialog/SPPermissionsDialogView.swift; sourceTree = "<group>"; };
 		B81A12CAEA25A10662044D68F467110B /* IGListCollectionViewLayoutCompatible.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListCollectionViewLayoutCompatible.h; path = Source/IGListKit/IGListCollectionViewLayoutCompatible.h; sourceTree = "<group>"; };
 		B90FEAF57ABAF8404FD5E254695A11F3 /* SPPermissions-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SPPermissions-umbrella.h"; sourceTree = "<group>"; };
@@ -1039,6 +1039,7 @@
 				104372405B1889424280C413A597BC6D /* SwiftyBeaver.swift */,
 				6E2FC269035A18FEB7F31620DD90BA69 /* Support Files */,
 			);
+			name = SwiftyBeaver;
 			path = SwiftyBeaver;
 			sourceTree = "<group>";
 		};
@@ -1122,6 +1123,7 @@
 				9358D2263DAF18A9A1DB5CF47E1E6CB1 /* WKInterfaceImage+Kingfisher.swift */,
 				F83DFDDB59400BBC7708328DA9869E4B /* Support Files */,
 			);
+			name = Kingfisher;
 			path = Kingfisher;
 			sourceTree = "<group>";
 		};
@@ -1283,6 +1285,7 @@
 				7D4B9A36CED981FFEC514015E21E64CA /* NSString+IGListDiffable.m */,
 				4DE70C887956A94C11A5A2E212B5F95C /* Support Files */,
 			);
+			name = IGListDiffKit;
 			path = IGListDiffKit;
 			sourceTree = "<group>";
 		};
@@ -1338,6 +1341,7 @@
 				5460E806F07865C2D5FE69845A766448 /* Validation.swift */,
 				CE49CD2134A2ED912AE58E804BFA4D3A /* Support Files */,
 			);
+			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -1405,6 +1409,7 @@
 				D46227B65E3B73F08061586115012408 /* Support Files */,
 				E853F848BFD063BF8146D9A21F6AE5EC /* Tracking */,
 			);
+			name = SPPermissions;
 			path = SPPermissions;
 			sourceTree = "<group>";
 		};
@@ -1575,6 +1580,7 @@
 				E803C0755C80D73FBAB0F353C51A97FC /* UIScrollView+IGListKit.m */,
 				E6B3D35B4C9849C6164686E155BF622F /* Support Files */,
 			);
+			name = IGListKit;
 			path = IGListKit;
 			sourceTree = "<group>";
 		};
@@ -1780,21 +1786,22 @@
 				1CFA1167D98DC79AC075A5C722DF7A02 /* UIKit */,
 				A6CE2A0F84D38F06E2EB2E5CC3C1D507 /* WebKit */,
 			);
+			name = SwifterSwift;
 			path = SwifterSwift;
 			sourceTree = "<group>";
 		};
 		F69E2E397B5527A0BEDDE26FC26DAE52 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */,
-				195AD71F7938FEA988FDCC5B0A10FFDF /* IGListDiffKit.framework */,
-				B3C6C3E0B0FE2750FE588E0AFBA66D62 /* IGListKit.framework */,
+				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */,
+				195AD71F7938FEA988FDCC5B0A10FFDF /* IGListDiffKit */,
+				B3C6C3E0B0FE2750FE588E0AFBA66D62 /* IGListKit */,
 				C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher */,
 				C9160AF0837AC130D4C7681F8BCC555F /* Pods-SwiftCheatSheet */,
-				5FD8E4EBA830B51FA0871FEAA75E4DF8 /* SPPermissions.framework */,
-				0211367793A2FCD536B938775CD8B81E /* SPPermissions.bundle */,
-				8C81A3F6D6E88BB13C101D6462262715 /* SwifterSwift.framework */,
-				7A5F7001277980B8F3EEA75BCD346E53 /* SwiftyBeaver.framework */,
+				5FD8E4EBA830B51FA0871FEAA75E4DF8 /* SPPermissions */,
+				0211367793A2FCD536B938775CD8B81E /* SPPermissions-SPPermissions */,
+				8C81A3F6D6E88BB13C101D6462262715 /* SwifterSwift */,
+				7A5F7001277980B8F3EEA75BCD346E53 /* SwiftyBeaver */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1983,7 +1990,7 @@
 			);
 			name = SwiftyBeaver;
 			productName = SwiftyBeaver;
-			productReference = 7A5F7001277980B8F3EEA75BCD346E53 /* SwiftyBeaver.framework */;
+			productReference = 7A5F7001277980B8F3EEA75BCD346E53 /* SwiftyBeaver */;
 			productType = "com.apple.product-type.framework";
 		};
 		2D07A05F514BF9C5434DAC907988C708 /* IGListDiffKit */ = {
@@ -2001,7 +2008,7 @@
 			);
 			name = IGListDiffKit;
 			productName = IGListDiffKit;
-			productReference = 195AD71F7938FEA988FDCC5B0A10FFDF /* IGListDiffKit.framework */;
+			productReference = 195AD71F7938FEA988FDCC5B0A10FFDF /* IGListDiffKit */;
 			productType = "com.apple.product-type.framework";
 		};
 		46887A2B3EC5EA71E0B560973C79F7A6 /* SPPermissions */ = {
@@ -2020,7 +2027,7 @@
 			);
 			name = SPPermissions;
 			productName = SPPermissions;
-			productReference = 5FD8E4EBA830B51FA0871FEAA75E4DF8 /* SPPermissions.framework */;
+			productReference = 5FD8E4EBA830B51FA0871FEAA75E4DF8 /* SPPermissions */;
 			productType = "com.apple.product-type.framework";
 		};
 		5D8BB851D938AE8F1A461F95C1ABD69B /* SwifterSwift */ = {
@@ -2038,7 +2045,7 @@
 			);
 			name = SwifterSwift;
 			productName = SwifterSwift;
-			productReference = 8C81A3F6D6E88BB13C101D6462262715 /* SwifterSwift.framework */;
+			productReference = 8C81A3F6D6E88BB13C101D6462262715 /* SwifterSwift */;
 			productType = "com.apple.product-type.framework";
 		};
 		674FDCAB4D51E702521F4CD31807F659 /* IGListKit */ = {
@@ -2057,7 +2064,7 @@
 			);
 			name = IGListKit;
 			productName = IGListKit;
-			productReference = B3C6C3E0B0FE2750FE588E0AFBA66D62 /* IGListKit.framework */;
+			productReference = B3C6C3E0B0FE2750FE588E0AFBA66D62 /* IGListKit */;
 			productType = "com.apple.product-type.framework";
 		};
 		70FE35B1B5B957AE40BDC3F5224B24E2 /* Pods-SwiftCheatSheet */ = {
@@ -2099,7 +2106,7 @@
 			);
 			name = "SPPermissions-SPPermissions";
 			productName = SPPermissions;
-			productReference = 0211367793A2FCD536B938775CD8B81E /* SPPermissions.bundle */;
+			productReference = 0211367793A2FCD536B938775CD8B81E /* SPPermissions-SPPermissions */;
 			productType = "com.apple.product-type.bundle";
 		};
 		E8022D22FAA6690B5E1C379C1BCE1491 /* Kingfisher */ = {
@@ -2135,7 +2142,7 @@
 			);
 			name = Alamofire;
 			productName = Alamofire;
-			productReference = 5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */;
+			productReference = 5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -2145,7 +2152,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1330;
+				LastUpgradeCheck = 1240;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -2214,7 +2221,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C59FAE4F36647A27A0BADB4EE3903022 /* SPPermissions.bundle in Resources */,
+				C59FAE4F36647A27A0BADB4EE3903022 /* SPPermissions-SPPermissions in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2710,7 +2717,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SPPermissions";
 				IBSC_MODULE = SPPermissions;
 				INFOPLIST_FILE = "Target Support Files/SPPermissions/ResourceBundle-SPPermissions-SPPermissions-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_NAME = SPPermissions;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -2735,7 +2742,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SPPermissions/SPPermissions-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SPPermissions/SPPermissions-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2768,7 +2775,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/IGListKit/IGListKit-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/IGListKit/IGListKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2803,7 +2810,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/IGListKit/IGListKit-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/IGListKit/IGListKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2822,10 +2829,11 @@
 			};
 			name = Debug;
 		};
-		3A9C54A45CE47E9629F0BBBC5F162BE6 /* Debug */ = {
+		3B0301BFACB132565D704784AE6BB520 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BFB902E947D15E9D87E8AA1E88F54865 /* SwiftyBeaver.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -2837,7 +2845,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SwiftyBeaver/SwiftyBeaver-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SwiftyBeaver/SwiftyBeaver-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2856,6 +2864,42 @@
 			};
 			name = Debug;
 		};
+		5F72CE8E5F7E6964AC2C0528158D1D35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73B0F63ACBC68C97B445AF4E4FA86F84 /* SwiftyBeaver.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyBeaver/SwiftyBeaver-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyBeaver/SwiftyBeaver-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftyBeaver/SwiftyBeaver.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyBeaver;
+				PRODUCT_NAME = SwiftyBeaver;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		8E3E23EA606F810647E928EEB5631C31 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6E8D8CFF24140B424052E46EEF15BBBD /* SPPermissions.debug.xcconfig */;
@@ -2863,7 +2907,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SPPermissions";
 				IBSC_MODULE = SPPermissions;
 				INFOPLIST_FILE = "Target Support Files/SPPermissions/ResourceBundle-SPPermissions-SPPermissions-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_NAME = SPPermissions;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -2888,7 +2932,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3087,7 +3131,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SwifterSwift/SwifterSwift-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SwifterSwift/SwifterSwift-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3122,7 +3166,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3156,7 +3200,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/IGListDiffKit/IGListDiffKit-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/IGListDiffKit/IGListDiffKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3230,7 +3274,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SwifterSwift/SwifterSwift-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SwifterSwift/SwifterSwift-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3243,41 +3287,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.3;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		B999885539A8D1A30B3AE62AAED57CB1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 73B0F63ACBC68C97B445AF4E4FA86F84 /* SwiftyBeaver.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyBeaver/SwiftyBeaver-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyBeaver/SwiftyBeaver-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SwiftyBeaver/SwiftyBeaver.modulemap";
-				PRODUCT_MODULE_NAME = SwiftyBeaver;
-				PRODUCT_NAME = SwiftyBeaver;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -3373,7 +3382,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/IGListDiffKit/IGListDiffKit-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/IGListDiffKit/IGListDiffKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3408,7 +3417,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SPPermissions/SPPermissions-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SPPermissions/SPPermissions-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3514,8 +3523,8 @@
 		EF1F5258E16636A4848710DDF6E32EAE /* Build configuration list for PBXNativeTarget "SwiftyBeaver" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3A9C54A45CE47E9629F0BBBC5F162BE6 /* Debug */,
-				B999885539A8D1A30B3AE62AAED57CB1 /* Release */,
+				3B0301BFACB132565D704784AE6BB520 /* Debug */,
+				5F72CE8E5F7E6964AC2C0528158D1D35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
