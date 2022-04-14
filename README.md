@@ -20,7 +20,7 @@
 > 
 > The goal of the Swift project is to create the best available language for uses ranging from systems programming, to mobile and desktop apps, scaling up to cloud services.
 
-Swift 是苹果于 2014 年 WWDC 苹果开发者大会发布的新开发语言，可与 Objective-C 共同运行于 macOS 和 iOS 平台，用于搭建基于苹果生态的应用程序。
+Swift 是苹果在 WWCD 2014 上推出的新编程语言，可与 Objective-C 共同运行于 macOS 和 iOS 平台，用于搭建基于苹果生态的应用程序。
 
 Swift 是一款易学易用的编程语言，而且它还是第一套具有与脚本语言同样的表现力和趣味性的系统编程语言。Swift 的设计以安全为出发点，以避免各种常见的编程错误类型。
 
@@ -78,9 +78,6 @@ Swift 非常容易学习。Swift 代码被简化并且更像英语，这使得�
 * [Brian Advent youtube channel](https://www.youtube.com/channel/UCysEngjfeIYapEER9K8aikw/videos) - High quality Swift tutorials.
 * [SkipCasts youtube channel](https://www.youtube.com/user/SkipCasts/videos) - Skip Wilson's casts on Swift.
 * [Developing iOS 8 Apps with Swift](https://itunes.apple.com/us/course/developing-ios-8-apps-swift/id961180099) - Stanford course by Paul Hegarty.
-* [~~SwiftV 课堂~~](http://www.swiftv.cn/)，中文视频教程集合，Swift 4
-* [~~Swift 语言开发知识体系图 @极客学院~~](https://www.jikexueyuan.com/path/swift)，中文视频教程，2015年、**Xcode 6.1**
-* [~~学习 Swift @阿里云大学~~](https://edu.aliyun.com/course/492?spm=5176.10731542.0.0.3b1e6cd6DoIKKa)
 
 
 
@@ -188,6 +185,8 @@ Swift 非常容易学习。Swift 代码被简化并且更像英语，这使得�
 * [2017 中国 Swift 开发者大会源文件，包括 pdf 和源工程文件](https://github.com/atConf/atswift-2017-resources)
 * [2018 中国 Swift 开发者大会源文件，包括 pdf 和源工程文件](https://github.com/atConf/atswift-2018-resources)
 * [[译] Swift 标准库源码阅读指南](https://xiaozhuanlan.com/topic/8732549601)
+* [CocoaChina-editors/Welcome-to-Swift](https://github.com/CocoaChina-editors/Welcome-to-Swift)
+
 
 
 ## 统计信息
