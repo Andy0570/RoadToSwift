@@ -73,6 +73,7 @@
 		2279449A2807BFD100BFDADA /* BarcodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227944992807BFD100BFDADA /* BarcodeService.swift */; };
 		2279449C2807D3D400BFDADA /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2279449B2807D3D400BFDADA /* Colors.xcassets */; };
 		227944AA2807FC2900BFDADA /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227944A92807FC2900BFDADA /* Assets.swift */; };
+		227944AC28081E7C00BFDADA /* UIBezierPath+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227944AB28081E7C00BFDADA /* UIBezierPath+Extensions.swift */; };
 		227E7EAC27E0756C009D5E45 /* CollapsExpandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227E7EAB27E0756C009D5E45 /* CollapsExpandViewController.swift */; };
 		227E7EB427E0824F009D5E45 /* MultipleSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227E7EB227E0824F009D5E45 /* MultipleSelectionViewController.swift */; };
 		227E7EB527E0824F009D5E45 /* MultipleSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227E7EB327E0824F009D5E45 /* MultipleSelectionViewController.xib */; };
@@ -263,6 +264,7 @@
 		227944992807BFD100BFDADA /* BarcodeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeService.swift; sourceTree = "<group>"; };
 		2279449B2807D3D400BFDADA /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		227944A92807FC2900BFDADA /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		227944AB28081E7C00BFDADA /* UIBezierPath+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Extensions.swift"; sourceTree = "<group>"; };
 		227E7EAB27E0756C009D5E45 /* CollapsExpandViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapsExpandViewController.swift; sourceTree = "<group>"; };
 		227E7EB227E0824F009D5E45 /* MultipleSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleSelectionViewController.swift; sourceTree = "<group>"; };
 		227E7EB327E0824F009D5E45 /* MultipleSelectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultipleSelectionViewController.xib; sourceTree = "<group>"; };
@@ -601,6 +603,7 @@
 				226218B227EE24AF0052634A /* UIViewController+Extensions.swift */,
 				22E3480827E8490600369602 /* AlertDisplayer.swift */,
 				226218B027EE238D0052634A /* UITableView+PDF.swift */,
+				227944AB28081E7C00BFDADA /* UIBezierPath+Extensions.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -1087,6 +1090,7 @@
 				22A89B4F27DB54940091304F /* UITableView */,
 				22BF2E0C27BDFD8B009027E3 /* 设计模式 */,
 				22D2234927BCF061000EAD0F /* Homepage */,
+				2246199E27EC10B30096C856 /* Extensions */,
 				227944A42807F4FE00BFDADA /* SwiftGen */,
 				227944A22807F3A200BFDADA /* Resources */,
 				22D2233527BCEB89000EAD0F /* AppDelegate.swift */,
@@ -1094,7 +1098,6 @@
 				22D2233B27BCEB89000EAD0F /* Main.storyboard */,
 				22D2234027BCEB8A000EAD0F /* LaunchScreen.storyboard */,
 				22D2234327BCEB8A000EAD0F /* Info.plist */,
-				2246199E27EC10B30096C856 /* Extensions */,
 			);
 			path = SwiftCheatSheet;
 			sourceTree = "<group>";
@@ -1574,6 +1577,7 @@
 				2262189027EDB9F60052634A /* UserDefaults+Extensions.swift in Sources */,
 				22EE32D127D0B7DB00A9A66F /* AnimationConstraintsViewController.swift in Sources */,
 				221C58EE27F8894D00E5D855 /* PlayVideoViewController.swift in Sources */,
+				227944AC28081E7C00BFDADA /* UIBezierPath+Extensions.swift in Sources */,
 				22DBC8E327CB631000E14468 /* MenuButtonViewController.swift in Sources */,
 				228B38F227D0614700BCF963 /* FlagViewController.swift in Sources */,
 				22BF2E1627BDFE51009027E3 /* HTTPClient.swift in Sources */,
