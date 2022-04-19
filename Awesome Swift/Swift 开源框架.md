@@ -609,7 +609,8 @@
 * :orange: [SCRecorder](https://github.com/rFlex/SCRecorder) ⭐️3.1k - 酷似 Instagram/Vine 的音频 / 视频摄像记录器，以 Objective-C 为基础的过滤器框架。 你可以做很多如下的操作：记录多个视频录像片段。删除任何你不想要的记录段。可以使用任何视频播放器播放片段。保存的记录可以在序列化的 NSDictionary 中使用。（在 NSUserDefaults 的中操作）添加使用 Core Image 的视频滤波器。可自由选择你需要的 parameters 合并和导出视频。
 * :orange: [LLSimpleCamera](https://github.com/omergul/LLSimpleCamera) ⭐️1.2k - 一个简单的、可定制的相机控制--iOS的视频记录器。
 * :orange: [ICGVideoTrimmer](https://github.com/itsmeichigo/ICGVideoTrimmer) ⭐️630 - 模仿 Instagram，用于快速修剪视频。
-* [Learning-AV-Foundation-Swift](https://github.com/tapharmonic/Learning-AV-Foundation-Swift) ⭐️201，学习 AVFoundation 框架。
+* [Learning-AV-Foundation-Swift](https://github.com/tapharmonic/Learning-AV-Foundation-Swift) ⭐️201 - 学习 AVFoundation 框架。
+* [ffmpeg-kit](https://github.com/tanersener/ffmpeg-kit) ⭐️1.2k - 用于应用程序的 FFmpeg 套件。支持 Android、Flutter、iOS、macOS、React Native 和 tvOS。取代 MobileFFmpeg、flutter_ffmpeg 和 react-native-ffmpeg。
 
 
 
