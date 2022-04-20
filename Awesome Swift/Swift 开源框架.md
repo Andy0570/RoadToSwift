@@ -7,10 +7,11 @@
 
 
 > **注**：
-> 
+>
 > :heart: 表示推荐框架；
 > :orange: 表示该框架使用 Objective-C 语言；
 > :warning: 表示已归档或不再维护框架；
+> :star: 表示该项目在 GitHub 上的 Star 数量，仅作参考，不保证及时更新；
 
 
 
@@ -38,7 +39,7 @@
 * [vapor](https://github.com/vapor/vapor) ⭐️21.4k - 最活跃的 Web 服务器框架。[Vapor, Perfect, Kitura 比较](https://www.jianshu.com/p/a9ca47e844d7)
 * [Perfect](https://github.com/PerfectlySoft/Perfect) ⭐️13.9k - 功能更强大，性能更好的 Web 服务器框架。有完整的[中文开发文档](https://github.com/PerfectlySoft/Perfect/blob/master/README.zh_CN.md)支持。
 * [Kitura](https://github.com/Kitura/Kitura) ⭐️7.5k - 与 IBM Bluemix 最佳云集成，功能强大的 Web 服务器框架。CGI 支持。
-* [dockSwiftOnARM](https://github.com/helje5/dockSwiftOnARM) ⭐️120 -将 Swift 编译运行于 ARM 平台 Docker 上。
+* [dockSwiftOnARM](https://github.com/helje5/dockSwiftOnARM) ⭐️120 - 将 Swift 编译运行于 ARM 平台 Docker 上。
 * [amzn/smoke-framework](https://github.com/amzn/smoke-framework) ⭐️1.3k - 一个用 Swift 编写的轻量级服务器端服务框架。
 * [Swifter](https://github.com/glock45/swifter) ⭐️3.4k - an HTTP server engine in Swift.
 * [Taylor](https://github.com/izqui/Taylor) ⭐️931 - A lightweight library for writing HTTP web servers with Swift
@@ -124,6 +125,7 @@
 
 ## UI
 
+* :heart: [SkeletonView](https://github.com/Juanpe/SkeletonView) ⭐️11.1k - 骨架屏，一种优雅的方式来向用户展示正在发生的事情并让他们准备好他们正在等待的内容。
 * [Material](https://github.com/CosmicMind/Material) ⭐️11.9k - 用于创建漂亮应用程序的 UI/UX 框架。
 * [Sejima](https://github.com/MoveUpwards/Sejima) ⭐️63 - User Interface Library components for iOS.
 * [SectionedSlider](https://github.com/LeonardoCardoso/SectionedSlider) ⭐️349 - iOS 11 控制中心音量滑块。
@@ -132,23 +134,38 @@
 * [Swifty](https://github.com/RyukieSama/Swifty) ⭐️41 - ScreenShield 是极其轻量化的截屏防护方案，任何需要被保护的 View 作为子视图放入保护的视图中即可达到截屏时隐藏内容的效果。
 
 
-### Alert 弹窗、Toast
+
+
+### Alert、Toast、
 
 * :heart: [Siren](https://github.com/ArtSabintsev/Siren) ⭐️3.9k - 当应用版本更新时，通知用户并提供 App Store 链接。
 * :heart: [SPPermissions](https://github.com/ivanvorobei/SPPermissions) ⭐️4.8k - 通过列表、Dialog 对话框和原生界面的方式向用户请求访问权限。可以检查权限状态。支持 SwiftUI。
-* :heart: [BulletinBoard](https://github.com/alexisakers/BulletinBoard) ⭐️5.2k - 创建显示在屏幕底部的卡片视图
 * [Toast-Swift](https://github.com/scalessec/Toast-Swift) ⭐️3k
-* :heart: [SwiftMessages](https://github.com/SwiftKickMobile/SwiftMessages) ⭐️6.4k - A very flexible message bar for iOS written in Swift.
-* [WMZDialog](https://github.com/wwmz/WMZDialog) ⭐️800 - 功能最多样式最多的弹窗。
-* [XLActionController](https://github.com/xmartlabs/XLActionController) ⭐️3.2k - 基于 Swift 的完全自定义并且可扩展的 action sheet controller
-* [PopupView](https://github.com/exyte/PopupView) 【SwiftUI】⭐️1.1k
-* [Ribbon](https://github.com/chriszielinski/Ribbon) - 🎀 A simple cross-platform toolbar/custom input accessory view library for iOS & macOS.
+* [WMZDialog](https://github.com/wwmz/WMZDialog) ⭐️881 - 功能最多样式最多的弹窗，支持普通 / 底部 / 日期 / 地区 / 日历 / 选择 / 编辑 / 分享 / 菜单 / 自定义弹窗等，支持多种动画，链式编程调用。
+* [XLActionController](https://github.com/xmartlabs/XLActionController) ⭐️3.3k - 基于 Swift 的完全自定义并且可扩展的 action sheet controller
 * [SimpleAlert](https://github.com/KyoheiG3/SimpleAlert) - Customizable simple Alert and simple ActionSheet for Swift
 * [EZAlertController](https://github.com/thellimist/EZAlertController) - Easy Swift UIAlertController
 * [TTGSnackbar](https://github.com/zekunyan/TTGSnackbar) ⭐️579
 * [SweetAlert-iOS](https://github.com/codestergit/SweetAlert-iOS) ⭐️2k - 带动画效果弹窗封装类。
-* [Popover](https://github.com/corin8823/Popover) ⭐️1.9k - 像 Facebook 应用里的气球呼出框，用纯 Swift 语言编写
 * [FlourishUI](https://github.com/unicorn/FlourishUI)  ⭐️224 - 一个高度可配置的、开箱即用的漂亮UI框架。
+
+
+
+### 卡片
+
+* :heart: [SwiftMessages](https://github.com/SwiftKickMobile/SwiftMessages) ⭐️6.4k - A very flexible message bar for iOS written in Swift.
+* [BulletinBoard](https://github.com/alexisakers/BulletinBoard) ⭐️5.2k - 创建显示在屏幕底部的卡片视图。
+* [NotificationBanner](https://github.com/Daltron/NotificationBanner) ⭐️4.4k - 在 iOS 中显示高度可定制的应用通知横幅的最简单方法。
+
+
+### Popup 弹窗
+
+* [Popover](https://github.com/corin8823/Popover) ⭐️1.9k - 像 Facebook 应用里的气球呼出框，用纯 Swift 语言编写
+* [AMPopTip](https://github.com/andreamazz/AMPopTip) ⭐️2.9k - 弹出指定 frame 大小的动画弹出框，非常适合微妙的 UI 提示和引导。
+* [PopupView](https://github.com/exyte/PopupView) 【SwiftUI】⭐️1.1k
+* [PopMenu](https://github.com/CaliCastle/PopMenu) ⭐️1.3k - 适用于 iOS 的完全可定制的弹出菜单。
+* [FFPopup](https://github.com/JonyFang/FFPopup) ⭐️782 - 在 iOS 中将自定义视图呈现为弹出窗口。
+
 
 
 ### 活动指示器、UIActivityIndicatorView
@@ -173,12 +190,13 @@
 * [KSGuideController](https://github.com/skx926/KSGuideController) ⭐️323 - 一个漂亮的新手引导库。
 
 
+
 ### 分页菜单/下拉菜单/UISegmentedControl
 
 * :heart: [JXSegmentedView](https://github.com/pujiaxin33/JXSegmentedView) ⭐️1.9k - 分类切换滚动视图
 * :warning: [PagingMenuController](https://github.com/kitasuke/PagingMenuController) ⭐️2.5k - Paging view controller with customizable menu in Swift
 * [twicketapp/TwicketSegmentedControl](https://github.com/twicketapp/TwicketSegmentedControl) ⭐️1.7k
-* [JNDropDownMenu](https://github.com/javalnanda/JNDropDownMenu) ⭐️65 下拉菜单
+* [JNDropDownMenu](https://github.com/javalnanda/JNDropDownMenu) ⭐️65 - 下拉菜单
 * [DropDown](https://github.com/AssistoLab/DropDown) ⭐️2.2k - 拟物设计（Material Design）风格的下拉菜单
 * [TwicketSegmentedControl](https://github.com/polqf/TwicketSegmentedControl) ⭐️1.7k - 用于替代 iOS 默认组件的自定义 UISegmentedControl
 * [Persei](https://github.com/Yalantis/Persei) ⭐️3.4k - 基于 Swift 语言，顶部菜单的动效，针对于 UITableView 、 UICollectionView 、 UIScrollView
@@ -235,10 +253,12 @@
 
 ### UILabel
 
+* :orange: [UICountingLabel](https://github.com/dataxpress/UICountingLabel) ⭐️1.9k - 为 UILabel 添加动画计数支持。
+
 
 
 ### UIButton
-* [LGButton](https://github.com/loregr/LGButton) ⭐️2k，一个完全可定制的原生 UIControl 子类，它允许您创建漂亮的按钮，而无需编写任何代码。
+* [LGButton](https://github.com/loregr/LGButton) ⭐️2k - 一个完全可定制的原生 UIControl 子类，它允许您创建漂亮的按钮，而无需编写任何代码。
 * [NFDownloadButton](https://github.com/LeonardoCardoso/NFDownloadButton) - Revamped Download Button.
 * [SwiftyButton](https://github.com/TakeScoop/SwiftyButton) - Simple and customizable button in Swift
 
@@ -253,7 +273,7 @@
 
 * [HTYTextField](https://github.com/hanton/HTYTextField) - A UITextField with bouncy placeholder in Swift.
 * [NextGrowingTextView](https://github.com/muukii/NextGrowingTextView) ⭐️1.5k
-* [InputBarAccessoryView](https://github.com/nathantannar4/InputBarAccessoryView) ⭐️880 一个简单和容易定制的输入框辅助视图（InputAccessoryView），用于实现具有自动完成和附件功能的强大的输入框。
+* [InputBarAccessoryView](https://github.com/nathantannar4/InputBarAccessoryView) ⭐️880 - 一个简单和容易定制的输入框辅助视图（InputAccessoryView），用于实现具有自动完成和附件功能的强大的输入框。
 * [FloatLabelFields](https://github.com/FahimF/FloatLabelFields) ⭐️1.2k - 浮动标签输入效果类。
 
 
@@ -271,6 +291,7 @@
 * [WobbleView](https://github.com/inFullMobile/WobbleView) ⭐️2.2k - Implementation of wobble effect for any view in app.
 * [Preheat](https://github.com/kean/Preheat) ⭐️633 - 自动预取 UITableView 和 UICollectionView 中的内容。
 * [TableViewTools](https://github.com/rosberry/TableViewTools) ⭐️11
+* [HWPanModal](https://github.com/HeathWang/HWPanModal) ⭐️921 - 任意形式的底部弹框动画；头条、知乎、抖音弹出评论效果；地图浮层，iOS13 present 默认模态效果。
 
 
 
@@ -353,6 +374,7 @@
 ## 键盘
 
 * [KeyboardLayoutGuide](https://github.com/freshOS/KeyboardLayoutGuide) ⭐️1.1k - KeyboardLayoutGuide, back from when it didn't exist.
+* [Ribbon](https://github.com/chriszielinski/Ribbon) ⭐️283 - 🎀 适用于 iOS 和 macOS 的简单跨平台工具栏/自定义 input accessory view。
 
 
 
@@ -370,7 +392,7 @@
 
 ## 颜色&深色模式&主题
 
-* [SwiftTheme](https://github.com/wxxsw/SwiftTheme) ⭐️2.2k Powerful theme/skin manager for iOS 8+ 主题/换肤，暗色模式
+* [SwiftTheme](https://github.com/wxxsw/SwiftTheme) ⭐️2.2k - Powerful theme/skin manager for iOS 8+ 主题/换肤，暗色模式
 * [FluentDarkModeKit](https://github.com/microsoft/FluentDarkModeKit) ⭐️1.6k - 微软开源的 Dark Mode 框架
 * [DKNightVersion](https://github.com/draveness/DKNightVersion) ⭐️3.6k
 * [Hue](https://github.com/zenangst/Hue) ⭐️3.3k - 万能的颜色工具，以后再也不用写 Swift 代码啦
@@ -378,12 +400,13 @@
 * [SwiftColors](https://github.com/thii/SwiftColors) - HEX color handling as an extension for UIColor.
 * [ComplimentaryGradientView](https://github.com/gkye/ComplimentaryGradientView) ⭐️707 - 通过源图片的主要颜色生成颜色渐变
 * [ColorSet](https://github.com/DigiDNA/ColorSet) ⭐️144 - ColorSet 是一个 macOS 实用程序和框架，允许开发人员轻松管理自定义界面颜色。
+* :warning: [ColorSlider](https://github.com/gizmosachin/ColorSlider) ⭐️269 - Swift 中 Snapchat 风格的颜色选择器。
 
 
 
 ## 时间
 
-* [SwiftDate](https://github.com/malcommac/SwiftDate) ⭐️6.7k - 解析，验证，操作，比较和显示日期，时间和时区的工具包。
+* [SwiftDate](https://github.com/malcommac/SwiftDate) ⭐️6.8k - 用于在 Swift 中解析、验证、操作、比较和显示日期、时间和时区的工具包。
 * [DateTools](https://github.com/MatthewYork/DateTools) ⭐️7.2k - Dates and times made easy in iOS。
 * [Time](https://github.com/davedelong/time) ⭐️2k - Building a better date/time library for Swift
 * [Timepiece](https://github.com/naoty/Timepiece) ⭐️2.7k - 直观的日期处理。
@@ -403,6 +426,8 @@
 * [JHChainableAnimations](https://github.com/jhurray/JHChainableAnimations) ⭐️3.2k - Easy to read and write chainable animations in Objective-C and Swift. 通过链式语法实现动画。
 * [Stellar](https://github.com/AugustRush/Stellar) ⭐️2.9k - 适用于 Swift 的奇妙的物理动画库
 * [Macaw](https://github.com/exyte/Macaw) ⭐️5.8k - 强大且易用的矢量图形库，并且支持 SVG
+
+
 
 ### 转场动画
 
@@ -550,6 +575,7 @@
 * :orange: [VIPhotoView](https://github.com/vitoziv/VIPhotoView) ⭐️227 - 用于展示图片的工具类，因为是个 View，所以你可以放在任何地方显示。支持旋转，双击指定位置放大等。
 * :orange: [MWPhotoBrowser](https://github.com/mwaterfall/MWPhotoBrowser) ⭐️8.8k - 一个简单的 iOS 照片和视频浏览器，具有网格视图、导航栏标题和多选功能。
 * :orange: [RKSwipeCards](https://github.com/cwRichardKim/RKSwipeCards) ⭐️2.2k - 基于手势的照片显示，左滑删除，右滑喜欢，你懂的！
+* [PixelKit](https://github.com/heestand-xyz/PixelKit) ⭐️744 - 适用于 iOS、macOS 和 tvOS 的实时图形。
 
 
 
@@ -565,6 +591,7 @@
 * :orange: [CoreImageShop](https://github.com/rFlex/CoreImageShop) ⭐️418 - Mac 应用程序，让你创建一个 Core Image Filter 并轻松生成底层 Objective-C 代码。
 * :orange: [CLImageEditor](https://github.com/yackle/CLImageEditor) ⭐️2.2k - 超强的图片编辑库，快速帮你实现旋转，防缩，滤镜等等一系列麻烦的事情。
 * [MarkingMen](https://github.com/FlexMonkey/MarkingMen) ⭐️217 - 允许用户使用一个手势来浏览和选择菜单层次，该手势在屏幕上显示为一个连续的标记。
+
 
 
 ### 图片编解码&图片压缩
@@ -644,6 +671,7 @@
 * [swiftScan](https://github.com/MxABC/swiftScan) ⭐️1.4k - iOS 二维码、条形码 Swift 版本
 * [Portrait-without-Depth-iOS]( koooootake/Portrait-without-Depth-iOS) ⭐️171 - 实现单摄人像模式。
 * [CameraManager](https://github.com/imaginary-cloud/CameraManager) ⭐️1.2k - 相机管理封装类库，提供所有你需要的配置，以在你的应用程序中创建自定义相机视图。
+* [SwiftyCam](https://github.com/Awalz/SwiftyCam) ⭐️1.9k - 一个用 Swift 编写的，受 Snapchat 启发的 iOS 相机框架。
 
 
 
@@ -673,6 +701,7 @@
 ## 蓝牙
 
 * [RxBluetoothKit](https://github.com/Polidea/RxBluetoothKit) ⭐️1.3k - 基于 RxSwift 框架的蓝牙库。
+* :orange: [SmartDeviceLink-iOS](https://github.com/smartdevicelink/sdl_ios) ⭐️ 158 - 一组标准协议和消息，可将智能手机上的应用程序连接到车载主机。
 
 
 
@@ -706,6 +735,7 @@
 * :heart: [InjectionIII](https://github.com/johnno1962/InjectionIII) ⭐️2.8k - 支持 OC、Swift 以及 Swift 和 OC 混编项目的 UI 热重载工具，采取在模拟器 (真机不支持) 注入方式实现 UI 热重载，修改完 UI 直接 cmd+s，不用重新编译运行就能看到 UI 效果，堪称神器。 目前已经更新支持 Xcode13 和 iOS15。
 * [SwiftTweaks](https://github.com/Khan/SwiftTweaks) ⭐️1.3k - 调整你的iOS应用，而不需要重新编译。
 * [TweaKit](https://github.com/Cokile/TweaKit) ⭐️3 - 类似于 SwiftTweaks, 另一个用于调整参数和特征标记的库。
+* [GodEye](https://github.com/zixun/GodEye) ⭐️3.7k - 基于 Swift 的一行代码自动显示 Log、Crash、Network、ANR、Leak、CPU、RAM、FPS、NetFlow、Folder 等。
 
 
 
@@ -880,6 +910,7 @@
 
 * [Satin](https://github.com/Hi-Rez/Satin) ⭐️329 - 基于 Metal API 实现的一个 3D 引擎
 * [Harbeth](https://github.com/yangKJ/Harbeth) ⭐️79 - 图形处理和滤镜制作
+* [BBMetalImage](https://github.com/Silence-GitHub/BBMetalImage) ⭐️795 - 用于基于 Metal 的 GPU 加速图像/视频处理的高性能 Swift 库。
 
 
 
