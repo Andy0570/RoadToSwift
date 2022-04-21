@@ -38,10 +38,10 @@ extension UIImage {
         let filter = CIFilter(name: filter.rawValue)
         let inputImage = CIImage(image: self)
         filter?.setValue(inputImage, forKey: "inputImage")
-        guard let finalImage = filter?.outputImage else {
+        guard let outputImage = filter?.outputImage else {
             return nil
         }
-        guard let cgImage = CIContext().createCGImage(finalImage, from: finalImage.extent) else {
+        guard let cgImage = CIContext().createCGImage(outputImage, from: outputImage.extent) else {
             return nil
         }
         return UIImage(cgImage: cgImage)
