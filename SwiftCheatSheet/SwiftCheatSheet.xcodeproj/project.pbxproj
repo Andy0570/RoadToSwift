@@ -19,6 +19,13 @@
 		222B3FD227E061F1009C7322 /* GrowingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B3FD027E061F1009C7322 /* GrowingCell.swift */; };
 		222B3FD327E061F1009C7322 /* GrowingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 222B3FD127E061F1009C7322 /* GrowingCell.xib */; };
 		222B3FD527E06200009C7322 /* GrowingCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B3FD427E06200009C7322 /* GrowingCellViewController.swift */; };
+		222D14772810017200F70EDC /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D14752810017200F70EDC /* CustomViewController.swift */; };
+		222D14782810017200F70EDC /* CustomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 222D14762810017200F70EDC /* CustomViewController.xib */; };
+		222D147E2810028E00F70EDC /* DifferentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D147C2810028E00F70EDC /* DifferentViewController.swift */; };
+		222D147F2810028E00F70EDC /* DifferentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 222D147D2810028E00F70EDC /* DifferentViewController.xib */; };
+		222D14812810049300F70EDC /* MyFirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D14802810049300F70EDC /* MyFirstView.swift */; };
+		222D1483281004E700F70EDC /* MyFirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 222D1482281004E700F70EDC /* MyFirstView.xib */; };
+		222D1485281008D300F70EDC /* MySecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222D1484281008D300F70EDC /* MySecondView.swift */; };
 		2231431727FB2CE00006B59E /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2231431527FB2CE00006B59E /* PickerViewController.swift */; };
 		2231431827FB2CE00006B59E /* PickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2231431627FB2CE00006B59E /* PickerViewController.xib */; };
 		2235454727F4633D000F7ACD /* CameraControlsViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2235454627F4633D000F7ACD /* CameraControlsViewControllerProtocol.swift */; };
@@ -208,6 +215,13 @@
 		222B3FD027E061F1009C7322 /* GrowingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowingCell.swift; sourceTree = "<group>"; };
 		222B3FD127E061F1009C7322 /* GrowingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GrowingCell.xib; sourceTree = "<group>"; };
 		222B3FD427E06200009C7322 /* GrowingCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowingCellViewController.swift; sourceTree = "<group>"; };
+		222D14752810017200F70EDC /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
+		222D14762810017200F70EDC /* CustomViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomViewController.xib; sourceTree = "<group>"; };
+		222D147C2810028E00F70EDC /* DifferentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferentViewController.swift; sourceTree = "<group>"; };
+		222D147D2810028E00F70EDC /* DifferentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DifferentViewController.xib; sourceTree = "<group>"; };
+		222D14802810049300F70EDC /* MyFirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFirstView.swift; sourceTree = "<group>"; };
+		222D1482281004E700F70EDC /* MyFirstView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyFirstView.xib; sourceTree = "<group>"; };
+		222D1484281008D300F70EDC /* MySecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySecondView.swift; sourceTree = "<group>"; };
 		2231431527FB2CE00006B59E /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		2231431627FB2CE00006B59E /* PickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PickerViewController.xib; sourceTree = "<group>"; };
 		2235454627F4633D000F7ACD /* CameraControlsViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraControlsViewControllerProtocol.swift; sourceTree = "<group>"; };
@@ -432,6 +446,44 @@
 				222B3FD127E061F1009C7322 /* GrowingCell.xib */,
 			);
 			path = GrowingCellTextView;
+			sourceTree = "<group>";
+		};
+		222D1474281000FE00F70EDC /* 在 Swift 中创建 UIView 的不同方式 */ = {
+			isa = PBXGroup;
+			children = (
+				222D147C2810028E00F70EDC /* DifferentViewController.swift */,
+				222D147D2810028E00F70EDC /* DifferentViewController.xib */,
+				222D147B2810021200F70EDC /* CustomViewProgramatically */,
+				222D147A2810020900F70EDC /* CustomViewWithNib */,
+				222D1479281001E900F70EDC /* CustomVC */,
+			);
+			path = "在 Swift 中创建 UIView 的不同方式";
+			sourceTree = "<group>";
+		};
+		222D1479281001E900F70EDC /* CustomVC */ = {
+			isa = PBXGroup;
+			children = (
+				222D14752810017200F70EDC /* CustomViewController.swift */,
+				222D14762810017200F70EDC /* CustomViewController.xib */,
+			);
+			path = CustomVC;
+			sourceTree = "<group>";
+		};
+		222D147A2810020900F70EDC /* CustomViewWithNib */ = {
+			isa = PBXGroup;
+			children = (
+				222D14802810049300F70EDC /* MyFirstView.swift */,
+				222D1482281004E700F70EDC /* MyFirstView.xib */,
+			);
+			path = CustomViewWithNib;
+			sourceTree = "<group>";
+		};
+		222D147B2810021200F70EDC /* CustomViewProgramatically */ = {
+			isa = PBXGroup;
+			children = (
+				222D1484281008D300F70EDC /* MySecondView.swift */,
+			);
+			path = CustomViewProgramatically;
 			sourceTree = "<group>";
 		};
 		2231431427FB2CBE0006B59E /* Cubica */ = {
@@ -1077,6 +1129,7 @@
 		22D2233427BCEB89000EAD0F /* SwiftCheatSheet */ = {
 			isa = PBXGroup;
 			children = (
+				222D1474281000FE00F70EDC /* 在 Swift 中创建 UIView 的不同方式 */,
 				227944942807BF6600BFDADA /* 原生实现二维码 */,
 				22CBBD4A27F2DBAC0014475E /* AVFoundation */,
 				22CBBD4C27F2E5150014475E /* 开源框架 */,
@@ -1430,12 +1483,15 @@
 				22FF1B5827C89FE4007214EB /* UserCell.xib in Resources */,
 				227944982807BFAF00BFDADA /* BarCodeGenerateController.xib in Resources */,
 				22BF2E3E27BF87CD009027E3 /* GameViewController.xib in Resources */,
+				222D147F2810028E00F70EDC /* DifferentViewController.xib in Resources */,
+				222D14782810017200F70EDC /* CustomViewController.xib in Resources */,
 				22AC911827DF46D5007260E6 /* auteurs.json in Resources */,
 				221C58EF27F8894D00E5D855 /* PlayVideoViewController.xib in Resources */,
 				227E7EBC27E083B7009D5E45 /* CustomTableViewCell.xib in Resources */,
 				2240754927FB60390050BEF6 /* PlayerViewController.xib in Resources */,
 				2231431827FB2CE00006B59E /* PickerViewController.xib in Resources */,
 				227E7EB527E0824F009D5E45 /* MultipleSelectionViewController.xib in Resources */,
+				222D1483281004E700F70EDC /* MyFirstView.xib in Resources */,
 				227E7EC327E09345009D5E45 /* AttributedStringViewController.xib in Resources */,
 				224EB7D427F0604F008A35DF /* GradientViewController.xib in Resources */,
 				22D2233D27BCEB89000EAD0F /* Main.storyboard in Resources */,
@@ -1539,6 +1595,7 @@
 				221C58F227F8895D00E5D855 /* RecordVideoViewController.swift in Sources */,
 				229AC7DE27D5E4DD001D81D2 /* PhotoListViewController.swift in Sources */,
 				22A7C75927C8AE5100196326 /* ActionViewModel.swift in Sources */,
+				222D147E2810028E00F70EDC /* DifferentViewController.swift in Sources */,
 				22569EB327E328B2009B18A3 /* BirdSoundTableViewCell.swift in Sources */,
 				22FF1B5B27C89FF2007214EB /* ImageCell.swift in Sources */,
 				22A7C75527C8AD3900196326 /* UserViewModel.swift in Sources */,
@@ -1629,6 +1686,7 @@
 				221C58EA27F87FF000E5D855 /* VideoNinjaViewController.swift in Sources */,
 				22E3481727E84F7E00369602 /* ModeratorRequest.swift in Sources */,
 				2246DD2127C4BB48006A3AC1 /* IconCollectionViewCell.swift in Sources */,
+				222D1485281008D300F70EDC /* MySecondView.swift in Sources */,
 				226218A427EE21CD0052634A /* Array+IndexPath.swift in Sources */,
 				22A7C75227C8AC0100196326 /* Comment.swift in Sources */,
 				22CBBD5327F2FD8F0014475E /* CameraController.swift in Sources */,
@@ -1638,6 +1696,7 @@
 				22E3482627E85BB500369602 /* ModeratorTableViewCell.swift in Sources */,
 				22AC912427DF9ED1007260E6 /* AuteurTableViewCell.swift in Sources */,
 				225F202527C33642008FCC29 /* Scorer.swift in Sources */,
+				222D14772810017200F70EDC /* CustomViewController.swift in Sources */,
 				22E3482D27E8643E00369602 /* ModeratorsListViewController.swift in Sources */,
 				22569EAE27E3237C009B18A3 /* ServiceResponse.swift in Sources */,
 				2246DD1727C49402006A3AC1 /* CollaspibleCollectionViewController.swift in Sources */,
@@ -1652,6 +1711,7 @@
 				22BF2E2427BE48CF009027E3 /* UITableViewCellExtensions.swift in Sources */,
 				22DBC8E627CB632F00E14468 /* MenuButton.swift in Sources */,
 				22BF2E4B27BFA3F8009027E3 /* TurnController.swift in Sources */,
+				222D14812810049300F70EDC /* MyFirstView.swift in Sources */,
 				22EE32C627D08E1300A9A66F /* VFLViewController.swift in Sources */,
 				222B3FD227E061F1009C7322 /* GrowingCell.swift in Sources */,
 				22A7C75727C8AE2400196326 /* ImageViewModel.swift in Sources */,

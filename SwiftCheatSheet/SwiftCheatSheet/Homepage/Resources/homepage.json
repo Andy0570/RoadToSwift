@@ -143,6 +143,11 @@
         "title": "UITextField 字符计数器",
         "description": "-",
         "className": "DRHTextFieldViewController"
+    }, {
+        "image": "image",
+        "title": "在 Swift 中创建 UIView 的不同方式",
+        "description": "分别演示 XIB 方式和代码方式创建自定义 UIView",
+        "className": "DifferentViewController"
     }]
 }, {
     "title": "Foundation 框架",
