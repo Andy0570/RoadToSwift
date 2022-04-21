@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BOb-oA-Bhm">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Core Image Fun-->
+        <scene sceneID="L1K-4L-15f">
+            <objects>
+                <viewController id="tcB-8I-IdY" customClass="ViewController" customModule="CoreImageFun" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tVF-VM-PxG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="tGM-ES-qvI">
+                                <rect key="frame" x="16" y="108" width="343" height="213"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tGM-ES-qvI" secondAttribute="height" multiplier="343:213" id="w5M-WD-Ef2"/>
+                                </constraints>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="AL8-WQ-CZD">
+                                <rect key="frame" x="22" y="361" width="331" height="31"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="tcB-8I-IdY" eventType="valueChanged" id="f6Z-Rr-c8l"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fiB-cd-sKz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AL8-WQ-CZD" firstAttribute="centerX" secondItem="tVF-VM-PxG" secondAttribute="centerX" id="5mn-Y2-YjD"/>
+                            <constraint firstItem="tGM-ES-qvI" firstAttribute="centerX" secondItem="tVF-VM-PxG" secondAttribute="centerX" id="II1-1g-G7e"/>
+                            <constraint firstItem="tGM-ES-qvI" firstAttribute="top" secondItem="fiB-cd-sKz" secondAttribute="top" constant="20" id="UUk-YY-aGb"/>
+                            <constraint firstItem="tGM-ES-qvI" firstAttribute="leading" secondItem="tVF-VM-PxG" secondAttribute="leading" constant="16" id="WsL-9N-GR3"/>
+                            <constraint firstItem="AL8-WQ-CZD" firstAttribute="leading" secondItem="fiB-cd-sKz" secondAttribute="leading" constant="24" id="Y2h-wn-AeR"/>
+                            <constraint firstItem="AL8-WQ-CZD" firstAttribute="top" secondItem="tGM-ES-qvI" secondAttribute="bottom" constant="40" id="uR0-kO-anF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Core Image Fun" id="HQF-Fr-P6c">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="igV-ES-3Qp">
+                            <connections>
+                                <action selector="loadPhoto" destination="tcB-8I-IdY" id="gwm-YO-tBn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="tGM-ES-qvI" id="1Gb-iG-3Zy"/>
+                        <outlet property="slider" destination="AL8-WQ-CZD" id="THo-da-gcD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v6I-u6-9aI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1036" y="201.72413793103451"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6I2-pM-7oc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BOb-oA-Bhm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OGG-rt-MHJ">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tcB-8I-IdY" kind="relationship" relationship="rootViewController" id="duZ-JN-VIW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bbq-rV-ypp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93.599999999999994" y="201.72413793103451"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="image" width="320" height="213"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
