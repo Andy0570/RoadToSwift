@@ -1,0 +1,54 @@
+{
+  "request_time": "2021-02-06 08:33:33 +0000",
+  "lines": {
+    "bakerloo": {
+      "friendly_name": "Bakerloo",
+      "status": "Good Service"
+    },
+    "central": {
+      "friendly_name": "Central",
+      "status": "Good Service"
+    },
+    "circle": {
+      "friendly_name": "Circle",
+      "status": "Good Service"
+    },
+    "district": {
+      "friendly_name": "District",
+      "status": "Good Service"
+    },
+    "hammersmith": {
+      "friendly_name": "Hammersmith & City",
+      "status": "Good Service"
+    },
+    "jubilee": {
+      "friendly_name": "Jubilee",
+      "status": "Part Closure"
+    },
+    "metropolitan": {
+      "friendly_name": "Metropolitan",
+      "status": "Part Closure"
+    },
+    "northern": {
+      "friendly_name": "Northern",
+      "status": "Part Closure"
+    },
+    "piccadilly": {
+      "friendly_name": "Piccadilly",
+      "status": "Good Service"
+    },
+    "victoria": {
+      "friendly_name": "Victoria",
+      "status": "Good Service"
+    },
+    "waterlooandcity": {
+      "friendly_name": "Waterloo & City",
+      "status": "Planned Closure"
+    },
+    "dlr": {
+      "friendly_name": "DLR",
+      "status": "Part Closure"
+    }
+  },
+  "status_refresh_time": "2021-02-06 08:32:08 +0000"
+}
