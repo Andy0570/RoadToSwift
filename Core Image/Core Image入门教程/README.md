@@ -8,15 +8,35 @@
 
 Core Image 框架中一些重要的类：
 
-* **CIContext**: `CIContext` 完成 Core Image 中的所有处理。这有点像 Core Graphics context 或 OpenGL context。
-* **CIImage**: 此类保存图像数据。一个 `UIImage`、一个 image file 或 pixel data 都可以创建它。
-* **CIFilter**: `CIFilter` 类有一个字典。这定义了它所代表的特定过滤器的属性。过滤器的示例包括活力（vibrancy）、颜色反转、裁剪等等。
+#### CIContext
+
+`CIContext` 完成 Core Image 中的所有处理。这有点像 Core Graphics context 或 OpenGL context。
+
+它渲染过滤器的处理结果。例如，`CIContext` 有助于从 `CIImage` 对象创建 Quartz 2D 图像。
+
+
+
+#### CIImage
+
+此类保存图像数据。一个 `UIImage`、一个 image file 或 pixel data 都可以创建它。
+
+它表示已准备好进行处理或由 Core Image 过滤器生成的图像。 `CIImage` 对象包含所有图像的数据，但实际上并不是图像。这就像一个包含制作菜肴的所有成分的食谱，但不是菜肴本身。
+
+
+
+#### CIFilter
+
+`CIFilter` 类有一个字典。这定义了它所代表的特定过滤器的属性。过滤器的示例包括活力（vibrancy）、颜色反转、裁剪等等。
+
+获取一个或多个图像，通过应用转换处理每个图像并生成一个 `CIImage` 作为其输出。您可以链接多个过滤器并创建有趣的效果。 `CIFilters` 的对象是可变的并且不是线程安全的。
 
 
 
 > `CIFilter` API 在 macOS 上有 160 多个过滤器，其中大部分在 iOS 上也可用。现在也可以创建自定义过滤器。
 >
 > 要查看任何可用的过滤器或属性，请查看[文档](https://developer.apple.com/library/archive/documentation/GraphicsImaging/Reference/CoreImageFilterReference/index.html)。
+
+
 
 
 
