@@ -14,7 +14,7 @@
 
 
 
-## 概述
+## Overview
 
 > Swift is a general-purpose programming language built using a modern approach to safety, performance, and software design patterns.
 > 
@@ -48,7 +48,7 @@ Swift 非常容易学习。Swift 代码被简化并且更像英语，这使得�
 
 
 
-## 官方文档
+## Official Documents
 
 * [Swift.org](https://swift.org/) - Swift 官网
 * [GitHub: Apple/Swift](https://github.com/apple/swift) ⭐️57.8k - Swift 编程语言
@@ -61,7 +61,7 @@ Swift 非常容易学习。Swift 代码被简化并且更像英语，这使得�
 
 
 
-## 视频&教程
+## Videos & Tutorials
 
 * [Standford University: CS193p - Developing Apps for iOS](https://cs193p.sites.stanford.edu/)，斯坦福大学 2020 年春季版课程 CS193p（使用 SwiftUI 开发 iOS 应用程序）、[B站视频版](https://www.bilibili.com/video/BV14z4y1d7b4)
 * [Stanford 公开课 CS193p - Developing Apps for iOS 2020 春季学期字幕翻译](https://github.com/Apollonyan/CS193p-Developing-Apps-for-iOS-Spring-2020) 
@@ -81,7 +81,7 @@ Swift 非常容易学习。Swift 代码被简化并且更像英语，这使得�
 
 
 
-## Swift 网站
+## Swift Websites
 
 
 * [Jameson Quave's blog](http://jamesonquave.com/blog/category/swift/) - Tips for everyday work with Swift.
@@ -97,7 +97,7 @@ Swift 非常容易学习。Swift 代码被简化并且更像英语，这使得�
 
 
 
-## Swift 书籍
+## Swift Books
 
 * [iOS Programming The Big Nerd Ranch Guide, 7th Edition](https://mega.nz/file/JOo20AQJ#fokX1urccP-Qc_30BDChUW8EEQWlynr7IfpoQuks5lc)，英文原版电子书，**更新至 Xcode 11、Swift 5、iOS 13**。
 * [The Swift Programming Language](https://itunes.apple.com/us/book/the-swift-programming-language/id881256329?mt=11)
@@ -118,7 +118,7 @@ Swift 非常容易学习。Swift 代码被简化并且更像英语，这使得�
 
 
 
-## 编码规范&最佳实践
+## Swift Style Guide & Best Practices
 
 * :heart: [raywenderlich/swift-style-guide](https://github.com/raywenderlich/swift-style-guide) ⭐️11.8k - Ray Wenderlich 官方 Swift 代码风格指南。[中文版](https://github.com/SketchK/swift-style-guide-by-raywenderlich-in-chinese)
 * [airbnb/swift](https://github.com/airbnb/swift) ⭐️1.4k
@@ -132,14 +132,14 @@ Swift 非常容易学习。Swift 代码被简化并且更像英语，这使得�
 
 
 
-## 设计模式
+## Design Patterns
 
 * :heart: [Design Patterns implemented in Swift 5.0](https://github.com/ochococo/Design-Patterns-In-Swift) ⭐️13.1k
 * [Trip-to-iOS-Design-Patterns](https://github.com/skyming/Trip-to-iOS-Design-Patterns)
 
 
 
-## Swift 版本更新内容
+## Swift New Features
 
 * [Swift 编程语言:文档修订历史 @cnswift.org](https://www.cnswift.org/document-revision-history)
 * [详解 WWDC 20 SwiftUI 的重大改变及核心优势](https://www.infoq.cn/article/vYYtkGTqkWDJtEYrg0aP?utm_source=related_read_bottom&utm_medium=article)
@@ -170,7 +170,7 @@ Swift 非常容易学习。Swift 代码被简化并且更像英语，这使得�
 
 
 
-## 其他资源
+## Other Resources
 
 * [一些使用 Swift 的 iOS 教程 @GitHub](https://github.com/yrq110/some-ios-tutorials-with-swift-cn)
 * [Using Swift with Cocoa and Objective-C 中文手册](https://github.com/CocoaChina-editors/Welcome-to-Swift/blob/master/UsingSwiftwithCocoaandObjective-C%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C.md)
@@ -189,7 +189,7 @@ Swift 非常容易学习。Swift 代码被简化并且更像英语，这使得�
 
 
 
-## 统计信息
+## Repobeats analytics
 
 ![Alt](https://repobeats.axiom.co/api/embed/b67753c5af6b867e0ebdc78ee30cf3cafb00e52c.svg "Repobeats analytics image")
 
@@ -199,6 +199,6 @@ Swift 非常容易学习。Swift 代码被简化并且更像英语，这使得�
 [![Stargazers over time](https://starchart.cc/Andy0570/RoadToSwift.svg)](https://starchart.cc/Andy0570/RoadToSwift)
 
 
-## 使用许可
+## License
 
-本项目基于 [MIT](https://opensource.org/licenses/MIT) 许可协议，详情请参见 [LICENSE](./LICENSE)。
+Road-To-swift is distributed under the MIT license. [See LICENSE](./LICENSE) for details.
