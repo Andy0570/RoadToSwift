@@ -100,6 +100,7 @@ internal enum Asset {
     internal static let sky = ImageAsset(name: "sky")
     internal static let toxic = ImageAsset(name: "toxic")
     internal static let seIcon = ImageAsset(name: "se-icon")
+    internal static let kanagawa = ImageAsset(name: "kanagawa")
     internal static let rwdevconBg = ImageAsset(name: "rwdevcon-bg")
   }
   internal enum Colors {

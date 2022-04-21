@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "The Great Wave Off Kanagawa - The Starry Night Poster by S Martin.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

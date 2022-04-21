@@ -156,6 +156,9 @@
 		22D9330C27D5A55900D1B0B4 /* DRHTextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22D9330A27D5A55900D1B0B4 /* DRHTextFieldViewController.xib */; };
 		22DBC8E327CB631000E14468 /* MenuButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DBC8E227CB631000E14468 /* MenuButtonViewController.swift */; };
 		22DBC8E627CB632F00E14468 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DBC8E527CB632F00E14468 /* MenuButton.swift */; };
+		22DF13902810E78900482E5F /* ProgramaticallyCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DF138E2810E78900482E5F /* ProgramaticallyCreateViewController.swift */; };
+		22DF13912810E78900482E5F /* ProgramaticallyCreateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22DF138F2810E78900482E5F /* ProgramaticallyCreateViewController.xib */; };
+		22DF13932810E7A800482E5F /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DF13922810E7A800482E5F /* CustomView.swift */; };
 		22E3480927E8490600369602 /* AlertDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E3480827E8490600369602 /* AlertDisplayer.swift */; };
 		22E3480B27E849D300369602 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E3480A27E849D300369602 /* Double+Extensions.swift */; };
 		22E3480D27E84ACB00369602 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E3480C27E84ACB00369602 /* String+Extensions.swift */; };
@@ -356,6 +359,9 @@
 		22D9330A27D5A55900D1B0B4 /* DRHTextFieldViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DRHTextFieldViewController.xib; sourceTree = "<group>"; };
 		22DBC8E227CB631000E14468 /* MenuButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtonViewController.swift; sourceTree = "<group>"; };
 		22DBC8E527CB632F00E14468 /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
+		22DF138E2810E78900482E5F /* ProgramaticallyCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramaticallyCreateViewController.swift; sourceTree = "<group>"; };
+		22DF138F2810E78900482E5F /* ProgramaticallyCreateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgramaticallyCreateViewController.xib; sourceTree = "<group>"; };
+		22DF13922810E7A800482E5F /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		22E3480827E8490600369602 /* AlertDisplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDisplayer.swift; sourceTree = "<group>"; };
 		22E3480A27E849D300369602 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		22E3480C27E84ACB00369602 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
@@ -1129,6 +1135,7 @@
 		22D2233427BCEB89000EAD0F /* SwiftCheatSheet */ = {
 			isa = PBXGroup;
 			children = (
+				22DF138D2810E72200482E5F /* 代码方式创建自定义 UIView */,
 				222D1474281000FE00F70EDC /* 在 Swift 中创建 UIView 的不同方式 */,
 				227944942807BF6600BFDADA /* 原生实现二维码 */,
 				22CBBD4A27F2DBAC0014475E /* AVFoundation */,
@@ -1217,6 +1224,16 @@
 				22DBC8E527CB632F00E14468 /* MenuButton.swift */,
 			);
 			path = UIButton;
+			sourceTree = "<group>";
+		};
+		22DF138D2810E72200482E5F /* 代码方式创建自定义 UIView */ = {
+			isa = PBXGroup;
+			children = (
+				22DF138E2810E78900482E5F /* ProgramaticallyCreateViewController.swift */,
+				22DF138F2810E78900482E5F /* ProgramaticallyCreateViewController.xib */,
+				22DF13922810E7A800482E5F /* CustomView.swift */,
+			);
+			path = "代码方式创建自定义 UIView";
 			sourceTree = "<group>";
 		};
 		22E347FC27E8473A00369602 /* ModeratorsExplorer */ = {
@@ -1497,6 +1514,7 @@
 				22D2233D27BCEB89000EAD0F /* Main.storyboard in Resources */,
 				22D2235527BCFFE3000EAD0F /* homepage.json in Resources */,
 				221C58F327F8895D00E5D855 /* RecordVideoViewController.xib in Resources */,
+				22DF13912810E78900482E5F /* ProgramaticallyCreateViewController.xib in Resources */,
 				22E3482B27E8642A00369602 /* ModeratorsSearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1583,6 +1601,7 @@
 				22BF2E1A27BE1E8D009027E3 /* AlbumView.swift in Sources */,
 				225A1C1327C4C00000F8215F /* IconCollectionViewController.swift in Sources */,
 				226218B527EE252F0052634A /* UIView+Extensions.swift in Sources */,
+				22DF13932810E7A800482E5F /* CustomView.swift in Sources */,
 				22AC912127DF981E007260E6 /* AuteurDetailViewController.swift in Sources */,
 				224EB7D327F0604F008A35DF /* GradientViewController.swift in Sources */,
 				22569EBA27E33929009B18A3 /* LoadingView.swift in Sources */,
@@ -1603,6 +1622,7 @@
 				227E7EC527E093AF009D5E45 /* AttributedString.swift in Sources */,
 				229AC7DA27D5E4C2001D81D2 /* PhotoDetailViewController.swift in Sources */,
 				22AC912827DF9EE3007260E6 /* FilmTableViewCell.swift in Sources */,
+				22DF13902810E78900482E5F /* ProgramaticallyCreateViewController.swift in Sources */,
 				22D2234D27BCF20A000EAD0F /* Item.swift in Sources */,
 				22569EB827E33918009B18A3 /* EmptyView.swift in Sources */,
 				22569EB027E3247C009B18A3 /* RecordingsResult.swift in Sources */,
