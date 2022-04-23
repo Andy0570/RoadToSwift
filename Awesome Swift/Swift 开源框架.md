@@ -271,10 +271,13 @@
 
 ### UITextField、UITextView
 
-* [HTYTextField](https://github.com/hanton/HTYTextField) - A UITextField with bouncy placeholder in Swift.
-* [NextGrowingTextView](https://github.com/muukii/NextGrowingTextView) ⭐️1.5k
-* [InputBarAccessoryView](https://github.com/nathantannar4/InputBarAccessoryView) ⭐️880 - 一个简单和容易定制的输入框辅助视图（InputAccessoryView），用于实现具有自动完成和附件功能的强大的输入框。
+* [HTYTextField](https://github.com/hanton/HTYTextField) ⭐️315 - 带有弹性占位符的 `UITextField`.
+* [NextGrowingTextView](https://github.com/muukii/NextGrowingTextView) ⭐️1.8k - 针对 iOS 8 及更高版本优化的 "growing textviews".
+* [InputBarAccessoryView](https://github.com/nathantannar4/InputBarAccessoryView) ⭐️902 - 一个简单和容易定制的输入框辅助视图（InputAccessoryView），用于实现具有自动完成和附件功能的强大的输入框。
 * [FloatLabelFields](https://github.com/FahimF/FloatLabelFields) ⭐️1.2k - 浮动标签输入效果类。
+* [KMPlaceholderTextView](https://github.com/MoZhouqi/KMPlaceholderTextView) ⭐️777
+* :orange: [UITextView-Placeholder](https://github.com/devxoul/UITextView-Placeholder) ⭐️1.4k - 为 `UITextView` 添加占位符功能
+* :orange: [SZTextView](https://github.com/glaszig/SZTextView) ⭐️675 - A drop-in `UITextView` replacement which gives you: a placeholder.
 
 
 
@@ -615,6 +618,7 @@
 * [AudioKit](https://github.com/audiokit/AudioKit) ⭐️9.1k - AudioKit 是适用于 iOS、macOS（包括 Catalyst）和 tvOS 的音频合成、处理和分析平台。
 * [MusicKit](https://github.com/benzguo/MusicKit) - Framework and DSL for creating, analyzing, and transforming music in Swift
 * [WebMIDIKit](https://github.com/adamnemecek/WebMIDIKit/) - Simplest MIDI Swift framework
+* [VoiceMemos](https://github.com/MoZhouqi/VoiceMemos) ⭐️323 - Voice Memos 是一款适用于 iPhone 和 iPad 的录音机应用程序，涵盖了用 Swift 编写的 iOS 8 中引入的一些新技术和 API。
 * :orange: [EZAudio](https://github.com/syedhali/EZAudio) ⭐️4.8k - 一个 iOS 和 OSX 上简单易用的音频框架，根据音量实时显示波形图，基于 Core Audio，适合实时低延迟音频处理，非常直观。
 * :orange: [DOUAudioStreamer](https://github.com/douban/DOUAudioStreamer) ⭐️2.8k - 豆瓣开源的基于 Core Audio 的流式音频播放器。
 
