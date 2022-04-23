@@ -84,6 +84,11 @@
         "title": "IGListKit_建模和绑定",
         "description": "",
         "className": "ModelAndBingViewController"
+    },{
+        "image": "image",
+        "title": "IGListKit_Example",
+        "description": "",
+        "className": "SuperHeroViewController"
     }]
 }, {
     "title": "自动布局",
