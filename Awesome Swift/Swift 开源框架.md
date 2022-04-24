@@ -53,7 +53,7 @@
 
 
 ### WebSocket
-* [Starscream](https://github.com/daltoniam/starscream) ⭐️7.2k - WebSocket 标准（RFC 6455）客户端库 Swift 实现。
+* [Starscream](https://github.com/daltoniam/starscream) ⭐️7.2k - WebSocket 标准（RFC 6455）客户端库 Swift 实现，依照 `Websocket` 协议，支持 `ws`、`wss` 传输协议，并提供各种消息发送接收方法。
 * [SwiftWebSocket](https://github.com/tidwall/SwiftWebSocket) ⭐️1.5k - Fast Websockets in Swift for iOS and OSX.
 * [SocketRocket](https://github.com/facebookarchive/SocketRocket) ⭐️9.3k - A conforming Objective-C WebSocket client library.
 
@@ -629,10 +629,9 @@
 * [episode-code-samples](https://github.com/pointfreeco/episode-code-samples) ⭐️622 - 专注于学习 Swift 编程的视频聊天系列。
 * [ARVideoKit](https://github.com/AFathi/ARVideoKit) ⭐️1.4k - 捕捉和记录 ARKit 视频、照片、实时照片和 GIFs。
 * [youtube-iOS](https://github.com/aslanyanhaik/youtube-iOS) ⭐️2.4k - 像 YouTube iOS 应用一样在右侧观看缩略视频，用 Swift 3 编写。
-* [BMPlayer](https://github.com/BrikerMan/BMPlayer) ⭐️1.8k
-* :orange: [ZFPlayer](https://github.com/renzifeng/ZFPlayer) ⭐️6.7k - 基于 AVPlayer，支持竖屏、横屏（横屏可锁定屏幕方向），上下滑动调节音量、屏幕亮度，左右滑动调节播放进度 [iOS 视频播放器之 ZFPlayer 剖析](https://www.jianshu.com/p/5566077bb25f)
+* [BMPlayer](https://github.com/BrikerMan/BMPlayer) ⭐️1.8k - 基于 `AVPlayer` 的 iOS 视频播放器，支持横竖屏。支持调整音量、亮度和滑动搜索，支持字幕。
+* :orange: [ZFPlayer](https://github.com/renzifeng/ZFPlayer) ⭐️6.7k - 基于 `AVPlayer`，支持竖屏、横屏（横屏可锁定屏幕方向），上下滑动调节音量、屏幕亮度，左右滑动调节播放进度 [iOS 视频播放器之 ZFPlayer 剖析](https://www.jianshu.com/p/5566077bb25f)
 * :orange: [ijkplayer](https://github.com/bilibili/ijkplayer) ⭐️30k - Bilibili 开源的视频播放器
-* [FFmpeg](https://github.com/FFmpeg/FFmpeg) ⭐️28.2k - FFmpeg 是一个库和工具的集合，用于处理多媒体内容，如音频、视频、字幕和相关元数据。
 * :orange: [kxmovie](https://github.com/kolyvan/kxmovie) ⭐️2.8k - 基于 ffmpeg 的影片播放器。
 * [VLC](http://www.videolan.org/) - VLC 是一款自由、开源的跨平台多媒体播放器及框架，可播放大多数多媒体文件，以及 DVD、音频 CD、VCD 及各类流媒体协议。
 * :orange: [StreamingKit](https://github.com/tumtumtum/StreamingKit) ⭐️2.3k - 流媒体音乐播放器
@@ -641,7 +640,11 @@
 * :orange: [LLSimpleCamera](https://github.com/omergul/LLSimpleCamera) ⭐️1.2k - 一个简单的、可定制的相机控制--iOS的视频记录器。
 * :orange: [ICGVideoTrimmer](https://github.com/itsmeichigo/ICGVideoTrimmer) ⭐️630 - 模仿 Instagram，用于快速修剪视频。
 * [Learning-AV-Foundation-Swift](https://github.com/tapharmonic/Learning-AV-Foundation-Swift) ⭐️201 - 学习 AVFoundation 框架。
+* [FFmpeg](https://github.com/FFmpeg/FFmpeg) ⭐️28.2k - FFmpeg 是一个库和工具的集合，用于处理多媒体内容，如音频、视频、字幕和相关元数据。
 * [ffmpeg-kit](https://github.com/tanersener/ffmpeg-kit) ⭐️1.2k - 用于应用程序的 FFmpeg 套件。支持 Android、Flutter、iOS、macOS、React Native 和 tvOS。取代 MobileFFmpeg、flutter_ffmpeg 和 react-native-ffmpeg。
+* [mobileplayer-iOS](https://github.com/sahin/mobileplayer-ios) ⭐️2.9k - 一款功能强大且完全可定制的 iOS 媒体播放器。
+
+
 
 
 
