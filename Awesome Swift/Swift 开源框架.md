@@ -1,7 +1,5 @@
-[TOC]
-
-
 # Awesome Swift
+
 精心编写的 Swift 框架、库和软件集合。
 
 
@@ -15,7 +13,12 @@
 
 
 
+
+[TOC]
+
 ## 网络
+
+[回到顶部](#Awesome Swift)
 
 ### HTTP
 
@@ -45,6 +48,7 @@
 * [Taylor](https://github.com/izqui/Taylor) ⭐️931 - A lightweight library for writing HTTP web servers with Swift
 * [NetworkObjects](https://github.com/colemancda/NetworkObjects) ⭐️266 - Swift 后端/服务器框架（纯 Swift，支持 Linux）。
 
+
 ### Socket
 
 * [socket.io-client-swift](https://github.com/socketio/socket.io-client-swift) ⭐️4.6k
@@ -53,12 +57,14 @@
 
 
 ### WebSocket
+
 * [Starscream](https://github.com/daltoniam/starscream) ⭐️7.2k - WebSocket 标准（RFC 6455）客户端库 Swift 实现，依照 `Websocket` 协议，支持 `ws`、`wss` 传输协议，并提供各种消息发送接收方法。
 * [SwiftWebSocket](https://github.com/tidwall/SwiftWebSocket) ⭐️1.5k - Fast Websockets in Swift for iOS and OSX.
 * [SocketRocket](https://github.com/facebookarchive/SocketRocket) ⭐️9.3k - A conforming Objective-C WebSocket client library.
 
 
 ### OAuth
+
 * [OAuthSwift](https://github.com/dongri/OAuthSwift) ⭐️2.9k - 国外主流网站 OAuth 授权类库。 
 * [AppAuth-iOS](https://github.com/openid/AppAuth-iOS) ⭐️1.3k - iOS and macOS SDK for communicating with OAuth 2.0 and OpenID Connect providers.
 
@@ -73,6 +79,8 @@
 
 
 ## JSON/XML 操作
+
+[回到顶部](#Awesome Swift)
 
 * :heart: [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) ⭐️21.2k - GitHub 上最为开发者认可的 JSON 解析类。
 * [Alamofire-SwiftyJSON](https://github.com/SwiftyJSON/Alamofire-SwiftyJSON) ⭐️1.4k - Alamofire extension for serialize NSData to SwiftyJSON.
@@ -101,6 +109,8 @@
 
 ## 自动布局
 
+[回到顶部](#Awesome Swift)
+
 * :heart: [SnapKit](https://github.com/SnapKit/SnapKit) ⭐️ 18k - Auto Layout 自动布局框架
 * :heart: [EasyAnchor](https://github.com/onmyway133/EasyAnchor) ⭐️445 - 声明式、可扩展、强大的自动布局
 * [PureLayout](https://github.com/PureLayout/PureLayout) - ⭐️7.6k - iOS&OS X 自动布局的终极 API ー令人印象深刻的简单、强大、兼容 Objective-C 和 Swift。
@@ -112,6 +122,8 @@
 
 
 ## 框架
+
+[回到顶部](#Awesome Swift)
 
 * :heart: [SwiftGen](https://github.com/SwiftGen/SwiftGen) ⭐️7.8k - SwiftGen 是一个为项目中的所有资源自动生成 Swift 代码的工具，允许您以类型安全的方式访问它们。
 * :heart: [Reusable](https://github.com/AliSoftware/Reusable) ⭐️2.7k - 一个 Swift mixin，可以轻松地以类型安全的方式重用视图。
@@ -127,9 +139,9 @@
 
 
 
-  
-
 ## UI
+
+[回到顶部](#Awesome Swift)
 
 * :heart: [SkeletonView](https://github.com/Juanpe/SkeletonView) ⭐️11.1k - 骨架屏，一种优雅的方式来向用户展示正在发生的事情并让他们准备好他们正在等待的内容。
 * [Material](https://github.com/CosmicMind/Material) ⭐️11.9k - 用于创建漂亮应用程序的 UI/UX 框架。
@@ -138,8 +150,6 @@
 * [Cupcake](https://github.com/nerdycat/Cupcake) ⭐️285 - An easy way to create and layout UI components for iOS.
 * [EZSwipeController](https://github.com/goktugyil/EZSwipeController) ⭐️849 -  UIPageViewController like Snapchat/Tinder/iOS Main Pages
 * [Swifty](https://github.com/RyukieSama/Swifty) ⭐️41 - ScreenShield 是极其轻量化的截屏防护方案，任何需要被保护的 View 作为子视图放入保护的视图中即可达到截屏时隐藏内容的效果。
-
-
 
 
 ### Alert、Toast、
@@ -347,6 +357,8 @@
 
 ## Extensions
 
+[回到顶部](#Awesome Swift)
+
 * :heart: [SwifterSwift/SwifterSwift](https://github.com/SwifterSwift/SwifterSwift) ⭐️ 10.4k — 包含 500 多个原生 Swift 扩展的便捷集合，以提高你的工作效率。
 * [HandySwift](https://github.com/Flinesoft/HandySwift) ⭐️415 - 由于某些原因 Swift 标准库仍未收入且很好用的功能特性扩展。
 * [Then](https://github.com/devxoul/Then) ⭐️3.7k - 为 Swift 初始化方法提供甜蜜的语法糖
@@ -372,6 +384,8 @@
 
 ## 正则表达式
 
+[回到顶部](#Awesome Swift)
+
 * [PhoneNumberKit](https://github.com/marmelroy/PhoneNumberKit) ⭐️4.3k - 一个用于解析、格式化和验证国际电话号码的 Swift 框架。
 * [Regex](https://github.com/kean/Regex) ⭐️171 - Open source regex engine
 * [Sweep](https://github.com/JohnSundell/Sweep) ⭐️508 - 比正则表达式简单很多的子字符串扫描和匹配。
@@ -382,12 +396,16 @@
 
 ## 键盘
 
+[回到顶部](#Awesome Swift)
+
 * [KeyboardLayoutGuide](https://github.com/freshOS/KeyboardLayoutGuide) ⭐️1.1k - KeyboardLayoutGuide, back from when it didn't exist.
 * [Ribbon](https://github.com/chriszielinski/Ribbon) ⭐️283 - 🎀 适用于 iOS 和 macOS 的简单跨平台工具栏/自定义 input accessory view。
 
 
 
 ## 字符串
+
+[回到顶部](#Awesome Swift)
 
 * [BonMot](https://github.com/Rightpoint/BonMot) ⭐️3.2k - Beautiful, easy attributed strings in Swift
 * [SwiftRichString](https://github.com/malcommac/SwiftRichString) ⭐️2.8k - Elegant Attributed String composition in Swift。
@@ -400,6 +418,8 @@
 
 
 ## 颜色&深色模式&主题
+
+[回到顶部](#Awesome Swift)
 
 * [SwiftTheme](https://github.com/wxxsw/SwiftTheme) ⭐️2.2k - Powerful theme/skin manager for iOS 8+ 主题/换肤，暗色模式
 * [FluentDarkModeKit](https://github.com/microsoft/FluentDarkModeKit) ⭐️1.6k - 微软开源的 Dark Mode 框架
@@ -415,6 +435,8 @@
 
 ## 时间
 
+[回到顶部](#Awesome Swift)
+
 * [SwiftDate](https://github.com/malcommac/SwiftDate) ⭐️6.8k - 用于在 Swift 中解析、验证、操作、比较和显示日期、时间和时区的工具包。
 * [DateTools](https://github.com/MatthewYork/DateTools) ⭐️7.2k - Dates and times made easy in iOS。
 * [Time](https://github.com/davedelong/time) ⭐️2k - Building a better date/time library for Swift
@@ -426,6 +448,9 @@
 
 
 ## 动画
+
+[回到顶部](#Awesome Swift)
+
 * [Spring](https://github.com/MengTo/Spring) ⭐️14k
 * [EasyAnimation](https://github.com/icanzilb/EasyAnimation) ⭐️2.9k
 * [lottie-ios](https://github.com/airbnb/lottie-ios) ⭐️22.2k - Airbnb 开源的一个动画渲染库，用于渲染播放 After Effects 矢量动画。
@@ -456,6 +481,8 @@
 
 ## 文件
 
+[回到顶部](#Awesome Swift)
+
 * [SwiftyUserDefaults](https://github.com/sunshinejr/SwiftyUserDefaults) ⭐️4.6k - 轻量级数据存储类 `NSUserDefaults` 的扩展，它使类型数据访问和存储更为便捷、直观。
 * [FileKit](https://github.com/nvzqz/FileKit/) ⭐️2.2k - Swift 中简单易懂的文件管理。
 * [FileProvider](https://github.com/amosavian/FileProvider) ⭐️802 - 提供了一套完整、实用，接口统一的本地及远程文件管理封装器实现 Local, iCloud and Remote (WebDAV/FTP/Dropbox/OneDrive）
@@ -469,6 +496,8 @@
 
 ## 缓存
 
+[回到顶部](#Awesome Swift)
+
 * [HanekeSwift](https://github.com/Haneke/HanekeSwift) ⭐️5.1k - A lightweight generic cache for iOS written in Swift with extra love for images.
 * [Carlos](https://github.com/WeltN24/Carlos) ⭐️614 - A simple but flexible cache for iOS and WatchOS 2 apps, written in Swift.
 * [Cache](https://github.com/hyperoslo/Cache) ⭐️2.5k - 多类型数据混合缓存库。
@@ -477,6 +506,8 @@
 
 
 ## Keychain 钥匙串
+
+[回到顶部](#Awesome Swift)
 
 * :heart: [cocoapods-keys](https://github.com/orta/cocoapods-keys) ⭐️1.5k - 一款 CocoaPods 插件，将你要加密的信息储存在钥匙串中，而不是硬编码在项目代码里。
 * [KeychainAccess](https://github.com/kishikawakatsumi/KeychainAccess) ⭐️6.8k - 适用于 iOS 和 OS X 的 Keychain 的简单 Swift 包装器。使在 Swift 中使用 Keychain API 易于接受和使用。
@@ -487,7 +518,7 @@
 
 ## 数据库
 
-*使用 Swift 语言实现的数据库*
+*使用 Swift 语言实现的数据库* [回到顶部](#Awesome Swift)
 
 * [Realm](https://github.com/realm/realm-swift) ⭐️14.8k - 志向代替 Core Data 和 SQLite 的移动端数据库。
 * [IceCream](https://github.com/caiyue1993/IceCream) ⭐️1.7k - 用 CloudKit 同步 Realm 数据库工具库。
@@ -502,11 +533,9 @@
 
 
 
-
-
 ## Events
 
-*用于一对多（one-to-many）通信的框架*
+*用于一对多（one-to-many）通信的框架* [回到顶部](#Awesome Swift)
 
 * [Caravel](https://github.com/coshx/caravel) - A Swift event bus for UIWebView and JS
 * [EmitterKit](https://github.com/aleclarson/emitter-kit) - An elegant event framework built in Swift
@@ -514,7 +543,8 @@
 * [Kugel](https://github.com/TakeScoop/Kugel) - A glorious Swift wrapper around NSNotificationCenter
 
 ## Queue
-*用于处理事件队列和任务队列的框架。*
+
+*用于处理事件队列和任务队列的框架。* [回到顶部](#Awesome Swift)
 
 * [TaskQueue](https://github.com/icanzilb/TaskQueue) ⭐️673 - A Task Queue Class developed in Swift。
 * [Dispatcher](https://github.com/aleclarson/dispatcher) ⭐️110 - Queues, timers, and task groups in Swift
@@ -542,7 +572,8 @@
 
 
 ## 数据结构&算法
-*用于生成安全随机数、加密数据和扫描漏洞的框架*
+
+*用于生成安全随机数、加密数据和扫描漏洞的框架* [回到顶部](#Awesome Swift)
 
 * :heart: [raywenderlich/swift-algorithm-club](https://github.com/raywenderlich/swift-algorithm-club) ⭐️25.8k - Swift 算法俱乐部，最全、最活跃，最具学习价值的算法库。
 * [apple/swift-algorithms](https://github.com/apple/swift-algorithms) ⭐️3.7k - Apple 官方维护的一套 Swift 中常用的序列和集合算法。
@@ -561,6 +592,8 @@
 
 ## 数学计算
 
+[回到顶部](#Awesome Swift)
+
 * [Surge](https://github.com/Jounce/Surge) ⭐️5k - 使用 Accelerate 框架，为矩阵数学、数字信号处理和图像处理提供高性能函数。
 * [Euler](https://github.com/mattt/Euler) ⭐️1.1k - 直观、简洁的数学表达式 `∛27÷3+∑[3,1,2]`。
 * :warning: [Euler](https://github.com/mattt/Euler) ⭐️1.1k - 用于数学符号的 Swift 自定义运算符
@@ -568,9 +601,9 @@
 
 
 
+## 图片加载&显示
 
-
-## 图片加载&图片显示
+[回到顶部](#Awesome Swift)
 
 * :heart:[Kingfisher](https://github.com/onevcat/Kingfisher) ⭐️19.7k - 轻量级、纯 Swift 实现的网络图片下载和缓存框架。
 * :heart:[blurhash](https://github.com/woltapp/blurhash) ⭐️10.2k - 图像占位符的非常紧凑的表示。
@@ -588,9 +621,7 @@
 * [PixelKit](https://github.com/heestand-xyz/PixelKit) ⭐️744 - 适用于 iOS、macOS 和 tvOS 的实时图形。
 
 
-
-
-### 图片编辑&图片滤镜
+### 图片编辑&滤镜
 
 * [Toucan](https://github.com/gavinbunney/Toucan) ⭐️2.4k - 图片变换及处理框架，简化了图片制作，支持调整大小、裁剪和风格化你的图像。
 * [PixelSDK](https://github.com/GottaYotta/PixelSDK) ⭐️333 - 适用于 iPhone / iPad 应用的现代照片和视频编辑器。一个完全可定制的图像和视频编辑 Swift 框架。
@@ -603,8 +634,7 @@
 * [MarkingMen](https://github.com/FlexMonkey/MarkingMen) ⭐️217 - 允许用户使用一个手势来浏览和选择菜单层次，该手势在屏幕上显示为一个连续的标记。
 
 
-
-### 图片编解码&图片压缩
+### 图片编码&解码&压缩
 
 * [KingfisherWebP](https://github.com/Yeatse/KingfisherWebP) ⭐️227 - Kingfisher 扩展，处理 WebP 格式图片。
 * [png](https://github.com/kelvin13/png) ⭐️259 - 纯 Swift 代码解析 PNG 格式，返回图像原始像素数据和尺寸。
@@ -622,6 +652,8 @@
 
 ## 音频
 
+[回到顶部](#Awesome Swift)
+
 * [AudioKit](https://github.com/audiokit/AudioKit) ⭐️9.1k - AudioKit 是适用于 iOS、macOS（包括 Catalyst）和 tvOS 的音频合成、处理和分析平台。
 * [MusicKit](https://github.com/benzguo/MusicKit) - Framework and DSL for creating, analyzing, and transforming music in Swift
 * [WebMIDIKit](https://github.com/adamnemecek/WebMIDIKit/) - Simplest MIDI Swift framework
@@ -633,10 +665,13 @@
 
 ## 视频
 
+[回到顶部](#Awesome Swift)
+
 * [episode-code-samples](https://github.com/pointfreeco/episode-code-samples) ⭐️622 - 专注于学习 Swift 编程的视频聊天系列。
 * [ARVideoKit](https://github.com/AFathi/ARVideoKit) ⭐️1.4k - 捕捉和记录 ARKit 视频、照片、实时照片和 GIFs。
 * [youtube-iOS](https://github.com/aslanyanhaik/youtube-iOS) ⭐️2.4k - 像 YouTube iOS 应用一样在右侧观看缩略视频，用 Swift 3 编写。
-* [BMPlayer](https://github.com/BrikerMan/BMPlayer) ⭐️1.8k - 基于 `AVPlayer` 的 iOS 视频播放器，支持横竖屏。支持调整音量、亮度和滑动搜索，支持字幕。
+* [BMPlayer](https://github.com/BrikerMan/BMPlayer) ⭐️1.8k - 该项目参考 OC 版的 ZFPlayer 开源项目，基于 `AVPlayer` 并使用 Swift 实现的 iOS 视频播放器，支持横竖屏。支持调整音量、亮度和滑动搜索，支持字幕。
+* :heart: [Cabbage](https://github.com/VideoFlint/Cabbage) ⭐️1.3k - 建立在 `AVFoundation` 之上的视频组件框架。它易于使用且易于扩展。
 * :orange: [ZFPlayer](https://github.com/renzifeng/ZFPlayer) ⭐️6.7k - 基于 `AVPlayer`，支持竖屏、横屏（横屏可锁定屏幕方向），上下滑动调节音量、屏幕亮度，左右滑动调节播放进度 [iOS 视频播放器之 ZFPlayer 剖析](https://www.jianshu.com/p/5566077bb25f)
 * :orange: [ijkplayer](https://github.com/bilibili/ijkplayer) ⭐️30k - Bilibili 开源的视频播放器
 * :orange: [kxmovie](https://github.com/kolyvan/kxmovie) ⭐️2.8k - 基于 ffmpeg 的影片播放器。
@@ -653,15 +688,17 @@
 
 
 
-
-
 ## 通知中心
+
+[回到顶部](#Awesome Swift)
 
 * [LNRSimpleNotifications](https://github.com/LISNR/LNRSimpleNotifications) - Simple Swift in-app notifications
 * [Notie](https://github.com/thii/Notie) - In-app notification in Swift, with customizable buttons and input text field.
 
 
 ## KVO
+
+[回到顶部](#Awesome Swift)
 
 * :heart: [Bond](https://github.com/DeclarativeHub/Bond) ⭐️4.2k - A Swift binding framework
 * [Observable-Swift](https://github.com/slazyk/Observable-Swift) ⭐️1.2k - KVO for Swift - Value Observing and Events
@@ -671,6 +708,8 @@
 
 ## 定位&地图
 
+[回到顶部](#Awesome Swift)
+
 * [LocationManager](https://github.com/jimmyjose-dev/LocationManager) ⭐️721 - 地理位置管理封装库。
 * [MapManager](https://github.com/jimmyjose-dev/MapManager) ⭐️411 - 地图及路径管理封装库。
 * [SwiftLocation](https://github.com/malcommac/SwiftLocation) ⭐️3k - 高效便捷的位置追踪、IP定位、Gecoder、地理围栏、自动完成、Beacon Ranging、广播器和访问监控。
@@ -678,6 +717,8 @@
 
 
 ## 相机&相册&二维码
+
+[回到顶部](#Awesome Swift)
 
 * [ImagePicker](https://github.com/hyperoslo/ImagePicker) ⭐️4.6k - A nicely designed and super easy to use ImagePicker.
 * [HXPHPicker](https://github.com/SilenceLove/HXPHPicker) ⭐️138 - 照片/视频选择器-支持选择 LivePhoto，GIF，在线下载 iCloud 资源，以及编辑照片/视频。
@@ -689,8 +730,9 @@
 
 
 
-
 ## 即时通讯 IM
+
+[回到顶部](#Awesome Swift)
 
 * [MessageKit](https://github.com/MessageKit/MessageKit) ⭐️5k
 * [aurora-imui](https://github.com/jpush/aurora-imui) ⭐️5.5k - 通用 IM 聊天 UI 组件，已经同时支持 Android/iOS/RN
@@ -704,6 +746,8 @@
 
 ## WebKit/HTML
 
+[回到顶部](#Awesome Swift)
+
 * [Marionette](https://github.com/LinusU/Marionette) ⭐️377 - 通过一套更高级的 API 控制 WKWebView。对标 Google Chrome 的 Puppeteer 库。
 * [googleprojectzero/fuzzilli](https://github.com/googleprojectzero/fuzzilli)  ⭐️1.4k - Javascript 解释器引擎，技术融合的一大进步。
 * [Vaux](https://github.com/dokun1/Vaux) - 一个允许你使用 Swift 生成 HTML 的库。
@@ -714,6 +758,8 @@
 
 ## 蓝牙
 
+[回到顶部](#Awesome Swift)
+
 * [RxBluetoothKit](https://github.com/Polidea/RxBluetoothKit) ⭐️1.3k - 基于 RxSwift 框架的蓝牙库。
 * :orange: [SmartDeviceLink-iOS](https://github.com/smartdevicelink/sdl_ios) ⭐️ 158 - 一组标准协议和消息，可将智能手机上的应用程序连接到车载主机。
 
@@ -721,7 +767,7 @@
 
 ## Misc
 
-*与Swift相关的各种项目*
+*与Swift相关的各种项目* [回到顶部](#Awesome Swift)
 
 * [acli](https://github.com/eugenpirogoff/acli) - commandline tool to download curated libraries from github (very beta)
 * [Compass](https://github.com/hyperoslo/Compass) - Compass helps you setup a central navigation system for your application.
@@ -737,6 +783,8 @@
 
 
 ## 调试
+
+[回到顶部](#Awesome Swift)
 
 * [chisel](https://github.com/facebook/chisel) ⭐️8.7k - FaceBook 开源的 LLDB 调试命令集合。
 * [FLEX](https://github.com/FLEXTool/FLEX) ⭐️12.6k - Flipboard 开源的一系列在应用中调试的工具集。
@@ -767,7 +815,7 @@
 
 ## 测试
 
-*用于测试代码和生成测试数据的框架。*
+*用于测试代码和生成测试数据的框架。* [回到顶部](#Awesome Swift)
 
 * :heart: [appium](https://github.com/appium/appium) ⭐️14.3k - iOS，Android 和 Windows 应用程序的**自动化 UI 测试框架**。
 * [Quick](https://github.com/Quick/Quick) ⭐️9k - 一个行为驱动（BDD, Behavior-driven development）的针对 Swift 和 Objective-C 的单元测试框架。
@@ -791,6 +839,8 @@
 
 ## 持续集成&持续交付
 
+[回到顶部](#Awesome Swift)
+
 * [fastlane](https://fastlane.tools/)
 * [Travis CI](https://travis-ci.org/)
 * Jenkins
@@ -800,6 +850,8 @@
 
 
 ## 逆向与安全
+
+[回到顶部](#Awesome Swift)
 
 * [ipatool](https://github.com/majd/ipatool) ⭐️1.6k - 允许从 iOS App Store 搜索和下载应用包（ipa 文件）的命令行工具。
 * [stefanesser/dumpdecrypted](https://github.com/stefanesser/dumpdecrypted) ⭐️2.7k - 将加密的 iPhone 应用程序中的解密的 mach-o 文件从内存转储到磁盘。
@@ -822,7 +874,8 @@
 
 
 ## 日志
-*用于生成和处理日志文件的框架*
+
+*用于生成和处理日志文件的框架* [回到顶部](#Awesome Swift)
 
 * [sentry](https://github.com/getsentry/sentry) ⭐️30.5k - Sentry 是跨平台的应用程序监控，专注于错误报告。
 * [apple/swift-metrics](https://github.com/apple/swift-metrics) ⭐️470 - 苹果开源并逐步固定 Metrics API，以方便用户对应用的运行及资源状态进行有效跟踪。
@@ -840,7 +893,7 @@
 
 ## 文档
 
-*生成文档文件的框架*
+*生成文档文件的框架* [回到顶部](#Awesome Swift)
 
 * [realm/jazzy](https://github.com/realm/jazzy) ⭐️7.1k - 为 Swift 或 Objective-C 生成文档的命令行工具
 * [swift-docc-plugin](https://github.com/apple/swift-docc-plugin) ⭐️122 - Swift-DocC 插件是一个 Swift Package Manager 命令行插件，支持为 SwiftPM 库和可执行文件构建文档。
@@ -849,7 +902,7 @@
 
 ## 命令行
 
-*用于创建命令行应用程序的框架*
+*用于创建命令行应用程序的框架* [回到顶部](#Awesome Swift)
 
 * [CommandCougar](https://github.com/surfandneptune/CommandCougar) - An elegant pure Swift library for building command line applications.
 * [SwiftInfo](https://github.com/rockbruno/SwiftInfo) ⭐️1k - 命令行工具跟踪检查 iOS 应用版本代码级变化。
@@ -860,8 +913,10 @@
 
 ## 代码格式化
 
+[回到顶部](#Awesome Swift)
+
+* :heart: [SwiftLint](https://github.com/realm/SwiftLint) ⭐️15.6k
 * [SwiftFormat](https://github.com/nicklockwood/SwiftFormat) ⭐️5.3k
-* [realm/SwiftLint](https://github.com/realm/SwiftLint) ⭐️15.6k
 * [prettier](https://github.com/prettier/prettier) ⭐️41.6k
 * [SwiftRewriter](https://github.com/inamiy/SwiftRewriter) ⭐️814 - 基于 SwiftSyntax 针对代码进行自动格式化（其中包括基于代码规范进行简单的代码优化）。
 
@@ -869,7 +924,7 @@
 
 ## 函数式响应式编程
 
-何为响应式编程？面向数据流和变化传播（时间和事件非代码顺序）的编程范式。
+何为响应式编程？面向数据流和变化传播（时间和事件非代码顺序）的编程范式。[回到顶部](#Awesome Swift)
 
 * :heart: [RxSwift](https://github.com/ReactiveX/RxSwift) ⭐️21.7k - 简单、高效，活泼的函数响应式编程框架。
 * [ReactiveSwift](https://github.com/ReactiveCocoa/ReactiveSwift) ⭐️2.8k - ReactiveSwift 提供了可组合的、声明式的和灵活的基本类型。
@@ -884,6 +939,8 @@
 
 ## Combine
 
+[回到顶部](#Awesome Swift)
+
 > Apple 在 iOS 13 中发布了 [Combine](https://developer.apple.com/documentation/combine) 框架。Combine 是 Apple 的**函数式响应式编程框架**，与 RxSwift 类似，但也有很大不同。Combine 的主要卖点是它是一个第一方框架。这意味着它将由 Apple 维护，并随着 Apple 操作系统的发布而更新，这既有好处，也有缺点。不可否认，Apple 对 Combine 押下重注，值得一看。特别是因为 SwiftUI 大量使用了 Combine。
 
 * [CombineSwiftPlayground](https://github.com/AvdLee/CombineSwiftPlayground)
@@ -894,6 +951,8 @@
 
 
 ## CoreML
+
+[回到顶部](#Awesome Swift)
 
 * [CoreMLHelpers](https://github.com/hollance/CoreMLHelpers) ⭐️962 - 一些输入/输出类型转换和扩展，以便于更容易地去使用 CoreML。
 * [Inception-Core](https://github.com/hollance/Inception-Core) ⭐️92 - Inception-v3 运行在 CoreML 框架内
@@ -907,6 +966,8 @@
 
 ## ARKit
 
+[回到顶部](#Awesome Swift)
+
 * [Awesome-ARKit](https://github.com/olucurious/Awesome-ARKit) ⭐️7.2k - AR 开源项目汇总列表。
 * [ARKit2.0-Prototype](https://github.com/SimformSolutionsPvtLtd/ARKit2.0-Prototype) ⭐️242 - AR 2.0 实现效果原型演示
 * [ARKit-CoreLocation](https://github.com/ProjectDent/ARKit-CoreLocation) ⭐️5.1k - AR 与 GPS 精确数据的结合，开始一次导航之旅。非常重要的实验性项目，未来开发前景可期。
@@ -916,12 +977,16 @@
 
 ## TensorFlow
 
+[回到顶部](#Awesome Swift)
+
 * [tensorflow/swift](https://github.com/tensorflow/swift) ⭐️6k - 集成使用 TensorFlow 专用版 Swift。
 * [swix](https://github.com/scottsievert/swix) - Swift 矩阵与机器学习库.
 
 
 
 ## Metal
+
+[回到顶部](#Awesome Swift)
 
 * [Satin](https://github.com/Hi-Rez/Satin) ⭐️329 - 基于 Metal API 实现的一个 3D 引擎
 * [Harbeth](https://github.com/yangKJ/Harbeth) ⭐️79 - 图形处理和滤镜制作
@@ -931,11 +996,15 @@
 
 ## Xcode 扩展
 
+[回到顶部](#Awesome Swift)
+
 * [XcodeCommentWrapper](https://github.com/SteveBarnegren/XcodeCommentWrapper) - 用于包装注释的 Xcode 扩展
 
 
 
-# 其他 Awesome 列表
+## 其他 Awesome 列表
+
+[回到顶部](#Awesome Swift)
 
 * [awesome-ios](https://github.com/vsouza/awesome-ios) ⭐️39.1k - vsouza 发起维护的 iOS 资源列表，内容包括：框架、组件、测试、Apple Store、SDK、XCode、网站、书籍等。
 * [awesome-swift@matteocrippa](https://github.com/matteocrippa/awesome-swift) ⭐️21.3k - Swift 库和资源的集合。
