@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CommonCrypto
 import CoreLocation
 
 extension String {
@@ -33,15 +34,15 @@ extension String {
          showError("Can't calculate MD5 of your password")
          return
      }
+
+     Reference: <https://stackoverflow.com/questions/32163848/how-can-i-convert-a-string-to-an-md5-hash-in-ios-using-swift>
      */
     var md5: String? {
-        let length = Int(CC_MD5_DIGEST_LENGTH)
-
-        guard let data = self.data(using: .utf8) else {
+        guard let data = data(using: .utf8) else {
             return nil
         }
 
-
+        let length = Int(CC_MD5_DIGEST_LENGTH)
         let hash = data.withUnsafeBytes { (bytes: UnsafeRawBufferPointer) -> [UInt8] in
             var hash: [UInt8] = [UInt8](repeating: 0, count: Int(CC_MD5_DIGEST_LENGTH))
             CC_MD5(bytes.baseAddress, CC_LONG(data.count), &hash)

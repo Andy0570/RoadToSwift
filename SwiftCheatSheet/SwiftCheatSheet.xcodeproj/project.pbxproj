@@ -164,6 +164,9 @@
 		22D2234D27BCF20A000EAD0F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D2234C27BCF20A000EAD0F /* Item.swift */; };
 		22D2235127BCF689000EAD0F /* ArrayDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D2235027BCF689000EAD0F /* ArrayDataSource.swift */; };
 		22D2235527BCFFE3000EAD0F /* homepage.json in Resources */ = {isa = PBXBuildFile; fileRef = 22D2235427BCFFE3000EAD0F /* homepage.json */; };
+		22D73FFB2817C086008295E0 /* HoverTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D73FFA2817C086008295E0 /* HoverTextView.swift */; };
+		22D73FFD2817C2A0008295E0 /* KMPlaceholderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D73FFC2817C2A0008295E0 /* KMPlaceholderTextView.swift */; };
+		22D73FFF2817C352008295E0 /* Notification+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D73FFE2817C352008295E0 /* Notification+Extensions.swift */; };
 		22D9330627D59F7C00D1B0B4 /* DRHTextFieldWithCharacterCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D9330527D59F7C00D1B0B4 /* DRHTextFieldWithCharacterCount.swift */; };
 		22D9330B27D5A55900D1B0B4 /* DRHTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D9330927D5A55900D1B0B4 /* DRHTextFieldViewController.swift */; };
 		22D9330C27D5A55900D1B0B4 /* DRHTextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22D9330A27D5A55900D1B0B4 /* DRHTextFieldViewController.xib */; };
@@ -380,6 +383,9 @@
 		22D2234C27BCF20A000EAD0F /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		22D2235027BCF689000EAD0F /* ArrayDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayDataSource.swift; sourceTree = "<group>"; };
 		22D2235427BCFFE3000EAD0F /* homepage.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = homepage.json; sourceTree = "<group>"; };
+		22D73FFA2817C086008295E0 /* HoverTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoverTextView.swift; sourceTree = "<group>"; };
+		22D73FFC2817C2A0008295E0 /* KMPlaceholderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KMPlaceholderTextView.swift; sourceTree = "<group>"; };
+		22D73FFE2817C352008295E0 /* Notification+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extensions.swift"; sourceTree = "<group>"; };
 		22D9330527D59F7C00D1B0B4 /* DRHTextFieldWithCharacterCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRHTextFieldWithCharacterCount.swift; sourceTree = "<group>"; };
 		22D9330927D5A55900D1B0B4 /* DRHTextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRHTextFieldViewController.swift; sourceTree = "<group>"; };
 		22D9330A27D5A55900D1B0B4 /* DRHTextFieldViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DRHTextFieldViewController.xib; sourceTree = "<group>"; };
@@ -670,6 +676,7 @@
 				226218A327EE21CD0052634A /* Array+IndexPath.swift */,
 				2262188F27EDB9F60052634A /* UserDefaults+Extensions.swift */,
 				226218BA27EE26BC0052634A /* Numeric+Extensions.swift */,
+				22D73FFE2817C352008295E0 /* Notification+Extensions.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -1284,6 +1291,8 @@
 				22D9330527D59F7C00D1B0B4 /* DRHTextFieldWithCharacterCount.swift */,
 				22D9330927D5A55900D1B0B4 /* DRHTextFieldViewController.swift */,
 				22D9330A27D5A55900D1B0B4 /* DRHTextFieldViewController.xib */,
+				22D73FFA2817C086008295E0 /* HoverTextView.swift */,
+				22D73FFC2817C2A0008295E0 /* KMPlaceholderTextView.swift */,
 			);
 			path = UITextField;
 			sourceTree = "<group>";
@@ -1482,11 +1491,11 @@
 			buildConfigurationList = 22D2234627BCEB8A000EAD0F /* Build configuration list for PBXNativeTarget "SwiftCheatSheet" */;
 			buildPhases = (
 				137B0D532E0EF71CE0B99A38 /* [CP] Check Pods Manifest.lock */,
+				222F9F0827E1B43E0049B48F /* Run Script */,
 				22D2232E27BCEB89000EAD0F /* Sources */,
 				22D2232F27BCEB89000EAD0F /* Frameworks */,
 				22D2233027BCEB89000EAD0F /* Resources */,
 				4645A1A0AC718E3CCCA141A9 /* [CP] Embed Pods Frameworks */,
-				222F9F0827E1B43E0049B48F /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -1775,6 +1784,7 @@
 				22BF2E3627BF750C009027E3 /* Shape.swift in Sources */,
 				22CBBD4F27F2E57B0014475E /* PermissionsViewController.swift in Sources */,
 				22E3480B27E849D300369602 /* Double+Extensions.swift in Sources */,
+				22D73FFF2817C352008295E0 /* Notification+Extensions.swift in Sources */,
 				2262189427EDCA790052634A /* UIColor+Extensions.swift in Sources */,
 				22AC911B27DF48C0007260E6 /* Film.swift in Sources */,
 				22BF2E4727BF9D1B009027E3 /* ShapeViewBuilder.swift in Sources */,
@@ -1783,6 +1793,7 @@
 				227E7EBE27E08478009D5E45 /* ViewModel.swift in Sources */,
 				221C58EA27F87FF000E5D855 /* VideoNinjaViewController.swift in Sources */,
 				22E3481727E84F7E00369602 /* ModeratorRequest.swift in Sources */,
+				22D73FFB2817C086008295E0 /* HoverTextView.swift in Sources */,
 				2246DD2127C4BB48006A3AC1 /* IconCollectionViewCell.swift in Sources */,
 				228E44BD281259D800C07C60 /* SuperHeroDataSource.swift in Sources */,
 				222D1485281008D300F70EDC /* MySecondView.swift in Sources */,
@@ -1805,6 +1816,7 @@
 				22A89B5327DB54E10091304F /* DiffableDatasourceTableView.swift in Sources */,
 				22BF2E2227BE26B9009027E3 /* PersistencyManager.swift in Sources */,
 				2246DD0927C474E9006A3AC1 /* MyCollectionViewCell.swift in Sources */,
+				22D73FFD2817C2A0008295E0 /* KMPlaceholderTextView.swift in Sources */,
 				22FF1B5F27C89FFF007214EB /* ActionCell.swift in Sources */,
 				228E44A628124BD900C07C60 /* SuperHero.swift in Sources */,
 				226218B727EE25880052634A /* UIButton+Padding.swift in Sources */,

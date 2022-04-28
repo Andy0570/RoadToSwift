@@ -77,9 +77,9 @@
 				185CB1FA23C78CE6009F7571 /* GitOnFire */,
 				185CB1F923C78CE6009F7571 /* Products */,
 			);
-			indentWidth = 2;
+			indentWidth = 4;
 			sourceTree = "<group>";
-			tabWidth = 2;
+			tabWidth = 4;
 		};
 		185CB1F923C78CE6009F7571 /* Products */ = {
 			isa = PBXGroup;

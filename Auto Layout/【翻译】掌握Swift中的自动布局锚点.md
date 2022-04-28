@@ -19,8 +19,8 @@
 
 这些是使用自动布局创建视图层次结构的基本规则：
 
-* 不要自己手动计算 frame!
-* 用 `.zero` 初始化视图的 frame
+* 不要自己手动计算 `frame`!
+* 用 `.zero` 初始化视图的 `frame`
 * 将 `translatesAutoresizingMaskIntoConstraints` 设置为 `false`
 * 使用 `addSubview` 将你的视图添加到视图层次结构中
 * 创建并激活你的布局约束 `NSLayoutConstraint.activation`
@@ -63,7 +63,7 @@ class ViewController: UIViewController {
 
 > 永恒的困境：代码还是 Interface Builder？
 
-这真的不重要，请自由选择你的道路。有时我喜欢玩玩IB，但在大多数情况下，我更喜欢用程序化的方式做事。
+这真的不重要，请自由选择你的道路。有时我喜欢玩玩 IB，但在大多数情况下，我更喜欢用程序化的方式做事。
 
 
 
@@ -122,7 +122,7 @@ testView.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 2/
 
 ### 使用安全区域布局指南
 
-有了最新的iPhone，你需要一些指南，以保证你在缺口处的安全。这就是为什么视图有`safeAreaLayoutGuide`属性的原因。你可以在呼出安全区域指南后得到所有常用的锚点。
+有了最新的 iPhone，你需要一些指南，以保证你在缺口处的安全。这就是为什么视图有 `safeAreaLayoutGuide` 属性的原因。你可以在呼出安全区域指南后得到所有常用的锚点。
 
 ```swift
 testView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
@@ -139,7 +139,7 @@ testView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAn
 
 规则：
 
-* 使用标准的`UIView`动画与 `layoutIfNeeded`
+* 使用标准的 `UIView` 动画与 `layoutIfNeeded`
 * 总是先停用约束条件
 * 严格遵守已停用的约束条件
 * 尽情享受吧!
@@ -199,9 +199,7 @@ class ViewController: UIViewController {
         if self.bottomConstraint.isActive {
             NSLayoutConstraint.deactivate([self.bottomConstraint])
             NSLayoutConstraint.activate([self.heightConstraint])
-
-        }
-        else {
+        } else {
             NSLayoutConstraint.deactivate([self.heightConstraint])
             NSLayoutConstraint.activate([self.bottomConstraint])
         }
@@ -260,7 +258,6 @@ class ViewController: UIViewController {
         ]
 
         self.activateCurrentConstraints()
-
         self.testView = testView
     }
 
@@ -269,8 +266,7 @@ class ViewController: UIViewController {
 
         if self.traitCollection.verticalSizeClass == .regular {
             NSLayoutConstraint.activate(self.regularConstraints)
-        }
-        else {
+        } else {
             NSLayoutConstraint.activate(self.compactConstraints)
         }
     }

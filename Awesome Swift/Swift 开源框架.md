@@ -89,7 +89,13 @@
 * [SwiftyJSONAccelerator](https://github.com/insanoid/SwiftyJSONAccelerator) - Generate Swift 5 model files from JSON with Codeable support.
 * :heart: [swift-protobuf](https://github.com/apple/swift-protobuf) ⭐️3.7k - Protocol Buffers 的 Swift 语言实现库。P.S. Protocol Buffers 是 Google 开源项目，主要功能是实现直接序列化结构化的对象数据，方便跨平台快速传递，开发者也可以直接修改 protobuf 中的数据。相比 XML 和 JSON，protobuf 解析更快，存储更小.
 * [Ono](https://github.com/mattt/Ono) ⭐️2.6k - 用合理的方式处理 iOS 和 macOS 的 XML 和 HTML。
-* [SafeDecoder](https://github.com/GodL/SafeDecoder) ⭐️2 - SafeDecoder 支持在 Codable 解码某个字段失败时设置默认值，并且默认值可配置。
+
+### Codable
+
+* [Codextended](https://github.com/JohnSundell/Codextended) ⭐️1.4k - 赋予 Swift 的 Codable API 类型推断能力的扩展
+* [BetterCodable](https://github.com/marksands/BetterCodable) ⭐️1.3k - 通过属性包装器更好地 Codable
+* [AnyCodable](https://github.com/Flight-School/AnyCodable) ⭐️1k - Encodable、Decodable 和 Codable 值的类型擦除包装器。
+* [SafeDecoder](https://github.com/GodL/SafeDecoder) ⭐️4 - SafeDecoder 支持在 Codable 解码某个字段失败时设置默认值，并且默认值可配置。
 
 
 
@@ -457,6 +463,7 @@
 * [PDFXKit](https://github.com/PSPDFKit/PDFXKit) ⭐️204 - 苹果 PDFKit 替代框架。
 * [Path.swift](https://github.com/mxcl/Path.swift) ⭐️890 - 功能完整的文件系统针对目录级路径的 CRUD（增删改查）。
 * [ZipArchive](https://github.com/ZipArchive/ZipArchive) ⭐️5k - ZipArchive 是一个简单的实用程序类，用于在 iOS、macOS 和 tvOS 上压缩和解压缩文件。
+* [SecurePropertyStorage](https://github.com/alexruperez/SecurePropertyStorage) ⭐️429 - 使用 Swift 属性包装器为你的属性定义安全存储。
 
 
 
@@ -788,6 +795,7 @@
 * [Travis CI](https://travis-ci.org/)
 * Jenkins
 * [IBAnimatable](https://github.com/IBAnimatable/IBAnimatable) ⭐️8.6k - 使用 IBAnimatable 为 App Store 应用程序设计和定制原型 UI、交互、导航、过渡和动画 Interface Builder。
+* [tuist](https://github.com/tuist/tuist) ⭐️1.6k - 大规模创建、维护 Xcode 项目并与之交互。
 
 
 
