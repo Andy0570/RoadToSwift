@@ -7,7 +7,7 @@
 > **注**：
 >
 > :heart: 表示推荐框架；
-> :orange: 表示该框架使用 Objective-C 语言；
+> :orange: 表示该框架使用 Objective-C 语言，不建议使用，仅供参考；
 > :warning: 表示已归档或不再维护框架；
 > :star: 表示该项目在 GitHub 上的 Star 数量，仅作参考，不保证及时更新；
 
@@ -660,6 +660,7 @@
 * [VoiceMemos](https://github.com/MoZhouqi/VoiceMemos) ⭐️323 - Voice Memos 是一款适用于 iPhone 和 iPad 的录音机应用程序，涵盖了用 Swift 编写的 iOS 8 中引入的一些新技术和 API。
 * :orange: [EZAudio](https://github.com/syedhali/EZAudio) ⭐️4.8k - 一个 iOS 和 OSX 上简单易用的音频框架，根据音量实时显示波形图，基于 Core Audio，适合实时低延迟音频处理，非常直观。
 * :orange: [DOUAudioStreamer](https://github.com/douban/DOUAudioStreamer) ⭐️2.8k - 豆瓣开源的基于 Core Audio 的流式音频播放器。
+* [VIWaveformView](https://github.com/VideoFlint/VIWaveformView) ⭐️91 - 从音频数据生成波形视图。
 
 
 
@@ -671,7 +672,7 @@
 * [ARVideoKit](https://github.com/AFathi/ARVideoKit) ⭐️1.4k - 捕捉和记录 ARKit 视频、照片、实时照片和 GIFs。
 * [youtube-iOS](https://github.com/aslanyanhaik/youtube-iOS) ⭐️2.4k - 像 YouTube iOS 应用一样在右侧观看缩略视频，用 Swift 3 编写。
 * [BMPlayer](https://github.com/BrikerMan/BMPlayer) ⭐️1.8k - 该项目参考 OC 版的 ZFPlayer 开源项目，基于 `AVPlayer` 并使用 Swift 实现的 iOS 视频播放器，支持横竖屏。支持调整音量、亮度和滑动搜索，支持字幕。
-* :heart: [Cabbage](https://github.com/VideoFlint/Cabbage) ⭐️1.3k - 建立在 `AVFoundation` 之上的视频组件框架。它易于使用且易于扩展。
+* :heart: [Cabbage](https://github.com/VideoFlint/Cabbage) ⭐️1.3k 一个基于 `AVFoundation` 实现的视频编辑框架。
 * :orange: [ZFPlayer](https://github.com/renzifeng/ZFPlayer) ⭐️6.7k - 基于 `AVPlayer`，支持竖屏、横屏（横屏可锁定屏幕方向），上下滑动调节音量、屏幕亮度，左右滑动调节播放进度 [iOS 视频播放器之 ZFPlayer 剖析](https://www.jianshu.com/p/5566077bb25f)
 * :orange: [ijkplayer](https://github.com/bilibili/ijkplayer) ⭐️30k - Bilibili 开源的视频播放器
 * :orange: [kxmovie](https://github.com/kolyvan/kxmovie) ⭐️2.8k - 基于 ffmpeg 的影片播放器。

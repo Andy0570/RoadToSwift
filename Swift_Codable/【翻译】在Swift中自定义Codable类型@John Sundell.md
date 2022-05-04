@@ -235,3 +235,56 @@ struct Video: Codable {
 你怎么看？你有什么喜欢的方法来定制 `Codable` 在 Swift 中的工作方式吗？在你的项目中使用 `Codable` 时，上面的一些技术会有用吗？让我知道，可以通过电子邮件或 Twitter。
 
 谢谢你的阅读！🚀
+
+
+
+## 附：StringRepresentable.swift
+
+```swift
+import Foundation
+
+/**
+ Reference: <https://www.swiftbysundell.com/articles/customizing-codable-types-in-swift/>
+
+ Usage:
+ private var likes: StringBacked<Int>
+ 它自身是 String 类型，但你可以通过访问它的 value 属性获取 Int 类型
+
+ var numberOfLikes: Int {
+     get { return likes.value }
+     set { likes.value = newValue }
+ }
+ */
+protocol StringRepresentable: CustomStringConvertible {
+    init?(_ string: String)
+}
+
+extension Int: StringRepresentable {}
+
+struct StringBacked<Value: StringRepresentable>: Codable {
+    var value: Value
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        let string = try container.decode(String.self)
+
+        // String to Int
+        guard let value = Value(string) else {
+            throw DecodingError.dataCorruptedError(
+                in: container,
+                debugDescription: """
+                 Failed to convert an instance of \(Value.self) from "\(string)"
+                 """
+            )
+        }
+
+        self.value = value
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.singleValueContainer()
+        try container.encode(value.description)
+    }
+}
+```
+
