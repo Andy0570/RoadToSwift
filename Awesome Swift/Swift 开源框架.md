@@ -34,6 +34,7 @@
 * [Siesta](https://bustoutsolutions.github.io/siesta/) - Ends state headaches by providing a resource-centric alternative to the familiar request-centric approach to HTTP.
 * [Reachability.Swift](https://github.com/ashleymills/Reachability.swift) ⭐️7.5k - 检测网络可达性的实用工具库。
 * [Connectivity](https://github.com/rwbutler/Connectivity) ⭐️1.5k - 基于 Reachability 的封装类库，检查当前 Wi-Fi 互联网连接性及即时状态。
+* [vapor-routing](https://github.com/pointfreeco/vapor-routing) ⭐️43 - 具有更多类型安全性和更少麻烦的双向 Vapor 路由器。
 
 
 
