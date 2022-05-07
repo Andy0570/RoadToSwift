@@ -61,6 +61,11 @@
         "title": "无限滚动的 TableView",
         "description": "",
         "className": "ModeratorsSearchViewController"
+    }, {
+        "image": "image",
+        "title": "在 cell 上同时设置圆角和阴影",
+        "description": "",
+        "className": "CornerRadiusTableViewController"
     }]
 }, {
     "title": "集合视图",

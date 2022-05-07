@@ -929,7 +929,8 @@
 
 何为响应式编程？面向数据流和变化传播（时间和事件非代码顺序）的编程范式。[回到顶部](#Awesome Swift)
 
-* :heart: [RxSwift](https://github.com/ReactiveX/RxSwift) ⭐️21.7k - 简单、高效，活泼的函数响应式编程框架。
+* :heart: [RxSwift](https://github.com/ReactiveX/RxSwift) ⭐️22.1k - 简单、高效，活泼的函数响应式编程框架。
+* [RxGesture](https://github.com/RxSwiftCommunity/RxGesture) ⭐️1.2k - 用于视图手势的 RxSwift 响应式包装器。
 * [ReactiveSwift](https://github.com/ReactiveCocoa/ReactiveSwift) ⭐️2.8k - ReactiveSwift 提供了可组合的、声明式的和灵活的基本类型。
 * [ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa) ⭐️20k - ReactiveCocoa 使用 ReactiveSwift 的基本类型来封装 Cocoa 框架的方方面面。
 * [ReactKit](https://github.com/ReactKit/ReactKit) ⭐️1.2k - Swift Reactive Programming.

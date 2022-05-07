@@ -131,6 +131,10 @@
 		22AC912527DF9ED1007260E6 /* AuteurTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22AC912327DF9ED1007260E6 /* AuteurTableViewCell.xib */; };
 		22AC912827DF9EE3007260E6 /* FilmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AC912627DF9EE3007260E6 /* FilmTableViewCell.swift */; };
 		22AC912927DF9EE3007260E6 /* FilmTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22AC912727DF9EE3007260E6 /* FilmTableViewCell.xib */; };
+		22AE41F22826E0B5009A5850 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AE41F12826E0B5009A5850 /* BaseTableViewCell.swift */; };
+		22AE41F52826E1CC009A5850 /* CornerRadiusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AE41F32826E1CC009A5850 /* CornerRadiusTableViewCell.swift */; };
+		22AE41F62826E1CC009A5850 /* CornerRadiusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22AE41F42826E1CC009A5850 /* CornerRadiusTableViewCell.xib */; };
+		22AE41F82826E41B009A5850 /* CornerRadiusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AE41F72826E41B009A5850 /* CornerRadiusTableViewController.swift */; };
 		22BF2E1427BDFE0D009027E3 /* NotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BF2E1327BDFE0D009027E3 /* NotificationExtension.swift */; };
 		22BF2E1627BDFE51009027E3 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BF2E1527BDFE51009027E3 /* HTTPClient.swift */; };
 		22BF2E1827BDFF35009027E3 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BF2E1727BDFF35009027E3 /* Album.swift */; };
@@ -348,6 +352,10 @@
 		22AC912327DF9ED1007260E6 /* AuteurTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuteurTableViewCell.xib; sourceTree = "<group>"; };
 		22AC912627DF9EE3007260E6 /* FilmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmTableViewCell.swift; sourceTree = "<group>"; };
 		22AC912727DF9EE3007260E6 /* FilmTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilmTableViewCell.xib; sourceTree = "<group>"; };
+		22AE41F12826E0B5009A5850 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		22AE41F32826E1CC009A5850 /* CornerRadiusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadiusTableViewCell.swift; sourceTree = "<group>"; };
+		22AE41F42826E1CC009A5850 /* CornerRadiusTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CornerRadiusTableViewCell.xib; sourceTree = "<group>"; };
+		22AE41F72826E41B009A5850 /* CornerRadiusTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadiusTableViewController.swift; sourceTree = "<group>"; };
 		22BF2E1327BDFE0D009027E3 /* NotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExtension.swift; sourceTree = "<group>"; };
 		22BF2E1527BDFE51009027E3 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		22BF2E1727BDFF35009027E3 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
@@ -939,6 +947,7 @@
 		22A89B4F27DB54940091304F /* UITableView */ = {
 			isa = PBXGroup;
 			children = (
+				22AE41F02826E073009A5850 /* RoundCornerAndShadow */,
 				22E347FC27E8473A00369602 /* ModeratorsExplorer */,
 				22569EA327E31F17009B18A3 /* Chirper */,
 				227E7EAD27E07F32009D5E45 /* MultipleSelection */,
@@ -1012,6 +1021,17 @@
 				22D2235427BCFFE3000EAD0F /* homepage.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		22AE41F02826E073009A5850 /* RoundCornerAndShadow */ = {
+			isa = PBXGroup;
+			children = (
+				22AE41F72826E41B009A5850 /* CornerRadiusTableViewController.swift */,
+				22AE41F12826E0B5009A5850 /* BaseTableViewCell.swift */,
+				22AE41F32826E1CC009A5850 /* CornerRadiusTableViewCell.swift */,
+				22AE41F42826E1CC009A5850 /* CornerRadiusTableViewCell.xib */,
+			);
+			path = RoundCornerAndShadow;
 			sourceTree = "<group>";
 		};
 		22BF2E0C27BDFD8B009027E3 /* 设计模式 */ = {
@@ -1570,6 +1590,7 @@
 				222B3FD327E061F1009C7322 /* GrowingCell.xib in Resources */,
 				22FF1B5C27C89FF2007214EB /* ImageCell.xib in Resources */,
 				22E3482727E85BB500369602 /* ModeratorTableViewCell.xib in Resources */,
+				22AE41F62826E1CC009A5850 /* CornerRadiusTableViewCell.xib in Resources */,
 				22569EB427E328B2009B18A3 /* BirdSoundTableViewCell.xib in Resources */,
 				2246DD2227C4BB48006A3AC1 /* IconCollectionViewCell.xib in Resources */,
 				229AC7E227D5EF93001D81D2 /* PhotoListTableViewCell.xib in Resources */,
@@ -1742,6 +1763,7 @@
 				227944AC28081E7C00BFDADA /* UIBezierPath+Extensions.swift in Sources */,
 				22DBC8E327CB631000E14468 /* MenuButtonViewController.swift in Sources */,
 				228B38F227D0614700BCF963 /* FlagViewController.swift in Sources */,
+				22AE41F52826E1CC009A5850 /* CornerRadiusTableViewCell.swift in Sources */,
 				22BF2E1627BDFE51009027E3 /* HTTPClient.swift in Sources */,
 				226218BD27EE26F40052634A /* ReuseIdentifiable.swift in Sources */,
 				22E3481D27E852B000369602 /* Result.swift in Sources */,
@@ -1755,6 +1777,7 @@
 				226218B927EE265A0052634A /* UISearchBar+Extensions.swift in Sources */,
 				22E3481927E84FC300369602 /* URLRequest.swift in Sources */,
 				22E3481B27E8521700369602 /* HTTPURLResponse.swift in Sources */,
+				22AE41F82826E41B009A5850 /* CornerRadiusTableViewController.swift in Sources */,
 				227E7EAC27E0756C009D5E45 /* CollapsExpandViewController.swift in Sources */,
 				2240754527FB5CDC0050BEF6 /* VideoEditor.swift in Sources */,
 				225F202327C332F0008FCC29 /* TurnStrategy.swift in Sources */,
@@ -1812,6 +1835,7 @@
 				22569EAE27E3237C009B18A3 /* ServiceResponse.swift in Sources */,
 				2246DD1727C49402006A3AC1 /* CollaspibleCollectionViewController.swift in Sources */,
 				228E44BF28125D0000C07C60 /* SuperHeroSectionController.swift in Sources */,
+				22AE41F22826E0B5009A5850 /* BaseTableViewCell.swift in Sources */,
 				228E44B3281253BB00C07C60 /* SuperHeroNameCell.swift in Sources */,
 				22A89B5327DB54E10091304F /* DiffableDatasourceTableView.swift in Sources */,
 				22BF2E2227BE26B9009027E3 /* PersistencyManager.swift in Sources */,
