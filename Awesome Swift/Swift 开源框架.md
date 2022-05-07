@@ -846,6 +846,7 @@
 * [fastlane](https://fastlane.tools/)
 * [Travis CI](https://travis-ci.org/)
 * Jenkins
+* [Bitrise](https://www.bitrise.io/) - 持续集成和交付 (CI/CD) 平台即服务 (PaaS)，主要专注于移动应用程序开发（iOS、Android、React Native、Flutter 等）。它是一组工具和服务，可帮助您开发和自动化软件项目。
 * [IBAnimatable](https://github.com/IBAnimatable/IBAnimatable) ⭐️8.6k - 使用 IBAnimatable 为 App Store 应用程序设计和定制原型 UI、交互、导航、过渡和动画 Interface Builder。
 * [tuist](https://github.com/tuist/tuist) ⭐️1.6k - 大规模创建、维护 Xcode 项目并与之交互。
 

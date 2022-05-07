@@ -404,9 +404,3 @@ Lines logged: 4
 
 如果你对闭包获取值的方式还有疑问，请在 Twitter 上告诉我--我是 @twostraws。
 
-
-
-
-
-
-
