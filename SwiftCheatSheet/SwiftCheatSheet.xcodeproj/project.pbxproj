@@ -16,6 +16,8 @@
 		221C58F627F8896A00E5D855 /* MergeVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221C58F427F8896A00E5D855 /* MergeVideoViewController.swift */; };
 		221C58F727F8896A00E5D855 /* MergeVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 221C58F527F8896A00E5D855 /* MergeVideoViewController.xib */; };
 		221C58F927F88E3800E5D855 /* VideoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221C58F827F88E3800E5D855 /* VideoHelper.swift */; };
+		22255F5A282BB125009FC2D2 /* BayleafLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22255F58282BB125009FC2D2 /* BayleafLoginViewController.swift */; };
+		22255F5B282BB125009FC2D2 /* BayleafLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22255F59282BB125009FC2D2 /* BayleafLoginViewController.xib */; };
 		222B3FD227E061F1009C7322 /* GrowingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B3FD027E061F1009C7322 /* GrowingCell.swift */; };
 		222B3FD327E061F1009C7322 /* GrowingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 222B3FD127E061F1009C7322 /* GrowingCell.xib */; };
 		222B3FD527E06200009C7322 /* GrowingCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B3FD427E06200009C7322 /* GrowingCellViewController.swift */; };
@@ -235,6 +237,8 @@
 		221C58F427F8896A00E5D855 /* MergeVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeVideoViewController.swift; sourceTree = "<group>"; };
 		221C58F527F8896A00E5D855 /* MergeVideoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MergeVideoViewController.xib; sourceTree = "<group>"; };
 		221C58F827F88E3800E5D855 /* VideoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoHelper.swift; sourceTree = "<group>"; };
+		22255F58282BB125009FC2D2 /* BayleafLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BayleafLoginViewController.swift; sourceTree = "<group>"; };
+		22255F59282BB125009FC2D2 /* BayleafLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BayleafLoginViewController.xib; sourceTree = "<group>"; };
 		222B3FD027E061F1009C7322 /* GrowingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowingCell.swift; sourceTree = "<group>"; };
 		222B3FD127E061F1009C7322 /* GrowingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GrowingCell.xib; sourceTree = "<group>"; };
 		222B3FD427E06200009C7322 /* GrowingCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowingCellViewController.swift; sourceTree = "<group>"; };
@@ -1313,6 +1317,8 @@
 				22D9330A27D5A55900D1B0B4 /* DRHTextFieldViewController.xib */,
 				22D73FFA2817C086008295E0 /* HoverTextView.swift */,
 				22D73FFC2817C2A0008295E0 /* KMPlaceholderTextView.swift */,
+				22255F58282BB125009FC2D2 /* BayleafLoginViewController.swift */,
+				22255F59282BB125009FC2D2 /* BayleafLoginViewController.xib */,
 			);
 			path = UITextField;
 			sourceTree = "<group>";
@@ -1606,6 +1612,7 @@
 				222D147F2810028E00F70EDC /* DifferentViewController.xib in Resources */,
 				228E44B4281253BB00C07C60 /* SuperHeroNameCell.xib in Resources */,
 				222D14782810017200F70EDC /* CustomViewController.xib in Resources */,
+				22255F5B282BB125009FC2D2 /* BayleafLoginViewController.xib in Resources */,
 				22AC911827DF46D5007260E6 /* auteurs.json in Resources */,
 				221C58EF27F8894D00E5D855 /* PlayVideoViewController.xib in Resources */,
 				227E7EBC27E083B7009D5E45 /* CustomTableViewCell.xib in Resources */,
@@ -1745,6 +1752,7 @@
 				22BF2E4427BF944C009027E3 /* ShapeFactory.swift in Sources */,
 				22BF2E1427BDFE0D009027E3 /* NotificationExtension.swift in Sources */,
 				22D9330627D59F7C00D1B0B4 /* DRHTextFieldWithCharacterCount.swift in Sources */,
+				22255F5A282BB125009FC2D2 /* BayleafLoginViewController.swift in Sources */,
 				22569EAC27E3219D009B18A3 /* Recording.swift in Sources */,
 				22E3482127E8539F00369602 /* StackExchangeClient.swift in Sources */,
 				2246199D27EAFE5B0096C856 /* GradientLabel.swift in Sources */,

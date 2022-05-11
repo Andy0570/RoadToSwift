@@ -142,9 +142,9 @@
     "title": "动画",
     "cells": [{
         "image": "image",
-        "title": "title1",
+        "title": "为 UITextField 添加动画",
         "description": "description",
-        "className": ""
+        "className": "BayleafLoginViewController"
     }, {
         "image": "image",
         "title": "title2",

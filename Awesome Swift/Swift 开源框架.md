@@ -238,6 +238,7 @@
 * [CrispyCalendar](https://github.com/CleverPumpkin/CrispyCalendar) ⭐️312 - 日历 UI 框架。
 * [ScrollableGraphView](https://github.com/philackm/ScrollableGraphView) ⭐️5.2k - 针对于 iOS 应用的自适应滚动图形，用于将离散的数据集进行可视化
 * [SwiftUIChart](https://github.com/willdale/SwiftUIChart) ⭐️384 - 一个用于 SwiftUI 的图表/绘图库。支持在 macOS、iOS、watchOS 和 tableViewOS 上运行，并内置了无障碍功能。
+* [BSChart](https://github.com/iBlacksus/BSChart) ⭐️189 - BSChart is a simple and useful chart library written on Swift。
 
 
 
@@ -461,6 +462,7 @@
 * [JHChainableAnimations](https://github.com/jhurray/JHChainableAnimations) ⭐️3.2k - Easy to read and write chainable animations in Objective-C and Swift. 通过链式语法实现动画。
 * [Stellar](https://github.com/AugustRush/Stellar) ⭐️2.9k - 适用于 Swift 的奇妙的物理动画库
 * [Macaw](https://github.com/exyte/Macaw) ⭐️5.8k - 强大且易用的矢量图形库，并且支持 SVG
+* [WaveLabelDemo](https://github.com/anonymity-du/WaveLabelDemo) ⭐️59 - 波浪经过文字，文字改变颜色。
 
 
 
@@ -687,6 +689,7 @@
 * [FFmpeg](https://github.com/FFmpeg/FFmpeg) ⭐️28.2k - FFmpeg 是一个库和工具的集合，用于处理多媒体内容，如音频、视频、字幕和相关元数据。
 * [ffmpeg-kit](https://github.com/tanersener/ffmpeg-kit) ⭐️1.2k - 用于应用程序的 FFmpeg 套件。支持 Android、Flutter、iOS、macOS、React Native 和 tvOS。取代 MobileFFmpeg、flutter_ffmpeg 和 react-native-ffmpeg。
 * [mobileplayer-iOS](https://github.com/sahin/mobileplayer-ios) ⭐️2.9k - 一款功能强大且完全可定制的 iOS 媒体播放器。
+* [PiPhone](https://github.com/ky1vstar/PiPhone) ⭐️89 - Picture in picture video playback for iPhone。
 
 
 
