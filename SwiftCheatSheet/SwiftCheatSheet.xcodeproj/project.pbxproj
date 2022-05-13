@@ -39,6 +39,8 @@
 		223A1795282DF65B003FB424 /* CircularProgressLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223A1794282DF65B003FB424 /* CircularProgressLayer.swift */; };
 		223A1797282DF864003FB424 /* DownloadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223A1796282DF864003FB424 /* DownloadButton.swift */; };
 		223A1799282DFC31003FB424 /* FastCartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223A1798282DFC31003FB424 /* FastCartButton.swift */; };
+		223A179D282E3D6B003FB424 /* RangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223A179C282E3D6B003FB424 /* RangeSlider.swift */; };
+		223A179F282E4420003FB424 /* RangeSliderTrackLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223A179E282E4420003FB424 /* RangeSliderTrackLayer.swift */; };
 		2240754527FB5CDC0050BEF6 /* VideoEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2240754427FB5CDC0050BEF6 /* VideoEditor.swift */; };
 		2240754827FB60390050BEF6 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2240754627FB60390050BEF6 /* PlayerViewController.swift */; };
 		2240754927FB60390050BEF6 /* PlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2240754727FB60390050BEF6 /* PlayerViewController.xib */; };
@@ -268,6 +270,8 @@
 		223A1794282DF65B003FB424 /* CircularProgressLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressLayer.swift; sourceTree = "<group>"; };
 		223A1796282DF864003FB424 /* DownloadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadButton.swift; sourceTree = "<group>"; };
 		223A1798282DFC31003FB424 /* FastCartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastCartButton.swift; sourceTree = "<group>"; };
+		223A179C282E3D6B003FB424 /* RangeSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSlider.swift; sourceTree = "<group>"; };
+		223A179E282E4420003FB424 /* RangeSliderTrackLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSliderTrackLayer.swift; sourceTree = "<group>"; };
 		2240754427FB5CDC0050BEF6 /* VideoEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoEditor.swift; sourceTree = "<group>"; };
 		2240754627FB60390050BEF6 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		2240754727FB60390050BEF6 /* PlayerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerViewController.xib; sourceTree = "<group>"; };
@@ -573,6 +577,8 @@
 				223A1794282DF65B003FB424 /* CircularProgressLayer.swift */,
 				223A1796282DF864003FB424 /* DownloadButton.swift */,
 				223A1798282DFC31003FB424 /* FastCartButton.swift */,
+				223A179C282E3D6B003FB424 /* RangeSlider.swift */,
+				223A179E282E4420003FB424 /* RangeSliderTrackLayer.swift */,
 			);
 			path = "自定义控件";
 			sourceTree = "<group>";
@@ -1753,8 +1759,10 @@
 				229AC7D327D5E2EA001D81D2 /* APIService.swift in Sources */,
 				22569EB627E3364E009B18A3 /* ChirperViewController.swift in Sources */,
 				223A1782282CD146003FB424 /* SlideViewController.swift in Sources */,
+				223A179D282E3D6B003FB424 /* RangeSlider.swift in Sources */,
 				22BF2E2A27BF3B8D009027E3 /* HorizontalScrollerView.swift in Sources */,
 				2235454727F4633D000F7ACD /* CameraControlsViewControllerProtocol.swift in Sources */,
+				223A179F282E4420003FB424 /* RangeSliderTrackLayer.swift in Sources */,
 				223A178F282DE852003FB424 /* SchedulePicker.swift in Sources */,
 				2246199B27EAF5A00096C856 /* GradientColorViewController.swift in Sources */,
 				22A7C75027C8AA4400196326 /* Post.swift in Sources */,

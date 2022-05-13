@@ -16,23 +16,22 @@ class CustomControlViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemBackground
 
-        setupView()
+        // 日期选择器
+        setupSchedulePicker()
 
         // 下载按钮
         setupDownloadButton()
-        tick()
 
         // 购物车按钮
         setupFastCartButton()
+
+        // 自定义滑块
+        setupRangeSlider()
     }
 
-    // MARK: - View Methods
-
-    private func setupView() {
-        view.backgroundColor = .systemBackground
-        setupSchedulePicker()
-    }
+    // MARK: - 日期选择器
 
     private func setupSchedulePicker() {
         // Fetch Stored Value
@@ -41,8 +40,6 @@ class CustomControlViewController: UIViewController {
         // Configure Schedule Picker
         schedulePicker.schedule = Schedule(rawValue: scheduleRawValue)
     }
-
-    // MARK: - Actions
 
     @IBAction func scheduleDidChange(_ sender: SchedulePicker) {
         // Helpers
@@ -62,6 +59,8 @@ class CustomControlViewController: UIViewController {
     private func setupDownloadButton() {
         view.addSubview(button)
         view.layer.addSublayer(cpl)
+
+        tick()
     }
 
     // 模拟下载进度
@@ -78,6 +77,7 @@ class CustomControlViewController: UIViewController {
     }
 
     // MARK: - 购物车按钮
+
     let fastCartButton = FastCartButton()
 
     private func setupFastCartButton() {
@@ -89,6 +89,33 @@ class CustomControlViewController: UIViewController {
             fastCartButton.widthAnchor.constraint(equalToConstant: 52),
             fastCartButton.heightAnchor.constraint(equalToConstant: 52)
         ])
+    }
+
+    // MARK: - 双端滑块
+
+    let rangeSlider = RangeSlider(frame: .zero)
+
+    private func setupRangeSlider() {
+        rangeSlider.translatesAutoresizingMaskIntoConstraints = false
+        rangeSlider.addTarget(self, action: #selector(rangeSliderValueChanged(_:)), for: .valueChanged)
+        view.addSubview(rangeSlider)
+
+        NSLayoutConstraint.activate([
+            rangeSlider.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            rangeSlider.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            rangeSlider.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 100),
+            rangeSlider.heightAnchor.constraint(equalToConstant: 30)
+        ])
+
+        // 更新滑块 UI 样式
+//        rangeSlider.trackHighlightTintColor = .red
+//        rangeSlider.thumbImage = UIImage(named: "RectThumb")
+//        rangeSlider.highlightedThumbImage = UIImage(named: "HighlightedRect")
+    }
+
+    @objc func rangeSliderValueChanged(_ rangeSlider: RangeSlider) {
+        let values = "(\(rangeSlider.lowerValue) \(rangeSlider.upperValue))"
+        print("Range slider value changed: \(values)")
     }
 }
 
