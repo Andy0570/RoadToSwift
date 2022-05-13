@@ -72,6 +72,8 @@ internal enum Asset {
     internal static let highlightedRect = ImageAsset(name: "HighlightedRect")
     internal static let oval = ImageAsset(name: "Oval")
     internal static let rectThumb = ImageAsset(name: "RectThumb")
+    internal static let likeFill = ImageAsset(name: "like_fill")
+    internal static let likeNormal = ImageAsset(name: "like_normal")
     internal static let estonia = ImageAsset(name: "estonia")
     internal static let france = ImageAsset(name: "france")
     internal static let germany = ImageAsset(name: "germany")

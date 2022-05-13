@@ -282,6 +282,7 @@
 * [LGButton](https://github.com/loregr/LGButton) ⭐️2.3k - 一个完全可定制的原生 `UIControl` 子类，它允许您创建漂亮的按钮，而无需编写任何代码。
 * [NFDownloadButton](https://github.com/LeonardoCardoso/NFDownloadButton) ⭐️435 - 改进的下载按钮。这有点像 Netflix 应用中的下载按钮的逆向工程。
 * [SwiftyButton](https://github.com/TakeScoop/SwiftyButton) ⭐️540 - Simple and customizable button in Swift
+* [fave-button](https://github.com/janselv/fave-button) ⭐️1.4k - FaveButton 是一个用 Swift 编写的 iOS 可爱的动画按钮。
 
 
 

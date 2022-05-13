@@ -41,6 +41,7 @@
 		223A1799282DFC31003FB424 /* FastCartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223A1798282DFC31003FB424 /* FastCartButton.swift */; };
 		223A179D282E3D6B003FB424 /* RangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223A179C282E3D6B003FB424 /* RangeSlider.swift */; };
 		223A179F282E4420003FB424 /* RangeSliderTrackLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223A179E282E4420003FB424 /* RangeSliderTrackLayer.swift */; };
+		223A17A1282E52C0003FB424 /* HeartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223A17A0282E52C0003FB424 /* HeartButton.swift */; };
 		2240754527FB5CDC0050BEF6 /* VideoEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2240754427FB5CDC0050BEF6 /* VideoEditor.swift */; };
 		2240754827FB60390050BEF6 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2240754627FB60390050BEF6 /* PlayerViewController.swift */; };
 		2240754927FB60390050BEF6 /* PlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2240754727FB60390050BEF6 /* PlayerViewController.xib */; };
@@ -272,6 +273,7 @@
 		223A1798282DFC31003FB424 /* FastCartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastCartButton.swift; sourceTree = "<group>"; };
 		223A179C282E3D6B003FB424 /* RangeSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSlider.swift; sourceTree = "<group>"; };
 		223A179E282E4420003FB424 /* RangeSliderTrackLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSliderTrackLayer.swift; sourceTree = "<group>"; };
+		223A17A0282E52C0003FB424 /* HeartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartButton.swift; sourceTree = "<group>"; };
 		2240754427FB5CDC0050BEF6 /* VideoEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoEditor.swift; sourceTree = "<group>"; };
 		2240754627FB60390050BEF6 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		2240754727FB60390050BEF6 /* PlayerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerViewController.xib; sourceTree = "<group>"; };
@@ -1366,6 +1368,7 @@
 			children = (
 				22DBC8E227CB631000E14468 /* MenuButtonViewController.swift */,
 				22DBC8E527CB632F00E14468 /* MenuButton.swift */,
+				223A17A0282E52C0003FB424 /* HeartButton.swift */,
 			);
 			path = UIButton;
 			sourceTree = "<group>";
@@ -1908,6 +1911,7 @@
 				223A1799282DFC31003FB424 /* FastCartButton.swift in Sources */,
 				222D14812810049300F70EDC /* MyFirstView.swift in Sources */,
 				22EE32C627D08E1300A9A66F /* VFLViewController.swift in Sources */,
+				223A17A1282E52C0003FB424 /* HeartButton.swift in Sources */,
 				228E44B72812547500C07C60 /* AdCell.swift in Sources */,
 				222B3FD227E061F1009C7322 /* GrowingCell.swift in Sources */,
 				22A7C75727C8AE2400196326 /* ImageViewModel.swift in Sources */,

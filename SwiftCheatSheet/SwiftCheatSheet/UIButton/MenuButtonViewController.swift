@@ -65,6 +65,19 @@ class MenuButtonViewController: UIViewController {
         view.addSubview(button)
         self.button = button
         NSLayoutConstraint.activate(button.layoutConstraints(in: view))
+
+        let heartButton = HeartButton()
+        heartButton.translatesAutoresizingMaskIntoConstraints = false
+        heartButton.defaultImage = UIImage(named: "like_normal")
+        heartButton.selectedImage = UIImage(named: "like_fill")
+        heartButton.animatedImage = UIImage(named: "like_fill")
+        view.addSubview(heartButton)
+        NSLayoutConstraint.activate([
+            heartButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
+            heartButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            heartButton.widthAnchor.constraint(equalToConstant: 48),
+            heartButton.heightAnchor.constraint(equalToConstant: 48)
+        ])
     }
 
     override func viewDidLoad() {

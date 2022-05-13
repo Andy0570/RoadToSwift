@@ -8,6 +8,8 @@
 
 ---
 
-[Customize UISlider and UIProgressView](https://medium.com/doyeona/customize-uislider-and-uiprogressview-fe5fe73f2dd2)
-
-
+* [Customize UISlider and UIProgressView](https://medium.com/doyeona/customize-uislider-and-uiprogressview-fe5fe73f2dd2)
+* [Custom Control Open Source in Swift](https://jamesrochabrun.medium.com/custom-control-open-source-in-swift-c54833e5abe9)
+* [fave-button](https://github.com/tljackyi/fave-button)
+* [SHToggleButton](https://github.com/SoufianHossam/SHToggleButton)
+* [fave-button](https://github.com/janselv/fave-button)
