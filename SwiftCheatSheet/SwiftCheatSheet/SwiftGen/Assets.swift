@@ -66,6 +66,8 @@ internal enum Asset {
     internal static let confetti5 = ImageAsset(name: "confetti5")
     internal static let mascotSwiftyBirthdayParty = ImageAsset(name: "mascot_swifty-birthday-party")
     internal static let overlay = ImageAsset(name: "overlay")
+    internal static let checkmark = ImageAsset(name: "Checkmark")
+    internal static let download = ImageAsset(name: "Download")
     internal static let estonia = ImageAsset(name: "estonia")
     internal static let france = ImageAsset(name: "france")
     internal static let germany = ImageAsset(name: "germany")

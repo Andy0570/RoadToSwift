@@ -163,6 +163,16 @@
         "title": "UITextField 字符计数器",
         "description": "-",
         "className": "DRHTextFieldViewController"
+    }, {
+        "image": "image",
+        "title": "UISlider 滑块设置颜色",
+        "description": "-",
+        "className": "SlideViewController"
+    }, {
+        "image": "image",
+        "title": "自定义控件",
+        "description": "-",
+        "className": "CustomControlViewController"
     }]
 }, {
     "title": "Foundation 框架",

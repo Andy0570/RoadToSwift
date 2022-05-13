@@ -31,6 +31,14 @@
 		2231431727FB2CE00006B59E /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2231431527FB2CE00006B59E /* PickerViewController.swift */; };
 		2231431827FB2CE00006B59E /* PickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2231431627FB2CE00006B59E /* PickerViewController.xib */; };
 		2235454727F4633D000F7ACD /* CameraControlsViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2235454627F4633D000F7ACD /* CameraControlsViewControllerProtocol.swift */; };
+		223A1782282CD146003FB424 /* SlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223A1780282CD146003FB424 /* SlideViewController.swift */; };
+		223A1783282CD146003FB424 /* SlideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 223A1781282CD146003FB424 /* SlideViewController.xib */; };
+		223A178D282DE807003FB424 /* CustomControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223A178C282DE807003FB424 /* CustomControlViewController.swift */; };
+		223A178F282DE852003FB424 /* SchedulePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223A178E282DE852003FB424 /* SchedulePicker.swift */; };
+		223A1793282DEF20003FB424 /* CustomControlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 223A1791282DEF20003FB424 /* CustomControlViewController.xib */; };
+		223A1795282DF65B003FB424 /* CircularProgressLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223A1794282DF65B003FB424 /* CircularProgressLayer.swift */; };
+		223A1797282DF864003FB424 /* DownloadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223A1796282DF864003FB424 /* DownloadButton.swift */; };
+		223A1799282DFC31003FB424 /* FastCartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223A1798282DFC31003FB424 /* FastCartButton.swift */; };
 		2240754527FB5CDC0050BEF6 /* VideoEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2240754427FB5CDC0050BEF6 /* VideoEditor.swift */; };
 		2240754827FB60390050BEF6 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2240754627FB60390050BEF6 /* PlayerViewController.swift */; };
 		2240754927FB60390050BEF6 /* PlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2240754727FB60390050BEF6 /* PlayerViewController.xib */; };
@@ -252,6 +260,14 @@
 		2231431527FB2CE00006B59E /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		2231431627FB2CE00006B59E /* PickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PickerViewController.xib; sourceTree = "<group>"; };
 		2235454627F4633D000F7ACD /* CameraControlsViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraControlsViewControllerProtocol.swift; sourceTree = "<group>"; };
+		223A1780282CD146003FB424 /* SlideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideViewController.swift; sourceTree = "<group>"; };
+		223A1781282CD146003FB424 /* SlideViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideViewController.xib; sourceTree = "<group>"; };
+		223A178C282DE807003FB424 /* CustomControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomControlViewController.swift; sourceTree = "<group>"; };
+		223A178E282DE852003FB424 /* SchedulePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulePicker.swift; sourceTree = "<group>"; };
+		223A1791282DEF20003FB424 /* CustomControlViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomControlViewController.xib; sourceTree = "<group>"; };
+		223A1794282DF65B003FB424 /* CircularProgressLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressLayer.swift; sourceTree = "<group>"; };
+		223A1796282DF864003FB424 /* DownloadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadButton.swift; sourceTree = "<group>"; };
+		223A1798282DFC31003FB424 /* FastCartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastCartButton.swift; sourceTree = "<group>"; };
 		2240754427FB5CDC0050BEF6 /* VideoEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoEditor.swift; sourceTree = "<group>"; };
 		2240754627FB60390050BEF6 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		2240754727FB60390050BEF6 /* PlayerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerViewController.xib; sourceTree = "<group>"; };
@@ -546,6 +562,19 @@
 				2240754427FB5CDC0050BEF6 /* VideoEditor.swift */,
 			);
 			path = Cubica;
+			sourceTree = "<group>";
+		};
+		223A178B282DE7EA003FB424 /* 自定义控件 */ = {
+			isa = PBXGroup;
+			children = (
+				223A178C282DE807003FB424 /* CustomControlViewController.swift */,
+				223A1791282DEF20003FB424 /* CustomControlViewController.xib */,
+				223A178E282DE852003FB424 /* SchedulePicker.swift */,
+				223A1794282DF65B003FB424 /* CircularProgressLayer.swift */,
+				223A1796282DF864003FB424 /* DownloadButton.swift */,
+				223A1798282DFC31003FB424 /* FastCartButton.swift */,
+			);
+			path = "自定义控件";
 			sourceTree = "<group>";
 		};
 		2246199727EAF4560096C856 /* GradientColor */ = {
@@ -1246,6 +1275,7 @@
 				227E7EBF27E092BA009D5E45 /* NSMutableAttributedString */,
 				229AC7CB27D5E1F7001D81D2 /* Model-View-ViewModel */,
 				228B38EF27D05E0000BCF963 /* 自动布局 */,
+				223A178B282DE7EA003FB424 /* 自定义控件 */,
 				22DBC8E127CB620F00E14468 /* UIButton */,
 				22D9330427D59F4000D1B0B4 /* UITextField */,
 				2246DD0727C474B6006A3AC1 /* UICollectionView */,
@@ -1319,6 +1349,8 @@
 				22D73FFC2817C2A0008295E0 /* KMPlaceholderTextView.swift */,
 				22255F58282BB125009FC2D2 /* BayleafLoginViewController.swift */,
 				22255F59282BB125009FC2D2 /* BayleafLoginViewController.xib */,
+				223A1780282CD146003FB424 /* SlideViewController.swift */,
+				223A1781282CD146003FB424 /* SlideViewController.xib */,
 			);
 			path = UITextField;
 			sourceTree = "<group>";
@@ -1590,6 +1622,7 @@
 				221C58EB27F87FF000E5D855 /* VideoNinjaViewController.xib in Resources */,
 				22AC912927DF9EE3007260E6 /* FilmTableViewCell.xib in Resources */,
 				229AC7D527D5E3BC001D81D2 /* content.json in Resources */,
+				223A1793282DEF20003FB424 /* CustomControlViewController.xib in Resources */,
 				22FF1B6027C89FFF007214EB /* ActionCell.xib in Resources */,
 				2279449C2807D3D400BFDADA /* Colors.xcassets in Resources */,
 				228B38F327D0614700BCF963 /* FlagViewController.xib in Resources */,
@@ -1600,6 +1633,7 @@
 				22569EB427E328B2009B18A3 /* BirdSoundTableViewCell.xib in Resources */,
 				2246DD2227C4BB48006A3AC1 /* IconCollectionViewCell.xib in Resources */,
 				229AC7E227D5EF93001D81D2 /* PhotoListTableViewCell.xib in Resources */,
+				223A1783282CD146003FB424 /* SlideViewController.xib in Resources */,
 				228E44B82812547500C07C60 /* AdCell.xib in Resources */,
 				229AC7DB27D5E4C2001D81D2 /* PhotoDetailViewController.xib in Resources */,
 				22BF2E2C27BF42E6009027E3 /* albums.json in Resources */,
@@ -1718,11 +1752,14 @@
 				22569EBA27E33929009B18A3 /* LoadingView.swift in Sources */,
 				229AC7D327D5E2EA001D81D2 /* APIService.swift in Sources */,
 				22569EB627E3364E009B18A3 /* ChirperViewController.swift in Sources */,
+				223A1782282CD146003FB424 /* SlideViewController.swift in Sources */,
 				22BF2E2A27BF3B8D009027E3 /* HorizontalScrollerView.swift in Sources */,
 				2235454727F4633D000F7ACD /* CameraControlsViewControllerProtocol.swift in Sources */,
+				223A178F282DE852003FB424 /* SchedulePicker.swift in Sources */,
 				2246199B27EAF5A00096C856 /* GradientColorViewController.swift in Sources */,
 				22A7C75027C8AA4400196326 /* Post.swift in Sources */,
 				221C58F227F8895D00E5D855 /* RecordVideoViewController.swift in Sources */,
+				223A1797282DF864003FB424 /* DownloadButton.swift in Sources */,
 				229AC7DE27D5E4DD001D81D2 /* PhotoListViewController.swift in Sources */,
 				22A7C75927C8AE5100196326 /* ActionViewModel.swift in Sources */,
 				222D147E2810028E00F70EDC /* DifferentViewController.swift in Sources */,
@@ -1757,6 +1794,7 @@
 				22E3482127E8539F00369602 /* StackExchangeClient.swift in Sources */,
 				2246199D27EAFE5B0096C856 /* GradientLabel.swift in Sources */,
 				229AC7E127D5EF93001D81D2 /* PhotoListTableViewCell.swift in Sources */,
+				223A1795282DF65B003FB424 /* CircularProgressLayer.swift in Sources */,
 				2240754827FB60390050BEF6 /* PlayerViewController.swift in Sources */,
 				22E3480D27E84ACB00369602 /* String+Extensions.swift in Sources */,
 				22E3480F27E84BD500369602 /* UITextField+Extensions.swift in Sources */,
@@ -1802,6 +1840,7 @@
 				226218B127EE238D0052634A /* UITableView+PDF.swift in Sources */,
 				22A7C75B27C8AF0300196326 /* PostSectionController.swift in Sources */,
 				22D2233827BCEB89000EAD0F /* SceneDelegate.swift in Sources */,
+				223A178D282DE807003FB424 /* CustomControlViewController.swift in Sources */,
 				2246DD1C27C4BA35006A3AC1 /* Icon.swift in Sources */,
 				227E7EC227E09345009D5E45 /* AttributedStringViewController.swift in Sources */,
 				22BF2E1827BDFF35009027E3 /* Album.swift in Sources */,
@@ -1858,6 +1897,7 @@
 				22BF2E2427BE48CF009027E3 /* UITableViewCellExtensions.swift in Sources */,
 				22DBC8E627CB632F00E14468 /* MenuButton.swift in Sources */,
 				22BF2E4B27BFA3F8009027E3 /* TurnController.swift in Sources */,
+				223A1799282DFC31003FB424 /* FastCartButton.swift in Sources */,
 				222D14812810049300F70EDC /* MyFirstView.swift in Sources */,
 				22EE32C627D08E1300A9A66F /* VFLViewController.swift in Sources */,
 				228E44B72812547500C07C60 /* AdCell.swift in Sources */,

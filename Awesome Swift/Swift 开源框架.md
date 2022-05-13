@@ -112,10 +112,10 @@
 
 [回到顶部](#Awesome Swift)
 
-* :heart: [SnapKit](https://github.com/SnapKit/SnapKit) ⭐️ 18k - Auto Layout 自动布局框架
-* :heart: [EasyAnchor](https://github.com/onmyway133/EasyAnchor) ⭐️445 - 声明式、可扩展、强大的自动布局
+* :heart: [SnapKit](https://github.com/SnapKit/SnapKit) ⭐️ 18k - Auto Layout 自动布局框架。
+* :heart: [EasyAnchor](https://github.com/onmyway133/EasyAnchor) ⭐️445 - 声明式、可扩展、强大的自动布局。
 * [PureLayout](https://github.com/PureLayout/PureLayout) - ⭐️7.6k - iOS&OS X 自动布局的终极 API ー令人印象深刻的简单、强大、兼容 Objective-C 和 Swift。
-* [Cartography](https://github.com/robb/Cartography) ⭐️7.3k - 用于 Swift 的声明式自动布局封装框架
+* [Cartography](https://github.com/robb/Cartography) ⭐️7.3k - 用于 Swift 的声明式自动布局封装框架。
 * [PinLayout](https://github.com/mirego/PinLayout) ⭐️1.8k - Extremely Fast views layouting without auto layout. No magic, pure code, full control and blazing fast. Concise syntax, intuitive, readable & chainable.
 * [Swiftstraints](https://github.com/Skyvive/Swiftstraints) - 强大的自动布局框架，让你在一行代码中编写约束。
 * [Neon](https://github.com/mamaral/Neon) ⭐️4.6k - 适用于 iPhone 和 iPad ，更强大 UI 布局框架
@@ -153,7 +153,7 @@
 * [Swifty](https://github.com/RyukieSama/Swifty) ⭐️41 - ScreenShield 是极其轻量化的截屏防护方案，任何需要被保护的 View 作为子视图放入保护的视图中即可达到截屏时隐藏内容的效果。
 
 
-### Alert、Toast、
+### Alert、Toast
 
 * :heart: [Siren](https://github.com/ArtSabintsev/Siren) ⭐️3.9k - 当应用版本更新时，通知用户并提供 App Store 链接。
 * :heart: [SPPermissions](https://github.com/ivanvorobei/SPPermissions) ⭐️4.8k - 通过列表、Dialog 对话框和原生界面的方式向用户请求访问权限。可以检查权限状态。支持 SwiftUI。
@@ -175,6 +175,7 @@
 * [NotificationBanner](https://github.com/Daltron/NotificationBanner) ⭐️4.4k - 在 iOS 中显示高度可定制的应用通知横幅的最简单方法。
 
 
+
 ### Popup 弹窗
 
 * [Popover](https://github.com/corin8823/Popover) ⭐️1.9k - 像 Facebook 应用里的气球呼出框，用纯 Swift 语言编写
@@ -193,6 +194,7 @@
 * [EZLoadingActivity](https://github.com/goktugyil/EZLoadingActivity) - Lightweight loading activity HUD
 * [Hokusai](https://github.com/ytakzk/Hokusai) ⭐️431 - A library for a cool bouncy action sheet
 * [SPIndicator](https://github.com/ivanvorobei/SPIndicator) ⭐️227
+
 
 
 ### 启动引导页
@@ -246,7 +248,7 @@
 
 * [TagListView](https://github.com/xhacker/TagListView) ⭐️2.3k - Simple but highly customizable iOS tag list view.
 * [TagCellLayout](https://github.com/riteshhgupta/TagCellLayout) ⭐️297 - UICollectionView layout for Tags with Left, Center & Right alignments.
-* [TTGTagCollectionView](https://github.com/zekunyan/TTGTagCollectionView) ⭐️1.6k
+* :orange: [TTGTagCollectionView](https://github.com/zekunyan/TTGTagCollectionView) ⭐️1.6k
 
 
 
@@ -269,6 +271,7 @@
 * [DeviceKit](https://github.com/devicekit/DeviceKit) ⭐️3.5k
 
 
+
 ### UILabel
 
 * :orange: [UICountingLabel](https://github.com/dataxpress/UICountingLabel) ⭐️1.9k - 为 UILabel 添加动画计数支持。
@@ -276,9 +279,11 @@
 
 
 ### UIButton
-* [LGButton](https://github.com/loregr/LGButton) ⭐️2k - 一个完全可定制的原生 UIControl 子类，它允许您创建漂亮的按钮，而无需编写任何代码。
-* [NFDownloadButton](https://github.com/LeonardoCardoso/NFDownloadButton) - Revamped Download Button.
-* [SwiftyButton](https://github.com/TakeScoop/SwiftyButton) - Simple and customizable button in Swift
+* [LGButton](https://github.com/loregr/LGButton) ⭐️2.3k - 一个完全可定制的原生 `UIControl` 子类，它允许您创建漂亮的按钮，而无需编写任何代码。
+* [NFDownloadButton](https://github.com/LeonardoCardoso/NFDownloadButton) ⭐️435 - 改进的下载按钮。这有点像 Netflix 应用中的下载按钮的逆向工程。
+* [SwiftyButton](https://github.com/TakeScoop/SwiftyButton) ⭐️540 - Simple and customizable button in Swift
+
+
 
 ### UISwitch
 
@@ -432,6 +437,7 @@
 * [ComplimentaryGradientView](https://github.com/gkye/ComplimentaryGradientView) ⭐️707 - 通过源图片的主要颜色生成颜色渐变
 * [ColorSet](https://github.com/DigiDNA/ColorSet) ⭐️144 - ColorSet 是一个 macOS 实用程序和框架，允许开发人员轻松管理自定义界面颜色。
 * :warning: [ColorSlider](https://github.com/gizmosachin/ColorSlider) ⭐️269 - Swift 中 Snapchat 风格的颜色选择器。
+* [ColorCompatibility](https://github.com/noahsark769/ColorCompatibility) ⭐️99 - 使用 iOS 13+ 系统颜色，而在 iOS <=12 上默认为浅色。
 
 
 
@@ -768,6 +774,12 @@
 * [RxBluetoothKit](https://github.com/Polidea/RxBluetoothKit) ⭐️1.3k - 基于 RxSwift 框架的蓝牙库。
 * :orange: [SmartDeviceLink-iOS](https://github.com/smartdevicelink/sdl_ios) ⭐️ 158 - 一组标准协议和消息，可将智能手机上的应用程序连接到车载主机。
 
+
+## 应用内购买&订阅
+
+[回到顶部](#Awesome Swift)
+
+* [purchases-ios](https://github.com/RevenueCat/purchases-ios) ⭐️1.3k - 使应用内购买和订阅变得容易。支持 iOS、iPadOS、watchOS 和 Mac。
 
 
 ## Misc
