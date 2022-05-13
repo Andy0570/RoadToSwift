@@ -88,6 +88,8 @@
 		226218B927EE265A0052634A /* UISearchBar+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226218B827EE265A0052634A /* UISearchBar+Extensions.swift */; };
 		226218BB27EE26BC0052634A /* Numeric+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226218BA27EE26BC0052634A /* Numeric+Extensions.swift */; };
 		226218BD27EE26F40052634A /* ReuseIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226218BC27EE26F40052634A /* ReuseIdentifiable.swift */; };
+		2273388E282EAE6A00E94E12 /* FaveButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2273388C282EAE6A00E94E12 /* FaveButtonViewController.swift */; };
+		2273388F282EAE6A00E94E12 /* FaveButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2273388D282EAE6A00E94E12 /* FaveButtonViewController.xib */; };
 		227944972807BFAF00BFDADA /* BarCodeGenerateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227944952807BFAF00BFDADA /* BarCodeGenerateController.swift */; };
 		227944982807BFAF00BFDADA /* BarCodeGenerateController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227944962807BFAF00BFDADA /* BarCodeGenerateController.xib */; };
 		2279449A2807BFD100BFDADA /* BarcodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227944992807BFD100BFDADA /* BarcodeService.swift */; };
@@ -322,6 +324,8 @@
 		226218B827EE265A0052634A /* UISearchBar+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar+Extensions.swift"; sourceTree = "<group>"; };
 		226218BA27EE26BC0052634A /* Numeric+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Numeric+Extensions.swift"; sourceTree = "<group>"; };
 		226218BC27EE26F40052634A /* ReuseIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifiable.swift; sourceTree = "<group>"; };
+		2273388C282EAE6A00E94E12 /* FaveButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaveButtonViewController.swift; sourceTree = "<group>"; };
+		2273388D282EAE6A00E94E12 /* FaveButtonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FaveButtonViewController.xib; sourceTree = "<group>"; };
 		227944952807BFAF00BFDADA /* BarCodeGenerateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeGenerateController.swift; sourceTree = "<group>"; };
 		227944962807BFAF00BFDADA /* BarCodeGenerateController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BarCodeGenerateController.xib; sourceTree = "<group>"; };
 		227944992807BFD100BFDADA /* BarcodeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeService.swift; sourceTree = "<group>"; };
@@ -1369,6 +1373,8 @@
 				22DBC8E227CB631000E14468 /* MenuButtonViewController.swift */,
 				22DBC8E527CB632F00E14468 /* MenuButton.swift */,
 				223A17A0282E52C0003FB424 /* HeartButton.swift */,
+				2273388C282EAE6A00E94E12 /* FaveButtonViewController.swift */,
+				2273388D282EAE6A00E94E12 /* FaveButtonViewController.xib */,
 			);
 			path = UIButton;
 			sourceTree = "<group>";
@@ -1665,6 +1671,7 @@
 				222D1483281004E700F70EDC /* MyFirstView.xib in Resources */,
 				227E7EC327E09345009D5E45 /* AttributedStringViewController.xib in Resources */,
 				224EB7D427F0604F008A35DF /* GradientViewController.xib in Resources */,
+				2273388F282EAE6A00E94E12 /* FaveButtonViewController.xib in Resources */,
 				22D2233D27BCEB89000EAD0F /* Main.storyboard in Resources */,
 				22D2235527BCFFE3000EAD0F /* homepage.json in Resources */,
 				221C58F327F8895D00E5D855 /* RecordVideoViewController.xib in Resources */,
@@ -1891,6 +1898,7 @@
 				222D14772810017200F70EDC /* CustomViewController.swift in Sources */,
 				22E3482D27E8643E00369602 /* ModeratorsListViewController.swift in Sources */,
 				22569EAE27E3237C009B18A3 /* ServiceResponse.swift in Sources */,
+				2273388E282EAE6A00E94E12 /* FaveButtonViewController.swift in Sources */,
 				2246DD1727C49402006A3AC1 /* CollaspibleCollectionViewController.swift in Sources */,
 				228E44BF28125D0000C07C60 /* SuperHeroSectionController.swift in Sources */,
 				22AE41F22826E0B5009A5850 /* BaseTableViewCell.swift in Sources */,

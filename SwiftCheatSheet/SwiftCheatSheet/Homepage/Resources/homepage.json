@@ -173,6 +173,11 @@
         "title": "自定义控件",
         "description": "-",
         "className": "CustomControlViewController"
+    }, {
+        "image": "image",
+        "title": "FaveButton",
+        "description": "-",
+        "className": "FaveButtonViewController"
     }]
 }, {
     "title": "Foundation 框架",

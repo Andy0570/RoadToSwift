@@ -60,11 +60,11 @@ class RangeSlider: UIControl {
     }
 
     var highlightedThumbImage = UIImage(named: "HighlightedOval") {
-      didSet {
-        upperThumbImageView.highlightedImage = highlightedThumbImage
-        lowerThumbImageView.highlightedImage = highlightedThumbImage
-        updateLayerFrames()
-      }
+        didSet {
+            upperThumbImageView.highlightedImage = highlightedThumbImage
+            lowerThumbImageView.highlightedImage = highlightedThumbImage
+            updateLayerFrames()
+        }
     }
 
     // 覆写 frame 属性并添加属性观察器

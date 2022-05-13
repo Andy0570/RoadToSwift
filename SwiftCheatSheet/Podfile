@@ -12,6 +12,7 @@ target 'SwiftCheatSheet' do
   pod 'Alamofire'
   pod 'Kingfisher', '~> 7.0'
   pod 'IGListKit'
+  pod 'FaveButton'
   pod 'SwifterSwift', :git => 'https://github.com/SwifterSwift/SwifterSwift.git', :branch => 'master'
 
   # 服务
