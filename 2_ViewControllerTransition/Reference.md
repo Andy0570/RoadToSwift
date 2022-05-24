@@ -19,11 +19,11 @@
 * [x] [Going indie, step 4: Wrap your head around custom view controller transitions](https://danielgauthier.me/2020/02/19/indie-4.html)
 * [x] [Going indie, step 5: Suffer from crippling imposter syndrome](https://danielgauthier.me/imposter-syndrome/)
 * [x] :heart: [Mastering view controller transitions, part 1: Make them reusable](https://danielgauthier.me//2020/02/24/vctransitions1.html)
-* [ ] :heart: [Mastering view controller transitions, part 2: Make them feel natural](https://danielgauthier.me//2020/02/27/vctransitions2.html)
-* [ ] :heart: [Mastering view controller transitions, part 3: Make them resizable](https://danielgauthier.me//2020/03/03/vctransitions3.html)
+* [x] :heart: [Mastering view controller transitions, part 2: Make them feel natural](https://danielgauthier.me//2020/02/27/vctransitions2.html)
+* [x] :heart: [Mastering view controller transitions, part 3: Make them resizable](https://danielgauthier.me//2020/03/03/vctransitions3.html)
+* [ ] [Custom View Controller Presentation Tips & Tricks](https://kylebashour.com/posts/custom-view-controller-presentation-tips)
 
 ---
-
 
 
 

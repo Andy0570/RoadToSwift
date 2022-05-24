@@ -18,10 +18,6 @@ public extension UIView {
         return nil
     }
 
-    // func addSubviews(_ subviews: [UIView]) { subviews.forEach { addSubview($0) } }
-    func addSubviews(_ subviews: UIView...) { subviews.forEach { addSubview($0) } }
-    // func removeSubviews() { subviews.forEach { $0.removeFromSuperview() } }
-
     var hasSuperview: Bool { superview != nil }
 
     var screenshot: UIImage? {
@@ -29,7 +25,9 @@ public extension UIView {
         defer {
             UIGraphicsEndImageContext()
         }
-        guard let context = UIGraphicsGetCurrentContext() else { return nil }
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return nil
+        }
         layer.render(in: context)
         return UIGraphicsGetImageFromCurrentImageContext()
     }
@@ -40,14 +38,18 @@ public extension UIView {
     var rtl: Bool { effectiveUserInterfaceLayoutDirection == .rightToLeft }
 
     func setEqualSuperviewBoundsWithFrames() {
-        guard let superview = self.superview else { return }
+        guard let superview = self.superview else {
+            return
+        }
         if frame != superview.bounds {
             frame = superview.bounds
         }
     }
 
     func setEqualSuperviewBoundsWithAutoresizingMask() {
-        guard let superview = self.superview else { return }
+        guard let superview = self.superview else {
+            return
+        }
         if frame != superview.bounds {
             frame = superview.bounds
         }
@@ -59,9 +61,9 @@ public extension UIView {
         translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             topAnchor.constraint(equalTo: superview.topAnchor),
-            leftAnchor.constraint(equalTo: superview.leftAnchor),
-            rightAnchor.constraint(equalTo: superview.rightAnchor),
-            bottomAnchor.constraint(equalTo: superview.bottomAnchor)
+            leadingAnchor.constraint(equalTo: superview.leadingAnchor),
+            bottomAnchor.constraint(equalTo: superview.bottomAnchor),
+            trailingAnchor.constraint(equalTo: superview.trailingAnchor)
         ])
     }
 
@@ -75,12 +77,11 @@ public extension UIView {
         translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             topAnchor.constraint(equalTo: superview.layoutMarginsGuide.topAnchor),
-            leftAnchor.constraint(equalTo: superview.layoutMarginsGuide.leftAnchor),
-            rightAnchor.constraint(equalTo: superview.layoutMarginsGuide.rightAnchor),
-            bottomAnchor.constraint(equalTo: superview.layoutMarginsGuide.bottomAnchor)
+            leadingAnchor.constraint(equalTo: superview.layoutMarginsGuide.leadingAnchor),
+            bottomAnchor.constraint(equalTo: superview.layoutMarginsGuide.bottomAnchor),
+            trailingAnchor.constraint(equalTo: superview.layoutMarginsGuide.trailingAnchor)
         ])
     }
-
 
     func setWidthAndFit(width: CGFloat) {
         frame.setWidth(width)

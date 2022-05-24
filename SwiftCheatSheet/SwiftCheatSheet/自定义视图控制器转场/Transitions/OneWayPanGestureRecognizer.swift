@@ -13,7 +13,7 @@ enum OneWayPanGestureDirection {
 }
 
 class OneWayPanGestureRecognizer: UIPanGestureRecognizer {
-    var drag: Bool = false
+    var drag = false
     var moveX: Int = 0
     var moveY: Int = 0
     var direction: OneWayPanGestureDirection = .down

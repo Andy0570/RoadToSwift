@@ -36,6 +36,11 @@
 		2230E55A283BEEA9007D168D /* OneWayPanGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2230E559283BEEA9007D168D /* OneWayPanGestureRecognizer.swift */; };
 		2230E55C283BF387007D168D /* UIViewController+Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2230E55B283BF387007D168D /* UIViewController+Transitions.swift */; };
 		2230E55E283CA881007D168D /* CoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2230E55D283CA881007D168D /* CoolViewController.swift */; };
+		2230E560283CD8D6007D168D /* ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2230E55F283CD8D6007D168D /* ViewFactory.swift */; };
+		2230E562283CE1FB007D168D /* NSLayoutConstraintExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2230E561283CE1FB007D168D /* NSLayoutConstraintExtension.swift */; };
+		2230E564283CE27F007D168D /* UILayoutPriorityExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2230E563283CE27F007D168D /* UILayoutPriorityExtension.swift */; };
+		2230E566283CE88D007D168D /* ModalTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2230E565283CE88D007D168D /* ModalTransitionAnimator.swift */; };
+		2230E568283CE8D2007D168D /* ModalPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2230E567283CE8D2007D168D /* ModalPresentationController.swift */; };
 		2231431727FB2CE00006B59E /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2231431527FB2CE00006B59E /* PickerViewController.swift */; };
 		2231431827FB2CE00006B59E /* PickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2231431627FB2CE00006B59E /* PickerViewController.xib */; };
 		2235454727F4633D000F7ACD /* CameraControlsViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2235454627F4633D000F7ACD /* CameraControlsViewControllerProtocol.swift */; };
@@ -319,6 +324,11 @@
 		2230E559283BEEA9007D168D /* OneWayPanGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneWayPanGestureRecognizer.swift; sourceTree = "<group>"; };
 		2230E55B283BF387007D168D /* UIViewController+Transitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Transitions.swift"; sourceTree = "<group>"; };
 		2230E55D283CA881007D168D /* CoolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolViewController.swift; sourceTree = "<group>"; };
+		2230E55F283CD8D6007D168D /* ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFactory.swift; sourceTree = "<group>"; };
+		2230E561283CE1FB007D168D /* NSLayoutConstraintExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintExtension.swift; sourceTree = "<group>"; };
+		2230E563283CE27F007D168D /* UILayoutPriorityExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILayoutPriorityExtension.swift; sourceTree = "<group>"; };
+		2230E565283CE88D007D168D /* ModalTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTransitionAnimator.swift; sourceTree = "<group>"; };
+		2230E567283CE8D2007D168D /* ModalPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalPresentationController.swift; sourceTree = "<group>"; };
 		2231431527FB2CE00006B59E /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		2231431627FB2CE00006B59E /* PickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PickerViewController.xib; sourceTree = "<group>"; };
 		2235454627F4633D000F7ACD /* CameraControlsViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraControlsViewControllerProtocol.swift; sourceTree = "<group>"; };
@@ -664,6 +674,7 @@
 			children = (
 				2230E54E283BE1F9007D168D /* HomeViewController.swift */,
 				2230E55D283CA881007D168D /* CoolViewController.swift */,
+				2230E55F283CD8D6007D168D /* ViewFactory.swift */,
 				2230E550283BE45B007D168D /* Transitions */,
 			);
 			path = "自定义视图控制器转场";
@@ -678,6 +689,8 @@
 				2230E557283BED9A007D168D /* StandardInteractionController.swift */,
 				2230E559283BEEA9007D168D /* OneWayPanGestureRecognizer.swift */,
 				2230E555283BECE0007D168D /* InteractionController.swift */,
+				2230E565283CE88D007D168D /* ModalTransitionAnimator.swift */,
+				2230E567283CE8D2007D168D /* ModalPresentationController.swift */,
 			);
 			path = Transitions;
 			sourceTree = "<group>";
@@ -733,35 +746,37 @@
 		223C9550283B161A009F36F4 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				2262189327EDCA790052634A /* UIColor+Extensions.swift */,
-				227944AB28081E7C00BFDADA /* UIBezierPath+Extensions.swift */,
-				223C9552283B161A009F36F4 /* UIEdgeInsetsExtension.swift */,
+				22E3480827E8490600369602 /* AlertDisplayer.swift */,
 				223C9554283B161A009F36F4 /* UIAlertControllerExtension.swift */,
-				223C9557283B161A009F36F4 /* UIColorExtension.swift */,
-				223C9558283B161A009F36F4 /* UITextViewExtension.swift */,
-				223C955A283B161A009F36F4 /* UIVisualEffectViewExtension.swift */,
-				223C955B283B161A009F36F4 /* UILabelExtension.swift */,
 				223C955C283B161A009F36F4 /* UIApplicationExtension.swift */,
+				227944AB28081E7C00BFDADA /* UIBezierPath+Extensions.swift */,
+				226218B627EE25880052634A /* UIButton+Padding.swift */,
+				223C9563283B161A009F36F4 /* UICollectionViewExtension.swift */,
+				2262189327EDCA790052634A /* UIColor+Extensions.swift */,
+				223C9557283B161A009F36F4 /* UIColorExtension.swift */,
+				223C9562283B161A009F36F4 /* UIDeviceExtension.swift */,
+				223C9552283B161A009F36F4 /* UIEdgeInsetsExtension.swift */,
+				223C9561283B161A009F36F4 /* UIFeedbackGeneratorExtension.swift */,
+				223C9565283B161A009F36F4 /* UIFontExtension.swift */,
+				2262189B27EE1F850052634A /* UIImage+Extensions.swift */,
+				223C9569283B161A009F36F4 /* UIImageExtension.swift */,
+				223C955B283B161A009F36F4 /* UILabelExtension.swift */,
+				223C956A283B161A009F36F4 /* UINavigationBarExtension.swift */,
+				223C9566283B161A009F36F4 /* UINavigationControllerExtension.swift */,
+				223C9568283B161A009F36F4 /* UIScrollViewExtension.swift */,
+				226218B827EE265A0052634A /* UISearchBar+Extensions.swift */,
+				223C9564283B161A009F36F4 /* UITabBarControllerExtension.swift */,
+				223C9567283B161A009F36F4 /* UITabBarExtension.swift */,
+				226218B027EE238D0052634A /* UITableView+PDF.swift */,
+				22E3480E27E84BD500369602 /* UITextField+Extensions.swift */,
+				223C9558283B161A009F36F4 /* UITextViewExtension.swift */,
+				226218B427EE252F0052634A /* UIView+Extensions.swift */,
+				226218B227EE24AF0052634A /* UIViewController+Extensions.swift */,
 				223C955D283B161A009F36F4 /* UIViewControllerExtension.swift */,
 				223C955F283B161A009F36F4 /* UIViewExtension.swift */,
-				223C9561283B161A009F36F4 /* UIFeedbackGeneratorExtension.swift */,
-				223C9562283B161A009F36F4 /* UIDeviceExtension.swift */,
-				223C9563283B161A009F36F4 /* UICollectionViewExtension.swift */,
-				223C9564283B161A009F36F4 /* UITabBarControllerExtension.swift */,
-				223C9565283B161A009F36F4 /* UIFontExtension.swift */,
-				223C9566283B161A009F36F4 /* UINavigationControllerExtension.swift */,
-				223C9567283B161A009F36F4 /* UITabBarExtension.swift */,
-				223C9568283B161A009F36F4 /* UIScrollViewExtension.swift */,
-				223C9569283B161A009F36F4 /* UIImageExtension.swift */,
-				223C956A283B161A009F36F4 /* UINavigationBarExtension.swift */,
-				226218B427EE252F0052634A /* UIView+Extensions.swift */,
-				2262189B27EE1F850052634A /* UIImage+Extensions.swift */,
-				226218B627EE25880052634A /* UIButton+Padding.swift */,
-				22E3480E27E84BD500369602 /* UITextField+Extensions.swift */,
-				226218B827EE265A0052634A /* UISearchBar+Extensions.swift */,
-				226218B227EE24AF0052634A /* UIViewController+Extensions.swift */,
-				22E3480827E8490600369602 /* AlertDisplayer.swift */,
-				226218B027EE238D0052634A /* UITableView+PDF.swift */,
+				223C955A283B161A009F36F4 /* UIVisualEffectViewExtension.swift */,
+				2230E563283CE27F007D168D /* UILayoutPriorityExtension.swift */,
+				2230E561283CE1FB007D168D /* NSLayoutConstraintExtension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -1990,6 +2005,7 @@
 				223A178F282DE852003FB424 /* SchedulePicker.swift in Sources */,
 				227762F0283534DD004C025D /* PanZoomImageView.swift in Sources */,
 				2246199B27EAF5A00096C856 /* GradientColorViewController.swift in Sources */,
+				2230E562283CE1FB007D168D /* NSLayoutConstraintExtension.swift in Sources */,
 				22A7C75027C8AA4400196326 /* Post.swift in Sources */,
 				221C58F227F8895D00E5D855 /* RecordVideoViewController.swift in Sources */,
 				223A1797282DF864003FB424 /* DownloadButton.swift in Sources */,
@@ -2012,6 +2028,7 @@
 				22DF13902810E78900482E5F /* ProgramaticallyCreateViewController.swift in Sources */,
 				22D2234D27BCF20A000EAD0F /* Item.swift in Sources */,
 				22569EB827E33918009B18A3 /* EmptyView.swift in Sources */,
+				2230E560283CD8D6007D168D /* ViewFactory.swift in Sources */,
 				22569EB027E3247C009B18A3 /* RecordingsResult.swift in Sources */,
 				22E3481527E84F0D00369602 /* DataResponseError.swift in Sources */,
 				22EE32C927D0925D00A9A66F /* AnchorsViewController.swift in Sources */,
@@ -2082,6 +2099,7 @@
 				225F202327C332F0008FCC29 /* TurnStrategy.swift in Sources */,
 				227762EE283530D5004C025D /* ZoomableImageViewCell.swift in Sources */,
 				227944AA2807FC2900BFDADA /* Assets.swift in Sources */,
+				2230E564283CE27F007D168D /* UILayoutPriorityExtension.swift in Sources */,
 				227E7EBB27E083B7009D5E45 /* CustomTableViewCell.swift in Sources */,
 				223C9581283B161A009F36F4 /* UIEdgeInsetsExtension.swift in Sources */,
 				223C9590283B161A009F36F4 /* UIFeedbackGeneratorExtension.swift in Sources */,
@@ -2101,6 +2119,7 @@
 				2246DD1C27C4BA35006A3AC1 /* Icon.swift in Sources */,
 				227E7EC227E09345009D5E45 /* AttributedStringViewController.swift in Sources */,
 				22BF2E1827BDFF35009027E3 /* Album.swift in Sources */,
+				2230E568283CE8D2007D168D /* ModalPresentationController.swift in Sources */,
 				22569EBC27E33931009B18A3 /* ErrorView.swift in Sources */,
 				22D9330B27D5A55900D1B0B4 /* DRHTextFieldViewController.swift in Sources */,
 				22BF2E3A27BF774D009027E3 /* GameView.swift in Sources */,
@@ -2108,6 +2127,7 @@
 				22BF2E4927BFA08A009027E3 /* Turn.swift in Sources */,
 				22BF2E4227BF91B9009027E3 /* ShapeViewFactory.swift in Sources */,
 				22E3481127E84C5800369602 /* ButtonEnablingBehavior.swift in Sources */,
+				2230E566283CE88D007D168D /* ModalTransitionAnimator.swift in Sources */,
 				223C9596283B161A009F36F4 /* UITabBarExtension.swift in Sources */,
 				222B3FD527E06200009C7322 /* GrowingCellViewController.swift in Sources */,
 				22BF2E3627BF750C009027E3 /* Shape.swift in Sources */,

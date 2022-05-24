@@ -17,15 +17,15 @@ class ModalTransitionManager: NSObject {
 
 extension ModalTransitionManager: UIViewControllerTransitioningDelegate {
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-
+        return ModalPresentationController(presentedViewController: presented, presenting: presenting)
     }
 
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-
+        return ModalTransitionAnimator(presenting: true)
     }
 
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-
+        return ModalTransitionAnimator(presenting: false)
     }
 
     // 是否应该以交互式方式执行 dismiss 动画？
