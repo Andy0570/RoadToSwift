@@ -18,6 +18,7 @@ class SuperHeroSectionController: ListSectionController {
 
     // 当 sectionController 获取到数据时调用该方法。我们只是使用这个函数来存储我们当前的模型。
     override func didUpdate(to object: Any) {
+        precondition(object is SuperHero)
         guard let superHero = object as? SuperHero else {
             return
         }

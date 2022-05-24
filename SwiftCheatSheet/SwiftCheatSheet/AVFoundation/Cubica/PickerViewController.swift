@@ -89,17 +89,17 @@ class PickerViewController: UIViewController {
     }
 
     private func showInProgress() {
-      activityIndicator.startAnimating()
-      imageView.alpha = 0.3
-      pickButton.isEnabled = false
-      recordButton.isEnabled = false
+        activityIndicator.startAnimating()
+        imageView.alpha = 0.3
+        pickButton.isEnabled = false
+        recordButton.isEnabled = false
     }
 
     private func showCompleted() {
-      activityIndicator.stopAnimating()
-      imageView.alpha = 1
-      pickButton.isEnabled = true
-      recordButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
+        activityIndicator.stopAnimating()
+        imageView.alpha = 1
+        pickButton.isEnabled = true
+        recordButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
     }
 }
 
@@ -117,10 +117,10 @@ extension PickerViewController: UITextFieldDelegate {
 extension PickerViewController: UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         guard let url = info[UIImagePickerController.InfoKey.mediaURL] as? URL,
-            let name = nameTextField.text else {
-                print("Cannot get video URL")
-                return
-            }
+              let name = nameTextField.text else {
+            print("Cannot get video URL")
+            return
+        }
 
         showInProgress()
         dismiss(animated: true) {

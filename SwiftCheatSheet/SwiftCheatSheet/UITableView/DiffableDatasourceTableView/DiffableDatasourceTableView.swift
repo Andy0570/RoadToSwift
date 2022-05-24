@@ -52,7 +52,7 @@ class DiffableDatasourceTableView: UIViewController {
     lazy var dataSource: TableDataSource = {
         let dataSource = TableDataSource(tableView: tableView, cellProvider: { tableView, indexPath, model -> UITableViewCell? in
             // 在 cellProvider 闭包中处理本质上是 cellForRow: 的内容
-            let cell = tableView.dequeueReusableCell(withIdentifier: UITableViewCell.reuseIdentifier(), for: indexPath)
+            let cell = tableView.dequeueReusableCell(withClass: UITableViewCell.self, for: indexPath)
             cell.textLabel?.text = model.name
             return cell
         })
@@ -63,7 +63,7 @@ class DiffableDatasourceTableView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: UITableViewCell.reuseIdentifier())
+        tableView.register(cellWithClass: UITableViewCell.self)
         view.addSubview(tableView)
         tableView.frame = view.bounds
         tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]

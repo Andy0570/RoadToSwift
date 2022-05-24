@@ -11,6 +11,7 @@ class AdSectionController: ListSectionController {
     var currentAd: Ad?
 
     override func didUpdate(to object: Any) {
+        precondition(object is Ad)
         guard let ad = object as? Ad else {
             return
         }

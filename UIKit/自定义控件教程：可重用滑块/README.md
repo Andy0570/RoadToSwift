@@ -13,3 +13,4 @@
 * [fave-button](https://github.com/tljackyi/fave-button)
 * [SHToggleButton](https://github.com/SoufianHossam/SHToggleButton)
 * [fave-button](https://github.com/janselv/fave-button)
+* [HGCircularSlider](https://github.com/HamzaGhazouani/HGCircularSlider) ⭐️2.3k - 自定义可重用循环/进度滑块控件。

@@ -11,6 +11,7 @@ disabled_rules: # 关闭某些默认开启的规则
   - todo # TODO 和 FIXME 应该避免使用，使用 'notaTODO' 和 'notaFIXME' 代替
   - line_length # 限制每行代码的字符长度
   - type_body_length # 类型正文不应跨越太多行。warning: 200, error: 350
+  - large_tuple # 元组不应该有太多的成员。应该改为创建自定义类型。默认 2 个成员警告，3个成员报错！
   # - unused_capture_list # 应删除捕获列表中未使用的引用 [weak self]
   # - unused_closure_parameter # 闭包中未使用的参数应替换为_
 

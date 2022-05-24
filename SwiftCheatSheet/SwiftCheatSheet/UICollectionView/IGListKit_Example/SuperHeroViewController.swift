@@ -11,6 +11,7 @@ import IGListKit
 /// 参考：<https://medium.com/ios-os-x-development/learn-master-%EF%B8%8F-the-basics-of-iglistkit-in-10-minutes-3b9ce8a2632b>
 class SuperHeroViewController: UIViewController {
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    let dataSource = SuperHeroDataSource()
 
     // ListAdapter 的三个属性：
     // updater：处理 row 和 section 的更新，通常我们用默认实现就够了。
@@ -26,7 +27,7 @@ class SuperHeroViewController: UIViewController {
 
         view.addSubview(collectionView)
         adapter.collectionView = collectionView
-        adapter.dataSource = SuperHeroDataSource()
+        adapter.dataSource = self.dataSource
     }
 
     override func viewDidLayoutSubviews() {

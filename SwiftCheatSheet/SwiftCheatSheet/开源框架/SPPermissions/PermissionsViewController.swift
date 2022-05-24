@@ -35,7 +35,7 @@ class PermissionsViewController: UIViewController {
 
     lazy var dataSource: PermissionsDataSource = {
         let dataSource = PermissionsDataSource(tableView: tableView) { tableView, indexPath, permission in
-            let cell = tableView.dequeueReusableCell(withIdentifier: UITableViewCell.reuseIdentifier(), for: indexPath)
+            let cell = tableView.dequeueReusableCell(withClass: UITableViewCell.self, for: indexPath)
             cell.textLabel?.text = permission.title
             return cell
         }
@@ -46,7 +46,7 @@ class PermissionsViewController: UIViewController {
         super.viewDidLoad()
         title = "SPPermissions"
 
-        tableView.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: UITableViewCell.reuseIdentifier())
+        tableView.register(cellWithClass: UITableViewCell.self)
         view.addSubview(tableView)
         tableView.frame = view.bounds
         tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]

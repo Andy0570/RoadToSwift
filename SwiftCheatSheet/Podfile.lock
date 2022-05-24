@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (5.6.0)
   - FaveButton (3.2.1)
+  - FSPagerView (0.8.3)
   - IGListDiffKit (4.0.0)
   - IGListKit (4.0.0):
     - IGListDiffKit (= 4.0.0)
@@ -57,6 +58,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - FaveButton
+  - FSPagerView
   - IGListKit
   - Kingfisher (~> 7.0)
   - SPPermissions/Camera
@@ -73,6 +75,7 @@ SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - FaveButton
+    - FSPagerView
     - IGListDiffKit
     - IGListKit
     - Kingfisher
@@ -92,6 +95,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: 0c07058209f211e3d32824f8e0766d7c44ac83b3
   FaveButton: 93cfebf6030336fa7653fad2068c3152ed668b39
+  FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
   IGListDiffKit: 665d6cf43ce726e676013db9c7d6c4294259b6b2
   IGListKit: fd5a5d21935298f5849fa49d426843cff97b77c7
   Kingfisher: 7c084bebf7d548c623ad41bcf765fb200efed369
@@ -99,6 +103,6 @@ SPEC CHECKSUMS:
   SwifterSwift: 03a3e5fe175b6696193b2c9d0dfa7f0bf9ac02cc
   SwiftyBeaver: c8241b4745aa269a78ca5a022532c6915e948536
 
-PODFILE CHECKSUM: 7f3befc6af6bb232f47c8ba88f68f6c1f08f4a10
+PODFILE CHECKSUM: d0bf6d34ab21c77284653361c01997d9e8c3cfcb
 
 COCOAPODS: 1.11.3

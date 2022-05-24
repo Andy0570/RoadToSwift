@@ -17,16 +17,8 @@ class DRHTextFieldViewController: UIViewController {
         return hoverTextView
     }()
 
-    // 单击手势，点击空白区域收起键盘
-    lazy var tapRecognizer: UITapGestureRecognizer = {
-        var recognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        return recognizer
-    }()
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.addGestureRecognizer(tapRecognizer)
 
         hoverTextView.hoverDelegate = self
         view.addSubview(hoverTextView)
@@ -35,13 +27,8 @@ class DRHTextFieldViewController: UIViewController {
             hoverTextView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             hoverTextView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
-    }
 
-    // MARK: - Internal Methods
-
-    @objc func dismissKeyboard() {
-        // textField.resignFirstResponder()
-        view.endEditing(true)
+        dismissKeyboardWhenTappedAround()
     }
 }
 

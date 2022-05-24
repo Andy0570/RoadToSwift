@@ -15,12 +15,13 @@ class MenuButtonViewController: UIViewController {
     }
 
     private lazy var formatter = MeasurementFormatter()
+    var didTapCommentPencilButton: (() -> Void)?
 
-    weak var button: MenuButton!
+    weak var menuButton: MenuButton!
 
     private lazy var carButton: UIButton = {
         var config = UIButton.Configuration.filled()
-        config.buttonSize = .medium
+        config.buttonSize = .large
         config.cornerStyle = .capsule // 按钮圆角样式，胶囊
         config.titleTextAttributesTransformer = UIConfigurationTextAttributesTransformer { incoming in
             var outgoing = incoming
@@ -57,15 +58,56 @@ class MenuButtonViewController: UIViewController {
         return button
     }()
 
-    override func loadView() {
-        super.loadView()
+    private lazy var commentPencilButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        let titleColor = UIColor(red: 128/255.0, green: 128/255.0, blue: 128/255.0, alpha: 1.0)
 
-        // 初始化按钮。添加按钮并设置自动布局约束
-        let button = MenuButton()
-        view.addSubview(button)
-        self.button = button
-        NSLayoutConstraint.activate(button.layoutConstraints(in: view))
+        if #available(iOS 15.0, *) {
+            var config = UIButton.Configuration.gray()
+            config.baseForegroundColor = titleColor
+            config.buttonSize = .medium
+            config.cornerStyle = .capsule
 
+            // 配置按钮标题样式
+            var container = AttributeContainer()
+            container.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+            config.attributedTitle = AttributedString("我要评论...", attributes: container)
+            config.titleAlignment = .leading
+
+            // iOS 13.0, 配置 SF 图片
+            config.image = UIImage(systemName: "highlighter")
+            config.imagePadding = 5.0
+            config.imagePlacement = .leading
+            config.preferredSymbolConfigurationForImage = UIImage.SymbolConfiguration(scale: .medium)
+            config.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 15, bottom: 10, trailing: 30)
+
+            button.configuration = config
+
+            // iOS 14.0
+            let action = UIAction { _ in
+                self.didTapCommentPencilButton?()
+            }
+            button.addAction(action, for: .touchUpInside)
+        } else {
+            button.backgroundColor = UIColor(red: 245/255.0, green: 245/255.0, blue: 245/255.0, alpha: 1.0)
+            button.setTitle("我要评论...", for: .normal)
+            button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+            button.setTitleColor(titleColor, for: .normal)
+            button.layer.cornerRadius = 17.0
+            button.layer.masksToBounds = true
+            button.addTarget(self, action: #selector(commentPencilButtonTapped(_:)), for: .touchUpInside)
+        }
+
+        return button
+    }()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        view.backgroundColor = UIColor.systemBackground
+
+        // 自定义心形按钮
         let heartButton = HeartButton()
         heartButton.translatesAutoresizingMaskIntoConstraints = false
         heartButton.defaultImage = UIImage(named: "like_normal")
@@ -78,17 +120,33 @@ class MenuButtonViewController: UIViewController {
             heartButton.widthAnchor.constraint(equalToConstant: 48),
             heartButton.heightAnchor.constraint(equalToConstant: 48)
         ])
-    }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+        // 弹出菜单按钮
+        let button = MenuButton()
+        view.addSubview(button)
+        self.menuButton = button
+        NSLayoutConstraint.activate(button.layoutConstraints(in: view))
 
-        view.backgroundColor = UIColor.systemBackground
-
+        // 汽车按钮
         view.addSubview(carButton)
         NSLayoutConstraint.activate([
             carButton.topAnchor.constraint(equalTo: button.bottomAnchor, constant: 10),
             carButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
+
+        // 我要评论
+        view.addSubview(commentPencilButton)
+        NSLayoutConstraint.activate([
+            commentPencilButton.topAnchor.constraint(equalTo: carButton.bottomAnchor, constant: 20),
+            commentPencilButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
+    }
+
+    // MARK: - Action
+
+    @objc func commentPencilButtonTapped(_ sender: UIButton) {
+        log.debug("Function: \(#function), line: \(#line)")
+
+        self.didTapCommentPencilButton?()
     }
 }

@@ -94,6 +94,16 @@
         "title": "IGListKit_Example",
         "description": "",
         "className": "SuperHeroViewController"
+    },{
+        "image": "image",
+        "title": "FSPagerView",
+        "description": "",
+        "className": "FSPageViewController"
+    },{
+        "image": "image",
+        "title": "ZoomableViewController",
+        "description": "",
+        "className": "ZoomableViewController"
     }]
 }, {
     "title": "自动布局",
@@ -145,6 +155,11 @@
         "title": "为 UITextField 添加动画",
         "description": "description",
         "className": "BayleafLoginViewController"
+    }, {
+        "image": "image",
+        "title": "自定义视图控制器转场",
+        "description": "-",
+        "className": "HomeViewController"
     }, {
         "image": "image",
         "title": "title2",

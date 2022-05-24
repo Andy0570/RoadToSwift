@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         tableView.backgroundColor = .systemBackground
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: UITableViewCell.reuseIdentifier())
+        tableView.register(cellWithClass: UITableViewCell.self)
         tableView.delegate = self
         return tableView
     }()
@@ -46,7 +46,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         // 加载数据源，设置代理
-        arrayDataSource = ArrayDataSource(sections: sections, cellReuseIdentifier: UITableViewCell.reuseIdentifier())
+        arrayDataSource = ArrayDataSource(sections: sections, cellReuseIdentifier: String(describing: UITableViewCell.self))
         arrayDataSource.cellConfigureClosure = { tableViewCell, cell in
             tableViewCell.configureForCell(cell: cell)
         }

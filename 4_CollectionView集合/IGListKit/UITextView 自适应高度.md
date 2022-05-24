@@ -102,7 +102,10 @@ class TitleSectionController: ListSectionController {
 
 extension TitleSectionController: PublishTitleCellProtocol {
     func updateHeightOfRow(_ cell: PublishTitleCell, _ textView: UITextView) {
-        collectionContext?.invalidateLayout(for: self)
+      // [self updateAnimated:true completion:nil];
+      
+      // !!!: 此方法在某些初始化场景中会导致应用崩溃
+      collectionContext?.invalidateLayout(for: self)
     }
 }
 ```

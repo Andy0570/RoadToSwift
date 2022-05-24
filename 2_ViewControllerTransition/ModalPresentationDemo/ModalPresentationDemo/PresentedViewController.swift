@@ -79,7 +79,6 @@ extension PresentedViewController: UIAdaptivePresentationControllerDelegate {
     func presentationControllerDidAttemptToDismiss(_ presentationController: UIPresentationController) {
         
         // 在这个方法中询问用户是否需要保存编辑的内容
-        
     }
     
     func presentationControllerWillDismiss(_ presentationController: UIPresentationController) {
