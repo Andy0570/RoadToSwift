@@ -1945,7 +1945,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# SwiftGen\nif which swiftgen >/dev/null; then\n  swiftgen config run --config swiftgen.yml\nelse\n  echo \"warning: SwiftGen is not installed. download from https://github.com/SwiftGen/SwiftGen\"\nfi\n\n# SwiftLint\nif which swiftlint >/dev/null; then\n  swiftlint --fix && swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "# SwiftGen\nif which swiftgen >/dev/null; then\n  swiftgen config run --config swiftgen.yml\nelse\n  echo \"warning: SwiftGen is not installed. download from https://github.com/SwiftGen/SwiftGen\"\nfi\n\n# SwiftLint\nif which swiftlint >/dev/null; then\n    swiftlint --fix && swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		4645A1A0AC718E3CCCA141A9 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

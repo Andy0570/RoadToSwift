@@ -8,12 +8,20 @@
 import UIKit
 
 class ModalPresentationController: UIPresentationController {
-    lazy var fadeView: UIView = .make(backgroundColor: UIColor.black.withAlphaComponent(0.3), alpha: 0.0)
+    lazy var fadeView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = UIColor.black.withAlphaComponent(0.3)
+        view.alpha = 0.0
+        return view
+    }()
 
     override func presentationTransitionWillBegin() {
-        guard let containerView = containerView else { return }
-        containerView.insertSubview(fadeView, at: 0)
+        guard let containerView = containerView else {
+            return
+        }
 
+        containerView.insertSubview(fadeView, at: 0)
         NSLayoutConstraint.activate([
             fadeView.topAnchor.constraint(equalTo: containerView.topAnchor),
             fadeView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
@@ -26,8 +34,8 @@ class ModalPresentationController: UIPresentationController {
             return
         }
 
-        coordinator.animate(alongsideTransition: { _ in
-            self.fadeView.alpha = 1.0
+        coordinator.animate(alongsideTransition: { [weak self] _ in
+            self?.fadeView.alpha = 1.0
         })
     }
 
@@ -38,8 +46,8 @@ class ModalPresentationController: UIPresentationController {
         }
 
         if !coordinator.isInteractive {
-            coordinator.animate(alongsideTransition: { _ in
-                self.fadeView.alpha = 0.0
+            coordinator.animate(alongsideTransition: { [weak self] _ in
+                self?.fadeView.alpha = 0.0
             })
         }
     }
@@ -49,7 +57,9 @@ class ModalPresentationController: UIPresentationController {
     }
 
     override var frameOfPresentedViewInContainerView: CGRect {
-        guard let containerView = containerView, let presentedView = presentedView else { return .zero }
+        guard let containerView = containerView, let presentedView = presentedView else {
+            return .zero
+        }
 
         let inset: CGFloat = 16
         let safeAreaFrame = containerView.bounds.inset(by: containerView.safeAreaInsets)
@@ -71,7 +81,6 @@ class ModalPresentationController: UIPresentationController {
         frame.origin.y += 8.0
         frame.size.width = targetWidth
         frame.size.height = targetHeight
-
         return frame
     }
 }

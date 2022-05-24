@@ -152,6 +152,7 @@
 * :heart: [Bartinter](https://github.com/MaximKotliar/Bartinter) ⭐️1.7k - 根据状态栏背后的内容动态更改状态栏样式主题。
 * [Pulley](https://github.com/52inc/Pulley) ⭐️2k - 一个模仿 iOS 10/11 地图中抽屉的库。类似于呈现一个半模态视图控制器。
 * [FloatingPanel](https://github.com/SCENEE/FloatingPanel) ⭐️4.9k - 简洁易用的浮动面板 UI 组件。
+* [HWPanModal](https://github.com/HeathWang/HWPanModal) ⭐️940 - 任意形式的底部弹框动画。
 
 
 

@@ -27,6 +27,7 @@ extension ModalTransitionAnimator: UIViewControllerAnimatedTransitioning {
         }
     }
 
+    // Presentation 动画
     private func animatePresentation(using transitionContext: UIViewControllerContextTransitioning) {
         let presentedViewController = transitionContext.viewController(forKey: .to)!
         transitionContext.containerView.addSubview(presentedViewController.view)
@@ -47,6 +48,7 @@ extension ModalTransitionAnimator: UIViewControllerAnimatedTransitioning {
         animator.startAnimation()
     }
 
+    // Dismissal 动画
     private func animateDismissal(using transitionContext: UIViewControllerContextTransitioning) {
         let presentedViewController = transitionContext.viewController(forKey: .from)!
         let presentedFrame = transitionContext.finalFrame(for: presentedViewController)
