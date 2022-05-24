@@ -35,6 +35,7 @@
 		2230E558283BED9A007D168D /* StandardInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2230E557283BED9A007D168D /* StandardInteractionController.swift */; };
 		2230E55A283BEEA9007D168D /* OneWayPanGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2230E559283BEEA9007D168D /* OneWayPanGestureRecognizer.swift */; };
 		2230E55C283BF387007D168D /* UIViewController+Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2230E55B283BF387007D168D /* UIViewController+Transitions.swift */; };
+		2230E55E283CA881007D168D /* CoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2230E55D283CA881007D168D /* CoolViewController.swift */; };
 		2231431727FB2CE00006B59E /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2231431527FB2CE00006B59E /* PickerViewController.swift */; };
 		2231431827FB2CE00006B59E /* PickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2231431627FB2CE00006B59E /* PickerViewController.xib */; };
 		2235454727F4633D000F7ACD /* CameraControlsViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2235454627F4633D000F7ACD /* CameraControlsViewControllerProtocol.swift */; };
@@ -317,6 +318,7 @@
 		2230E557283BED9A007D168D /* StandardInteractionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardInteractionController.swift; sourceTree = "<group>"; };
 		2230E559283BEEA9007D168D /* OneWayPanGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneWayPanGestureRecognizer.swift; sourceTree = "<group>"; };
 		2230E55B283BF387007D168D /* UIViewController+Transitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Transitions.swift"; sourceTree = "<group>"; };
+		2230E55D283CA881007D168D /* CoolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolViewController.swift; sourceTree = "<group>"; };
 		2231431527FB2CE00006B59E /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		2231431627FB2CE00006B59E /* PickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PickerViewController.xib; sourceTree = "<group>"; };
 		2235454627F4633D000F7ACD /* CameraControlsViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraControlsViewControllerProtocol.swift; sourceTree = "<group>"; };
@@ -661,6 +663,7 @@
 			isa = PBXGroup;
 			children = (
 				2230E54E283BE1F9007D168D /* HomeViewController.swift */,
+				2230E55D283CA881007D168D /* CoolViewController.swift */,
 				2230E550283BE45B007D168D /* Transitions */,
 			);
 			path = "自定义视图控制器转场";
@@ -669,12 +672,12 @@
 		2230E550283BE45B007D168D /* Transitions */ = {
 			isa = PBXGroup;
 			children = (
-				2230E551283BE479007D168D /* ModalTransitionManager.swift */,
 				2230E553283BE6A4007D168D /* CustomPresentable.swift */,
-				2230E555283BECE0007D168D /* InteractionController.swift */,
+				2230E55B283BF387007D168D /* UIViewController+Transitions.swift */,
+				2230E551283BE479007D168D /* ModalTransitionManager.swift */,
 				2230E557283BED9A007D168D /* StandardInteractionController.swift */,
 				2230E559283BEEA9007D168D /* OneWayPanGestureRecognizer.swift */,
-				2230E55B283BF387007D168D /* UIViewController+Transitions.swift */,
+				2230E555283BECE0007D168D /* InteractionController.swift */,
 			);
 			path = Transitions;
 			sourceTree = "<group>";
@@ -2130,6 +2133,7 @@
 				222D1485281008D300F70EDC /* MySecondView.swift in Sources */,
 				22A7C75227C8AC0100196326 /* Comment.swift in Sources */,
 				22CBBD5327F2FD8F0014475E /* CameraController.swift in Sources */,
+				2230E55E283CA881007D168D /* CoolViewController.swift in Sources */,
 				226218B327EE24AF0052634A /* UIViewController+Extensions.swift in Sources */,
 				22AC911D27DF4990007260E6 /* Auteur.swift in Sources */,
 				228E44C12812770600C07C60 /* AdSectionController.swift in Sources */,

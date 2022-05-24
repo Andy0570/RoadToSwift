@@ -8,6 +8,7 @@
 import UIKit
 
 protocol CustomPresentable: UIViewController {
+    // 被呈现控制器需要保持对遵守 <UIViewControllerTransitioningDelegate> 转场协议对象的强引用
     var transitionManager: UIViewControllerTransitioningDelegate? { get set }
     var dismissalHandlingScrollView: UIScrollView? { get }
     func updatePresentationLayout(animated: Bool)

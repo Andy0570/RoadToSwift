@@ -8,5 +8,6 @@
 import UIKit
 
 protocol InteractionController: UIViewControllerInteractiveTransitioning {
+    // 是否通过手势触发 dismissal 转场
     var interactionInProgress: Bool { get }
 }

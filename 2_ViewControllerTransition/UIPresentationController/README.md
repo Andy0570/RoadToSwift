@@ -695,7 +695,7 @@ NS_ASSUME_NONNULL_END
 
 🎉🎉🎉 效果就是你在文章最开始看见的样子。
 
-千呼万唤始出来，源码也不能少，该示例代码可以在 [iOS-Samples/UIPresentationController相关示例/UIPresentationController/HQLPasswordView](https://github.com/Andy0570/iOS-Samples/tree/master/UIPresentationController%20%E7%9B%B8%E5%85%B3%E7%A4%BA%E4%BE%8B/UIPresentationController/UIPresentationController/HQLPasswordView) 中找到。可能是藏得比较深了，为了避免 iOS Demo 过多，并且分散在 GitHub 的多个仓库下，使得 repositories 变得臃肿，而且也造成了项目污染，所以我把它们都归档在一个仓库下了。
+千呼万唤始出来，源码也不能少，该示例代码可以在 [RoadToSwift/2_ViewControllerTransition/UIPresentationController](https://github.com/Andy0570/RoadToSwift/tree/main/2_ViewControllerTransition/UIPresentationController) 中找到。可能是藏得比较深了，为了避免 iOS Demo 过多，并且分散在 GitHub 的多个仓库下，使得 repositories 变得臃肿，而且也造成了项目污染，所以我把它们都归档在一个仓库下了。
 
 
 
