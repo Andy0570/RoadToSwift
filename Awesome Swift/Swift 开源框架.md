@@ -153,6 +153,7 @@
 * [Pulley](https://github.com/52inc/Pulley) ⭐️2k - 一个模仿 iOS 10/11 地图中抽屉的库。类似于呈现一个半模态视图控制器。
 * [FloatingPanel](https://github.com/SCENEE/FloatingPanel) ⭐️4.9k - 简洁易用的浮动面板 UI 组件。
 * [HWPanModal](https://github.com/HeathWang/HWPanModal) ⭐️940 - 任意形式的底部弹框动画。
+* [CardParts](https://github.com/intuit/CardParts) ⭐️2.4k - 基于卡片的响应式 UI 框架。
 
 
 
@@ -161,7 +162,7 @@
 * :heart: [Siren](https://github.com/ArtSabintsev/Siren) ⭐️3.9k - 当应用版本更新时，通知用户并提供 App Store 链接。
 * :heart: [SPPermissions](https://github.com/ivanvorobei/SPPermissions) ⭐️4.8k - 通过列表、Dialog 对话框和原生界面的方式向用户请求访问权限。可以检查权限状态。支持 SwiftUI。
 * [xmartlabs/XLActionController](https://github.com/xmartlabs/XLActionController) ⭐️3.3k - 有多种可自定义可扩展的底部菜单栏控件，重点是跟 XLForm/Eureka 框架是同一个作者。
-* [Toast-Swift](https://github.com/scalessec/Toast-Swift) ⭐️3k
+* [Toast-Swift](https://github.com/scalessec/Toast-Swift) ⭐️3.1 - 向 UIView 对象添加 Toast 通知的 Swift 扩展。
 * [WMZDialog](https://github.com/wwmz/WMZDialog) ⭐️881 - 功能最多样式最多的弹窗，支持普通 / 底部 / 日期 / 地区 / 日历 / 选择 / 编辑 / 分享 / 菜单 / 自定义弹窗等，支持多种动画，链式编程调用。
 * [alerts-and-pickers](https://github.com/dillidon/alerts-and-pickers) ⭐️5.4k - UIAlertController 和基于它的选择器的高级用法：电报、联系人、位置、照片库、国家、电话代码、货币、日期...
 * [Mandoline](https://github.com/blueapron/Mandoline) ⭐️885 - iOS picker 视图可满足您的所有“挑选”需求。
@@ -798,6 +799,7 @@
 * :heart: [Bond](https://github.com/DeclarativeHub/Bond) ⭐️4.2k - A Swift binding framework
 * [Observable-Swift](https://github.com/slazyk/Observable-Swift) ⭐️1.2k - KVO for Swift - Value Observing and Events
 * [RZDataBinding](https://github.com/Rightpoint/RZDataBinding) ⭐️551 - Lightweight KVO-based data binding options.
+* [SwiftKVC](https://github.com/bradhilton/SwiftKVC) - Key-Value Coding (KVC) for native Swift classes and structs
 
 
 
@@ -868,22 +870,6 @@
 * [purchases-ios](https://github.com/RevenueCat/purchases-ios) ⭐️1.3k - 使应用内购买和订阅变得容易。支持 iOS、iPadOS、watchOS 和 Mac。
 
 
-## Misc
-
-*与Swift相关的各种项目* [回到顶部](#Awesome Swift)
-
-* [acli](https://github.com/eugenpirogoff/acli) - commandline tool to download curated libraries from github (very beta)
-* [Compass](https://github.com/hyperoslo/Compass) - Compass helps you setup a central navigation system for your application.
-* [R.swift](https://github.com/mac-cain13/R.swift/) - tool to get strong typed, autocompleted resources like images and segues in your Swift project
-* [SwiftKVC](https://github.com/bradhilton/SwiftKVC) - Key-Value Coding (KVC) for native Swift classes and structs
-* [Tactile](https://github.com/delba/Tactile) - A safer and more idiomatic way to respond to gestures and control events.
-* [Swift 4 Module Template](https://github.com/fulldecent/swift4-module-template) - An opinionated starting point for awesome, reusable Swift 4 modules
-* [SwiftValidators](https://github.com/gkaimakas/SwiftValidators) - String validation for iOS developed in Swift. Inspired by validator.js
-* [Versions](https://github.com/zenangst/Versions) - Helping you find inner peace when comparing version numbers in Swift
-* [Swift 4 Module Template](https://github.com/fulldecent/swift4-module-template) - An opinionated starting point for awesome, reusable Swift 4 modules
-* [XcodeGen](https://github.com/yonaskolb/XcodeGen) ⭐️5k - 一个用 Swift 编写的命令行工具，它使用文件夹结构和项目规范生成您的 Xcode 项目。
-
-
 
 ## 调试
 
@@ -901,8 +887,6 @@
 * [SwiftTweaks](https://github.com/Khan/SwiftTweaks) ⭐️1.3k - 调整你的iOS应用，而不需要重新编译。
 * [TweaKit](https://github.com/Cokile/TweaKit) ⭐️3 - 类似于 SwiftTweaks, 另一个用于调整参数和特征标记的库。
 * [GodEye](https://github.com/zixun/GodEye) ⭐️3.7k - 基于 Swift 的一行代码自动显示 Log、Crash、Network、ANR、Leak、CPU、RAM、FPS、NetFlow、Folder 等。
-
-
 
 
 
@@ -928,6 +912,7 @@
 * [SwiftRandom](https://github.com/thellimist/SwiftRandom) - Generator for random data.  
 * [MockFive](https://github.com/DeliciousRaspberryPi/MockFive) - A mocking framework for Swift with runtime function stubbing.
 * [MoonLight](https://github.com/AgoraIO-Community/MoonLight) ⭐️228 - Agoral 开源框架。MoonLight 是 iOS/Mac 上的性能测试组件，它可以单独集成在任何 App 中实现自动化性能数据的采集，你可以非常轻松的获取到 App CPU、System CPU、App Memory、System GPU、GPU Info、ANR 和 iOS FPS 的数据。
+* [google/swift-benchmark](https://github.com/google/swift-benchmark) ⭐️773 - 对代码段进行基准测试的 Swift 库。
 
 
 
@@ -939,18 +924,36 @@
 
 
 
+## Misc
 
-## 项目管理&CI/CD
+*与Swift相关的各种项目* [回到顶部](#Awesome Swift)
+
+* [tuist](https://github.com/tuist/tuist) ⭐️2.7k - Tuist 是一个命令行工具，可帮助您生成、维护 Xcode 项目并与之交互。
+* [XcodeGen](https://github.com/yonaskolb/XcodeGen) ⭐️5.4k - 用于生成 Xcode 项目的 Swift 命令行工具。
+* [xcake](https://github.com/igor-makarov/xcake) ⭐️598 - 以人类可读的格式描述 Xcode 项目并按需（重新）生成一个。
+* [struct](https://github.com/lyptt/struct) ⭐️711 - Xcode projects on steroids
+* [swift5-module-template](https://github.com/fulldecent/swift5-module-template) ⭐️397 - An opinionated starting point for awesome, reusable Swift 4 modules
+* [acli](https://github.com/eugenpirogoff/acli) - commandline tool to download curated libraries from github (very beta)
+* [Compass](https://github.com/hyperoslo/Compass) - Compass helps you setup a central navigation system for your application.
+* [Tactile](https://github.com/delba/Tactile) - A safer and more idiomatic way to respond to gestures and control events.
+* [SwiftValidators](https://github.com/gkaimakas/SwiftValidators) - String validation for iOS developed in Swift. Inspired by validator.js
+* [Versions](https://github.com/zenangst/Versions) - Helping you find inner peace when comparing version numbers in Swift
+* [IBAnimatable](https://github.com/IBAnimatable/IBAnimatable) ⭐️8.6k - 使用 IBAnimatable 为 App Store 应用程序设计和定制原型 UI、交互、导航、过渡和动画 Interface Builder。
+* [Kin](https://github.com/Serchinastico/Kin) ⭐️812 - Kin 是一个极简工具，用来检查你的 project.pbxproj 文件是否正确。
+
+
+
+
+
+## CI/CD
 
 [回到顶部](#Awesome Swift)
 
-* [tuist](https://github.com/tuist/tuist) ⭐️1.6k - Tuist 是一个命令行工具，可帮助您生成、维护 Xcode 项目并与之交互。
 * [fastlane](https://fastlane.tools/)
 * [Travis CI](https://travis-ci.org/)
 * Jenkins
 * [Danger](https://danger.systems/swift/)
 * [Bitrise](https://www.bitrise.io/) - 持续集成和交付 (CI/CD) 平台即服务 (PaaS)，主要专注于移动应用程序开发（iOS、Android、React Native、Flutter 等）。它是一组工具和服务，可帮助您开发和自动化软件项目。
-* [IBAnimatable](https://github.com/IBAnimatable/IBAnimatable) ⭐️8.6k - 使用 IBAnimatable 为 App Store 应用程序设计和定制原型 UI、交互、导航、过渡和动画 Interface Builder。
 
 
 
@@ -1035,6 +1038,7 @@
 
 * :heart: [RxSwift](https://github.com/ReactiveX/RxSwift) ⭐️22.1k - 简单、高效，活泼的函数响应式编程框架。
 * [RxGesture](https://github.com/RxSwiftCommunity/RxGesture) ⭐️1.2k - 用于视图手势的 RxSwift 响应式包装器。
+* [RxSwiftExt](https://github.com/RxSwiftCommunity/RxSwiftExt) ⭐️1.2k - A collection of Rx operators & tools not found in the core RxSwift distribution.
 * [ReactiveSwift](https://github.com/ReactiveCocoa/ReactiveSwift) ⭐️2.8k - ReactiveSwift 提供了可组合的、声明式的和灵活的基本类型。
 * [ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa) ⭐️20k - ReactiveCocoa 使用 ReactiveSwift 的基本类型来封装 Cocoa 框架的方方面面。
 * [ReactKit](https://github.com/ReactKit/ReactKit) ⭐️1.2k - Swift Reactive Programming.
@@ -1042,7 +1046,6 @@
 * [Dollar](https://github.com/ankurp/Dollar) ⭐️4.2k - Swift 版 Lo-Dash (或 underscore) 函数式工具库。
 * [ReSwift](https://github.com/ReSwift/ReSwift) ⭐️7.1k - 该框架主要针对单页面应用状态及单向数据流管理。
 * [swiftz](https://github.com/maxpow4h/swiftz) - A Swift library for functional programming.
-* [CardParts](https://github.com/intuit/CardParts) ⭐️2.4k - 基于卡片的响应式 UI 框架。
 
 
 
