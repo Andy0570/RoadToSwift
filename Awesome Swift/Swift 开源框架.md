@@ -883,7 +883,7 @@
 * [LifetimeTracker](https://github.com/krzysztofzablocki/LifetimeTracker) ⭐️2.7k - 更快地找到循环引用/内存泄漏。
 * [DeallocationChecker](https://github.com/fastred/DeallocationChecker) ⭐️773 - 在不打开 Instruments 的情况下捕获内存泄漏的视图控制器。
 * [LayoutInspector](https://github.com/isavynskyi/LayoutInspector) ⭐️490 - 3D 视角 iOS 应用布局视图检查器。
-* :heart: [InjectionIII](https://github.com/johnno1962/InjectionIII) ⭐️2.8k - 支持 OC、Swift 以及 Swift 和 OC 混编项目的 UI 热重载工具，采取在模拟器 (真机不支持) 注入方式实现 UI 热重载，修改完 UI 直接 cmd+s，不用重新编译运行就能看到 UI 效果，堪称神器。 目前已经更新支持 Xcode13 和 iOS15。
+* :heart: [InjectionIII](https://github.com/johnno1962/InjectionIII) ⭐️3k - 支持 OC、Swift 以及 Swift 和 OC 混编项目的 UI 热重载工具，采取在模拟器 (真机不支持) 注入方式实现 UI 热重载，修改完 UI 直接 cmd+s，不用重新编译运行就能看到 UI 效果，堪称神器。 目前已经更新支持 Xcode13 和 iOS15。
 * [SwiftTweaks](https://github.com/Khan/SwiftTweaks) ⭐️1.3k - 调整你的iOS应用，而不需要重新编译。
 * [TweaKit](https://github.com/Cokile/TweaKit) ⭐️3 - 类似于 SwiftTweaks, 另一个用于调整参数和特征标记的库。
 * [GodEye](https://github.com/zixun/GodEye) ⭐️3.7k - 基于 Swift 的一行代码自动显示 Log、Crash、Network、ANR、Leak、CPU、RAM、FPS、NetFlow、Folder 等。
@@ -929,7 +929,7 @@
 *与Swift相关的各种项目* [回到顶部](#Awesome Swift)
 
 * [tuist](https://github.com/tuist/tuist) ⭐️2.7k - Tuist 是一个命令行工具，可帮助您生成、维护 Xcode 项目并与之交互。
-* [XcodeGen](https://github.com/yonaskolb/XcodeGen) ⭐️5.4k - 用于生成 Xcode 项目的 Swift 命令行工具。
+* [XcodeGen](https://github.com/yonaskolb/XcodeGen) ⭐️5.4k - 用于生成 Xcode 项目的 Swift 命令行工具，可以解决 `.xcodeproj` 文件合并冲突问题。
 * [xcake](https://github.com/igor-makarov/xcake) ⭐️598 - 以人类可读的格式描述 Xcode 项目并按需（重新）生成一个。
 * [struct](https://github.com/lyptt/struct) ⭐️711 - Xcode projects on steroids
 * [swift5-module-template](https://github.com/fulldecent/swift5-module-template) ⭐️397 - An opinionated starting point for awesome, reusable Swift 4 modules
@@ -1114,6 +1114,7 @@
 
 [回到顶部](#Awesome Swift)
 
+* :warning: [injectionforxcode](https://github.com/johnno1962/injectionforxcode) ⭐️6.5k - Runtime Code Injection for Objective-C & Swift.
 * [XcodeCommentWrapper](https://github.com/SteveBarnegren/XcodeCommentWrapper) - 用于包装注释的 Xcode 扩展
 
 
