@@ -236,6 +236,7 @@
 * [XLPagerTabStrip](https://github.com/xmartlabs/XLPagerTabStrip) ⭐️6.7k - XLPagerTabStrip 是一个容器视图控制器，它允许我们在一组视图控制器之间轻松切换。平移手势可用于移动到下一个或上一个视图控制器。它显示了当前、前一个、下一个子视图控制器的交互式指示器。
 * [xmartlabs/PagerTabStripView](https://github.com/xmartlabs/PagerTabStripView) ⭐️344 - SwiftUI 框架。
 * :warning: [PagingMenuController](https://github.com/kitasuke/PagingMenuController) ⭐️2.5k - 提供多种样式的分页切换控件
+* :warning: [HMSegmentedControl](https://github.com/HeshamMegid/HMSegmentedControl) ⭐️3.9k
 
 
 
@@ -479,6 +480,7 @@
 * [texstyle](https://github.com/rosberry/texstyle) ⭐️78
 * [FlagKit](https://github.com/madebybowtie/FlagKit) ⭐️2.9k - 漂亮的旗帜图标，可在应用程序和 web 上使用。
 * [StringFormatter](https://github.com/orucanil/StringFormatter) ⭐️242 - 简单的文本格式化器（信用卡号码、电话号码、序列号等） 可以根据匹配模式用于所有文本输入。
+* [TextAttributes](https://github.com/delba/TextAttributes) ⭐️2.2k - An easier way to compose attributed strings.
 
 
 
@@ -497,6 +499,7 @@
 * [ColorSet](https://github.com/DigiDNA/ColorSet) ⭐️144 - ColorSet 是一个 macOS 实用程序和框架，允许开发人员轻松管理自定义界面颜色。
 * :warning: [ColorSlider](https://github.com/gizmosachin/ColorSlider) ⭐️269 - Swift 中 Snapchat 风格的颜色选择器。
 * [ColorCompatibility](https://github.com/noahsark769/ColorCompatibility) ⭐️99 - 使用 iOS 13+ 系统颜色，而在 iOS <=12 上默认为浅色。
+* [SwiftyAppearance](https://github.com/victor-pavlychko/SwiftyAppearance) ⭐️32 - Declarative approach to UIAppearance in Swift
 
 
 
