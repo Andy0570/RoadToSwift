@@ -35,7 +35,8 @@ class ModeratorsSearchViewController: UIViewController {
             }
         })
 
-        siteTextField.setBottomBorder()
+        // 设置底部的下划线边框
+        siteTextField.addBottomBorder(borderColor: UIColor.rwGreen)
     }
 
     @IBAction func searchButtonDidTapped(_ sender: Any) {

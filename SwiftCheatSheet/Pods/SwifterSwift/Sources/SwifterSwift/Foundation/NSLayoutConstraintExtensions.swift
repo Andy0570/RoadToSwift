@@ -1,14 +1,10 @@
-//
-//  NSLayoutConstraintExtension.swift
-//  SwiftCheatSheet
-//
-//  Created by Qilin Hu on 2022/5/24.
-//
+// NSLayoutConstraintExtensions.swift - Copyright © 2022 SwifterSwift
 
+#if canImport(UIKit)
 import UIKit
 
-extension NSLayoutConstraint {
-    /// Returns the constraint sender with the passed priority.
+public extension NSLayoutConstraint {
+    /// SwifterSwift: Returns the constraint sender with the passed priority.
     ///
     /// - Parameter priority: The priority to be set.
     /// - Returns: The sended constraint adjusted with the new priority.
@@ -18,3 +14,5 @@ extension NSLayoutConstraint {
         return self
     }
 }
+
+#endif

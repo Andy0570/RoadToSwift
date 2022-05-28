@@ -45,6 +45,19 @@ public extension Array {
             return thisIndex < otherIndex
         }
     }
+
+    /// SwifterSwift: Split array of elements into chunks of a size  specify.
+    ///
+    ///     let array = [1,2,3,4,5,6,7]
+    ///     array.chuncked(by: 3) // [[1,2,3], [4,5,6], [7]]
+    ///
+    /// - Parameter chunkSize: Subarray size.
+    /// - Returns: splited array.
+    func chunked(by chunkSize: Int) -> [[Element]] {
+        return stride(from: 0, to: self.count, by: chunkSize).map {
+            Array(self[$0..<Swift.min($0 + chunkSize, self.count)])
+        }
+    }
 }
 
 // MARK: - Methods (Equatable)

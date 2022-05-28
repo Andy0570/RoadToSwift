@@ -50,7 +50,7 @@ struct AztecBarcode: Barcodable {
     /// The message to encode in the Aztec Barcode
     let inputMessage: Data
 
-    init(inputCompactStyle: Bool? = nil, inputCorrectionLevel: NSNumber = 5.0, inputLayers: NSNumber? = nil, inputMessage: Data) throws {
+    init(inputCompactStyle: Bool? = false, inputCorrectionLevel: NSNumber = 5.0, inputLayers: NSNumber? = nil, inputMessage: Data) throws {
         self.inputCompactStyle = inputCompactStyle
         self.inputCorrectionLevel = inputCorrectionLevel
         self.inputLayers = inputLayers
@@ -156,18 +156,19 @@ struct PDF417Barcode: Barcodable {
     let inputAlwaysSpecifyCompaction: Bool
 
     var properties: [String: Any] {
-        ["inputMessage": inputMessage as NSData,
-         "inputMinWidth": inputMinWidth,
-         "inputMaxWidth": inputMaxWidth,
-         "inputMinHeight": inputMinHeight,
-         "inputMaxHeight": inputMaxHeight,
-         "inputDataColumns": inputDataColumns,
-         "inputRows": inputRows,
-         "inputPreferredAspectRatio": inputPreferredAspectRatio,
-         "inputCompactionMode": inputCompactionMode,
-         "inputCompactStyle": inputCompactStyle as NSNumber,
-         "inputCorrectionLevel": inputCorrectionLevel,
-         "inputAlwaysSpecifyCompaction": inputAlwaysSpecifyCompaction as NSNumber
+        [
+            "inputMessage": inputMessage as NSData,
+            "inputMinWidth": inputMinWidth,
+            "inputMaxWidth": inputMaxWidth,
+            "inputMinHeight": inputMinHeight,
+            "inputMaxHeight": inputMaxHeight,
+            "inputDataColumns": inputDataColumns,
+            "inputRows": inputRows,
+            "inputPreferredAspectRatio": inputPreferredAspectRatio,
+            "inputCompactionMode": inputCompactionMode,
+            "inputCompactStyle": inputCompactStyle as NSNumber,
+            "inputCorrectionLevel": inputCorrectionLevel,
+            "inputAlwaysSpecifyCompaction": inputAlwaysSpecifyCompaction as NSNumber
         ]
     }
 }

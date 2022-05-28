@@ -31,6 +31,11 @@ public extension NotificationCenter {
             block($0)
         }
     }
+
+    /// SwifterSwift: post notification with name
+    func post(name: NSNotification.Name) {
+        post(name: name, object: nil)
+    }
 }
 
 #endif

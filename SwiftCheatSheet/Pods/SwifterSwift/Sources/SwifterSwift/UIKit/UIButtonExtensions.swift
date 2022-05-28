@@ -149,7 +149,37 @@ public extension UIButton {
     func setAttributedTitleForAllStates(_ title: NSAttributedString) {
         states.forEach { setAttributedTitle(title, for: $0) }
     }
-    
+
+    /// SwifterSwift: use SFSymbols as an image for your UIButton.
+    ///
+    /// - Parameters:
+    ///   - iconName: SFSymbol Name.
+    ///   - size: Size of the Symbol in points.
+    ///   - weight: .ultralight, .thin, .light, .regular, .medium, .semibold, .bold, .heavy, .black
+    ///   - scale: .small, .medium, .large
+    ///   - tintColor: Color of the Symbol.
+    ///   - backgroundColor: Background color of the button.
+    @available(iOS 13.0, *)
+    func setSFSymbol(iconName: String, size: CGFloat, weight: UIImage.SymbolWeight, scale: UIImage.SymbolScale, tintColor: UIColor, backgroundColor: UIColor) {
+        let symbolConfiguration = UIImage.SymbolConfiguration(pointSize: size, weight: weight, scale: scale)
+        let buttonImage = UIImage(systemName: iconName, withConfiguration: symbolConfiguration)
+        self.setImage(buttonImage, for: .normal)
+        self.tintColor = tintColor
+        self.backgroundColor = backgroundColor
+    }
+
+    /// SwifterSwift: add Padding in button
+    ///
+    ///     class PaddedButton: UIButton {
+    ///        override var intrinsicContentSize: CGSize {
+    ///            super.intrinsicContentSize.addingPadding(width: 60, height: 20)
+    ///        }
+    ///     }
+    ///
+    func addingPadding(width: CGFloat, height: CGFloat) -> CGSize {
+        CGSize(width: self.width + width, height: self.height + height)
+    }
+
     /// SwifterSwift: Center align title text and image.
     /// - Parameters:
     ///   - imageAboveText: set true to make image above title text, default is false, image on left of text.

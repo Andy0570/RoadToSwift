@@ -16,6 +16,20 @@ public extension Dictionary {
         self.init(grouping: sequence, by: { $0[keyPath: keyPath] })
     }
 
+    /// SwifterSwift: Get value for key, otherwize return a default value.
+    ///
+    ///     let coins = (dictionary["numberOfCoins"] as? Int) ?? 100
+    ///     let coins = dictionary.value(forKey: "numberOfCoins", defaultValue: 100)
+    ///
+    func value<T>(forKey key: Key, defaultValue: @autoclosure () -> T) -> T {
+        // <https://www.swiftbysundell.com/articles/extending-optionals-in-swift/>
+        guard let value = self[key] as? T else {
+            return defaultValue()
+        }
+
+        return value
+    }
+
     /// SwifterSwift: Check if key exists in dictionary.
     ///
     ///        let dict: [String: Any] = ["testKey": "testValue", "testArrayKey": [1, 2, 3, 4, 5]]

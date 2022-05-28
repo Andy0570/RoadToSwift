@@ -175,4 +175,21 @@ public extension UICollectionView {
     }
 }
 
+// MARK: - Layout
+
+public extension UICollectionView {
+    /// SwifterSwift: Update Layout.
+    ///
+    /// - Parameter animated: update Layout with animation or not.
+    func invalidateLayout(animated: Bool) {
+        if animated {
+            performBatchUpdates({
+                self.collectionViewLayout.invalidateLayout()
+            }, completion: nil)
+        } else {
+            collectionViewLayout.invalidateLayout()
+        }
+    }
+}
+
 #endif

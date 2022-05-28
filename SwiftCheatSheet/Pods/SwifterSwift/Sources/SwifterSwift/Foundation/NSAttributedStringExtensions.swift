@@ -98,6 +98,17 @@ public extension NSAttributedString {
     }
     #endif
 
+    /// SwifterSwift: Apply highlight color to NSAttributedString.
+    ///
+    ///     label.attributedText = NSAttributedString(string: "Budapest")
+    ///     label.attributedText = label.attributedText?.highlighted("Bud", using: .blue)
+    ///     
+    func highlighted(_ substring: String, using color: UIColor) -> NSAttributedString {
+        let attributedString = NSMutableAttributedString(attributedString: self)
+        attributedString.addAttribute(.foregroundColor, value: color, range: (self.string as NSString).range(of: substring))
+        return attributedString
+    }
+
     /// SwifterSwift: Apply attributes to substrings matching a regular expression.
     ///
     /// - Parameters:
@@ -131,6 +142,26 @@ public extension NSAttributedString {
         let pattern = "\\Q\(target)\\E"
 
         return applying(attributes: attributes, toRangesMatching: pattern)
+    }
+}
+
+// MARK: - Layout
+
+public extension NSAttributedString {
+    /// SwifterSwift: Calcuate string height with given width.
+    func height(withConstrainedWidth width: CGFloat) -> CGFloat {
+        let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
+        let boundingBox = boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, context: nil)
+
+        return ceil(boundingBox.height)
+    }
+
+    /// SwifterSwift: Calcuate string width with given height.
+    func width(withConstrainedHeight height: CGFloat) -> CGFloat {
+        let constraintRect = CGSize(width: .greatestFiniteMagnitude, height: height)
+        let boundingBox = boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, context: nil)
+
+        return ceil(boundingBox.width)
     }
 }
 

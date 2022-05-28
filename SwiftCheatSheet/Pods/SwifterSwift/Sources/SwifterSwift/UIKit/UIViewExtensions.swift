@@ -49,11 +49,80 @@ public extension UIView {
         /// SwifterSwift: easeInOut animation.
         case easeInOut
     }
+
+    /// SwifterSwift: Apply gradient directions
+    enum GradientDirection {
+        case topToBottom
+        case bottomToTop
+        case leftToRight
+        case rightToLeft
+    }
 }
 
 // MARK: - Properties
 
 public extension UIView {
+    /// SwifterSwift: x origin of view.
+    var x: CGFloat {
+        get {
+            return frame.origin.x
+        }
+        set {
+            frame.origin.x = newValue
+        }
+    }
+
+    /// SwifterSwift: y origin of view.
+    var y: CGFloat {
+        get {
+            return frame.origin.y
+        }
+        set {
+            frame.origin.y = newValue
+        }
+    }
+
+    /// SwifterSwift: Width of view.
+    var width: CGFloat {
+        get {
+            return frame.size.width
+        }
+        set {
+            frame.size.width = newValue
+        }
+    }
+
+    /// SwifterSwift: Height of view.
+    var height: CGFloat {
+        get {
+            return frame.size.height
+        }
+        set {
+            frame.size.height = newValue
+        }
+    }
+
+    /// SwifterSwift: Size of view.
+    var size: CGSize {
+        get {
+            return frame.size
+        }
+        set {
+            width = newValue.width
+            height = newValue.height
+        }
+    }
+
+    /// SwifterSwift: Masks to bounds of view; also inspectable from Storyboard.
+    @IBInspectable var masksToBounds: Bool {
+        get {
+            return layer.masksToBounds
+        }
+        set {
+            layer.masksToBounds = newValue
+        }
+    }
+
     /// SwifterSwift: Border color of view; also inspectable from Storyboard.
     @IBInspectable var layerBorderColor: UIColor? {
         get {
@@ -90,36 +159,6 @@ public extension UIView {
             layer.masksToBounds = true
             layer.cornerRadius = abs(CGFloat(Int(newValue * 100)) / 100)
         }
-    }
-
-    /// SwifterSwift: Height of view.
-    var height: CGFloat {
-        get {
-            return frame.size.height
-        }
-        set {
-            frame.size.height = newValue
-        }
-    }
-
-    /// SwifterSwift: Check if view is in RTL format.
-    var isRightToLeft: Bool {
-        if #available(iOS 10.0, macCatalyst 13.0, tvOS 10.0, *) {
-            return effectiveUserInterfaceLayoutDirection == .rightToLeft
-        } else {
-            return false
-        }
-    }
-
-    /// SwifterSwift: Take screenshot of view (if applicable).
-    var screenshot: UIImage? {
-        UIGraphicsBeginImageContextWithOptions(layer.frame.size, false, 0)
-        defer {
-            UIGraphicsEndImageContext()
-        }
-        guard let context = UIGraphicsGetCurrentContext() else { return nil }
-        layer.render(in: context)
-        return UIGraphicsGetImageFromCurrentImageContext()
     }
 
     /// SwifterSwift: Shadow color of view; also inspectable from Storyboard.
@@ -163,27 +202,6 @@ public extension UIView {
         }
     }
 
-    /// SwifterSwift: Masks to bounds of view; also inspectable from Storyboard.
-    @IBInspectable var masksToBounds: Bool {
-        get {
-            return layer.masksToBounds
-        }
-        set {
-            layer.masksToBounds = newValue
-        }
-    }
-
-    /// SwifterSwift: Size of view.
-    var size: CGSize {
-        get {
-            return frame.size
-        }
-        set {
-            width = newValue.width
-            height = newValue.height
-        }
-    }
-
     /// SwifterSwift: Get view's parent view controller
     var parentViewController: UIViewController? {
         weak var parentResponder: UIResponder? = self
@@ -196,34 +214,28 @@ public extension UIView {
         return nil
     }
 
-    /// SwifterSwift: Width of view.
-    var width: CGFloat {
-        get {
-            return frame.size.width
-        }
-        set {
-            frame.size.width = newValue
-        }
+    /// SwifterSwift: Check if view is in RTL format.
+    var isRightToLeft: Bool {
+        return effectiveUserInterfaceLayoutDirection == .rightToLeft
     }
 
-    /// SwifterSwift: x origin of view.
-    var x: CGFloat {
-        get {
-            return frame.origin.x
-        }
-        set {
-            frame.origin.x = newValue
-        }
+    /// SwifterSwift: Check if view is in LTR format.
+    var isLeftToRight: Bool {
+        return effectiveUserInterfaceLayoutDirection == .leftToRight
     }
 
-    /// SwifterSwift: y origin of view.
-    var y: CGFloat {
-        get {
-            return frame.origin.y
+    /// SwifterSwift: Check if view has super view
+    var hasSuperview: Bool { superview != nil }
+
+    /// SwifterSwift: Take screenshot of view (if applicable).
+    var screenshot: UIImage? {
+        UIGraphicsBeginImageContextWithOptions(layer.frame.size, false, 0)
+        defer {
+            UIGraphicsEndImageContext()
         }
-        set {
-            frame.origin.y = newValue
-        }
+        guard let context = UIGraphicsGetCurrentContext() else { return nil }
+        layer.render(in: context)
+        return UIGraphicsGetImageFromCurrentImageContext()
     }
 }
 
@@ -254,7 +266,8 @@ public extension UIView {
         let maskPath = UIBezierPath(
             roundedRect: bounds,
             byRoundingCorners: corners,
-            cornerRadii: CGSize(width: radius, height: radius))
+            cornerRadii: CGSize(width: radius, height: radius)
+        )
 
         let shape = CAShapeLayer()
         shape.path = maskPath.cgPath
@@ -281,13 +294,6 @@ public extension UIView {
         layer.shadowRadius = radius
         layer.shadowOpacity = opacity
         layer.masksToBounds = false
-    }
-
-    /// SwifterSwift: Add array of subviews to view.
-    ///
-    /// - Parameter subviews: array of subviews to add to self.
-    func addSubviews(_ subviews: [UIView]) {
-        subviews.forEach { addSubview($0) }
     }
 
     /// SwifterSwift: Fade in view.
@@ -318,40 +324,6 @@ public extension UIView {
         }, completion: completion)
     }
 
-    /// SwifterSwift: Load view from nib.
-    ///
-    /// - Parameters:
-    ///   - name: nib name.
-    ///   - bundle: bundle of nib (default is nil).
-    /// - Returns: optional UIView (if applicable).
-    class func loadFromNib(named name: String, bundle: Bundle? = nil) -> UIView? {
-        return UINib(nibName: name, bundle: bundle).instantiate(withOwner: nil, options: nil)[0] as? UIView
-    }
-
-    /// SwifterSwift: Load view of a certain type from nib
-    ///
-    /// - Parameters:
-    ///   - withClass: UIView type.
-    ///   - bundle: bundle of nib (default is nil).
-    /// - Returns: UIView
-    class func loadFromNib<T: UIView>(withClass name: T.Type, bundle: Bundle? = nil) -> T {
-        let named = String(describing: name)
-        guard let view = UINib(nibName: named, bundle: bundle).instantiate(withOwner: nil, options: nil)[0] as? T else {
-            fatalError("First element in xib file \(named) is not of type \(named)")
-        }
-        return view
-    }
-
-    /// SwifterSwift: Remove all subviews in view.
-    func removeSubviews() {
-        subviews.forEach { $0.removeFromSuperview() }
-    }
-
-    /// SwifterSwift: Remove all gesture recognizers from view.
-    func removeGestureRecognizers() {
-        gestureRecognizers?.forEach(removeGestureRecognizer)
-    }
-
     /// SwifterSwift: Attaches gesture recognizers to the view. Attaching gesture recognizers to a view defines the scope of the represented gesture, causing it to receive touches hit-tested to that view and all of its subviews. The view establishes a strong reference to the gesture recognizers.
     ///
     /// - Parameter gestureRecognizers: The array of gesture recognizers to be added to the view.
@@ -368,6 +340,11 @@ public extension UIView {
         for recognizer in gestureRecognizers {
             removeGestureRecognizer(recognizer)
         }
+    }
+
+    /// SwifterSwift: Remove all gesture recognizers from view.
+    func removeGestureRecognizers() {
+        gestureRecognizers?.forEach(removeGestureRecognizer)
     }
 
     /// SwifterSwift: Rotate view by angle on relative axis.
@@ -471,37 +448,181 @@ public extension UIView {
         CATransaction.commit()
     }
 
-    /// SwifterSwift: Add Visual Format constraints.
+    /// SwifterSwift: Apply Gradient Colors.
+    ///
+    ///     view.applyGradient(
+    ///         colors: [UIColor.red.cgColor, UIColor.blue.cgColor],
+    ///         locations: [0.0, 1.0],
+    ///         direction: .topToBottom
+    ///     )
     ///
     /// - Parameters:
-    ///   - withFormat: visual Format language.
-    ///   - views: array of views which will be accessed starting with index 0 (example: [v0], [v1], [v2]..).
-    func addConstraints(withFormat: String, views: UIView...) {
-        // https://videos.letsbuildthatapp.com/
-        var viewsDictionary: [String: UIView] = [:]
-        for (index, view) in views.enumerated() {
-            let key = "v\(index)"
-            view.translatesAutoresizingMaskIntoConstraints = false
-            viewsDictionary[key] = view
+    ///   - colors: An array of colors defining the color of each gradient stop.
+    ///   - locations: An array of NSNumber defining the location of each
+    ///                gradient stop as a value in the range [0,1]. The values must be
+    ///                monotonically increasing.
+    ///   - direction: Enumeration type describing the direction of the gradient.
+    func applyGradient(colors: [Any]?, locations: [NSNumber]? = [0.0, 1.0], direction: GradientDirection = .topToBottom) {
+        // <https://github.com/swiftdevcenter/GradientColorExample>
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = self.bounds
+        gradientLayer.colors = colors
+        gradientLayer.locations = locations
+
+        switch direction {
+        case .topToBottom:
+            gradientLayer.startPoint = CGPoint(x: 0.5, y: 0.0)
+            gradientLayer.endPoint = CGPoint(x: 0.5, y: 1.0)
+        case .bottomToTop:
+            gradientLayer.startPoint = CGPoint(x: 0.5, y: 1.0)
+            gradientLayer.endPoint = CGPoint(x: 0.5, y: 0.0)
+        case .leftToRight:
+            gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
+            gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
+        case .rightToLeft:
+            gradientLayer.startPoint = CGPoint(x: 1.0, y: 0.5)
+            gradientLayer.endPoint = CGPoint(x: 0.0, y: 0.5)
         }
-        addConstraints(NSLayoutConstraint.constraints(
-            withVisualFormat: withFormat,
-            options: NSLayoutConstraint.FormatOptions(),
-            metrics: nil,
-            views: viewsDictionary))
+
+        layer.addSublayer(gradientLayer)
     }
 
+    /// SwifterSwift: Add motion effects for the view
+    func addParalax(amount: CGFloat) {
+        motionEffects.removeAll()
+        let horizontal = UIInterpolatingMotionEffect(keyPath: "center.x", type: .tiltAlongHorizontalAxis)
+        horizontal.minimumRelativeValue = -amount
+        horizontal.maximumRelativeValue = amount
+
+        let vertical = UIInterpolatingMotionEffect(keyPath: "center.y", type: .tiltAlongVerticalAxis)
+        vertical.minimumRelativeValue = -amount
+        vertical.maximumRelativeValue = amount
+
+        let group = UIMotionEffectGroup()
+        group.motionEffects = [horizontal, vertical]
+        self.addMotionEffect(group)
+    }
+
+    /// SwifterSwift: Remove all motion effects for the view
+    func removeParalax() {
+        motionEffects.removeAll()
+    }
+
+    /// SwifterSwift: Add array of subviews to view.
+    ///
+    /// - Parameter subviews: array of subviews to add to self.
+    func addSubviews(_ subviews: [UIView]) {
+        subviews.forEach { addSubview($0) }
+    }
+
+    /// SwifterSwift: Remove all subviews in view.
+    func removeSubviews() {
+        subviews.forEach { $0.removeFromSuperview() }
+    }
+
+    /// SwifterSwift: Search all superviews until a view with the condition is found.
+    ///
+    /// - Parameter predicate: predicate to evaluate on superviews.
+    func superview(where predicate: (UIView?) -> Bool) -> UIView? {
+        if predicate(superview) {
+            return superview
+        }
+        return superview?.superview(where: predicate)
+    }
+
+    /// SwifterSwift: Search all superviews until a view with this class is found.
+    ///
+    ///     func textFieldDidBeginEditing(_ textField: UITextField) {
+    ///         // Get the cell containing the textfield.
+    ///         if let cell = textField.superview(withClass: TextFieldTableViewCell.self) {
+    ///             cell.toggle(isHighlighted: true)
+    ///         }
+    ///     }
+    ///
+    /// - Parameter name: class of the view to search.
+    func superview<T: UIView>(withClass _: T.Type) -> T? {
+        return superview(where: { $0 is T }) as? T
+    }
+
+    /// SwifterSwift: Returns all the subviews of a given type recursively in the
+    /// view hierarchy rooted on the view it its called.
+    ///
+    /// - Parameter ofType: Class of the view to search.
+    /// - Returns: All subviews with a specified type.
+    func subviews<T>(ofType _: T.Type) -> [T] {
+        var views = [T]()
+        for subview in subviews {
+            if let view = subview as? T {
+                views.append(view)
+            } else if !subview.subviews.isEmpty {
+                views.append(contentsOf: subview.subviews(ofType: T.self))
+            }
+        }
+        return views
+    }
+}
+
+// MARK: - Initializers
+
+public extension UIView {
+    /// SwifterSwift: Initialize view with background color
+    convenience init(backgroundColor color: UIColor) {
+        self.init()
+        backgroundColor = color
+    }
+
+    /// SwifterSwift: Load view from nib.
+    ///
+    /// - Parameters:
+    ///   - name: nib name.
+    ///   - bundle: bundle of nib (default is nil).
+    /// - Returns: optional UIView (if applicable).
+    class func loadFromNib(named name: String, bundle: Bundle? = nil) -> UIView? {
+        return UINib(nibName: name, bundle: bundle).instantiate(withOwner: nil, options: nil)[0] as? UIView
+    }
+
+    /// SwifterSwift: Load view of a certain type from nib
+    ///
+    /// - Parameters:
+    ///   - withClass: UIView type.
+    ///   - bundle: bundle of nib (default is nil).
+    /// - Returns: UIView
+    class func loadFromNib<T: UIView>(withClass name: T.Type, bundle: Bundle? = nil) -> T {
+        let named = String(describing: name)
+        guard let view = UINib(nibName: named, bundle: bundle).instantiate(withOwner: nil, options: nil)[0] as? T else {
+            fatalError("First element in xib file \(named) is not of type \(named)")
+        }
+        return view
+    }
+}
+
+// MARK: - Constraints
+
+public extension UIView {
     /// SwifterSwift: Anchor all sides of the view into it's superview.
     func fillToSuperview() {
-        // https://videos.letsbuildthatapp.com/
+        guard let superview = self.superview else { return }
         translatesAutoresizingMaskIntoConstraints = false
-        if let superview = superview {
-            let left = leftAnchor.constraint(equalTo: superview.leftAnchor)
-            let right = rightAnchor.constraint(equalTo: superview.rightAnchor)
-            let top = topAnchor.constraint(equalTo: superview.topAnchor)
-            let bottom = bottomAnchor.constraint(equalTo: superview.bottomAnchor)
-            NSLayoutConstraint.activate([left, right, top, bottom])
-        }
+        NSLayoutConstraint.activate([
+            topAnchor.constraint(equalTo: superview.topAnchor),
+            leadingAnchor.constraint(equalTo: superview.leadingAnchor),
+            bottomAnchor.constraint(equalTo: superview.bottomAnchor),
+            trailingAnchor.constraint(equalTo: superview.trailingAnchor)
+        ])
+    }
+
+    /// SwifterSwift: Returns a collection of constraints to anchor the bounds of the current view to the given view.
+    ///
+    /// - Parameter view: The view to anchor to.
+    /// - Returns: The layout constraints needed for this constraint.
+    func constraintsForAnchoringTo(boundsOf view: UIView) -> [NSLayoutConstraint] {
+        // <https://www.avanderlee.com/swift/auto-layout-programmatically/>
+        return [
+            topAnchor.constraint(equalTo: view.topAnchor),
+            leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            view.bottomAnchor.constraint(equalTo: bottomAnchor),
+            view.trailingAnchor.constraint(equalTo: trailingAnchor)
+        ]
     }
 
     /// SwifterSwift: Add anchors from any side of the current view into the specified anchors and returns the newly added constraints.
@@ -593,44 +714,26 @@ public extension UIView {
         anchorCenterYToSuperview()
     }
 
-    /// SwifterSwift: Search all superviews until a view with the condition is found.
+    /// SwifterSwift: Add Visual Format constraints.
     ///
-    /// - Parameter predicate: predicate to evaluate on superviews.
-    func ancestorView(where predicate: (UIView?) -> Bool) -> UIView? {
-        if predicate(superview) {
-            return superview
+    /// - Parameters:
+    ///   - withFormat: visual Format language.
+    ///   - views: array of views which will be accessed starting with index 0 (example: [v0], [v1], [v2]..).
+    func addConstraints(withFormat: String, views: UIView...) {
+        // https://videos.letsbuildthatapp.com/
+        var viewsDictionary: [String: UIView] = [:]
+        for (index, view) in views.enumerated() {
+            let key = "v\(index)"
+            view.translatesAutoresizingMaskIntoConstraints = false
+            viewsDictionary[key] = view
         }
-        return superview?.ancestorView(where: predicate)
+        addConstraints(NSLayoutConstraint.constraints(
+            withVisualFormat: withFormat,
+            options: NSLayoutConstraint.FormatOptions(),
+            metrics: nil,
+            views: viewsDictionary))
     }
 
-    /// SwifterSwift: Search all superviews until a view with this class is found.
-    ///
-    /// - Parameter name: class of the view to search.
-    func ancestorView<T: UIView>(withClass _: T.Type) -> T? {
-        return ancestorView(where: { $0 is T }) as? T
-    }
-  
-    /// SwifterSwift: Returns all the subviews of a given type recursively in the
-    /// view hierarchy rooted on the view it its called.
-    ///
-    /// - Parameter ofType: Class of the view to search.
-    /// - Returns: All subviews with a specified type.
-    func subviews<T>(ofType _: T.Type) -> [T] {
-        var views = [T]()
-        for subview in subviews {
-            if let view = subview as? T {
-                views.append(view)
-            } else if !subview.subviews.isEmpty {
-                views.append(contentsOf: subview.subviews(ofType: T.self))
-            }
-        }
-        return views
-    }
-}
-
-// MARK: - Constraints
-
-public extension UIView {
     /// SwifterSwift: Search constraints until we find one for the given view
     /// and attribute. This will enumerate ancestors since constraints are
     /// always added to the common ancestor.
@@ -674,6 +777,41 @@ public extension UIView {
     /// SwifterSwift: First bottom constraint for this view.
     var bottomConstraint: NSLayoutConstraint? {
         findConstraint(attribute: .bottom, for: self)
+    }
+}
+
+// MARK: - PDF
+
+public extension UIView {
+    /// SwifterSwift: Export pdf from Save pdf in drectory and return pdf file path
+    ///
+    ///     let pdfFilePath = self.view.exportAsPdfFromView()
+    ///     print(pdfFilePath)
+    ///
+    func exportAsPdfFromView() -> String {
+        // <https://www.swiftdevcenter.com/create-pdf-from-uiview-wkwebview-and-uitableview/>
+        let pdfPageFrame = self.bounds
+        let pdfData = NSMutableData()
+        UIGraphicsBeginPDFContextToData(pdfData, pdfPageFrame, nil)
+        UIGraphicsBeginPDFPageWithInfo(pdfPageFrame, nil)
+        guard let pdfContext = UIGraphicsGetCurrentContext() else {
+            return ""
+        }
+        self.layer.render(in: pdfContext)
+        UIGraphicsEndPDFContext()
+        return self.saveViewPdf(data: pdfData)
+    }
+
+    /// SwifterSwift: Save pdf file in document directory
+    func saveViewPdf(data: NSMutableData) -> String {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let docDirectoryPath = paths[0]
+        let pdfPath = docDirectoryPath.appendingPathComponent("viewPdf.pdf")
+        if data.write(to: pdfPath, atomically: true) {
+            return pdfPath.path
+        } else {
+            return ""
+        }
     }
 }
 

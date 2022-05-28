@@ -21,7 +21,7 @@ struct Moderator: Decodable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let displayName = try container.decode(String.self, forKey: .displayName)
         let reputation = try container.decode(Double.self, forKey: .reputation)
-        self.init(displayName: displayName.html2String, reputation: reputation.formatted)
+        self.init(displayName: displayName.html2String, reputation: "\(reputation)")
     }
 
     init(displayName: String, reputation: String) {

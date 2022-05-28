@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ModeratorsListViewController: UIViewController, AlertDisplayer {
+class ModeratorsListViewController: UIViewController {
     weak var tableView: UITableView!
     weak var indicatorView: UIActivityIndicatorView!
 
@@ -112,9 +112,8 @@ extension ModeratorsListViewController: ModeratorsViewModelDelegate {
     func onFetchFailed(with reason: String) {
         indicatorView.stopAnimating()
 
-        let title = "Warning".localized()
-        let action = UIAlertAction(title: "OK".localized(), style: .default)
-        displayAlert(with: title, message: reason, actions: [action])
+        // SwifterSwift/UIViewControllerExtensions.swift
+        showToast(message: "Warning", font: UIFont.systemFont(ofSize: 13), toastColor: UIColor.black, toastBackground: UIColor(white: 1.0, alpha: 0.8))
     }
 }
 

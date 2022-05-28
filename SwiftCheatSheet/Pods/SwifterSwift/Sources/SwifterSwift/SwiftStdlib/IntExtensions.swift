@@ -28,6 +28,20 @@ public extension Int {
         return Double(self) * 180 / Double.pi
     }
 
+    /// SwifterSwift: Int to String
+    func toString() -> String {
+        "\(self)"
+    }
+
+    /// SwifterSwift: cents to dollars
+    ///
+    ///     let cents = 12350
+    ///     let dollars = cents.centsToDollars()
+    ///
+    func centsToDollars() -> Double {
+        Double(self) / 100
+    }
+
     /// SwifterSwift: UInt.
     var uInt: UInt {
         return UInt(self)

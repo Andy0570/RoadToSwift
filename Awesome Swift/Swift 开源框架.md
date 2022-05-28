@@ -683,9 +683,10 @@
 [回到顶部](#Awesome Swift)
 
 * [Surge](https://github.com/Jounce/Surge) ⭐️5k - 使用 Accelerate 框架，为矩阵数学、数字信号处理和图像处理提供高性能函数。
+* [apple/swift-numerics](https://github.com/apple/swift-numerics) ⭐️1.4k - Swift 的高级数学类型和函数。
 * [Euler](https://github.com/mattt/Euler) ⭐️1.1k - 直观、简洁的数学表达式 `∛27÷3+∑[3,1,2]`。
 * [BigInt](https://github.com/attaswift/BigInt) ⭐️682 - 这个存储库提供了在纯 Swift 中实现的任意宽度的整数类型。基础表示形式为 2^64，使用 `Array<UInt64>`。
-* :warning: [Euler](https://github.com/mattt/Euler) ⭐️1.1k - 用于数学符号的 Swift 自定义运算符
+* :warning: [Euler](https://github.com/mattt/Euler) ⭐️1.1k - 用于数学符号的 Swift 自定义运算符。
 * [Easy-Cal-Swift](https://github.com/onevcat/Easy-Cal-Swift) - Overload +-*/ operator for Swift, make it easier to use (and not so strict).
 
 
@@ -698,10 +699,9 @@
 * :heart:[blurhash](https://github.com/woltapp/blurhash) ⭐️10.2k - 图像占位符的非常紧凑的表示。
 * [Nuke](https://github.com/kean/Nuke) ⭐️6.5k - 用于加载和缓存图像的高级框架。
 * [HanekeSwift](https://github.com/Haneke/HanekeSwift) ⭐️5.1k - 轻量带缓存高性能图片加载组件。
-* [Concorde](https://github.com/contentful-labs/Concorde) ⭐️1.4k - 
-  渐进式下载和解码 JPEG 格式图片。
+* [Concorde](https://github.com/contentful-labs/Concorde) ⭐️1.4k - 渐进式下载和解码 JPEG 格式图片。
 * [ImageScout](https://github.com/kaishin/ImageScout) ⭐️955 - 最小网络代价获得图片大小及类型。
-* :warning: [ImageSizeFetcher](https://github.com/malcommac/ImageSizeFetcher) ⭐️440 - 通过 URL 获取图像类型或尺寸
+* :warning: [ImageSizeFetcher](https://github.com/malcommac/ImageSizeFetcher) ⭐️440 - 通过 URL 获取图像类型或尺寸。
 * [FaceAware](https://github.com/BeauNouvelle/FaceAware) ⭐️3k - 这个插件帮助 `UIImageView` 将中心聚焦到照片的脸上，前提是这个照片使用了 `AspectFill`
 * [ZoomTransition](https://github.com/tristanhimmelman/ZoomTransition) ⭐️267 - 通过手势操控图片的放大、缩小、旋转等自由变化效果的组件及示例。
 * :orange: [VIPhotoView](https://github.com/vitoziv/VIPhotoView) ⭐️227 - 用于展示图片的工具类，因为是个 View，所以你可以放在任何地方显示。支持旋转，双击指定位置放大等。

@@ -3,9 +3,64 @@
 #if canImport(UIKit) && !os(watchOS)
 import UIKit
 
+// MARK: - enums
+
+public extension UITabBar {
+    /// SwifterSwift: Appearance cases.
+    @available(iOS 13.0, tvOS 13.0, *)
+    enum TabBarAppearance {
+        case transparentAlways
+        case transparentStandardOnly
+        case opaqueAlways
+
+        public var standardAppearance: UITabBarAppearance {
+            switch self {
+            case .transparentAlways:
+                let appearance = UITabBarAppearance()
+                appearance.configureWithTransparentBackground()
+                return appearance
+            case .transparentStandardOnly:
+                let appearance = UITabBarAppearance()
+                appearance.configureWithDefaultBackground()
+                return appearance
+            case .opaqueAlways:
+                let appearance = UITabBarAppearance()
+                appearance.configureWithDefaultBackground()
+                return appearance
+            }
+        }
+
+        public var scrollEdgeAppearance: UITabBarAppearance {
+            switch self {
+            case .transparentAlways:
+                let appearance = UITabBarAppearance()
+                appearance.configureWithTransparentBackground()
+                return appearance
+            case .transparentStandardOnly:
+                let appearance = UITabBarAppearance()
+                appearance.configureWithTransparentBackground()
+                return appearance
+            case .opaqueAlways:
+                let appearance = UITabBarAppearance()
+                appearance.configureWithDefaultBackground()
+                return appearance
+            }
+        }
+    }
+}
+
 // MARK: - Methods
 
 public extension UITabBar {
+    /// SwifterSwift: Set appearance for tab bar.
+    @available(iOS 13.0, tvOS 13.0, *)
+    func setAppearance(_ value: TabBarAppearance) {
+        self.standardAppearance = value.standardAppearance
+        if #available(iOS 15.0, tvOS 15.0, *) {
+            self.scrollEdgeAppearance = value.scrollEdgeAppearance
+        }
+    }
+
     /// SwifterSwift: Set tabBar colors.
     ///
     /// - Parameters:

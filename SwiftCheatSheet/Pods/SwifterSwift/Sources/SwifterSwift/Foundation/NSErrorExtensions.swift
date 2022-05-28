@@ -1,14 +1,12 @@
-//
-//  NSError+Extensions.swift
-//  SwiftCheatSheet
-//
-//  Created by Qilin Hu on 2022/3/26.
-//
+// NSErrorExtensions.swift - Copyright © 2022 SwifterSwift
 
+#if canImport(Foundation)
 import Foundation
 
-extension NSError {
-    /// NSError 的便捷初始化器，用于设置描述信息。
+// MARK: - Initializers
+
+public extension NSError {
+    /// SwifterSwift: Initializers `NSError` instance with doman、code and description.
     ///
     ///     let myError = NSError(domain: "SomeDomain", code: 123, description: "Some description.")
     ///
@@ -20,3 +18,5 @@ extension NSError {
         self.init(domain: domain, code: code, userInfo: [(kCFErrorLocalizedDescriptionKey as CFString) as String: description])
     }
 }
+
+#endif

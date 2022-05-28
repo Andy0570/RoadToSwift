@@ -3,8 +3,20 @@
 #if os(iOS) || os(tvOS)
 import UIKit
 
+// MARK: - Initializers
+
 extension UILayoutPriority: ExpressibleByFloatLiteral, ExpressibleByIntegerLiteral {
-    // MARK: - Initializers
+    /// SwifterSwift: Creates a priority which is almost required, but not 100%.
+    static var almostRequired: UILayoutPriority {
+        // <https://www.avanderlee.com/swift/auto-layout-programmatically/>
+        return UILayoutPriority(rawValue: 999)
+    }
+
+    /// SwifterSwift: Creates a priority which is not required at all.
+    static var notRequired: UILayoutPriority {
+        // <https://www.avanderlee.com/swift/auto-layout-programmatically/>
+        return UILayoutPriority(rawValue: 0)
+    }
 
     /// SwifterSwift: Initialize `UILayoutPriority` with a float literal.
     ///

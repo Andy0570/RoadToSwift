@@ -16,9 +16,48 @@ import AppKit
 import CoreGraphics
 #endif
 
+#if canImport(CoreLocation)
+import CoreLocation
+#endif
+
+#if canImport(CommonCrypto)
+import CommonCrypto
+#endif
+
 // MARK: - Properties
 
 public extension String {
+    static var empty: String { return "" }
+    static var space: String { return " " }
+    static var dot: String { return "." }
+    static var newline: String { return "\n" }
+
+    #if canImport(CommonCrypto)
+    /// SwifterSwift: Calculate MD5 hash of a string
+    ///
+    ///     let password: String = "your password"
+    ///     guard let passwordMD5 = password.md5 else {
+    ///         fatalError("Can't calculate MD5 of your password")
+    ///         return
+    ///     }
+    ///
+    var md5: String? {
+        /// <https://stackoverflow.com/questions/32163848/how-can-i-convert-a-string-to-an-md5-hash-in-ios-using-swift>
+        guard let data = data(using: .utf8) else {
+            return nil
+        }
+
+        let length = Int(CC_MD5_DIGEST_LENGTH)
+        let hash = data.withUnsafeBytes { (bytes: UnsafeRawBufferPointer) -> [UInt8] in
+            var hash: [UInt8] = [UInt8](repeating: 0, count: Int(CC_MD5_DIGEST_LENGTH))
+            CC_MD5(bytes.baseAddress, CC_LONG(data.count), &hash)
+            return hash
+        }
+
+        return (0..<length).map { String(format: "%02x", hash[$0]) }.joined()
+    }
+    #endif
+
     #if canImport(Foundation)
     /// SwifterSwift: String decoded from base64 (if applicable).
     ///
@@ -453,6 +492,63 @@ public extension String {
         return misspelledRange.location == NSNotFound
     }
     #endif
+
+    /// SwifterSwift: JSON -> [String: Any]?
+    var asDict: [String: Any]? {
+        guard let data = self.data(using: .utf8) else {
+            return nil
+        }
+        return try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any]
+    }
+
+    /// SwifterSwift: JSON -> [Any]?
+    var asArray: [Any]? {
+        guard let data = self.data(using: .utf8) else {
+            return nil
+        }
+        return try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [Any]
+    }
+
+    /// SwifterSwift: 将 HTML 字符串转换为 NSAttributedString
+    ///
+    ///     let htmlString = "<p>Hello, <strong>world!</string></p>"
+    ///     let attrString = htmlString.asAttributedString
+    ///
+    var asAttributedString: NSAttributedString? {
+        guard let data = self.data(using: .utf8) else {
+            return nil
+        }
+        return try? NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil)
+    }
+
+    var html2String: String {
+        guard let data = data(using: .utf8), let attributedString = try? NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding: String.Encoding.utf8.rawValue], documentAttributes: nil) else {
+            return self
+        }
+        return attributedString.string
+    }
+
+    #if canImport(CoreLocation)
+    /// SwifterSwift: 字符串转换为二维地理坐标（CLLocationCoordinate2D）
+    ///
+    ///     let strCoordinates = "41.6168, 41.6367"
+    ///     let coordinates = strCoordinates.asCoordinates
+    ///
+    var asCoordinates: CLLocationCoordinate2D? {
+        let components = self.components(separatedBy: ",")
+        if components.count != 2 {
+            return nil
+        }
+
+        let strLat = components[0].trimmed
+        let strLng = components[1].trimmed
+        if let dLat = Double(strLat),
+           let dLng = Double(strLng) {
+            return CLLocationCoordinate2D(latitude: dLat, longitude: dLng)
+        }
+        return nil
+    }
+    #endif
 }
 
 // MARK: - Methods
@@ -603,37 +699,6 @@ public extension String {
         return filtered.replacingOccurrences(of: "--", with: "-")
     }
     #endif
-
-    /// SwifterSwift: Safely subscript string with index.
-    ///
-    ///		"Hello World!"[safe: 3] -> "l"
-    ///		"Hello World!"[safe: 20] -> nil
-    ///
-    /// - Parameter index: index.
-    subscript(safe index: Int) -> Character? {
-        guard index >= 0, index < count else { return nil }
-        return self[self.index(startIndex, offsetBy: index)]
-    }
-
-    /// SwifterSwift: Safely subscript string within a given range.
-    ///
-    ///        "Hello World!"[safe: 6..<11] -> "World"
-    ///        "Hello World!"[safe: 21..<110] -> nil
-    ///
-    ///        "Hello World!"[safe: 6...11] -> "World!"
-    ///        "Hello World!"[safe: 21...110] -> nil
-    ///
-    /// - Parameter range: Range expression.
-    subscript<R>(safe range: R) -> String? where R: RangeExpression, R.Bound == Int {
-        let range = range.relative(to: Int.min..<Int.max)
-        guard range.lowerBound >= 0,
-            let lowerIndex = index(startIndex, offsetBy: range.lowerBound, limitedBy: endIndex),
-            let upperIndex = index(startIndex, offsetBy: range.upperBound, limitedBy: endIndex) else {
-            return nil
-        }
-
-        return String(self[lowerIndex..<upperIndex])
-    }
 
     #if os(iOS) || os(macOS)
     /// SwifterSwift: Copy string to global pasteboard.
@@ -869,6 +934,33 @@ public extension String {
         return hasPrefix(prefix)
     }
 
+    /// SwifterSwift: 将字符分组
+    ///
+    ///     对银行卡号进行分组
+    ///     var cardNumber = "1234567890123456"
+    ///     cardNumber.insert(separator: " ", every: 4)
+    ///     print(cardNumber) // 1234 5678 9012 3456
+    ///
+    ///     let pin = "7690"
+    ///     let pinWithDashes = pin.inserting(separator: "-", every: 1)
+    ///     print(pinWithDashes) // 7-6-9-0
+    ///
+    mutating func insert(separator: String, every spacing: Int) {
+        self = inserting(separator: separator, every: spacing)
+    }
+
+    func inserting(separator: String, every spacing: Int) -> String {
+        var result: String = ""
+        let characters = Array(self)
+        stride(from: 0, to: count, by: spacing).forEach {
+            result += String(characters[$0..<min($0+spacing, count)])
+            if $0+spacing < count {
+                result += separator
+            }
+        }
+        return result
+    }
+
     #if canImport(Foundation)
     /// SwifterSwift: Date object from string of date format.
     ///
@@ -1028,6 +1120,10 @@ public extension String {
     }
     #endif
 
+    func replace(_ replacingString: String, with newString: String) -> String {
+        return self.replacingOccurrences(of: replacingString, with: newString)
+    }
+
     /// SwifterSwift: Pad string to fit the length parameter size with another string in the start.
     ///
     ///   "hue".padStart(10) -> "       hue"
@@ -1136,6 +1232,81 @@ public extension String {
         // https://www.hackingwithswift.com/articles/141/8-useful-swift-extensions
         guard !hasPrefix(prefix) else { return self }
         return prefix + self
+    }
+
+    /// SwifterSwift: Create `UIViewController` instance with string
+    ///
+    ///     let className = "CustomViewController"
+    ///     if let controller = className.getViewController() {
+    ///         navigationController?.pushViewController(controller, animated: true)
+    ///     }
+    ///
+    /// - Returns: UIViewController instance
+    func getViewController() -> UIViewController? {
+        guard let appName = Bundle.main.infoDictionary?["CFBundleName"] as? String,
+            let viewControllerType = Bundle.main.classNamed("\(appName).\(self)") as? UIViewController.Type else {
+            return nil
+        }
+        return viewControllerType.init()
+    }
+}
+
+// MARK: - Layout
+
+public extension String {
+    #if canImport(UIKit)
+    /// SwifterSwift: Calcuate height with given string
+    func height(withConstrainedWidth width: CGFloat, font: UIFont) -> CGFloat {
+        let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
+        let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [.font: font], context: nil)
+
+        return ceil(boundingBox.height)
+    }
+    #endif
+
+    #if canImport(UIKit)
+    /// SwifterSwift: Calcuate width with given string
+    func width(withConstrainedHeight height: CGFloat, font: UIFont) -> CGFloat {
+        let constraintRect = CGSize(width: .greatestFiniteMagnitude, height: height)
+        let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [.font: font], context: nil)
+
+        return ceil(boundingBox.width)
+    }
+    #endif
+}
+
+// MARK: - Subscripts
+
+public extension String {
+    /// SwifterSwift: Safely subscript string with index.
+    ///
+    ///        "Hello World!"[safe: 3] -> "l"
+    ///        "Hello World!"[safe: 20] -> nil
+    ///
+    /// - Parameter index: index.
+    subscript(safe index: Int) -> Character? {
+        guard index >= 0, index < count else { return nil }
+        return self[self.index(startIndex, offsetBy: index)]
+    }
+
+    /// SwifterSwift: Safely subscript string within a given range.
+    ///
+    ///        "Hello World!"[safe: 6..<11] -> "World"
+    ///        "Hello World!"[safe: 21..<110] -> nil
+    ///
+    ///        "Hello World!"[safe: 6...11] -> "World!"
+    ///        "Hello World!"[safe: 21...110] -> nil
+    ///
+    /// - Parameter range: Range expression.
+    subscript<R>(safe range: R) -> String? where R: RangeExpression, R.Bound == Int {
+        let range = range.relative(to: Int.min..<Int.max)
+        guard range.lowerBound >= 0,
+            let lowerIndex = index(startIndex, offsetBy: range.lowerBound, limitedBy: endIndex),
+            let upperIndex = index(startIndex, offsetBy: range.upperBound, limitedBy: endIndex) else {
+            return nil
+        }
+
+        return String(self[lowerIndex..<upperIndex])
     }
 }
 

@@ -117,7 +117,7 @@ extension PickerViewController: UITextFieldDelegate {
 extension PickerViewController: UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         guard let url = info[UIImagePickerController.InfoKey.mediaURL] as? URL,
-              let name = nameTextField.text else {
+                let name = nameTextField.text else {
             print("Cannot get video URL")
             return
         }

@@ -63,6 +63,19 @@ public extension UIApplication {
     var version: String? {
         return Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
     }
+
+    /// SwifterSwift: App's current bundle identifier
+    var bundleIdentifier: String? { Bundle.main.bundleIdentifier }
+
+    /// SwifterSwift: Open OS System 'Settings' application.
+    func openSettings() {
+        DispatchQueue.main.async {
+            guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else { return }
+            if UIApplication.shared.canOpenURL(settingsUrl) {
+                UIApplication.shared.open(settingsUrl, completionHandler: { _ in })
+            }
+        }
+    }
 }
 
 #endif

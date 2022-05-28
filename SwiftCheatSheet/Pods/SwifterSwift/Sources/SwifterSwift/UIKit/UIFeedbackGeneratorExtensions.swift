@@ -1,8 +1,22 @@
+// UIFeedbackGeneratorExtensions.swift - Copyright © 2022 SwifterSwift
+
 #if canImport(UIKit) && os(iOS)
 import UIKit
 
 /// 触觉反馈
 public extension UIFeedbackGenerator {
+    enum Style {
+        case light
+        case medium
+        case heavy
+
+        case notificationError
+        case notificationSuccess
+        case notificationWarning
+
+        case selectionChanged
+    }
+
     static func impactOccurred(_ style: Style) {
         switch style {
         case .light:
@@ -28,17 +42,6 @@ public extension UIFeedbackGenerator {
             generator.selectionChanged()
         }
     }
-
-    enum Style {
-        case light
-        case medium
-        case heavy
-
-        case notificationError
-        case notificationSuccess
-        case notificationWarning
-
-        case selectionChanged
-    }
 }
+
 #endif

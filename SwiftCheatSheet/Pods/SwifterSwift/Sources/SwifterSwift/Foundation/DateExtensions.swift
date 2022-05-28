@@ -512,7 +512,7 @@ public extension Date {
     ///   - value: multiples of components to add.
     /// - Returns: original date + multiples of component added.
     func adding(_ component: Calendar.Component, value: Int) -> Date {
-        return calendar.date(byAdding: component, value: value, to: self)!
+        return calendar.date(byAdding: component, value: value, to: self) ?? self
     }
 
     /// SwifterSwift: Add calendar component to date.
@@ -530,6 +530,14 @@ public extension Date {
         if let date = calendar.date(byAdding: component, value: value, to: self) {
             self = date
         }
+    }
+
+    func previous(_ component: Calendar.Component) -> Date {
+        adding(component, value: -1)
+    }
+
+    func next(_ component: Calendar.Component) -> Date {
+        adding(component, value: 1)
     }
 
     // swiftlint:disable cyclomatic_complexity function_body_length
@@ -608,14 +616,14 @@ public extension Date {
     #if !os(Linux)
     // swiftlint:enable cyclomatic_complexity, function_body_length
 
-    /// SwifterSwift: Data at the beginning of calendar component.
+    /// SwifterSwift: Returns the start of component.
     ///
-    /// 	let date = Date() // "Jan 12, 2017, 7:14 PM"
-    /// 	let date2 = date.beginning(of: .hour) // "Jan 12, 2017, 7:00 PM"
-    /// 	let date3 = date.beginning(of: .month) // "Jan 1, 2017, 12:00 AM"
-    /// 	let date4 = date.beginning(of: .year) // "Jan 1, 2017, 12:00 AM"
+    /// 	    let date = Date() // "Jan 12, 2017, 7:14 PM"
+    /// 	    let date2 = date.beginning(of: .hour) // "Jan 12, 2017, 7:00 PM"
+    ///     let date3 = date.beginning(of: .month) // "Jan 1, 2017, 12:00 AM"
+    /// 	    let date4 = date.beginning(of: .year) // "Jan 1, 2017, 12:00 AM"
     ///
-    /// - Parameter component: calendar component to get date at the beginning of.
+    /// - Parameter component: The component you want to get the start of (year, month, day, etc.).
     /// - Returns: date at the beginning of calendar component (if applicable).
     func beginning(of component: Calendar.Component) -> Date? {
         if component == .day {
@@ -626,22 +634,16 @@ public extension Date {
             switch component {
             case .second:
                 return [.year, .month, .day, .hour, .minute, .second]
-
             case .minute:
                 return [.year, .month, .day, .hour, .minute]
-
             case .hour:
                 return [.year, .month, .day, .hour]
-
             case .weekOfYear, .weekOfMonth:
                 return [.yearForWeekOfYear, .weekOfYear]
-
             case .month:
                 return [.year, .month]
-
             case .year:
                 return [.year]
-
             default:
                 return []
             }
@@ -736,12 +738,26 @@ public extension Date {
     ///     Date().string(withFormat: "HH:mm") -> "23:50"
     ///     Date().string(withFormat: "dd/MM/yyyy HH:mm") -> "1/12/17 23:50"
     ///
-    /// - Parameter format: Date format (default is "dd/MM/yyyy").
+    /// - Parameters:
+    ///   - format: Date format (default is "dd/MM/yyyy").
+    ///   - localized: Localise date or not
     /// - Returns: date string.
-    func string(withFormat format: String = "dd/MM/yyyy HH:mm") -> String {
+    func string(withFormat format: String = "dd/MM/yyyy HH:mm", localized: Bool) -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = format
+        dateFormatter.locale = Locale.current
+        if localized {
+            dateFormatter.setLocalizedDateFormatFromTemplate(format)
+        } else {
+            dateFormatter.dateFormat = format
+        }
         return dateFormatter.string(from: self)
+    }
+
+    func formattedInterval(to date: Date, dateStyle: DateIntervalFormatter.Style, timeStyle: DateIntervalFormatter.Style = .none) -> String {
+        let formatter = DateIntervalFormatter()
+        formatter.dateStyle = dateStyle
+        formatter.timeStyle = timeStyle
+        return formatter.string(from: self, to: date)
     }
 
     /// SwifterSwift: Date string from date.
@@ -948,6 +964,14 @@ public extension Date {
             TimeInterval.random(
                 in: range.lowerBound.timeIntervalSinceReferenceDate...range.upperBound.timeIntervalSinceReferenceDate,
                 using: &generator))
+    }
+}
+
+// MARK: - Operators
+
+public extension Date {
+    static func - (lhs: Date, rhs: Date) -> TimeInterval {
+        return lhs.timeIntervalSinceReferenceDate - rhs.timeIntervalSinceReferenceDate
     }
 }
 

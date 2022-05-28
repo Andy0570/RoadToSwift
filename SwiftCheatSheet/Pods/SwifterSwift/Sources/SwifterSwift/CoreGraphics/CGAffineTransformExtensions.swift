@@ -15,6 +15,16 @@ public extension CGAffineTransform {
     func transform3D() -> CATransform3D { CATransform3DMakeAffineTransform(self) }
 }
 
+// MARK: - Initializers
+
+public extension CGAffineTransform {
+    /// SwifterSwift: Create 'CGAffineTransform' instance with scale value.
+    /// - Parameter scale: scale value.
+    init(scale: CGFloat) {
+        self.init(scaleX: scale, y: scale)
+    }
+}
+
 #endif
 
 #endif
