@@ -29,6 +29,7 @@ class FastCartButton: UIControl {
     enum TouchState {
         case idle // 没有交互或动画正在发生
         case down // 按钮当前被按下
+        // swiftlint:disable:next identifier_name
         case up // 按钮被松开（即触发了 touchUpInside）
         case cancelled // 按钮被取消点击
     }

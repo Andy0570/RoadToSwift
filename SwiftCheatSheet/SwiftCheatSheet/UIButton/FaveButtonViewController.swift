@@ -32,11 +32,11 @@ extension FaveButtonViewController: FaveButtonDelegate {
     func faveButtonDotColors(_ faveButton: FaveButton) -> [DotColors]? {
         if faveButton === heartButton || faveButton === loveButton {
             return [
-                DotColors(first: UIColor(hexString: "0x7DC2F4")!, second: UIColor(hexString: "0xE2264D")!),
-                DotColors(first: UIColor(hexString: "0xF8CC61")!, second: UIColor(hexString: "0x9BDFBA")!),
-                DotColors(first: UIColor(hexString: "0xAF90F4")!, second: UIColor(hexString: "0x90D1F9")!),
-                DotColors(first: UIColor(hexString: "0xE9A966")!, second: UIColor(hexString: "0xF8C852")!),
-                DotColors(first: UIColor(hexString: "0xF68FA7")!, second: UIColor(hexString: "0xF6A2B8")!)
+                DotColors(first: UIColor(hexString: "0x7DC2F4").require(), second: UIColor(hexString: "0xE2264D").require()),
+                DotColors(first: UIColor(hexString: "0xF8CC61").require(), second: UIColor(hexString: "0x9BDFBA").require()),
+                DotColors(first: UIColor(hexString: "0xAF90F4").require(), second: UIColor(hexString: "0x90D1F9").require()),
+                DotColors(first: UIColor(hexString: "0xE9A966").require(), second: UIColor(hexString: "0xF8C852").require()),
+                DotColors(first: UIColor(hexString: "0xF68FA7").require(), second: UIColor(hexString: "0xF6A2B8").require())
             ]
         }
         return nil

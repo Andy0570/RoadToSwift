@@ -2,6 +2,7 @@ excluded: # 执行 linting 时忽略的路径。优先级比 `included` 更高�
   - ${PWD}/Carthage
   - ${PWD}/Pods
   - ${PWD}/DerivedData
+  - ${PWD}/R.generated.swift
 
 disabled_rules: # 关闭某些默认开启的规则
   - class_delegate_protocol # 委托协议应该只能被 class 类型遵守，以便它们可以被弱引用。

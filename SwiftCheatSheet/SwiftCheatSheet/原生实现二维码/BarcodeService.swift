@@ -39,7 +39,7 @@ struct AztecBarcode: Barcodable {
     let name = "CIAztecCodeGenerator"
 
     /// Force a compact style Aztec code to true or false. Set to nil for automatic.
-    let inputCompactStyle: Bool?
+    var inputCompactStyle = false
 
     /// Aztec error correction value between 5 and 95
     let inputCorrectionLevel: NSNumber
@@ -50,7 +50,7 @@ struct AztecBarcode: Barcodable {
     /// The message to encode in the Aztec Barcode
     let inputMessage: Data
 
-    init(inputCompactStyle: Bool? = false, inputCorrectionLevel: NSNumber = 5.0, inputLayers: NSNumber? = nil, inputMessage: Data) throws {
+    init(inputCompactStyle: Bool = false, inputCorrectionLevel: NSNumber = 5.0, inputLayers: NSNumber? = nil, inputMessage: Data) throws {
         self.inputCompactStyle = inputCompactStyle
         self.inputCorrectionLevel = inputCorrectionLevel
         self.inputLayers = inputLayers
@@ -59,10 +59,7 @@ struct AztecBarcode: Barcodable {
 
     var properties: [String: Any] {
         var response: [String: Any] = [:]
-
-        if let inputCompactStyle = inputCompactStyle {
-            response["inputCompactStyle"] = inputCompactStyle
-        }
+        response["inputCompactStyle"] = inputCompactStyle
 
         response["inputCorrectionLevel"] = inputCorrectionLevel
 

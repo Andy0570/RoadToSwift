@@ -17,8 +17,8 @@ class PhotoCollectionViewController: UIViewController {
     var photos: [UIImage]!
     var selectedIndexPath: IndexPath!
 
-    var currentLeftSafeAreaInset  : CGFloat = 0.0
-    var currentRightSafeAreaInset : CGFloat = 0.0
+    var currentLeftSafeAreaInset: CGFloat = 0.0
+    var currentRightSafeAreaInset: CGFloat = 0.0
 
     // 在 loadView() 方法中实例化视图并添加布局约束
     override func loadView() {
@@ -46,7 +46,6 @@ class PhotoCollectionViewController: UIViewController {
     // 在 viewDidLoad() 方法中配置视图
     override func viewDidLoad() {
         super.viewDidLoad()
-
 
 
         collectionView.backgroundColor = .systemBackground

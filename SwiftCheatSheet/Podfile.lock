@@ -6,6 +6,9 @@ PODS:
   - IGListKit (4.0.0):
     - IGListDiffKit (= 4.0.0)
   - Kingfisher (7.2.2)
+  - R.swift (6.1.0):
+    - R.swift.Library (~> 5.3.0)
+  - R.swift.Library (5.3.0)
   - SPPermissions/Camera (7.1.5):
     - SPPermissions/Core
   - SPPermissions/Core (7.1.5)
@@ -61,6 +64,7 @@ DEPENDENCIES:
   - FSPagerView
   - IGListKit
   - Kingfisher (~> 7.0)
+  - R.swift
   - SPPermissions/Camera
   - SPPermissions/LocationAlways
   - SPPermissions/LocationWhenInUse
@@ -79,6 +83,8 @@ SPEC REPOS:
     - IGListDiffKit
     - IGListKit
     - Kingfisher
+    - R.swift
+    - R.swift.Library
     - SPPermissions
     - SwiftyBeaver
 
@@ -99,10 +105,12 @@ SPEC CHECKSUMS:
   IGListDiffKit: 665d6cf43ce726e676013db9c7d6c4294259b6b2
   IGListKit: fd5a5d21935298f5849fa49d426843cff97b77c7
   Kingfisher: 184d4d1a8c36666e663caf8e08abe87898595c53
+  R.swift: ec98ff71c4ab2f6fd01dd077e5afd15e63a4834c
+  R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
   SPPermissions: c63ac1132badad39917de03a3c9dc2429ace94be
   SwifterSwift: 03a3e5fe175b6696193b2c9d0dfa7f0bf9ac02cc
   SwiftyBeaver: c8241b4745aa269a78ca5a022532c6915e948536
 
-PODFILE CHECKSUM: c194365c629460eee3c423e2b3d9089fff104a5b
+PODFILE CHECKSUM: 83a820ca106698ccdc0d303adf22bde5c819bb14
 
 COCOAPODS: 1.11.3

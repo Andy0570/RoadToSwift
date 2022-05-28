@@ -18,6 +18,7 @@ target 'SwiftCheatSheet' do
 
   # 工具服务
   pod 'SwiftyBeaver' # 日志记录
+  pod 'R.swift'
 
   pod 'SPPermissions/Camera' # 相机
   pod 'SPPermissions/PhotoLibrary' # 相册

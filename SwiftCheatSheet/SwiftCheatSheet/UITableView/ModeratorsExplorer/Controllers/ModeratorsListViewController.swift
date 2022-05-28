@@ -23,7 +23,7 @@ class ModeratorsListViewController: UIViewController {
         let indicatorView = UIActivityIndicatorView()
         indicatorView.translatesAutoresizingMaskIntoConstraints = false
         indicatorView.style = UIActivityIndicatorView.Style.medium
-        indicatorView.color = UIColor.rwGreen
+        indicatorView.color = R.color.rwGreen()
         view.addSubview(indicatorView)
         self.indicatorView = indicatorView
         NSLayoutConstraint.activate([
@@ -50,7 +50,7 @@ class ModeratorsListViewController: UIViewController {
         indicatorView.startAnimating()
 
         tableView.isHidden = true
-        tableView.separatorColor = UIColor.rwGreen
+        tableView.separatorColor = R.color.rwGreen()
         tableView.rowHeight = 60
         tableView.dataSource = self
         tableView.prefetchDataSource = self
