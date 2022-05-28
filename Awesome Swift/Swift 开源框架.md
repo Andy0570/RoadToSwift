@@ -708,8 +708,9 @@
 * :orange: [MWPhotoBrowser](https://github.com/mwaterfall/MWPhotoBrowser) ⭐️8.8k - 一个简单的 iOS 照片和视频浏览器，具有网格视图、导航栏标题和多选功能。
 * :orange: [RKSwipeCards](https://github.com/cwRichardKim/RKSwipeCards) ⭐️2.2k - 基于手势的照片显示，左滑删除，右滑喜欢，你懂的！
 * [PixelKit](https://github.com/heestand-xyz/PixelKit) ⭐️744 - 适用于 iOS、macOS 和 tvOS 的实时图形。
-* [ZLPhotoBrowser](https://github.com/longitachi/ZLPhotoBrowser) ⭐️4.1k - 微信样式的图片选择器，支持预览 / 相册内拍照及录视频、拖拽 / 滑动选择，编辑图片 / 视频，支持多语言国际化等功能；
-* [HXPHPicker](https://github.com/SilenceLove/HXPHPicker) ⭐️199 - Photo/Video Selector
+* [ZLPhotoBrowser](https://github.com/longitachi/ZLPhotoBrowser) ⭐️4.1k - 微信样式的图片选择器，支持预览 / 相册内拍照及录视频、拖拽 / 滑动选择，编辑图片 / 视频，支持多语言国际化等功能。
+* [HXPHPicker](https://github.com/SilenceLove/HXPHPicker) ⭐️199 - Photo/Video Selector.
+* [FluidPhoto](https://github.com/masamichiueta/FluidPhoto) ⭐️227 - 具有缩放过渡和交互式过渡的流畅照片查看器。
 
 
 
@@ -720,8 +721,8 @@
 * [PixelSDK](https://github.com/GottaYotta/PixelSDK) ⭐️333 - 适用于 iPhone / iPad 应用的现代照片和视频编辑器。一个完全可定制的图像和视频编辑 Swift 框架。
 * [MetalFilters](https://github.com/alexiscn/MetalFilters) ⭐️316 - 基于 Metal 框架实现的 Instagram 风格图片滤镜库。
 * [UIImageColors](https://github.com/jathu/UIImageColors) ⭐️3k - 图片色系决定界面背景色及字体显示颜色。获取主色、次色、背景色、详细色。
-* [DominantColor](https://github.com/indragiek/DominantColor) ⭐️865 - 提取图片主色示例项目
-* [issue-21-core-image-explorer](https://github.com/objcio/issue-21-core-image-explorer) ⭐️209 - objc.io 示例，Core Image 滤镜处理图片
+* [DominantColor](https://github.com/indragiek/DominantColor) ⭐️865 - 提取图片主色示例项目。
+* [issue-21-core-image-explorer](https://github.com/objcio/issue-21-core-image-explorer) ⭐️209 - objc.io 示例，Core Image 滤镜处理图片。
 * :orange: [CoreImageShop](https://github.com/rFlex/CoreImageShop) ⭐️418 - Mac 应用程序，让你创建一个 Core Image Filter 并轻松生成底层 Objective-C 代码。
 * :orange: [CLImageEditor](https://github.com/yackle/CLImageEditor) ⭐️2.2k - 超强的图片编辑库，快速帮你实现旋转，防缩，滤镜等等一系列麻烦的事情。
 * [MarkingMen](https://github.com/FlexMonkey/MarkingMen) ⭐️217 - 允许用户使用一个手势来浏览和选择菜单层次，该手势在屏幕上显示为一个连续的标记。
@@ -736,7 +737,7 @@
 * [png](https://github.com/kelvin13/png) ⭐️259 - 纯 Swift 代码解析 PNG 格式，返回图像原始像素数据和尺寸。
 * [APNGKit](https://github.com/onevcat/APNGKit) ⭐️2k - 解析和显示 APNG 的框架。
 * [AImage](https://github.com/wangjwchn/AImage) ⭐️1k - GIF/APNG 播放引擎。
-* [gifu](https://github.com/kaishin/gifu) ⭐️2.7k - 高性能 GIF 显示类库
+* [gifu](https://github.com/kaishin/gifu) ⭐️2.7k - 高性能 GIF 显示类库。
 * [SwiftyGif](https://github.com/kirualex/SwiftyGif) ⭐️1.5k - 高性能 GIF 引擎。
 * :orange: [FLAnimatedImage](https://github.com/Flipboard/FLAnimatedImage) ⭐️7.7k - Flipboard 开源的高性能 GIF 引擎
 * [SwiftSVG](https://github.com/mchoe/SwiftSVG) ⭐️1.7k - 支持多种接口绘制 SVG 类库。

@@ -82,6 +82,8 @@
 		2262188527EDAEF10052634A /* SwiftCheatSheetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2262188427EDAEF10052634A /* SwiftCheatSheetTests.swift */; };
 		2262188E27EDAFFA0052634A /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2262188D27EDAFFA0052634A /* StringExtensionTests.swift */; };
 		2262189427EDCA790052634A /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2262189327EDCA790052634A /* UIColor+Extensions.swift */; };
+		226A60E82841FC91005598D2 /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226A60E72841FC91005598D2 /* PhotoCollectionViewController.swift */; };
+		226A60EA2841FCAD005598D2 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226A60E92841FCAD005598D2 /* PhotoCollectionViewCell.swift */; };
 		2273388E282EAE6A00E94E12 /* FaveButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2273388C282EAE6A00E94E12 /* FaveButtonViewController.swift */; };
 		2273388F282EAE6A00E94E12 /* FaveButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2273388D282EAE6A00E94E12 /* FaveButtonViewController.xib */; };
 		227762DC28352D2E004C025D /* FSPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227762DA28352D2E004C025D /* FSPageViewController.swift */; };
@@ -102,7 +104,6 @@
 		227944982807BFAF00BFDADA /* BarCodeGenerateController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227944962807BFAF00BFDADA /* BarCodeGenerateController.xib */; };
 		2279449A2807BFD100BFDADA /* BarcodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227944992807BFD100BFDADA /* BarcodeService.swift */; };
 		2279449C2807D3D400BFDADA /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2279449B2807D3D400BFDADA /* Colors.xcassets */; };
-		227944AA2807FC2900BFDADA /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227944A92807FC2900BFDADA /* Assets.swift */; };
 		227E7EAC27E0756C009D5E45 /* CollapsExpandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227E7EAB27E0756C009D5E45 /* CollapsExpandViewController.swift */; };
 		227E7EB427E0824F009D5E45 /* MultipleSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227E7EB227E0824F009D5E45 /* MultipleSelectionViewController.swift */; };
 		227E7EB527E0824F009D5E45 /* MultipleSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227E7EB327E0824F009D5E45 /* MultipleSelectionViewController.xib */; };
@@ -319,6 +320,8 @@
 		2262188427EDAEF10052634A /* SwiftCheatSheetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCheatSheetTests.swift; sourceTree = "<group>"; };
 		2262188D27EDAFFA0052634A /* StringExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
 		2262189327EDCA790052634A /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		226A60E72841FC91005598D2 /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
+		226A60E92841FCAD005598D2 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		2273388C282EAE6A00E94E12 /* FaveButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaveButtonViewController.swift; sourceTree = "<group>"; };
 		2273388D282EAE6A00E94E12 /* FaveButtonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FaveButtonViewController.xib; sourceTree = "<group>"; };
 		227762DA28352D2E004C025D /* FSPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSPageViewController.swift; sourceTree = "<group>"; };
@@ -339,7 +342,6 @@
 		227944962807BFAF00BFDADA /* BarCodeGenerateController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BarCodeGenerateController.xib; sourceTree = "<group>"; };
 		227944992807BFD100BFDADA /* BarcodeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeService.swift; sourceTree = "<group>"; };
 		2279449B2807D3D400BFDADA /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		227944A92807FC2900BFDADA /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		227E7EAB27E0756C009D5E45 /* CollapsExpandViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapsExpandViewController.swift; sourceTree = "<group>"; };
 		227E7EB227E0824F009D5E45 /* MultipleSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleSelectionViewController.swift; sourceTree = "<group>"; };
 		227E7EB327E0824F009D5E45 /* MultipleSelectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultipleSelectionViewController.xib; sourceTree = "<group>"; };
@@ -640,6 +642,7 @@
 		2246DD0727C474B6006A3AC1 /* UICollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				226A60E62841FBE3005598D2 /* FluidPhoto */,
 				227762F128353D98004C025D /* ZoomableCollectionView */,
 				227762D428352C94004C025D /* FSPageViewDemo */,
 				2246DD1527C493CC006A3AC1 /* MyCollectionViewController */,
@@ -753,6 +756,15 @@
 			path = SwiftCheatSheetTests;
 			sourceTree = "<group>";
 		};
+		226A60E62841FBE3005598D2 /* FluidPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				226A60E72841FC91005598D2 /* PhotoCollectionViewController.swift */,
+				226A60E92841FCAD005598D2 /* PhotoCollectionViewCell.swift */,
+			);
+			path = FluidPhoto;
+			sourceTree = "<group>";
+		};
 		227762D428352C94004C025D /* FSPageViewDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -806,14 +818,6 @@
 				2279449B2807D3D400BFDADA /* Colors.xcassets */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		227944A42807F4FE00BFDADA /* SwiftGen */ = {
-			isa = PBXGroup;
-			children = (
-				227944A92807FC2900BFDADA /* Assets.swift */,
-			);
-			path = SwiftGen;
 			sourceTree = "<group>";
 		};
 		227E7EAA27E07559009D5E45 /* CollapsExpand */ = {
@@ -1315,7 +1319,6 @@
 				22BF2E0C27BDFD8B009027E3 /* 设计模式 */,
 				22D2234927BCF061000EAD0F /* Homepage */,
 				223C9549283B161A009F36F4 /* Extensions */,
-				227944A42807F4FE00BFDADA /* SwiftGen */,
 				227944A22807F3A200BFDADA /* Resources */,
 				22D2233527BCEB89000EAD0F /* AppDelegate.swift */,
 				22D2233727BCEB89000EAD0F /* SceneDelegate.swift */,
@@ -1749,7 +1752,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# SwiftGen\nif which swiftgen >/dev/null; then\n  swiftgen config run --config swiftgen.yml\nelse\n  echo \"warning: SwiftGen is not installed. download from https://github.com/SwiftGen/SwiftGen\"\nfi\n\n# SwiftLint\nif which swiftlint >/dev/null; then\n    swiftlint --fix && swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "# SwiftLint\nif which swiftlint >/dev/null; then\n    swiftlint --fix && swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		4645A1A0AC718E3CCCA141A9 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1791,6 +1794,7 @@
 				22DF13932810E7A800482E5F /* CustomView.swift in Sources */,
 				2230E552283BE479007D168D /* ModalTransitionManager.swift in Sources */,
 				22AC912127DF981E007260E6 /* AuteurDetailViewController.swift in Sources */,
+				226A60EA2841FCAD005598D2 /* PhotoCollectionViewCell.swift in Sources */,
 				224EB7D327F0604F008A35DF /* GradientViewController.swift in Sources */,
 				2230E558283BED9A007D168D /* StandardInteractionController.swift in Sources */,
 				22569EBA27E33929009B18A3 /* LoadingView.swift in Sources */,
@@ -1869,7 +1873,7 @@
 				2240754527FB5CDC0050BEF6 /* VideoEditor.swift in Sources */,
 				225F202327C332F0008FCC29 /* TurnStrategy.swift in Sources */,
 				227762EE283530D5004C025D /* ZoomableImageViewCell.swift in Sources */,
-				227944AA2807FC2900BFDADA /* Assets.swift in Sources */,
+				226A60E82841FC91005598D2 /* PhotoCollectionViewController.swift in Sources */,
 				227E7EBB27E083B7009D5E45 /* CustomTableViewCell.swift in Sources */,
 				229AC7E427D5FAAB001D81D2 /* PhotoListViewModel.swift in Sources */,
 				2231431727FB2CE00006B59E /* PickerViewController.swift in Sources */,
