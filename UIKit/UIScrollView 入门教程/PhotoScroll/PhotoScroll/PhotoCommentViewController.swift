@@ -33,51 +33,50 @@ class PhotoCommentViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var nameTextField: UITextField!
 
+    var photoName: String?
     var photoIndex: Int!
 
-    var photoName: String?
+    // 单击手势，点击空白区域收起键盘
+    private lazy var tapRecognizer: UITapGestureRecognizer = {
+        var recognizer = UITapGestureRecognizer(target:self, action: #selector(hideKeyboard(_:)))
+        return recognizer
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         if let photoName = photoName {
-            self.imageView.image = UIImage(named: photoName)
+            imageView.image = UIImage(named: photoName)
         }
-    }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        // 在 NotificationCenter 中注册以接收键盘通知
-        // ???: <https://stackoverflow.com/questions/66144805/why-in-ios14-or-at-least-ios14-4-keyboardwillshownotification-is-fired-twice>
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+
+        view.addGestureRecognizer(tapRecognizer)
     }
 
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-
-        // 移除键盘通知
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    // 在 imageView 上添加一个 Tap Gesture Recognizer，单击后触发此方法
+    @IBAction func openZoomingController(_ sender: AnyObject) {
+        // 手动触发 "Show Detail" segue，显示 ZoomedPhotoViewController 实例。
+        self.performSegue(withIdentifier: "zooming", sender: nil)
     }
 
-    // 从 userInfo 中获取键盘高度并调整 scrollView 的 contentInset
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let id = segue.identifier,
+            let viewController = segue.destination as? ZoomedPhotoViewController, id == "zooming" {
+            viewController.photoName = photoName
+        }
+    }
+    
     func adjustInsetForKeyboardShow(_ show: Bool, notification: Notification) {
         guard let userInfo = notification.userInfo,
-            let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else {
+        let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else {
             return
         }
 
-        // let adjustmentHeight = (keyboardFrame.cgRectValue.height + 20) * (show ? 1 : -1)
-        let adjustmentHeight = keyboardFrame.cgRectValue.height + 20
-        if show {
-            scrollView.contentInset.bottom += adjustmentHeight
-            scrollView.verticalScrollIndicatorInsets.bottom += adjustmentHeight
-        } else {
-            scrollView.contentInset.bottom = 0
-            scrollView.verticalScrollIndicatorInsets.bottom  = 0
-        }
+        let adjustmentHeight = (keyboardFrame.cgRectValue.height + 20) * (show ? 1 : -1)
+        scrollView.contentInset.bottom += adjustmentHeight
+        scrollView.verticalScrollIndicatorInsets.bottom += adjustmentHeight
     }
 
     @objc func keyboardWillShow(_ notification: Notification) {
@@ -88,24 +87,7 @@ class PhotoCommentViewController: UIViewController {
         adjustInsetForKeyboardShow(false, notification: notification)
     }
 
-    // Tap Gesture Recoginzer
-    // UITextField Primary Action Triggered
     @IBAction func hideKeyboard(_ sender: AnyObject) {
-      nameTextField.resignFirstResponder()
+        nameTextField.endEditing(true)
     }
-
-    //
-    @IBAction func openZoomingController(_ sender: AnyObject) {
-        self.performSegue(withIdentifier: "zooming", sender: nil)
-    }
-
-    // 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let id = segue.identifier,
-           let viewController = segue.destination as? ZoomedPhotoViewController,
-           id == "zooming" {
-            viewController.photoName = photoName
-        }
-    }
-
 }

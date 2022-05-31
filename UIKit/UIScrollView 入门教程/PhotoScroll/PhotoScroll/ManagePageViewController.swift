@@ -35,19 +35,18 @@ class ManagePageViewController: UIPageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let viewController = viewPhotoCommentController(currentIndex ?? 0) {
+        if let viewController = viewPhotoCommentController(currentIndex ?? 0)  {
             let viewControllers = [viewController]
 
-            setViewControllers(viewControllers, direction: .forward, animated: false)
+            setViewControllers(viewControllers, direction: .forward, animated: false, completion: nil)
         }
 
         dataSource = self
     }
 
-    // 通过 storyboard 创建 PhotoCommentViewController 的实例
     func viewPhotoCommentController(_ index: Int) -> PhotoCommentViewController? {
         guard let storyboard = storyboard,
-                let page = storyboard.instantiateViewController(withIdentifier: "PhotoCommentViewController") as? PhotoCommentViewController else {
+        let page = storyboard.instantiateViewController(withIdentifier: "PhotoCommentViewController") as? PhotoCommentViewController else {
             return nil
         }
 
@@ -60,33 +59,26 @@ class ManagePageViewController: UIPageViewController {
 extension ManagePageViewController: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         if let viewController = viewController as? PhotoCommentViewController,
-           let index = viewController.photoIndex,
-           index > 0 {
+            let index = viewController.photoIndex, index > 0 {
             return viewPhotoCommentController(index - 1)
         }
-
         return nil
     }
 
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         if let viewController = viewController as? PhotoCommentViewController,
-           let index = viewController.photoIndex,
-           (index + 1) < photos.count {
+            let index = viewController.photoIndex, (index + 1) < photos.count {
             return viewPhotoCommentController(index + 1)
         }
-
         return nil
     }
 
-    // 指定要在页面视图控制器中显示的页面数
+    // 要显示 UIPageControl，翻页过渡样式必须设置为 UIPageViewControllerTransitionStyleScroll
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
-      return photos.count
+        return photos.count
     }
 
-    // 告诉页面视图控制器它最初应该选择哪个页面
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-      return currentIndex ?? 0
+        return currentIndex ?? 0
     }
-
 }
-

@@ -31,11 +31,12 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
-    
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+
         let pageControl = UIPageControl.appearance()
-        pageControl.pageIndicatorTintColor = UIColor.systemGray
-        pageControl.currentPageIndicatorTintColor = UIColor.systemPurple
+        pageControl.pageIndicatorTintColor = .systemGray
+        pageControl.currentPageIndicatorTintColor = .systemPurple
         
         return true
     }

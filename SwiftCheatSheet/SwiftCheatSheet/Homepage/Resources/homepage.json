@@ -104,6 +104,11 @@
         "title": "ZoomableViewController",
         "description": "",
         "className": "ZoomableViewController"
+    },{
+        "image": "image",
+        "title": "Fluid Photo",
+        "description": "",
+        "className": "PhotoCollectionViewController"
     }]
 }, {
     "title": "自动布局",

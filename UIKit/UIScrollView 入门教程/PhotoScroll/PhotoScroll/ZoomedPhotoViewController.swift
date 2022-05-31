@@ -30,15 +30,18 @@ import UIKit
 
 class ZoomedPhotoViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
-    var photoName: String?
-
     @IBOutlet weak var scrollView: UIScrollView!
+    
     @IBOutlet weak var imageViewBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var imageViewLeadingConstraint: NSLayoutConstraint!
     @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
 
+    var photoName: String?
+
     override func viewDidLoad() {
+        super.viewDidLoad()
+
         if let photoName = photoName {
             imageView.image = UIImage(named: photoName)
         }
@@ -49,7 +52,7 @@ class ZoomedPhotoViewController: UIViewController {
         updateMinZoomScaleForSize(view.bounds.size)
     }
 
-    // 计算 scrollView 的缩放比例，设置图片的最小缩放比例
+    // 计算并设置 scrollView 的缩放比例
     func updateMinZoomScaleForSize(_ size: CGSize) {
         let widthScale = size.width / imageView.bounds.width
         let heightScale = size.height / imageView.bounds.height
@@ -60,25 +63,28 @@ class ZoomedPhotoViewController: UIViewController {
     }
 }
 
+// MARK: - UIScrollViewDelegate
+
 extension ZoomedPhotoViewController: UIScrollViewDelegate {
-    // UIScrollView 调用此方法来确定当用户捏合图像时要缩放哪个子视图
+    // scrollView 调用此方法来确定当用户捏合图像时要缩放其哪个子视图。
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return imageView
     }
 
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    func scrollViewDidZoom(_ scrollView: UIScrollView) {
         updateConstraintsForSize(view.bounds.size)
     }
 
+    // 居中显示图像
     func updateConstraintsForSize(_ size: CGSize) {
-        // 从视图的高度中减去 imageView 的高度并将结果分成两半来垂直居中图像。
         let yOffset = max(0, (size.height - imageView.frame.height) / 2)
         imageViewTopConstraint.constant = yOffset
         imageViewBottomConstraint.constant = yOffset
 
-        // 水平居中图片
         let xOffset = max(0, (size.width - imageView.frame.width) / 2)
         imageViewLeadingConstraint.constant = xOffset
         imageViewTrailingConstraint.constant = xOffset
+
+        view.layoutIfNeeded()
     }
 }
