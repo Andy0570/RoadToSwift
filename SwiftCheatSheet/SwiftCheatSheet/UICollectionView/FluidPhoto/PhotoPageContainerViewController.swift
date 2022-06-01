@@ -12,6 +12,8 @@ protocol PhotoPageContainerViewControllerDelegate: AnyObject {
 }
 
 class PhotoPageContainerViewController: UIViewController {
+    weak var delegate: PhotoPageContainerViewControllerDelegate?
+
     enum ScreenMode {
         case full, normal
     }
@@ -36,17 +38,6 @@ class PhotoPageContainerViewController: UIViewController {
         }
     }
 
-    weak var delegate: PhotoPageContainerViewControllerDelegate?
-
-    var pageViewController: UIPageViewController = {
-        let pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
-        return pageViewController
-    }()
-
-    var currentViewController: PhotoZoomViewController {
-        return self.pageViewController.viewControllers![0] as! PhotoZoomViewController
-    }
-
     var photos: [UIImage]!
     var currentIndex = 0
     var nextIndex: Int?
@@ -55,6 +46,22 @@ class PhotoPageContainerViewController: UIViewController {
     var singleTapGestureRecognizer: UITapGestureRecognizer!
 
     var transitionController = ZoomTransitionController()
+
+    lazy var pageViewController: UIPageViewController = {
+        let pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
+        pageViewController.dataSource = self
+        pageViewController.delegate = self
+        return pageViewController
+    }()
+
+    var currentViewController: PhotoZoomViewController {
+        guard let viewControllers = self.pageViewController.viewControllers, let zoomViewController = viewControllers.first as? PhotoZoomViewController else {
+            fatalError("Can't get current zoom view controller!")
+        }
+        return zoomViewController
+    }
+
+    // MARK: - View Functions
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,9 +77,6 @@ class PhotoPageContainerViewController: UIViewController {
             self.pageViewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             self.pageViewController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
-
-        self.pageViewController.delegate = self
-        self.pageViewController.dataSource = self
 
         // Pan 手势用于实现下拉交互过渡
         self.panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(didPanWith(gestureRecognizer:)))
@@ -119,7 +123,7 @@ class PhotoPageContainerViewController: UIViewController {
         }
     }
 
-    func viewPhotoZoomViewController(_ index: Int) -> PhotoZoomViewController {
+    private func viewPhotoZoomViewController(_ index: Int) -> PhotoZoomViewController {
         let zoomViewController = PhotoZoomViewController()
         zoomViewController.delegate = self
         self.singleTapGestureRecognizer.require(toFail: zoomViewController.doubleTapGestureRecognizer)
@@ -196,8 +200,10 @@ extension PhotoPageContainerViewController: UIPageViewControllerDelegate, UIPage
                 zoomViewController.scrollView.zoomScale = zoomViewController.scrollView.minimumZoomScale
             }
 
-            self.currentIndex = self.nextIndex!
-            self.delegate?.containerViewController(self, indexDidUpdate: self.currentIndex)
+            if let nextIndex = self.nextIndex {
+                self.currentIndex = nextIndex
+                self.delegate?.containerViewController(self, indexDidUpdate: self.currentIndex)
+            }
         }
 
         self.nextIndex = nil
@@ -213,12 +219,6 @@ extension PhotoPageContainerViewController: PhotoZoomViewControllerDelegate {
 }
 
 extension PhotoPageContainerViewController: ZoomAnimatorDelegate {
-    func transitionWillStartWith(zoomAnimator: ZoomAnimator) {
-    }
-
-    func transitionDidEndWith(zoomAnimator: ZoomAnimator) {
-    }
-
     func referenceImageView(for zoomAnimator: ZoomAnimator) -> UIImageView? {
         return currentViewController.imageView
     }

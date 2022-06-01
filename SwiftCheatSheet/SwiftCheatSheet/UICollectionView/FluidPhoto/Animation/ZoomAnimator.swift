@@ -1,5 +1,5 @@
 //
-//  ZoomAnimatorDelegate.swift
+//  ZoomAnimator.swift
 //  SwiftCheatSheet
 //
 //  Created by Qilin Hu on 2022/5/30.
@@ -15,6 +15,14 @@ protocol ZoomAnimatorDelegate: AnyObject {
     func referenceImageViewFrameInTransitioningView(for zoomAnimator: ZoomAnimator) -> CGRect?
 }
 
+extension ZoomAnimatorDelegate {
+    func transitionWillStartWith(zoomAnimator: ZoomAnimator) {
+    }
+
+    func transitionDidEndWith(zoomAnimator: ZoomAnimator) {
+    }
+}
+
 /// 动画控制器，负责缩放动画逻辑
 class ZoomAnimator: NSObject {
     weak var fromDelegate: ZoomAnimatorDelegate?
@@ -25,8 +33,6 @@ class ZoomAnimator: NSObject {
 
     // 放大动画
     private func animateZoomInTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        let containerView = transitionContext.containerView
-
         guard let toVC = transitionContext.viewController(forKey: .to),
             let fromVC = transitionContext.viewController(forKey: .from),
             let fromReferenceImageView = self.fromDelegate?.referenceImageView(for: self),
@@ -35,6 +41,8 @@ class ZoomAnimator: NSObject {
             let fromReferenceImage = fromReferenceImageView.image else {
                 return
             }
+
+        let containerView = transitionContext.containerView
 
         self.fromDelegate?.transitionWillStartWith(zoomAnimator: self)
         self.toDelegate?.transitionWillStartWith(zoomAnimator: self)
@@ -55,6 +63,7 @@ class ZoomAnimator: NSObject {
         fromReferenceImageView.isHidden = true
 
         let finalTransitionFrame = calculateZoomInImageFrame(image: fromReferenceImage, forView: toVC.view)
+        // swiftlint:disable:next multiline_arguments
         UIView.animate(withDuration: transitionDuration(using: transitionContext),
                        delay: 0,
                        usingSpringWithDamping: 0.8,
@@ -78,8 +87,6 @@ class ZoomAnimator: NSObject {
 
     // 缩小动画
     private func animateZoomOutTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        let containerView = transitionContext.containerView
-
         guard let toVC = transitionContext.viewController(forKey: .to),
             let fromVC = transitionContext.viewController(forKey: .from),
             let fromReferenceImageView = self.fromDelegate?.referenceImageView(for: self),
@@ -89,6 +96,8 @@ class ZoomAnimator: NSObject {
             let fromReferenceImage = fromReferenceImageView.image else {
                 return
             }
+
+        let containerView = transitionContext.containerView
 
         self.fromDelegate?.transitionWillStartWith(zoomAnimator: self)
         self.toDelegate?.transitionWillStartWith(zoomAnimator: self)

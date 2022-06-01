@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		220B6D7F2844AD40009EC8BD /* PhotoPageContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220B6D7E2844AD40009EC8BD /* PhotoPageContainerViewController.swift */; };
 		220B6D822844BCA6009EC8BD /* ZoomTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220B6D812844BCA6009EC8BD /* ZoomTransitionController.swift */; };
-		220B6D842844BD8F009EC8BD /* ZoomAnimatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220B6D832844BD8F009EC8BD /* ZoomAnimatorDelegate.swift */; };
+		220B6D842844BD8F009EC8BD /* ZoomAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220B6D832844BD8F009EC8BD /* ZoomAnimator.swift */; };
 		220B6D862844BE16009EC8BD /* ZoomDismissalInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220B6D852844BE16009EC8BD /* ZoomDismissalInteractionController.swift */; };
 		221C58EA27F87FF000E5D855 /* VideoNinjaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221C58E827F87FF000E5D855 /* VideoNinjaViewController.swift */; };
 		221C58EB27F87FF000E5D855 /* VideoNinjaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 221C58E927F87FF000E5D855 /* VideoNinjaViewController.xib */; };
@@ -251,7 +251,7 @@
 /* Begin PBXFileReference section */
 		220B6D7E2844AD40009EC8BD /* PhotoPageContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPageContainerViewController.swift; sourceTree = "<group>"; };
 		220B6D812844BCA6009EC8BD /* ZoomTransitionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomTransitionController.swift; sourceTree = "<group>"; };
-		220B6D832844BD8F009EC8BD /* ZoomAnimatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomAnimatorDelegate.swift; sourceTree = "<group>"; };
+		220B6D832844BD8F009EC8BD /* ZoomAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomAnimator.swift; sourceTree = "<group>"; };
 		220B6D852844BE16009EC8BD /* ZoomDismissalInteractionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomDismissalInteractionController.swift; sourceTree = "<group>"; };
 		221C58E827F87FF000E5D855 /* VideoNinjaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoNinjaViewController.swift; sourceTree = "<group>"; };
 		221C58E927F87FF000E5D855 /* VideoNinjaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoNinjaViewController.xib; sourceTree = "<group>"; };
@@ -517,7 +517,7 @@
 			isa = PBXGroup;
 			children = (
 				220B6D812844BCA6009EC8BD /* ZoomTransitionController.swift */,
-				220B6D832844BD8F009EC8BD /* ZoomAnimatorDelegate.swift */,
+				220B6D832844BD8F009EC8BD /* ZoomAnimator.swift */,
 				220B6D852844BE16009EC8BD /* ZoomDismissalInteractionController.swift */,
 			);
 			path = Animation;
@@ -1896,7 +1896,7 @@
 				228B38F227D0614700BCF963 /* FlagViewController.swift in Sources */,
 				22AE41F52826E1CC009A5850 /* CornerRadiusTableViewCell.swift in Sources */,
 				22BF2E1627BDFE51009027E3 /* HTTPClient.swift in Sources */,
-				220B6D842844BD8F009EC8BD /* ZoomAnimatorDelegate.swift in Sources */,
+				220B6D842844BD8F009EC8BD /* ZoomAnimator.swift in Sources */,
 				22E3481D27E852B000369602 /* Result.swift in Sources */,
 				22FF1B6327C8A00C007214EB /* CommentCell.swift in Sources */,
 				22BF2E2827BF2FF9009027E3 /* NavigationController.swift in Sources */,

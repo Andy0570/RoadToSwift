@@ -21,6 +21,7 @@ class ZoomTransitionController: NSObject {
         interactionController = ZoomDismissalInteractionController()
         super.init()
     }
+
     // Add wrapper to call didPanWith in ZoomDismissalInteractionController
     func didPanWith(gestureRecognizer: UIPanGestureRecognizer) {
         interactionController.didPanWith(gestureRecognizer: gestureRecognizer)
@@ -46,7 +47,6 @@ extension ZoomTransitionController: UIViewControllerTransitioningDelegate {
         if !isInteractive {
             return nil
         }
-
         interactionController.animator = animator
         return interactionController
     }
@@ -63,7 +63,6 @@ extension ZoomTransitionController: UINavigationControllerDelegate {
             animator.fromDelegate = toDelegate
             animator.toDelegate = fromDelegate
         }
-
         return animator
     }
 
@@ -71,7 +70,6 @@ extension ZoomTransitionController: UINavigationControllerDelegate {
         if !isInteractive {
             return nil
         }
-
         interactionController.animator = animator
         return interactionController
     }

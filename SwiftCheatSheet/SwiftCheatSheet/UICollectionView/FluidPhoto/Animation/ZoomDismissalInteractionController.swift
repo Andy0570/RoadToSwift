@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// 交互控制器，负责以交互方式执行 Dismissal 转场
 class ZoomDismissalInteractionController: NSObject {
     var transitionContext: UIViewControllerContextTransitioning?
     var animator: UIViewControllerAnimatedTransitioning?
@@ -60,7 +61,7 @@ class ZoomDismissalInteractionController: NSObject {
                     transitionImageView.frame = fromReferenceImageViewFrame
                     fromVC.view.alpha = 1.0
                     toVC.tabBarController?.tabBar.alpha = 0
-                } completion: { _ in
+                } completion: { [weak self] _ in
                     toReferenceImageView.isHidden = false
                     fromReferenceImageView.isHidden = false
                     transitionImageView.removeFromSuperview()
@@ -70,31 +71,31 @@ class ZoomDismissalInteractionController: NSObject {
                     transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
                     animator.toDelegate?.transitionDidEndWith(zoomAnimator: animator)
                     animator.fromDelegate?.transitionDidEndWith(zoomAnimator: animator)
-                    self.transitionContext = nil
+                    self?.transitionContext = nil
                 }
-            }
+            } else {
+                // start animation
+                let finalTransitionSize = toReferenceImageViewFrame
+                UIView.animate(withDuration: 0.25, delay: 0, options: []) {
+                    transitionImageView.frame = finalTransitionSize
+                    fromVC.view.alpha = 0
+                    toVC.tabBarController?.tabBar.alpha = 1
+                } completion: { [weak self] _ in
+                    transitionImageView.removeFromSuperview()
+                    toReferenceImageView.isHidden = false
+                    fromReferenceImageView.isHidden = false
 
-            // start animation
-            let finalTransitionSize = toReferenceImageViewFrame
-            UIView.animate(withDuration: 0.25, delay: 0, options: []) {
-                transitionImageView.frame = finalTransitionSize
-                fromVC.view.alpha = 0
-                toVC.tabBarController?.tabBar.alpha = 1
-            } completion: { _ in
-                transitionImageView.removeFromSuperview()
-                toReferenceImageView.isHidden = false
-                fromReferenceImageView.isHidden = false
-
-                self.transitionContext?.finishInteractiveTransition()
-                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
-                animator.toDelegate?.transitionDidEndWith(zoomAnimator: animator)
-                animator.fromDelegate?.transitionDidEndWith(zoomAnimator: animator)
-                self.transitionContext = nil
+                    transitionContext.finishInteractiveTransition()
+                    transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+                    animator.toDelegate?.transitionDidEndWith(zoomAnimator: animator)
+                    animator.fromDelegate?.transitionDidEndWith(zoomAnimator: animator)
+                    self?.transitionContext = nil
+                }
             }
         }
     }
 
-    func backgroundAlphaFor(view: UIView, withPanningVerticalDelta verticalDelta: CGFloat) -> CGFloat {
+    private func backgroundAlphaFor(view: UIView, withPanningVerticalDelta verticalDelta: CGFloat) -> CGFloat {
         let startingAlpha: CGFloat = 1.0
         let finalAlpha: CGFloat = 0.0
         let totalAvailableAlpha = startingAlpha - finalAlpha
@@ -105,7 +106,7 @@ class ZoomDismissalInteractionController: NSObject {
         return startingAlpha - (deltaAsPercentageOfMaximun * totalAvailableAlpha)
     }
 
-    func scaleFor(view: UIView, withPanningVerticalDelta verticalDelta: CGFloat) -> CGFloat {
+    private func scaleFor(view: UIView, withPanningVerticalDelta verticalDelta: CGFloat) -> CGFloat {
         let startingScale: CGFloat = 1.0
         let finalScale: CGFloat = 0.5
         let totalAvailableScale = startingScale - finalScale

@@ -8,8 +8,8 @@
 import UIKit
 
 /// Create transition and interaction like iOS Photos app
-/// 像 iOS Photos 应用一样创建过渡和交互
-/// <https://medium.com/@masamichiueta/create-transition-and-interaction-like-ios-photos-app-2b9f16313d3>
+/// 创建像 iOS Photos 应用一样的过渡和交互
+/// Reference: <https://medium.com/@masamichiueta/create-transition-and-interaction-like-ios-photos-app-2b9f16313d3>
 class PhotoCollectionViewController: UIViewController {
     // 弱引用的隐式解包可选类型变量
     weak var collectionView: UICollectionView!
@@ -198,9 +198,6 @@ extension PhotoCollectionViewController: PhotoPageContainerViewControllerDelegat
 // MARK: - ZoomAnimatorDelegate
 
 extension PhotoCollectionViewController: ZoomAnimatorDelegate {
-    func transitionWillStartWith(zoomAnimator: ZoomAnimator) {
-    }
-
     func transitionDidEndWith(zoomAnimator: ZoomAnimator) {
         let cell = self.collectionView.cellForItem(at: self.selectedIndexPath) as! PhotoCollectionViewCell
 
