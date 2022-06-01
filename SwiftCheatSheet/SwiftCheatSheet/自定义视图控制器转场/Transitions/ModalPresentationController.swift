@@ -16,6 +16,7 @@ class ModalPresentationController: UIPresentationController {
         return view
     }()
 
+    // Presentation 转场开始前该方法被调用
     override func presentationTransitionWillBegin() {
         guard let containerView = containerView else {
             return
@@ -39,6 +40,7 @@ class ModalPresentationController: UIPresentationController {
         })
     }
 
+    // Dismissal 转场开始前该方法被调用
     override func dismissalTransitionWillBegin() {
         guard let coordinator = presentedViewController.transitionCoordinator else {
             fadeView.alpha = 0.0

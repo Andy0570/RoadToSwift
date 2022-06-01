@@ -29,39 +29,50 @@ extension ModalTransitionAnimator: UIViewControllerAnimatedTransitioning {
 
     // Presentation 动画
     private func animatePresentation(using transitionContext: UIViewControllerContextTransitioning) {
-        let presentedViewController = transitionContext.viewController(forKey: .to)!
+        guard let presentedViewController = transitionContext.viewController(forKey: .to) else {
+            return
+        }
+
         transitionContext.containerView.addSubview(presentedViewController.view)
 
         let presentedFrame = transitionContext.finalFrame(for: presentedViewController)
-        let dismissedFrame = CGRect(x: presentedFrame.minX, y: transitionContext.containerView.bounds.height, width: presentedFrame.width, height: presentedFrame.height)
-
+        let dismissedFrame = CGRect(
+            x: presentedFrame.minX,
+            y: transitionContext.containerView.bounds.height,
+            width: presentedFrame.width,
+            height: presentedFrame.height
+        )
         presentedViewController.view.frame = dismissedFrame
 
         let animator = UIViewPropertyAnimator(duration: transitionDuration(using: transitionContext), dampingRatio: 1.0) {
             presentedViewController.view.frame = presentedFrame
         }
-
         animator.addCompletion { _ in
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         }
-
         animator.startAnimation()
     }
 
     // Dismissal 动画
     private func animateDismissal(using transitionContext: UIViewControllerContextTransitioning) {
-        let presentedViewController = transitionContext.viewController(forKey: .from)!
+        guard let presentedViewController = transitionContext.viewController(forKey: .from) else {
+            return
+        }
+
         let presentedFrame = transitionContext.finalFrame(for: presentedViewController)
-        let dismissedFrame = CGRect(x: presentedFrame.minX, y: transitionContext.containerView.bounds.height, width: presentedFrame.width, height: presentedFrame.height)
+        let dismissedFrame = CGRect(
+            x: presentedFrame.minX,
+            y: transitionContext.containerView.bounds.height,
+            width: presentedFrame.width,
+            height: presentedFrame.height
+        )
 
         let animator = UIViewPropertyAnimator(duration: transitionDuration(using: transitionContext), dampingRatio: 1.0) {
             presentedViewController.view.frame = dismissedFrame
         }
-
         animator.addCompletion { _ in
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         }
-
         animator.startAnimation()
     }
 }
