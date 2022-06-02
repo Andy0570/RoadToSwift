@@ -954,10 +954,10 @@
 [回到顶部](#Awesome Swift)
 
 * [fastlane](https://fastlane.tools/)
-* [Travis CI](https://travis-ci.org/)
-* Jenkins
-* [Danger](https://danger.systems/swift/)
 * [Bitrise](https://www.bitrise.io/) - 持续集成和交付 (CI/CD) 平台即服务 (PaaS)，主要专注于移动应用程序开发（iOS、Android、React Native、Flutter 等）。它是一组工具和服务，可帮助您开发和自动化软件项目。
+* [Travis CI](https://travis-ci.org/)
+* [Jenkins](https://www.jenkins.io/)
+* [Danger](https://danger.systems/swift/)
 
 
 
