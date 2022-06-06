@@ -179,6 +179,7 @@
 ### 卡片
 
 * :heart: [SwiftMessages](https://github.com/SwiftKickMobile/SwiftMessages) ⭐️6.4k - A very flexible message bar for iOS written in Swift.
+* [SwiftEntryKit](https://github.com/huri000/SwiftEntryKit) ⭐️5.9k
 * [BulletinBoard](https://github.com/alexisakers/BulletinBoard) ⭐️5.2k - 创建显示在屏幕底部的卡片视图。
 * [NotificationBanner](https://github.com/Daltron/NotificationBanner) ⭐️4.4k - 在 iOS 中显示高度可定制的应用通知横幅的最简单方法。
 * [Cards](https://github.com/PaoloCuscela/Cards) ⭐️4.1k - 很棒的 iOS 11 App Store 卡片样式。
@@ -197,12 +198,13 @@
 
 ### 活动指示器、UIActivityIndicatorView
 
-* [ninjaprox/NVActivityIndicatorView](https://github.com/ninjaprox/NVActivityIndicatorView) ⭐️10k
+* :heart: [ninjaprox/NVActivityIndicatorView](https://github.com/ninjaprox/NVActivityIndicatorView) ⭐️10.1k - A collection of awesome loading animations.
 * [SwiftOverlays](https://github.com/peterprokop/SwiftOverlays) ⭐️628 - GUI library for displaying various popups and notifications.
 * [SendIndicator](https://github.com/LeonardoCardoso/SendIndicator) - 任务指示器。
 * [EZLoadingActivity](https://github.com/goktugyil/EZLoadingActivity) - Lightweight loading activity HUD
 * [Hokusai](https://github.com/ytakzk/Hokusai) ⭐️431 - A library for a cool bouncy action sheet
 * [SPIndicator](https://github.com/ivanvorobei/SPIndicator) ⭐️227
+* [SwiftSpinner](https://github.com/icanzilb/SwiftSpinner) ⭐️2.1k
 * :orange: [JGProgressHUD](https://github.com/JonasGessner/JGProgressHUD) ⭐️3.2k - 适用于 iOS 和 tvOS 的优雅而简单的进度 HUD，兼容 Swift 和 ObjC。
 * [ProgressHUD](https://github.com/relatedcode/ProgressHUD) ⭐️2.2k - ProgressHUD 是一款轻量级且易于使用的 iOS HUD。
 * [PKHUD](https://github.com/pkluz/PKHUD) ⭐️3.7k
@@ -275,6 +277,7 @@
 * [SlideMenuControllerSwift](https://github.com/dekatotoro/SlideMenuControllerSwift) ⭐️3.3k - 基于 Google + ，iQON，Feedly，Ameba iOS 应用的 iOS 侧划抽屉菜单视图。
 * [SAHistoryNavigationViewController](https://github.com/szk-atmosphere/SAHistoryNavigationViewController) ⭐️1.6k - 在 UINavigationContoller 中实现了类似iOS任务管理器的用户界面，支持3DTouch。
 * [Interactive Side Menu](https://github.com/handsomecode/InteractiveSideMenu) - Customizable iOS Interactive Side Menu written in Swift 3.0.
+* [SideMenu](https://github.com/jonkykong/SideMenu) ⭐️5.4k - 适用于iOS的简单的侧边/滑动菜单控件，不需要代码! 大量的自定义功能。在5分钟或更短时间内将其添加到你的项目中。
 * [Presentr](https://github.com/IcaliaLabs/Presentr) ⭐️2.8k - 对传统 ViewController present 的封装
 
 
@@ -589,6 +592,7 @@
 * [Carlos](https://github.com/WeltN24/Carlos) ⭐️614 - A simple but flexible cache for iOS and WatchOS 2 apps, written in Swift.
 * [Cache](https://github.com/hyperoslo/Cache) ⭐️2.5k - 多类型数据混合缓存库。
 * [Disk](https://github.com/saoudrizwan/Disk) ⭐️2.9k - 令人愉快的 iOS 框架，可轻松持久化存储 struct、image 和 data。
+* [AwesomeCache](https://github.com/aschuch/AwesomeCache) ⭐️1.2k - Delightful on-disk cache (written in Swift).
 
 
 
