@@ -8,6 +8,7 @@
 import UIKit
 
 /// Reference: <https://github.com/SoufianHossam/SHToggleButton>
+/// <https://betterprogramming.pub/recreating-instagrams-like-%EF%B8%8F-animation-in-swift-6b95f74c9593>
 @IBDesignable
 final class HeartButton: UIButton {
     // MARK: - Properties

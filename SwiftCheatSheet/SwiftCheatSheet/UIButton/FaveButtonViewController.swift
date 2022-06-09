@@ -9,6 +9,7 @@ import UIKit
 import FaveButton
 
 /// 开源框架使用示例：<https://github.com/janselv/fave-button>
+/// <https://blog.csdn.net/guoyongming925/article/details/113258425?spm=1001.2014.3001.5501>
 class FaveButtonViewController: UIViewController {
     @IBOutlet private weak var heartButton: FaveButton!
     @IBOutlet private weak var loveButton: FaveButton!

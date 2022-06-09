@@ -208,6 +208,7 @@
 * :orange: [JGProgressHUD](https://github.com/JonasGessner/JGProgressHUD) ⭐️3.2k - 适用于 iOS 和 tvOS 的优雅而简单的进度 HUD，兼容 Swift 和 ObjC。
 * [ProgressHUD](https://github.com/relatedcode/ProgressHUD) ⭐️2.2k - ProgressHUD 是一款轻量级且易于使用的 iOS HUD。
 * [PKHUD](https://github.com/pkluz/PKHUD) ⭐️3.7k
+* [TKRubberIndicator](https://github.com/TBXark/TKRubberIndicator) ⭐️1.4k - 一个橡胶动画页面控件。
 
 
 
@@ -295,6 +296,7 @@
 
 ### UILabel
 
+* [MarqueeLabel](https://github.com/cbpowell/MarqueeLabel) ⭐️3.8k - UILabel 的直接替代品，当标签的文本不适合在指定的框架内时，它会自动添加一个滚动的 marquee 效果。
 * :orange: [UICountingLabel](https://github.com/dataxpress/UICountingLabel) ⭐️1.9k - 为 UILabel 添加动画计数支持。
 
 
@@ -304,6 +306,7 @@
 * [NFDownloadButton](https://github.com/LeonardoCardoso/NFDownloadButton) ⭐️435 - 改进的下载按钮。这有点像 Netflix 应用中的下载按钮的逆向工程。
 * [SwiftyButton](https://github.com/TakeScoop/SwiftyButton) ⭐️540 - Simple and customizable button in Swift
 * [fave-button](https://github.com/janselv/fave-button) ⭐️1.4k - 用 Swift 编写的动画按钮，常用于收藏、点赞等场景。
+* [SpreadButton](https://github.com/liuzhiyi1992/SpreadButton) ⭐️530 - 一个会散开的功能按钮。
 
 
 
@@ -312,6 +315,7 @@
 * [paper-switch](https://github.com/Ramotion/paper-switch) ⭐️2.9k - 这是一个 Swift 的模块组件，当页面中的开关打开后该页面填充底色
 * [BetterSegmentedControl](https://github.com/gmarm/BetterSegmentedControl) ⭐️1.9k - 易于使用、可定制，替代 `UISegmentedControl` 和 `UISwitch`。
 * [DDAnimatedSwitch](https://github.com/d-dotsenko/DDAnimatedSwitch) ⭐️124 - 一个可定制的开关动画。它支持你使用任何帧动画来当 icon，你不仅可以为开关设置动画，还可以为拇指设置动画，可播放、调整比例大小、循环播放，在播放速度方面支持你加快，放慢和倒转动画。
+* [TKSwitcherCollection](https://github.com/TBXark/TKSwitcherCollection) ⭐️900 - 动画开关集合。
 
 
 
@@ -398,6 +402,7 @@
 * [loady](https://github.com/farshadjahanmanesh/loady) ⭐️817 - Loady 是一个小动效库用来定制加载按钮动画，可用于显示 UI 中 Button 的加载，支持你自定义样式，它本身提供有 6 种不同的加载样式，4 种动画状态（成功加载、加载失败、加载中，正常加载）。
 * [BKStepperProgress](https://github.com/bharathi91/BKStepperProgress) ⭐️16 - 一个 iOS 控件，用于以步进器形式指示进度视图。
 * [MultiProgressView](https://github.com/mac-gallagher/MultiProgressView) ⭐️852 - 多区间进程条展示效果组件及示例。
+* :orange: [WaveLoadingView](https://github.com/liuzhiyi1992/WaveLoadingView) ⭐️579 - 像水波一样的加载指示器。
 
 
 
@@ -405,7 +410,6 @@
 
 * [DGElasticPullToRefresh](https://github.com/gontovnik/DGElasticPullToRefresh) ⭐️3.6k - 弹性的下拉刷新控件。
 * [PullToMakeSoup](https://github.com/Yalantis/PullToMakeSoup) ⭐️1.9k - 下拉刷新顺便煮个汤吧。
-* 
 
 
 
@@ -524,6 +528,7 @@
 
 [回到顶部](#Awesome Swift)
 
+* [awesome-ios-animation](https://github.com/ameizi/awesome-ios-animation) ⭐️5k - 精选的 iOS 动画列表，包括 Objective-C 和 Swift 库。
 * [Spring](https://github.com/MengTo/Spring) ⭐️14k - Spring 是一套支持 Storyboard 上直接操作使用的动画框架，方便易用，各种动画效果的实现甚至都不用写一行代码！
 * [Stellar](https://github.com/AugustRush/Stellar) ⭐️2.9k - 一个出色的物理动画库，基于 `UIDynamic` 并对其进行扩展，友好的 API 让你可以轻松使用它或自定义你自己的动画。
 * [YapAnimator](https://github.com/yapstudios/YapAnimator) ⭐️1.9k - 快速友好的基于物理的动画系统。
@@ -534,16 +539,16 @@
 * [fluid-interfaces](https://github.com/nathangitter/fluid-interfaces) ⭐️2.5k - 受 “Designing Fluid Interfaces” 启发而设计的自然手势和动画。
 * [Sica](https://github.com/cats-oss/Sica) ⭐️1k - 简单的 Interface Core Animation，以按顺序或并行的方式运行类型安全的动画。
 * [lottie-ios](https://github.com/airbnb/lottie-ios) ⭐️22.2k - Airbnb 开源的一个动画渲染库，用于渲染播放 After Effects 矢量动画。
-* :warning: [pop](https://github.com/facebookarchive/pop) ⭐️19.8k - Pop是一个可扩展的动画引擎，适用于iOS、tvOS和OS X。除了基本的静态动画，它还支持弹簧和衰减的动态动画，使其对建立现实的、基于物理的互动非常有用。
+* :warning: [pop](https://github.com/facebookarchive/pop) ⭐️19.8k - Pop 是一个可扩展的动画引擎，适用于 iOS、tableViewOS 和 OS X。除了基本的静态动画，它还支持弹簧和衰减的动态动画，使其对建立现实的、基于物理的互动非常有用。
 * [JHChainableAnimations](https://github.com/jhurray/JHChainableAnimations) ⭐️3.2k - Easy to read and write chainable animations in Objective-C and Swift. 通过链式语法实现动画。
 * [Macaw](https://github.com/exyte/Macaw) ⭐️5.8k - 功能强大且易于使用的矢量图形动画库，支持 SVG，复杂的动画实现只需简单几行代码！
 * :heart: :warning: [uber/UberSignature](https://github.com/uber/UberSignature) ⭐️1.3k - 允许用户用他们的手指以逼真的风格绘制他们的签名。
-* [WaveLabelDemo](https://github.com/anonymity-du/WaveLabelDemo) ⭐️59 - 波浪经过文字，文字改变颜色。
 * [Slideshow](https://github.com/folio-sec/Slideshow) ⭐️173 - 由 SceneKit 提供支持的 3D 动态图片墙，虽然效果很酷炫但是性能不是很好，如果你要是使用该动效建议优化下。
 * :heart: [LoginCritter](https://github.com/cgoldsby/LoginCritter) ⭐️5.6k - LoginCritter 是一个响应文本交互的动画，它会跟踪用户的操作轨迹同你交互。LoginCritter 使用多个 UIPropertyAnimator，头部旋转是通过更新 fractionComplete 属性来控制的。当用户输入时，程序会计算文本的长度和宽度。
 * [Arrows](https://github.com/antoniocasero/Arrows) ⭐️339 - Arrows 是一个下拉动画中的指示箭头小组件，它代表了三种不同的箭头状态：up /down/middle。
 * [animate.css](https://github.com/animate-css/animate.css) ⭐️74.6k - 一个跨浏览器的 CSS 动画库。像一件容易的事一样容易使用。
 * [HGRippleRadarView](https://github.com/HamzaGhazouani/HGRippleRadarView) ⭐️340 - 雷达动画显示附近的物品（用户、餐厅等）使用 rIPple 动画，完全可自定义。
+* [WaveLabelDemo](https://github.com/anonymity-du/WaveLabelDemo) ⭐️59 - 波浪经过文字，文字改变颜色。
 
 
 
@@ -888,13 +893,15 @@
 * [lowmad](https://github.com/bangerang/lowmad) 一个用于管理 LLDB 中的脚本和配置的命令行工具。
 * [GDPerformanceView-Swift](https://github.com/dani-gavrilov/GDPerformanceView-Swift) ⭐️2.1k - 在状态栏上显示 FPS、CPU 和内存使用率、设备型号、应用程序和iOS版本，并通过委托（Delegate）报告 FPS、CPU 和内存使用率。
 * [PAirSandbox-Swift](https://github.com/TeacherXue/PAirSandbox-Swift) ⭐️4 - PAirSandbox Swift 版，仿照 MrPeak 的 [PAirSandbox](https://github.com/music4kid/AirSandbox) 可方便实时查看沙盒中的文件并传送给 mac。
+* [FBRetainCycleDetector](https://github.com/facebook/FBRetainCycleDetector) ⭐️4.1k - 帮助检测运行时循环引用。
 * [LifetimeTracker](https://github.com/krzysztofzablocki/LifetimeTracker) ⭐️2.7k - 更快地找到循环引用/内存泄漏。
 * [DeallocationChecker](https://github.com/fastred/DeallocationChecker) ⭐️773 - 在不打开 Instruments 的情况下捕获内存泄漏的视图控制器。
 * [LayoutInspector](https://github.com/isavynskyi/LayoutInspector) ⭐️490 - 3D 视角 iOS 应用布局视图检查器。
 * :heart: [InjectionIII](https://github.com/johnno1962/InjectionIII) ⭐️3k - 支持 OC、Swift 以及 Swift 和 OC 混编项目的 UI 热重载工具，采取在模拟器 (真机不支持) 注入方式实现 UI 热重载，修改完 UI 直接 cmd+s，不用重新编译运行就能看到 UI 效果，堪称神器。 目前已经更新支持 Xcode13 和 iOS15。
-* [SwiftTweaks](https://github.com/Khan/SwiftTweaks) ⭐️1.3k - 调整你的iOS应用，而不需要重新编译。
+* [SwiftTweaks](https://github.com/Khan/SwiftTweaks) ⭐️1.3k - 调整你的 iOS 应用，而不需要重新编译。
 * [TweaKit](https://github.com/Cokile/TweaKit) ⭐️3 - 类似于 SwiftTweaks, 另一个用于调整参数和特征标记的库。
 * [GodEye](https://github.com/zixun/GodEye) ⭐️3.7k - 基于 Swift 的一行代码自动显示 Log、Crash、Network、ANR、Leak、CPU、RAM、FPS、NetFlow、Folder 等。
+* [LDNetDiagnoService_iOS](https://github.com/Lede-Inc/LDNetDiagnoService_IOS) ⭐️1.1k - IOS 平台利用 ping 和 traceroute 的原理，对指定域名（通常为后台 API 的提供域名）进行网络诊断，并收集诊断日志。
 
 
 
