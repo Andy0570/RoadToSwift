@@ -15,7 +15,7 @@
 
 ### 使用 JSONDecoder 从 JSON 解码为 Struct
 
-`Decodable` 协议允许使用 `JSONDecoder` 类将 JSON 编码的数据解析为 Swift 结构。
+`Decodable` 协议允许使用 `JSONDecoder` 类将 JSON 编码的数据解析为 Swift 结构体。
 
 ```swift
 /// 候选人模型
@@ -39,9 +39,9 @@ candidate?.skill // Swift
 
 ### 使用 JSONEncoder 将 Struct 编码为 JSON
 
-要将 Swift 结构编码为 JSON，请设置将结构体遵守 `Codable` 协议。
+要将 Swift 结构体编码为 JSON，请设置将结构体遵守 `Codable` 协议。
 
-```
+```swift
 /// 候选人模型
 struct Candidate: Codable {
     var name: String
@@ -182,9 +182,9 @@ let prettyNSArrayData = try? JSONSerialization.data(
 
 除了 Apple 提供的 `JSONSerialization` 等类所允许的范围之外，许多应用程序不需要复杂的 JSON 操作。通过使用 Apple 提供的类实现 JSON 解析和编码，开发人员可以：
 
-* 通过删除 SwiftyJSON 等第三方依赖项来简化代码库；
-* 减少应用程序的二进制大小；
-* 降低与依赖第三方依赖项相关的风险；
+* 通过删除 SwiftyJSON 等第三方依赖来简化代码库；
+* 减少应用程序的二进制包大小；
+* 降低与第三方依赖相关的风险；
 
 
 

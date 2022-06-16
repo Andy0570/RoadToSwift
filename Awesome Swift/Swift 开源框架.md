@@ -672,10 +672,10 @@
 *用于生成安全随机数、加密数据和扫描漏洞的框架* [回到顶部](#Awesome Swift)
 
 * :heart: [raywenderlich/swift-algorithm-club](https://github.com/raywenderlich/swift-algorithm-club) ⭐️25.8k - Swift 算法俱乐部，最全、最活跃，最具学习价值的算法库。
-* [apple/swift-algorithms](https://github.com/apple/swift-algorithms) ⭐️3.7k - Apple 官方维护的一套 Swift 中常用的序列和集合算法。
+* [apple/swift-algorithms](https://github.com/apple/swift-algorithms) ⭐️4.4k - Apple 官方维护的一套 Swift 中常用的序列和集合算法。
 * [apple/swift-async-algorithms](https://github.com/apple/swift-async-algorithms) ⭐️576 - Swift 的异步算法。
 * [apple/swift-collections](https://github.com/apple/swift-collections) ⭐️1.9k - Swift 常用的数据结构。
-* [CryptoSwift](https://github.com/krzyzanowskim/CryptoSwift) ⭐️8.8k - CryptoSwift 是一个用 Swift 实现的标准和安全的密码算法集合。
+* [CryptoSwift](https://github.com/krzyzanowskim/CryptoSwift) ⭐️9.1k - CryptoSwift 是一个用 Swift 实现的标准和安全的密码算法集合。
 * [GRKOpenSSLFramework](https://github.com/signalapp/GRKOpenSSLFramework) ⭐️12 - 适用于 iOS 和 macOS 的 SPM、CocoaPod 和 Carthage 的 penSSL 包
 * [SHA256-Swift](https://github.com/CryptoCoinSwift/SHA256-Swift) - Swift framework wrapping CommonCrypto's SHA256 methods.
 * [SwiftSSL](https://github.com/SwiftP2P/SwiftSSL) - An Elegant crypto toolkit in Swift.

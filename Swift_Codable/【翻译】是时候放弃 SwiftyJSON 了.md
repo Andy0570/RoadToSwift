@@ -238,14 +238,3 @@ if let replies = json[0]["comments"]["replies"].arrayValue {
 
 
 本文提到的所有[仓库和代码](https://github.com/SwiftyJSON/SwiftyJSON)都可以[在 GitHub 上找到](https://github.com/ericleiyang/JSONExample) 。
-
-
-
-
-
-
-
-
-
-
-

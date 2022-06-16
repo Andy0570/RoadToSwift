@@ -653,7 +653,7 @@ let sameToy = try decoder.decode(Toy.self, from: data)
 
 恭喜你完成了所有的挑战! :]
 
-<img src="https://koenig-media.raywenderlich.com/uploads/2018/05/swift.png" alt="Encoding and decoding in Swift like a pro!" style="zoom:50%;" />
+<img src="https://koenig-media.raywenderlich.com/uploads/2018/05/swift.png" alt="Encoding and decoding in Swift like a pro!" style="zoom: 33%;" />
 
 
 
