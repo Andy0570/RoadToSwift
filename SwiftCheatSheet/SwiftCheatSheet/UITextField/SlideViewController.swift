@@ -13,12 +13,19 @@ class SlideViewController: UIViewController {
     @IBOutlet private weak var whiteValueSlider: UISlider!
     @IBOutlet private weak var alphaValueSlider: UISlider!
 
+    @IBOutlet weak var view1: UIView!
+    @IBOutlet weak var view2: UIView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupSlider()
         updateTitleLabel()
         updateCoverView()
+
+        // R:0.24, G:0.24, B:0.26, A:0.29
+        view1.backgroundColor = UIColor.separator
+        view2.backgroundColor = UITableView().separatorColor
     }
 
     private func setupSlider() {

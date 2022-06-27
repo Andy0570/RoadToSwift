@@ -20,6 +20,13 @@
 		221C58F627F8896A00E5D855 /* MergeVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221C58F427F8896A00E5D855 /* MergeVideoViewController.swift */; };
 		221C58F727F8896A00E5D855 /* MergeVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 221C58F527F8896A00E5D855 /* MergeVideoViewController.xib */; };
 		221C58F927F88E3800E5D855 /* VideoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221C58F827F88E3800E5D855 /* VideoHelper.swift */; };
+		22208C982869423B0024150F /* PublishTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22208C8E286942390024150F /* PublishTitleCell.swift */; };
+		22208C992869423B0024150F /* PublishBodyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22208C8F286942390024150F /* PublishBodyCell.swift */; };
+		22208C9B2869423B0024150F /* PublishTextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22208C922869423A0024150F /* PublishTextViewModel.swift */; };
+		22208C9C2869423B0024150F /* TitleSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22208C942869423B0024150F /* TitleSectionController.swift */; };
+		22208C9D2869423B0024150F /* PhotoSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22208C952869423B0024150F /* PhotoSectionController.swift */; };
+		22208C9E2869423B0024150F /* PublishImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22208C962869423B0024150F /* PublishImageViewController.swift */; };
+		22208C9F2869423B0024150F /* BodySectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22208C972869423B0024150F /* BodySectionController.swift */; };
 		22255F5A282BB125009FC2D2 /* BayleafLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22255F58282BB125009FC2D2 /* BayleafLoginViewController.swift */; };
 		22255F5B282BB125009FC2D2 /* BayleafLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22255F59282BB125009FC2D2 /* BayleafLoginViewController.xib */; };
 		222B3FD227E061F1009C7322 /* GrowingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B3FD027E061F1009C7322 /* GrowingCell.swift */; };
@@ -262,6 +269,13 @@
 		221C58F427F8896A00E5D855 /* MergeVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeVideoViewController.swift; sourceTree = "<group>"; };
 		221C58F527F8896A00E5D855 /* MergeVideoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MergeVideoViewController.xib; sourceTree = "<group>"; };
 		221C58F827F88E3800E5D855 /* VideoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoHelper.swift; sourceTree = "<group>"; };
+		22208C8E286942390024150F /* PublishTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishTitleCell.swift; sourceTree = "<group>"; };
+		22208C8F286942390024150F /* PublishBodyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishBodyCell.swift; sourceTree = "<group>"; };
+		22208C922869423A0024150F /* PublishTextViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishTextViewModel.swift; sourceTree = "<group>"; };
+		22208C942869423B0024150F /* TitleSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleSectionController.swift; sourceTree = "<group>"; };
+		22208C952869423B0024150F /* PhotoSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSectionController.swift; sourceTree = "<group>"; };
+		22208C962869423B0024150F /* PublishImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishImageViewController.swift; sourceTree = "<group>"; };
+		22208C972869423B0024150F /* BodySectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BodySectionController.swift; sourceTree = "<group>"; };
 		22255F58282BB125009FC2D2 /* BayleafLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BayleafLoginViewController.swift; sourceTree = "<group>"; };
 		22255F59282BB125009FC2D2 /* BayleafLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BayleafLoginViewController.xib; sourceTree = "<group>"; };
 		222B3FD027E061F1009C7322 /* GrowingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowingCell.swift; sourceTree = "<group>"; };
@@ -539,6 +553,45 @@
 			path = VideoNinja;
 			sourceTree = "<group>";
 		};
+		22208C8C2869421E0024150F /* IGListKit_Example2 */ = {
+			isa = PBXGroup;
+			children = (
+				22208C932869423B0024150F /* Controller */,
+				22208C8D286942390024150F /* View */,
+				22208C912869423A0024150F /* ViewModel */,
+			);
+			path = IGListKit_Example2;
+			sourceTree = "<group>";
+		};
+		22208C8D286942390024150F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				22208C8E286942390024150F /* PublishTitleCell.swift */,
+				22208C8F286942390024150F /* PublishBodyCell.swift */,
+				22D73FFC2817C2A0008295E0 /* KMPlaceholderTextView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		22208C912869423A0024150F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				22208C922869423A0024150F /* PublishTextViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		22208C932869423B0024150F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				22208C962869423B0024150F /* PublishImageViewController.swift */,
+				22208C942869423B0024150F /* TitleSectionController.swift */,
+				22208C952869423B0024150F /* PhotoSectionController.swift */,
+				22208C972869423B0024150F /* BodySectionController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		222B3FCF27E061B1009C7322 /* GrowingCellTextView */ = {
 			isa = PBXGroup;
 			children = (
@@ -662,6 +715,7 @@
 				2246DD1827C4B9F7006A3AC1 /* IconCollectionView */,
 				22FF1B4F27C87561007214EB /* IGListKit_建模和绑定 */,
 				228E44A228124B9300C07C60 /* IGListKit_Example */,
+				22208C8C2869421E0024150F /* IGListKit_Example2 */,
 			);
 			path = UICollectionView;
 			sourceTree = "<group>";
@@ -1396,7 +1450,6 @@
 				22D9330927D5A55900D1B0B4 /* DRHTextFieldViewController.swift */,
 				22D9330A27D5A55900D1B0B4 /* DRHTextFieldViewController.xib */,
 				22D73FFA2817C086008295E0 /* HoverTextView.swift */,
-				22D73FFC2817C2A0008295E0 /* KMPlaceholderTextView.swift */,
 				22255F58282BB125009FC2D2 /* BayleafLoginViewController.swift */,
 				22255F59282BB125009FC2D2 /* BayleafLoginViewController.xib */,
 				223A1780282CD146003FB424 /* SlideViewController.swift */,
@@ -1851,6 +1904,7 @@
 				223A1797282DF864003FB424 /* DownloadButton.swift in Sources */,
 				229AC7DE27D5E4DD001D81D2 /* PhotoListViewController.swift in Sources */,
 				22A7C75927C8AE5100196326 /* ActionViewModel.swift in Sources */,
+				22208C992869423B0024150F /* PublishBodyCell.swift in Sources */,
 				222D147E2810028E00F70EDC /* DifferentViewController.swift in Sources */,
 				22569EB327E328B2009B18A3 /* BirdSoundTableViewCell.swift in Sources */,
 				22FF1B5B27C89FF2007214EB /* ImageCell.swift in Sources */,
@@ -1864,6 +1918,7 @@
 				22569EB827E33918009B18A3 /* EmptyView.swift in Sources */,
 				2230E560283CD8D6007D168D /* ViewFactory.swift in Sources */,
 				22569EB027E3247C009B18A3 /* RecordingsResult.swift in Sources */,
+				22208C9C2869423B0024150F /* TitleSectionController.swift in Sources */,
 				22E3481527E84F0D00369602 /* DataResponseError.swift in Sources */,
 				22EE32C927D0925D00A9A66F /* AnchorsViewController.swift in Sources */,
 				22FF1B5427C88B0F007214EB /* ModelAndBingViewController.swift in Sources */,
@@ -1871,6 +1926,7 @@
 				228E44B0281250BE00C07C60 /* SuperHeroModelUpdatable.swift in Sources */,
 				22569EAA27E32077009B18A3 /* NetworkingService.swift in Sources */,
 				2230E55C283BF387007D168D /* UIViewController+Transitions.swift in Sources */,
+				22208C9F2869423B0024150F /* BodySectionController.swift in Sources */,
 				229AC7D127D5E275001D81D2 /* Photo.swift in Sources */,
 				22BF2E3827BF7544009027E3 /* ShapeView.swift in Sources */,
 				22BF2E4427BF944C009027E3 /* ShapeFactory.swift in Sources */,
@@ -1892,6 +1948,7 @@
 				2279449A2807BFD100BFDADA /* BarcodeService.swift in Sources */,
 				22EE32D127D0B7DB00A9A66F /* AnimationConstraintsViewController.swift in Sources */,
 				221C58EE27F8894D00E5D855 /* PlayVideoViewController.swift in Sources */,
+				22208C9B2869423B0024150F /* PublishTextViewModel.swift in Sources */,
 				22DBC8E327CB631000E14468 /* MenuButtonViewController.swift in Sources */,
 				228B38F227D0614700BCF963 /* FlagViewController.swift in Sources */,
 				22AE41F52826E1CC009A5850 /* CornerRadiusTableViewCell.swift in Sources */,
@@ -1915,6 +1972,7 @@
 				227E7EBB27E083B7009D5E45 /* CustomTableViewCell.swift in Sources */,
 				229AC7E427D5FAAB001D81D2 /* PhotoListViewModel.swift in Sources */,
 				2231431727FB2CE00006B59E /* PickerViewController.swift in Sources */,
+				22208C982869423B0024150F /* PublishTitleCell.swift in Sources */,
 				22D2235127BCF689000EAD0F /* ArrayDataSource.swift in Sources */,
 				228E44BB281256BA00C07C60 /* SuperHeroViewController.swift in Sources */,
 				228E44A928124F4100C07C60 /* Ad.swift in Sources */,
@@ -1923,6 +1981,7 @@
 				226A60EF28421824005598D2 /* PhotoZoomViewController.swift in Sources */,
 				22A7C75B27C8AF0300196326 /* PostSectionController.swift in Sources */,
 				2230E554283BE6A4007D168D /* CustomPresentable.swift in Sources */,
+				22208C9D2869423B0024150F /* PhotoSectionController.swift in Sources */,
 				22D2233827BCEB89000EAD0F /* SceneDelegate.swift in Sources */,
 				223A178D282DE807003FB424 /* CustomControlViewController.swift in Sources */,
 				2246DD1C27C4BA35006A3AC1 /* Icon.swift in Sources */,
@@ -1963,6 +2022,7 @@
 				225F202527C33642008FCC29 /* Scorer.swift in Sources */,
 				222D14772810017200F70EDC /* CustomViewController.swift in Sources */,
 				22E3482D27E8643E00369602 /* ModeratorsListViewController.swift in Sources */,
+				22208C9E2869423B0024150F /* PublishImageViewController.swift in Sources */,
 				22569EAE27E3237C009B18A3 /* ServiceResponse.swift in Sources */,
 				2273388E282EAE6A00E94E12 /* FaveButtonViewController.swift in Sources */,
 				227762DC28352D2E004C025D /* FSPageViewController.swift in Sources */,

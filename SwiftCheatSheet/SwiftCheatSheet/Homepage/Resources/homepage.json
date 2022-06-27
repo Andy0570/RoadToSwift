@@ -96,6 +96,11 @@
         "className": "SuperHeroViewController"
     },{
         "image": "image",
+        "title": "IGListKit_Example2",
+        "description": "",
+        "className": "PublishImageViewController"
+    },{
+        "image": "image",
         "title": "FSPagerView",
         "description": "",
         "className": "FSPageViewController"

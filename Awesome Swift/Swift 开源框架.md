@@ -32,9 +32,8 @@
 * [Just](https://github.com/JustHTTP/Just) - HTTP for Humans (python-requests style HTTP library)
 * [AeroGear IOS Http](https://github.com/aerogear/aerogear-ios-http/) - is a thin layer to take care of your http requests working with NSURLSession.
 * [Siesta](https://bustoutsolutions.github.io/siesta/) - Ends state headaches by providing a resource-centric alternative to the familiar request-centric approach to HTTP.
-* [Reachability.Swift](https://github.com/ashleymills/Reachability.swift) ⭐️7.5k - 检测网络可达性的实用工具库。
-* [Connectivity](https://github.com/rwbutler/Connectivity) ⭐️1.5k - 基于 Reachability 的封装类库，检查当前 Wi-Fi 互联网连接性及即时状态。
 * [vapor-routing](https://github.com/pointfreeco/vapor-routing) ⭐️43 - 具有更多类型安全性和更少麻烦的双向 Vapor 路由器。
+* [grpc-Swift](https://github.com/grpc/grpc-swift) ⭐️1.6k - The Swift language implementation of gRPC.
 
 
 
@@ -160,7 +159,8 @@
 ### Alert、Toast
 
 * :heart: [Siren](https://github.com/ArtSabintsev/Siren) ⭐️3.9k - 当应用版本更新时，通知用户并提供 App Store 链接。
-* :heart: [SPPermissions](https://github.com/ivanvorobei/SPPermissions) ⭐️4.8k - 通过列表、Dialog 对话框和原生界面的方式向用户请求访问权限。可以检查权限状态。支持 SwiftUI。
+* :heart: [PermissionsKit](https://github.com/sparrowcode/PermissionsKit) ⭐️5k - 通过列表、Dialog 对话框和原生界面的方式向用户请求访问权限。可以检查权限状态。支持 SwiftUI。
+* [SPAlert](https://github.com/ivanvorobei/SPAlert) ⭐️1.6k - 来自 Apple Music 和 Feedback 的原生警报风格。包含 Done、Heart & Message 和其他预设。支持 SwiftUI。
 * [xmartlabs/XLActionController](https://github.com/xmartlabs/XLActionController) ⭐️3.3k - 有多种可自定义可扩展的底部菜单栏控件，重点是跟 XLForm/Eureka 框架是同一个作者。
 * [Toast-Swift](https://github.com/scalessec/Toast-Swift) ⭐️3.1 - 向 UIView 对象添加 Toast 通知的 Swift 扩展。
 * [WMZDialog](https://github.com/wwmz/WMZDialog) ⭐️881 - 功能最多样式最多的弹窗，支持普通 / 底部 / 日期 / 地区 / 日历 / 选择 / 编辑 / 分享 / 菜单 / 自定义弹窗等，支持多种动画，链式编程调用。
@@ -290,13 +290,14 @@
 
 
 ### UIDevice
-* [DeviceKit](https://github.com/devicekit/DeviceKit) ⭐️3.5k
+* [DeviceKit](https://github.com/devicekit/DeviceKit) ⭐️3.7k - DeviceKit 是 UIDevice 的值类型替换。
 
 
 
 ### UILabel
 
 * [MarqueeLabel](https://github.com/cbpowell/MarqueeLabel) ⭐️3.8k - UILabel 的直接替代品，当标签的文本不适合在指定的框架内时，它会自动添加一个滚动的 marquee 效果。
+* [EFCountingLabel](https://github.com/EFPrefix/EFCountingLabel) ⭐️434 - 为 UILabel 添加动画计数支持。
 * :orange: [UICountingLabel](https://github.com/dataxpress/UICountingLabel) ⭐️1.9k - 为 UILabel 添加动画计数支持。
 
 
@@ -354,6 +355,7 @@
 
 ### UITableView
 
+* [SwipeCellKit](https://github.com/SwipeCellKit/SwipeCellKit) ⭐️5.9k - 可滑动的 UITableViewCell/UICollectionViewCell。
 * [WobbleView](https://github.com/inFullMobile/WobbleView) ⭐️2.2k - Implementation of wobble effect for any view in app.
 * [Preheat](https://github.com/kean/Preheat) ⭐️633 - 自动预取 UITableView 和 UICollectionView 中的内容。
 * [TableViewTools](https://github.com/rosberry/TableViewTools) ⭐️11
@@ -421,7 +423,7 @@
 * [HandySwift](https://github.com/Flinesoft/HandySwift) ⭐️422 - 没有进入 Swift 标准库的方便的 Swift 功能。
 * [HandyUIKit](https://github.com/FlineDev/HandyUIKit) ⭐️119 - 一开始就应该成为 UIKit 一部分的方便的 UI 功能。
 * :warning: [ExSwift](https://github.com/pNre/ExSwift) ⭐️3.4k - JavaScript (Lo-Dash, Underscore) & Ruby inspired set of Swift extensions for standard types and classes.
-* [SwiftBoost](https://github.com/sparrowcode/SwiftBoost) ⭐️83 - Swift 扩展的集合以加速开发。
+* [SwiftBoost](https://github.com/sparrowcode/SwiftBoost) ⭐️99 - Swift 扩展集合以加速开发。
 * [Pythonic.swift](https://github.com/practicalswift/Pythonic.swift) - Pythonic tool-belt for Swift – a Swift implementation of selected parts of Python standard library.
 * [SWRoute](https://github.com/rodionovd/SWRoute) - A tiny Swift wrapper. Allows you to route (hook) quite any function/method with another function/method or even a closure.
 * [LlamaKit](https://github.com/LlamaKit/LlamaKit) - Collection of must-have functional Swift tools.
@@ -888,20 +890,29 @@
 
 [回到顶部](#Awesome Swift)
 
+* [GDPerformanceView-Swift](https://github.com/dani-gavrilov/GDPerformanceView-Swift) ⭐️2.1k - 在状态栏上显示 FPS、CPU 和内存使用率、设备型号、应用程序和iOS版本，并通过委托（Delegate）报告 FPS、CPU 和内存使用率。
+* [SwiftTweaks](https://github.com/Khan/SwiftTweaks) ⭐️1.3k - 调整你的 iOS 应用，而不需要重新编译。
+* [TweaKit](https://github.com/Cokile/TweaKit) ⭐️3 - 类似于 SwiftTweaks, 另一个用于调整参数和特征标记的库。
+
+### UI 调试
+* [Reveal](https://revealapp.com/) - Reveal 是一个 iOS UI 调试工具，使用 Reveal 可以在应用运行时方便的查看页面的层级结构，此外，可以在 Reveal 中动态修改页面中各个控件的背景色、字体大小 (可以显示字体的控件，如 UILabel) 等样式，并且不需要重新运行程序就可以在 Reveal 中实时看到修改后的效果。
+* :heart: [InjectionIII](https://github.com/johnno1962/InjectionIII) ⭐️3k - 支持 OC、Swift 以及 Swift 和 OC 混编项目的 UI 热重载工具，采取在模拟器 (真机不支持) 注入方式实现 UI 热重载，修改完 UI 直接 cmd+s，不用重新编译运行就能看到 UI 效果，堪称神器。 目前已经更新支持 Xcode13 和 iOS15。
+* [LayoutInspector](https://github.com/isavynskyi/LayoutInspector) ⭐️490 - 3D 视角 iOS 应用布局视图检查器。
+* [GodEye](https://github.com/zixun/GodEye) ⭐️3.7k - 基于 Swift 的一行代码自动显示 Log、Crash、Network、ANR、Leak、CPU、RAM、FPS、NetFlow、Folder 等。
+
+### LLDB、内存、文件
 * [chisel](https://github.com/facebook/chisel) ⭐️8.7k - FaceBook 开源的 LLDB 调试命令集合。
 * [FLEX](https://github.com/FLEXTool/FLEX) ⭐️12.6k - Flipboard 开源的一系列在应用中调试的工具集。
 * [lowmad](https://github.com/bangerang/lowmad) 一个用于管理 LLDB 中的脚本和配置的命令行工具。
-* [GDPerformanceView-Swift](https://github.com/dani-gavrilov/GDPerformanceView-Swift) ⭐️2.1k - 在状态栏上显示 FPS、CPU 和内存使用率、设备型号、应用程序和iOS版本，并通过委托（Delegate）报告 FPS、CPU 和内存使用率。
-* [PAirSandbox-Swift](https://github.com/TeacherXue/PAirSandbox-Swift) ⭐️4 - PAirSandbox Swift 版，仿照 MrPeak 的 [PAirSandbox](https://github.com/music4kid/AirSandbox) 可方便实时查看沙盒中的文件并传送给 mac。
 * [FBRetainCycleDetector](https://github.com/facebook/FBRetainCycleDetector) ⭐️4.1k - 帮助检测运行时循环引用。
 * [LifetimeTracker](https://github.com/krzysztofzablocki/LifetimeTracker) ⭐️2.7k - 更快地找到循环引用/内存泄漏。
 * [DeallocationChecker](https://github.com/fastred/DeallocationChecker) ⭐️773 - 在不打开 Instruments 的情况下捕获内存泄漏的视图控制器。
-* [LayoutInspector](https://github.com/isavynskyi/LayoutInspector) ⭐️490 - 3D 视角 iOS 应用布局视图检查器。
-* :heart: [InjectionIII](https://github.com/johnno1962/InjectionIII) ⭐️3k - 支持 OC、Swift 以及 Swift 和 OC 混编项目的 UI 热重载工具，采取在模拟器 (真机不支持) 注入方式实现 UI 热重载，修改完 UI 直接 cmd+s，不用重新编译运行就能看到 UI 效果，堪称神器。 目前已经更新支持 Xcode13 和 iOS15。
-* [SwiftTweaks](https://github.com/Khan/SwiftTweaks) ⭐️1.3k - 调整你的 iOS 应用，而不需要重新编译。
-* [TweaKit](https://github.com/Cokile/TweaKit) ⭐️3 - 类似于 SwiftTweaks, 另一个用于调整参数和特征标记的库。
-* [GodEye](https://github.com/zixun/GodEye) ⭐️3.7k - 基于 Swift 的一行代码自动显示 Log、Crash、Network、ANR、Leak、CPU、RAM、FPS、NetFlow、Folder 等。
+* [PAirSandbox-Swift](https://github.com/TeacherXue/PAirSandbox-Swift) ⭐️4 - PAirSandbox Swift 版，仿照 MrPeak 的 [PAirSandbox](https://github.com/music4kid/AirSandbox) 可方便实时查看沙盒中的文件并传送给 mac。
+
+### 网络
 * [LDNetDiagnoService_iOS](https://github.com/Lede-Inc/LDNetDiagnoService_IOS) ⭐️1.1k - IOS 平台利用 ping 和 traceroute 的原理，对指定域名（通常为后台 API 的提供域名）进行网络诊断，并收集诊断日志。
+* [Reachability.Swift](https://github.com/ashleymills/Reachability.swift) ⭐️7.5k - 检测网络可达性的实用工具库。
+* [Connectivity](https://github.com/rwbutler/Connectivity) ⭐️1.5k - 基于 Reachability 的封装类库，检查当前 Wi-Fi 互联网连接性及即时状态。
 
 
 
@@ -1020,7 +1031,7 @@
 
 *生成文档文件的框架* [回到顶部](#Awesome Swift)
 
-* [realm/jazzy](https://github.com/realm/jazzy) ⭐️7.1k - 为 Swift 或 Objective-C 生成文档的命令行工具
+* [realm/jazzy](https://github.com/realm/jazzy) ⭐️7.2k - 为 Swift 或 Objective-C 生成文档的命令行工具。
 * [swift-docc-plugin](https://github.com/apple/swift-docc-plugin) ⭐️122 - Swift-DocC 插件是一个 Swift Package Manager 命令行插件，支持为 SwiftPM 库和可执行文件构建文档。
 
 
