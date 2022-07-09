@@ -7,12 +7,22 @@
 
 import UIKit
 
-class LoadingView: UIView {
+final class LoadingView: UIView {
     lazy var activityIndicator: UIActivityIndicatorView = {
         let view = UIActivityIndicatorView()
-        view.style = UIActivityIndicatorView.Style.medium
+        view.translatesAutoresizingMaskIntoConstraints = false
+        if #available(iOS 13.0, *) {
+            view.style = UIActivityIndicatorView.Style.medium
+        } else {
+            view.style = UIActivityIndicatorView.Style.gray
+        }
         return view
     }()
+
+    init() {
+        super.init(frame: .zero)
+        initialize()
+    }
 
     @available(*, unavailable)
     override init(frame: CGRect) {
@@ -26,13 +36,7 @@ class LoadingView: UIView {
         initialize()
     }
 
-    init() {
-        super.init(frame: .zero)
-        initialize()
-    }
-
     func initialize() {
-        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         addSubview(activityIndicator)
         activityIndicator.startAnimating()
     }
@@ -41,8 +45,8 @@ class LoadingView: UIView {
         super.layoutSubviews()
 
         NSLayoutConstraint.activate([
-            activityIndicator.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            activityIndicator.centerYAnchor.constraint(equalTo: self.centerYAnchor)
+            activityIndicator.centerXAnchor.constraint(equalTo: centerXAnchor),
+            activityIndicator.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
     }
 }

@@ -9,6 +9,7 @@ import IGListKit
 
 /// IGListKit 建模和绑定，基于 MVVM 设计模式构建页面。
 /// Reference: <https://github.com/Instagram/IGListKit/blob/main/Guides/Modeling%20and%20Binding.md>
+/// <https://instagram.github.io/IGListKit/modeling-and-binding.html>
 class ModelAndBingViewController: UIViewController {
     var data: [ListDiffable] = []
 

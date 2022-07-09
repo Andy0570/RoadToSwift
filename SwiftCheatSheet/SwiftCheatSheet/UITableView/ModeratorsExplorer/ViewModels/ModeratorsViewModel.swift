@@ -62,9 +62,11 @@ final class ModeratorsViewModel {
                     self.moderators.append(contentsOf: response.moderators)
 
                     if response.page > 1 {
+                        // !!!: 当返回第二页数据时，开启增量刷新
                         let indexPathToReload = self.calculateIndexPathsToReload(from: response.moderators)
                         self.delegate?.onFetchCompleted(with: indexPathToReload)
                     } else {
+                        // 这里是第一次返回数据，所以走的是 tableView.reloadData()
                         self.delegate?.onFetchCompleted(with: .none)
                     }
                 }

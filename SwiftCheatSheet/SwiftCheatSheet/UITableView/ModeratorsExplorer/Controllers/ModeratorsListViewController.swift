@@ -13,7 +13,7 @@ class ModeratorsListViewController: UIViewController {
 
     var site: String!
     private var viewModel: ModeratorsViewModel!
-    private var shouldShowLoadingCell = false
+    // private var shouldShowLoadingCell = false
 
     override func loadView() {
         super.loadView()
@@ -66,7 +66,7 @@ class ModeratorsListViewController: UIViewController {
 
 extension ModeratorsListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // !!!: 返回所有数据源的数量
+        // !!!: 返回所有数据源的数量，需要服务端支持返回所有 item 的数量
         return viewModel.totalCount
     }
 
@@ -99,12 +99,14 @@ extension ModeratorsListViewController: UITableViewDataSourcePrefetching {
 extension ModeratorsListViewController: ModeratorsViewModelDelegate {
     func onFetchCompleted(with newIndexPathsToReload: [IndexPath]?) {
         guard let newIndexPathsToReload = newIndexPathsToReload else {
+            // 第一次返回数据时，没有需要 newIndexPathsToReload，走 reloadData()
             indicatorView.stopAnimating()
             tableView.isHidden = false
             tableView.reloadData()
             return
         }
 
+        // 第二次之后，tableView 局部刷新
         let indexPathsToReload = visbleIndexPathsToReload(intersecting: newIndexPathsToReload)
         tableView.reloadRows(at: indexPathsToReload, with: .automatic)
     }

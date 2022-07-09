@@ -25,6 +25,11 @@ class EmptyView: UIView {
         }
     }
 
+    init() {
+        super.init(frame: .zero)
+        initialize()
+    }
+
     @available(*, unavailable)
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -34,11 +39,6 @@ class EmptyView: UIView {
     @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        initialize()
-    }
-
-    init() {
-        super.init(frame: .zero)
         initialize()
     }
 
