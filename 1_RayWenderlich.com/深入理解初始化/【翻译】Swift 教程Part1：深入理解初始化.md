@@ -25,14 +25,14 @@ let number = Float()
 
 让我们设定一个场景：这是你在 NASA 担任发射软件工程师的第一天（加油！）。你的任务是设计数据模型，该模型将驱动首次火星载人任务的发射序列，即 Mars Unum。当然，你做的第一件事就是说服团队使用 Swift。然后......
 
-打开 Xcode，创建一个名为 BlastOff 的新Playground。你可以选择任何平台，因为本教程中的代码是不分平台的，只依赖于Foundation。
+打开 Xcode，创建一个名为 BlastOff 的新 Playground。你可以选择任何平台，因为本教程中的代码是不分平台的，只依赖于 Foundation。
 
-在整个教程中，请记住这条黄金规则：在一个实例完全初始化之前，你不能使用它。对一个实例的"使用"包括访问属性、设置属性和调用方法。除非另有说明，本章节的所有内容都特别适用于结构。
+在整个教程中，请记住这条黄金规则：==在一个实例完全初始化之前，你不能使用它。对一个实例的“使用”包括访问属性、设置属性和调用方法==。除非另有说明，本章节的所有内容都特别适用于结构。
 
 
 ## 基于默认初始化器
 
-为了开始对发射序列进行建模，在你的Playground上声明一个名为 `RocketConfiguration` 的新结构：
+为了开始对发射序列进行建模，在你的 Playground 上声明一个名为 `RocketConfiguration` 的新结构：
 
 ```swift
 struct RocketConfiguration {
@@ -66,18 +66,18 @@ var numberOfStageReuseLandingLegs: Int?
 
 在我们的NASA方案中，一些火箭是可重复使用的，而另一些则不是。这就是为什么 `numberOfStageReuseLandingLegs` 是一个可选的 `Int`。默认初始化器继续正常运行，因为可选的存储属性变量在默认情况下被初始化为 `nil`。然而，对于常量来说，情况就不是这样了。
 
-把`numberOfStageReuseLandingLegs`从一个变量类型改为常量类型：
+把 `numberOfStageReuseLandingLegs` 从一个 `var` 类型改为 `let` 类型：
 
 ```swift
 // 如果结构体的存储属性是可选常量，且没有赋初始值，编译器报错
 let numberOfStageReuseLandingLegs: Int?
 ```
 
-注意Playground如何报告一个编译器错误：
+注意 Playground 如何报告一个编译器错误：
 
 ![](https://koenig-media.raywenderlich.com/uploads/2015/11/SwiftInitInDepth-0.png)
 
-你不会经常遇到这种情况，因为很少需要可选常量类型。为了解决编译器的错误，给 `numberOfStageReuseLandingLegs` 指定一个默认值为 `nil`。
+你不会经常遇到这种情况，因为很少需要常量可选类型。为了解决编译器的错误，给 `numberOfStageReuseLandingLegs` 指定一个默认值为 `nil`。
 
 ```swift
 let numberOfStageReuseLandingLegs: Int? = nil
@@ -121,7 +121,7 @@ struct RocketStageConfiguration {
 
 ![](https://koenig-media.raywenderlich.com/uploads/2015/11/SwiftInitInDepth-3.png)
 
-发生了什么？`stageOneConfiguaration` 初始化器的调用不再有效，因为自动成员初始化器参数列表的顺序反映了存储的属性列表的顺序。要小心，因为当重新排列结构体中属性的顺序时，你可能会破坏实例初始化。值得庆幸的是，编译器应该能捕捉到这个错误，但这绝对是一个需要注意的问题。
+发生了什么？`stageOneConfiguaration` 初始化器的调用不再有效，因为自动成员初始化器参数列表的顺序反映了存储的属性列表的顺序。要小心，因为==当重新排列结构体中属性的顺序时，你可能会破坏实例初始化。==值得庆幸的是，编译器应该能捕捉到这个错误，但这绝对是一个需要注意的问题。
 
 撤消对存储属性的重新排序操作，使 Playground 重新编译和运行：
 
@@ -133,7 +133,7 @@ struct RocketStageConfiguration {
 }
 ```
 
-你所有的火箭都会燃烧180秒，所以每次实例化阶段配置时传递名义燃烧时间是没有用的。将`nominalBurnTime`的默认属性值设置为`180`：
+你所有的火箭都会燃烧 180 秒，所以每次实例化阶段配置时传递名义燃烧时间是没有用的。将`nominalBurnTime`的默认属性值设置为`180`：
 
 ```swift
 let nominalBurnTime: Int = 180
@@ -151,7 +151,7 @@ let nominalBurnTime: Int = 180
 let nominalBurnTime: Int
 ```
 
-接下来，给结构定义添加一个自定义初始化器，为燃烧时间提供一个默认值：
+接下来，给 Struct 添加一个自定义初始化器，为燃烧时间提供一个默认值：
 
 ```swift
 init(propellantMass: Double, liquidOxygenMass: Double) {
@@ -165,7 +165,7 @@ init(propellantMass: Double, liquidOxygenMass: Double) {
 
 ![](https://koenig-media.raywenderlich.com/uploads/2015/11/SwiftInitInDepth-2.png)
 
-等等，这不是应该工作吗？你所做的只是提供了一个替代的初始化器，但是原始的 `stageOneConfiguration` 初始化应该工作，因为它使用的是自动的成员初始化器。这就是问题所在：只有当一个结构没有定义任何初始化器时，你才能得到一个成员初始化器。一旦你定义了一个初始化器，你就失去了自动成员初始化器。
+等等，这不是应该工作吗？你所做的只是提供了一个替代的初始化器，但是原始的 `stageOneConfiguration` 初始化应该工作，因为它使用的是自动的成员初始化器。这就是问题所在：==只有当一个结构没有定义任何初始化器时，你才能得到一个成员初始化器。一旦你定义了一个初始化器，你就失去了自动成员初始化器==。
 
 换句话说，Swift 会在开始时帮助你。但是一旦你添加了你自己的初始化器，它就会认为你想让它离开这里。
 
@@ -189,7 +189,7 @@ struct RocketStageConfiguration {
 }
 
 // 如果你自定义了一个初始化器，系统就不再提供默认的成员初始化器了
-// 但如果你把自定义初始化器写在 extension 里面，鱼和熊掌兼得
+// 但如果你把自定义初始化器写在 extension 里面，鱼和熊掌兼得！
 extension RocketStageConfiguration {
     init(propellantMass: Double, liquidOxygenMass: Double) {
         self.propellantMass = propellantMass
@@ -244,7 +244,7 @@ init(temperatureFahrenheit: Double = 72, windSpeedMilesPerHour: Double = 5) {
 }
 ```
 
-现在，如果你调用没有参数的初始化器，你会得到一些合理的默认值。在你的Playground文件的最后，创建一个 `Weather`的实例并检查它的值：
+现在，如果你调用没有参数的初始化器，你会得到一些合理的默认值。在你的 Playground 文件的最后，创建一个 `Weather`的实例并检查它的值：
 
 ```swift
 let currentWeather = Weather()
@@ -252,9 +252,9 @@ currentWeather.temperatureCelsius
 currentWeather.windSpeedKilometersPerHour
 ```
 
-很酷，对吗？默认初始化器使用自定义初始化器提供的默认值。自定义初始化器的实现将这些值转换为公制等价物，并存储这些值。当你在Playground边栏检查存储属性值时，你会得到正确的摄氏度（22.2222）和每小时公里数（8.047）的值。
+很酷，对吗？默认初始化器使用自定义初始化器提供的默认值。自定义初始化器的实现将这些值转换为公制等价物，并存储这些值。当你在 Playground 边栏检查存储属性值时，你会得到正确的摄氏度（22.2222）和每小时公里数（8.047）的值。
 
-初始化器必须为每一个没有默认值的存储属性赋值，否则你会得到一个编译器错误。记住，可选变量的默认值是 `nil`。
+==初始化器必须为每一个没有默认值的存储属性赋值，否则你会得到一个编译器错误==。记住，可选变量的默认值是 `nil`。
 
 接下来，改变`currentWeather`，使用你的自定义初始化器，并添加新的值：
 
@@ -265,6 +265,7 @@ currentWeather.windSpeedKilometersPerHour
 ```
 
 正如你所看到的，自定义值在初始化器中和默认值一样好用。Playground 侧边栏现在应该显示30.556度和3.219公里/小时。
+
 这就是你如何实现和调用自定义初始化器。你的天气结构已经准备好为你向火星发射人类的任务做出贡献。干得好!
 
 ![](https://koenig-media.raywenderlich.com/uploads/2016/04/Mars_Hubble.jpg)
@@ -295,6 +296,7 @@ struct GuidanceSensorStatus {
 自定义初始化器持有重要的业务逻辑：如何将每分钟的度数转换为每分钟的弧度。初始化器还设置了角速度的初始值，以备参考。
 
 当指导工程师出现的时候，你正在愉快地编码。他们告诉你，新版本的火箭会给你一个 `Int` 类型的 `needsCorrection`，而不是一个 `Bool`。工程师说，正整数应该被解释为真，而零和负应该被解释为假。你的团队还没有准备好改变代码的其他部分，因为这个改变是未来功能的一部分。那么，你怎样才能在保持结构定义不变的情况下适应指导工程师的要求呢？
+
 不用担心——在第一个初始化器下面添加以下自定义初始化器：
 
 ```swift
@@ -345,7 +347,7 @@ init(zAngularVelocityDegreesPerMinute: Double) {
 
 ![](https://koenig-media.raywenderlich.com/uploads/2015/11/SwiftInitInDepth-5.png)
 
-编译失败是因为委托初始化器实际上不能初始化任何属性。这是有原因的：你所委托的初始化器很可能覆盖你所设置的值，这是不安全的。委托的初始化器唯一能做的就是操作传递给另一个初始化器的值。
+编译失败是因为委托初始化器实际上不能初始化任何属性。这是有原因的：你所委托的初始化器很可能覆盖你所设置的值，这是不安全的。==委托的初始化器唯一能做的就是操作传递给另一个初始化器的值==。
 知道这一点后，删除新的初始化器，给主初始化器的`needsCorrection`参数一个默认值`false`。
 
 ```swift
@@ -373,7 +375,7 @@ guidanceStatus.needsCorrection // false
 
 到目前为止，你的初始化程序中的代码一直在设置你的属性和调用其他初始化程序。这是初始化的第一阶段，但实际上，初始化一个 Swift 类型有两个阶段。
 
-第一阶段从初始化开始，在所有存储的属性都被赋值后结束。剩下的初始化执行是第2阶段。你不能在第一阶段使用你正在初始化的实例，但你可以在第二阶段使用该实例。如果你有一个委托初始化器链，第1阶段跨越调用栈，直到非委托初始化器。第2阶段跨越了从调用栈返回的过程。
+第一阶段从初始化开始，在所有存储的属性都被赋值后结束。剩下的初始化执行的是第2阶段。你不能在第一阶段使用你正在初始化的实例，但你可以在第二阶段使用该实例。如果你有一个委托初始化器链，第1阶段跨越调用栈，直到非委托初始化器。第2阶段跨越了从调用栈返回的过程。
 
 
 ![](https://koenig-media.raywenderlich.com/uploads/2015/12/Struct2PhaseInit.png)
@@ -384,7 +386,7 @@ guidanceStatus.needsCorrection // false
 
 现在你了解了两阶段初始化，让我们把它应用到我们的场景中。每个火箭发动机都有一个燃烧室，燃料与氧化剂注入其中，产生可控的爆炸，推动火箭。设置这些参数是第一阶段的工作，为爆炸做准备。
 
-实现下面的`CombustionChamberStatus`结构，看看Swift的两阶段初始化是如何进行的。请确保显示 Xcode 的 Debug 区域，以看到打印语句的输出：
+实现下面的`CombustionChamberStatus`结构，看看 Swift 的两阶段初始化是如何进行的。请确保显示 Xcode 的 Debug 区域，以看到打印语句的输出：
 
 ```swift
 struct CombustionChamberStatus {
@@ -500,7 +502,7 @@ init?(currentVolume: Double, currentLiquidType: String?) {
 if let tankStatus = TankStatus(currentVolume: -10.0, currentLiquidType: nil) {
 ```
 
-注意Playground是如何打印的："Oh no, an initialization failure occurred."。因为初始化失败了，失败的初始化器返回了一个`nil`值，`if let`语句执行了`else`子句。
+注意 Playground 是如何打印的："Oh no, an initialization failure occurred."。因为初始化失败了，失败的初始化器返回了一个`nil`值，`if let`语句执行了`else`子句。
 
 
 
@@ -576,7 +578,7 @@ let johnny = try? Astronaut(name: "Johnny Cosmoseed", age: 17)
 
 使用抛出错误的初始化器并与 `try?` 语句结合使用看起来非常像使用可失败初始化器。那么你应该使用哪一种呢？
 
-考虑使用抛出错误的初始化器。可失败初始化器只能表达一种二进制的失败/成功情况。通过使用抛出错误的初始化器，你不仅可以表示失败，还可以通过抛出特定的错误来表示原因。另一个好处是，调用代码可以传播初始化器抛出的任何错误。
+==考虑使用抛出错误的初始化器==。可失败初始化器只能表达一种二进制的失败/成功情况。通过使用抛出错误的初始化器，你不仅可以表示失败，还可以通过抛出特定的错误来表示原因。另一个好处是，调用代码可以传播初始化器抛出的任何错误。
 
 不过，可失败初始化器要简单得多，因为你不需要定义错误类型，而且你可以避免所有那些额外的 `try?` 关键字。
 

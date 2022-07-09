@@ -4,7 +4,7 @@
 
 
 
-如果您的应用程序与 Web 应用程序通信，则从服务器返回的信息通常采用 `JSON` 格式。您可以使用 Foundation 框架的 `JSONSerialization` 类将 JSON 转换为 Swift 数据类型，如 `Dictionary`、`Array`、`String`、`Number` 和 `Bool`。但是，由于您无法确定应用程序接收到的 JSON 的结构或值，因此正确反序列化模型对象可能具有挑战性。这篇文章描述了在应用程序中使用 JSON 时可以采取的几种方法。
+如果您的应用程序与 Web 应用程序通信，则从服务器返回的信息通常采用 `JSON` 格式。您可以使用 Foundation 框架的 `JSONSerialization` 将 JSON 转换为 Swift 数据类型，如 `Dictionary`、`Array`、`String`、`Number` 和 `Bool`。但是，由于您无法确定应用程序接收到的 JSON 的结构或值，因此正确反序列化模型对象可能具有挑战性。这篇文章描述了在应用程序中使用 JSON 时可以采取的几种方法。
 
 ## 从 JSON 中提取值
 

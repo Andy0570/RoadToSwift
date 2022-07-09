@@ -4,16 +4,13 @@
 
 
 
-这篇文章提供了以下代码示例，用于在没有第三方依赖包或框架的情况下在 Swift 中解析 JSON 和编码 JSON：
 
-* 使用 JSONDecoder 从 JSON 解码为 Struct
-* 使用 JSONEncoder 将 Struct 编码为 JSON
-* Swift 字典和 NSDictionary 转 JSON
-* Swift 数组和 NSArray 到 JSON
-* 将 NSDictionary 编码为 JSON
-* 将 NSArray 编码为 JSON
+这篇文章提供了以下代码示例，用于在没有第三方依赖包或框架的情况下在 Swift 中对 JSON 编码和解码：
 
-### 使用 JSONDecoder 从 JSON 解码为 Struct
+[TOC]
+
+
+### 使用 JSONDecoder 将 JSON 解码为 Struct
 
 `Decodable` 协议允许使用 `JSONDecoder` 类将 JSON 编码的数据解析为 Swift 结构体。
 
@@ -60,9 +57,9 @@ let candidateData = try? JSONEncoder().encode(candidate)
 
 
 
-### Swift 字典和 NSDictionary 转 JSON
+### Swift Dictionary 和 NSDictionary 转 JSON
 
-在 Swift 中解析 JSON 的另一种方法是使用 `JSONSerialization.jsonObject(with:options:)`，它可以解析 JSON 并转换为 Swift Dictionary 和 `NSDictionary`。
+在 Swift 中解析 JSON 的另一种方法是使用 `JSONSerialization.jsonObject(with:options:)`，它可以解析 JSON 并转换为 Swift `Dictionary` 和 `NSDictionary`。
 
 ```swift
 let jsonDict = "{\"key\":\"value\"}"
@@ -83,9 +80,9 @@ let nsDict = object as? NSDictionary
 
 
 
-### Swift 数组和 NSArray 到 JSON
+### Swift Array 和 NSArray 转 JSON
 
-`JSONSerialization.jsonObject(with:options:)` 也可用于解析 JSON 并转换为 Swift Array 和 `NSArray`。
+`JSONSerialization.jsonObject(with:options:)` 也可用于解析 JSON 并转换为 Swift `Array` 和 `NSArray`。
 
 ```swift
 let jsonArray = "[1,2,3,4,5]"
