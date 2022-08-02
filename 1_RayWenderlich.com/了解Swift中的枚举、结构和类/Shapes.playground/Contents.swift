@@ -1,22 +1,23 @@
 import Foundation
 
-// 可遍历枚举类型
+// 显式指定后备存储类型的枚举会自动遵守 <RawRepresentable> 协议。
+// 让枚举类型遵守 <CaseIterable> 协议，表明这是一个可被遍历的枚举类型。
 //enum ColorName: String, CaseIterable {
-//    case black, silver, gray, white, maroon, red, purple, fuchsia, green,
-//         lime, olive, yellow, navy, blue, teal, aqua
+// case black, silver, gray, white, maroon, red, purple, fuchsia, green,
+//      lime, olive, yellow, navy, blue, teal, aqua
 //}
-
+//
 //for color in ColorName.allCases {
-//    print("I love the color \(color).")
+// print("I love the color \(color).")
 //}
 
-// 有关联值的枚举类型
+// 关联值枚举类型
 enum CSSColor {
     case named(name: ColorName)
     case rgb(red: UInt8, green: UInt8, blue: UInt8)
 }
 
-// 让枚举类型遵守协议
+// 让带有关联值的枚举类型遵守 <CustomStringConvertible> 协议，并实现其字符串表示方法。
 extension CSSColor: CustomStringConvertible {
     var description: String {
         switch self {
@@ -68,6 +69,7 @@ protocol DrawingContext {
 }
 
 // 圆
+// 动态成员查找，在尝试访问属性时调用下标方法
 @dynamicMemberLookup
 struct Circle: Drawable {
     var strokeWidth = 5

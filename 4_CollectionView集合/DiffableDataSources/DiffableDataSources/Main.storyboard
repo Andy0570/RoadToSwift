@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xQF-QU-4jy">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--RayTube-->
+        <scene sceneID="PT0-Gd-SWK">
+            <objects>
+                <collectionViewController id="ii3-rp-PAJ" customClass="VideosViewController" customModule="DiffableDataSources" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" id="OOZ-o2-4eN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fxa-5U-7ki">
+                            <size key="itemSize" width="414" height="285"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VideoCollectionViewCell" id="p1A-4b-Oxu" customClass="VideoCollectionViewCell" customModule="DiffableDataSources" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="280"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="o2I-iJ-nPh">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="280"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JEh-4K-Jdk" userLabel="Shadow View">
+                                            <rect key="frame" x="8" y="8" width="398" height="212"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                    <real key="value" value="0.29999999999999999"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                    <size key="value" width="0.0" height="0.0"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                    <real key="value" value="3"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arkit" translatesAutoresizingMaskIntoConstraints="NO" id="kvV-2p-CNT">
+                                            <rect key="frame" x="8" y="8" width="398" height="212"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                    <size key="value" width="0.0" height="0.0"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                    <integer key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YhG-o6-GIu">
+                                            <rect key="frame" x="8" y="228" width="398" height="22"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="22" id="rIP-tl-l48"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pzx-cI-9M2">
+                                            <rect key="frame" x="8" y="250" width="398" height="22"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="22" id="ISy-eh-19M"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Pzx-cI-9M2" secondAttribute="trailing" constant="8" id="6pZ-hS-fy5"/>
+                                        <constraint firstAttribute="trailing" secondItem="YhG-o6-GIu" secondAttribute="trailing" constant="8" id="6wT-p5-Wgz"/>
+                                        <constraint firstItem="JEh-4K-Jdk" firstAttribute="leading" secondItem="o2I-iJ-nPh" secondAttribute="leading" constant="8" id="9o6-rk-OgQ"/>
+                                        <constraint firstAttribute="trailing" secondItem="kvV-2p-CNT" secondAttribute="trailing" constant="8" id="HMw-7a-Mxv"/>
+                                        <constraint firstItem="JEh-4K-Jdk" firstAttribute="top" secondItem="o2I-iJ-nPh" secondAttribute="top" constant="8" id="JuP-V9-XkN"/>
+                                        <constraint firstItem="Pzx-cI-9M2" firstAttribute="leading" secondItem="o2I-iJ-nPh" secondAttribute="leading" constant="8" id="Q1a-Me-lcc"/>
+                                        <constraint firstAttribute="trailing" secondItem="JEh-4K-Jdk" secondAttribute="trailing" constant="8" id="RY7-kO-yP3"/>
+                                        <constraint firstItem="YhG-o6-GIu" firstAttribute="top" secondItem="JEh-4K-Jdk" secondAttribute="bottom" constant="8" id="Vlx-kk-os2"/>
+                                        <constraint firstItem="YhG-o6-GIu" firstAttribute="top" secondItem="kvV-2p-CNT" secondAttribute="bottom" constant="8" id="f8A-1N-cM6"/>
+                                        <constraint firstItem="kvV-2p-CNT" firstAttribute="top" secondItem="o2I-iJ-nPh" secondAttribute="top" constant="8" id="iRC-s9-iWr"/>
+                                        <constraint firstItem="kvV-2p-CNT" firstAttribute="leading" secondItem="o2I-iJ-nPh" secondAttribute="leading" constant="8" id="keB-3J-1re"/>
+                                        <constraint firstItem="Pzx-cI-9M2" firstAttribute="top" secondItem="YhG-o6-GIu" secondAttribute="bottom" id="m2Z-zq-Ji4"/>
+                                        <constraint firstItem="YhG-o6-GIu" firstAttribute="leading" secondItem="o2I-iJ-nPh" secondAttribute="leading" constant="8" id="vfI-VH-NdQ"/>
+                                        <constraint firstAttribute="bottom" secondItem="Pzx-cI-9M2" secondAttribute="bottom" constant="8" id="vke-mn-VXr"/>
+                                        <constraint firstItem="JEh-4K-Jdk" firstAttribute="height" secondItem="kvV-2p-CNT" secondAttribute="height" id="zAq-CX-W3h"/>
+                                        <constraint firstItem="JEh-4K-Jdk" firstAttribute="width" secondItem="kvV-2p-CNT" secondAttribute="width" id="zYI-6o-xFS"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="414" height="280"/>
+                                <connections>
+                                    <outlet property="subtitleLabel" destination="Pzx-cI-9M2" id="whU-IM-M7o"/>
+                                    <outlet property="thumbnailView" destination="kvV-2p-CNT" id="zHG-aF-FIY"/>
+                                    <outlet property="titleLabel" destination="YhG-o6-GIu" id="vz5-Lc-LHL"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="ii3-rp-PAJ" id="lAS-nz-sEh"/>
+                            <outlet property="delegate" destination="ii3-rp-PAJ" id="UYu-Cx-06a"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="RayTube" id="ay9-sy-2iN"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3uw-Zm-BMa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="376.81159420289856" y="182.8125"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PY2-6c-tga">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xQF-QU-4jy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OtN-MO-6OR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ii3-rp-PAJ" kind="relationship" relationship="rootViewController" id="6mb-kU-5uV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WsZ-6h-7Sh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-533.33333333333337" y="182.8125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arkit" width="560" height="423"/>
+    </resources>
+</document>

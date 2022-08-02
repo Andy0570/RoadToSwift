@@ -108,6 +108,7 @@
 * [HappyCodable](https://github.com/miku1958/HappyCodable) ⭐️39
 * [CodableWrapper](https://github.com/winddpan/CodableWrapper) ⭐️133
 * [CodableWrappers](https://github.com/GottaGetSwifty/CodableWrappers) ⭐️343
+* [DeepCodable](https://github.com/MPLew-is/deep-codable) ⭐️14 - 将深层嵌套的数据编码和解码成扁平的 Swift 对象。
 
 
 
@@ -177,6 +178,7 @@
 * [SweetAlert-iOS](https://github.com/codestergit/SweetAlert-iOS) ⭐️2k - 带动画效果弹窗封装类。
 * [FlourishUI](https://github.com/unicorn/FlourishUI)  ⭐️224 - 一个高度可配置的、开箱即用的漂亮UI框架。
 * [AZDialogViewController](https://github.com/Minitour/AZDialogViewController) ⭐️771 - 一个高度可定制的警报对话框控制器，模仿 Snapchat 的警报对话框。
+* [Drops](https://github.com/omaralbeik/Drops) ⭐️381 - 一个 µFramework，用于显示警报，例如从粘贴板复制或连接 Apple Pencil 时使用的警报。
 
 
 
@@ -375,6 +377,7 @@
 * [Carbon](https://github.com/ra1028/Carbon) ⭐️1.2k - 一个声明式框架，在 `UITableView` 和 `UICollectionView` 中构建基于组件的界面。提供 API 文档及丰富示例。
 * [Owl](https://github.com/malcommac/Owl) ⭐️437 - 一个声明式、类型安全的框架，用于搭建快速而灵活的 `UITableView` 和 `UICollectionView`。
 * [CollectionKit](https://github.com/SoySauceLab/CollectionKit) ⭐️4.2k - 重构 `UICollectionView`
+* [SwiftDataTables](https://github.com/pavankataria/SwiftDataTables) ⭐️402 - 一个 Swift Data Table 包，在 iOS 的格式良好的表格中显示类似网格的数据集。子类化 UICollectionView，允许排序和使用可扩展选项进行搜索。
 * :heart: [CHTCollectionViewWaterfallLayout](https://github.com/chiahsien/CHTCollectionViewWaterfallLayout) ⭐️4.3k - 瀑布流布局
 * :heart: [airbnb/MagazineLayout](https://github.com/airbnb/MagazineLayout) ⭐️3.1k - Airbnb 开源的集合视图布局框架，能够以垂直滚动的网格和列表的方式布置视图。
 * [AnimatedCollectionViewLayout](https://github.com/KelvinJin/AnimatedCollectionViewLayout) ⭐️4.3k - 一个 UICollectionViewLayout 子类，在不影响你现有代码的前提下，为UICollectionView 添加自定义过渡动画。
@@ -408,6 +411,7 @@
 
 ### UIProgress
 
+* [FillableLoaders](https://github.com/polqf/FillableLoaders) ⭐️2.1k - 使用 Swift 编写的自定义 CGPath 绘制的完全可定制的基于进度的加载器
 * [KYCircularProgress](https://github.com/kentya6/KYCircularProgress) ⭐️1.1k - 简单、实用路径可定制进度条。
 * [loady](https://github.com/farshadjahanmanesh/loady) ⭐️817 - Loady 是一个小动效库用来定制加载按钮动画，可用于显示 UI 中 Button 的加载，支持你自定义样式，它本身提供有 6 种不同的加载样式，4 种动画状态（成功加载、加载失败、加载中，正常加载）。
 * [BKStepperProgress](https://github.com/bharathi91/BKStepperProgress) ⭐️16 - 一个 iOS 控件，用于以步进器形式指示进度视图。
@@ -905,6 +909,7 @@
 * [GDPerformanceView-Swift](https://github.com/dani-gavrilov/GDPerformanceView-Swift) ⭐️2.1k - 在状态栏上显示 FPS、CPU 和内存使用率、设备型号、应用程序和iOS版本，并通过委托（Delegate）报告 FPS、CPU 和内存使用率。
 * [SwiftTweaks](https://github.com/Khan/SwiftTweaks) ⭐️1.3k - 调整你的 iOS 应用，而不需要重新编译。
 * [TweaKit](https://github.com/Cokile/TweaKit) ⭐️3 - 类似于 SwiftTweaks, 另一个用于调整参数和特征标记的库。
+* [DoKit](https://github.com/didi/DoKit) ⭐️18.8k - 一款面向泛前端产品研发全生命周期的效率平台。
 
 ### UI 调试
 * [Reveal](https://revealapp.com/) - Reveal 是一个 iOS UI 调试工具，使用 Reveal 可以在应用运行时方便的查看页面的层级结构，此外，可以在 Reveal 中动态修改页面中各个控件的背景色、字体大小 (可以显示字体的控件，如 UILabel) 等样式，并且不需要重新运行程序就可以在 Reveal 中实时看到修改后的效果。

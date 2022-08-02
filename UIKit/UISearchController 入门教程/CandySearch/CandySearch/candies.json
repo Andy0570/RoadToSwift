@@ -1,0 +1,16 @@
+[
+  { "name": "Chocolate Bar", "category": "Chocolate" },
+  { "name": "Chocolate Chip", "category": "Chocolate" },
+  { "name": "Dark Chocolate", "category": "Chocolate" },
+  { "name": "Chocolate Coin", "category": "Chocolate" },
+  { "name": "Chocolate Egg", "category": "Chocolate" },
+  { "name": "Lollipop", "category": "Hard" },
+  { "name": "Jaw Breaker", "category": "Hard" },
+  { "name": "Toffee Apple", "category": "Hard" },
+  { "name": "Caramel", "category": "Other" },
+  { "name": "Sour Chew", "category": "Other" },
+  { "name": "Gummi Bear", "category": "Other" },
+  { "name": "Candy Floss", "category": "Other" },
+  { "name": "Jelly Beans", "category": "Other" },
+  { "name": "Liquorice", "category": "Other" },
+]
