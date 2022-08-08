@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "creature-owl-attack-1.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

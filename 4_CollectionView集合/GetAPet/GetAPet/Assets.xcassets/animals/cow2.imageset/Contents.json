@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "creature-cow-02-.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

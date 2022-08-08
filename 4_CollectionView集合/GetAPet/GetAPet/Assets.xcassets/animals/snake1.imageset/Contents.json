@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "creature_snake_1_orange.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

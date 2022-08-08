@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "creature_chameleon.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

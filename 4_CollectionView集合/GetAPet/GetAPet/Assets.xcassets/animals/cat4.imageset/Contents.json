@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "creature-cat-purple-cute.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

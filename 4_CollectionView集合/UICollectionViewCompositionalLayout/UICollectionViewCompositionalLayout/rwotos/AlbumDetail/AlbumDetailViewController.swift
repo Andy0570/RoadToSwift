@@ -1,31 +1,3 @@
-/// Copyright (c) 2019 Razeware LLC
-///
-/// Permission is hereby granted, free of charge, to any person obtaining a copy
-/// of this software and associated documentation files (the "Software"), to deal
-/// in the Software without restriction, including without limitation the rights
-/// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-/// copies of the Software, and to permit persons to whom the Software is
-/// furnished to do so, subject to the following conditions:
-///
-/// The above copyright notice and this permission notice shall be included in
-/// all copies or substantial portions of the Software.
-///
-/// Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
-/// distribute, sublicense, create a derivative work, and/or sell copies of the
-/// Software in any work that is designed, intended, or marketed for pedagogical or
-/// instructional purposes related to programming, coding, application development,
-/// or information technology.  Permission for such use, copying, modification,
-/// merger, publication, distribution, sublicensing, creation of derivative works,
-/// or sale is expressly withheld.
-///
-/// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-/// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-/// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-/// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-/// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-/// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-/// THE SOFTWARE.
-
 import UIKit
 
 class AlbumDetailViewController: UIViewController {
@@ -67,8 +39,7 @@ extension AlbumDetailViewController {
     }
     
     func configureDataSource() {
-        dataSource = UICollectionViewDiffableDataSource
-        <Section, AlbumDetailItem>(collectionView: albumDetailCollectionView) {
+        dataSource = UICollectionViewDiffableDataSource<Section, AlbumDetailItem>(collectionView: albumDetailCollectionView) {
             (collectionView: UICollectionView, indexPath: IndexPath, detailItem: AlbumDetailItem) -> UICollectionViewCell? in
             guard let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: PhotoItemCell.reuseIdentifer,
@@ -92,8 +63,15 @@ extension AlbumDetailViewController {
         let snapshot = snapshotForCurrentState()
         dataSource.apply(snapshot, animatingDifferences: false)
     }
-    
-    func generateLayout() -> UICollectionViewLayout {
+
+    /**
+     Size Classes 说明:
+     .fractionalWidth(): 使用 fractionalWidth 可以设置 cell 的宽度/高度相对于父视图宽度的比例；
+     .fractionalHeight(): 使用 fractionalWidth 可以设置 cell 的宽度/高度相对于父视图高度的比例；
+     .absolute(): 将 cell 的宽度/高度设置为绝对值；
+     .estimate(): 使用估计值，我们可以根据内容大小设置 cell 的宽度/高度。系统将决定内容的最佳宽度/高度；
+     */
+    private func generateLayout() -> UICollectionViewLayout {
         // Syncing badge
         // 将同步视图的布局定义为距顶部和后沿 30% 的锚点，绝对宽度和高度为 20 点。
         let syncingBadgeAnchor = NSCollectionLayoutAnchor(edges: [.top, .trailing], fractionalOffset: CGPoint(x: -0.3, y: 0.3))
@@ -128,6 +106,7 @@ extension AlbumDetailViewController {
         // Fourth type: Reversed main with pair
         let mainWithPairReversedGroup = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalWidth(4/9)), subitems: [trailingGroup, mainItem])
 
+        // Group 位于 Section 与 Item 之间，允许我们在同一个 Section 中应用不同的布局
         let nestedGroup = NSCollectionLayoutGroup.vertical(
             layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalWidth(16/9)),
             subitems: [fullPhotoItem, mainWithPairGroup, tripletGroup, mainWithPairReversedGroup]

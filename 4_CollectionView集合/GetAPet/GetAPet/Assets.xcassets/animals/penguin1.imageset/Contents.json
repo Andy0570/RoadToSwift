@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "creature_penguin-scarf.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

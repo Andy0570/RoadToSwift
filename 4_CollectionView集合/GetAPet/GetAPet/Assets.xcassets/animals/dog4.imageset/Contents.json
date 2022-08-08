@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "creature_dog-sitting.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

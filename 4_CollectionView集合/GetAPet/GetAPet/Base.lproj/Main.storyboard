@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A2h-P8-Ojl">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="MQd-81-dl2">
+            <objects>
+                <navigationController id="A2h-P8-Ojl" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iw2-S6-ivG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="d2Q-Lg-x7T" kind="relationship" relationship="rootViewController" id="AoH-BZ-b87"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jPL-QK-CRN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-946" y="96"/>
+        </scene>
+        <!--Pet Explorer View Controller-->
+        <scene sceneID="uy5-oQ-VzK">
+            <objects>
+                <collectionViewController id="d2Q-Lg-x7T" customClass="PetExplorerViewController" customModule="GetAPet" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="e7k-MO-ezJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ODW-Cr-eJD">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="d2Q-Lg-x7T" id="Lla-ag-dua"/>
+                            <outlet property="delegate" destination="d2Q-Lg-x7T" id="JIa-yd-kO2"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="368-7k-mUQ"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WXn-Ct-6W0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-135" y="94"/>
+        </scene>
+        <!--Pet Detail View Controller-->
+        <scene sceneID="4Tv-1R-90u">
+            <objects>
+                <viewController storyboardIdentifier="PetDetailViewController" id="qMH-Ai-d9C" customClass="PetDetailViewController" customModule="GetAPet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XKa-gm-dHI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="58b-BK-UaB">
+                                <rect key="frame" x="67.5" y="87" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="TXN-TV-ims"/>
+                                    <constraint firstAttribute="width" secondItem="58b-BK-UaB" secondAttribute="height" id="a8T-ji-SW7"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Pet Name]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yxJ-zZ-vfJ">
+                                <rect key="frame" x="144.5" y="367" width="86.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Pet Birthdate]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCa-vL-tC0">
+                                <rect key="frame" x="131.5" y="428" width="112" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dI7-PE-hkI">
+                                <rect key="frame" x="161" y="479" width="53" height="30"/>
+                                <state key="normal" title="[Adopt]"/>
+                                <connections>
+                                    <action selector="didTapAdoptButton:" destination="qMH-Ai-d9C" eventType="touchUpInside" id="2Yg-ju-6jw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6c4-uh-xBt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yxJ-zZ-vfJ" firstAttribute="centerX" secondItem="XKa-gm-dHI" secondAttribute="centerX" id="716-ms-mJJ"/>
+                            <constraint firstItem="58b-BK-UaB" firstAttribute="centerX" secondItem="XKa-gm-dHI" secondAttribute="centerX" id="9xk-ky-HON"/>
+                            <constraint firstItem="sCa-vL-tC0" firstAttribute="centerX" secondItem="XKa-gm-dHI" secondAttribute="centerX" id="K5O-Xc-fC7"/>
+                            <constraint firstItem="yxJ-zZ-vfJ" firstAttribute="centerY" secondItem="XKa-gm-dHI" secondAttribute="centerY" constant="44" id="qG2-Gp-8Md"/>
+                            <constraint firstItem="dI7-PE-hkI" firstAttribute="top" secondItem="sCa-vL-tC0" secondAttribute="bottom" constant="30" id="rdz-wC-Su1"/>
+                            <constraint firstItem="sCa-vL-tC0" firstAttribute="top" secondItem="yxJ-zZ-vfJ" secondAttribute="bottom" constant="40" id="sS4-Ua-sNc"/>
+                            <constraint firstItem="dI7-PE-hkI" firstAttribute="centerX" secondItem="XKa-gm-dHI" secondAttribute="centerX" id="xJY-dx-Kqq"/>
+                            <constraint firstItem="yxJ-zZ-vfJ" firstAttribute="top" secondItem="58b-BK-UaB" secondAttribute="bottom" constant="40" id="yZj-dl-cNw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="adoptButton" destination="dI7-PE-hkI" id="6BC-AT-eab"/>
+                        <outlet property="age" destination="sCa-vL-tC0" id="5Vu-NK-tBB"/>
+                        <outlet property="imageView" destination="58b-BK-UaB" id="0gH-L6-Eoq"/>
+                        <outlet property="name" destination="yxJ-zZ-vfJ" id="GoZ-oO-U53"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R08-Ak-zdO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="800.79999999999995" y="94.581280788177338"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
