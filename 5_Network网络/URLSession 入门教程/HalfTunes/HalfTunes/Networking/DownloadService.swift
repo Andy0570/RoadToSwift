@@ -1,99 +1,66 @@
-/// Copyright (c) 2019 Razeware LLC
-/// 
-/// Permission is hereby granted, free of charge, to any person obtaining a copy
-/// of this software and associated documentation files (the "Software"), to deal
-/// in the Software without restriction, including without limitation the rights
-/// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-/// copies of the Software, and to permit persons to whom the Software is
-/// furnished to do so, subject to the following conditions:
-/// 
-/// The above copyright notice and this permission notice shall be included in
-/// all copies or substantial portions of the Software.
-/// 
-/// Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
-/// distribute, sublicense, create a derivative work, and/or sell copies of the
-/// Software in any work that is designed, intended, or marketed for pedagogical or
-/// instructional purposes related to programming, coding, application development,
-/// or information technology.  Permission for such use, copying, modification,
-/// merger, publication, distribution, sublicensing, creation of derivative works,
-/// or sale is expressly withheld.
-/// 
-/// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-/// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-/// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-/// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-/// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-/// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-/// THE SOFTWARE.
-
 import Foundation
-import UIKit
-
-//
-// MARK: - Download Service
-//
 
 /// Downloads song snippets, and stores in local file.
 /// Allows cancel, pause, resume download.
 class DownloadService {
-  //
-  // MARK: - Variables And Properties
-  //
-  var activeDownloads: [URL: Download] = [:]
+    
+    // MARK: - Variables And Properties
+    
+    var activeDownloads: [URL: Download] = [:]
+    
+    /// SearchViewController creates downloadsSession
+    var downloadsSession: URLSession!
+    
+    // MARK: - Internal Methods
 
-  /// SearchViewController creates downloadsSession
-  var downloadsSession: URLSession!
-  
-  //
-  // MARK: - Internal Methods
-  //
-  
-  // 开始下载任务
-  func startDownload(_ track: Track) {
-    let download = Download(track: track)
-    download.task = downloadsSession.downloadTask(with: track.previewURL)
-    download.task?.resume()
-    download.isDownloading = true
-    activeDownloads[download.track.previewURL] = download
-  }
-
-  // 取消下载任务
-  func cancelDownload(_ track: Track) {
-    guard let download = activeDownloads[track.previewURL] else {
-      return
+    // 开始下载任务
+    func startDownload(_ track: Track) {
+        let download = Download(track: track)
+        // 通过 downloadsSession 创建 URLSessionDownloadTask 下载任务
+        download.task = downloadsSession.downloadTask(with: track.previewURL)
+        download.task?.resume()
+        download.isDownloading = true
+        activeDownloads[download.track.previewURL] = download
     }
 
-    download.task?.cancel()
-    activeDownloads[track.previewURL] = nil
-  }
-  
-  // 暂停下载任务，并缓存已下载数据
-  func pauseDownload(_ track: Track) {
-    guard let download = activeDownloads[track.previewURL], download.isDownloading else {
-      return
+    // 取消下载任务
+    func cancelDownload(_ track: Track) {
+        guard let download = activeDownloads[track.previewURL] else {
+            return
+        }
+
+        download.task?.cancel()
+        activeDownloads[track.previewURL] = nil
     }
 
-    download.task?.cancel(byProducingResumeData: { data in
-      download.resumeData = data
-    })
+    // 暂停下载任务，并缓存已下载数据
+    func pauseDownload(_ track: Track) {
+        guard let download = activeDownloads[track.previewURL], download.isDownloading else {
+            return
+        }
 
-    download.isDownloading = false
-  }
-  
-  // 恢复下载任务
-  func resumeDownload(_ track: Track) {
-    guard let download = activeDownloads[track.previewURL] else {
-      return
+        // 暂停任务时，把已下载数据缓存到 download 实例中，作为可恢复数据
+        download.task?.cancel(byProducingResumeData: { data in
+            download.resumeData = data
+        })
+
+        download.isDownloading = false
     }
 
-    // 如果已下载部分数据，则接着继续下载，否则重新开始下载
-    if let resumeData = download.resumeData {
-      download.task = downloadsSession.downloadTask(withResumeData: resumeData)
-    } else {
-      download.task = downloadsSession.downloadTask(with: download.track.previewURL)
-    }
+    // 恢复下载任务
+    func resumeDownload(_ track: Track) {
+        guard let download = activeDownloads[track.previewURL] else {
+            return
+        }
 
-    download.task?.resume()
-    download.isDownloading = true
-  }
+        // 如果已下载部分数据，则接着继续下载，否则重新开始下载
+        if let resumeData = download.resumeData {
+            download.task = downloadsSession.downloadTask(withResumeData: resumeData)
+        } else {
+            download.task = downloadsSession.downloadTask(with: download.track.previewURL)
+        }
+
+        download.task?.resume()
+        download.isDownloading = true
+    }
 }

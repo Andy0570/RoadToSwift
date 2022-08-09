@@ -1,5 +1,6 @@
-// iOS Tutorial: Collection View and Diffable Data Source
-// Reference: <https://www.raywenderlich.com/8241072-ios-tutorial-collection-view-and-diffable-data-source>
+/// iOS Tutorial: Collection View and Diffable Data Source
+/// Reference: <https://www.raywenderlich.com/8241072-ios-tutorial-collection-view-and-diffable-data-source>
+/// <https://www.swiftbysundell.com/articles/building-modern-collection-views-in-swift/>
 
 import UIKit
 import SafariServices
@@ -22,16 +23,16 @@ class VideosViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+
         configureSearchController()
         configureLayout()
-
         applySnapshot()
     }
 
     // MARK: - Functions
 
     // 告诉集合视图，要显示哪些 sections 和 items
-    func makeDataSource() -> DataSource {
+    private func makeDataSource() -> DataSource {
         let dataSource = DataSource(collectionView: collectionView) { collectionView, indexPath, video in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VideoCollectionViewCell", for: indexPath) as? VideoCollectionViewCell
             cell?.video = video
@@ -53,7 +54,7 @@ class VideosViewController: UICollectionViewController {
     }
 
     // 将快照应用到数据源
-    func applySnapshot(animatingDifferences: Bool = true) {
+    private func applySnapshot(animatingDifferences: Bool = true) {
         var snapshot = SnapShot()
         snapshot.appendSections(sections)
         sections.forEach { section in

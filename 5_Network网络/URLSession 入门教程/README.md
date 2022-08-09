@@ -1,6 +1,6 @@
 > 原文：[URLSession Tutorial: Getting Started](https://www.raywenderlich.com/3244963-urlsession-tutorial-getting-started)
 >
-> 本 URLSession 教程中，你将学习如何创建 HTTP 请求，以及实现可暂停和可恢复的后台下载任务。
+> 在本 URLSession 教程中，你将学习如何创建 HTTP 请求，以及实现可暂停和可恢复的后台下载任务。
 
 
 
@@ -37,7 +37,7 @@
 `URLSession` 是负责发送和接收请求的关键对象。你通过 `URLSessionConfiguration` 来创建它，它有三种类型：
 
 * **默认会话（default）**。创建一个默认的配置对象，该对象使用基于磁盘托管的全局缓存、凭证和 cookie 存储对象。
-* **临时会话（ephemeral）**。与默认配置类似，只是你把所有与会话相关的数据存储在内存中。可以把它看作是一个 "隐私" 会话（比如，Safari 浏览器中的“无痕浏览模式”）。
+* **临时会话（ephemeral）**。与默认配置类似，只是你把所有与会话相关的数据存储在内存中。可以把它看作是一个 "隐私"会话（比如，Safari 浏览器中的“无痕浏览模式”）。
 * **后台会话（background）**。让会话在后台执行上传或下载任务。即使应用程序本身被暂停或被系统终止，传输也会继续。
 
 `URLSessionConfiguration` 还可以让你配置会话属性，如超时时间、缓存策略和 HTTP 请求头。关于配置选项的完整列表，请参考[苹果官方文档](https://developer.apple.com/reference/foundation/urlsessionconfiguration)。
@@ -54,11 +54,11 @@
 
 ![](https://koenig-media.raywenderlich.com/uploads/2019/05/03-Session-Tasks.png)
 
-你还可以暂停、恢复和取消任务。`URLSessionDownloadTask` 有额外的能力，可以暂停以便将来恢复。
+你还可以暂停、恢复和取消任务。`URLSessionDownloadTask` 有额外的能力，可以暂停任务以便将来恢复。
 
 一般来说，`URLSession` 以两种方式返回数据：
 
-* 当一个任务完成时，无论是成功还是出错，都会调用 Completion Handler 完成块。
+* 当一个任务完成时，无论是成功还是出错，都会调用 Completion Handler 完成处理程序。
 * 通过调用你在创建会话时设置的委托方法。
 
 现在你已经对 `URLSession` 的功能有了一个大致的了解，你已经准备好将理论付诸实践了。
@@ -340,7 +340,7 @@ file:///Users/mymac/Library/Developer/CoreSimulator/Devices/74A1CE9B-7C49-46CA-9
 
 如果用户想暂停下载或完全取消下载该怎么办？在本节中，你将实现暂停、恢复和取消下载功能，让用户完全控制下载过程。
 
-你将从允许用户取消一个正在进行的下载任务。
+你将允许用户取消一个正在进行的下载任务。
 
 ### 取消下载
 
@@ -409,7 +409,7 @@ func resumeDownload(_ track: Track) {
   }
 
   download.task?.resume()
-  download.isDownloading = track
+  download.isDownloading = true
 }
 ```
 

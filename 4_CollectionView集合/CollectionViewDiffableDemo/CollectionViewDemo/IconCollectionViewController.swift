@@ -5,10 +5,8 @@
 //  Created by Simon Ng on 13/1/2021.
 //
 
-/**
- 参考：
- <https://www.appcoda.com/diffable-data-source/>
- */
+/// Reference: <https://www.appcoda.com/diffable-data-source/>
+
 import UIKit
 
 private let reuseIdentifier = "Cell"
@@ -58,7 +56,7 @@ class IconCollectionViewController: UICollectionViewController {
         updateSnapshot()
     }
 
-    func configureDataSource() -> UICollectionViewDiffableDataSource<Section, Icon> {
+    private func configureDataSource() -> UICollectionViewDiffableDataSource<Section, Icon> {
 
         // 创建 UICollectionViewDiffableDataSource<Section, Icon> 实例，它是一个泛型对象，能够处理集合中不同的 section 和 item。
         // <Section, Icon> 中的 Section 表示我们使用自定义的 Section 枚举类型处理 section 部分。
@@ -75,7 +73,7 @@ class IconCollectionViewController: UICollectionViewController {
         return dataSource
     }
 
-    func updateSnapshot(animatingChange: Bool = false) {
+    private func updateSnapshot(animatingChange: Bool = false) {
         // 创建一个 NSDiffableDataSourceSnapshot 快照并填充数据
         var snapshot = NSDiffableDataSourceSnapshot<Section, Icon>()
         snapshot.appendSections([.all])

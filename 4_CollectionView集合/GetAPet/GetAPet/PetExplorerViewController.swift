@@ -1,6 +1,7 @@
 /// iOS 14 Tutorial: UICollectionView List
 /// Reference: <https://www.raywenderlich.com/16906182-ios-14-tutorial-uicollectionview-list#toc-anchor-001>
 /// Requirements: iOS 14
+/// <https://www.swiftbysundell.com/articles/building-modern-collection-views-in-swift/>
 
 import UIKit
 
