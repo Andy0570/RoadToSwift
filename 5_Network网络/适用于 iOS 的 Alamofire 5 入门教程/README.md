@@ -4,7 +4,7 @@
 
 
 
-如果您开发 iOS 应用程序已有一段时间，您可能需要通过网络访问数据。为此，您可能使用了 Foundation 的 `URLSession`。这很好，但有时使用起来很麻烦。这就是这个 Alamofire 教程的用武之地！
+如果您开发 iOS 应用程序已有一段时间了，您可能需要通过网络访问数据。为此，您可能使用了 Foundation 框架下的 `URLSession`。这很好，但有时使用起来很麻烦。这就是该 Alamofire 教程的用武之地！
 
 Alamofire 是一个基于 Swift 的 HTTP 网络框架。它在 Apple 的 Foundation 网络堆栈之上提供了一个优雅的接口，简化了常见的网络任务。它的功能包括可链接的请求/响应方法、JSON 和 Codable 解码、身份验证等。
 
@@ -136,7 +136,7 @@ success({
 
 但是，您如何处理返回的 JSON 数据？由于其嵌套结构，直接使用 JSON 可能会很麻烦，因此为了帮助解决这个问题，您将创建模型来存储数据。
 
-在 Project navigator 中，找到 Networking 组并在该组中创建一个名为 Film.swift 的新 Swift 文件。
+在项目 navigator 中，找到 Networking 组并在该组中创建一个名为 Film.swift 的新 Swift 文件。
 
 然后，将以下代码添加到其中：
 
@@ -162,9 +162,9 @@ struct Film: Decodable {
 }
 ```
 
-使用此代码，您已经创建了从 API 的 film 端点提取数据所需的数据属性和 oding keys。请注意结构体是如何 `Decodable` 的，这使得将 JSON 转换为数据模型成为可能。
+使用此代码，您已经创建了从 API 的 film 端点提取数据所需的数据属性和 coding keys。请注意结构体是如何 `Decodable` 的，这使得将 JSON 转换为数据模型成为可能。
 
-该项目定义了一个协议——`Displayable`——以简化在教程后面显示详细信息的过程。你必须让 `Film` 符合它。在 Film.swift 的末尾添加以下内容：
+该项目定义了一个协议——`Displayable`——以简化在教程后面显示详细信息的过程。你必须让 `Film` 遵守它。在 Film.swift 的末尾添加以下内容：
 
 ```swift
 extension Film: Displayable {
@@ -218,7 +218,7 @@ struct Films: Decodable {
 
 该结构表示电影的集合。正如您之前在控制台中看到的，端点 `swapi.dev/api/films` 返回四个主要值：`count`、`next`、`previous` 和 `results`。对于您的应用程序，您只需要 `count` 和 `results`，这就是为什么您的结构不具有所有属性的原因。
 
-`coding keys` 将 `results` 从服务器转换为 `all`。这是因为 `Films.results` 的阅读效果不如 `Films.all`。同样，通过使数据模型符合 `Decodable`，Alamofire 将能够将 JSON 数据转换为您的数据模型。
+`coding keys` 将从服务器返回的 `results` 转换为 `all`。这是因为 `Films.results` 的阅读效果不如 `Films.all`。同样，通过使数据模型符合 `Decodable` 协议，Alamofire 将能够将 JSON 数据转换为您的数据模型。
 
 > 注意：有关 Codable 的更多信息，请参阅我们的 [Swift 编码和解码教程](https://www.raywenderlich.com/3418439-encoding-and-decoding-in-swift)。
 
@@ -251,7 +251,7 @@ func fetchFilms() {
 
 ## 方法链
 
-Alamofire 使用方法链（**method chaining**），它通过将一种方法的响应连接为另一种方法的输入来工作。这不仅使代码保持紧凑，而且使您的代码更清晰。
+Alamofire 使用方法链（**method chaining**），它通过将一种方法的响应连接为另一种方法的输入来工作。这不仅使代码紧凑，而且更清晰。
 现在尝试一下，将 `fetchFilms()` 中的所有代码替换为：
 
 ```swift

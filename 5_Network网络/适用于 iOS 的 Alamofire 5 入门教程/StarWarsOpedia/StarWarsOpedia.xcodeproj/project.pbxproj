@@ -57,9 +57,9 @@
 			children = (
 				22E3482F27E96A7F00369602 /* Film.swift */,
 				22E3483127E96F2A00369602 /* Films.swift */,
-				183D953C23DF5A4700845F5F /* Displayable.swift */,
 				22E3483327E9777B00369602 /* Starship.swift */,
 				22E3483527E9800F00369602 /* Starships.swift */,
+				183D953C23DF5A4700845F5F /* Displayable.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -80,9 +80,9 @@
 				EE33C0E9B5921690826F581A /* Pods */,
 				74706C36CB0D967FDEC55CE2 /* Frameworks */,
 			);
-			indentWidth = 2;
+			indentWidth = 4;
 			sourceTree = "<group>";
-			tabWidth = 2;
+			tabWidth = 4;
 		};
 		D2A5F2011F4A9144005CD714 /* Products */ = {
 			isa = PBXGroup;
