@@ -1,12 +1,6 @@
-> 原文：[Alamofire Tutorial: Getting Started](https://www.raywenderlich.com/35-alamofire-tutorial-getting-started)
+> Reference：[Alamofire Tutorial: Getting Started](https://www.raywenderlich.com/35-alamofire-tutorial-getting-started)
 >
-> 译文：[~~Alamofire 教程：入门~~](https://cynine.github.io/cynineblog/2019/01/17/Almofire-tutorial/) 翻译了一半的烂尾楼？
->
-> [Alamofire 上傳圖片入門教程（上） – iPhone 手機開發 iPhone 軟體開發教學課程](https://www.aiwalls.com/ios%E8%BB%9F%E9%AB%94%E9%96%8B%E7%99%BC%E6%95%99%E5%AD%B8/16/46026.html)，繁体中文，还不完整
->
-> 想偷个懒都这么难 😂😂😂
-
-
+> 通过使用 Imagga API 上传和分析用户照片，迈出进入 Alamofire 的第一步，这是 iOS 上事实上的网络库，为数千个应用程序提供支持。
 
 
 
@@ -26,8 +20,7 @@ public func fetchAllRooms(completion: @escaping ([RemoteRoom]?) -> Void) {
   urlRequest.httpMethod = "GET"
   urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
 
-  let task = urlSession.dataTask(with: urlRequest)
-  { (data, response, error) -> Void in
+  let task = urlSession.dataTask(with: urlRequest) { (data, response, error) -> Void in
     guard error == nil else {
       print("Error while fetching remote rooms: \(String(describing: error)")
       completion(nil)

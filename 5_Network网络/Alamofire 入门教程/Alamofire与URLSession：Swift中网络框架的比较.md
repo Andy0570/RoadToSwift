@@ -28,7 +28,7 @@ Alamofire 和 URLSession 都能帮助你在 Swift 中进行网络请求。URLSes
 * 37k star
 * 根据 CocoaPods 的统计，有 4200 万（！）次下载，60 万以上的应用程序正在使用它。
 
-这些统计数字使它成为最受欢迎的 Swift 框架之一。它是一个维护良好、广泛	使用的框架，这应该使你更容易在你的应用程序中实现网络功能。
+这些统计数字使它成为最受欢迎的 Swift 框架之一。它是一个维护良好、广泛使用的框架，这应该使你更容易在你的应用程序中实现网络功能。
 
 > Alamofire 是以 [Alamo Fire Flower](https://aggie-horticulture.tamu.edu/wildseed/alamofire.html) （阿拉莫火花）命名的，它是德克萨斯州的官方州花--蓝花楹的杂交变体。
 
@@ -80,7 +80,7 @@ AF.request("https://api.mywebserver.com/v1/board", method: .get, parameters: ["t
 }
 ```
 
-用 URLSession API 做同样的事情需要更多的工作：
+用 URLSession 做同样的事情需要更多的工作：
 
 ```swift
 enum Error: Swift.Error {
