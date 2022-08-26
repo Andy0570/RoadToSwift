@@ -3,6 +3,9 @@
  ## Reference
  - [Grand Central Dispatch Tutorial for Swift 5: Part 1/2](https://www.raywenderlich.com/28540615-grand-central-dispatch-tutorial-for-swift-5-part-1-2)
  - [Swift 4 Grand Central Dispatch (GCD) 教程：第 1/2 部分](https://cynine.github.io/cynineblog/2019/01/17/swift4-gcd-tutoral-part-1/)
+ - [TUTORIAL Grand Central Dispatch (GCD) and Dispatch Queues in Swift 3](https://www.appcoda.com/grand-central-dispatch/)
+ - [Swift 中的并发编程 (第一部分：现状）](https://swift.gg/2017/09/04/all-about-concurrency-in-swift-1-the-present/)
+ - [All about Concurrency in Swift - Part 2: The Future](https://www.uraimo.com/2017/07/22/all-about-concurrency-in-swift-2-the-future/)
 
  */
 

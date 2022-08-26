@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AlbumsCollectionViewCell" id="gTV-IL-0wX" customClass="AlbumsCollectionViewCell" customModule="MVVMRx" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="225" height="319"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="225" height="319"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DW0-gg-Gg3" userLabel="Album Image">
+                        <rect key="frame" x="22.5" y="48" width="180" height="180"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="DW0-gg-Gg3" secondAttribute="height" multiplier="1:1" id="UsT-U8-Unq"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5k5-es-7qo" userLabel="Album Artist">
+                        <rect key="frame" x="17" y="252" width="191" height="18"/>
+                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohW-TH-gHU" userLabel="Album Title">
+                        <rect key="frame" x="17" y="232" width="191" height="18"/>
+                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="ohW-TH-gHU" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.85" id="OI6-mT-0CK"/>
+                <constraint firstItem="5k5-es-7qo" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Shf-m8-1F6"/>
+                <constraint firstItem="DW0-gg-Gg3" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="TTy-3m-fJC"/>
+                <constraint firstItem="DW0-gg-Gg3" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.8" id="Yav-FS-NJe"/>
+                <constraint firstItem="5k5-es-7qo" firstAttribute="top" secondItem="ohW-TH-gHU" secondAttribute="bottom" constant="2" id="bsh-Fr-sIj"/>
+                <constraint firstItem="DW0-gg-Gg3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="topMargin" constant="4" id="bxF-r7-fh0"/>
+                <constraint firstItem="5k5-es-7qo" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.85" id="eVH-vh-b52"/>
+                <constraint firstItem="ohW-TH-gHU" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="omL-Nf-lkd"/>
+                <constraint firstItem="ohW-TH-gHU" firstAttribute="top" secondItem="DW0-gg-Gg3" secondAttribute="bottom" constant="4" id="zT2-SG-eDd"/>
+            </constraints>
+            <size key="customSize" width="394" height="369"/>
+            <connections>
+                <outlet property="albumArtist" destination="5k5-es-7qo" id="0gt-z6-jCP"/>
+                <outlet property="albumImage" destination="DW0-gg-Gg3" id="lWe-b0-2ak"/>
+                <outlet property="albumTitle" destination="ohW-TH-gHU" id="8Gj-Rg-TCS"/>
+            </connections>
+            <point key="canvasLocation" x="47.10144927536232" y="66.629464285714278"/>
+        </collectionViewCell>
+    </objects>
+</document>
