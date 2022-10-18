@@ -77,7 +77,7 @@ Charles 记录对当前会话的请求和响应以供我们检查。我们可以
 
 ### 请求和响应视图
 
-在左侧疼痛中选择一个请求时，我们会在右侧获得详细视图。
+在左侧窗口中选择一个请求时，我们会在右侧获得详细视图。
 
 ![](https://tanaschita.com/static/ecfac156311009587988bd51d8c15dc1/b5233/20220228_charles_request_response.png)
 

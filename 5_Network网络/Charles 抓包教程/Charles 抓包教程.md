@@ -56,7 +56,7 @@ Charles  Proxy 不是免费的，但有 30 天的免费试用期。Charles 在�
 
 * "扫帚" 清除当前会话和所有记录的活动。
 * "记录/暂停" 在 Charles 记录事件时为红色，停止时为灰色。
-* "锁定" 开始/停止 SSL 代理。
+* "锁" 开始/停止 SSL 代理。
 * 从 "🐢" 到 "✅" 之间的按钮提供了对常用操作的访问，包括节流、断点和请求创建。
 * 最后两个按钮提供对常用工具和设置的访问。
 
@@ -94,9 +94,9 @@ SSL/TLS 使用由受信任的第三方（称为证书颁发机构）生成的证
 
 Charles 也可以生成自己的自签名证书，你可以将其安装在 Mac 和 iOS 设备上，用于 SSL/TLS 加密。由于该证书不是由受信任的证书颁发机构颁发的，你需要主动告诉你的设备信任该证书。一旦安装并得到信任，Charles 就可以解密 SSL 事件了。
 
-当黑客使用中间件来窥探网络通信时，这被称为“man-in-the-middle”中间人攻击。通常来说，请不要相信任何随机的证书，否则你可能会危及你的网络安全。
+当黑客使用中间件来窥探网络通信时，这被称为“man-in-the-middle”中间人攻击。通常来说，请不要相信任何随机的证书，否则可能会危及你的网络安全。
 
-在某些情况下，Charles 偷偷摸摸的 man-in-the-middle 策略并不奏效。例如，一些应用程序使用 **SSL pinning**（证书锁定，将服务器提供的 SSL/TLS 证书内置到移动端开发的 APP 客户端中，当客户端发起请求时，通过比对内置的证书和服务器端证书的内容，以确定这个连接的合法性。）来提高安全性。SSL pinning 意味着应用程序有一份网络服务器公钥的副本，并在通信前使用它来验证网络连接。由于 Charles 的密钥不匹配，该应用程序将拒绝执行网络通信。
+在某些情况下，Charles 这种小偷小摸的 man-in-the-middle 策略并不会奏效。例如，一些应用程序使用 **SSL pinning**（证书锁定，将服务器提供的 SSL/TLS 证书内置到移动端开发的 APP 客户端中，当客户端发起请求时，通过比对内置的证书和服务器端证书的内容，以确定这个连接的合法性。）来提高安全性。SSL pinning 意味着应用程序有一份网络服务器公钥的副本，并在通信前使用它来验证网络连接。由于 Charles 的密钥不匹配，该应用程序将拒绝执行网络通信。
 
 除了记录事件外，你还可以用 Charles 来临时修改数据，记录下来供以后查看，甚至模拟糟糕的网络连接。
 
@@ -108,7 +108,7 @@ Charles 很强大！
 
 ## Charles Proxy 和你的 iOS 设备
 
-多年来，通过 Charles Proxy 代理物理 iOS 设备流量的唯一方法是告诉你的 iOS 设备将所有网络流量发送到你的电脑。这仍然是一个常见的做法，晚些时候我们会涉及到，但首先，你会检查出 **Charles Proxy for iOS** 应用程序!
+多年来，通过 Charles Proxy 代理物理 iOS 设备流量的唯一方法是告诉你的 iOS 设备将所有网络流量发送到你的电脑。这仍然是一个常见的做法，晚些时候我们会涉及到，但首先，你会检查 **Charles Proxy for iOS** 应用程序!
 
 在你的 iOS 设备上打 开App Store，搜索 Charles Proxy。不幸的是，iOS 应用程序没有免费版本，所以如果你想跟随本节的内容，你必须购买它。
 
@@ -175,7 +175,7 @@ Charles 很强大！
 <img src="https://koenig-media.raywenderlich.com/uploads/2019/03/09.-enable-SSL-proxying.png" style="zoom:25%;" />
 
 
-回到当前会话，再次清除会话。重新打开Safari浏览器，最后一次重新加载页面。现在，如果你导航回到Charles 代理，你启用 SSL 代理的URL将有一个蓝色的网络图标，而不是一个锁的图标。
+回到当前会话，再次清除会话。重新打开Safari浏览器，最后一次重新加载页面。现在，如果你导航回到 Charles 代理，你启用 SSL 代理的URL将有一个蓝色的网络图标，而不是一个锁的图标。
 
 <img src="https://koenig-media.raywenderlich.com/uploads/2019/03/10.-request-with-SSL-proxying-enabled.png" style="zoom:25%;" />
 
@@ -200,7 +200,7 @@ Charles 很强大！
 
 ## 使用 Charles Proxy for macOS 来代理 iOS 流量
 
-如果你想在模拟器上检查流量，或者你没有 Charles Proxy 的 iOS 应用程序，那怎么办？没问题! 设置 Charles 代理网络上任何电脑或设备的流量也很简单，包括你的 iOS 设备。
+如果你想在模拟器上检查流量，或者你没有 Charles Proxy for iOS 应用程序，那怎么办？没问题! 设置 Charles 代理网络上任何电脑或设备的流量也很简单，包括你的 iOS 设备。
 
 
 
@@ -277,7 +277,7 @@ Charles 很强大！
 
 你现在会看到一些对 api.weather.com 的请求。点击一个。
 
-**Overview** 部分显示了一些请求的细节，但不多，因为你还没有为 api.weather.com 启用SSL代理。
+**Overview** 部分显示了一些请求的细节，但不多，因为你还没有为 api.weather.com 启用 SSL 代理。
 点击 **Proxy** ▸ **SSL Proxying Settings** 和 **Add**。在主机中输入<api.weather.com>，将端口留空，然后点击确定以关闭该窗口。
 
 <img src="https://koenig-media.raywenderlich.com/uploads/2021/04/Screenshot-2021-04-09-at-20.17.38.png" style="zoom: 33%;" />
@@ -292,7 +292,7 @@ Charles 很强大！
 
 
 
-寻找一个含有 /v3/wx/observations/current 的URL的请求。这包含用于填充天气屏幕的有效载荷。
+寻找一个含有 `/v3/wx/observations/current` 的 URL 的请求。这包含用于填充天气屏幕的有效载荷。
 
 
 
@@ -344,7 +344,7 @@ Charles 很强大！
 
 ## 排除你自己的应用程序的故障
 
-Charles Proxy 对于调试和测试你自己的应用程序特别好。例如，你可以检查服务器的响应，以确保你正确定义了 JSON 数据，并为所有字段返回预期的数据类型。你甚至可以使用节流来模拟糟糕的网络，验证你的应用程序的超时和错误处理逻辑。
+Charles Proxy 对于调试和测试你自己的应用程序特别好用。例如，你可以检查服务器的响应，以确保你正确定义了 JSON 数据，并为所有字段返回预期的数据类型。你甚至可以使用节流来模拟糟糕的网络环境，验证你的应用程序的超时和错误处理逻辑。
 
 在你编译和运行之前，按照你上面学到的方法，在 Charles 的 SSL 代理设置中添加以下两个主机地址：
 

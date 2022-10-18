@@ -51,9 +51,10 @@
 
 ### Socket
 
-* [socket.io-client-swift](https://github.com/socketio/socket.io-client-swift) ⭐️4.6k
+* [socket.io-client-swift](https://github.com/socketio/socket.io-client-swift) ⭐️4.9k
 * :warning: [SocketIO-Kit](https://github.com/ricardopereira/SocketIO-Kit) - Socket.io iOS/OSX Client compatible with v1.0 and later
-* [CocoaAsyncSocket](https://github.com/robbiehanson/CocoaAsyncSocket) ⭐️11.8k
+* [CocoaAsyncSocket](https://github.com/robbiehanson/CocoaAsyncSocket) ⭐️12.3k
+* [apple/swift-nio](https://github.com/apple/swift-nio) ⭐️7.1k
 
 
 ### WebSocket
@@ -82,10 +83,10 @@
 
 [回到顶部](#Awesome Swift)
 
-* :heart: [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) ⭐️21.2k - GitHub 上最为开发者认可的 JSON 解析类。
+* :heart: [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) ⭐️21.5k - GitHub 上最为开发者认可的 JSON 解析类。
 * [Alamofire-SwiftyJSON](https://github.com/SwiftyJSON/Alamofire-SwiftyJSON) ⭐️1.4k - Alamofire extension for serialize NSData to SwiftyJSON.
-* [ObjectMapper](https://github.com/Hearst-DD/ObjectMapper) ⭐️8.9k - JSON Object mapping written in Swift.
-* [HandyJSON](https://github.com/alibaba/HandyJSON) ⭐️3.9k - 阿里开源的 JSON 解析框架。
+* [ObjectMapper](https://github.com/Hearst-DD/ObjectMapper) ⭐️9k - JSON Object mapping written in Swift.
+* [HandyJSON](https://github.com/alibaba/HandyJSON) ⭐️4k - 阿里开源的 JSON 解析框架。
 * [Argo](https://github.com/thoughtbot/Argo) ⭐️3.5k - Swift 下的 JSON 解析框架。
 * [json-Swift](https://github.com/owensd/json-swift) ⭐️731 - A basic library for working with JSON in Swift.
 * [DynamicJSON](https://github.com/saoudrizwan/DynamicJSON) ⭐️696 - 采用 Swift 4.2 新特性 （@dynamicMemberLookup） 实现轻便访问 JSON 数据。
@@ -100,13 +101,13 @@
 
 ### Codable
 
-* [Codextended](https://github.com/JohnSundell/Codextended) ⭐️1.4k - 赋予 Swift 的 Codable API 类型推断能力的扩展
-* [BetterCodable](https://github.com/marksands/BetterCodable) ⭐️1.3k - 通过属性包装器更好地 Codable
+* [Codextended](https://github.com/JohnSundell/Codextended) ⭐️1.4k -赋予 Swift 的 Codable API 类型推断能力的扩展，最后更新：20190514！
+* [BetterCodable](https://github.com/marksands/BetterCodable) ⭐️1.4k - 通过属性包装器更好地 Codable
 * [AnyCodable](https://github.com/Flight-School/AnyCodable) ⭐️1k - Encodable、Decodable 和 Codable 值的类型擦除包装器。
 * [SafeDecoder](https://github.com/GodL/SafeDecoder) ⭐️4 - SafeDecoder 支持在 Codable 解码某个字段失败时设置默认值，并且默认值可配置。
-* [ExCodable](https://github.com/iwill/ExCodable) ⭐️53
+* [ExCodable](https://github.com/iwill/ExCodable) ⭐️55，Key-Mapping Extensions for Swift Codable
 * [HappyCodable](https://github.com/miku1958/HappyCodable) ⭐️39
-* [CodableWrapper](https://github.com/winddpan/CodableWrapper) ⭐️133
+* [CodableWrapper](https://github.com/winddpan/CodableWrapper) ⭐️141
 * [CodableWrappers](https://github.com/GottaGetSwifty/CodableWrappers) ⭐️343
 * [DeepCodable](https://github.com/MPLew-is/deep-codable) ⭐️14 - 将深层嵌套的数据编码和解码成扁平的 Swift 对象。
 
@@ -123,6 +124,7 @@
 * [PinLayout](https://github.com/mirego/PinLayout) ⭐️1.8k - Extremely Fast views layouting without auto layout. No magic, pure code, full control and blazing fast. Concise syntax, intuitive, readable & chainable.
 * [Swiftstraints](https://github.com/Skyvive/Swiftstraints) - 强大的自动布局框架，让你在一行代码中编写约束。
 * [Neon](https://github.com/mamaral/Neon) ⭐️4.6k - Neon 是一套强大的 UI 布局框架，围绕用户界面的自然和直观设计而构建的。没有更多的弹簧和支撑杆，没有古怪的视觉格式化语言，没有自动布局约束。*我们不是机器人，为什么要像我们一样构建我们的 UI？*
+* [GRMustache.Swift](https://github.com/groue/GRMustache.swift) ⭐️562 - 基于 Swift 构建的 HTML 模版引擎
 
 
 
@@ -259,11 +261,12 @@
 ### 日历/图表
 
 * [Charts](https://github.com/danielgindi/Charts) ⭐️24.8k - iOS 应用的漂亮图表
-* [FSCalendar](https://github.com/WenchaoD/FSCalendar) ⭐️10k - 一个完全可定制的 iOS 日历库，与 Objective-C 和 Swift 兼容。
-* [JTAppleCalendar](https://github.com/patchthecode/JTAppleCalendar) ⭐️7.2k - 非官方 Apple iOS Swift 日历视图。 Swift 日历库。 iOS 日历控件。
+* [FSCalendar](https://github.com/WenchaoD/FSCalendar) ⭐️10.2k - 一个完全可定制的 iOS 日历库，与 Objective-C 和 Swift 兼容。
+* [ElegantCalendar ](https://github.com/ThasianX/ElegantCalendar) ⭐️519
+* [JTAppleCalendar](https://github.com/patchthecode/JTAppleCalendar) ⭐️7.3k - 非官方 Apple iOS Swift 日历视图。 Swift 日历库。 iOS 日历控件。
 * [CalendarKit](https://github.com/richardtop/CalendarKit) ⭐️2k - Calendar for Apple platforms in Swift.
 * [PNChart-Swift](https://github.com/kevinzhow/PNChart-Swift) ⭐️1.4k - 带动画效果的图表控件库。
-* [CrispyCalendar](https://github.com/CleverPumpkin/CrispyCalendar) ⭐️312 - 日历 UI 框架。
+* [CrispyCalendar](https://github.com/CleverPumpkin/CrispyCalendar) ⭐️315 - 日历 UI 框架。
 * [ScrollableGraphView](https://github.com/philackm/ScrollableGraphView) ⭐️5.2k - 针对于 iOS 应用的自适应滚动图形，用于将离散的数据集进行可视化
 * [SwiftUIChart](https://github.com/willdale/SwiftUIChart) ⭐️384 - 一个用于 SwiftUI 的图表/绘图库。支持在 macOS、iOS、watchOS 和 tableViewOS 上运行，并内置了无障碍功能。
 * [BSChart](https://github.com/iBlacksus/BSChart) ⭐️189 - BSChart is a simple and useful chart library written on Swift。
@@ -275,7 +278,7 @@
 
 * [TagListView](https://github.com/xhacker/TagListView) ⭐️2.3k - Simple but highly customizable iOS tag list view.
 * [TagCellLayout](https://github.com/riteshhgupta/TagCellLayout) ⭐️297 - UICollectionView layout for Tags with Left, Center & Right alignments.
-* :orange: [TTGTagCollectionView](https://github.com/zekunyan/TTGTagCollectionView) ⭐️1.6k
+* :orange: [TTGTagCollectionView](https://github.com/zekunyan/TTGTagCollectionView) ⭐️1.7k - 标签流显示控件，同时支持文字或自定义 View。
 
 
 
@@ -285,11 +288,10 @@
 * [SAHistoryNavigationViewController](https://github.com/szk-atmosphere/SAHistoryNavigationViewController) ⭐️1.6k - 在 UINavigationContoller 中实现了类似iOS任务管理器的用户界面，支持3DTouch。
 * [Interactive Side Menu](https://github.com/handsomecode/InteractiveSideMenu) - Customizable iOS Interactive Side Menu written in Swift 3.0.
 * [SideMenu](https://github.com/jonkykong/SideMenu) ⭐️5.4k - 适用于iOS的简单的侧边/滑动菜单控件，不需要代码! 大量的自定义功能。在5分钟或更短时间内将其添加到你的项目中。
-* [Presentr](https://github.com/IcaliaLabs/Presentr) ⭐️2.8k - 对传统 ViewController present 的封装
 
 
 
-### UINavigationBar 
+### UINavigationBar
 
 * [AMScrollingNavbar](https://github.com/andreamazz/AMScrollingNavbar) ⭐️6k - 可滚动的 UINavigationBar，跟随 UIScrollView 的滚动。
 
@@ -378,9 +380,9 @@
 * [Owl](https://github.com/malcommac/Owl) ⭐️437 - 一个声明式、类型安全的框架，用于搭建快速而灵活的 `UITableView` 和 `UICollectionView`。
 * [CollectionKit](https://github.com/SoySauceLab/CollectionKit) ⭐️4.2k - 重构 `UICollectionView`
 * [SwiftDataTables](https://github.com/pavankataria/SwiftDataTables) ⭐️402 - 一个 Swift Data Table 包，在 iOS 的格式良好的表格中显示类似网格的数据集。子类化 UICollectionView，允许排序和使用可扩展选项进行搜索。
-* :heart: [CHTCollectionViewWaterfallLayout](https://github.com/chiahsien/CHTCollectionViewWaterfallLayout) ⭐️4.3k - 瀑布流布局
+* :heart: [CHTCollectionViewWaterfallLayout](https://github.com/chiahsien/CHTCollectionViewWaterfallLayout) ⭐️4.4k - 瀑布流布局
 * :heart: [airbnb/MagazineLayout](https://github.com/airbnb/MagazineLayout) ⭐️3.1k - Airbnb 开源的集合视图布局框架，能够以垂直滚动的网格和列表的方式布置视图。
-* [AnimatedCollectionViewLayout](https://github.com/KelvinJin/AnimatedCollectionViewLayout) ⭐️4.3k - 一个 UICollectionViewLayout 子类，在不影响你现有代码的前提下，为UICollectionView 添加自定义过渡动画。
+* [AnimatedCollectionViewLayout](https://github.com/KelvinJin/AnimatedCollectionViewLayout) ⭐️4.4k - 一个 UICollectionViewLayout 子类，在不影响你现有代码的前提下，为UICollectionView 添加自定义过渡动画。
 * [BouncyLayout](https://github.com/roberthein/BouncyLayout) ⭐️4k - 为集合视图 cell 添加 bounce 效果。
 * [VegaScroll](https://github.com/ApplikeySolutions/VegaScroll) ⭐️2.7k - 轻量级的 UICollectionView 动画流布局，完全用 Swift 4 编写，兼容 iOS 11 和 Xcode 9。
 * [Ramotion/folding-cell](https://github.com/Ramotion/folding-cell) ⭐️10.1k - 卡片折叠动画

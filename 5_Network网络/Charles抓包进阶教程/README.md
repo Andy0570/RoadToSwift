@@ -1,6 +1,6 @@
 > [Advanced Charles Proxy Tutorial for iOS](https://www.raywenderlich.com/22070831-advanced-charles-proxy-tutorial-for-ios)
 >
-> 通过学习高级功能，如将响应映射到本地文件、自动请求和编写日志，从 Charles Proxy 中获得更多技能。
+> 通过学习高级功能，如将响应映射到本地文件、自动请求和记录日志，从 Charles Proxy 中获得更多技能。
 
 
 
@@ -8,7 +8,7 @@ Charles Proxy 为开发人员和测试人员提供了一个即时查看网络流
 
 如果你曾经想在不要求后端服务器测试客户端的情况下改变响应数据，报告一个服务器端的错误，或者在客户端重现一个需要特定后端响应的状态，Charles Proxy 的高级功能提供了解决方案。
 
-在本教程中，你将在 StarCharles 应用程序中操纵来自星球大战API（SWAPI）到你自己的自定义 API 的响应。在这一过程中，你将：
+在本教程中，你将在 StarCharles 应用程序中操纵来自星球大战 API（SWAPI）到你自己的自定义 API 的响应。在这一过程中，你将：
 
 * 设置 Charles。
 * 使用映射工具（mapping tool）和断点（breakpoints）。
@@ -164,8 +164,8 @@ Charles 工作于网络浏览器和 API 之间。它使用自己的根证书，�
 
 Charles提供了各种处理请求和响应数据的工具，包括：
 
-* 本地映射
-* 远程映射
+* 本地映射（使用本地 JSON 文件替换远程服务器的返回数据）
+* 远程映射（重定向远程服务器的端口路径地址）
 * 重写
 * 镜像
 * 自动保存
@@ -213,7 +213,7 @@ Map Local 工具映射了一个请求，从你的本地而不是通常的端点�
   * 选择 https 作为协议。
   * 填入 <www.swapi.tech>，作为 Host。
   * 在端口中输入443。
-  * 输入 </api/people/> 作为路径。
+  * 输入 `/api/people/` 作为路径。
   * 单击 "确定" 以保存映射。
      ![](https://koenig-media.raywenderlich.com/uploads/2021/05/editMappingAfterClickOK.png)
   * 回到模拟器，点击StarCharles，回到应用程序的顶层，然后点击 Characters。哦，不！我们怎么会知道卢克长什么样呢？
@@ -237,11 +237,11 @@ Map Local 工具映射了一个请求，从你的本地而不是通常的端点�
 
 你可以双击任何映射来编辑它，或使用显示的按钮来添加新的映射，重新排列映射列表，从其他地方导入映射或导出你当前的映射。
 
-> 注意：映射设置会影响StarCharles显示的数据。如果你在后面的章节中没有看到你期望的结果，请检查你是否需要启用或禁用本地或远程映射。
+> 注意：映射设置会影响 StarCharles 显示的数据。如果你在后面的章节中没有看到你期望的结果，请检查你是否需要启用或禁用本地或远程映射。
 
 ## 使用断点
 
-试图修复一个后端问题？通过使用 **breakpoints** 断点和在空中操作数据，你可以模拟可能来自后端服务器的任何状态。
+试图修复一个后端问题？通过使用 **breakpoints** 断点和在中途操作数据，你可以模拟可能来自后端服务器的任何状态。
 
 在本节中，你将通过在 <https://swapi.dev/api/people/1> 及其相应的响应上添加一个断点来尝试这个方法。在你开始之前，关闭你在上一节中设置的远程映射，方法是进入 Tools ▸ Map Remote，取消勾选 **Enable Map Remote**。保留本地映射；你将在这里使用它。
 
@@ -252,8 +252,8 @@ Map Local 工具映射了一个请求，从你的本地而不是通常的端点�
 3. 右键单击Charles中的请求 <https://swapi.dev/api/people/1>，选择 Breakpoints。
 4. 回到模拟器上，再次打开 "LOCAL A New Hope"。
 5. 现在，你可以在请求到达后端之前用任何输入来改变它的字段。
-6. 单击 "执行"。第一次是为了发送请求。
-7. 单击 "执行"。第二次为请求响应。
+6. 单击 "执行"。第一次是发送请求。
+7. 单击 "执行"。第二次是响应请求。
 
 ![](https://koenig-media.raywenderlich.com/uploads/2021/04/22.gif)
 
@@ -277,8 +277,8 @@ Map Local 工具映射了一个请求，从你的本地而不是通常的端点�
 按照这些步骤，将 <https://swapi.dev/api/people/2> 添加到阻止列表中。
 
 * 在 StarCharles 中打开 Films。
-* 点选LOCAL A New Hope。
-* 在Charles中右键点击 <https://swapi.dev/api/people/2>，并选择 Block List。
+* 点选 LOCAL A New Hope。
+* 在 Charles 中右键点击 <https://swapi.dev/api/people/2>，并选择 Block List。
 * 回到模拟器，再次打开LOCAL A New Hope。
 
 ![](https://koenig-media.raywenderlich.com/uploads/2021/05/LOCALANewHopeBlocklistDropdown.png)
@@ -291,7 +291,7 @@ Fetch character completed: failure(StarCharles.NetworkError.jsonDecodingError(er
 
 你可以在 Charles 中再次右键点击这个请求，然后在下拉菜单中取消勾选 Block List，从而禁用该阻止。
 
-> 注意：将任何请求添加到 allow list 中，你就创建了一个白名单。Charles现在将阻止所有的请求，除了那些在允许列表中的请求。
+> 注意：将任何请求添加到 allow list 中，你就创建了一个白名单。Charles 现在将阻止所有的请求，除了那些在允许列表中的请求。
 
 你可以通过选择 Tools ▸ Allow List 或 Tools ▸ Block List，查看你添加到允许或阻止列表中的所有请求的列表。你也可以在这里修改该列表。
 
@@ -335,7 +335,7 @@ Fetch character completed: failure(StarCharles.NetworkError.jsonDecodingError(er
 * 删除占位符集（如果有的话）。
 * 在Charles，打开 Tools ▸ Rewrite。
 * 勾选启用重写。
-* 点击 "添加"，添加一个新的集合，并将其命名为 "People"。
+* 点击 "Add"，添加一个新的集合，并将其命名为 "People"。
   ![](https://koenig-media.raywenderlich.com/uploads/2021/05/peopleRewriteSettings.png)
 * 在 "Location" 下，点击 "添加 "并在主机文本字段中粘贴 <https://swapi.dev/api/people/>，以便自动填充其他文件。确保包括人们后面的最后一个斜线。点击确定
   ![](https://koenig-media.raywenderlich.com/uploads/2021/06/Screen-Shot-2021-06-13-at-8.21.47-PM-650x401.png)
@@ -353,9 +353,9 @@ Fetch character completed: failure(StarCharles.NetworkError.jsonDecodingError(er
 
 当你测试后端代码时，你可能想在不涉及客户的情况下检查服务器的响应。**Repeat** 工具使之变得简单。在任何请求上点击右键，然后选择 "Repeat" 来启用它。
 
-在这种情况下，Charles重新向服务器发送完全相同的请求，并将响应作为一个新的请求显示给你，而不对你的客户端采取任何行动。这在默认情况下只发生一次。
+在这种情况下，Charles 重新向服务器发送完全相同的请求，并将响应作为一个新的请求显示给你，而不对你的客户端采取任何行动。这在默认情况下只发生一次。
 
-当你很难浏览到客户端界面中发送请求的位置时，请记住 Repeat 工具。一旦你有了一个请求的例子，就用Repeat来再次发送它。
+当你很难浏览到客户端界面中发送请求的位置时，请记住 Repeat 工具。一旦你有了一个请求的例子，就用 Repeat 来再次发送它。
 
 > 注意：你可以使用 **Repeat Advanced** 来解锁更多的选项，如迭代数和并发数，以钩住可能来自你后端的错误。
 
@@ -396,7 +396,7 @@ Charles 把响应放在与 API 本身使用的相同的目录结构中。这意�
 
 现在你将 Charles 设置为将所有的响应从 swapi.dev 镜像到你的磁盘上，在模拟器中返回到 StarCharles，并在周围导航以产生一些流量。
 
-在Finder中，打开保存目的地。
+在 Finder 中，打开保存目的地。
 
 ![](https://koenig-media.raywenderlich.com/uploads/2021/05/mirroredDataInFinder.png)
 

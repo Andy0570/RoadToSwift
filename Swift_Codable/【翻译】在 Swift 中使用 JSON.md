@@ -1,6 +1,8 @@
 > 原文：[Working with JSON in Swift @Apple 20160912](https://developer.apple.com/swift/blog/?id=37)
 >
 > 💡 在 Swift 4 之前，你需要使用 `JSONSerialization` 将 JSON 转换为模型对象，反之亦然。但 Swift 5 之后我们有了更好的方式：[Codable](https://developer.apple.com/documentation/swift/codable)。只要让你的模型对象遵守 Codable 协议，你几乎可以自动将 JSON 转换为模型对象并返回。
+>
+> 💡 这里演示的是通过 `JSONSerialization` 类方法从 JSON 中提取值，然后手动初始化模型！
 
 
 
@@ -17,7 +19,7 @@ let data: Data // received from a network request, for example
 let json = try? JSONSerialization.jsonObject(with: data, options: [])
 ```
 
-尽管有效的 JSON 可能只包含一个值，但来自 Web 应用程序的响应通常会将对象或数组编码为顶级对象。您可以使用可选绑定和 `as?` 在 `if` 或 `guard ` 语句中进行类型转换运算符以提取已知类型的值作为常量。要从 JSON 对象类型获取 `Dictionary` 值，有条件地将其转换为 `[String: Any]`。要从 JSON 数组类型获取 `Array` 值，有条件地将其转换为 `[Any]`（或具有更具体元素类型的数组，如 `[String]`）。您可以使用带有下标访问器的类型转换可选绑定或带有枚举的模式匹配，通过键提取字典值或通过索引提取数组值。
+尽管有效的 JSON 可能只包含一个值，但来自 Web 应用程序的响应通常会将对象或数组编码为顶级对象。您可以使用可选绑定和 `as?` 在 `if` 或 `guard ` 语句中进行类型转换运算符以提取已知类型的值作为常量。要从 JSON 对象类型获取 `Dictionary` 值，有条件地将其转换为 `[String: Any]`。要从 JSON 数组类型获取 `Array` 值，有条件地将其转换为 `[Any]`（或具有更具体元素类型的数组，如 `[String]`）。您可以使用带有下标访问器的类型转换可选绑定或带有枚举的模式匹配，通过 key 提取字典值或通过 index 索引提取数组值。
 
 ```swift
 // Example JSON with object root:
@@ -70,7 +72,7 @@ Swift 的内置语言功能可以轻松安全地提取和处理使用 Foundation
 
 ## 从 JSON 中提取的值创建模型对象
 
-由于大多数 Swift 应用程序都遵循模型-视图-控制器设计模式，因此在模型定义中将 JSON 数据转换为特定于应用程序域的对象通常很有用。
+由于大多数 Swift 应用程序都遵循模型-视图-控制器设计模式，因此在模型定义中将 JSON 数据转换为特定于应用程序的对象通常很有用。
 
 例如，在编写一个为本地餐馆提供搜索结果的应用程序时，您可能会使用一个接受 JSON 对象的初始化程序和一个向服务器的 `/search` 端点发出 HTTP 请求然后异步返回一个数组的类型方法来实现一个餐厅模型餐厅对象。
 考虑以下餐厅模型：

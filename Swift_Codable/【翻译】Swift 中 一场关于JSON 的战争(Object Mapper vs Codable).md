@@ -11,9 +11,9 @@
 通常，当 App 与外部 API 甚至有时是本地静态数据交互时，我们实际上会操作不同的数据类型，例如 JSON 或 plist，有时甚至是其他一些格式。我们需要用 JSON 数据映射我们的模型类对象，以便可以对我们的业务流程进行建模。在 Swift 中，我们有以下通用库用于解析和映射 JSON 与我们的模型对象：
 
 * JSON Serialisation
-* [SwiftJSON](https://github.com/SwiftyJSON/SwiftyJSON) ⭐️21.2k
+* [SwiftJSON](https://github.com/SwiftyJSON/SwiftyJSON) ⭐️21.5k
 * Codable
-* [ObjectMapper](https://github.com/tristanhimmelman/ObjectMapper) ⭐️8.9k
+* [ObjectMapper](https://github.com/tristanhimmelman/ObjectMapper) ⭐️9k
 
 在这篇文章中，我们将了解 Swift 中最常见的两个解析和映射库，并将分析两者之间的区别。
 

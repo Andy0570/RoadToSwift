@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		229E33ED28FE92580076B221 /* AuthPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229E33EC28FE92580076B221 /* AuthPlugin.swift */; };
 		22F16C1428A3B7E000C17A84 /* Marvel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F16C1328A3B7E000C17A84 /* Marvel.swift */; };
 		22F16C1628A4A1F600C17A84 /* Imgur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F16C1528A4A1F600C17A84 /* Imgur.swift */; };
 		3A1073D67C6B19EFFAACF9C2 /* Pods_ComicCards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DFA27A0B388961C8792A77 /* Pods_ComicCards.framework */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		18DFA27A0B388961C8792A77 /* Pods_ComicCards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ComicCards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		193BF8E93A4464BB845F6D29 /* Pods-ComicCards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ComicCards.release.xcconfig"; path = "Pods/Target Support Files/Pods-ComicCards/Pods-ComicCards.release.xcconfig"; sourceTree = "<group>"; };
+		229E33EC28FE92580076B221 /* AuthPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthPlugin.swift; sourceTree = "<group>"; };
 		22F16C1328A3B7E000C17A84 /* Marvel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marvel.swift; sourceTree = "<group>"; };
 		22F16C1528A4A1F600C17A84 /* Imgur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Imgur.swift; sourceTree = "<group>"; };
 		5C2901821F8F6DE700803663 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				78CBCC082082654600FBF930 /* CodableResponses.swift */,
 				22F16C1328A3B7E000C17A84 /* Marvel.swift */,
 				22F16C1528A4A1F600C17A84 /* Imgur.swift */,
+				229E33EC28FE92580076B221 /* AuthPlugin.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				78CBCC0420825A8C00FBF930 /* Comic.swift in Sources */,
 				78597F4C20829A8500F7C6D8 /* Dictionary+Ext.swift in Sources */,
 				D2A5F2211F4A96D0005CD714 /* AppDelegate.swift in Sources */,
+				229E33ED28FE92580076B221 /* AuthPlugin.swift in Sources */,
 				78CBCC112082937800FBF930 /* ComicCell.swift in Sources */,
 				22F16C1628A4A1F600C17A84 /* Imgur.swift in Sources */,
 				78CBCC0220824E3200FBF930 /* String+MD5.swift in Sources */,

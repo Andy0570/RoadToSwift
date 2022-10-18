@@ -1,0 +1,14 @@
+{
+  "starterDrinks": [
+    {
+      "name": "Tsunami Punch",
+      "rating": 5,
+      "description": "A wave of flavor in every sip. Fun for the whole family!"
+    },
+    {
+      "name": "Apple Smack",
+      "rating": 3,
+      "description": "Learn to love Apples in a whole new way."
+    }
+  ]
+}

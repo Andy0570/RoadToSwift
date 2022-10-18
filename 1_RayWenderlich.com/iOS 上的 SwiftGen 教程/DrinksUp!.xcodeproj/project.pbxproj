@@ -1,0 +1,583 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1839F4B025190F2A00BB00F1 /* AppMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1839F4AF25190F2A00BB00F1 /* AppMain.swift */; };
+		18D775C722AD944400AE281E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D775C622AD944400AE281E /* Assets.xcassets */; };
+		18D775CA22AD944400AE281E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D775C922AD944400AE281E /* Preview Assets.xcassets */; };
+		18D775D822AD963800AE281E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D775DA22AD963800AE281E /* LaunchScreen.storyboard */; };
+		223CBB9128C5C16F0087CDB8 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 223CBB9028C5C16F0087CDB8 /* swiftgen.yml */; };
+		223CBB9428C5C4C60087CDB8 /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223CBB9328C5C4C60087CDB8 /* XCAssets+Generated.swift */; };
+		223CBB9628C5C6E10087CDB8 /* IB-Scenes+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223CBB9528C5C6E10087CDB8 /* IB-Scenes+Generated.swift */; };
+		223CBB9828C5C6E70087CDB8 /* IB-Segues+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223CBB9728C5C6E70087CDB8 /* IB-Segues+Generated.swift */; };
+		223CBB9A28C5C8F40087CDB8 /* JSON+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223CBB9928C5C8F40087CDB8 /* JSON+Generated.swift */; };
+		223CBB9C28C5CBAF0087CDB8 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223CBB9B28C5CBAF0087CDB8 /* Strings+Generated.swift */; };
+		3CD42FD58774A60F8D3135B5 /* Pods_DrinksUp_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2275FCA9E5B3EA2D451BFB72 /* Pods_DrinksUp_.framework */; };
+		A147EF2C263F337100C1CFBC /* NotoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A147EF27263F337100C1CFBC /* NotoSans-Regular.ttf */; };
+		A147EF2D263F337100C1CFBC /* NotoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A147EF28263F337100C1CFBC /* NotoSans-Bold.ttf */; };
+		A147EF2E263F337100C1CFBC /* NotoSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A147EF29263F337100C1CFBC /* NotoSans-BoldItalic.ttf */; };
+		A147EF2F263F337100C1CFBC /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = A147EF2A263F337100C1CFBC /* LICENSE.txt */; };
+		A147EF30263F337100C1CFBC /* NotoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A147EF2B263F337100C1CFBC /* NotoSans-Italic.ttf */; };
+		A147EF35263F350300C1CFBC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A147EF37263F350300C1CFBC /* Localizable.strings */; };
+		A147EF3C263F35C800C1CFBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A147EF3B263F35C800C1CFBC /* Main.storyboard */; };
+		A147EF3E263F35E500C1CFBC /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A147EF3D263F35E500C1CFBC /* Colors.xcassets */; };
+		A147EF4B263F37B800C1CFBC /* MockData.json in Resources */ = {isa = PBXBuildFile; fileRef = A147EF4A263F37B800C1CFBC /* MockData.json */; };
+		A147EF50263F38E300C1CFBC /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = A147EF4F263F38E300C1CFBC /* Drink.swift */; };
+		A147EF53263F395500C1CFBC /* DrinkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A147EF52263F395500C1CFBC /* DrinkDetailView.swift */; };
+		A147EF55263F3B9600C1CFBC /* DrinksListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A147EF54263F3B9600C1CFBC /* DrinksListView.swift */; };
+		A147EF78263F401F00C1CFBC /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = A147EF7A263F401F00C1CFBC /* Localizable.stringsdict */; };
+		A1A14BFC26456B1000127312 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A14BFB26456B1000127312 /* AboutViewController.swift */; };
+		A1A14BFE26456C6200127312 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A14BFD26456C6200127312 /* InformationViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1839F4AF25190F2A00BB00F1 /* AppMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMain.swift; sourceTree = "<group>"; };
+		18D775BD22AD944300AE281E /* DrinksUp!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DrinksUp!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		18D775C622AD944400AE281E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		18D775C922AD944400AE281E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		18D775CE22AD944400AE281E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18D775DE22AD96B400AE281E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		223CBB9028C5C16F0087CDB8 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
+		223CBB9328C5C4C60087CDB8 /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
+		223CBB9528C5C6E10087CDB8 /* IB-Scenes+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IB-Scenes+Generated.swift"; sourceTree = "<group>"; };
+		223CBB9728C5C6E70087CDB8 /* IB-Segues+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IB-Segues+Generated.swift"; sourceTree = "<group>"; };
+		223CBB9928C5C8F40087CDB8 /* JSON+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSON+Generated.swift"; sourceTree = "<group>"; };
+		223CBB9B28C5CBAF0087CDB8 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
+		2275FCA9E5B3EA2D451BFB72 /* Pods_DrinksUp_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DrinksUp_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34F0E049C895B47AAE90760C /* Pods-DrinksUp!.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrinksUp!.release.xcconfig"; path = "Target Support Files/Pods-DrinksUp!/Pods-DrinksUp!.release.xcconfig"; sourceTree = "<group>"; };
+		A147EF27263F337100C1CFBC /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Regular.ttf"; sourceTree = "<group>"; };
+		A147EF28263F337100C1CFBC /* NotoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Bold.ttf"; sourceTree = "<group>"; };
+		A147EF29263F337100C1CFBC /* NotoSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		A147EF2A263F337100C1CFBC /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		A147EF2B263F337100C1CFBC /* NotoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Italic.ttf"; sourceTree = "<group>"; };
+		A147EF36263F350300C1CFBC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A147EF3B263F35C800C1CFBC /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A147EF3D263F35E500C1CFBC /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		A147EF4A263F37B800C1CFBC /* MockData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockData.json; sourceTree = "<group>"; };
+		A147EF4F263F38E300C1CFBC /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		A147EF52263F395500C1CFBC /* DrinkDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetailView.swift; sourceTree = "<group>"; };
+		A147EF54263F3B9600C1CFBC /* DrinksListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksListView.swift; sourceTree = "<group>"; };
+		A147EF79263F401F00C1CFBC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		A1A14BF92643661000127312 /* Templates */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Templates; sourceTree = "<group>"; };
+		A1A14BFB26456B1000127312 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		A1A14BFD26456C6200127312 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
+		BCA4232A436E2CFE888AEBBE /* Pods-DrinksUp!.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrinksUp!.debug.xcconfig"; path = "Target Support Files/Pods-DrinksUp!/Pods-DrinksUp!.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18D775BA22AD944300AE281E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CD42FD58774A60F8D3135B5 /* Pods_DrinksUp_.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18D775B422AD944300AE281E = {
+			isa = PBXGroup;
+			children = (
+				223CBB9028C5C16F0087CDB8 /* swiftgen.yml */,
+				A1A14BF92643661000127312 /* Templates */,
+				18D775BF22AD944300AE281E /* DrinksUp! */,
+				18D775BE22AD944300AE281E /* Products */,
+				DB8C2405E621BE4962232ED1 /* Pods */,
+				3A881B94331B849E0068F031 /* Frameworks */,
+			);
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+		};
+		18D775BE22AD944300AE281E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18D775BD22AD944300AE281E /* DrinksUp!.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18D775BF22AD944300AE281E /* DrinksUp! */ = {
+			isa = PBXGroup;
+			children = (
+				1839F4AF25190F2A00BB00F1 /* AppMain.swift */,
+				A147EF51263F394000C1CFBC /* Views */,
+				A147EF4E263F38D700C1CFBC /* Model */,
+				A1A14BFA26456AFD00127312 /* View Controllers */,
+				18D775C622AD944400AE281E /* Assets.xcassets */,
+				A147EF3D263F35E500C1CFBC /* Colors.xcassets */,
+				A147EF37263F350300C1CFBC /* Localizable.strings */,
+				A147EF7A263F401F00C1CFBC /* Localizable.stringsdict */,
+				A147EF3B263F35C800C1CFBC /* Main.storyboard */,
+				18D775CE22AD944400AE281E /* Info.plist */,
+				A147EF25263F333700C1CFBC /* Resources */,
+				18D775C822AD944400AE281E /* Preview Content */,
+				A159C5F82651987F00F2DFEB /* Generated */,
+			);
+			path = "DrinksUp!";
+			sourceTree = "<group>";
+		};
+		18D775C822AD944400AE281E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				18D775C922AD944400AE281E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3A881B94331B849E0068F031 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2275FCA9E5B3EA2D451BFB72 /* Pods_DrinksUp_.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A147EF25263F333700C1CFBC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A147EF26263F337100C1CFBC /* Noto_Sans */,
+				18D775DA22AD963800AE281E /* LaunchScreen.storyboard */,
+				A147EF4A263F37B800C1CFBC /* MockData.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A147EF26263F337100C1CFBC /* Noto_Sans */ = {
+			isa = PBXGroup;
+			children = (
+				A147EF27263F337100C1CFBC /* NotoSans-Regular.ttf */,
+				A147EF28263F337100C1CFBC /* NotoSans-Bold.ttf */,
+				A147EF29263F337100C1CFBC /* NotoSans-BoldItalic.ttf */,
+				A147EF2A263F337100C1CFBC /* LICENSE.txt */,
+				A147EF2B263F337100C1CFBC /* NotoSans-Italic.ttf */,
+			);
+			path = Noto_Sans;
+			sourceTree = "<group>";
+		};
+		A147EF4E263F38D700C1CFBC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A147EF4F263F38E300C1CFBC /* Drink.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A147EF51263F394000C1CFBC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A147EF54263F3B9600C1CFBC /* DrinksListView.swift */,
+				A147EF52263F395500C1CFBC /* DrinkDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A159C5F82651987F00F2DFEB /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				223CBB9B28C5CBAF0087CDB8 /* Strings+Generated.swift */,
+				223CBB9928C5C8F40087CDB8 /* JSON+Generated.swift */,
+				223CBB9728C5C6E70087CDB8 /* IB-Segues+Generated.swift */,
+				223CBB9528C5C6E10087CDB8 /* IB-Scenes+Generated.swift */,
+				223CBB9328C5C4C60087CDB8 /* XCAssets+Generated.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		A1A14BFA26456AFD00127312 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A1A14BFD26456C6200127312 /* InformationViewController.swift */,
+				A1A14BFB26456B1000127312 /* AboutViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		DB8C2405E621BE4962232ED1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BCA4232A436E2CFE888AEBBE /* Pods-DrinksUp!.debug.xcconfig */,
+				34F0E049C895B47AAE90760C /* Pods-DrinksUp!.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18D775BC22AD944300AE281E /* DrinksUp! */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18D775D122AD944400AE281E /* Build configuration list for PBXNativeTarget "DrinksUp!" */;
+			buildPhases = (
+				58BB012CA199BF44D723C1AE /* [CP] Check Pods Manifest.lock */,
+				223CBB9228C5C2660087CDB8 /* SwiftGen */,
+				181FE31D248EA6C900A180EA /* SwiftLint */,
+				18D775B922AD944300AE281E /* Sources */,
+				18D775BA22AD944300AE281E /* Frameworks */,
+				18D775BB22AD944300AE281E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DrinksUp!";
+			productName = MyRWTutorial;
+			productReference = 18D775BD22AD944300AE281E /* DrinksUp!.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18D775B522AD944300AE281E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1200;
+				ORGANIZATIONNAME = "Ray Wenderlich";
+				TargetAttributes = {
+					18D775BC22AD944300AE281E = {
+						CreatedOnToolsVersion = 11.0;
+					};
+				};
+			};
+			buildConfigurationList = 18D775B822AD944300AE281E /* Build configuration list for PBXProject "DrinksUp!" */;
+			compatibilityVersion = "Xcode 11.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 18D775B422AD944300AE281E;
+			productRefGroup = 18D775BE22AD944300AE281E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18D775BC22AD944300AE281E /* DrinksUp! */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18D775BB22AD944300AE281E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A147EF2E263F337100C1CFBC /* NotoSans-BoldItalic.ttf in Resources */,
+				223CBB9128C5C16F0087CDB8 /* swiftgen.yml in Resources */,
+				A147EF3C263F35C800C1CFBC /* Main.storyboard in Resources */,
+				A147EF3E263F35E500C1CFBC /* Colors.xcassets in Resources */,
+				A147EF2C263F337100C1CFBC /* NotoSans-Regular.ttf in Resources */,
+				18D775D822AD963800AE281E /* LaunchScreen.storyboard in Resources */,
+				A147EF4B263F37B800C1CFBC /* MockData.json in Resources */,
+				18D775CA22AD944400AE281E /* Preview Assets.xcassets in Resources */,
+				A147EF35263F350300C1CFBC /* Localizable.strings in Resources */,
+				A147EF78263F401F00C1CFBC /* Localizable.stringsdict in Resources */,
+				A147EF2D263F337100C1CFBC /* NotoSans-Bold.ttf in Resources */,
+				18D775C722AD944400AE281E /* Assets.xcassets in Resources */,
+				A147EF2F263F337100C1CFBC /* LICENSE.txt in Resources */,
+				A147EF30263F337100C1CFBC /* NotoSans-Italic.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		181FE31D248EA6C900A180EA /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "PATH=/opt/homebrew/bin:$PATH\nif [ -f ~/com.raywenderlich.swiftlint.yml ]; then\n  if which swiftlint >/dev/null; then\n    swiftlint --no-cache --config ~/com.raywenderlich.swiftlint.yml\n  fi\nfi\n";
+		};
+		223CBB9228C5C2660087CDB8 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ -f \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" ]]; then\n  \"${PODS_ROOT}/SwiftGen/bin/swiftgen\"\nelse\n  echo \"warning: SwiftGen is not installed. Run 'pod install --repo-update' to install it.\"\nfi \n";
+		};
+		58BB012CA199BF44D723C1AE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DrinksUp!-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18D775B922AD944300AE281E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A147EF55263F3B9600C1CFBC /* DrinksListView.swift in Sources */,
+				223CBB9828C5C6E70087CDB8 /* IB-Segues+Generated.swift in Sources */,
+				A147EF53263F395500C1CFBC /* DrinkDetailView.swift in Sources */,
+				A1A14BFC26456B1000127312 /* AboutViewController.swift in Sources */,
+				A147EF50263F38E300C1CFBC /* Drink.swift in Sources */,
+				1839F4B025190F2A00BB00F1 /* AppMain.swift in Sources */,
+				223CBB9428C5C4C60087CDB8 /* XCAssets+Generated.swift in Sources */,
+				223CBB9A28C5C8F40087CDB8 /* JSON+Generated.swift in Sources */,
+				A1A14BFE26456C6200127312 /* InformationViewController.swift in Sources */,
+				223CBB9628C5C6E10087CDB8 /* IB-Scenes+Generated.swift in Sources */,
+				223CBB9C28C5CBAF0087CDB8 /* Strings+Generated.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		18D775DA22AD963800AE281E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18D775DE22AD96B400AE281E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A147EF37263F350300C1CFBC /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A147EF36263F350300C1CFBC /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		A147EF7A263F401F00C1CFBC /* Localizable.stringsdict */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A147EF79263F401F00C1CFBC /* en */,
+			);
+			name = Localizable.stringsdict;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		18D775CF22AD944400AE281E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		18D775D022AD944400AE281E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18D775D222AD944400AE281E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCA4232A436E2CFE888AEBBE /* Pods-DrinksUp!.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "DrinksUp!/Preview\\ Content";
+				DEVELOPMENT_TEAM = A8F7U6DN75;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "DrinksUp!/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.raywenderlich.DrinksUp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		18D775D322AD944400AE281E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34F0E049C895B47AAE90760C /* Pods-DrinksUp!.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "DrinksUp!/Preview\\ Content";
+				DEVELOPMENT_TEAM = A8F7U6DN75;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "DrinksUp!/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.raywenderlich.DrinksUp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18D775B822AD944300AE281E /* Build configuration list for PBXProject "DrinksUp!" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18D775CF22AD944400AE281E /* Debug */,
+				18D775D022AD944400AE281E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18D775D122AD944400AE281E /* Build configuration list for PBXNativeTarget "DrinksUp!" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18D775D222AD944400AE281E /* Debug */,
+				18D775D322AD944400AE281E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 18D775B522AD944300AE281E /* Project object */;
+}

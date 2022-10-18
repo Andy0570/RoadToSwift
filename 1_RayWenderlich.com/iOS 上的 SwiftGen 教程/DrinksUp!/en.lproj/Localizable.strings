@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  DrinksUp!
+
+  Created by Andy on 5/2/21.
+  Copyright © 2021 Ray Wenderlich. All rights reserved.
+*/
+
+// Drink List
+"DrinkList.Navigation.Title" = "Drinks";
+"DrinkList.Navigation.Button.LearnMore" = "Learn More";
+
+// Drink Details
+"DrinkDetail.Navigation.Title" = "Your Drink";
+"DrinkDetail.List.Name" = "Name";
+"DrinkDetail.List.Rating" = "Rating: %u";

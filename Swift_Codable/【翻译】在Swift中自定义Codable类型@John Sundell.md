@@ -1,4 +1,4 @@
-> 原文：[Customizing Codable types in Swift @John Sundell](https://www.swiftbysundell.com/articles/customizing-codable-types-in-swift/)
+> 原文：[Customizing Codable types in Swift @John Sundell 20190707](https://www.swiftbysundell.com/articles/customizing-codable-types-in-swift/)
 
 
 
@@ -36,11 +36,12 @@ extension Article {
 }
 ```
 
-上述做法让我们在实际的编码工作中继续利用编译器生成的默认实现，同时仍然使我们能够改变将被用于序列化的 key 的名称。
+上述做法让我们在实际编程中继续利用编译器生成的默认实现，同时仍然使我们能够改变将被用于序列化的 key 的名称。
 
 虽然上述技术对于我们想使用完全自定义的 key 名称是很好的，但如果我们只想让 `Codable` 使用我们属性名的 `snake_case` 版本（例如将 `backgroundColor` 变成 `background_color`）——那么我们可以简单地改变我们的 JSON 解码器的 `keyDecodingStrategy`:
 
 ```swift
+// 自定义解码策略
 var decoder = JSONDecoder()
 decoder.keyDecodingStrategy = .convertFromSnakeCase
 ```
@@ -124,7 +125,7 @@ private extension ExchangeRate {
     struct List: Decodable {
         let values: [ExchangeRate]
         
-        // 覆写 init(from decoder) 方法，将值保存在 values 属性中
+        // 重写 init(from decoder) 方法，将值保存在 values 属性中
         init(from decoder: Decoder) throws {
             let container = try decoder.singleValueContainer()
             let dictionary = try container.decode([String : Double].self)

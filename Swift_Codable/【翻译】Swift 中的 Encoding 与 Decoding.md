@@ -1,3 +1,5 @@
+> ⭐️⭐️⭐️
+>
 > 原文：[Encoding and Decoding in Swift](https://www.raywenderlich.com/3418439-encoding-and-decoding-in-swift)
 >
 > 在本教程中，你将学习所有关于 Swift 中的编码和解码，探索基础知识和高级主题，如自定义日期和自定义编码。
@@ -162,7 +164,7 @@ decoder.keyDecodingStrategy = .convertFromSnakeCase
 
 ```swift
 enum CodingKeys: String, CodingKey {
-case name, id, favoriteToy = "gift"
+    case name, id, favoriteToy = "gift"
 }
 ```
 

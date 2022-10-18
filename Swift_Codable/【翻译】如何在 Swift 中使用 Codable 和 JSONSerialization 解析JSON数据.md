@@ -1,14 +1,13 @@
 > 原文：[How To Parse JSON in Swift Using Codable and JSONSerialization](https://www.advancedswift.com/swift-json-without-swiftyjson/)
 >
-> 在 Swift 中对 JSON、Dictionary 和 Array 进行解析、编码和解码。
+> 在 Swift 中对 JSON、Dictionary 和 Array 进行编码和解码。
 
 
 
 
-这篇文章提供了以下代码示例，用于在没有第三方依赖包或框架的情况下在 Swift 中对 JSON 编码和解码：
+这篇文章提供了以下示例代码，用于在不使用第三方依赖包或框架的情况下在 Swift 中对 JSON 编码和解码：
 
 [TOC]
-
 
 ### 使用 JSONDecoder 将 JSON 解码为 Struct
 
@@ -36,7 +35,7 @@ candidate?.skill // Swift
 
 ### 使用 JSONEncoder 将 Struct 编码为 JSON
 
-要将 Swift 结构体编码为 JSON，请设置将结构体遵守 `Codable` 协议。
+要将 Swift 结构体编码为 JSON，设置结构体遵守 `Codable` 协议。
 
 ```swift
 /// 候选人模型
@@ -65,10 +64,7 @@ let candidateData = try? JSONEncoder().encode(candidate)
 let jsonDict = "{\"key\":\"value\"}"
 let jsonDictData = jsonDict.data(using: .utf8)!
 
-let object = try? JSONSerialization.jsonObject(
-    with: jsonDictData,
-    options: []
-)
+let object = try? JSONSerialization.jsonObject(with: jsonDictData, options: [])
 
 // Cast to a Swift Dictionary
 let dict = object as? [AnyHashable:Any]
@@ -88,10 +84,7 @@ let nsDict = object as? NSDictionary
 let jsonArray = "[1,2,3,4,5]"
 let jsonArrayData = jsonArray.data(using: .utf8)!
 
-let object = try? JSONSerialization.jsonObject(
-    with: jsonArrayData,
-    options: []
-) as? [Any]
+let object = try? JSONSerialization.jsonObject(with: jsonArrayData, options: []) as? [Any]
 
 // Cast to a Swift Array
 let array = object as? [Any]
@@ -112,10 +105,7 @@ let nsDictionary = NSDictionary(dictionary: [
     "key2": "value2"
 ])
 
-let nsDictionaryData = try? JSONSerialization.data(
-    withJSONObject: nsDictionary,
-    options: []
-)
+let nsDictionaryData = try? JSONSerialization.data(withJSONObject: nsDictionary, options: [])
 
 // Expected encoded data:
 // {"key":"value","key2":"value2"}

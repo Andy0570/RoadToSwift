@@ -26,17 +26,19 @@ extension Marvel: TargetType {
     }
 
     // 用于提供 API 的模拟/存根版本进行测试，在创建单元测试时，Moya可以将此“虚假”响应返回给你，而不是连接真实网络。
+    // 由于我们还没有实现单元测试，因此这里仅仅返回一个空的 Data 对象。
     public var sampleData: Data {
         return Data()
     }
 
     public var task: Task {
+        // 创建 MD5 哈希值：时间戳+私钥+公钥
         let ts = "\(Date().timeIntervalSince1970)"
         let hash = (ts + Marvel.privateKey + Marvel.publicKey).md5
         let authParams = ["apikey": Marvel.publicKey, "ts": ts, "hash": hash]
         switch self {
         case .comics:
-            // 处理带有参数的 HTTP 请求
+            // .requestParameters 可以处理带有参数的 HTTP 请求
             return .requestParameters(
                 parameters: [
                     "format": "comic",

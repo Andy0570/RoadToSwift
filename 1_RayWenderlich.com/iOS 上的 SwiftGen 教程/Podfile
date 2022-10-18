@@ -1,0 +1,6 @@
+platform :ios, '14.0'
+
+target 'DrinksUp!' do
+  use_frameworks!
+  pod 'SwiftGen', '~> 6.4.0'
+end
