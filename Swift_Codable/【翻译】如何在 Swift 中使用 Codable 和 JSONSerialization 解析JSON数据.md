@@ -1,4 +1,4 @@
-> 原文：[How To Parse JSON in Swift Using Codable and JSONSerialization](https://www.advancedswift.com/swift-json-without-swiftyjson/)
+> 原文：[How To Parse JSON in Swift Using Codable and JSONSerialization @20201023](https://www.advancedswift.com/swift-json-without-swiftyjson/)
 >
 > 在 Swift 中对 JSON、Dictionary 和 Array 进行编码和解码。
 

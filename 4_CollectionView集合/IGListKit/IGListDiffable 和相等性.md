@@ -4,7 +4,7 @@
 
 ## 背景
 
-[`IGListDiffable` 协议](https://instagram.github.io/IGListKit/Protocols/IGListDiffable.html) 要求客户端实现两个方法，`-diffIdentifier` 和 `-isEqualToDiffableObject:`。方法 `-isEqualToDiffableObject:` 应该执行与 `-isEquity:` 相同类型的检查，但不会影响性能特征，就像在 `NSDictionary` 和 `NSSet` 这样的 Objective-C 容器中一样。
+[`IGListDiffable` ](https://instagram.github.io/IGListKit/Protocols/IGListDiffable.html) Delegate 要求客户端实现两个方法，`-diffIdentifier` 和 `-isEqualToDiffableObject:`。方法 `-isEqualToDiffableObject:` 应该执行与 `-isEquity:` 相同类型的检查，但不会影响性能特征，就像在 `NSDictionary` 和 `NSSet` 这样的 Objective-C 容器中一样。
 
 为什么这两种方法都需要差异？使用这两个方法的意义在于一致性和等价性，其中 diff identifier 唯一标识数据（常见的场景是数据库中的主键）。当比较两个唯一标识符相同的对象的值（驱动重新加载）时，Equality 这会儿就起作用了。
 
@@ -28,7 +28,7 @@ See also: [#509](https://github.com/Instagram/IGListKit/issues/509)
 
 尽管 `IGListKit` 使用了方法 `-isEqualToDiffableObject:`，但编写一个好的相等性检查的概念也适用于一般情况。下面是编写好的 `-isEqual:` 和 `-hash` 函数的基本知识。注意这都是Objective-C，但也适用于Swift。
 
-* 如果你覆写了 `-isEqual:` 方法，那么你必须同时覆写 `-hash` 方法。请看 [Mike Ash 的这篇文章](https://www.mikeash.com/pyblog/friday-qa-2010-06-18-implementing-equality-and-hashing.html)，了解详情。
+* 如果你重写了 `-isEqual:` 方法，那么你必须同时重写 `-hash` 方法。请看 [Mike Ash 的这篇文章](https://www.mikeash.com/pyblog/friday-qa-2010-06-18-implementing-equality-and-hashing.html)，了解详情。
 * 总是先比较指针。如果检查同一个实例，这可以节省很多浪费的 `objc_msgSend(...)` 调用和值比较。
 * 当比较对象的值时，总是在 `-isEqual:` 之前检查 `nil`。例如，`[nil isEqual:nil]` 反其道而行之地返回 `NO`。而不是执行 `left == right || [left isEqual:right]`。
 * 总是先比较最便宜的值。例如，如果 `intVal` 值不同，做 `[self.array isEqual:other.array] && self.intVal == other.intVal` 是非常浪费的。使用懒人评估!

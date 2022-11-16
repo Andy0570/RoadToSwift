@@ -1,4 +1,6 @@
 /**
+ Swift 函数式编程简介
+
  参考：
  * <https://www.raywenderlich.com/9222-an-introduction-to-functional-programming-in-swift>
  * <https://www.jianshu.com/p/eebb15f2c0d5>
@@ -226,7 +228,7 @@ print("total wait time for all rides = \(totalWaitTime) minutes")
 
 
 // MARK: Partial Functions 偏函数
-// 偏函数允许您将一个函数封装在另一个函数中。
+// 偏函数允许你将一个函数封装在另一个函数中。
 
 // filter(for:) 接受 RideCategory 作为其参数并返回 ([Ride]) -> [Ride] 类型的函数
 func filter(for category: RideCategory) -> ([Ride]) -> [Ride] {
@@ -292,7 +294,7 @@ testShorWaitRides { waitTime, rides in
 }
 
 
-// MARK: 递归：每当函数将自身作为其函数体的一部分调用时（在函数体内部调用自身），就会发生递归。
+// MARK: 递归（Recursion）：每当函数将自身作为其函数体的一部分调用时（在函数体内部调用自身），就会发生递归。
 
 extension Ride: Comparable {
     static func < (lhs: Ride, rhs: Ride) -> Bool {

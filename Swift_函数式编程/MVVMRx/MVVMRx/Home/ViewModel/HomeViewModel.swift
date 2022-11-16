@@ -49,7 +49,7 @@ class HomeViewModel {
                 let tracks = returnJSON["Tracks"].arrayValue.compactMap { return Track(data: try! $0.rawData()) }
                 self.albums.onNext(albums)
                 self.tracks.onNext(tracks)
-            case .failure(let failure) :
+            case .failure(let failure):
                 switch failure {
                 case .connectionError:
                     self.error.onNext(.internetError("Check your Internet connection."))

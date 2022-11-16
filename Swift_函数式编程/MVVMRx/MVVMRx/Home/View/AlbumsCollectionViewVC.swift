@@ -23,7 +23,7 @@ class AlbumsCollectionViewVC: UIViewController {
     }
 
     private func setupBinding() {
-        // 为 UICollectionView 注册 'AlbumsCollectionViewCell'
+        // 为 UICollectionView 注册重用 'AlbumsCollectionViewCell'
         albumsCollectionView.register(UINib(nibName: "AlbumsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: String(describing: AlbumsCollectionViewCell.self))
 
         albums.bind(to: albumsCollectionView.rx.items(cellIdentifier: "AlbumsCollectionViewCell", cellType: AlbumsCollectionViewCell.self)) {  (row,album,cell) in

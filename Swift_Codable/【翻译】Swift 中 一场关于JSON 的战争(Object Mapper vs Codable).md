@@ -1,4 +1,4 @@
-> 原文：[medium: War on JSON in Swift (Object Mapper vs Codable)](https://medium.com/@qamar_37318/war-on-json-in-swift-object-mapper-vs-codable-e0598a64c746)
+> 原文：[medium: War on JSON in Swift (Object Mapper vs Codable) @20181231](https://medium.com/@qamar_37318/war-on-json-in-swift-object-mapper-vs-codable-e0598a64c746)
 
 
 
@@ -11,7 +11,7 @@
 通常，当 App 与外部 API 甚至有时是本地静态数据交互时，我们实际上会操作不同的数据类型，例如 JSON 或 plist，有时甚至是其他一些格式。我们需要用 JSON 数据映射我们的模型类对象，以便可以对我们的业务流程进行建模。在 Swift 中，我们有以下通用库用于解析和映射 JSON 与我们的模型对象：
 
 * JSON Serialisation
-* [SwiftJSON](https://github.com/SwiftyJSON/SwiftyJSON) ⭐️21.5k
+* [SwiftJSON](https://github.com/SwiftyJSON/SwiftyJSON) ⭐️21.6k
 * Codable
 * [ObjectMapper](https://github.com/tristanhimmelman/ObjectMapper) ⭐️9k
 

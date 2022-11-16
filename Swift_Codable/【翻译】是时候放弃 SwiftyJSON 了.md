@@ -1,4 +1,4 @@
-> 原文：[It’s Time to Abandon SwiftyJSON](https://betterprogramming.pub/time-to-abandon-swiftyjson-switch-jsondecoder-codable-407f9988daec)
+> 原文：[It’s Time to Abandon SwiftyJSON @20200702](https://betterprogramming.pub/time-to-abandon-swiftyjson-switch-jsondecoder-codable-407f9988daec)
 > JSONSerialization vs. JSONDecoder vs. SwiftyJSON —— 使用 Swift 内置的 JSONDecoder 解析 JSON 以获得更好的性能
 
 
@@ -7,7 +7,7 @@
 
 ![](https://miro.medium.com/max/1400/0*dimasCJZK4A_X2_6)
 
-有许多著名的项目都在使用各种方法和理念来处理 JSON 解析。 `SwiftyJSON` 可能是其中最早，最受欢迎的一种。 它不那么冗长，也不那么容易出错，并且利用 Swift 强大的类型系统来处理所有的细节。
+有许多著名的项目都在使用各种方法和理念来处理 JSON 解析。 `SwiftyJSON` 可能是其中最早，最受欢迎的一个。 它不那么冗长，也不那么容易出错，并且利用 Swift 强大的类型系统来处理所有的细节。
 
 `JSONSerialization` 是大多数 JSON 解析项目的核心。 它来自 Swift 的 [Foundation](https://developer.apple.com/documentation/foundation) 框架，并将 JSON 转换为不同的 Swift 数据类型。 在 `SwiftyJSON`  出现之前，人们使用原始的 `JSONSerialization` 解析 JSON 对象。 但这可能会很痛苦，因为值类型和 JSON 结构可能会有所不同。 你需要手动处理错误，并将 `Any` 类型转换为 Swift 基础类型，这里是更容易出错的地方。
 
@@ -185,7 +185,7 @@ extension JSON {
 }
 ```
 
-检索值时，它将循环并将每个对象映射到 `JSON` 对象。 当我们处理嵌套数组时，时间复杂度和空间复杂度呈指数增长。
+检索值时，它将循环并将每个对象映射到 `JSON` 对象。 当我们处理嵌套数组时，时间复杂度和空间复杂度呈指数级增长。
 
 
 

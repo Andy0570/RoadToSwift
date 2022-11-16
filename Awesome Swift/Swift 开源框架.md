@@ -83,7 +83,7 @@
 
 [回到顶部](#Awesome Swift)
 
-* :heart: [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) ⭐️21.5k - GitHub 上最为开发者认可的 JSON 解析类。
+* :heart: [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) ⭐️21.6k - GitHub 上最为开发者认可的 JSON 解析类。
 * [Alamofire-SwiftyJSON](https://github.com/SwiftyJSON/Alamofire-SwiftyJSON) ⭐️1.4k - Alamofire extension for serialize NSData to SwiftyJSON.
 * [ObjectMapper](https://github.com/Hearst-DD/ObjectMapper) ⭐️9k - JSON Object mapping written in Swift.
 * [HandyJSON](https://github.com/alibaba/HandyJSON) ⭐️4k - 阿里开源的 JSON 解析框架。
@@ -92,7 +92,7 @@
 * [DynamicJSON](https://github.com/saoudrizwan/DynamicJSON) ⭐️696 - 采用 Swift 4.2 新特性 （@dynamicMemberLookup） 实现轻便访问 JSON 数据。
 * [SWXMLHash](https://github.com/drmohundro/SWXMLHash) - Simple XML parsing in Swift.
 * [AEXML](https://github.com/tadija/AEXML) - Simple and lightweight XML parser for iOS written in Swift.
-* [JASON](https://github.com/delba/JASON) - JSON parsing with outstanding performances and convenient operators.
+* [JASON](https://github.com/delba/JASON) ⭐️1k - JSON parsing with outstanding performances and convenient operators.
 * [Fuzi](https://github.com/cezheng/Fuzi) - A fast & lightweight XML/HTML parser with XPath & CSS support in Swift 2.
 * [Tailor](https://github.com/zenangst/Tailor) - A super fast & convenient object mapper tailored for your needs.
 * [SwiftyJSONAccelerator](https://github.com/insanoid/SwiftyJSONAccelerator) - Generate Swift 5 model files from JSON with Codeable support.
@@ -353,6 +353,7 @@
 
 * :heart: [animated-tab-bar](https://github.com/Ramotion/animated-tab-bar) ⭐️11k 灵动的动画标签栏类库。
 * [adaptive-tab-bar](https://github.com/Ramotion/adaptive-tab-bar) ⭐️2k
+* [fan-menu](https://github.com/exyte/fan-menu) ⭐️715 - 基于 Macaw 的圆形布局菜单
 * [AxisTabView](https://github.com/jasudev/AxisTabView) ⭐️80 - A library that allows you to easily create various styles of tab views. Supports iOS and macOS.
 * [LTabView](https://github.com/Mr-XiaoLiang/LTabView) ⭐️18 - *一个带有动画的 TabView* 项目。
 
@@ -418,6 +419,7 @@
 * [loady](https://github.com/farshadjahanmanesh/loady) ⭐️817 - Loady 是一个小动效库用来定制加载按钮动画，可用于显示 UI 中 Button 的加载，支持你自定义样式，它本身提供有 6 种不同的加载样式，4 种动画状态（成功加载、加载失败、加载中，正常加载）。
 * [BKStepperProgress](https://github.com/bharathi91/BKStepperProgress) ⭐️16 - 一个 iOS 控件，用于以步进器形式指示进度视图。
 * [MultiProgressView](https://github.com/mac-gallagher/MultiProgressView) ⭐️852 - 多区间进程条展示效果组件及示例。
+* [CSProgress](https://github.com/CharlesJS/CSProgress)
 * :orange: [WaveLoadingView](https://github.com/liuzhiyi1992/WaveLoadingView) ⭐️579 - 像水波一样的加载指示器。
 
 
@@ -438,6 +440,7 @@
 [回到顶部](#Awesome Swift)
 
 * :heart: [SwifterSwift/SwifterSwift](https://github.com/SwifterSwift/SwifterSwift) ⭐️ 10.4k — 包含 500 多个原生 Swift 扩展的便捷集合，以提高你的工作效率。
+* [Device](https://github.com/Ekhoo/Device) ⭐️1.5k - 用 Swift 编写的用于检测当前设备和屏幕尺寸的轻量级工具。
 * [HandySwift](https://github.com/Flinesoft/HandySwift) ⭐️422 - 没有进入 Swift 标准库的方便的 Swift 功能。
 * [HandyUIKit](https://github.com/FlineDev/HandyUIKit) ⭐️119 - 一开始就应该成为 UIKit 一部分的方便的 UI 功能。
 * :warning: [ExSwift](https://github.com/pNre/ExSwift) ⭐️3.4k - JavaScript (Lo-Dash, Underscore) & Ruby inspired set of Swift extensions for standard types and classes.
@@ -867,6 +870,7 @@
 
 * [MessageKit](https://github.com/MessageKit/MessageKit) ⭐️5k
 * [aurora-imui](https://github.com/jpush/aurora-imui) ⭐️5.5k - 通用 IM 聊天 UI 组件，已经同时支持 Android/iOS/RN
+* [Chatto](https://github.com/badoo/Chatto) ⭐️4.4k - 构建聊天应用程序的轻量级框架，用 Swift 实现。
 * [Messenger](https://github.com/relatedcode/Messenger) ⭐️4.2k - Open source, native iOS Messenger, with realtime chat conversations (full offline support).
 * 【Archived】[NMessenger](https://github.com/eBay/NMessenger) ⭐️2.5k - 更快更轻量级的消息组件，构建于 AsyncDisplaykit 并且由 Swift 编写
 * [Cake](https://github.com/mxcl/Cake) ⭐️541 - 基于组件 MessageKit 及实时通讯云 Firestore 的即时通讯实现（功能参考 Facebook Messenger）。
@@ -884,6 +888,7 @@
 * [googleprojectzero/fuzzilli](https://github.com/googleprojectzero/fuzzilli)  ⭐️1.4k - Javascript 解释器引擎，技术融合的一大进步。
 * [Vaux](https://github.com/dokun1/Vaux) - 一个允许你使用 Swift 生成 HTML 的库。
 * [Ashton](https://github.com/IdeasOnCanvas/Ashton) ⭐️439 - MindNode 团队开发使用的 NSAttributedStrings 和 HTML 高性能互转类库。
+* [Plot](https://github.com/JohnSundell/Plot) ⭐️1.8k - 用于在 Swift 中编写类型安全的 HTML、XML 和 RSS 的 DSL。
 
 
 

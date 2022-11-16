@@ -16,14 +16,13 @@ class TracksTableViewVC: UIViewController {
     public var tracks = PublishSubject<[Track]>()
     private let disposeBag = DisposeBag()
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBinding()
     }
 
     private func setupBinding() {
-        // 为 UITableView 注册 'TracksTableViewCell'
+        // 为 UITableView 注册重用 'TracksTableViewCell'
         tracksTableView.register(UINib(nibName: "TracksTableViewCell", bundle: nil), forCellReuseIdentifier: String(describing: TracksTableViewCell.self))
 
         tracks.bind(to: tracksTableView.rx.items(cellIdentifier: "TracksTableViewCell", cellType: TracksTableViewCell.self)) {  (row,track,cell) in
@@ -31,7 +30,6 @@ class TracksTableViewVC: UIViewController {
             }.disposed(by: disposeBag)
 
         // cell 的动画
-
         tracksTableView.rx.willDisplayCell.subscribe(onNext: { cell, indexPath in
             cell.alpha = 0
             let transform = CATransform3DTranslate(CATransform3DIdentity, -250, 0, 0)

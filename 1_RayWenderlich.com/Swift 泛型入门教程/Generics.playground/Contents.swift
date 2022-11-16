@@ -30,6 +30,7 @@ import Foundation
 
 //: ------------------------------------------------------------------------------
 //: ☆ An Introduction to Generics ☆
+// <https://www.kodeco.com/3535703-swift-generics-tutorial-getting-started>
 //: ------------------------------------------------------------------------------
 
 
