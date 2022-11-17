@@ -6,7 +6,6 @@
 //  Copyright © 2018 Göktuğ Gümüş. All rights reserved.
 //
 
-import Foundation
 import RxSwift
 import RxCocoa
 

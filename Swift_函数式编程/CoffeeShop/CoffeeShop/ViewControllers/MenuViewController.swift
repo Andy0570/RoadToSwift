@@ -30,7 +30,8 @@ class MenuViewController: BaseViewController {
         let mocha = Coffee(name: "Mocha", icon: "mocha", price: 8.5)
         let latte = Coffee(name: "Latte", icon: "latte", price: 7.5)
 
-        // .just (_:) 函数表明这个 Observable 类型变量永远不会改变
+        // 返回一个一次性可观察序列
+        // .just(_:) 表明这个 Observable 类型变量永远不会改变
         return .just([espresso, cappuccino, macciato, mocha, latte])
     }()
 
@@ -46,6 +47,7 @@ class MenuViewController: BaseViewController {
             cell.configure(with: element)
         }.disposed(by: disposeBag)
 
+        // 绑定 cell 点击事件
         tableView.rx.modelSelected(Coffee.self).subscribe(onNext: { [weak self] coffee in
             self?.performSegue(withIdentifier: "OrderCofeeSegue", sender: coffee)
 

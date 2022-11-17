@@ -1,4 +1,6 @@
 > 原文：[Medium: RxSwift — Subjects @20170707](https://medium.com/fantageek/rxswift-subjects-part1-publishsubjects-103ff6b06932)
+>
+> 参考：[RxSwift: Reactive Programming with Swift, Section 1.3 Subjects](https://www.kodeco.com/books/rxswift-reactive-programming-with-swift/v4.0/chapters/3-subjects)
 
 
 
@@ -12,20 +14,29 @@ Subject 既是可观察对象（observable），也是观察者（observer）。
 
 * **PublishSubject**：开始为空，仅向订阅者发送新元素。
 * **BehaviorSubject**：从初始值开始，并将其或最新元素重播给新订阅者。
-* **ReplaySubject**：使用缓冲区大小进行初始化，并将保持一个元素缓冲区达到该大小，并将其重播给新订阅者。
-*  **Variable**：包装一个 **BehaviorSubject**，将其当前值保存为状态，并且仅将最新 / 初始值重播给新订阅者。
+* **ReplaySubject**：使用缓冲区大小进行初始化，并将保持一个元素缓冲区达到该大小，并将其重播给新订阅者。（例如，在搜索页面上，显示最近的 5 个搜索词）
+* 【此类型从 RxSwift 5.x 开始被正式弃用】~~**Variable**：包装一个 **BehaviorSubject**，将其当前值保存为状态，并且仅将最新 / 初始值重播给新订阅者~~。
+*  **AsyncSubject**：仅当主题收到 `completed` 事件后，才发出序列中的最后一个 `next` 事件。这是一种很少使用的主题。
 
 
 
-==本文主要关注 **PublishSubject**==
+RxSwift 还提供了一个叫做 Relays 的概念。 RxSwift 提供了其中两个，名为 `PublishRelay` 和 `BehaviorRelay`。它们包装各自的主题，但只接受和传递 `next` 事件。你根本无法将 `completed` 或 `error` 事件添加到 Relays 上，因此它们非常适合非终止序列。
+
+
+
+
+
+==本文主要讨论 **PublishSubject**==
 
 **一图胜千言**
 
+在下面的弹珠图（marble diagram）中，第一行是发布的主题，第二行和第三行是订阅者。向上的箭头⬆️表示订阅，向下的箭头⬇️表示发出的事件。
+
 ![HHVWEj](https://blog-andy0570-1256077835.cos.ap-shanghai.myqcloud.com/uPic/HHVWEj.png)
 
-第一个订阅者在 1 之后订阅，所以它没有收到 1 这个事件，它收到的是 2 和 3。
+第一个订阅者在 1 添加到 Subject 后订阅，所以它没有收到 1 这个事件，不过，它确实收到了 2 和 3。
 
-第二个订阅者在 2 之后订阅，所以它只收到 3。
+第二个订阅者在添加 2 之后才加入，所以它只收到 3。
 
 
 

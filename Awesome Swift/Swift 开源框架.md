@@ -260,7 +260,7 @@
 
 ### 日历/图表
 
-* [Charts](https://github.com/danielgindi/Charts) ⭐️24.8k - iOS 应用的漂亮图表
+* [Charts](https://github.com/danielgindi/Charts) ⭐️26.2k - iOS 应用的漂亮图表
 * [FSCalendar](https://github.com/WenchaoD/FSCalendar) ⭐️10.2k - 一个完全可定制的 iOS 日历库，与 Objective-C 和 Swift 兼容。
 * [ElegantCalendar ](https://github.com/ThasianX/ElegantCalendar) ⭐️519
 * [JTAppleCalendar](https://github.com/patchthecode/JTAppleCalendar) ⭐️7.3k - 非官方 Apple iOS Swift 日历视图。 Swift 日历库。 iOS 日历控件。
@@ -537,7 +537,7 @@
 
 [回到顶部](#Awesome Swift)
 
-* [SwiftDate](https://github.com/malcommac/SwiftDate) ⭐️6.8k - 用于在 Swift 中解析、验证、操作、比较和显示日期、时间和时区的工具包。
+* [SwiftDate](https://github.com/malcommac/SwiftDate) ⭐️7.1k - 用于在 Swift 中解析、验证、操作、比较和显示日期、时间和时区的工具包。
 * [DateTools](https://github.com/MatthewYork/DateTools) ⭐️7.2k - Dates and times made easy in iOS。
 * [Time](https://github.com/davedelong/time) ⭐️2k - Building a better date/time library for Swift
 * [Timepiece](https://github.com/naoty/Timepiece) ⭐️2.7k - 直观的日期处理。

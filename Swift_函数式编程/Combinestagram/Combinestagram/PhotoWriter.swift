@@ -1,6 +1,3 @@
-// 创建自定义可观察对象
-import Foundation
-import UIKit
 import Photos
 import RxSwift
 
@@ -9,28 +6,25 @@ class PhotoWriter {
         case couldNotSavePhoto
     }
 
-    static func save(_ image: UIImage) -> Observable<String> {
+    /// 保存图片到相册，返回该图片的本地唯一标识符
+    static func save(_ image: UIImage) -> Single<String> {
+        return Single.create { single in
 
-        return Observable.create { observer in
-
-            var savedAssetId: String!
+            var savedAssetId: String?
             PHPhotoLibrary.shared().performChanges {
+                // 使用 PHAssetChangeRequest.creationRequestForAsset(from:) 方法根据图片创建 Asset 资产
                 let request = PHAssetChangeRequest.creationRequestForAsset(from: image)
                 savedAssetId = request.placeholderForCreatedAsset?.localIdentifier
-
             } completionHandler: { success, error in
                 DispatchQueue.main.async {
                     if success, let id = savedAssetId {
-                        observer.onNext(id)
-                        observer.onCompleted()
+                        single(.success(id))
                     } else {
-                        observer.onError(error ?? Errors.couldNotSavePhoto)
+                        single(.error(error ?? Errors.couldNotSavePhoto))
                     }
                 }
             }
-
             return Disposables.create()
         }
-
     }
 }

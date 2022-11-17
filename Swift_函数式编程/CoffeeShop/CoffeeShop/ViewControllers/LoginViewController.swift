@@ -6,9 +6,6 @@
 //  Copyright © 2018 Göktuğ Gümüş. All rights reserved.
 //
 
-// MARK: 参考：<https://medium.com/@goktuggumus/getting-started-with-rxswift-and-rxcocoa-5534cf2902b7>
-
-import UIKit
 import RxSwift
 import RxCocoa
 
@@ -18,7 +15,7 @@ class LoginViewController: UIViewController {
     @IBOutlet private weak var logInButton: UIButton!
 
     private let disposeBag = DisposeBag()
-    private let throttleInterval = 0.1 // 节流时间间隔
+    private let throttleInterval = 0.1 // 节流时间间隔，0.1 秒
 
     override func viewDidLoad() {
         super.viewDidLoad()
