@@ -20,10 +20,11 @@ class PhotoWriter {
                     if success, let id = savedAssetId {
                         single(.success(id))
                     } else {
-                        single(.error(error ?? Errors.couldNotSavePhoto))
+                        single(.failure(error ?? Errors.couldNotSavePhoto))
                     }
                 }
             }
+
             return Disposables.create()
         }
     }

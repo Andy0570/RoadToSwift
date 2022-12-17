@@ -1,5 +1,6 @@
 import Photos
 import RxSwift
+import RxTimelane
 
 class PhotosViewController: UICollectionViewController {
 
@@ -13,6 +14,8 @@ class PhotosViewController: UICollectionViewController {
     var selectedPhotos: Observable<UIImage> {
         return selectedPhotosSubject.asObserver()
     }
+
+    private let bag = DisposeBag()
 
     private lazy var thumbnailSize: CGSize = {
         let cellSize = (self.collectionViewLayout as! UICollectionViewFlowLayout).itemSize
@@ -30,6 +33,38 @@ class PhotosViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // 创建一个共享的可观察序列，监听系统相册授权状态
+        let authorized = PHPhotoLibrary.authorized.lane("Photo Library Auth").share()
+
+        authorized.skipWhile { !$0 }.take(1).subscribe(onNext: { [weak self] _ in
+            self?.photos = PhotosViewController.loadPhotos()
+            DispatchQueue.main.async {
+                self?.collectionView.reloadData()
+            }
+        }).disposed(by: bag)
+
+        // 在当前情况下，以下可替换的逻辑可以达到相同的目的：
+        // authorized.skip(1).filter { !$0 }
+        // authorized.takeLast(1).filter { !$0 }
+        // authorized.distinctUntilChanged().takeLast(1).filter { !$0 }
+        // 保留 skip、takeLast 和 filter 可能是确保应用程序逻辑在下一个iOS版本发布后不会被破坏的最好方法。
+        authorized.skip(1).takeLast(1).filter { !$0 }.subscribe(onNext: { [weak self] _ in
+            guard let errorMessage = self?.errorMessage else { return }
+            DispatchQueue.main.async(execute: errorMessage)
+        }).disposed(by: bag)
+    }
+
+    // 当用户被拒绝访问他们的照片库，他们会看到禁止访问的提示框，用户必须点击关闭返回到上一个页面
+    // 你必须通过 asObservable() 将你的 Completable 转换为可观察对象，因为 take(_:scheduler:) 操作符在 Completable 类型上不可用。
+    // take(_:scheduler:)在给定的时间段内从源序列中获取元素。一旦时间间隔过了，产生的序列就完成了。
+    private func errorMessage() {
+        alert(title: "No access to Camera Roll", message: "You can grant access to Combinestagram from the Settings app")
+            .asObservable().take(.seconds(5), scheduler: MainScheduler.instance) // 5 秒后弹窗自动关闭
+            .subscribe(onCompleted: { [weak self] in
+            self?.dismiss(animated: true)
+            self?.navigationController?.popViewController(animated: true)
+        })
+            .disposed(by: bag)
     }
 
     override func viewWillDisappear(_ animated: Bool) {

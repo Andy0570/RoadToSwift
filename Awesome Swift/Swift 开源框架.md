@@ -731,6 +731,7 @@
 * :heart:[blurhash](https://github.com/woltapp/blurhash) ⭐️10.2k - 图像占位符的非常紧凑的表示。
 * [Nuke](https://github.com/kean/Nuke) ⭐️6.5k - 用于加载和缓存图像的高级框架。
 * [HanekeSwift](https://github.com/Haneke/HanekeSwift) ⭐️5.1k - 轻量带缓存高性能图片加载组件。
+* [Gifu](https://github.com/kaishin/Gifu) ⭐️2.8k - 为 iOS 提供的高性能 GIF 动画。
 * [Concorde](https://github.com/contentful-labs/Concorde) ⭐️1.4k - 渐进式下载和解码 JPEG 格式图片。
 * [ImageScout](https://github.com/kaishin/ImageScout) ⭐️955 - 最小网络代价获得图片大小及类型。
 * :warning: [ImageSizeFetcher](https://github.com/malcommac/ImageSizeFetcher) ⭐️440 - 通过 URL 获取图像类型或尺寸。
