@@ -1,4 +1,4 @@
-# Road-To-Swift
+# RoadToSwift
 
 <p align="center">
 <a href="https://developer.apple.com/xcode/"><img src="https://img.shields.io/badge/Xcode-007ACC?style=for-the-badge&logo=Xcode&logoColor=white"></a>
@@ -12,27 +12,20 @@
 
 > **Stay Hungry, Stay Foolish.**
 
-:gift: [Awesome Swift](./Awesome Swift/Swift 开源框架.md)
-
-
 
 
 ## Overview
 
-> Swift is a general-purpose programming language built using a modern approach to safety, performance, and software design patterns.
-> 
-> The goal of the Swift project is to create the best available language for uses ranging from systems programming, to mobile and desktop apps, scaling up to cloud services.
+Swift 是苹果在 WWDC 2014 上推出的新编程语言，可与 Objective-C 共同运行于 macOS 和 iOS 平台，用于搭建基于苹果生态的应用程序。
 
-Swift 是苹果在 WWCD 2014 上推出的新编程语言，可与 Objective-C 共同运行于 macOS 和 iOS 平台，用于搭建基于苹果生态的应用程序。
-
-Swift 是一款易学易用的编程语言，而且它还是第一套具有与脚本语言同样的表现力和趣味性的系统编程语言。Swift 的设计以安全为出发点，以避免各种常见的编程错误类型。
+Swift 是一款易学易用的编程语言，而且它还是第一套具有与脚本语言同样表现力和趣味性的系统编程语言。Swift 的设计以安全为出发点，以避免各种常见的编程错误类型。
 
 
 ---
 
 Swift 仍然是 2022 年最受欢迎的十大编程语言，而 iOS 应用程序很受欢迎。根据 Statista 的数据，2019 年，App Store 上有 184 万个移动应用可供下载。iOS 应用程序的数量每年都在增长。Swift 由 Apple 于 2014 年开发，它在很大程度上取代了 Objective-C，因为它更易于阅读且更可靠。这种编程语言允许您创建由健壮和安全代码支持的丰富应用程序。
 
-Swift 非常容易学习。Swift 代码被简化并且更像英语，这使得它更容易阅读。我们使用 Swift 创建 Famer 和 Versara 项目。
+Swift 非常容易学习。Swift 代码被简化并且更像英语，这使得它更容易阅读。
 
 
 优势 
@@ -108,8 +101,6 @@ Swift 非常容易学习。Swift 代码被简化并且更像英语，这使得�
 * [Using Swift with Cocoa and Objective-C](https://itunes.apple.com/us/book/using-swift-cocoa-objective/id888894773?mt=11)
 * [Swift Standard Library Reference](https://developer.apple.com/library/prerelease/ios/documentation/General/Reference/SwiftStandardLibraryReference/)
 * [Learn to Program iOS and OS X with Apple Swift](https://www.kickstarter.com/projects/alanforbes/learn-to-program-ios-and-os-x-with-apple-swift?utm_medium=referral&utm_source=swift.zeef.com%2Frobin.eggenkamp&utm_campaign=ZEEF)
-
-
 
 
 
@@ -198,11 +189,13 @@ Swift 非常容易学习。Swift 代码被简化并且更像英语，这使得�
 ![Alt](https://repobeats.axiom.co/api/embed/b67753c5af6b867e0ebdc78ee30cf3cafb00e52c.svg "Repobeats analytics image")
 
 
+
 ## Stargazers over time
 
 [![Stargazers over time](https://starchart.cc/Andy0570/RoadToSwift.svg)](https://starchart.cc/Andy0570/RoadToSwift)
 
 
+
 ## License
 
-Road-To-swift is distributed under the MIT license. [See LICENSE](./LICENSE) for details.
+RoadToSwift is distributed under the MIT license. [See LICENSE](./LICENSE) for details.
