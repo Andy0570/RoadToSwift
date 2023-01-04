@@ -1,6 +1,6 @@
 # CHANGELOG
 
-The changelog for **RoadToSwift**.
+> 注：本更新日志以天为单位记录，并不保证与 `git commit` 同步。
 
 
 
