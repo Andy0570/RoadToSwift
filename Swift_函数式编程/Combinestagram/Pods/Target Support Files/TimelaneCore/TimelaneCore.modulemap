@@ -1,6 +1,0 @@
-framework module TimelaneCore {
-  umbrella header "TimelaneCore-umbrella.h"
-
-  export *
-  module * { export * }
-}

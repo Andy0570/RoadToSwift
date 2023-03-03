@@ -37,7 +37,7 @@ class DashboardViewController: UIViewController {
         let nib = UINib(nibName: "KittyTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "kittyCell")
 
-        // 选中绑定
+        // 选中绑定，Controller -> ViewModel
         tableView.rx.itemSelected
             .bind(to: viewModel.itemSelected)
             .disposed(by: disposeBag)

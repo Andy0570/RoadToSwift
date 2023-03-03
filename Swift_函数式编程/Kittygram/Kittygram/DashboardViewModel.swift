@@ -24,7 +24,7 @@ final class DashboardViewModel: DashboardViewModelType {
     lazy var reposeObservable: Observable<[KittyTableViewModelType]> = self.repos.asObservable().map { $0.map { $0.1 } }
 
     init() {
-        // 添加订阅
+        // 添加订阅，itemSelected -> kittySelected
         itemSelected.map { [weak self] in
             self?.repos.value[$0.row]
         }

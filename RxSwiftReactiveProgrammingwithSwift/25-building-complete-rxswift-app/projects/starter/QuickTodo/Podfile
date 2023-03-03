@@ -1,0 +1,17 @@
+use_frameworks!
+platform :ios, '12.0'
+
+target 'QuickTodo' do
+  # core RxSwift
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'RxDataSources'
+
+  # Community projects
+  pod 'Action', '~> 4.0'
+  pod 'NSObject+Rx', '~> 5.2.2'
+  
+  # Realm database
+  pod 'RealmSwift'
+  pod 'RxRealm'
+end

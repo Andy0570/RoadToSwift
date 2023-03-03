@@ -15,7 +15,7 @@ final class DashboardCoordinator: Coordinator {
     override init(navigationController: UINavigationController?) {
         super.init(navigationController: navigationController)
 
-        // 添加绑定
+        // 添加绑定，选中元素后，在协调器层执行页面切换
         kittySelected.subscribe { repository in
             if repository.name != "swift" {
                 let viewModelKitty = KittyDetailsViewModel(repository: repository)
@@ -32,6 +32,10 @@ final class DashboardCoordinator: Coordinator {
         let viewModel = DashboardViewModel()
         let viewController = DashboardViewController(viewModel: viewModel)
 
+        // Controller -> ViewModel -> Coordinator
+        viewModel.kittySelected.asObservable()
+            .bind(to: kittySelected)
+            .disposed(by: disposeBag)
 
         navigationController?.pushViewController(viewController, animated: true)
     }

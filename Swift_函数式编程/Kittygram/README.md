@@ -6,4 +6,4 @@ On master branch there is a basic app, and on mvvmc branch there is an attempt f
 
 
 
-<https://academy.realm.io/posts/mobilization-lukasz-mroz-mvvm-coordinators-rxswift/>
+[Realm 系列文章：#6基于协调器和 RxSwift 的 MVVM](https://academy.realm.io/posts/mobilization-lukasz-mroz-mvvm-coordinators-rxswift/)

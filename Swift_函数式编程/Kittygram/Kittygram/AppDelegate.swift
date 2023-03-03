@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow()
 
+        // 创建一个纯导航控制器，它没有任何根视图控制器
         let navigationController = UINavigationController()
         window?.rootViewController = navigationController
         

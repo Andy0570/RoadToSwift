@@ -168,8 +168,8 @@
 		142B15091DB91DAC00957C63 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				142B150A1DB91DC400957C63 /* RepositoryModel.swift */,
 				142B150C1DB91DE800957C63 /* UserModel.swift */,
+				142B150A1DB91DC400957C63 /* RepositoryModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";

@@ -1,31 +1,3 @@
-/// Copyright (c) 2019 Razeware LLC
-///
-/// Permission is hereby granted, free of charge, to any person obtaining a copy
-/// of this software and associated documentation files (the "Software"), to deal
-/// in the Software without restriction, including without limitation the rights
-/// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-/// copies of the Software, and to permit persons to whom the Software is
-/// furnished to do so, subject to the following conditions:
-///
-/// The above copyright notice and this permission notice shall be included in
-/// all copies or substantial portions of the Software.
-///
-/// Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
-/// distribute, sublicense, create a derivative work, and/or sell copies of the
-/// Software in any work that is designed, intended, or marketed for pedagogical or
-/// instructional purposes related to programming, coding, application development,
-/// or information technology.  Permission for such use, copying, modification,
-/// merger, publication, distribution, sublicensing, creation of derivative works,
-/// or sale is expressly withheld.
-///
-/// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-/// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-/// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-/// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-/// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-/// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-/// THE SOFTWARE.
-
 import Foundation
 
 //: ------------------------------------------------------------------------------
@@ -75,7 +47,6 @@ let firstNumberAgain = numbersAgain[0]
 //: Don't recognize these countries :] ? See http://bit.ly/2k1B36o for more information.
 
 let countryCodes = ["Arendelle": "AR", "Genovia": "GN", "Freedonia": "FD"]
-
 let countryCode = countryCodes["Freedonia"]
 
 //: ### ☆ Other Examples of Generic Types - Optionals
@@ -176,12 +147,10 @@ func pairs<Key, Value>(from dictionary: [Key: Value]) -> [(Key, Value)] {
 }
 
 let somePairs = pairs(from: ["minimum": 199, "maximum": 299])
-
 // result is [("maximum", 299), ("minimum", 199)]
 
 
 let morePairs = pairs(from: [1: "Swift", 2: "Generics", 3: "Rule"])
-
 // result is [(1, "Swift"), (2, "Generics"), (3, "Rule")]
 
 //: ### ☆ Constraining a Generic Type
@@ -303,5 +272,5 @@ enum Reward<T> {
 }
 
 let message = Reward.treasureChest("💰").message
-print(message)
+print(message) // You got a chest filled with 💰.
 

@@ -14,7 +14,6 @@ final class PayMoneyPleaseCoordinator: Coordinator {
 
     convenience init(navigationController: UINavigationController?, appCoordinator: AppCoordinator?) {
         self.init(navigationController: navigationController)
-
         self.appCoordinator = appCoordinator
     }
 

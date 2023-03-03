@@ -1,11 +1,6 @@
 /**
  Swift 函数式编程简介
-
- 参考：
- * <https://www.raywenderlich.com/9222-an-introduction-to-functional-programming-in-swift>
- * <https://www.jianshu.com/p/eebb15f2c0d5>
- * <https://juejin.cn/post/6844903555866837005>
- * <https://mokacoding.com/blog/functor-applicative-monads-in-pictures/>
+ 参考：<https://www.raywenderlich.com/9222-an-introduction-to-functional-programming-in-swift>
  */
 
 import Foundation
@@ -22,7 +17,7 @@ thing = 4
 // Immutability and Side Effects（不变性和副作用）
 
 /**
- 术语 “变量” 意味着随着程序运行而变化的数量。从数学角度考虑数量，您已经将时间作为软件行为方式的关键参数。
+ 术语 “变量” 意味着随着程序运行而变化的数量。从数学角度考虑数量，您已经将“时间”作为软件行为方式的关键参数。
  通过更改变量，您可以创建可变状态。
  */
 func superHero() {
@@ -64,6 +59,7 @@ struct Ride: CustomStringConvertible {
     }
 }
 
+// 模拟数据
 let parkRides = [
     Ride(name: "Raging Rapids", categories: [.family, .thrill, .water], waitTime: 45.0),
     Ride(name: "Crazy Funhouse", categories: [.family], waitTime: 10.0),
@@ -163,7 +159,7 @@ testOriginalNameOrder(originalNames)
  */
 
 
-// MARK: Filter 函数：它接受另一个函数作为参数。这个另一个函数接受数组中的单个值作为输入，检查该值是否属于并返回一个 Bool 类型实例。
+// MARK: Filter 函数：它接受另一个函数作为参数。这个另一个函数接受数组中的单个值作为输入，检查该值是否属于并返回一个 Bool 类型。
 let apples = ["🍎", "🍏", "🍎", "🍏", "🍏"]
 let greenapples = apples.filter { $0 == "🍏" }
 print(greenapples)
@@ -273,11 +269,11 @@ func testShorWaitRides(_ testFilter:(Minutes, [Ride]) -> [Ride]) {
 testShorWaitRides(ridesWithWaitTimeUnder(_:from:))
 
 
-// MARK: Referential Transparency 引用透明度
+// MARK: Referential Transparency 引用透明
 /**
  如果可以将程序的元素替换为其定义，并始终产生相同的结果，则程序的元素是引用透明的。它生成可预测的代码并允许编译器执行优化。纯函数满足这个条件。
 
- 当你重构一些代码并且你想确保你没有破坏任何东西时，引用透明会派上用场。引用透明代码不仅易于测试，而且还允许您移动代码而无需验证实现。
+ 当你重构一些代码并且你想确保你没有破坏任何东西时，引用透明会派上用场。引用透明代码不仅易于测试，而且还允许你移动代码而无需验证实现。
 
  ------------------------
  引用透明指的是函数的运行不依赖于外部变量或“状态”，只依赖于输入的参数，任何时候只要参数相同，引用函数所得到的返回值总是相同的。
