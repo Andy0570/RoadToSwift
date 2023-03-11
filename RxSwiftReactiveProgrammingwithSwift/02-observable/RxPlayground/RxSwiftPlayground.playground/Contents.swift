@@ -6,7 +6,7 @@ example(of: "just, of, from") {
     let two = 2
     let three = 3
 
-    // just 操作符创建一个只包含一个元素的可观察序列
+    // just 操作符创建一个只包含单个元素的可观察序列
     let observable = Observable<Int>.just(one)
     let observable2 = Observable.of(one, two, three)
     // 创建一个可观察的数组
@@ -40,7 +40,7 @@ example(of: "empty") {
 
 // never 操作符创建了一个不发射任何东西并且永远不会终止的可观察对象。它可以用来表示一个无限的持续时间。
 example(of: "never") {
-    let observable = Observable<Any>.never()
+    let observable = Observable<Void>.never()
     let disposeBag = DisposeBag()
 
     observable

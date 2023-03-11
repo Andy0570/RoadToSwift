@@ -21,12 +21,12 @@ class TimelineFetcher {
     let timeline: Observable<[Tweet]>
 
     // MARK: Init with list or user
-    // 从指定的 Twitter 列表中获取推文
+    // 1.从指定的 Twitter 列表中获取推文
     convenience init(account: Driver<TwitterAccount.AccountStatus>, list: ListIdentifier, apiType: TwitterAPIProtocol.Type) {
         self.init(account: account, jsonProvider: apiType.timeline(of: list))
     }
 
-    // 获取指定用户的推文
+    // 2.获取指定用户的推文
     convenience init(account: Driver<TwitterAccount.AccountStatus>, username: String, apiType: TwitterAPIProtocol.Type) {
         self.init(account: account, jsonProvider: apiType.timeline(of: username))
     }
@@ -54,6 +54,7 @@ class TimelineFetcher {
 
         // timer that emits a reachable logged account（定时器，发射一个可获得的已登录账户）
         let reachableTimerWithAccount = Observable.combineLatest(
+            // 当处于联网状态时，通过 Rx 计时器每隔 30 秒抓取一次推文数据
             Observable<Int>.timer(.seconds(0), period: .seconds(timerDelay), scheduler: MainScheduler.instance),
             Reachability.rx.reachable,
             currentAccount,
@@ -73,7 +74,7 @@ class TimelineFetcher {
                 return (account: account, cursor: cursor)
             }
             .flatMapLatest(jsonProvider) // jsonProvider 返回一个 Observable<[JSONObject]>
-            .map(Tweet.unboxMany) // 将 jsonProvider 返回类型映射到 Observable<[Tweet]>
+            .map(Tweet.unboxMany) // 通过 Tweet.unboxMany 方法将 jsonProvider 返回类型映射到 Observable<[Tweet]>
             .share(replay: 1)
 
         // Store the latest position through timeline（通过时间轴存储最新的位置/光标）

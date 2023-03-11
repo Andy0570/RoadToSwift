@@ -66,6 +66,3 @@ _ = sourceObservable.connect()
 let hostView = setupHostView()
 hostView.addSubview(stack)
 hostView
-
-
-

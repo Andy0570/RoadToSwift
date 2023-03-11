@@ -8,6 +8,7 @@ import Unbox
 
 typealias AccessToken = String
 
+/// 获取访问令牌
 struct TwitterAccount {
     static private var key: String = "placeholder"
     static private var secret: String = "placeholder"

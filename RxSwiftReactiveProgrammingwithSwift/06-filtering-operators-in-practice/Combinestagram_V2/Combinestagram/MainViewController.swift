@@ -12,6 +12,7 @@ class MainViewController: UIViewController {
     private let images = BehaviorRelay<[UIImage]>(value: [])
 
     // 存储每张图片的长度（以字节为单位），模拟图片唯一性
+    // 更好的解决方案：存储图像数据的哈希值或者资产URL
     private var imageCache = [Int]()
 
     override func viewDidLoad() {

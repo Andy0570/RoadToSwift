@@ -44,6 +44,7 @@ class MainViewController: UIViewController {
     @IBAction func actionAdd() {
         let photosViewController = storyboard!.instantiateViewController(withIdentifier: "PhotosViewController") as! PhotosViewController
 
+        // 订阅 selectedPhotos 可观察序列，获得回调数据
         photosViewController.selectedPhotos.subscribe { [weak self] newImage in
             guard let images = self?.images else { return }
             images.accept(images.value + [newImage])

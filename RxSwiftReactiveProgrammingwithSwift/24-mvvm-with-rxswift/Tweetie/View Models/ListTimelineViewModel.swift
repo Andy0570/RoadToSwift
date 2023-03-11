@@ -8,11 +8,12 @@ import RxCocoa
 class ListTimelineViewModel {
     private let bag = DisposeBag()
     private let fetcher: TimelineFetcher
+
     let list: ListIdentifier
     let account: Driver<TwitterAccount.AccountStatus>
     
     // MARK: - Input
-    // 一个让你暂停和恢复 TimelineFetcher 的输入属性
+    // 一个让你暂停和恢复 TimelineFetcher 实例获取推文数据的输入属性
     var paused: Bool = false {
         didSet {
             fetcher.paused.accept(paused)

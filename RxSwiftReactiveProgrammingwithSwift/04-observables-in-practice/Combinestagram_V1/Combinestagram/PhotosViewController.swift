@@ -50,7 +50,6 @@ class PhotosViewController: UICollectionViewController {
 
         let asset = photos.object(at: indexPath.item)
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! PhotoCell
-
         cell.representedAssetIdentifier = asset.localIdentifier
         imageManager.requestImage(for: asset, targetSize: thumbnailSize, contentMode: .aspectFill, options: nil, resultHandler: { image, _ in
             if cell.representedAssetIdentifier == asset.localIdentifier {
@@ -68,6 +67,7 @@ class PhotosViewController: UICollectionViewController {
             cell.flash()
         }
 
+        // imageManager.requestImage(...) 获取选中的照片，并在 completion 闭包中提供 image 和 info 参数供你使用
         imageManager.requestImage(for: asset, targetSize: view.frame.size, contentMode: .aspectFill, options: nil, resultHandler: { [weak self] image, info in
             guard let image = image, let info = info else { return }
 

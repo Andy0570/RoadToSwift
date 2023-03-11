@@ -25,7 +25,7 @@ class EONET {
         .sorted(by: EOEvent.compareDates)
     }
 
-    // 通用网络请求方法
+    // 泛型网络请求方法
     static func request<T: Decodable>(endpoint: String, query: [String: Any] = [:], contentIdentifier: String) -> Observable<T> {
         do {
             // 构建网络请求 URL

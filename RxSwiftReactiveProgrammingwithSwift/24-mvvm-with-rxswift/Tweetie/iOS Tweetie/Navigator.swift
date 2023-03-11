@@ -12,7 +12,7 @@ class Navigator {
         case listPeople(Driver<TwitterAccount.AccountStatus>, ListIdentifier)
         case personTimeline(Driver<TwitterAccount.AccountStatus>, username: String)
     }
-
+ 
     // MARK: - invoke a single segue
     func show(segue: Segue, sender: UIViewController) {
         switch segue {
