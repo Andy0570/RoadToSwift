@@ -1,0 +1,109 @@
+# SwiftLint 规则文档: <https://realm.github.io/SwiftLint/rule-directory.html>
+excluded: # 执行 linting 时忽略的路径。优先级比 `included` 更高。
+  - Pods
+  - SeaTao/Generated
+
+disabled_rules: # 关闭某些默认开启的规则
+  - class_delegate_protocol # 委托协议应该只能被 class 类型遵守，以便它们可以被弱引用。
+  - discarded_notification_center_observer
+  - notification_center_detachment # 对象移除通知只能在 deinit 移除 self, 函数中不能 removeObserver(self)
+  - orphaned_doc_comment # 文档注释应附加到声明中
+  - line_length # 限制每行代码的字符长度
+  - type_body_length # 类型正文不应跨越太多行。warning: 200, error: 350
+  - large_tuple # 元组不应该有太多的成员。应该改为创建自定义类型。默认 2 个成员警告，3个成员报错！
+  # - todo # TODO 和 FIXME 注释的代码应该被完善，如果你想抑制这个警告，请使用 'notaTODO' 和 'notaFIXME' 代替
+  # - unused_capture_list # 应删除捕获列表中未使用的引用，如：[weak self]
+  # - unused_closure_parameter # 闭包中未使用的参数应替换为_
+
+opt_in_rules: # 有些规则默认是可选的，需要主动开启
+  - array_init
+  - attributes
+  - closure_end_indentation # 闭包 {} 缩进对齐
+  - closure_spacing # 闭包的 {} 中间要有空格
+  - collection_alignment # 集合中的所有元素都应垂直对齐
+  - colon # promote to error
+  - conditional_returns_on_newline # 条件的 return 语句写在新行
+  - convenience_type # 仅包含静态成员的类型应声明为无值枚举类型，以避免实例化
+  - discouraged_optional_boolean # 不建议使用可选类型的布尔值
+  - discouraged_object_literal # 优先使用对象初始化方法，不建议使用代码块初始化
+  - empty_collection_literal # 使用 isEmpty 判断集合是否为空，而不是与一个空集合作比较
+  - empty_count # 使用 isEmpty 判断数组是否为空，而不是使用 count==0 判断
+  - empty_string # 使用 isEmpty 判断字符串是否为空，而不是实例化一个空字符串来比较
+  - enum_case_associated_values_count
+  - fatal_error_message # 执行 fatalError 错误时，建议有一个提示信息；如:fatalError("Foo")
+  - first_where # 在集合中使用 .first (where:) 而不是 .filter { }.first 来防止在整个集合中迭代，以提高性能
+  - force_unwrapping # 强制解包可选类型
+  # - implicitly_unwrapped_optional # 尽量避免使用隐式解包可选类型
+  # - indentation_width # 代码应使用一个制表符或4个空格缩进
+  - last_where
+  - legacy_random
+  - literal_expression_end_indentation # 字典和数组的开头和结尾要有相同的缩进格式
+  - modifier_order # 约束修饰符的书写顺序
+  # - multiline_parameters # 声明函数和方法时，其参数应该在同一行上，或者每行一个
+  # - multiline_arguments # 调用函数和方法时，其参数应该在同一行上，或者每行一个
+  # - multiline_function_chains # 链式语法规则
+  - multiline_literal_brackets
+  # - multiline_parameters_brackets # 多行参数应该在新行中包含它们的括号
+  # - operator_usage_whitespace # 操作符两边应该有空格，如 let foo = 1 + 2
+  - overridden_super_call # 一些重写的方法应该调用 super (父类的) 方法
+  - pattern_matching_keywords # 在 switch-case 语句中，建议不要将 case 中的 let 和 var 等关键字放到元组内
+  - prefer_self_type_over_type_of_self
+  - redundant_nil_coalescing # 使用可能为为 nil 的可选值时，建议使用空合运算符
+  - redundant_type_annotation # 变量不应该有多余的类型注解
+  - strict_fileprivate # extension 中不建议使用 fileprivate 修饰方法和属性
+  - toggle_bool # 布尔类型取反语法，优先使用 someBool.toggle() 而不是 someBool = !someBool
+  # - trailing_closure # 推荐使用尾随闭包语法
+  - unneeded_parentheses_in_closure_argument # 在定义或使用闭包时，闭包参数不建议使用括号 () 包裹
+  - vertical_whitespace_closing_braces
+  - vertical_whitespace_opening_braces
+  - yoda_condition # 禁用尤达条件语句，执行判断语句时，变量名应该放在运算符的左边
+
+analyzer_rules:
+  - unused_import
+
+# 可配置的规则可以通过这个配置文件来自定义
+# 二进制规则可以设置他们的严格程度
+# 同时有警告和错误等级的规则，可以只设置它的警告等级
+force_cast: warning # 不建议使用强制类型转换 as!
+force_try: warning # 对于可能抛出异常 (throws) 的方法，不建议使用 try! 强解
+function_body_length: # 函数体默认超过40行警告，超过100行报错
+    warning: 60
+
+# 在函数和类型中，属性应该写在单独一行；但与变量和 import 语句应该在同一行
+attributes:
+  always_on_same_line:
+    - "@IBSegueAction"
+    - "@IBAction"
+    - "@NSManaged"
+    - "@objc"
+
+legacy_hashing: error
+
+# 变量命名规则可以设置最小长度和最大程度的警告/错误
+# 此外它们也可以设置排除在外的名字
+identifier_name:
+  excluded:
+    - i
+    - id
+    - _id
+    - x
+    - y
+    - z
+
+# 代码缩进
+# indentation_width:
+#   indentation_width: 4
+#   include_comments: false
+
+# private 比 fileprivate 的私有程度更高
+private_over_fileprivate:
+  validate_extensions: true
+
+# 定义基于正则表达式的自定义规则
+custom_rules:
+  array_constructor: # 规则标识符
+    name: "Array/Dictionary initializer" # 规则名称，可选
+    regex: '[let,var] .+ = (\[.+\]\(\))' # 匹配的模式
+    capture_group: 1
+    message: "Use explicit type annotation when initializing empty arrays and dictionaries"
+    severity: warning # 提示的级别，可选

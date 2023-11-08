@@ -15,7 +15,7 @@ class SuperHeroViewController: UIViewController {
 
     // ListAdapter 的三个属性：
     // updater：处理 row 和 section 的更新，通常我们用默认实现就够了。
-    // viewController： 此属性可用于稍后导航到其他 viewController，它应该是适配器所在的 viewController
+    // viewController： 此属性可用于稍后导航到其他 viewController，它应该是适配器所在的 viewController。
     // workingRangeSize: 工作范围是尚未可见但在屏幕附近的 section controllers 的范围
     private lazy var adapter: ListAdapter = {
         let updater = ListAdapterUpdater()

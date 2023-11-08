@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwifterSwift
 
 class DRHTextFieldViewController: UIViewController {
     @IBOutlet weak var textField: DRHTextFieldWithCharacterCount!
@@ -28,7 +29,7 @@ class DRHTextFieldViewController: UIViewController {
             hoverTextView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
 
-        dismissKeyboardWhenTappedAround()
+        // dismissKeyboardWhenTappedAround()
     }
 }
 

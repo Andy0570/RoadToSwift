@@ -31,6 +31,7 @@ animal
 //    .dumpingSubscription()
 //    .disposed(by: bag)
 
+// !!!: 原始计算在指定的 Thread() {} 线程中
 let animalsThread = Thread() {
     sleep(3)
     animal.onNext("[猫]")
@@ -45,4 +46,5 @@ let animalsThread = Thread() {
 animalsThread.name = "动物线程"
 animalsThread.start()
 
+// 让终端额外存活 13s
 RunLoop.main.run(until: Date(timeIntervalSinceNow: 13))

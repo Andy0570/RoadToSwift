@@ -1,4 +1,4 @@
-// CollectionExtensions.swift - Copyright 2020 SwifterSwift
+// CollectionExtensions.swift - Copyright 2023 SwifterSwift
 
 #if canImport(Dispatch)
 import Dispatch
@@ -40,7 +40,8 @@ public extension Collection {
         return indices.contains(index) ? self[index] : nil
     }
 
-    /// SwifterSwift: Returns an array of slices of length "size" from the array. If array can't be split evenly, the final slice will be the remaining elements.
+    /// SwifterSwift: Returns an array of slices of length "size" from the array. If array can't be split evenly, the
+    /// final slice will be the remaining elements.
     ///
     ///     [0, 2, 4, 7].group(by: 2) -> [[0, 2], [4, 7]]
     ///     [0, 2, 4, 7, 6].group(by: 2) -> [[0, 2], [4, 7], [6]]
@@ -82,9 +83,42 @@ public extension Collection {
     func forEach(slice: Int, body: ([Element]) throws -> Void) rethrows {
         var start = startIndex
         while case let end = index(start, offsetBy: slice, limitedBy: endIndex) ?? endIndex,
-            start != end {
+              start != end {
             try body(Array(self[start..<end]))
             start = end
+        }
+    }
+
+    /// SwifterSwift: Unique pair of elements in a collection.
+    ///
+    ///        let array = [1, 2, 3]
+    ///        for (first, second) in array.adjacentPairs() {
+    ///            print(first, second) // print: (1, 2) (1, 3) (2, 3)
+    ///        }
+    ///
+    ///
+    /// - Returns: a sequence of adjacent pairs of elements from this collection.
+    func adjacentPairs() -> AnySequence<(Element, Element)> {
+        guard var index1 = index(startIndex, offsetBy: 0, limitedBy: endIndex),
+              var index2 = index(index1, offsetBy: 1, limitedBy: endIndex) else {
+            return AnySequence {
+                EmptyCollection.Iterator()
+            }
+        }
+        return AnySequence {
+            AnyIterator {
+                if index1 >= endIndex || index2 >= endIndex {
+                    return nil
+                }
+                defer {
+                    index2 = self.index(after: index2)
+                    if index2 >= endIndex {
+                        index1 = self.index(after: index1)
+                        index2 = self.index(after: index1)
+                    }
+                }
+                return (self[index1], self[index2])
+            }
         }
     }
 }

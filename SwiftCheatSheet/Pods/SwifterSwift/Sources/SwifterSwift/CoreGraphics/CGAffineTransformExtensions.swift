@@ -1,4 +1,4 @@
-// CGAffineTransformExtensions.swift - Copyright 2020 SwifterSwift
+// CGAffineTransformExtensions.swift - Copyright 2023 SwifterSwift
 
 #if canImport(CoreGraphics)
 import CoreGraphics
@@ -13,16 +13,6 @@ public extension CGAffineTransform {
     /// SwifterSwift: Returns a transform with the same effect as the receiver.
     @inlinable
     func transform3D() -> CATransform3D { CATransform3DMakeAffineTransform(self) }
-}
-
-// MARK: - Initializers
-
-public extension CGAffineTransform {
-    /// SwifterSwift: Create 'CGAffineTransform' instance with scale value.
-    /// - Parameter scale: scale value.
-    init(scale: CGFloat) {
-        self.init(scaleX: scale, y: scale)
-    }
 }
 
 #endif

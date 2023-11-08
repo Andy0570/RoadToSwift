@@ -36,7 +36,7 @@ class GradientLabel: UIStackView {
         super.layoutSubviews()
 
         // 添加文字渐变效果
-        let gradientImage = UIImage.gradientImage(bounds: label.bounds, colors: [.systemBlue, .systemRed])
-        label.textColor = UIColor(patternImage: gradientImage)
+//        let gradientImage = UIImage.gradientImage(bounds: label.bounds, colors: [.systemBlue, .systemRed])
+//        label.textColor = UIColor(patternImage: gradientImage)
     }
 }

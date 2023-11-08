@@ -115,7 +115,7 @@ extension ModeratorsListViewController: ModeratorsViewModelDelegate {
         indicatorView.stopAnimating()
 
         // SwifterSwift/UIViewControllerExtensions.swift
-        showToast(message: "Warning", font: UIFont.systemFont(ofSize: 13), toastColor: UIColor.black, toastBackground: UIColor(white: 1.0, alpha: 0.8))
+        // showToast(message: "Warning", font: UIFont.systemFont(ofSize: 13), toastColor: UIColor.black, toastBackground: UIColor(white: 1.0, alpha: 0.8))
     }
 }
 

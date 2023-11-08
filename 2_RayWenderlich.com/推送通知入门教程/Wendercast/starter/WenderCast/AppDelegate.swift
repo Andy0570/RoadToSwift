@@ -34,9 +34,10 @@ import SafariServices
 import UIKit
 import UserNotifications
 
+// 在注册通知时，使用 categories 来定义可操作通知
 enum Identifiers {
-    static let viewAction = "VIEW_IDENTIFIER"
-    static let newsCategory = "NEWS_CATEGORY"
+    static let newsCategory = "NEWS_CATEGORY" // 自定义类别
+    static let viewAction = "VIEW_IDENTIFIER" // 自定义名为“查看”的操作
 }
 
 @UIApplicationMain
@@ -76,28 +77,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func registerForPushNotifications() {
         // 1. 注册推送通知，向用户请求通知权限
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { [weak self] (granted, _) in
-            print("Perission granted: \(granted)");
-            
-            guard granted else { return }
-            
-            // 1 创建一个新的通知动作，标题为 "View" 按钮，当被触发时就会在前台打开应用程序。
-            // 该动作有一个唯一标识符，iOS 用它来区分同一个通知上的其他动作。
-            let viewAction = UNNotificationAction(identifier: Identifiers.viewAction,
-                                                  title: "View",
-                                                  options: [.foreground])
-            
-            // 2 定义新闻类别，它将包含动作按钮。这也有一个独特的标识符，您的有效载荷将需要包含该标识符，以指定推送通知属于该类别。
-            let newCategory = UNNotificationCategory(identifier: Identifiers.newsCategory,
-                                                     actions: [viewAction],
-                                                     intentIdentifiers: [],
-                                                     options: [])
-            
-            // 3 通过调用 setNotificationCategories 来注册新的可操作通知。
-            UNUserNotificationCenter.current().setNotificationCategories([newCategory])
-            
-            self?.getNotificationSettings()
-        }
+        UNUserNotificationCenter.current()
+            .requestAuthorization(options: [.alert, .sound, .badge]) { [weak self] (granted, _) in
+                print("Perission granted: \(granted)");
+
+                guard granted else { return }
+
+                // !!!: 定义“可操作通知”的行为
+                // 1 创建一个新的通知动作，标题为 "View" 按钮，当被触发时就会在前台打开应用程序。
+                // 该动作有一个唯一标识符，iOS 用它来区分同一个通知上的其他动作。
+                let viewAction = UNNotificationAction(identifier: Identifiers.viewAction,
+                                                      title: "View",
+                                                      options: [.foreground])
+
+                // 2 定义新闻类别，它将包含动作按钮。这也有一个独特的标识符，您的有效载荷将需要包含该标识符，以指定推送通知属于该类别。
+                let newCategory = UNNotificationCategory(identifier: Identifiers.newsCategory,
+                                                         actions: [viewAction],
+                                                         intentIdentifiers: [],
+                                                         options: [])
+
+                // 3 通过调用 setNotificationCategories 来注册新的可操作通知。
+                UNUserNotificationCenter.current().setNotificationCategories([newCategory])
+
+                self?.getNotificationSettings()
+            }
     }
     
     // 获取通知设置
@@ -133,7 +136,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return
         }
         
-        // 1. 检查 `content-available` 值是否为 1，如果是，这是一个静默通知标志。
+        // 1. 检查 `content-available` 值是否为 1，如果是，这是一个「静默通知」标志。
         if aps["content-available"] as? Int == 1 {
             let podcastStore = PodcastStore.sharedStore
             // 2. 刷新播客列表，这是一个异步网络调用。

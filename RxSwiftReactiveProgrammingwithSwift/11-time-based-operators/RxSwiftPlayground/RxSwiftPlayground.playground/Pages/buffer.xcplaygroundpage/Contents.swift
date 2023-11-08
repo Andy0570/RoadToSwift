@@ -1,3 +1,4 @@
+// 如果这一行报错，请先编译一遍 RxCocoa 组件！
 import RxCocoa
 import UIKit
 import RxSwift
@@ -56,6 +57,6 @@ hostView
 //}
 
 let elementsPerSecond = 0.7
-let timer = DispatchSource.timer(interval: 1.0 /
-Double(elementsPerSecond), queue: .main) {
-sourceObservable.onNext("🐱") }
+let timer = DispatchSource.timer(interval: 1.0 / Double(elementsPerSecond), queue: .main) {
+    sourceObservable.onNext("🐱")
+}

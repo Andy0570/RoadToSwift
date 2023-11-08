@@ -1,3 +1,4 @@
+import Foundation
 import Alamofire
 
 /// 自定义请求拦截器，在请求中添加 Authorization 授权头信息

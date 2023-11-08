@@ -2,6 +2,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+// !!!: 本 Demo 演示 RxSwift 中的 “组合操作符”
 class CategoriesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var tableView: UITableView!
@@ -55,6 +56,7 @@ class CategoriesViewController: UIViewController, UITableViewDataSource, UITable
          let updatedCategories = Observable.combineLatest(eoCategories, downloadedEvents) { (categories, events) -> [EOCategory] in
          return categories.map { category in
          var cat = category
+         // 把下载的事件添加到每个类别中
          cat.events = events.filter {
          $0.categories.contains(where: { $0.id == category.id })
          }
@@ -73,7 +75,8 @@ class CategoriesViewController: UIViewController, UITableViewDataSource, UITable
             .merge(maxConcurrent: 2) // 限制网络请求并发数量
 
 //        let updatedCategories = eoCategories.flatMap { categories in
-//            // 每次源可观察序列（downloadedEvents）发出一个元素时，scan(_:accumulator:) 都会调用你的闭包
+//            // 每次包含事件的源可观察序列（downloadedEvents）发出一个元素时，scan(_:accumulator:) 都会调用你的闭包
+//            // 每当一组新的事件到来时，scan就会发出一个类别更新
 //            downloadedEvents.scan(categories) { updated, events in
 //                return updated.map { category in
 //                    let eventsForCategory = EONET.filteredEvents(events: events, forCategory: category)

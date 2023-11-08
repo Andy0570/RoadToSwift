@@ -9,6 +9,9 @@
 import RxSwift
 import RxCocoa
 
+/**
+ 参考：<https://medium.com/@goktuggumus/getting-started-with-rxswift-and-rxcocoa-5534cf2902b7>
+ */
 class LoginViewController: UIViewController {
     @IBOutlet private weak var emailTextfield: UITextField!
     @IBOutlet private weak var passwordTextfield: UITextField!

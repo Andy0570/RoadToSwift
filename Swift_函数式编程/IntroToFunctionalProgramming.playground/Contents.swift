@@ -1,6 +1,6 @@
 /**
  Swift 函数式编程简介
- 参考：<https://www.raywenderlich.com/9222-an-introduction-to-functional-programming-in-swift>
+ 参考：<https://www.kodeco.com/9222-an-introduction-to-functional-programming-in-swift>
  */
 
 import Foundation

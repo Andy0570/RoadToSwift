@@ -7,7 +7,8 @@ class EONET {
     static let API = "https://eonet.gsfc.nasa.gov/api/v2.1"
     static let categoriesEndpoint = "/categories"
     static let eventsEndpoint = "/events"
-    
+
+    // 创建 JSONDecoder 实例的静态方法，用于解析网络请求响应数据
     static func jsonDecoder(contentIdentifier: String) -> JSONDecoder {
         let decoder = JSONDecoder()
         decoder.userInfo[.contentIdentifier] = contentIdentifier
@@ -47,7 +48,7 @@ class EONET {
             // 发起网络请求，URLSession 的 rx.response 从请求结果中创建可观察序列
             let request = URLRequest(url: finalURL)
             return URLSession.shared.rx.response(request: request).map { (response: HTTPURLResponse, data: Data) -> T in
-                // 将数据解码为模型
+                // 将数据解码为 EOEnvelope 模型
                 let decoder = self.jsonDecoder(contentIdentifier: contentIdentifier)
                 let envelope = try decoder.decode(EOEnvelope<T>.self, from: data)
                 return envelope.content
@@ -58,9 +59,9 @@ class EONET {
         }
     }
 
-    // 由于类别很少变化，因此这里设计成一个单例
+    // 获取 EONET 中的“事件类别”集合，由于类别很少变化，因此这里设计成一个单例（static var）
     static var categories: Observable<[EOCategory]> = {
-        // 从 categories API 端点请求获取数据
+        // 从 categories 端点请求获取数据
         let request: Observable<[EOCategory]> = EONET.request(endpoint: categoriesEndpoint, contentIdentifier: "categories")
 
         return request
@@ -79,8 +80,8 @@ class EONET {
         // concat() 会按时间先后次序发起两个网络请求（顺序下载），第一个请求返回后才会发起第二个请求。
         // return openEvents.concat(closedEvents)
 
-        // 优化：并行下载任务
-        return Observable.of(openEvents, closedEvents) // 创建一个包含可观察序列的可观察序列
+        // !!!: 优化：并行下载
+        return Observable.of(openEvents, closedEvents) // 创建一个（包含可观察序列的）可观察序列
             .merge() // merge() 接收一个包含可观察变量的可观察序列。它订阅了由源可观察序列发射的每个可观察序列，并转发所有发射的元素。
             .reduce([]) { running, new in // 把结果还原成一个数组。[] 表示初始值，从一个空数组开始。
                 running + new

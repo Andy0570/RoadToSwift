@@ -64,13 +64,20 @@ JPL (喷气推进实验室，Jet Propulsion Laboratory) 的工程师们需要用
 
 ![](https://koenig-media.raywenderlich.com/uploads/2016/11/flowchart-650x357.png)
 
+架构解读：
+
+* Adapter 适配器获取数据，根据不同的数据类型创建 Section Controller；
+* Section Controller 是一对多关系，我们需要在 Section Controller 中创建 Cell 实例、将 Cell 与模型绑定；
+
+
+
 IGListKit 会自动对你的对象进行差异化处理，并对 `UICollectionView` 中的任何变化进行批量动画更新。这样一来，你就不必自己实现批量更新（batch update）代码，避免了注意事项中列出的问题。
 
 
 
 ## 将 IGListKit 添加到 UICollectionView 中
 
-IGListKit 负责所有识别 collection 变更，并以动画方式刷新对应的 row 行。它还能够轻易处理针对不同的 section 使用不同的 data 和 UI 的情况。考虑到这一点，它是满足最新需求的完美解决方案——让我们开始吧。
+IGListKit 负责识别所有 collection 变更，并以动画方式刷新对应的 row 行。它还能够轻易处理针对不同的 section 使用不同的 data 和 UI 的情况。考虑到这一点，它是满足最新需求的完美解决方案——让我们开始吧。
 
 在 `Marslink.xcworkspace` 仍然打开的情况下，右击 `ViewControllers` 文件夹，选择**New File**。添加一个新的 Cocoa Touch 类，它是 `UIViewController` 的子类，并命名为`FeedViewController`，确保编程语言为 `Swift`。
 

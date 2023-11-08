@@ -4,2437 +4,652 @@
 //
 
 import Foundation
-import Rswift
+import RswiftResources
 import UIKit
 
-/// This `R` struct is generated and contains references to static resources.
-struct R: Rswift.Validatable {
-  fileprivate static let applicationLocale = hostingBundle.preferredLocalizations.first.flatMap { Locale(identifier: $0) } ?? Locale.current
-  fileprivate static let hostingBundle = Bundle(for: R.Class.self)
+private class BundleFinder {}
+let R = _R(bundle: Bundle(for: BundleFinder.self))
 
-  /// Find first language and bundle for which the table exists
-  fileprivate static func localeBundle(tableName: String, preferredLanguages: [String]) -> (Foundation.Locale, Foundation.Bundle)? {
-    // Filter preferredLanguages to localizations, use first locale
-    var languages = preferredLanguages
-      .map { Locale(identifier: $0) }
-      .prefix(1)
-      .flatMap { locale -> [String] in
-        if hostingBundle.localizations.contains(locale.identifier) {
-          if let language = locale.languageCode, hostingBundle.localizations.contains(language) {
-            return [locale.identifier, language]
-          } else {
-            return [locale.identifier]
-          }
-        } else if let language = locale.languageCode, hostingBundle.localizations.contains(language) {
-          return [language]
-        } else {
-          return []
-        }
-      }
+struct _R {
+  let bundle: Foundation.Bundle
+  var color: color { .init(bundle: bundle) }
+  var image: image { .init(bundle: bundle) }
+  var info: info { .init(bundle: bundle) }
+  var file: file { .init(bundle: bundle) }
+  var nib: nib { .init(bundle: bundle) }
+  var storyboard: storyboard { .init(bundle: bundle) }
 
-    // If there's no languages, use development language as backstop
-    if languages.isEmpty {
-      if let developmentLocalization = hostingBundle.developmentLocalization {
-        languages = [developmentLocalization]
-      }
-    } else {
-      // Insert Base as second item (between locale identifier and languageCode)
-      languages.insert("Base", at: 1)
-
-      // Add development language as backstop
-      if let developmentLocalization = hostingBundle.developmentLocalization {
-        languages.append(developmentLocalization)
-      }
-    }
-
-    // Find first language for which table exists
-    // Note: key might not exist in chosen language (in that case, key will be shown)
-    for language in languages {
-      if let lproj = hostingBundle.url(forResource: language, withExtension: "lproj"),
-         let lbundle = Bundle(url: lproj)
-      {
-        let strings = lbundle.url(forResource: tableName, withExtension: "strings")
-        let stringsdict = lbundle.url(forResource: tableName, withExtension: "stringsdict")
-
-        if strings != nil || stringsdict != nil {
-          return (Locale(identifier: language), lbundle)
-        }
-      }
-    }
-
-    // If table is available in main bundle, don't look for localized resources
-    let strings = hostingBundle.url(forResource: tableName, withExtension: "strings", subdirectory: nil, localization: nil)
-    let stringsdict = hostingBundle.url(forResource: tableName, withExtension: "stringsdict", subdirectory: nil, localization: nil)
-
-    if strings != nil || stringsdict != nil {
-      return (applicationLocale, hostingBundle)
-    }
-
-    // If table is not found for requested languages, key will be shown
-    return nil
+  func color(bundle: Foundation.Bundle) -> color {
+    .init(bundle: bundle)
+  }
+  func image(bundle: Foundation.Bundle) -> image {
+    .init(bundle: bundle)
+  }
+  func info(bundle: Foundation.Bundle) -> info {
+    .init(bundle: bundle)
+  }
+  func file(bundle: Foundation.Bundle) -> file {
+    .init(bundle: bundle)
+  }
+  func nib(bundle: Foundation.Bundle) -> nib {
+    .init(bundle: bundle)
+  }
+  func storyboard(bundle: Foundation.Bundle) -> storyboard {
+    .init(bundle: bundle)
+  }
+  func validate() throws {
+    try self.nib.validate()
+    try self.storyboard.validate()
   }
 
-  /// Load string from Info.plist file
-  fileprivate static func infoPlistString(path: [String], key: String) -> String? {
-    var dict = hostingBundle.infoDictionary
-    for step in path {
-      guard let obj = dict?[step] as? [String: Any] else { return nil }
-      dict = obj
-    }
-    return dict?[key] as? String
+  struct project {
+    let developmentRegion = "en"
   }
 
-  static func validate() throws {
-    try intern.validate()
-  }
-
-  #if os(iOS) || os(tvOS)
-  /// This `R.storyboard` struct is generated, and contains static references to 2 storyboards.
-  struct storyboard {
-    /// Storyboard `LaunchScreen`.
-    static let launchScreen = _R.storyboard.launchScreen()
-    /// Storyboard `Main`.
-    static let main = _R.storyboard.main()
-
-    #if os(iOS) || os(tvOS)
-    /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
-    static func launchScreen(_: Void = ()) -> UIKit.UIStoryboard {
-      return UIKit.UIStoryboard(resource: R.storyboard.launchScreen)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIStoryboard(name: "Main", bundle: ...)`
-    static func main(_: Void = ()) -> UIKit.UIStoryboard {
-      return UIKit.UIStoryboard(resource: R.storyboard.main)
-    }
-    #endif
-
-    fileprivate init() {}
-  }
-  #endif
-
-  /// This `R.color` struct is generated, and contains static references to 5 colors.
+  /// This `_R.color` struct is generated, and contains static references to 5 colors.
   struct color {
+    let bundle: Foundation.Bundle
+
     /// Color `AccentColor`.
-    static let accentColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "AccentColor")
+    var accentColor: RswiftResources.ColorResource { .init(name: "AccentColor", path: [], bundle: bundle) }
+
     /// Color `AuteursBackground`.
-    static let auteursBackground = Rswift.ColorResource(bundle: R.hostingBundle, name: "AuteursBackground")
+    var auteursBackground: RswiftResources.ColorResource { .init(name: "AuteursBackground", path: [], bundle: bundle) }
+
     /// Color `rw-dark`.
-    static let rwDark = Rswift.ColorResource(bundle: R.hostingBundle, name: "rw-dark")
+    var rwDark: RswiftResources.ColorResource { .init(name: "rw-dark", path: [], bundle: bundle) }
+
     /// Color `rw-green`.
-    static let rwGreen = Rswift.ColorResource(bundle: R.hostingBundle, name: "rw-green")
+    var rwGreen: RswiftResources.ColorResource { .init(name: "rw-green", path: [], bundle: bundle) }
+
     /// Color `rw-light`.
-    static let rwLight = Rswift.ColorResource(bundle: R.hostingBundle, name: "rw-light")
-
-    #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "AccentColor", bundle: ..., traitCollection: ...)`
-    @available(tvOS 11.0, *)
-    @available(iOS 11.0, *)
-    static func accentColor(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.accentColor, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "AuteursBackground", bundle: ..., traitCollection: ...)`
-    @available(tvOS 11.0, *)
-    @available(iOS 11.0, *)
-    static func auteursBackground(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.auteursBackground, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "rw-dark", bundle: ..., traitCollection: ...)`
-    @available(tvOS 11.0, *)
-    @available(iOS 11.0, *)
-    static func rwDark(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.rwDark, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "rw-green", bundle: ..., traitCollection: ...)`
-    @available(tvOS 11.0, *)
-    @available(iOS 11.0, *)
-    static func rwGreen(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.rwGreen, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "rw-light", bundle: ..., traitCollection: ...)`
-    @available(tvOS 11.0, *)
-    @available(iOS 11.0, *)
-    static func rwLight(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.rwLight, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(watchOS)
-    /// `UIColor(named: "AccentColor", bundle: ..., traitCollection: ...)`
-    @available(watchOSApplicationExtension 4.0, *)
-    static func accentColor(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.accentColor.name)
-    }
-    #endif
-
-    #if os(watchOS)
-    /// `UIColor(named: "AuteursBackground", bundle: ..., traitCollection: ...)`
-    @available(watchOSApplicationExtension 4.0, *)
-    static func auteursBackground(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.auteursBackground.name)
-    }
-    #endif
-
-    #if os(watchOS)
-    /// `UIColor(named: "rw-dark", bundle: ..., traitCollection: ...)`
-    @available(watchOSApplicationExtension 4.0, *)
-    static func rwDark(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.rwDark.name)
-    }
-    #endif
-
-    #if os(watchOS)
-    /// `UIColor(named: "rw-green", bundle: ..., traitCollection: ...)`
-    @available(watchOSApplicationExtension 4.0, *)
-    static func rwGreen(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.rwGreen.name)
-    }
-    #endif
-
-    #if os(watchOS)
-    /// `UIColor(named: "rw-light", bundle: ..., traitCollection: ...)`
-    @available(watchOSApplicationExtension 4.0, *)
-    static func rwLight(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.rwLight.name)
-    }
-    #endif
-
-    fileprivate init() {}
+    var rwLight: RswiftResources.ColorResource { .init(name: "rw-light", path: [], bundle: bundle) }
   }
 
-  /// This `R.file` struct is generated, and contains static references to 4 files.
-  struct file {
-    /// Resource file `albums.json`.
-    static let albumsJson = Rswift.FileResource(bundle: R.hostingBundle, name: "albums", pathExtension: "json")
-    /// Resource file `auteurs.json`.
-    static let auteursJson = Rswift.FileResource(bundle: R.hostingBundle, name: "auteurs", pathExtension: "json")
-    /// Resource file `content.json`.
-    static let contentJson = Rswift.FileResource(bundle: R.hostingBundle, name: "content", pathExtension: "json")
-    /// Resource file `homepage.json`.
-    static let homepageJson = Rswift.FileResource(bundle: R.hostingBundle, name: "homepage", pathExtension: "json")
-
-    /// `bundle.url(forResource: "albums", withExtension: "json")`
-    static func albumsJson(_: Void = ()) -> Foundation.URL? {
-      let fileResource = R.file.albumsJson
-      return fileResource.bundle.url(forResource: fileResource)
-    }
-
-    /// `bundle.url(forResource: "auteurs", withExtension: "json")`
-    static func auteursJson(_: Void = ()) -> Foundation.URL? {
-      let fileResource = R.file.auteursJson
-      return fileResource.bundle.url(forResource: fileResource)
-    }
-
-    /// `bundle.url(forResource: "content", withExtension: "json")`
-    static func contentJson(_: Void = ()) -> Foundation.URL? {
-      let fileResource = R.file.contentJson
-      return fileResource.bundle.url(forResource: fileResource)
-    }
-
-    /// `bundle.url(forResource: "homepage", withExtension: "json")`
-    static func homepageJson(_: Void = ()) -> Foundation.URL? {
-      let fileResource = R.file.homepageJson
-      return fileResource.bundle.url(forResource: fileResource)
-    }
-
-    fileprivate init() {}
-  }
-
-  /// This `R.image` struct is generated, and contains static references to 109 images.
+  /// This `_R.image` struct is generated, and contains static references to 109 images.
   struct image {
+    let bundle: Foundation.Bundle
+
     /// Image `Checkmark`.
-    static let checkmark = Rswift.ImageResource(bundle: R.hostingBundle, name: "Checkmark")
+    var checkmark: RswiftResources.ImageResource { .init(name: "Checkmark", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `Download`.
-    static let download = Rswift.ImageResource(bundle: R.hostingBundle, name: "Download")
+    var download: RswiftResources.ImageResource { .init(name: "Download", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `HighlightedOval`.
-    static let highlightedOval = Rswift.ImageResource(bundle: R.hostingBundle, name: "HighlightedOval")
+    var highlightedOval: RswiftResources.ImageResource { .init(name: "HighlightedOval", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `HighlightedRect`.
-    static let highlightedRect = Rswift.ImageResource(bundle: R.hostingBundle, name: "HighlightedRect")
+    var highlightedRect: RswiftResources.ImageResource { .init(name: "HighlightedRect", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `Oval`.
-    static let oval = Rswift.ImageResource(bundle: R.hostingBundle, name: "Oval")
+    var oval: RswiftResources.ImageResource { .init(name: "Oval", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `RectThumb`.
-    static let rectThumb = Rswift.ImageResource(bundle: R.hostingBundle, name: "RectThumb")
-    /// Image `background_Bayleaf`.
-    static let background_Bayleaf = Rswift.ImageResource(bundle: R.hostingBundle, name: "background_Bayleaf")
+    var rectThumb: RswiftResources.ImageResource { .init(name: "RectThumb", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `background`.
-    static let background = Rswift.ImageResource(bundle: R.hostingBundle, name: "background")
-    /// Image `blackKlansmanBig`.
-    static let blackKlansmanBig = Rswift.ImageResource(bundle: R.hostingBundle, name: "blackKlansmanBig")
+    var background: RswiftResources.ImageResource { .init(name: "background", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `background_Bayleaf`.
+    var background_Bayleaf: RswiftResources.ImageResource { .init(name: "background_Bayleaf", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `blackKlansman`.
-    static let blackKlansman = Rswift.ImageResource(bundle: R.hostingBundle, name: "blackKlansman")
+    var blackKlansman: RswiftResources.ImageResource { .init(name: "blackKlansman", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `blackKlansmanBig`.
+    var blackKlansmanBig: RswiftResources.ImageResource { .init(name: "blackKlansmanBig", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `brightStar`.
-    static let brightStar = Rswift.ImageResource(bundle: R.hostingBundle, name: "brightStar")
+    var brightStar: RswiftResources.ImageResource { .init(name: "brightStar", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `budapestHotel`.
-    static let budapestHotel = Rswift.ImageResource(bundle: R.hostingBundle, name: "budapestHotel")
+    var budapestHotel: RswiftResources.ImageResource { .init(name: "budapestHotel", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `candle`.
-    static let candle = Rswift.ImageResource(bundle: R.hostingBundle, name: "candle")
+    var candle: RswiftResources.ImageResource { .init(name: "candle", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `cat`.
-    static let cat = Rswift.ImageResource(bundle: R.hostingBundle, name: "cat")
+    var cat: RswiftResources.ImageResource { .init(name: "cat", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `confetti0`.
-    static let confetti0 = Rswift.ImageResource(bundle: R.hostingBundle, name: "confetti0")
+    var confetti0: RswiftResources.ImageResource { .init(name: "confetti0", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `confetti1`.
-    static let confetti1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "confetti1")
+    var confetti1: RswiftResources.ImageResource { .init(name: "confetti1", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `confetti2`.
-    static let confetti2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "confetti2")
+    var confetti2: RswiftResources.ImageResource { .init(name: "confetti2", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `confetti3`.
-    static let confetti3 = Rswift.ImageResource(bundle: R.hostingBundle, name: "confetti3")
+    var confetti3: RswiftResources.ImageResource { .init(name: "confetti3", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `confetti4`.
-    static let confetti4 = Rswift.ImageResource(bundle: R.hostingBundle, name: "confetti4")
+    var confetti4: RswiftResources.ImageResource { .init(name: "confetti4", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `confetti5`.
-    static let confetti5 = Rswift.ImageResource(bundle: R.hostingBundle, name: "confetti5")
+    var confetti5: RswiftResources.ImageResource { .init(name: "confetti5", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `davidCronenberg`.
-    static let davidCronenberg = Rswift.ImageResource(bundle: R.hostingBundle, name: "davidCronenberg")
+    var davidCronenberg: RswiftResources.ImageResource { .init(name: "davidCronenberg", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `departed`.
-    static let departed = Rswift.ImageResource(bundle: R.hostingBundle, name: "departed")
+    var departed: RswiftResources.ImageResource { .init(name: "departed", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `doTheRightThing`.
-    static let doTheRightThing = Rswift.ImageResource(bundle: R.hostingBundle, name: "doTheRightThing")
+    var doTheRightThing: RswiftResources.ImageResource { .init(name: "doTheRightThing", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `dribbble`.
-    static let dribbble = Rswift.ImageResource(bundle: R.hostingBundle, name: "dribbble")
+    var dribbble: RswiftResources.ImageResource { .init(name: "dribbble", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `escapeNewYork`.
-    static let escapeNewYork = Rswift.ImageResource(bundle: R.hostingBundle, name: "escapeNewYork")
+    var escapeNewYork: RswiftResources.ImageResource { .init(name: "escapeNewYork", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `estonia`.
-    static let estonia = Rswift.ImageResource(bundle: R.hostingBundle, name: "estonia")
+    var estonia: RswiftResources.ImageResource { .init(name: "estonia", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `existenz`.
-    static let existenz = Rswift.ImageResource(bundle: R.hostingBundle, name: "existenz")
+    var existenz: RswiftResources.ImageResource { .init(name: "existenz", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `feature-bg`.
-    static let featureBg = Rswift.ImageResource(bundle: R.hostingBundle, name: "feature-bg")
-    /// Image `fluidPhoto10`.
-    static let fluidPhoto10 = Rswift.ImageResource(bundle: R.hostingBundle, name: "fluidPhoto10")
-    /// Image `fluidPhoto11`.
-    static let fluidPhoto11 = Rswift.ImageResource(bundle: R.hostingBundle, name: "fluidPhoto11")
-    /// Image `fluidPhoto12`.
-    static let fluidPhoto12 = Rswift.ImageResource(bundle: R.hostingBundle, name: "fluidPhoto12")
-    /// Image `fluidPhoto13`.
-    static let fluidPhoto13 = Rswift.ImageResource(bundle: R.hostingBundle, name: "fluidPhoto13")
-    /// Image `fluidPhoto14`.
-    static let fluidPhoto14 = Rswift.ImageResource(bundle: R.hostingBundle, name: "fluidPhoto14")
-    /// Image `fluidPhoto15`.
-    static let fluidPhoto15 = Rswift.ImageResource(bundle: R.hostingBundle, name: "fluidPhoto15")
-    /// Image `fluidPhoto16`.
-    static let fluidPhoto16 = Rswift.ImageResource(bundle: R.hostingBundle, name: "fluidPhoto16")
-    /// Image `fluidPhoto17`.
-    static let fluidPhoto17 = Rswift.ImageResource(bundle: R.hostingBundle, name: "fluidPhoto17")
-    /// Image `fluidPhoto18`.
-    static let fluidPhoto18 = Rswift.ImageResource(bundle: R.hostingBundle, name: "fluidPhoto18")
+    var featureBg: RswiftResources.ImageResource { .init(name: "feature-bg", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `fluidPhoto1`.
-    static let fluidPhoto1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "fluidPhoto1")
+    var fluidPhoto1: RswiftResources.ImageResource { .init(name: "fluidPhoto1", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `fluidPhoto10`.
+    var fluidPhoto10: RswiftResources.ImageResource { .init(name: "fluidPhoto10", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `fluidPhoto11`.
+    var fluidPhoto11: RswiftResources.ImageResource { .init(name: "fluidPhoto11", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `fluidPhoto12`.
+    var fluidPhoto12: RswiftResources.ImageResource { .init(name: "fluidPhoto12", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `fluidPhoto13`.
+    var fluidPhoto13: RswiftResources.ImageResource { .init(name: "fluidPhoto13", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `fluidPhoto14`.
+    var fluidPhoto14: RswiftResources.ImageResource { .init(name: "fluidPhoto14", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `fluidPhoto15`.
+    var fluidPhoto15: RswiftResources.ImageResource { .init(name: "fluidPhoto15", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `fluidPhoto16`.
+    var fluidPhoto16: RswiftResources.ImageResource { .init(name: "fluidPhoto16", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `fluidPhoto17`.
+    var fluidPhoto17: RswiftResources.ImageResource { .init(name: "fluidPhoto17", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `fluidPhoto18`.
+    var fluidPhoto18: RswiftResources.ImageResource { .init(name: "fluidPhoto18", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `fluidPhoto2`.
-    static let fluidPhoto2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "fluidPhoto2")
+    var fluidPhoto2: RswiftResources.ImageResource { .init(name: "fluidPhoto2", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `fluidPhoto3`.
-    static let fluidPhoto3 = Rswift.ImageResource(bundle: R.hostingBundle, name: "fluidPhoto3")
+    var fluidPhoto3: RswiftResources.ImageResource { .init(name: "fluidPhoto3", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `fluidPhoto4`.
-    static let fluidPhoto4 = Rswift.ImageResource(bundle: R.hostingBundle, name: "fluidPhoto4")
+    var fluidPhoto4: RswiftResources.ImageResource { .init(name: "fluidPhoto4", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `fluidPhoto5`.
-    static let fluidPhoto5 = Rswift.ImageResource(bundle: R.hostingBundle, name: "fluidPhoto5")
+    var fluidPhoto5: RswiftResources.ImageResource { .init(name: "fluidPhoto5", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `fluidPhoto6`.
-    static let fluidPhoto6 = Rswift.ImageResource(bundle: R.hostingBundle, name: "fluidPhoto6")
+    var fluidPhoto6: RswiftResources.ImageResource { .init(name: "fluidPhoto6", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `fluidPhoto7`.
-    static let fluidPhoto7 = Rswift.ImageResource(bundle: R.hostingBundle, name: "fluidPhoto7")
+    var fluidPhoto7: RswiftResources.ImageResource { .init(name: "fluidPhoto7", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `fluidPhoto8`.
-    static let fluidPhoto8 = Rswift.ImageResource(bundle: R.hostingBundle, name: "fluidPhoto8")
+    var fluidPhoto8: RswiftResources.ImageResource { .init(name: "fluidPhoto8", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `fluidPhoto9`.
-    static let fluidPhoto9 = Rswift.ImageResource(bundle: R.hostingBundle, name: "fluidPhoto9")
+    var fluidPhoto9: RswiftResources.ImageResource { .init(name: "fluidPhoto9", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `france`.
-    static let france = Rswift.ImageResource(bundle: R.hostingBundle, name: "france")
+    var france: RswiftResources.ImageResource { .init(name: "france", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `germany`.
-    static let germany = Rswift.ImageResource(bundle: R.hostingBundle, name: "germany")
+    var germany: RswiftResources.ImageResource { .init(name: "germany", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `ghost`.
-    static let ghost = Rswift.ImageResource(bundle: R.hostingBundle, name: "ghost")
+    var ghost: RswiftResources.ImageResource { .init(name: "ghost", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `goodfellas`.
-    static let goodfellas = Rswift.ImageResource(bundle: R.hostingBundle, name: "goodfellas")
+    var goodfellas: RswiftResources.ImageResource { .init(name: "goodfellas", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `halloween`.
-    static let halloween = Rswift.ImageResource(bundle: R.hostingBundle, name: "halloween")
+    var halloween: RswiftResources.ImageResource { .init(name: "halloween", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `hat`.
-    static let hat = Rswift.ImageResource(bundle: R.hostingBundle, name: "hat")
+    var hat: RswiftResources.ImageResource { .init(name: "hat", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `heart`.
-    static let heart = Rswift.ImageResource(bundle: R.hostingBundle, name: "heart")
+    var heart: RswiftResources.ImageResource { .init(name: "heart", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `holySmoke`.
-    static let holySmoke = Rswift.ImageResource(bundle: R.hostingBundle, name: "holySmoke")
+    var holySmoke: RswiftResources.ImageResource { .init(name: "holySmoke", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `ic_backpack`.
-    static let ic_backpack = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_backpack")
+    var ic_backpack: RswiftResources.ImageResource { .init(name: "ic_backpack", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `ic_book`.
-    static let ic_book = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_book")
+    var ic_book: RswiftResources.ImageResource { .init(name: "ic_book", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `ic_camera`.
-    static let ic_camera = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_camera")
+    var ic_camera: RswiftResources.ImageResource { .init(name: "ic_camera", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `ic_coffee`.
-    static let ic_coffee = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_coffee")
+    var ic_coffee: RswiftResources.ImageResource { .init(name: "ic_coffee", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `ic_glasses`.
-    static let ic_glasses = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_glasses")
+    var ic_glasses: RswiftResources.ImageResource { .init(name: "ic_glasses", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `ic_ice_cream`.
-    static let ic_ice_cream = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_ice_cream")
+    var ic_ice_cream: RswiftResources.ImageResource { .init(name: "ic_ice_cream", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `ic_smoking_pipe`.
-    static let ic_smoking_pipe = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_smoking_pipe")
+    var ic_smoking_pipe: RswiftResources.ImageResource { .init(name: "ic_smoking_pipe", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `ic_vespa`.
-    static let ic_vespa = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_vespa")
+    var ic_vespa: RswiftResources.ImageResource { .init(name: "ic_vespa", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `inTheCut`.
-    static let inTheCut = Rswift.ImageResource(bundle: R.hostingBundle, name: "inTheCut")
+    var inTheCut: RswiftResources.ImageResource { .init(name: "inTheCut", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `ireland`.
-    static let ireland = Rswift.ImageResource(bundle: R.hostingBundle, name: "ireland")
+    var ireland: RswiftResources.ImageResource { .init(name: "ireland", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `italy`.
-    static let italy = Rswift.ImageResource(bundle: R.hostingBundle, name: "italy")
+    var italy: RswiftResources.ImageResource { .init(name: "italy", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `janeCampion`.
-    static let janeCampion = Rswift.ImageResource(bundle: R.hostingBundle, name: "janeCampion")
+    var janeCampion: RswiftResources.ImageResource { .init(name: "janeCampion", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `johnCarpenter`.
-    static let johnCarpenter = Rswift.ImageResource(bundle: R.hostingBundle, name: "johnCarpenter")
+    var johnCarpenter: RswiftResources.ImageResource { .init(name: "johnCarpenter", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `jungleFever`.
-    static let jungleFever = Rswift.ImageResource(bundle: R.hostingBundle, name: "jungleFever")
+    var jungleFever: RswiftResources.ImageResource { .init(name: "jungleFever", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `kanagawa`.
-    static let kanagawa = Rswift.ImageResource(bundle: R.hostingBundle, name: "kanagawa")
+    var kanagawa: RswiftResources.ImageResource { .init(name: "kanagawa", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `lifeAquatic`.
-    static let lifeAquatic = Rswift.ImageResource(bundle: R.hostingBundle, name: "lifeAquatic")
-    /// Image `like_fill`.
-    static let like_fill = Rswift.ImageResource(bundle: R.hostingBundle, name: "like_fill")
-    /// Image `like_normal`.
-    static let like_normal = Rswift.ImageResource(bundle: R.hostingBundle, name: "like_normal")
+    var lifeAquatic: RswiftResources.ImageResource { .init(name: "lifeAquatic", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `like`.
-    static let like = Rswift.ImageResource(bundle: R.hostingBundle, name: "like")
+    var like: RswiftResources.ImageResource { .init(name: "like", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `like_fill`.
+    var like_fill: RswiftResources.ImageResource { .init(name: "like_fill", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `like_normal`.
+    var like_normal: RswiftResources.ImageResource { .init(name: "like_normal", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `malcomX`.
-    static let malcomX = Rswift.ImageResource(bundle: R.hostingBundle, name: "malcomX")
+    var malcomX: RswiftResources.ImageResource { .init(name: "malcomX", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `martinScorsese`.
-    static let martinScorsese = Rswift.ImageResource(bundle: R.hostingBundle, name: "martinScorsese")
+    var martinScorsese: RswiftResources.ImageResource { .init(name: "martinScorsese", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `mascot_swifty-birthday-party`.
-    static let mascot_swiftyBirthdayParty = Rswift.ImageResource(bundle: R.hostingBundle, name: "mascot_swifty-birthday-party")
+    var mascot_swiftyBirthdayParty: RswiftResources.ImageResource { .init(name: "mascot_swifty-birthday-party", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `monaco`.
-    static let monaco = Rswift.ImageResource(bundle: R.hostingBundle, name: "monaco")
+    var monaco: RswiftResources.ImageResource { .init(name: "monaco", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `nigeria`.
-    static let nigeria = Rswift.ImageResource(bundle: R.hostingBundle, name: "nigeria")
+    var nigeria: RswiftResources.ImageResource { .init(name: "nigeria", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `overlay`.
-    static let overlay = Rswift.ImageResource(bundle: R.hostingBundle, name: "overlay")
+    var overlay: RswiftResources.ImageResource { .init(name: "overlay", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `owl`.
-    static let owl = Rswift.ImageResource(bundle: R.hostingBundle, name: "owl")
+    var owl: RswiftResources.ImageResource { .init(name: "owl", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `pause`.
-    static let pause = Rswift.ImageResource(bundle: R.hostingBundle, name: "pause")
+    var pause: RswiftResources.ImageResource { .init(name: "pause", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `play`.
-    static let play = Rswift.ImageResource(bundle: R.hostingBundle, name: "play")
+    var play: RswiftResources.ImageResource { .init(name: "play", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `poland`.
-    static let poland = Rswift.ImageResource(bundle: R.hostingBundle, name: "poland")
+    var poland: RswiftResources.ImageResource { .init(name: "poland", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `pot`.
-    static let pot = Rswift.ImageResource(bundle: R.hostingBundle, name: "pot")
+    var pot: RswiftResources.ImageResource { .init(name: "pot", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `pumkin`.
-    static let pumkin = Rswift.ImageResource(bundle: R.hostingBundle, name: "pumkin")
+    var pumkin: RswiftResources.ImageResource { .init(name: "pumkin", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `ragingBull`.
-    static let ragingBull = Rswift.ImageResource(bundle: R.hostingBundle, name: "ragingBull")
+    var ragingBull: RswiftResources.ImageResource { .init(name: "ragingBull", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `rip`.
-    static let rip = Rswift.ImageResource(bundle: R.hostingBundle, name: "rip")
+    var rip: RswiftResources.ImageResource { .init(name: "rip", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `royalTenenbaums`.
-    static let royalTenenbaums = Rswift.ImageResource(bundle: R.hostingBundle, name: "royalTenenbaums")
+    var royalTenenbaums: RswiftResources.ImageResource { .init(name: "royalTenenbaums", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `rushmore`.
-    static let rushmore = Rswift.ImageResource(bundle: R.hostingBundle, name: "rushmore")
+    var rushmore: RswiftResources.ImageResource { .init(name: "rushmore", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `russia`.
-    static let russia = Rswift.ImageResource(bundle: R.hostingBundle, name: "russia")
+    var russia: RswiftResources.ImageResource { .init(name: "russia", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `rwdevcon-bg`.
-    static let rwdevconBg = Rswift.ImageResource(bundle: R.hostingBundle, name: "rwdevcon-bg")
+    var rwdevconBg: RswiftResources.ImageResource { .init(name: "rwdevcon-bg", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `scanners`.
-    static let scanners = Rswift.ImageResource(bundle: R.hostingBundle, name: "scanners")
+    var scanners: RswiftResources.ImageResource { .init(name: "scanners", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `se-icon`.
-    static let seIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "se-icon")
+    var seIcon: RswiftResources.ImageResource { .init(name: "se-icon", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `skull`.
-    static let skull = Rswift.ImageResource(bundle: R.hostingBundle, name: "skull")
+    var skull: RswiftResources.ImageResource { .init(name: "skull", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `sky`.
-    static let sky = Rswift.ImageResource(bundle: R.hostingBundle, name: "sky")
+    var sky: RswiftResources.ImageResource { .init(name: "sky", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `smile`.
-    static let smile = Rswift.ImageResource(bundle: R.hostingBundle, name: "smile")
+    var smile: RswiftResources.ImageResource { .init(name: "smile", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `spain`.
-    static let spain = Rswift.ImageResource(bundle: R.hostingBundle, name: "spain")
+    var spain: RswiftResources.ImageResource { .init(name: "spain", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `spikeLee`.
-    static let spikeLee = Rswift.ImageResource(bundle: R.hostingBundle, name: "spikeLee")
+    var spikeLee: RswiftResources.ImageResource { .init(name: "spikeLee", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `star`.
-    static let star = Rswift.ImageResource(bundle: R.hostingBundle, name: "star")
+    var star: RswiftResources.ImageResource { .init(name: "star", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `taxiDriver`.
-    static let taxiDriver = Rswift.ImageResource(bundle: R.hostingBundle, name: "taxiDriver")
+    var taxiDriver: RswiftResources.ImageResource { .init(name: "taxiDriver", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `theFly`.
-    static let theFly = Rswift.ImageResource(bundle: R.hostingBundle, name: "theFly")
+    var theFly: RswiftResources.ImageResource { .init(name: "theFly", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `thePiano`.
-    static let thePiano = Rswift.ImageResource(bundle: R.hostingBundle, name: "thePiano")
+    var thePiano: RswiftResources.ImageResource { .init(name: "thePiano", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `theThing`.
-    static let theThing = Rswift.ImageResource(bundle: R.hostingBundle, name: "theThing")
+    var theThing: RswiftResources.ImageResource { .init(name: "theThing", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `theyLive`.
-    static let theyLive = Rswift.ImageResource(bundle: R.hostingBundle, name: "theyLive")
+    var theyLive: RswiftResources.ImageResource { .init(name: "theyLive", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `toxic`.
-    static let toxic = Rswift.ImageResource(bundle: R.hostingBundle, name: "toxic")
+    var toxic: RswiftResources.ImageResource { .init(name: "toxic", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `uk`.
-    static let uk = Rswift.ImageResource(bundle: R.hostingBundle, name: "uk")
+    var uk: RswiftResources.ImageResource { .init(name: "uk", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `us`.
-    static let us = Rswift.ImageResource(bundle: R.hostingBundle, name: "us")
+    var us: RswiftResources.ImageResource { .init(name: "us", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `videodrome`.
-    static let videodrome = Rswift.ImageResource(bundle: R.hostingBundle, name: "videodrome")
+    var videodrome: RswiftResources.ImageResource { .init(name: "videodrome", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `wesAnderson`.
-    static let wesAnderson = Rswift.ImageResource(bundle: R.hostingBundle, name: "wesAnderson")
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "Checkmark", bundle: ..., traitCollection: ...)`
-    static func checkmark(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.checkmark, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "Download", bundle: ..., traitCollection: ...)`
-    static func download(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.download, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "HighlightedOval", bundle: ..., traitCollection: ...)`
-    static func highlightedOval(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.highlightedOval, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "HighlightedRect", bundle: ..., traitCollection: ...)`
-    static func highlightedRect(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.highlightedRect, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "Oval", bundle: ..., traitCollection: ...)`
-    static func oval(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.oval, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "RectThumb", bundle: ..., traitCollection: ...)`
-    static func rectThumb(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.rectThumb, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "background", bundle: ..., traitCollection: ...)`
-    static func background(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.background, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "background_Bayleaf", bundle: ..., traitCollection: ...)`
-    static func background_Bayleaf(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.background_Bayleaf, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "blackKlansman", bundle: ..., traitCollection: ...)`
-    static func blackKlansman(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.blackKlansman, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "blackKlansmanBig", bundle: ..., traitCollection: ...)`
-    static func blackKlansmanBig(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.blackKlansmanBig, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "brightStar", bundle: ..., traitCollection: ...)`
-    static func brightStar(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.brightStar, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "budapestHotel", bundle: ..., traitCollection: ...)`
-    static func budapestHotel(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.budapestHotel, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "candle", bundle: ..., traitCollection: ...)`
-    static func candle(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.candle, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "cat", bundle: ..., traitCollection: ...)`
-    static func cat(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.cat, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "confetti0", bundle: ..., traitCollection: ...)`
-    static func confetti0(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.confetti0, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "confetti1", bundle: ..., traitCollection: ...)`
-    static func confetti1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.confetti1, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "confetti2", bundle: ..., traitCollection: ...)`
-    static func confetti2(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.confetti2, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "confetti3", bundle: ..., traitCollection: ...)`
-    static func confetti3(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.confetti3, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "confetti4", bundle: ..., traitCollection: ...)`
-    static func confetti4(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.confetti4, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "confetti5", bundle: ..., traitCollection: ...)`
-    static func confetti5(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.confetti5, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "davidCronenberg", bundle: ..., traitCollection: ...)`
-    static func davidCronenberg(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.davidCronenberg, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "departed", bundle: ..., traitCollection: ...)`
-    static func departed(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.departed, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "doTheRightThing", bundle: ..., traitCollection: ...)`
-    static func doTheRightThing(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.doTheRightThing, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "dribbble", bundle: ..., traitCollection: ...)`
-    static func dribbble(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.dribbble, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "escapeNewYork", bundle: ..., traitCollection: ...)`
-    static func escapeNewYork(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.escapeNewYork, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "estonia", bundle: ..., traitCollection: ...)`
-    static func estonia(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.estonia, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "existenz", bundle: ..., traitCollection: ...)`
-    static func existenz(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.existenz, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "feature-bg", bundle: ..., traitCollection: ...)`
-    static func featureBg(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.featureBg, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "fluidPhoto1", bundle: ..., traitCollection: ...)`
-    static func fluidPhoto1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.fluidPhoto1, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "fluidPhoto10", bundle: ..., traitCollection: ...)`
-    static func fluidPhoto10(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.fluidPhoto10, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "fluidPhoto11", bundle: ..., traitCollection: ...)`
-    static func fluidPhoto11(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.fluidPhoto11, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "fluidPhoto12", bundle: ..., traitCollection: ...)`
-    static func fluidPhoto12(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.fluidPhoto12, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "fluidPhoto13", bundle: ..., traitCollection: ...)`
-    static func fluidPhoto13(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.fluidPhoto13, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "fluidPhoto14", bundle: ..., traitCollection: ...)`
-    static func fluidPhoto14(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.fluidPhoto14, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "fluidPhoto15", bundle: ..., traitCollection: ...)`
-    static func fluidPhoto15(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.fluidPhoto15, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "fluidPhoto16", bundle: ..., traitCollection: ...)`
-    static func fluidPhoto16(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.fluidPhoto16, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "fluidPhoto17", bundle: ..., traitCollection: ...)`
-    static func fluidPhoto17(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.fluidPhoto17, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "fluidPhoto18", bundle: ..., traitCollection: ...)`
-    static func fluidPhoto18(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.fluidPhoto18, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "fluidPhoto2", bundle: ..., traitCollection: ...)`
-    static func fluidPhoto2(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.fluidPhoto2, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "fluidPhoto3", bundle: ..., traitCollection: ...)`
-    static func fluidPhoto3(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.fluidPhoto3, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "fluidPhoto4", bundle: ..., traitCollection: ...)`
-    static func fluidPhoto4(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.fluidPhoto4, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "fluidPhoto5", bundle: ..., traitCollection: ...)`
-    static func fluidPhoto5(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.fluidPhoto5, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "fluidPhoto6", bundle: ..., traitCollection: ...)`
-    static func fluidPhoto6(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.fluidPhoto6, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "fluidPhoto7", bundle: ..., traitCollection: ...)`
-    static func fluidPhoto7(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.fluidPhoto7, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "fluidPhoto8", bundle: ..., traitCollection: ...)`
-    static func fluidPhoto8(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.fluidPhoto8, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "fluidPhoto9", bundle: ..., traitCollection: ...)`
-    static func fluidPhoto9(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.fluidPhoto9, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "france", bundle: ..., traitCollection: ...)`
-    static func france(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.france, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "germany", bundle: ..., traitCollection: ...)`
-    static func germany(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.germany, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "ghost", bundle: ..., traitCollection: ...)`
-    static func ghost(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.ghost, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "goodfellas", bundle: ..., traitCollection: ...)`
-    static func goodfellas(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.goodfellas, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "halloween", bundle: ..., traitCollection: ...)`
-    static func halloween(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.halloween, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "hat", bundle: ..., traitCollection: ...)`
-    static func hat(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.hat, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "heart", bundle: ..., traitCollection: ...)`
-    static func heart(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.heart, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "holySmoke", bundle: ..., traitCollection: ...)`
-    static func holySmoke(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.holySmoke, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "ic_backpack", bundle: ..., traitCollection: ...)`
-    static func ic_backpack(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.ic_backpack, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "ic_book", bundle: ..., traitCollection: ...)`
-    static func ic_book(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.ic_book, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "ic_camera", bundle: ..., traitCollection: ...)`
-    static func ic_camera(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.ic_camera, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "ic_coffee", bundle: ..., traitCollection: ...)`
-    static func ic_coffee(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.ic_coffee, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "ic_glasses", bundle: ..., traitCollection: ...)`
-    static func ic_glasses(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.ic_glasses, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "ic_ice_cream", bundle: ..., traitCollection: ...)`
-    static func ic_ice_cream(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.ic_ice_cream, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "ic_smoking_pipe", bundle: ..., traitCollection: ...)`
-    static func ic_smoking_pipe(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.ic_smoking_pipe, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "ic_vespa", bundle: ..., traitCollection: ...)`
-    static func ic_vespa(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.ic_vespa, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "inTheCut", bundle: ..., traitCollection: ...)`
-    static func inTheCut(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.inTheCut, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "ireland", bundle: ..., traitCollection: ...)`
-    static func ireland(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.ireland, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "italy", bundle: ..., traitCollection: ...)`
-    static func italy(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.italy, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "janeCampion", bundle: ..., traitCollection: ...)`
-    static func janeCampion(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.janeCampion, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "johnCarpenter", bundle: ..., traitCollection: ...)`
-    static func johnCarpenter(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.johnCarpenter, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "jungleFever", bundle: ..., traitCollection: ...)`
-    static func jungleFever(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.jungleFever, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "kanagawa", bundle: ..., traitCollection: ...)`
-    static func kanagawa(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.kanagawa, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "lifeAquatic", bundle: ..., traitCollection: ...)`
-    static func lifeAquatic(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.lifeAquatic, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "like", bundle: ..., traitCollection: ...)`
-    static func like(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.like, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "like_fill", bundle: ..., traitCollection: ...)`
-    static func like_fill(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.like_fill, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "like_normal", bundle: ..., traitCollection: ...)`
-    static func like_normal(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.like_normal, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "malcomX", bundle: ..., traitCollection: ...)`
-    static func malcomX(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.malcomX, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "martinScorsese", bundle: ..., traitCollection: ...)`
-    static func martinScorsese(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.martinScorsese, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "mascot_swifty-birthday-party", bundle: ..., traitCollection: ...)`
-    static func mascot_swiftyBirthdayParty(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.mascot_swiftyBirthdayParty, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "monaco", bundle: ..., traitCollection: ...)`
-    static func monaco(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.monaco, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "nigeria", bundle: ..., traitCollection: ...)`
-    static func nigeria(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.nigeria, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "overlay", bundle: ..., traitCollection: ...)`
-    static func overlay(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.overlay, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "owl", bundle: ..., traitCollection: ...)`
-    static func owl(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.owl, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "pause", bundle: ..., traitCollection: ...)`
-    static func pause(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.pause, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "play", bundle: ..., traitCollection: ...)`
-    static func play(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.play, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "poland", bundle: ..., traitCollection: ...)`
-    static func poland(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.poland, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "pot", bundle: ..., traitCollection: ...)`
-    static func pot(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.pot, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "pumkin", bundle: ..., traitCollection: ...)`
-    static func pumkin(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.pumkin, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "ragingBull", bundle: ..., traitCollection: ...)`
-    static func ragingBull(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.ragingBull, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "rip", bundle: ..., traitCollection: ...)`
-    static func rip(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.rip, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "royalTenenbaums", bundle: ..., traitCollection: ...)`
-    static func royalTenenbaums(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.royalTenenbaums, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "rushmore", bundle: ..., traitCollection: ...)`
-    static func rushmore(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.rushmore, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "russia", bundle: ..., traitCollection: ...)`
-    static func russia(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.russia, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "rwdevcon-bg", bundle: ..., traitCollection: ...)`
-    static func rwdevconBg(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.rwdevconBg, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "scanners", bundle: ..., traitCollection: ...)`
-    static func scanners(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.scanners, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "se-icon", bundle: ..., traitCollection: ...)`
-    static func seIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.seIcon, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "skull", bundle: ..., traitCollection: ...)`
-    static func skull(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.skull, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "sky", bundle: ..., traitCollection: ...)`
-    static func sky(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.sky, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "smile", bundle: ..., traitCollection: ...)`
-    static func smile(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.smile, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "spain", bundle: ..., traitCollection: ...)`
-    static func spain(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.spain, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "spikeLee", bundle: ..., traitCollection: ...)`
-    static func spikeLee(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.spikeLee, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "star", bundle: ..., traitCollection: ...)`
-    static func star(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.star, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "taxiDriver", bundle: ..., traitCollection: ...)`
-    static func taxiDriver(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.taxiDriver, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "theFly", bundle: ..., traitCollection: ...)`
-    static func theFly(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.theFly, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "thePiano", bundle: ..., traitCollection: ...)`
-    static func thePiano(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.thePiano, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "theThing", bundle: ..., traitCollection: ...)`
-    static func theThing(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.theThing, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "theyLive", bundle: ..., traitCollection: ...)`
-    static func theyLive(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.theyLive, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "toxic", bundle: ..., traitCollection: ...)`
-    static func toxic(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.toxic, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "uk", bundle: ..., traitCollection: ...)`
-    static func uk(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.uk, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "us", bundle: ..., traitCollection: ...)`
-    static func us(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.us, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "videodrome", bundle: ..., traitCollection: ...)`
-    static func videodrome(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.videodrome, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "wesAnderson", bundle: ..., traitCollection: ...)`
-    static func wesAnderson(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.wesAnderson, compatibleWith: traitCollection)
-    }
-    #endif
-
-    fileprivate init() {}
+    var wesAnderson: RswiftResources.ImageResource { .init(name: "wesAnderson", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
   }
 
-  /// This `R.info` struct is generated, and contains static references to 1 properties.
+  /// This `_R.info` struct is generated, and contains static references to 1 properties.
   struct info {
+    let bundle: Foundation.Bundle
+    var uiApplicationSceneManifest: uiApplicationSceneManifest { .init(bundle: bundle) }
+
+    func uiApplicationSceneManifest(bundle: Foundation.Bundle) -> uiApplicationSceneManifest {
+      .init(bundle: bundle)
+    }
+
     struct uiApplicationSceneManifest {
-      static let _key = "UIApplicationSceneManifest"
-      static let uiApplicationSupportsMultipleScenes = false
+      let bundle: Foundation.Bundle
+
+      let uiApplicationSupportsMultipleScenes: Bool = false
+
+      var _key: String { bundle.infoDictionaryString(path: ["UIApplicationSceneManifest"], key: "_key") ?? "UIApplicationSceneManifest" }
+      var uiSceneConfigurations: uiSceneConfigurations { .init(bundle: bundle) }
+
+      func uiSceneConfigurations(bundle: Foundation.Bundle) -> uiSceneConfigurations {
+        .init(bundle: bundle)
+      }
 
       struct uiSceneConfigurations {
-        static let _key = "UISceneConfigurations"
+        let bundle: Foundation.Bundle
+        var _key: String { bundle.infoDictionaryString(path: ["UIApplicationSceneManifest", "UISceneConfigurations"], key: "_key") ?? "UISceneConfigurations" }
+        var uiWindowSceneSessionRoleApplication: uiWindowSceneSessionRoleApplication { .init(bundle: bundle) }
+
+        func uiWindowSceneSessionRoleApplication(bundle: Foundation.Bundle) -> uiWindowSceneSessionRoleApplication {
+          .init(bundle: bundle)
+        }
 
         struct uiWindowSceneSessionRoleApplication {
-          struct defaultConfiguration {
-            static let _key = "Default Configuration"
-            static let uiSceneConfigurationName = infoPlistString(path: ["UIApplicationSceneManifest", "UISceneConfigurations", "UIWindowSceneSessionRoleApplication", "Default Configuration"], key: "UISceneConfigurationName") ?? "Default Configuration"
-            static let uiSceneDelegateClassName = infoPlistString(path: ["UIApplicationSceneManifest", "UISceneConfigurations", "UIWindowSceneSessionRoleApplication", "Default Configuration"], key: "UISceneDelegateClassName") ?? "$(PRODUCT_MODULE_NAME).SceneDelegate"
-            static let uiSceneStoryboardFile = infoPlistString(path: ["UIApplicationSceneManifest", "UISceneConfigurations", "UIWindowSceneSessionRoleApplication", "Default Configuration"], key: "UISceneStoryboardFile") ?? "Main"
+          let bundle: Foundation.Bundle
+          var defaultConfiguration: defaultConfiguration { .init(bundle: bundle) }
 
-            fileprivate init() {}
+          func defaultConfiguration(bundle: Foundation.Bundle) -> defaultConfiguration {
+            .init(bundle: bundle)
           }
 
-          fileprivate init() {}
+          struct defaultConfiguration {
+            let bundle: Foundation.Bundle
+            var uiSceneConfigurationName: String { bundle.infoDictionaryString(path: ["UIApplicationSceneManifest", "UISceneConfigurations", "UIWindowSceneSessionRoleApplication"], key: "UISceneConfigurationName") ?? "Default Configuration" }
+            var uiSceneDelegateClassName: String { bundle.infoDictionaryString(path: ["UIApplicationSceneManifest", "UISceneConfigurations", "UIWindowSceneSessionRoleApplication"], key: "UISceneDelegateClassName") ?? "$(PRODUCT_MODULE_NAME).SceneDelegate" }
+            var uiSceneStoryboardFile: String { bundle.infoDictionaryString(path: ["UIApplicationSceneManifest", "UISceneConfigurations", "UIWindowSceneSessionRoleApplication"], key: "UISceneStoryboardFile") ?? "Main" }
+          }
         }
-
-        fileprivate init() {}
       }
-
-      fileprivate init() {}
     }
-
-    fileprivate init() {}
   }
 
-  /// This `R.nib` struct is generated, and contains static references to 41 nibs.
+  /// This `_R.file` struct is generated, and contains static references to 4 resource files.
+  struct file {
+    let bundle: Foundation.Bundle
+
+    /// Resource file `albums.json`.
+    var albumsJson: RswiftResources.FileResource { .init(name: "albums", pathExtension: "json", bundle: bundle, locale: LocaleReference.none) }
+
+    /// Resource file `auteurs.json`.
+    var auteursJson: RswiftResources.FileResource { .init(name: "auteurs", pathExtension: "json", bundle: bundle, locale: LocaleReference.none) }
+
+    /// Resource file `content.json`.
+    var contentJson: RswiftResources.FileResource { .init(name: "content", pathExtension: "json", bundle: bundle, locale: LocaleReference.none) }
+
+    /// Resource file `homepage.json`.
+    var homepageJson: RswiftResources.FileResource { .init(name: "homepage", pathExtension: "json", bundle: bundle, locale: LocaleReference.none) }
+  }
+
+  /// This `_R.nib` struct is generated, and contains static references to 41 nibs.
   struct nib {
+    let bundle: Foundation.Bundle
+
     /// Nib `ActionCell`.
-    static let actionCell = _R.nib._ActionCell()
+    var actionCell: RswiftResources.NibReference<ActionCell> { .init(name: "ActionCell", bundle: bundle) }
+
     /// Nib `AdCell`.
-    static let adCell = _R.nib._AdCell()
+    var adCell: RswiftResources.NibReference<AdCell> { .init(name: "AdCell", bundle: bundle) }
+
     /// Nib `AttributedStringViewController`.
-    static let attributedStringViewController = _R.nib._AttributedStringViewController()
+    var attributedStringViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "AttributedStringViewController", bundle: bundle) }
+
     /// Nib `AuteurTableViewCell`.
-    static let auteurTableViewCell = _R.nib._AuteurTableViewCell()
+    var auteurTableViewCell: RswiftResources.NibReference<AuteurTableViewCell> { .init(name: "AuteurTableViewCell", bundle: bundle) }
+
     /// Nib `BarCodeGenerateController`.
-    static let barCodeGenerateController = _R.nib._BarCodeGenerateController()
+    var barCodeGenerateController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "BarCodeGenerateController", bundle: bundle) }
+
     /// Nib `BayleafLoginViewController`.
-    static let bayleafLoginViewController = _R.nib._BayleafLoginViewController()
+    var bayleafLoginViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "BayleafLoginViewController", bundle: bundle) }
+
     /// Nib `BirdSoundTableViewCell`.
-    static let birdSoundTableViewCell = _R.nib._BirdSoundTableViewCell()
+    var birdSoundTableViewCell: RswiftResources.NibReference<BirdSoundTableViewCell> { .init(name: "BirdSoundTableViewCell", bundle: bundle) }
+
     /// Nib `BlueLibraryViewController`.
-    static let blueLibraryViewController = _R.nib._BlueLibraryViewController()
+    var blueLibraryViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "BlueLibraryViewController", bundle: bundle) }
+
     /// Nib `CommentCell`.
-    static let commentCell = _R.nib._CommentCell()
+    var commentCell: RswiftResources.NibReference<CommentCell> { .init(name: "CommentCell", bundle: bundle) }
+
     /// Nib `CornerRadiusTableViewCell`.
-    static let cornerRadiusTableViewCell = _R.nib._CornerRadiusTableViewCell()
+    var cornerRadiusTableViewCell: RswiftResources.NibReference<CornerRadiusTableViewCell> { .init(name: "CornerRadiusTableViewCell", bundle: bundle) }
+
     /// Nib `CustomControlViewController`.
-    static let customControlViewController = _R.nib._CustomControlViewController()
+    var customControlViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "CustomControlViewController", bundle: bundle) }
+
     /// Nib `CustomTableViewCell`.
-    static let customTableViewCell = _R.nib._CustomTableViewCell()
+    var customTableViewCell: RswiftResources.NibReference<CustomTableViewCell> { .init(name: "CustomTableViewCell", bundle: bundle) }
+
     /// Nib `CustomViewController`.
-    static let customViewController = _R.nib._CustomViewController()
-    /// Nib `DRHTextFieldViewController`.
-    static let drhTextFieldViewController = _R.nib._DRHTextFieldViewController()
+    var customViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "CustomViewController", bundle: bundle) }
+
     /// Nib `DifferentViewController`.
-    static let differentViewController = _R.nib._DifferentViewController()
-    /// Nib `FSPageViewController`.
-    static let fsPageViewController = _R.nib._FSPageViewController()
+    var differentViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "DifferentViewController", bundle: bundle) }
+
+    /// Nib `DRHTextFieldViewController`.
+    var drhTextFieldViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "DRHTextFieldViewController", bundle: bundle) }
+
     /// Nib `FaveButtonViewController`.
-    static let faveButtonViewController = _R.nib._FaveButtonViewController()
+    var faveButtonViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "FaveButtonViewController", bundle: bundle) }
+
     /// Nib `FilmTableViewCell`.
-    static let filmTableViewCell = _R.nib._FilmTableViewCell()
+    var filmTableViewCell: RswiftResources.NibReference<FilmTableViewCell> { .init(name: "FilmTableViewCell", bundle: bundle) }
+
     /// Nib `FlagViewController`.
-    static let flagViewController = _R.nib._FlagViewController()
+    var flagViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "FlagViewController", bundle: bundle) }
+
+    /// Nib `FSPageViewController`.
+    var fsPageViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "FSPageViewController", bundle: bundle) }
+
     /// Nib `GameViewController`.
-    static let gameViewController = _R.nib._GameViewController()
+    var gameViewController: RswiftResources.NibReference<GameView> { .init(name: "GameViewController", bundle: bundle) }
+
     /// Nib `GradientViewController`.
-    static let gradientViewController = _R.nib._GradientViewController()
+    var gradientViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "GradientViewController", bundle: bundle) }
+
     /// Nib `GrowingCell`.
-    static let growingCell = _R.nib._GrowingCell()
+    var growingCell: RswiftResources.NibReference<GrowingCell> { .init(name: "GrowingCell", bundle: bundle) }
+
     /// Nib `IconCollectionViewCell`.
-    static let iconCollectionViewCell = _R.nib._IconCollectionViewCell()
+    var iconCollectionViewCell: RswiftResources.NibReference<IconCollectionViewCell> { .init(name: "IconCollectionViewCell", bundle: bundle) }
+
     /// Nib `ImageCell`.
-    static let imageCell = _R.nib._ImageCell()
+    var imageCell: RswiftResources.NibReference<ImageCell> { .init(name: "ImageCell", bundle: bundle) }
+
     /// Nib `MergeVideoViewController`.
-    static let mergeVideoViewController = _R.nib._MergeVideoViewController()
+    var mergeVideoViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "MergeVideoViewController", bundle: bundle) }
+
     /// Nib `ModeratorTableViewCell`.
-    static let moderatorTableViewCell = _R.nib._ModeratorTableViewCell()
+    var moderatorTableViewCell: RswiftResources.NibReference<ModeratorTableViewCell> { .init(name: "ModeratorTableViewCell", bundle: bundle) }
+
     /// Nib `ModeratorsSearchViewController`.
-    static let moderatorsSearchViewController = _R.nib._ModeratorsSearchViewController()
+    var moderatorsSearchViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "ModeratorsSearchViewController", bundle: bundle) }
+
     /// Nib `MultipleSelectionViewController`.
-    static let multipleSelectionViewController = _R.nib._MultipleSelectionViewController()
+    var multipleSelectionViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "MultipleSelectionViewController", bundle: bundle) }
+
     /// Nib `MyFirstView`.
-    static let myFirstView = _R.nib._MyFirstView()
+    var myFirstView: RswiftResources.NibReference<UIKit.UIView> { .init(name: "MyFirstView", bundle: bundle) }
+
     /// Nib `PhotoDetailViewController`.
-    static let photoDetailViewController = _R.nib._PhotoDetailViewController()
+    var photoDetailViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "PhotoDetailViewController", bundle: bundle) }
+
     /// Nib `PhotoListTableViewCell`.
-    static let photoListTableViewCell = _R.nib._PhotoListTableViewCell()
+    var photoListTableViewCell: RswiftResources.NibReference<PhotoListTableViewCell> { .init(name: "PhotoListTableViewCell", bundle: bundle) }
+
     /// Nib `PickerViewController`.
-    static let pickerViewController = _R.nib._PickerViewController()
+    var pickerViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "PickerViewController", bundle: bundle) }
+
     /// Nib `PlayVideoViewController`.
-    static let playVideoViewController = _R.nib._PlayVideoViewController()
+    var playVideoViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "PlayVideoViewController", bundle: bundle) }
+
     /// Nib `PlayerViewController`.
-    static let playerViewController = _R.nib._PlayerViewController()
+    var playerViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "PlayerViewController", bundle: bundle) }
+
     /// Nib `ProgramaticallyCreateViewController`.
-    static let programaticallyCreateViewController = _R.nib._ProgramaticallyCreateViewController()
+    var programaticallyCreateViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "ProgramaticallyCreateViewController", bundle: bundle) }
+
     /// Nib `RealnameCell`.
-    static let realnameCell = _R.nib._RealnameCell()
+    var realnameCell: RswiftResources.NibReference<RealnameCell> { .init(name: "RealnameCell", bundle: bundle) }
+
     /// Nib `RecordVideoViewController`.
-    static let recordVideoViewController = _R.nib._RecordVideoViewController()
+    var recordVideoViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "RecordVideoViewController", bundle: bundle) }
+
     /// Nib `SlideViewController`.
-    static let slideViewController = _R.nib._SlideViewController()
+    var slideViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "SlideViewController", bundle: bundle) }
+
     /// Nib `SuperHeroNameCell`.
-    static let superHeroNameCell = _R.nib._SuperHeroNameCell()
+    var superHeroNameCell: RswiftResources.NibReference<SuperHeroNameCell> { .init(name: "SuperHeroNameCell", bundle: bundle) }
+
     /// Nib `UserCell`.
-    static let userCell = _R.nib._UserCell()
+    var userCell: RswiftResources.NibReference<UserCell> { .init(name: "UserCell", bundle: bundle) }
+
     /// Nib `VideoNinjaViewController`.
-    static let videoNinjaViewController = _R.nib._VideoNinjaViewController()
-
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "ActionCell", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.actionCell) instead")
-    static func actionCell(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.actionCell)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "AdCell", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.adCell) instead")
-    static func adCell(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.adCell)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "AttributedStringViewController", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.attributedStringViewController) instead")
-    static func attributedStringViewController(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.attributedStringViewController)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "AuteurTableViewCell", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.auteurTableViewCell) instead")
-    static func auteurTableViewCell(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.auteurTableViewCell)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "BarCodeGenerateController", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.barCodeGenerateController) instead")
-    static func barCodeGenerateController(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.barCodeGenerateController)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "BayleafLoginViewController", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.bayleafLoginViewController) instead")
-    static func bayleafLoginViewController(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.bayleafLoginViewController)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "BirdSoundTableViewCell", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.birdSoundTableViewCell) instead")
-    static func birdSoundTableViewCell(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.birdSoundTableViewCell)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "BlueLibraryViewController", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.blueLibraryViewController) instead")
-    static func blueLibraryViewController(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.blueLibraryViewController)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "CommentCell", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.commentCell) instead")
-    static func commentCell(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.commentCell)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "CornerRadiusTableViewCell", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.cornerRadiusTableViewCell) instead")
-    static func cornerRadiusTableViewCell(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.cornerRadiusTableViewCell)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "CustomControlViewController", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.customControlViewController) instead")
-    static func customControlViewController(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.customControlViewController)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "CustomTableViewCell", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.customTableViewCell) instead")
-    static func customTableViewCell(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.customTableViewCell)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "CustomViewController", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.customViewController) instead")
-    static func customViewController(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.customViewController)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "DRHTextFieldViewController", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.drhTextFieldViewController) instead")
-    static func drhTextFieldViewController(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.drhTextFieldViewController)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "DifferentViewController", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.differentViewController) instead")
-    static func differentViewController(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.differentViewController)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "FSPageViewController", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.fsPageViewController) instead")
-    static func fsPageViewController(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.fsPageViewController)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "FaveButtonViewController", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.faveButtonViewController) instead")
-    static func faveButtonViewController(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.faveButtonViewController)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "FilmTableViewCell", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.filmTableViewCell) instead")
-    static func filmTableViewCell(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.filmTableViewCell)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "FlagViewController", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.flagViewController) instead")
-    static func flagViewController(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.flagViewController)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "GameViewController", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.gameViewController) instead")
-    static func gameViewController(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.gameViewController)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "GradientViewController", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.gradientViewController) instead")
-    static func gradientViewController(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.gradientViewController)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "GrowingCell", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.growingCell) instead")
-    static func growingCell(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.growingCell)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "IconCollectionViewCell", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.iconCollectionViewCell) instead")
-    static func iconCollectionViewCell(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.iconCollectionViewCell)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "ImageCell", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.imageCell) instead")
-    static func imageCell(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.imageCell)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "MergeVideoViewController", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.mergeVideoViewController) instead")
-    static func mergeVideoViewController(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.mergeVideoViewController)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "ModeratorTableViewCell", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.moderatorTableViewCell) instead")
-    static func moderatorTableViewCell(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.moderatorTableViewCell)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "ModeratorsSearchViewController", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.moderatorsSearchViewController) instead")
-    static func moderatorsSearchViewController(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.moderatorsSearchViewController)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "MultipleSelectionViewController", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.multipleSelectionViewController) instead")
-    static func multipleSelectionViewController(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.multipleSelectionViewController)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "MyFirstView", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.myFirstView) instead")
-    static func myFirstView(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.myFirstView)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "PhotoDetailViewController", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.photoDetailViewController) instead")
-    static func photoDetailViewController(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.photoDetailViewController)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "PhotoListTableViewCell", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.photoListTableViewCell) instead")
-    static func photoListTableViewCell(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.photoListTableViewCell)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "PickerViewController", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.pickerViewController) instead")
-    static func pickerViewController(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.pickerViewController)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "PlayVideoViewController", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.playVideoViewController) instead")
-    static func playVideoViewController(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.playVideoViewController)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "PlayerViewController", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.playerViewController) instead")
-    static func playerViewController(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.playerViewController)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "ProgramaticallyCreateViewController", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.programaticallyCreateViewController) instead")
-    static func programaticallyCreateViewController(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.programaticallyCreateViewController)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "RealnameCell", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.realnameCell) instead")
-    static func realnameCell(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.realnameCell)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "RecordVideoViewController", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.recordVideoViewController) instead")
-    static func recordVideoViewController(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.recordVideoViewController)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "SlideViewController", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.slideViewController) instead")
-    static func slideViewController(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.slideViewController)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "SuperHeroNameCell", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.superHeroNameCell) instead")
-    static func superHeroNameCell(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.superHeroNameCell)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "UserCell", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.userCell) instead")
-    static func userCell(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.userCell)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "VideoNinjaViewController", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.videoNinjaViewController) instead")
-    static func videoNinjaViewController(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.videoNinjaViewController)
-    }
-    #endif
-
-    static func actionCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> ActionCell? {
-      return R.nib.actionCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ActionCell
-    }
-
-    static func adCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> AdCell? {
-      return R.nib.adCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? AdCell
-    }
-
-    static func attributedStringViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-      return R.nib.attributedStringViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-    }
-
-    static func auteurTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> AuteurTableViewCell? {
-      return R.nib.auteurTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? AuteurTableViewCell
-    }
-
-    static func barCodeGenerateController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-      return R.nib.barCodeGenerateController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-    }
-
-    static func bayleafLoginViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-      return R.nib.bayleafLoginViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-    }
-
-    static func birdSoundTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> BirdSoundTableViewCell? {
-      return R.nib.birdSoundTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? BirdSoundTableViewCell
-    }
-
-    static func blueLibraryViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-      return R.nib.blueLibraryViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-    }
-
-    static func commentCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CommentCell? {
-      return R.nib.commentCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CommentCell
-    }
-
-    static func cornerRadiusTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CornerRadiusTableViewCell? {
-      return R.nib.cornerRadiusTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CornerRadiusTableViewCell
-    }
-
-    static func customControlViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-      return R.nib.customControlViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-    }
-
-    static func customTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CustomTableViewCell? {
-      return R.nib.customTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CustomTableViewCell
-    }
-
-    static func customViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-      return R.nib.customViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-    }
-
-    static func differentViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-      return R.nib.differentViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-    }
-
-    static func drhTextFieldViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-      return R.nib.drhTextFieldViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-    }
-
-    static func faveButtonViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-      return R.nib.faveButtonViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-    }
-
-    static func filmTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> FilmTableViewCell? {
-      return R.nib.filmTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? FilmTableViewCell
-    }
-
-    static func flagViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-      return R.nib.flagViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-    }
-
-    static func fsPageViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-      return R.nib.fsPageViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-    }
-
-    static func gameViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> GameView? {
-      return R.nib.gameViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? GameView
-    }
-
-    static func gradientViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-      return R.nib.gradientViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+    var videoNinjaViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "VideoNinjaViewController", bundle: bundle) }
+
+    func validate() throws {
+      if UIKit.UIColor(named: "AuteursBackground", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Color named 'AuteursBackground' is used in nib 'AuteurTableViewCell', but couldn't be loaded.") }
+      if UIKit.UIImage(named: "background_Bayleaf", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'background_Bayleaf' is used in nib 'BayleafLoginViewController', but couldn't be loaded.") }
+      if UIKit.UIImage(named: "play", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'play' is used in nib 'BirdSoundTableViewCell', but couldn't be loaded.") }
+      if UIKit.UIImage(named: "heart", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'heart' is used in nib 'FaveButtonViewController', but couldn't be loaded.") }
+      if UIKit.UIImage(named: "like", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'like' is used in nib 'FaveButtonViewController', but couldn't be loaded.") }
+      if UIKit.UIImage(named: "smile", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'smile' is used in nib 'FaveButtonViewController', but couldn't be loaded.") }
+      if UIKit.UIImage(named: "star", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'star' is used in nib 'FaveButtonViewController', but couldn't be loaded.") }
+      if UIKit.UIColor(named: "AuteursBackground", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Color named 'AuteursBackground' is used in nib 'FilmTableViewCell', but couldn't be loaded.") }
+      if UIKit.UIImage(named: "us", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'us' is used in nib 'FlagViewController', but couldn't be loaded.") }
+      if UIKit.UIImage(named: "se-icon", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'se-icon' is used in nib 'ModeratorsSearchViewController', but couldn't be loaded.") }
+      if UIKit.UIImage(named: "mascot_swifty-birthday-party", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'mascot_swifty-birthday-party' is used in nib 'PickerViewController', but couldn't be loaded.") }
+      if UIKit.UIColor(named: "rw-dark", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Color named 'rw-dark' is used in nib 'PickerViewController', but couldn't be loaded.") }
+      if UIKit.UIColor(named: "rw-green", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Color named 'rw-green' is used in nib 'PickerViewController', but couldn't be loaded.") }
+      if UIKit.UIColor(named: "rw-dark", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Color named 'rw-dark' is used in nib 'PlayerViewController', but couldn't be loaded.") }
+      if UIKit.UIImage(named: "background_Bayleaf", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'background_Bayleaf' is used in nib 'SlideViewController', but couldn't be loaded.") }
     }
-
-    static func growingCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> GrowingCell? {
-      return R.nib.growingCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? GrowingCell
-    }
-
-    static func iconCollectionViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> IconCollectionViewCell? {
-      return R.nib.iconCollectionViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? IconCollectionViewCell
-    }
-
-    static func imageCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> ImageCell? {
-      return R.nib.imageCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ImageCell
-    }
-
-    static func mergeVideoViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-      return R.nib.mergeVideoViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-    }
-
-    static func moderatorTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> ModeratorTableViewCell? {
-      return R.nib.moderatorTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ModeratorTableViewCell
-    }
-
-    static func moderatorsSearchViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-      return R.nib.moderatorsSearchViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-    }
-
-    static func multipleSelectionViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-      return R.nib.multipleSelectionViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-    }
-
-    static func myFirstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-      return R.nib.myFirstView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-    }
-
-    static func photoDetailViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-      return R.nib.photoDetailViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-    }
-
-    static func photoListTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> PhotoListTableViewCell? {
-      return R.nib.photoListTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? PhotoListTableViewCell
-    }
-
-    static func pickerViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-      return R.nib.pickerViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-    }
-
-    static func playVideoViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-      return R.nib.playVideoViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-    }
-
-    static func playerViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-      return R.nib.playerViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-    }
-
-    static func programaticallyCreateViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-      return R.nib.programaticallyCreateViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-    }
-
-    static func realnameCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> RealnameCell? {
-      return R.nib.realnameCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? RealnameCell
-    }
-
-    static func recordVideoViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-      return R.nib.recordVideoViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-    }
-
-    static func slideViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-      return R.nib.slideViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-    }
-
-    static func superHeroNameCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> SuperHeroNameCell? {
-      return R.nib.superHeroNameCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? SuperHeroNameCell
-    }
-
-    static func userCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UserCell? {
-      return R.nib.userCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UserCell
-    }
-
-    static func videoNinjaViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-      return R.nib.videoNinjaViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-    }
-
-    fileprivate init() {}
   }
 
-  fileprivate struct intern: Rswift.Validatable {
-    fileprivate static func validate() throws {
-      try _R.validate()
+  /// This `_R.storyboard` struct is generated, and contains static references to 2 storyboards.
+  struct storyboard {
+    let bundle: Foundation.Bundle
+    var launchScreen: launchScreen { .init(bundle: bundle) }
+    var main: main { .init(bundle: bundle) }
+
+    func launchScreen(bundle: Foundation.Bundle) -> launchScreen {
+      .init(bundle: bundle)
+    }
+    func main(bundle: Foundation.Bundle) -> main {
+      .init(bundle: bundle)
+    }
+    func validate() throws {
+      try self.launchScreen.validate()
+      try self.main.validate()
     }
 
-    fileprivate init() {}
-  }
 
-  fileprivate class Class {}
-
-  fileprivate init() {}
-}
-
-struct _R: Rswift.Validatable {
-  static func validate() throws {
-    #if os(iOS) || os(tvOS)
-    try nib.validate()
-    #endif
-    #if os(iOS) || os(tvOS)
-    try storyboard.validate()
-    #endif
-  }
-
-  #if os(iOS) || os(tvOS)
-  struct nib: Rswift.Validatable {
-    static func validate() throws {
-      try _BayleafLoginViewController.validate()
-      try _BirdSoundTableViewCell.validate()
-      try _FaveButtonViewController.validate()
-      try _FlagViewController.validate()
-      try _ModeratorsSearchViewController.validate()
-      try _PickerViewController.validate()
-      try _SlideViewController.validate()
-    }
-
-    struct _ActionCell: Rswift.NibResourceType {
-      let bundle = R.hostingBundle
-      let name = "ActionCell"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> ActionCell? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ActionCell
-      }
-
-      fileprivate init() {}
-    }
-
-    struct _AdCell: Rswift.NibResourceType {
-      let bundle = R.hostingBundle
-      let name = "AdCell"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> AdCell? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? AdCell
-      }
-
-      fileprivate init() {}
-    }
-
-    struct _AttributedStringViewController: Rswift.NibResourceType {
-      let bundle = R.hostingBundle
-      let name = "AttributedStringViewController"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-      }
-
-      fileprivate init() {}
-    }
-
-    struct _AuteurTableViewCell: Rswift.NibResourceType {
-      let bundle = R.hostingBundle
-      let name = "AuteurTableViewCell"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> AuteurTableViewCell? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? AuteurTableViewCell
-      }
-
-      fileprivate init() {}
-    }
-
-    struct _BarCodeGenerateController: Rswift.NibResourceType {
-      let bundle = R.hostingBundle
-      let name = "BarCodeGenerateController"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-      }
-
-      fileprivate init() {}
-    }
-
-    struct _BayleafLoginViewController: Rswift.NibResourceType, Rswift.Validatable {
-      let bundle = R.hostingBundle
-      let name = "BayleafLoginViewController"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-      }
-
-      static func validate() throws {
-        if UIKit.UIImage(named: "background_Bayleaf", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'background_Bayleaf' is used in nib 'BayleafLoginViewController', but couldn't be loaded.") }
-        if #available(iOS 11.0, tvOS 11.0, *) {
-        }
-      }
-
-      fileprivate init() {}
-    }
-
-    struct _BirdSoundTableViewCell: Rswift.NibResourceType, Rswift.Validatable {
-      let bundle = R.hostingBundle
-      let name = "BirdSoundTableViewCell"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> BirdSoundTableViewCell? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? BirdSoundTableViewCell
-      }
-
-      static func validate() throws {
-        if UIKit.UIImage(named: "play", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'play' is used in nib 'BirdSoundTableViewCell', but couldn't be loaded.") }
-        if #available(iOS 11.0, tvOS 11.0, *) {
-        }
-      }
-
-      fileprivate init() {}
-    }
-
-    struct _BlueLibraryViewController: Rswift.NibResourceType {
-      let bundle = R.hostingBundle
-      let name = "BlueLibraryViewController"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-      }
-
-      fileprivate init() {}
-    }
-
-    struct _CommentCell: Rswift.NibResourceType {
-      let bundle = R.hostingBundle
-      let name = "CommentCell"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CommentCell? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CommentCell
-      }
-
-      fileprivate init() {}
-    }
-
-    struct _CornerRadiusTableViewCell: Rswift.NibResourceType {
-      let bundle = R.hostingBundle
-      let name = "CornerRadiusTableViewCell"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CornerRadiusTableViewCell? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CornerRadiusTableViewCell
-      }
-
-      fileprivate init() {}
-    }
-
-    struct _CustomControlViewController: Rswift.NibResourceType {
-      let bundle = R.hostingBundle
-      let name = "CustomControlViewController"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-      }
-
-      fileprivate init() {}
-    }
-
-    struct _CustomTableViewCell: Rswift.NibResourceType {
-      let bundle = R.hostingBundle
-      let name = "CustomTableViewCell"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CustomTableViewCell? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CustomTableViewCell
-      }
-
-      fileprivate init() {}
-    }
-
-    struct _CustomViewController: Rswift.NibResourceType {
-      let bundle = R.hostingBundle
-      let name = "CustomViewController"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-      }
-
-      fileprivate init() {}
-    }
-
-    struct _DRHTextFieldViewController: Rswift.NibResourceType {
-      let bundle = R.hostingBundle
-      let name = "DRHTextFieldViewController"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-      }
-
-      fileprivate init() {}
-    }
-
-    struct _DifferentViewController: Rswift.NibResourceType {
-      let bundle = R.hostingBundle
-      let name = "DifferentViewController"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-      }
-
-      fileprivate init() {}
-    }
-
-    struct _FSPageViewController: Rswift.NibResourceType {
-      let bundle = R.hostingBundle
-      let name = "FSPageViewController"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-      }
-
-      fileprivate init() {}
-    }
-
-    struct _FaveButtonViewController: Rswift.NibResourceType, Rswift.Validatable {
-      let bundle = R.hostingBundle
-      let name = "FaveButtonViewController"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-      }
-
-      static func validate() throws {
-        if UIKit.UIImage(named: "heart", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'heart' is used in nib 'FaveButtonViewController', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "like", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'like' is used in nib 'FaveButtonViewController', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "smile", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'smile' is used in nib 'FaveButtonViewController', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "star", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'star' is used in nib 'FaveButtonViewController', but couldn't be loaded.") }
-        if #available(iOS 11.0, tvOS 11.0, *) {
-        }
-      }
-
-      fileprivate init() {}
-    }
-
-    struct _FilmTableViewCell: Rswift.NibResourceType {
-      let bundle = R.hostingBundle
-      let name = "FilmTableViewCell"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> FilmTableViewCell? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? FilmTableViewCell
-      }
-
-      fileprivate init() {}
-    }
-
-    struct _FlagViewController: Rswift.NibResourceType, Rswift.Validatable {
-      let bundle = R.hostingBundle
-      let name = "FlagViewController"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-      }
-
-      static func validate() throws {
-        if UIKit.UIImage(named: "us", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'us' is used in nib 'FlagViewController', but couldn't be loaded.") }
-        if #available(iOS 11.0, tvOS 11.0, *) {
-        }
-      }
-
-      fileprivate init() {}
-    }
-
-    struct _GameViewController: Rswift.NibResourceType {
-      let bundle = R.hostingBundle
-      let name = "GameViewController"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> GameView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? GameView
-      }
-
-      fileprivate init() {}
-    }
-
-    struct _GradientViewController: Rswift.NibResourceType {
-      let bundle = R.hostingBundle
-      let name = "GradientViewController"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-      }
-
-      fileprivate init() {}
-    }
-
-    struct _GrowingCell: Rswift.NibResourceType {
-      let bundle = R.hostingBundle
-      let name = "GrowingCell"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> GrowingCell? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? GrowingCell
-      }
-
-      fileprivate init() {}
-    }
-
-    struct _IconCollectionViewCell: Rswift.NibResourceType {
-      let bundle = R.hostingBundle
-      let name = "IconCollectionViewCell"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> IconCollectionViewCell? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? IconCollectionViewCell
-      }
-
-      fileprivate init() {}
-    }
-
-    struct _ImageCell: Rswift.NibResourceType {
-      let bundle = R.hostingBundle
-      let name = "ImageCell"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> ImageCell? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ImageCell
-      }
-
-      fileprivate init() {}
-    }
-
-    struct _MergeVideoViewController: Rswift.NibResourceType {
-      let bundle = R.hostingBundle
-      let name = "MergeVideoViewController"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-      }
-
-      fileprivate init() {}
-    }
-
-    struct _ModeratorTableViewCell: Rswift.NibResourceType {
-      let bundle = R.hostingBundle
-      let name = "ModeratorTableViewCell"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> ModeratorTableViewCell? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ModeratorTableViewCell
-      }
-
-      fileprivate init() {}
-    }
-
-    struct _ModeratorsSearchViewController: Rswift.NibResourceType, Rswift.Validatable {
-      let bundle = R.hostingBundle
-      let name = "ModeratorsSearchViewController"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-      }
-
-      static func validate() throws {
-        if UIKit.UIImage(named: "se-icon", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'se-icon' is used in nib 'ModeratorsSearchViewController', but couldn't be loaded.") }
-        if #available(iOS 11.0, tvOS 11.0, *) {
-        }
-      }
-
-      fileprivate init() {}
-    }
-
-    struct _MultipleSelectionViewController: Rswift.NibResourceType {
-      let bundle = R.hostingBundle
-      let name = "MultipleSelectionViewController"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-      }
-
-      fileprivate init() {}
-    }
-
-    struct _MyFirstView: Rswift.NibResourceType {
-      let bundle = R.hostingBundle
-      let name = "MyFirstView"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-      }
-
-      fileprivate init() {}
-    }
-
-    struct _PhotoDetailViewController: Rswift.NibResourceType {
-      let bundle = R.hostingBundle
-      let name = "PhotoDetailViewController"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-      }
-
-      fileprivate init() {}
-    }
-
-    struct _PhotoListTableViewCell: Rswift.NibResourceType {
-      let bundle = R.hostingBundle
-      let name = "PhotoListTableViewCell"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> PhotoListTableViewCell? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? PhotoListTableViewCell
-      }
-
-      fileprivate init() {}
-    }
-
-    struct _PickerViewController: Rswift.NibResourceType, Rswift.Validatable {
-      let bundle = R.hostingBundle
-      let name = "PickerViewController"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-      }
-
-      static func validate() throws {
-        if UIKit.UIImage(named: "mascot_swifty-birthday-party", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'mascot_swifty-birthday-party' is used in nib 'PickerViewController', but couldn't be loaded.") }
-        if #available(iOS 11.0, tvOS 11.0, *) {
-          if UIKit.UIColor(named: "rw-dark", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'rw-dark' is used in nib 'PickerViewController', but couldn't be loaded.") }
-          if UIKit.UIColor(named: "rw-green", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'rw-green' is used in nib 'PickerViewController', but couldn't be loaded.") }
-        }
-      }
-
-      fileprivate init() {}
-    }
-
-    struct _PlayVideoViewController: Rswift.NibResourceType {
-      let bundle = R.hostingBundle
-      let name = "PlayVideoViewController"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-      }
-
-      fileprivate init() {}
-    }
-
-    struct _PlayerViewController: Rswift.NibResourceType {
-      let bundle = R.hostingBundle
-      let name = "PlayerViewController"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-      }
-
-      fileprivate init() {}
-    }
-
-    struct _ProgramaticallyCreateViewController: Rswift.NibResourceType {
-      let bundle = R.hostingBundle
-      let name = "ProgramaticallyCreateViewController"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-      }
-
-      fileprivate init() {}
-    }
-
-    struct _RealnameCell: Rswift.NibResourceType {
-      let bundle = R.hostingBundle
-      let name = "RealnameCell"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> RealnameCell? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? RealnameCell
-      }
-
-      fileprivate init() {}
-    }
-
-    struct _RecordVideoViewController: Rswift.NibResourceType {
-      let bundle = R.hostingBundle
-      let name = "RecordVideoViewController"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-      }
-
-      fileprivate init() {}
-    }
-
-    struct _SlideViewController: Rswift.NibResourceType, Rswift.Validatable {
-      let bundle = R.hostingBundle
-      let name = "SlideViewController"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-      }
-
-      static func validate() throws {
-        if UIKit.UIImage(named: "background_Bayleaf", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'background_Bayleaf' is used in nib 'SlideViewController', but couldn't be loaded.") }
-        if #available(iOS 11.0, tvOS 11.0, *) {
-        }
-      }
-
-      fileprivate init() {}
-    }
-
-    struct _SuperHeroNameCell: Rswift.NibResourceType {
-      let bundle = R.hostingBundle
-      let name = "SuperHeroNameCell"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> SuperHeroNameCell? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? SuperHeroNameCell
-      }
-
-      fileprivate init() {}
-    }
-
-    struct _UserCell: Rswift.NibResourceType {
-      let bundle = R.hostingBundle
-      let name = "UserCell"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UserCell? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UserCell
-      }
-
-      fileprivate init() {}
-    }
-
-    struct _VideoNinjaViewController: Rswift.NibResourceType {
-      let bundle = R.hostingBundle
-      let name = "VideoNinjaViewController"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
-      }
-
-      fileprivate init() {}
-    }
-
-    fileprivate init() {}
-  }
-  #endif
-
-  #if os(iOS) || os(tvOS)
-  struct storyboard: Rswift.Validatable {
-    static func validate() throws {
-      #if os(iOS) || os(tvOS)
-      try launchScreen.validate()
-      #endif
-      #if os(iOS) || os(tvOS)
-      try main.validate()
-      #endif
-    }
-
-    #if os(iOS) || os(tvOS)
-    struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+    /// Storyboard `LaunchScreen`.
+    struct launchScreen: RswiftResources.StoryboardReference, RswiftResources.InitialControllerContainer {
       typealias InitialController = UIKit.UIViewController
 
-      let bundle = R.hostingBundle
+      let bundle: Foundation.Bundle
+
       let name = "LaunchScreen"
-
-      static func validate() throws {
-        if UIKit.UIImage(named: "rwdevcon-bg", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'rwdevcon-bg' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
-        if #available(iOS 11.0, tvOS 11.0, *) {
-        }
+      func validate() throws {
+        if UIKit.UIImage(named: "rwdevcon-bg", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'rwdevcon-bg' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
       }
-
-      fileprivate init() {}
     }
-    #endif
 
-    #if os(iOS) || os(tvOS)
-    struct main: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+    /// Storyboard `Main`.
+    struct main: RswiftResources.StoryboardReference, RswiftResources.InitialControllerContainer {
       typealias InitialController = UIKit.UINavigationController
 
-      let bundle = R.hostingBundle
+      let bundle: Foundation.Bundle
+
       let name = "Main"
+      func validate() throws {
 
-      static func validate() throws {
-        if #available(iOS 11.0, tvOS 11.0, *) {
-        }
       }
-
-      fileprivate init() {}
     }
-    #endif
-
-    fileprivate init() {}
   }
-  #endif
-
-  fileprivate init() {}
 }

@@ -1,4 +1,4 @@
-// IntExtensions.swift - Copyright 2021 SwifterSwift
+// IntExtensions.swift - Copyright 2023 SwifterSwift
 
 #if canImport(CoreGraphics)
 import CoreGraphics
@@ -26,20 +26,6 @@ public extension Int {
     /// SwifterSwift: Degree value of radian input.
     var radiansToDegrees: Double {
         return Double(self) * 180 / Double.pi
-    }
-
-    /// SwifterSwift: Int to String
-    func toString() -> String {
-        "\(self)"
-    }
-
-    /// SwifterSwift: cents to dollars
-    ///
-    ///     let cents = 12350
-    ///     let dollars = cents.centsToDollars()
-    ///
-    func centsToDollars() -> Double {
-        Double(self) / 100
     }
 
     /// SwifterSwift: UInt.

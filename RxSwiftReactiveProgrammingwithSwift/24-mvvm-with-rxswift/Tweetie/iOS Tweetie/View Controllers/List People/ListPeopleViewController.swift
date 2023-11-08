@@ -19,6 +19,7 @@ class ListPeopleViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         title = "List Members"
         tableView.estimatedRowHeight = 90
         tableView.rowHeight = UITableView.automaticDimension

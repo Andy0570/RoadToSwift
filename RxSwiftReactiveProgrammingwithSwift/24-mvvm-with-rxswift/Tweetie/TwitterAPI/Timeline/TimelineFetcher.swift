@@ -12,7 +12,7 @@ import Unbox
 class TimelineFetcher {
     private let timerDelay = 30
     private let bag = DisposeBag()
-    private let feedCursor = BehaviorRelay<TimelineCursor>(value: .none)
+    private let feedCursor = BehaviorRelay<TimelineCursor>(value: .none) // 重置光标
 
     // MARK: input
     let paused = BehaviorRelay<Bool>(value: false)
@@ -56,24 +56,21 @@ class TimelineFetcher {
         let reachableTimerWithAccount = Observable.combineLatest(
             // 当处于联网状态时，通过 Rx 计时器每隔 30 秒抓取一次推文数据
             Observable<Int>.timer(.seconds(0), period: .seconds(timerDelay), scheduler: MainScheduler.instance),
-            Reachability.rx.reachable,
-            currentAccount,
-            paused.asObservable(),
+            Reachability.rx.reachable, // 网络检测可达
+            currentAccount, // 当前账户已登录
+            paused.asObservable(), // 应用处于“非暂定”状态
             resultSelector: { _, reachable, account, paused in
                 return (reachable && !paused) ? account : nil
             })
             .filter { $0 != nil }
             .map { $0! }
 
-        // 重置光标
-        let feedCursor = BehaviorRelay<TimelineCursor>(value: .none)
-
         // Re-fetch the timeline
         timeline = reachableTimerWithAccount
             .withLatestFrom(feedCursor.asObservable()) { account, cursor in
                 return (account: account, cursor: cursor)
             }
-            .flatMapLatest(jsonProvider) // jsonProvider 返回一个 Observable<[JSONObject]>
+            .flatMapLatest(jsonProvider) // jsonProvider 是一个被注入 init 方法的闭包，它返回一个 Observable<[JSONObject]>
             .map(Tweet.unboxMany) // 通过 Tweet.unboxMany 方法将 jsonProvider 返回类型映射到 Observable<[Tweet]>
             .share(replay: 1)
 

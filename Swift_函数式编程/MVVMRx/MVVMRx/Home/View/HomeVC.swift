@@ -9,6 +9,15 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+/**
+ 原文：
+ Part1: <https://hackernoon.com/mvvm-rxswift-on-ios-part-1-69608b7ed5cd>
+ Part2: <https://medium.com/@mamalizaki74/practical-mvvm-rxswift-a330db6aa693>
+
+ 译文：
+ Part1: <https://github.com/xitu/gold-miner/blob/master/TODO1/mvvm-rxswift-on-ios-part-1.md>
+ Part2：<https://github.com/xitu/gold-miner/blob/master/TODO1/practical-mvvm-rxswift.md>
+ */
 class HomeVC: UIViewController {
 
     @IBOutlet weak var albumsVCView: UIView!

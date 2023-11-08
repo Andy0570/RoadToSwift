@@ -59,8 +59,23 @@ extension ViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
 
         if let item = self.arrayDataSource?.getCellItem(at: indexPath),
-            let controller = item.className.getViewController() {
+           let controller = viewControllerFromString(viewControllerName: item.className) {
             navigationController?.pushViewController(controller, animated: true)
         }
+    }
+}
+
+
+extension NSObject {
+    // <https://stackoverflow.com/questions/46806969/create-a-uiviewcontroller-class-instance-from-string-view-controller-string-nam>
+    func viewControllerFromString(viewControllerName: String) -> UIViewController? {
+        if let appName = Bundle.main.infoDictionary?["CFBundleName"] as? String {
+            print("CFBundleName - \(appName)")
+            if let viewControllerType = NSClassFromString("\(appName).\(viewControllerName)") as? UIViewController.Type {
+                return viewControllerType.init()
+            }
+        }
+
+        return nil
     }
 }

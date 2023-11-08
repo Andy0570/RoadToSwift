@@ -14,6 +14,7 @@ final class UserCell: UICollectionViewCell, ListBindable {
 
     // MARK: ListBindable
 
+    // Cell 通过遵守 ListBindable 协议，绑定模型
     func bindViewModel(_ viewModel: Any) {
         guard let viewModel = viewModel as? UserViewModel else {
             return

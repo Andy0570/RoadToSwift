@@ -313,7 +313,7 @@ extension KF.Builder {
 
 #if !os(watchOS)
 extension KF.Builder {
-    #if os(iOS) || os(tvOS)
+    #if os(iOS) || os(tvOS) || os(visionOS)
 
     /// Sets a placeholder which is used while retrieving the image.
     /// - Parameter placeholder: A placeholder to show while retrieving the image from its source.
@@ -336,7 +336,7 @@ extension KF.Builder {
 
 extension KF.Builder {
 
-    #if os(iOS) || os(tvOS)
+    #if os(iOS) || os(tvOS) || os(visionOS)
     /// Sets the transition for the image task.
     /// - Parameter transition: The desired transition effect when setting the image to image view.
     /// - Returns: A `KF.Builder` with changes applied.
@@ -394,7 +394,7 @@ extension KF.Builder {
     /// progressive JPEG data and display it in a progressive way.
     /// - Parameter progressive: The progressive settings which is used while loading.
     /// - Returns: A `KF.Builder` with changes applied.
-    public func progressiveJPEG(_ progressive: ImageProgressive? = .default) -> Self {
+    public func progressiveJPEG(_ progressive: ImageProgressive? = .init()) -> Self {
         options.progressiveJPEG = progressive
         return self
     }

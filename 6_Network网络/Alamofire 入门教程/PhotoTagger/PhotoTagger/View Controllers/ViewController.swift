@@ -8,6 +8,7 @@
  ## History
  - 20220110
  - 20220810
+ - 20230510
 
  ## [Imaggs 图像识别服务平台](https://imagga.com/auth/signup)
  API EndPoint: <https://api.imagga.com>

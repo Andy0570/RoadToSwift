@@ -111,7 +111,7 @@ URLSession.shared.dataTask(with: request) { (data, response, error) in
 }
 ```
 
-这显示了 Alamofire 的真正力量，因为该框架使很多事情变得更容易。
+这显示了 Alamofire 的真正力量，因为该框架使很多事情变得更容易：
 
 * 请求是在一个单一的初始化器中建立的；
 * 默认情况下，一个 URL 编码器正在对参数进行编码；

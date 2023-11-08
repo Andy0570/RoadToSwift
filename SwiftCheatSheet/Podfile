@@ -17,7 +17,7 @@ target 'SwiftCheatSheet' do
   pod 'IGListKit'
   pod 'FaveButton'
   pod 'FSPagerView'
-  pod 'SwifterSwift', :git => 'https://github.com/Andy0570/SwifterSwift.git', :branch => 'master'
+  pod 'SwifterSwift', '~> 6.0.0'
 
   # 工具服务
   pod 'SwiftyBeaver' # 日志记录

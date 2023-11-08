@@ -18,6 +18,7 @@ class AlbumsCollectionViewVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupBinding()
         albumsCollectionView.backgroundColor = .clear
     }

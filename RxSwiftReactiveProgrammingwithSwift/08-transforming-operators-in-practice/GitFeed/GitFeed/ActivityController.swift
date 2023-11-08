@@ -3,6 +3,7 @@ import RxSwift
 import RxCocoa
 import Kingfisher
 
+/// !!!: 本 Demo 用于演示 RxSwift “转换操作符”
 class ActivityController: UITableViewController {
     private let repo = "ReactiveX/RxSwift"
     private let eventsFileURL = cachedFileURL("events.json")
@@ -32,12 +33,13 @@ class ActivityController: UITableViewController {
         }
 
         // 优化网络请求，只请求它之前没有获取到的事件。如果没有人 fork 或者喜欢你跟踪的 repo，你就会从服务器收到一个空的响应，从而节省网络流量和处理能力。
+        // 注：该功能需要服务器端提供支持，在响应头中添加一个 Last-Modified 字段，以在下一次请求时发出。
         if let lastModifiedString = try? String(contentsOf: modifiedFileURL, encoding: .utf8) {
             lastModified.accept(lastModifiedString)
         }
 
         refresh()
-    }
+    } 
 
     @objc func refresh() {
         DispatchQueue.global(qos: .default).async { [weak self] in
@@ -55,7 +57,7 @@ class ActivityController: UITableViewController {
             .map { urlString -> URL in
                 return URL(string: urlString)!
             }
-            .flatMap { url -> Observable<Any> in
+            .flatMap { url -> Observable<Any> in // 添加异步特性
                 let request = URLRequest(url: url)
                 return URLSession.shared.rx.json(request: request)
             }

@@ -235,8 +235,6 @@ return Session(configuration: configuration, eventMonitors: [networkLogger])
 
 ![Network Logging](https://koenig-media.raywenderlich.com/uploads/2020/07/3.Alamofire.NetworkLogging.png)
 
-
-
 现在您将看到控制台中记录所有网络请求和响应。干得漂亮！
 
 到目前为止，您已经获取了公共存储库。现在是时候从您自己的 GitHub 帐户中获取存储库了。准备好享受一些授权乐趣。 :]

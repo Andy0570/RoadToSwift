@@ -34,6 +34,7 @@ class ListPeopleViewModel {
     }
     
     func bindOutput() {
+        
         //observe the current account status
         let currentAccount = account
             .filter { account in

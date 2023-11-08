@@ -26,14 +26,14 @@ See also: [#509](https://github.com/Instagram/IGListKit/issues/509)
 
 ## 编写更好的等价判断方法
 
-尽管 `IGListKit` 使用了方法 `-isEqualToDiffableObject:`，但编写一个好的相等性检查的概念也适用于一般情况。下面是编写好的 `-isEqual:` 和 `-hash` 函数的基本知识。注意这都是Objective-C，但也适用于Swift。
+尽管 `IGListKit` 使用了方法 `-isEqualToDiffableObject:`，但编写一个好的相等性检查的概念也适用于一般情况。下面是编写好的 `-isEqual:` 和 `-hash` 函数的基本知识。注意这都是 Objective-C，但也适用于 Swift。
 
 * 如果你重写了 `-isEqual:` 方法，那么你必须同时重写 `-hash` 方法。请看 [Mike Ash 的这篇文章](https://www.mikeash.com/pyblog/friday-qa-2010-06-18-implementing-equality-and-hashing.html)，了解详情。
 * 总是先比较指针。如果检查同一个实例，这可以节省很多浪费的 `objc_msgSend(...)` 调用和值比较。
 * 当比较对象的值时，总是在 `-isEqual:` 之前检查 `nil`。例如，`[nil isEqual:nil]` 反其道而行之地返回 `NO`。而不是执行 `left == right || [left isEqual:right]`。
 * 总是先比较最便宜的值。例如，如果 `intVal` 值不同，做 `[self.array isEqual:other.array] && self.intVal == other.intVal` 是非常浪费的。使用懒人评估!
 
-举个例子，如果我有一个具有以下接口的用户模型：
+举个例子，如果我有一个包含以下接口的用户模型：
 
 ```objc
 @interface User : NSObject

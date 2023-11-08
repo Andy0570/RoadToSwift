@@ -11,7 +11,7 @@ class ListTimelineViewModel {
 
     let list: ListIdentifier
     let account: Driver<TwitterAccount.AccountStatus>
-    
+
     // MARK: - Input
     // 一个让你暂停和恢复 TimelineFetcher 实例获取推文数据的输入属性
     var paused: Bool = false {
@@ -35,6 +35,7 @@ class ListTimelineViewModel {
 
         // fetch and store tweets
         fetcher = TimelineFetcher(account: account, list: list, apiType: apiType)
+
         // 订阅 TimelineFetcher 的结果并将推文存储到 Realm 中
         // Realm.rx.add 将收到的对象持久化到应用程序的默认 Realm 数据库中
         fetcher.timeline
@@ -50,9 +51,6 @@ class ListTimelineViewModel {
         guard let realm = try? Realm() else {
             return
         }
-
-        // ⬇️ 设置输出变量，将 ViewModel 的结果绑定到其他类可以订阅的公共属性上
-
         // 从所有持久化的 tweets 中创建了一个结果集，并对该集合的变化进行订阅
         tweets = Observable.changeset(from: realm.objects(Tweet.self))
         

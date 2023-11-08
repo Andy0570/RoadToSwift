@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         let search = searchCityName.rx.controlEvent(.editingDidEndOnExit)
             .map { self.searchCityName.text ?? "" }
             .filter { !$0.isEmpty } // 过滤空值
-            .flatMapLatest { text in
+            .flatMapLatest { text in // 当新的网络请求开始时，取消之前的任何网络请求
                 ApiController.shared.currentWeather(for: text).catchAndReturn(.empty)
             }
             .asDriver(onErrorJustReturn: .empty)

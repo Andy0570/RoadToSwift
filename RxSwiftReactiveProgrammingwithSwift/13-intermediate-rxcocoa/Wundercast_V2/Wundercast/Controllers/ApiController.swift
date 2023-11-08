@@ -84,6 +84,8 @@ class ApiController {
     }
     
     // MARK: - Api Calls
+
+    // 根据城市名称从服务器上检索天气数据
     func currentWeather(for city: String) -> Observable<Weather> {
         buildRequest(pathComponent: "weather", params: [("q", city)])
             .map { data in

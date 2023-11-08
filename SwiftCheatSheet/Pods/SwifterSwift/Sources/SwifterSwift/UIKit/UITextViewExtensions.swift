@@ -1,4 +1,4 @@
-// UITextViewExtensions.swift - Copyright 2020 SwifterSwift
+// UITextViewExtensions.swift - Copyright 2023 SwifterSwift
 
 #if canImport(UIKit) && !os(watchOS)
 import UIKit
@@ -26,36 +26,13 @@ public extension UITextView {
 
     /// SwifterSwift: Wrap to the content (Text / Attributed Text).
     func wrapToContent() {
+        isScrollEnabled = false
         contentInset = .zero
         scrollIndicatorInsets = .zero
         contentOffset = .zero
         textContainerInset = .zero
         textContainer.lineFragmentPadding = 0
         sizeToFit()
-    }
-
-    /// SwifterSwift: Adjust height based on content and fixed width
-    func layoutDynamicHeight(width: CGFloat) {
-        // Requerid for dynamic height.
-        if isScrollEnabled { isScrollEnabled = false }
-
-        frame.setWidth(width)
-        sizeToFit()
-        if frame.width != width {
-            frame.setWidth(width)
-        }
-    }
-
-    /// SwifterSwift: Adjust height based on content and fixed width
-    func layoutDynamicHeight(x: CGFloat, y: CGFloat, width: CGFloat) {
-        // Requerid for dynamic height.
-        if isScrollEnabled { isScrollEnabled = false }
-
-        frame = CGRect(x: x, y: y, width: width, height: frame.height)
-        sizeToFit()
-        if frame.width != width {
-            frame.setWidth(width)
-        }
     }
 }
 

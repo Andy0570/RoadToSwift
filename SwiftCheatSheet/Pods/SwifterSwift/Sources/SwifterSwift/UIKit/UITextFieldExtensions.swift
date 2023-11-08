@@ -1,4 +1,4 @@
-// UITextFieldExtensions.swift - Copyright 2020 SwifterSwift
+// UITextFieldExtensions.swift - Copyright 2023 SwifterSwift
 
 #if canImport(UIKit) && !os(watchOS)
 import UIKit
@@ -172,9 +172,8 @@ public extension UITextField {
         rightView = iconView
         rightViewMode = .always
     }
-    
+
     /// SwifterSwift: Add tool bars to the textfield input accessory view.
-    ///
     /// - Parameters:
     ///   - items: The items to present in the toolbar.
     ///   - height: The height of the toolbar.
@@ -187,19 +186,6 @@ public extension UITextField {
         return toolBar
     }
     #endif
-
-    /// SwifterSwift: Add bottom border in textField
-    ///
-    /// - Parameter borderColor: bottom border color
-    func addBottomBorder(borderColor: UIColor) {
-        borderStyle = .none
-        layer.backgroundColor = UIColor.white.cgColor
-        layer.masksToBounds = false
-        layer.shadowColor = borderColor.cgColor
-        layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
-        layer.shadowOpacity = 1.0
-        layer.shadowRadius = 0.0
-    }
 }
 
 #endif

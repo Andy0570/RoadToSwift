@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet private var tempLabel: UILabel!
     @IBOutlet private var humidityLabel: UILabel!
     @IBOutlet private var iconLabel: UILabel!
-    @IBOutlet private var cityNameLabel: UILabel!
+    @IBOutlet  private var cityNameLabel: UILabel!
 
     private let bag = DisposeBag()
     private let locationManager = CLLocationManager()
@@ -61,11 +61,13 @@ class ViewController: UIViewController {
 
         // -------------------------------------------------------------
         // 根据搜索状态显示/隐藏 UI
+        // asObservable() 方法将 search 返回的 Driver 类型转换为 Observable.merge() 所期望的 Observable 类型
+        // startWith(true) 可以避免在应用启动时手动隐藏所有的 Label，只要消费者订阅运行，他就会立即发出 true
         let running = Observable.merge(
-            searchInput.map { _ in true },
-            geoInput.map { _ in true },
-            mapInput.map { _ in true },
-            search.map { _ in false }.asObservable()
+            searchInput.map { _ in true }, // 文本输入
+            geoInput.map { _ in true }, // GPS定位输入
+            mapInput.map { _ in true }, // mapKit 地图手势拖拽输入
+            search.map { _ in false }.asObservable() // 返回网络搜索结果
         )
             .startWith(true)
             .asDriver(onErrorJustReturn: false)

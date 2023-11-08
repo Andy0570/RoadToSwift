@@ -10,7 +10,7 @@ final class GitAPIManager {
         // 自定义 Session 配置
         let configuration = URLSessionConfiguration.af.default
         // configuration.timeoutIntervalForRequest = 30 // 默认请求超时时间为 60s
-        // configuration.waitsForConnectivity = true // 等待网络连接
+        // configuration.waitsForConnectivity = true // 发出网络请求之前，等待网络连接
 
         // 自定义缓存策略
         configuration.requestCachePolicy = .returnCacheDataElseLoad

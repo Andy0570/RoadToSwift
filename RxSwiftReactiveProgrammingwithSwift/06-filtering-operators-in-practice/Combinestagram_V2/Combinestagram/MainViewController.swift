@@ -20,7 +20,8 @@ class MainViewController: UIViewController {
 
         // 订阅 BehaviorRelay<[UIImage]> 发出的 next 事件，并更新 UI 创建拼贴画
         images
-            // 在 500 毫秒（0.5秒）内，如果有许多元素相继进入，只取最后一个
+            // 需求：防止不必要的 UI 渲染
+            // 代码逻辑：在 500 毫秒（0.5秒）内，如果有许多元素相继进入，只取最后一个
             .throttle(.milliseconds(500), scheduler: MainScheduler.instance)
             .subscribe(onNext: { [weak imagePreview] photos in
                 guard let preview = imagePreview else { return }
@@ -58,7 +59,8 @@ class MainViewController: UIViewController {
 
         newPhotos
             .take(while: { [weak self] image in
-                // 仅获取前 6 张照片，当条件评估为 false 时，takeWhile(_) 会丢弃所有的元素
+                // 需求：仅获取前 6 张照片
+                // 代码逻辑：当条件评估为 false 时，takeWhile(_) 会丢弃所有的元素
                 let count = self?.images.value.count ?? 0
                 return count < 6
             })
@@ -67,7 +69,8 @@ class MainViewController: UIViewController {
                 return newImage.size.width > newImage.size.height
             }
             .filter { [weak self] newImage in
-                // 缓存图片字节长度，模拟唯一性，防止拼贴两张相同的图片
+                // 需求：防止用户多次添加同一张照片
+                // 代码逻辑：缓存图片字节长度，模拟唯一性
                 // FIXME: 基于演示目的，这里引入了状态（即 imageCache），后面会通过 scan 操作符优化。
                 let length = newImage.pngData()?.count ?? 0
                 guard self?.imageCache.contains(length) == false else {
@@ -84,8 +87,8 @@ class MainViewController: UIViewController {
             }
             .disposed(by: bag)
 
-        // 过滤所有元素，只对 .completed 事件采取行动
-        // 当所有照片选择完成时，在导航栏左上角显示拼贴画的小预览
+        // 需求：当所有照片选择完成时，在导航栏左上角显示拼贴画的小预览
+        // 代码逻辑：过滤所有元素，只对 .completed 事件采取行动
         newPhotos
             .ignoreElements()
             .subscribe(onCompleted: { [weak self] in

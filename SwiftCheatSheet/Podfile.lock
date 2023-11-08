@@ -1,14 +1,12 @@
 PODS:
-  - Alamofire (5.6.1)
+  - Alamofire (5.8.1)
   - FaveButton (3.2.1)
   - FSPagerView (0.8.3)
   - IGListDiffKit (4.0.0)
   - IGListKit (4.0.0):
     - IGListDiffKit (= 4.0.0)
-  - Kingfisher (7.2.2)
-  - R.swift (6.1.0):
-    - R.swift.Library (~> 5.3.0)
-  - R.swift.Library (5.3.0)
+  - Kingfisher (7.10.0)
+  - R.swift (7.3.2)
   - SPPermissions/Camera (7.1.5):
     - SPPermissions/Core
   - SPPermissions/Core (7.1.5)
@@ -27,36 +25,40 @@ PODS:
     - SPPermissions/Core
   - SPPermissions/Tracking (7.1.5):
     - SPPermissions/Core
-  - SwifterSwift (5.3.0):
-    - SwifterSwift/AppKit (= 5.3.0)
-    - SwifterSwift/CoreAnimation (= 5.3.0)
-    - SwifterSwift/CoreGraphics (= 5.3.0)
-    - SwifterSwift/CoreLocation (= 5.3.0)
-    - SwifterSwift/Dispatch (= 5.3.0)
-    - SwifterSwift/Foundation (= 5.3.0)
-    - SwifterSwift/HealthKit (= 5.3.0)
-    - SwifterSwift/MapKit (= 5.3.0)
-    - SwifterSwift/SceneKit (= 5.3.0)
-    - SwifterSwift/SpriteKit (= 5.3.0)
-    - SwifterSwift/StoreKit (= 5.3.0)
-    - SwifterSwift/SwiftStdlib (= 5.3.0)
-    - SwifterSwift/UIKit (= 5.3.0)
-    - SwifterSwift/WebKit (= 5.3.0)
-  - SwifterSwift/AppKit (5.3.0)
-  - SwifterSwift/CoreAnimation (5.3.0)
-  - SwifterSwift/CoreGraphics (5.3.0)
-  - SwifterSwift/CoreLocation (5.3.0)
-  - SwifterSwift/Dispatch (5.3.0)
-  - SwifterSwift/Foundation (5.3.0)
-  - SwifterSwift/HealthKit (5.3.0)
-  - SwifterSwift/MapKit (5.3.0)
-  - SwifterSwift/SceneKit (5.3.0)
-  - SwifterSwift/SpriteKit (5.3.0)
-  - SwifterSwift/StoreKit (5.3.0)
-  - SwifterSwift/SwiftStdlib (5.3.0)
-  - SwifterSwift/UIKit (5.3.0)
-  - SwifterSwift/WebKit (5.3.0)
-  - SwiftyBeaver (1.9.6)
+  - SwifterSwift (6.0.0):
+    - SwifterSwift/AppKit (= 6.0.0)
+    - SwifterSwift/Combine (= 6.0.0)
+    - SwifterSwift/CoreAnimation (= 6.0.0)
+    - SwifterSwift/CoreGraphics (= 6.0.0)
+    - SwifterSwift/CoreLocation (= 6.0.0)
+    - SwifterSwift/CryptoKit (= 6.0.0)
+    - SwifterSwift/Dispatch (= 6.0.0)
+    - SwifterSwift/Foundation (= 6.0.0)
+    - SwifterSwift/HealthKit (= 6.0.0)
+    - SwifterSwift/MapKit (= 6.0.0)
+    - SwifterSwift/SceneKit (= 6.0.0)
+    - SwifterSwift/SpriteKit (= 6.0.0)
+    - SwifterSwift/StoreKit (= 6.0.0)
+    - SwifterSwift/SwiftStdlib (= 6.0.0)
+    - SwifterSwift/UIKit (= 6.0.0)
+    - SwifterSwift/WebKit (= 6.0.0)
+  - SwifterSwift/AppKit (6.0.0)
+  - SwifterSwift/Combine (6.0.0)
+  - SwifterSwift/CoreAnimation (6.0.0)
+  - SwifterSwift/CoreGraphics (6.0.0)
+  - SwifterSwift/CoreLocation (6.0.0)
+  - SwifterSwift/CryptoKit (6.0.0)
+  - SwifterSwift/Dispatch (6.0.0)
+  - SwifterSwift/Foundation (6.0.0)
+  - SwifterSwift/HealthKit (6.0.0)
+  - SwifterSwift/MapKit (6.0.0)
+  - SwifterSwift/SceneKit (6.0.0)
+  - SwifterSwift/SpriteKit (6.0.0)
+  - SwifterSwift/StoreKit (6.0.0)
+  - SwifterSwift/SwiftStdlib (6.0.0)
+  - SwifterSwift/UIKit (6.0.0)
+  - SwifterSwift/WebKit (6.0.0)
+  - SwiftyBeaver (2.0.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -72,7 +74,7 @@ DEPENDENCIES:
   - SPPermissions/Notification
   - SPPermissions/PhotoLibrary
   - SPPermissions/Tracking
-  - SwifterSwift (from `https://github.com/Andy0570/SwifterSwift.git`, branch `master`)
+  - SwifterSwift (~> 6.0.0)
   - SwiftyBeaver
 
 SPEC REPOS:
@@ -84,33 +86,22 @@ SPEC REPOS:
     - IGListKit
     - Kingfisher
     - R.swift
-    - R.swift.Library
     - SPPermissions
+    - SwifterSwift
     - SwiftyBeaver
 
-EXTERNAL SOURCES:
-  SwifterSwift:
-    :branch: master
-    :git: https://github.com/Andy0570/SwifterSwift.git
-
-CHECKOUT OPTIONS:
-  SwifterSwift:
-    :commit: 3b2f02261f0c33b5b873a9f26ff5c0580411415c
-    :git: https://github.com/Andy0570/SwifterSwift.git
-
 SPEC CHECKSUMS:
-  Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
+  Alamofire: 3ca42e259043ee0dc5c0cdd76c4bc568b8e42af7
   FaveButton: 93cfebf6030336fa7653fad2068c3152ed668b39
   FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
   IGListDiffKit: 665d6cf43ce726e676013db9c7d6c4294259b6b2
   IGListKit: fd5a5d21935298f5849fa49d426843cff97b77c7
-  Kingfisher: 184d4d1a8c36666e663caf8e08abe87898595c53
-  R.swift: ec98ff71c4ab2f6fd01dd077e5afd15e63a4834c
-  R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
+  Kingfisher: a18f05d3b6d37d8650ee4a3e61d57a28fc6207f6
+  R.swift: 0af0d882f49f03711415cb4e5215daa977d8a480
   SPPermissions: c63ac1132badad39917de03a3c9dc2429ace94be
-  SwifterSwift: 03a3e5fe175b6696193b2c9d0dfa7f0bf9ac02cc
-  SwiftyBeaver: c8241b4745aa269a78ca5a022532c6915e948536
+  SwifterSwift: 66843dc594f8fb890f5543c22545921d44acc004
+  SwiftyBeaver: 014b0c12065026b731bac80305294f27d63e27f6
 
-PODFILE CHECKSUM: 83a820ca106698ccdc0d303adf22bde5c819bb14
+PODFILE CHECKSUM: 0d63dd7f5938e90aa082656f2e507c9ddc069a7d
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.14.2

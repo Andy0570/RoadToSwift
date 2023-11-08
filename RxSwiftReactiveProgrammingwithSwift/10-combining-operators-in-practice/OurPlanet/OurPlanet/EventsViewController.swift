@@ -19,16 +19,18 @@ class EventsViewController: UIViewController, UITableViewDataSource {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 60
 
-        // 绑定 tableView 到 filteredEvents
+        // 绑定 tableView 到 filteredEvents 以更新 UI
         filteredEvents.asObservable().subscribe { [weak self] _ in
             DispatchQueue.main.async {
                 self?.tableView.reloadData()
             }
         }.disposed(by: disposeBag)
 
+        // days + events => filteredEvents
         // 注意，combineLatest 在开始调用你的闭包之前，会等待它的所有可观察序列发出一个元素。
         Observable.combineLatest(days, events) { days, events -> [EOEvent] in
             let maxInterval = TimeInterval(days * 24 * 3600)
+            
             // 过滤并保留你感兴趣的最后 N 天
             return events.filter { event in
                 if let date = event.date {
@@ -52,6 +54,7 @@ class EventsViewController: UIViewController, UITableViewDataSource {
     }
     
     // MARK: UITableViewDataSource
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredEvents.value.count
     }

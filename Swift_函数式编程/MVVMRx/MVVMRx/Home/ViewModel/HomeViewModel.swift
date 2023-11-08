@@ -31,6 +31,7 @@ class HomeViewModel {
      */
     public let albums: PublishSubject<[Album]> = PublishSubject()
     public let tracks: PublishSubject<[Track]> = PublishSubject()
+    
     public let loading: PublishSubject<Bool> = PublishSubject()
     public let error: PublishSubject<HomeError> = PublishSubject()
 

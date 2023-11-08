@@ -1,45 +1,8 @@
-// OptionalExtensions.swift - Copyright 2020 SwifterSwift
+// OptionalExtensions.swift - Copyright 2023 SwifterSwift
 
 // MARK: - Methods
 
 public extension Optional {
-    /// SwifterSwift: Require this optional to contain a non-nil value
-    ///
-    /// This method will either return the value that this optional contains, or trigger
-    /// a `preconditionFailure` with an error message containing debug information.
-    ///
-    /// - Parameters:
-    ///   - hintExpression: Optionally pass a hint that will get included in any error message generated in case nil was found.
-    ///   - file: error description of file
-    ///   - line: error description of line
-    /// - Returns: The value this optional contains.
-    func require(hint hintExpression: @autoclosure () -> String? = nil,
-                 file: StaticString = #file,
-                 line: UInt = #line) -> Wrapped {
-        // <https://github.com/JohnSundell/Require/blob/master/Sources/Require.swift>
-        guard let unwrapped = self else {
-            var message = "Required value was nil in \(file), at line \(line)"
-
-            if let hint = hintExpression() {
-                message.append(". Debugging hint: \(hint)")
-            }
-
-            #if !os(Linux)
-            let exception = NSException(
-                name: .invalidArgumentException,
-                reason: message,
-                userInfo: nil
-            )
-
-            exception.raise()
-            #endif
-
-            preconditionFailure(message)
-        }
-
-        return unwrapped
-    }
-
     /// SwifterSwift: Get self of default value (if self is nil).
     ///
     ///		let foo: String? = nil
@@ -128,15 +91,12 @@ public extension Optional {
 public extension Optional where Wrapped: Collection {
     /// SwifterSwift: Check if optional is nil or empty collection.
     var isNilOrEmpty: Bool {
-        guard let collection = self else { return true }
-        return collection.isEmpty
+        return self?.isEmpty ?? true
     }
 
     /// SwifterSwift: Returns the collection only if it is not nil and not empty.
     var nonEmpty: Wrapped? {
-        guard let collection = self else { return nil }
-        guard !collection.isEmpty else { return nil }
-        return collection
+        return (self?.isEmpty ?? true) ? nil : self
     }
 }
 

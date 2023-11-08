@@ -51,8 +51,3 @@ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath:
 当你在`UICollectionView`上调用`dequeueConfiguredReusableCell(using:for:item:)`时，它就会取消一个具有正确类的单元格，并调用你传递给`UICollectionView.CellRegistration`初始化器的闭包，这样你就可以配置你的单元格了。
 
 你需要做的就是确保你从数据源中抓取正确的模型，把它传递给`dequeueConfiguredReusableCell(using:for:item:)`，然后返回刚刚获得的单元格。这就是它的全部内容! 很好用吧？没有涉及其他特殊的设置。没有秘密的技巧。什么都没有。只是用一种更好的方式来获取和配置集合视图单元。
-
-
-
-
-

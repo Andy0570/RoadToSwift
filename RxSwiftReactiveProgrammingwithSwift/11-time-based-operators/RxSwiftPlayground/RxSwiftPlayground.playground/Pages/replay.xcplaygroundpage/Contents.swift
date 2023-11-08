@@ -21,7 +21,7 @@ class TimelineView<E>: TimelineViewBase, ObserverType where E: CustomStringConve
 
 let elementsPerSecond = 1 // 发射频率
 let maxElements = 58 // 发射元素数量上限
-let replayedElements = 1 // 重放元素数量
+let replayedElements = 1 // 重放/缓冲的元素数量
 let replayDelay: TimeInterval = 3 // 重放元素延迟时间间隔
 
 //let sourceObservable = Observable<Int>.create { observer in

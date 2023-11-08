@@ -1,16 +1,14 @@
-// CGSizeExtensions.swift - Copyright 2020 SwifterSwift
+// CGSizeExtensions.swift - Copyright 2023 SwifterSwift
 
 #if canImport(CoreGraphics)
 import CoreGraphics
 
-// MARK: - Properties
+// MARK: - Methods
 
 public extension CGSize {
     /// SwifterSwift: Returns the aspect ratio.
     var aspectRatio: CGFloat {
-        guard width != .zero, height != .zero else {
-            return .zero
-        }
+        guard height != 0 else { return 0 }
         return width / height
     }
 
@@ -56,16 +54,6 @@ public extension CGSize {
         let aWidth = min(width * minRatio, boundingSize.width)
         let aHeight = min(height * minRatio, boundingSize.height)
         return CGSize(width: aWidth, height: aHeight)
-    }
-}
-
-// MARK: - Initializers
-
-public extension CGSize {
-    /// SwifterSwift: initialize square size.
-    /// - Parameter side: side length of a square.
-    init(side: CGFloat) {
-        self.init(width: side, height: side)
     }
 }
 

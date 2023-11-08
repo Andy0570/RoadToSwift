@@ -1,0 +1,1 @@
+[Making custom Segmented Control](https://medium.com/@caesarus1993/making-custom-segmented-control-a20ecb9f9384)

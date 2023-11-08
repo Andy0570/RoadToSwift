@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="xzh-fz-Ha8" customClass="SearchTableViewCell" customModule="RxSwiftArchitectureProgress" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xzh-fz-Ha8" id="G1p-ZP-SmA">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPQ-hg-QSD">
+                        <rect key="frame" x="20" y="11" width="42" height="21.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJJ-0x-vcd">
+                        <rect key="frame" x="352" y="11.5" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="DPQ-hg-QSD" firstAttribute="top" secondItem="G1p-ZP-SmA" secondAttribute="top" constant="11" id="Hhr-ok-R3M"/>
+                    <constraint firstItem="jJJ-0x-vcd" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="DPQ-hg-QSD" secondAttribute="trailing" constant="15" id="QRf-aP-1oJ"/>
+                    <constraint firstItem="DPQ-hg-QSD" firstAttribute="leading" secondItem="G1p-ZP-SmA" secondAttribute="leading" constant="20" id="atE-HO-kgV"/>
+                    <constraint firstItem="jJJ-0x-vcd" firstAttribute="centerY" secondItem="DPQ-hg-QSD" secondAttribute="centerY" id="fII-IZ-Ag8"/>
+                    <constraint firstAttribute="bottom" secondItem="DPQ-hg-QSD" secondAttribute="bottom" constant="11" id="fgN-nP-zbL"/>
+                    <constraint firstAttribute="trailing" secondItem="jJJ-0x-vcd" secondAttribute="trailing" constant="20" id="hDX-q6-HDB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="nameLabel" destination="DPQ-hg-QSD" id="hUU-OR-AUY"/>
+                <outlet property="starsLabel" destination="jJJ-0x-vcd" id="bbO-TN-h8Z"/>
+            </connections>
+            <point key="canvasLocation" x="-88.405797101449281" y="51.5625"/>
+        </tableViewCell>
+    </objects>
+</document>

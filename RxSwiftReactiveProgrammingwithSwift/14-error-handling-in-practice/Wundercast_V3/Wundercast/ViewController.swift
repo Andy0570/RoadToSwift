@@ -131,6 +131,7 @@ class ViewController: UIViewController {
         return .lightContent
     }
 
+    // 当发生 API 密钥错误时，弹窗让用户主动输入密钥
     func requestKey() {
         func configurationTextField(textField: UITextField!) {
             self.keyTextField = textField

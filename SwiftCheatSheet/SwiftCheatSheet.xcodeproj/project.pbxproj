@@ -64,6 +64,11 @@
 		223A179D282E3D6B003FB424 /* RangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223A179C282E3D6B003FB424 /* RangeSlider.swift */; };
 		223A179F282E4420003FB424 /* RangeSliderTrackLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223A179E282E4420003FB424 /* RangeSliderTrackLayer.swift */; };
 		223A17A1282E52C0003FB424 /* HeartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223A17A0282E52C0003FB424 /* HeartButton.swift */; };
+		223A3CD62AFA249E00B184FB /* NSLayoutConstraintExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223A3CD52AFA249E00B184FB /* NSLayoutConstraintExtensions.swift */; };
+		223A3CDC2AFA25F700B184FB /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223A3CD82AFA25F100B184FB /* Double+Extensions.swift */; };
+		223A3CDD2AFA25F700B184FB /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223A3CD92AFA25F300B184FB /* UITextField+Extensions.swift */; };
+		223A3CDE2AFA25F700B184FB /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223A3CDA2AFA25F500B184FB /* String+Extensions.swift */; };
+		223A3CDF2AFA25F700B184FB /* AlertDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223A3CDB2AFA25F700B184FB /* AlertDisplayer.swift */; };
 		2240754527FB5CDC0050BEF6 /* VideoEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2240754427FB5CDC0050BEF6 /* VideoEditor.swift */; };
 		2240754827FB60390050BEF6 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2240754627FB60390050BEF6 /* PlayerViewController.swift */; };
 		2240754927FB60390050BEF6 /* PlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2240754727FB60390050BEF6 /* PlayerViewController.xib */; };
@@ -233,6 +238,7 @@
 		22EE32CB27D0999500A9A66F /* Anchors2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EE32CA27D0999500A9A66F /* Anchors2ViewController.swift */; };
 		22EE32D127D0B7DB00A9A66F /* AnimationConstraintsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EE32D027D0B7DB00A9A66F /* AnimationConstraintsViewController.swift */; };
 		22EE32D327D0BC5E00A9A66F /* TraitCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EE32D227D0BC5E00A9A66F /* TraitCollectionViewController.swift */; };
+		22F738C42A6155B5008508B5 /* Require.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F738C32A6155B5008508B5 /* Require.swift */; };
 		22FF1B5427C88B0F007214EB /* ModelAndBingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FF1B5327C88B0F007214EB /* ModelAndBingViewController.swift */; };
 		22FF1B5727C89FE4007214EB /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FF1B5527C89FE4007214EB /* UserCell.swift */; };
 		22FF1B5827C89FE4007214EB /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22FF1B5627C89FE4007214EB /* UserCell.xib */; };
@@ -313,6 +319,11 @@
 		223A179C282E3D6B003FB424 /* RangeSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSlider.swift; sourceTree = "<group>"; };
 		223A179E282E4420003FB424 /* RangeSliderTrackLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSliderTrackLayer.swift; sourceTree = "<group>"; };
 		223A17A0282E52C0003FB424 /* HeartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartButton.swift; sourceTree = "<group>"; };
+		223A3CD52AFA249E00B184FB /* NSLayoutConstraintExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintExtensions.swift; sourceTree = "<group>"; };
+		223A3CD82AFA25F100B184FB /* Double+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
+		223A3CD92AFA25F300B184FB /* UITextField+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		223A3CDA2AFA25F500B184FB /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		223A3CDB2AFA25F700B184FB /* AlertDisplayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertDisplayer.swift; sourceTree = "<group>"; };
 		2240754427FB5CDC0050BEF6 /* VideoEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoEditor.swift; sourceTree = "<group>"; };
 		2240754627FB60390050BEF6 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		2240754727FB60390050BEF6 /* PlayerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerViewController.xib; sourceTree = "<group>"; };
@@ -485,6 +496,7 @@
 		22EE32CA27D0999500A9A66F /* Anchors2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anchors2ViewController.swift; sourceTree = "<group>"; };
 		22EE32D027D0B7DB00A9A66F /* AnimationConstraintsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationConstraintsViewController.swift; sourceTree = "<group>"; };
 		22EE32D227D0BC5E00A9A66F /* TraitCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitCollectionViewController.swift; sourceTree = "<group>"; };
+		22F738C32A6155B5008508B5 /* Require.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Require.swift; sourceTree = "<group>"; };
 		22FF1B5327C88B0F007214EB /* ModelAndBingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelAndBingViewController.swift; sourceTree = "<group>"; };
 		22FF1B5527C89FE4007214EB /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		22FF1B5627C89FE4007214EB /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
@@ -646,6 +658,7 @@
 				2230E54E283BE1F9007D168D /* HomeViewController.swift */,
 				2230E55D283CA881007D168D /* CoolViewController.swift */,
 				2230E55F283CD8D6007D168D /* ViewFactory.swift */,
+				223A3CD52AFA249E00B184FB /* NSLayoutConstraintExtensions.swift */,
 				2230E550283BE45B007D168D /* Transitions */,
 			);
 			path = "自定义视图控制器转场";
@@ -691,6 +704,17 @@
 				223A179E282E4420003FB424 /* RangeSliderTrackLayer.swift */,
 			);
 			path = "自定义控件";
+			sourceTree = "<group>";
+		};
+		223A3CD72AFA25DF00B184FB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				223A3CDB2AFA25F700B184FB /* AlertDisplayer.swift */,
+				223A3CD82AFA25F100B184FB /* Double+Extensions.swift */,
+				223A3CDA2AFA25F500B184FB /* String+Extensions.swift */,
+				223A3CD92AFA25F300B184FB /* UITextField+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		2246199727EAF4560096C856 /* GradientColor */ = {
@@ -1454,6 +1478,7 @@
 				22255F59282BB125009FC2D2 /* BayleafLoginViewController.xib */,
 				223A1780282CD146003FB424 /* SlideViewController.swift */,
 				223A1781282CD146003FB424 /* SlideViewController.xib */,
+				22F738C32A6155B5008508B5 /* Require.swift */,
 			);
 			path = UITextField;
 			sourceTree = "<group>";
@@ -1489,6 +1514,7 @@
 				22E3480127E8477700369602 /* Models */,
 				22E347FF27E8476A00369602 /* Networking */,
 				22E347FE27E8475D00369602 /* Behaviors */,
+				223A3CD72AFA25DF00B184FB /* Extensions */,
 			);
 			path = ModeratorsExplorer;
 			sourceTree = "<group>";
@@ -1938,6 +1964,7 @@
 				22E3482127E8539F00369602 /* StackExchangeClient.swift in Sources */,
 				2246199D27EAFE5B0096C856 /* GradientLabel.swift in Sources */,
 				2230E54F283BE1F9007D168D /* HomeViewController.swift in Sources */,
+				223A3CDF2AFA25F700B184FB /* AlertDisplayer.swift in Sources */,
 				229AC7E127D5EF93001D81D2 /* PhotoListTableViewCell.swift in Sources */,
 				223A1795282DF65B003FB424 /* CircularProgressLayer.swift in Sources */,
 				2240754827FB60390050BEF6 /* PlayerViewController.swift in Sources */,
@@ -1959,12 +1986,15 @@
 				22BF2E2827BF2FF9009027E3 /* NavigationController.swift in Sources */,
 				221C58F627F8896A00E5D855 /* MergeVideoViewController.swift in Sources */,
 				22EE32D327D0BC5E00A9A66F /* TraitCollectionViewController.swift in Sources */,
+				223A3CDC2AFA25F700B184FB /* Double+Extensions.swift in Sources */,
 				221C58F927F88E3800E5D855 /* VideoHelper.swift in Sources */,
+				22F738C42A6155B5008508B5 /* Require.swift in Sources */,
 				227E7EB827E0838E009D5E45 /* Model.swift in Sources */,
 				22E3481927E84FC300369602 /* URLRequest.swift in Sources */,
 				22E3481B27E8521700369602 /* HTTPURLResponse.swift in Sources */,
 				22AE41F82826E41B009A5850 /* CornerRadiusTableViewController.swift in Sources */,
 				227E7EAC27E0756C009D5E45 /* CollapsExpandViewController.swift in Sources */,
+				223A3CDE2AFA25F700B184FB /* String+Extensions.swift in Sources */,
 				2240754527FB5CDC0050BEF6 /* VideoEditor.swift in Sources */,
 				225F202327C332F0008FCC29 /* TurnStrategy.swift in Sources */,
 				227762EE283530D5004C025D /* ZoomableImageViewCell.swift in Sources */,
@@ -2000,6 +2030,7 @@
 				22CBBD4F27F2E57B0014475E /* PermissionsViewController.swift in Sources */,
 				22AC911B27DF48C0007260E6 /* Film.swift in Sources */,
 				22BF2E4727BF9D1B009027E3 /* ShapeViewBuilder.swift in Sources */,
+				223A3CDD2AFA25F700B184FB /* UITextField+Extensions.swift in Sources */,
 				22E3482327E857D500369602 /* ModeratorsViewModel.swift in Sources */,
 				2230E556283BECE0007D168D /* InteractionController.swift in Sources */,
 				227762F528353DC3004C025D /* ZoomableCell.swift in Sources */,
@@ -2010,6 +2041,7 @@
 				22D73FFB2817C086008295E0 /* HoverTextView.swift in Sources */,
 				2246DD2127C4BB48006A3AC1 /* IconCollectionViewCell.swift in Sources */,
 				228E44BD281259D800C07C60 /* SuperHeroDataSource.swift in Sources */,
+				223A3CD62AFA249E00B184FB /* NSLayoutConstraintExtensions.swift in Sources */,
 				222D1485281008D300F70EDC /* MySecondView.swift in Sources */,
 				22A7C75227C8AC0100196326 /* Comment.swift in Sources */,
 				22CBBD5327F2FD8F0014475E /* CameraController.swift in Sources */,

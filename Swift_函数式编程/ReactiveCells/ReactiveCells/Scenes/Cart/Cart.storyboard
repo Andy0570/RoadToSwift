@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4eW-Oa-SgV">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cart View Controller-->
+        <scene sceneID="4JD-Yr-zWC">
+            <objects>
+                <viewController id="CjF-mm-Fcf" customClass="CartViewController" customModule="ReactiveCells" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LUr-Pu-2zO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cQV-Bs-DXe">
+                                <rect key="frame" x="0.0" y="88" width="414" height="612"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="frC-VS-Ad0">
+                                <rect key="frame" x="12" y="700" width="390" height="150"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ex-Zo-oZR">
+                                        <rect key="frame" x="60" y="90" width="270" height="30"/>
+                                        <state key="normal" title="CHECKOUT"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVD-F0-s1s">
+                                        <rect key="frame" x="60" y="49" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="£12.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dg-5o-7GG">
+                                        <rect key="frame" x="277.5" y="49" width="52.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="gVD-F0-s1s" firstAttribute="leading" secondItem="0Ex-Zo-oZR" secondAttribute="leading" id="67g-VR-fhn"/>
+                                    <constraint firstAttribute="trailing" secondItem="0Ex-Zo-oZR" secondAttribute="trailing" constant="60" id="AIp-YV-9wQ"/>
+                                    <constraint firstItem="0Ex-Zo-oZR" firstAttribute="top" secondItem="gVD-F0-s1s" secondAttribute="bottom" constant="20" id="Ec6-vM-Afj"/>
+                                    <constraint firstAttribute="height" constant="150" id="Ki3-9G-iDR"/>
+                                    <constraint firstItem="6dg-5o-7GG" firstAttribute="trailing" secondItem="0Ex-Zo-oZR" secondAttribute="trailing" id="MZQ-aZ-lVc"/>
+                                    <constraint firstAttribute="bottom" secondItem="0Ex-Zo-oZR" secondAttribute="bottom" constant="30" id="mwH-0j-KjP"/>
+                                    <constraint firstItem="0Ex-Zo-oZR" firstAttribute="top" secondItem="6dg-5o-7GG" secondAttribute="bottom" constant="20" id="phQ-eG-sf8"/>
+                                    <constraint firstItem="0Ex-Zo-oZR" firstAttribute="leading" secondItem="frC-VS-Ad0" secondAttribute="leading" constant="60" id="qIN-0C-LCv"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="u4i-R7-pzf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cQV-Bs-DXe" firstAttribute="top" secondItem="u4i-R7-pzf" secondAttribute="top" id="1GY-Zy-Uk8"/>
+                            <constraint firstItem="u4i-R7-pzf" firstAttribute="bottom" secondItem="frC-VS-Ad0" secondAttribute="bottom" constant="12" id="BuD-z3-kKg"/>
+                            <constraint firstItem="frC-VS-Ad0" firstAttribute="leading" secondItem="u4i-R7-pzf" secondAttribute="leading" constant="12" id="MEr-y5-2Yv"/>
+                            <constraint firstItem="u4i-R7-pzf" firstAttribute="trailing" secondItem="frC-VS-Ad0" secondAttribute="trailing" constant="12" id="VCf-Dg-1d7"/>
+                            <constraint firstItem="frC-VS-Ad0" firstAttribute="top" secondItem="cQV-Bs-DXe" secondAttribute="bottom" id="nxE-jy-RKY"/>
+                            <constraint firstItem="cQV-Bs-DXe" firstAttribute="leading" secondItem="u4i-R7-pzf" secondAttribute="leading" id="qCy-Ks-zph"/>
+                            <constraint firstItem="u4i-R7-pzf" firstAttribute="trailing" secondItem="cQV-Bs-DXe" secondAttribute="trailing" id="t4O-yE-57w"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vE9-5D-973">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="naV-Xg-93N"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addButton" destination="naV-Xg-93N" id="TFq-Vx-1dj"/>
+                        <outlet property="amountLabel" destination="6dg-5o-7GG" id="W7t-nT-bwV"/>
+                        <outlet property="checkoutBottom" destination="BuD-z3-kKg" id="MbQ-2Y-dYw"/>
+                        <outlet property="checkoutButton" destination="0Ex-Zo-oZR" id="KSZ-ib-oN3"/>
+                        <outlet property="checkoutContainer" destination="frC-VS-Ad0" id="kxW-16-DgA"/>
+                        <outlet property="tableView" destination="cQV-Bs-DXe" id="s8K-wU-g0e"/>
+                        <outlet property="totalLabel" destination="gVD-F0-s1s" id="0Kr-fN-u2g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GHE-Cl-Igo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="995.65217391304361" y="-60.267857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xGi-gN-ZlY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4eW-Oa-SgV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aSG-WJ-Gyr">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="CartRed"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CjF-mm-Fcf" kind="relationship" relationship="rootViewController" id="Yrf-M8-13J"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YWP-uJ-6gB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="85.507246376811594" y="-60.267857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="CartRed">
+            <color red="1" green="0.3843137254901961" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
