@@ -3,7 +3,7 @@ import RxSwift
 import RxCocoa
 import Kingfisher
 
-/// !!!: 本 Demo 用于演示 RxSwift “转换操作符”
+// !!!: 本 Demo 用于演示 RxSwift “转换操作符”
 class ActivityController: UITableViewController {
     private let repo = "ReactiveX/RxSwift"
     private let eventsFileURL = cachedFileURL("events.json")

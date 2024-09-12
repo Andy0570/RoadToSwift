@@ -18,6 +18,7 @@ final class SearchViewModel3Impl {
     private let githubService: SearchService
     private let searchRequest = BehaviorRelay<Request>(value: Request(query: "", page: .first))
 
+    // Input
     let search = PublishRelay<String>()
     let selectItem = PublishRelay<SearchTableViewCellItem>()
     let reachedBottom = PublishRelay<Void>()
@@ -28,7 +29,7 @@ final class SearchViewModel3Impl {
     }
 }
 
-// MARK: - SearchViewModel
+// MARK: - Output
 extension SearchViewModel3Impl: SearchViewModel3 {
     var dataSource: Driver<[SectionType]> {
         return self.repositories
@@ -54,11 +55,14 @@ private extension SearchViewModel3Impl {
             .debounce(.seconds(1), scheduler: MainScheduler.instance)
             .withLatestFrom(searchRequest) { query, _ in Request(query: query, page: .first) } // map each new search query to new request with first page
         newSearchRequests.mapTo([]).bind(to: repositories).disposed(by: disposeBag) // clear current dataSource
+
+        // 搜索 + 上拉加载更多
         let allSearchRequests = Observable.merge(
             newSearchRequests,
             reachedBottom.withLatestFrom(searchRequest) { $1.nextPage }.share() // map reachedBottom events to new request with similar query and next page
         )
         allSearchRequests.bind(to: searchRequest).disposed(by: disposeBag) // save current request
+
         allSearchRequests.mapTo(true).bind(to: isLoadingRelay).disposed(by: disposeBag) // enable loading indicator before request
         let searchEvents = allSearchRequests.flatMapLatest { [githubService] in
             githubService.search(request: $0).asObservable().materialize()
@@ -66,6 +70,7 @@ private extension SearchViewModel3Impl {
         .share()
         searchEvents.mapTo(false).bind(to: isLoadingRelay).disposed(by: disposeBag) // disabling loading indicator after request
         searchEvents.elements().withLatestFrom(repositories) { $1 + $0 }.bind(to: repositories).disposed(by: disposeBag)
+
         searchEvents.errors().bind { print($0) }.disposed(by: disposeBag)
     }
 }

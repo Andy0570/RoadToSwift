@@ -73,22 +73,22 @@ final class SearchViewModel4: Reactor {
         }
     }
 
-func reduce(state: State, mutation: Mutation) -> State {
-    var newState = state
-    switch mutation {
-    case let .errorOccurred(message):
-        print(message)
-    case let .itemsAppended(newItems):
-        newState.repositories += newItems
-    case let .itemsLoaded(items):
-        newState.repositories = items
-    case let .toggleLoading(isLoading):
-        newState.isLoading = isLoading
-    case let .requestUpdated(request):
-        newState.searchRequest = request
+    func reduce(state: State, mutation: Mutation) -> State {
+        var newState = state
+        switch mutation {
+        case let .errorOccurred(message):
+            print(message)
+        case let .itemsAppended(newItems):
+            newState.repositories += newItems
+        case let .itemsLoaded(items):
+            newState.repositories = items
+        case let .toggleLoading(isLoading):
+            newState.isLoading = isLoading
+        case let .requestUpdated(request):
+            newState.searchRequest = request
+        }
+        return newState
     }
-    return newState
-}
 
     func transform(action: Observable<Action>) -> Observable<Action> {
         let searchActions = action.partition {

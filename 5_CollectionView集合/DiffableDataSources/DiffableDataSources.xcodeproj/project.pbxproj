@@ -76,10 +76,10 @@
 				B056BCDA23EF434B00FEB67C /* Info.plist */,
 				B09EE66E23DFE0E1006CEDE0 /* VideosViewController.swift */,
 				B09EE67423DFE6D9006CEDE0 /* VideoCollectionViewCell.swift */,
+				2252310D28990A0000EC7A9F /* SectionHeaderReusableView.swift */,
+				2252310B2897D52400EC7A9F /* Section.swift */,
 				B09EE67223DFE6C2006CEDE0 /* Video.swift */,
 				B0F557EB23EF455600314EC5 /* UIView+IBInspectable.swift */,
-				2252310B2897D52400EC7A9F /* Section.swift */,
-				2252310D28990A0000EC7A9F /* SectionHeaderReusableView.swift */,
 			);
 			path = DiffableDataSources;
 			sourceTree = "<group>";

@@ -73,14 +73,13 @@ class IconCollectionViewController: UICollectionViewController {
         return dataSource
     }
 
-    private func updateSnapshot(animatingChange: Bool = false) {
-        // 创建一个 NSDiffableDataSourceSnapshot 快照并填充数据
+    private func updateSnapshot(animatingDifferences: Bool = false) {
+        // 创建一个 Snapshot 并填充数据
         var snapshot = NSDiffableDataSourceSnapshot<Section, Icon>()
         snapshot.appendSections([.all])
         snapshot.appendItems(iconSet, toSection: .all)
-
-        // 将快照应用到数据源
-        dataSource.apply(snapshot, animatingDifferences: false, completion: nil)
+        // 将 Snapshot 应用到数据源
+        dataSource.apply(snapshot, animatingDifferences: animatingDifferences, completion: nil)
     }
 
 }

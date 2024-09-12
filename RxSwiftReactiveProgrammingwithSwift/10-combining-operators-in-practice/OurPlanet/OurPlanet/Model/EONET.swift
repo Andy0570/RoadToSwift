@@ -81,6 +81,7 @@ class EONET {
         // return openEvents.concat(closedEvents)
 
         // !!!: 优化：并行下载
+        // ---[openEvents]---[closedEvents]---[events]--->
         return Observable.of(openEvents, closedEvents) // 创建一个（包含可观察序列的）可观察序列
             .merge() // merge() 接收一个包含可观察变量的可观察序列。它订阅了由源可观察序列发射的每个可观察序列，并转发所有发射的元素。
             .reduce([]) { running, new in // 把结果还原成一个数组。[] 表示初始值，从一个空数组开始。

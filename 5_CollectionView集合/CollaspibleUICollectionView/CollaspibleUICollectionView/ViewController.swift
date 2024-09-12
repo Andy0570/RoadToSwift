@@ -55,6 +55,7 @@ class ViewController: UIViewController {
             contentConfiguration.textProperties.color = .label
             cell.contentConfiguration = contentConfiguration
 
+            // 箭头指示器
             let disclosureOptions = UICellAccessory.disclosureIndicator()
             cell.accessories = [disclosureOptions]
         }

@@ -87,6 +87,7 @@ class ViewController: UIViewController {
                     // 填充缓存数据
                     self?.cache[text] = data
                 }, onError: { error in
+                    // 发生错误时，执行副作用，显示弹窗
                     DispatchQueue.main.async { [weak self] in
                         guard let self else { return }
                         self.showError(error: error)

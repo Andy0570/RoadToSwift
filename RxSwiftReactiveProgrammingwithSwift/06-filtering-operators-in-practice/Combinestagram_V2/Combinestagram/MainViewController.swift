@@ -21,7 +21,7 @@ class MainViewController: UIViewController {
         // 订阅 BehaviorRelay<[UIImage]> 发出的 next 事件，并更新 UI 创建拼贴画
         images
             // 需求：防止不必要的 UI 渲染
-            // 代码逻辑：在 500 毫秒（0.5秒）内，如果有许多元素相继进入，只取最后一个
+            // 代码逻辑：在 500 毫秒（0.5秒）内，如果有许多元素相继进入，只取第一个
             .throttle(.milliseconds(500), scheduler: MainScheduler.instance)
             .subscribe(onNext: { [weak imagePreview] photos in
                 guard let preview = imagePreview else { return }

@@ -48,7 +48,7 @@ class CategoriesViewController: UIViewController, UITableViewDataSource, UITable
         let eoCategories = EONET.categories
 
         /*
-         // 一次性下载过去一年中的所有事件
+         // 1.1 一次性下载过去一年中的所有事件
          let downloadedEvents = EONET.events(forLast: 360)
 
          // 使用 combineLatest() 将下载的 categories 和 下载的 events 结合起来
@@ -56,7 +56,7 @@ class CategoriesViewController: UIViewController, UITableViewDataSource, UITable
          let updatedCategories = Observable.combineLatest(eoCategories, downloadedEvents) { (categories, events) -> [EOCategory] in
          return categories.map { category in
          var cat = category
-         // 把下载的事件添加到每个类别中
+         // 把下载的事件分类到不同的类别中
          cat.events = events.filter {
          $0.categories.contains(where: { $0.id == category.id })
          }
@@ -65,7 +65,7 @@ class CategoriesViewController: UIViewController, UITableViewDataSource, UITable
          }
          */
 
-        // 优化：按类别下载事件
+        // 1.2 优化：按类别下载事件
         let downloadedEvents = eoCategories
             .flatMap { categories in
                 return Observable.from(categories.map({ category in

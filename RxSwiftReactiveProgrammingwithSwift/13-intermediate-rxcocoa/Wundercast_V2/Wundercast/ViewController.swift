@@ -61,18 +61,19 @@ class ViewController: UIViewController {
 
         // -------------------------------------------------------------
         // 根据搜索状态显示/隐藏 UI
-        // asObservable() 方法将 search 返回的 Driver 类型转换为 Observable.merge() 所期望的 Observable 类型
-        // startWith(true) 可以避免在应用启动时手动隐藏所有的 Label，只要消费者订阅运行，他就会立即发出 true
+        // 1️⃣ asObservable() 方法将 search 返回的 Driver 类型转换为 Observable.merge() 所期望的 Observable 类型
+        // 2️⃣ startWith(true) 可以避免在应用启动时再去手动隐藏所有的 Label，只要消费者订阅 running，他就会立即发出 true
         let running = Observable.merge(
             searchInput.map { _ in true }, // 文本输入
             geoInput.map { _ in true }, // GPS定位输入
             mapInput.map { _ in true }, // mapKit 地图手势拖拽输入
-            search.map { _ in false }.asObservable() // 返回网络搜索结果
+            search.map { _ in false }.asObservable() // 返回网络搜索结果 1️⃣
         )
-            .startWith(true)
+            .startWith(true) // 2️⃣
             .asDriver(onErrorJustReturn: false)
 
         running.skip(1).drive(activityIndicator.rx.isAnimating).disposed(by: bag)
+        // 2️⃣ 应用启动时发出 true，默认隐藏 Label
         running.drive(tempLabel.rx.isHidden).disposed(by: bag)
         running.drive(iconLabel.rx.isHidden).disposed(by: bag)
         running.drive(humidityLabel.rx.isHidden).disposed(by: bag)

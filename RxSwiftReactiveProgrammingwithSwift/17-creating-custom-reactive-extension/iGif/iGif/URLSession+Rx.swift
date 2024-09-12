@@ -76,6 +76,7 @@ extension Reactive where Base: URLSession {
     }
 }
 
+// 创建自定义操作符
 // 创建一个特殊的操作符 cache() 来缓存数据，该操作符只适用于类型为（HTTPURLResponse，Data）的 Observable
 extension ObservableType where Element == (HTTPURLResponse, Data) {
     func cache() -> Observable<Element> {

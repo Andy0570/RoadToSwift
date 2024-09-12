@@ -1,0 +1,93 @@
+/// Copyright (c) 2018 Razeware LLC
+///
+/// Permission is hereby granted, free of charge, to any person obtaining a copy
+/// of this software and associated documentation files (the "Software"), to deal
+/// in the Software without restriction, including without limitation the rights
+/// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+/// copies of the Software, and to permit persons to whom the Software is
+/// furnished to do so, subject to the following conditions:
+///
+/// The above copyright notice and this permission notice shall be included in
+/// all copies or substantial portions of the Software.
+///
+/// Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
+/// distribute, sublicense, create a derivative work, and/or sell copies of the
+/// Software in any work that is designed, intended, or marketed for pedagogical or
+/// instructional purposes related to programming, coding, application development,
+/// or information technology.  Permission for such use, copying, modification,
+/// merger, publication, distribution, sublicensing, creation of derivative works,
+/// or sale is expressly withheld.
+///
+/// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+/// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+/// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+/// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+/// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+/// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+/// THE SOFTWARE.
+
+import UIKit
+
+class AccountManager: NSObject {
+  
+  struct Account {
+    static let firstName = "FirstName"
+    static let middleInitial = "MiddleInitial"
+    static let lastName = "LastName"
+    static let superVillianName = "SuperVillianName"
+    static let password = "Password"
+  }
+  
+  static func getFirstName() -> String? {
+    return UserDefaults.standard.string(forKey: Account.firstName)
+  }
+  
+  static func getFMiddleInitial() -> String? {
+    return UserDefaults.standard.string(forKey: Account.middleInitial)
+  }
+
+  static func getLastName() -> String? {
+    return UserDefaults.standard.string(forKey: Account.lastName)
+  }
+  
+  static func getSuperVillianName() -> String? {
+    return UserDefaults.standard.string(forKey: Account.superVillianName)
+  }
+  
+  static func getPassword() -> String? {
+    return UserDefaults.standard.string(forKey: Account.password)
+  }
+  
+  static func getName() -> String? {
+    if let superVillianName = UserDefaults.standard.string(forKey: Account.superVillianName) {
+      return superVillianName
+    }
+    
+    if let firstName = UserDefaults.standard.string(forKey: Account.firstName), let lastName = UserDefaults.standard.string(forKey: Account.lastName) {
+      return "\(firstName) \(lastName)"
+    }
+    
+    return nil
+  }
+  
+  static func isPasswordProtected() -> Bool {
+    if let pw = UserDefaults.standard.string(forKey: Account.password) {
+      return pw.count > 0
+    }
+    return false
+  }
+  
+  static func validatePassword(_ unvalidatedPassword: String) -> Bool {
+    return unvalidatedPassword == getPassword()
+  }
+  
+  static func setAccountWith(firstName: String?, middleInitial: String?, lastName: String?, superVillianName: String?, password: String?) {
+    // This is a tutorial on Regular Expressions, not Authentication. Don't ever do this in real life!    
+    UserDefaults.standard.set(firstName, forKey: Account.firstName)
+    UserDefaults.standard.set(middleInitial, forKey: Account.middleInitial)
+    UserDefaults.standard.set(lastName, forKey: Account.lastName)
+    UserDefaults.standard.set(superVillianName, forKey: Account.superVillianName)
+    UserDefaults.standard.set(password, forKey: Account.password)
+  }
+
+}

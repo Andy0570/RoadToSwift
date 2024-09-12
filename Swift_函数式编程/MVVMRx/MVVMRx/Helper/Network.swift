@@ -59,8 +59,13 @@ class APIManager {
                 print(error)
                 completion(ApiResult.failure(.connectionError))
             } else if let data = data, let responseCode = response as? HTTPURLResponse {
+
+                // !!!:仓库里的 JSON 文件被删除了 ("404: Not Found")
+                let string = String(data: data, encoding: .utf8)
+                print(string!)
+
                 do {
-                    let responseJSON = try JSON(data: data)
+                    let responseJSON = try JSON(data: data, options: .fragmentsAllowed)
                     print("responseCode : \(responseCode.statusCode)")
                     print("responseJSON : \(responseJSON)")
                     switch responseCode.statusCode {

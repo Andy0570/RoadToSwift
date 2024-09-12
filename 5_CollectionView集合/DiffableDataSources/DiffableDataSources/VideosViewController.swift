@@ -1,6 +1,5 @@
 /// iOS Tutorial: Collection View and Diffable Data Source
 /// Reference: <https://www.raywenderlich.com/8241072-ios-tutorial-collection-view-and-diffable-data-source>
-/// <https://www.swiftbysundell.com/articles/building-modern-collection-views-in-swift/>
 
 import UIKit
 import SafariServices
@@ -90,6 +89,7 @@ extension VideosViewController: UISearchResultsUpdating {
         applySnapshot()
     }
 
+    // 返回包含搜索条件的所有 Section
     func filteredSections(for queryOrNil: String?) -> [Section] {
         let sections = Section.allSections
         guard let query = queryOrNil, !query.isEmpty else {
@@ -97,6 +97,7 @@ extension VideosViewController: UISearchResultsUpdating {
         }
 
         return sections.filter { section in
+            // 当 Sectino 标题符合搜索条件时，也显示
             var matches = section.title.lowercased().contains(query.lowercased())
             for video in section.videos {
                 if video.title.lowercased().contains(query.lowercased()) {
