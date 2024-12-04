@@ -39,11 +39,6 @@ class PickerViewController: UIViewController {
         pickButton.isEnabled = false
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        // navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
-
     // MARK: - Actions
 
     @IBAction func recordButtonTapped(_ sender: Any) {

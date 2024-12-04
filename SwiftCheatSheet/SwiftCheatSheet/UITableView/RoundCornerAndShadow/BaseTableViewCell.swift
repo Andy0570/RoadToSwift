@@ -15,12 +15,6 @@ class BaseTableViewCell: UITableViewCell {
         // MARK: 在根视图层上设置阴影
         applyShadow(cornerRadius: 8)
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
 }
 
 extension UIView {

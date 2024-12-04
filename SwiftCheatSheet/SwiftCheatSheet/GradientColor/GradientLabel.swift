@@ -31,12 +31,4 @@ class GradientLabel: UIStackView {
         alignment = .center
         addArrangedSubview(label)
     }
-
-    override func layoutSubviews() {
-        super.layoutSubviews()
-
-        // 添加文字渐变效果
-//        let gradientImage = UIImage.gradientImage(bounds: label.bounds, colors: [.systemBlue, .systemRed])
-//        label.textColor = UIColor(patternImage: gradientImage)
-    }
 }

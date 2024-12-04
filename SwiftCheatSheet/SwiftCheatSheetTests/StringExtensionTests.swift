@@ -9,14 +9,6 @@ import XCTest
 @testable import SwiftCheatSheet
 
 class StringExtensionTests: XCTestCase {
-    override func setUpWithError() throws {
-        try super.setUpWithError()
-    }
-
-    override func tearDownWithError() throws {
-        try super.tearDownWithError()
-    }
-
     // 测试计算字符串的 MD5 哈希值
     func testGenerateMD5Value() {
         let password = "1234567890"
