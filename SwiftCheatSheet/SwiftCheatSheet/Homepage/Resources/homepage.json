@@ -28,31 +28,6 @@
     "title": "列表",
     "cells": [{
         "image": "image",
-        "title": "Diffable Datasource with UITableView",
-        "description": "",
-        "className": "DiffableDatasourceTableView"
-    }, {
-        "image": "image",
-        "title": "自适应大小的 Table View Cells",
-        "description": "",
-        "className": "AuteurListViewController"
-    }, {
-        "image": "image",
-        "title": "动态调整 UITextView 的高度",
-        "description": "",
-        "className": "GrowingCellViewController"
-    }, {
-        "image": "image",
-        "title": "折叠展开 UITableView",
-        "description": "",
-        "className": "CollapsExpandViewController"
-    }, {
-        "image": "image",
-        "title": "TableView 中的多选功能",
-        "description": "",
-        "className": "MultipleSelectionViewController"
-    }, {
-        "image": "image",
         "title": "枚举驱动的 TableView",
         "description": "",
         "className": "ChirperViewController"
@@ -61,11 +36,6 @@
         "title": "无限滚动的 TableView",
         "description": "",
         "className": "ModeratorsSearchViewController"
-    }, {
-        "image": "image",
-        "title": "在 cell 上同时设置圆角和阴影",
-        "description": "",
-        "className": "CornerRadiusTableViewController"
     }]
 }, {
     "title": "集合视图",
@@ -116,56 +86,8 @@
         "className": "PhotoCollectionViewController"
     }]
 }, {
-    "title": "自动布局",
-    "cells": [{
-        "image": "image",
-        "title": "Nib示例，支持屏幕旋转",
-        "description": "nib 方式设置自动布局约束",
-        "className": "FlagViewController"
-    }, {
-        "image": "image",
-        "title": "Visual Format Language",
-        "description": "视觉格式化语言",
-        "className": "VFLViewController"
-    }, {
-        "image": "image",
-        "title": "Auto Layout anchors",
-        "description": "自动布局锚点",
-        "className": "AnchorsViewController"
-    }, {
-        "image": "image",
-        "title": "演示通过编程创建约束的三种方式",
-        "description": "",
-        "className": "Anchors2ViewController"
-    }, {
-        "image": "image",
-        "title": "动画更新约束",
-        "description": "动画方式更新自动布局约束",
-        "className": "AnimationConstraintsViewController"
-    }, {
-        "image": "image",
-        "title": "UITraitCollection更新约束",
-        "description": "特征集合更新自动布局约束",
-        "className": "TraitCollectionViewController"
-    }, {
-        "image": "image",
-        "title": "在 Swift 中创建 UIView 的不同方式",
-        "description": "分别演示 XIB 方式和代码方式创建自定义 UIView",
-        "className": "DifferentViewController"
-    }, {
-        "image": "image",
-        "title": "代码方式创建自定义 UIView",
-        "description": "",
-        "className": "ProgramaticallyCreateViewController"
-    }]
-}, {
     "title": "动画",
     "cells": [{
-        "image": "image",
-        "title": "为 UITextField 添加动画",
-        "description": "description",
-        "className": "BayleafLoginViewController"
-    }, {
         "image": "image",
         "title": "自定义视图控制器转场",
         "description": "-",
@@ -175,57 +97,6 @@
         "title": "title2",
         "description": "description",
         "className": ""
-    }]
-}, {
-    "title": "UIKit 组件",
-    "cells": [{
-        "image": "image",
-        "title": "UIButton 弹出菜单（iOS 15特性）",
-        "description": "-",
-        "className": "MenuButtonViewController"
-    }, {
-        "image": "image",
-        "title": "UITextField 字符计数器",
-        "description": "-",
-        "className": "DRHTextFieldViewController"
-    }, {
-        "image": "image",
-        "title": "UISlider 滑块设置颜色",
-        "description": "-",
-        "className": "SlideViewController"
-    }, {
-        "image": "image",
-        "title": "自定义控件",
-        "description": "-",
-        "className": "CustomControlViewController"
-    }, {
-        "image": "image",
-        "title": "FaveButton",
-        "description": "-",
-        "className": "FaveButtonViewController"
-    }]
-}, {
-    "title": "Foundation 框架",
-    "cells": [{
-        "image": "image",
-        "title": "NSMutableAttributedString",
-        "description": "-",
-        "className": "AttributedStringViewController"
-    }, {
-        "image": "image",
-        "title": "将渐变色应用于 UILabel",
-        "description": "-",
-        "className": "GradientColorViewController"
-    }, {
-        "image": "image",
-        "title": "CAGradientLayer 实现渐变色",
-        "description": "-",
-        "className": "GradientViewController"
-    }, {
-        "image": "image",
-        "title": "Swift 中的原生二维码生成",
-        "description": "-",
-        "className": "BarCodeGenerateController"
     }]
 }, {
     "title": "开源框架",

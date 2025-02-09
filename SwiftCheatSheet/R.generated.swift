@@ -66,27 +66,9 @@ struct _R {
     var rwLight: RswiftResources.ColorResource { .init(name: "rw-light", path: [], bundle: bundle) }
   }
 
-  /// This `_R.image` struct is generated, and contains static references to 109 images.
+  /// This `_R.image` struct is generated, and contains static references to 97 images.
   struct image {
     let bundle: Foundation.Bundle
-
-    /// Image `Checkmark`.
-    var checkmark: RswiftResources.ImageResource { .init(name: "Checkmark", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `Download`.
-    var download: RswiftResources.ImageResource { .init(name: "Download", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `HighlightedOval`.
-    var highlightedOval: RswiftResources.ImageResource { .init(name: "HighlightedOval", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `HighlightedRect`.
-    var highlightedRect: RswiftResources.ImageResource { .init(name: "HighlightedRect", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `Oval`.
-    var oval: RswiftResources.ImageResource { .init(name: "Oval", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `RectThumb`.
-    var rectThumb: RswiftResources.ImageResource { .init(name: "RectThumb", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
     /// Image `background`.
     var background: RswiftResources.ImageResource { .init(name: "background", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
@@ -226,9 +208,6 @@ struct _R {
     /// Image `hat`.
     var hat: RswiftResources.ImageResource { .init(name: "hat", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
-    /// Image `heart`.
-    var heart: RswiftResources.ImageResource { .init(name: "heart", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
     /// Image `holySmoke`.
     var holySmoke: RswiftResources.ImageResource { .init(name: "holySmoke", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
@@ -279,15 +258,6 @@ struct _R {
 
     /// Image `lifeAquatic`.
     var lifeAquatic: RswiftResources.ImageResource { .init(name: "lifeAquatic", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `like`.
-    var like: RswiftResources.ImageResource { .init(name: "like", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `like_fill`.
-    var like_fill: RswiftResources.ImageResource { .init(name: "like_fill", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `like_normal`.
-    var like_normal: RswiftResources.ImageResource { .init(name: "like_normal", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
     /// Image `malcomX`.
     var malcomX: RswiftResources.ImageResource { .init(name: "malcomX", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
@@ -355,17 +325,11 @@ struct _R {
     /// Image `sky`.
     var sky: RswiftResources.ImageResource { .init(name: "sky", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
-    /// Image `smile`.
-    var smile: RswiftResources.ImageResource { .init(name: "smile", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
     /// Image `spain`.
     var spain: RswiftResources.ImageResource { .init(name: "spain", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
     /// Image `spikeLee`.
     var spikeLee: RswiftResources.ImageResource { .init(name: "spikeLee", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
-
-    /// Image `star`.
-    var star: RswiftResources.ImageResource { .init(name: "star", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
     /// Image `taxiDriver`.
     var taxiDriver: RswiftResources.ImageResource { .init(name: "taxiDriver", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
@@ -447,15 +411,12 @@ struct _R {
     }
   }
 
-  /// This `_R.file` struct is generated, and contains static references to 4 resource files.
+  /// This `_R.file` struct is generated, and contains static references to 3 resource files.
   struct file {
     let bundle: Foundation.Bundle
 
     /// Resource file `albums.json`.
     var albumsJson: RswiftResources.FileResource { .init(name: "albums", pathExtension: "json", bundle: bundle, locale: LocaleReference.none) }
-
-    /// Resource file `auteurs.json`.
-    var auteursJson: RswiftResources.FileResource { .init(name: "auteurs", pathExtension: "json", bundle: bundle, locale: LocaleReference.none) }
 
     /// Resource file `content.json`.
     var contentJson: RswiftResources.FileResource { .init(name: "content", pathExtension: "json", bundle: bundle, locale: LocaleReference.none) }
@@ -464,7 +425,7 @@ struct _R {
     var homepageJson: RswiftResources.FileResource { .init(name: "homepage", pathExtension: "json", bundle: bundle, locale: LocaleReference.none) }
   }
 
-  /// This `_R.nib` struct is generated, and contains static references to 41 nibs.
+  /// This `_R.nib` struct is generated, and contains static references to 25 nibs.
   struct nib {
     let bundle: Foundation.Bundle
 
@@ -473,18 +434,6 @@ struct _R {
 
     /// Nib `AdCell`.
     var adCell: RswiftResources.NibReference<AdCell> { .init(name: "AdCell", bundle: bundle) }
-
-    /// Nib `AttributedStringViewController`.
-    var attributedStringViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "AttributedStringViewController", bundle: bundle) }
-
-    /// Nib `AuteurTableViewCell`.
-    var auteurTableViewCell: RswiftResources.NibReference<AuteurTableViewCell> { .init(name: "AuteurTableViewCell", bundle: bundle) }
-
-    /// Nib `BarCodeGenerateController`.
-    var barCodeGenerateController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "BarCodeGenerateController", bundle: bundle) }
-
-    /// Nib `BayleafLoginViewController`.
-    var bayleafLoginViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "BayleafLoginViewController", bundle: bundle) }
 
     /// Nib `BirdSoundTableViewCell`.
     var birdSoundTableViewCell: RswiftResources.NibReference<BirdSoundTableViewCell> { .init(name: "BirdSoundTableViewCell", bundle: bundle) }
@@ -498,41 +447,14 @@ struct _R {
     /// Nib `CornerRadiusTableViewCell`.
     var cornerRadiusTableViewCell: RswiftResources.NibReference<CornerRadiusTableViewCell> { .init(name: "CornerRadiusTableViewCell", bundle: bundle) }
 
-    /// Nib `CustomControlViewController`.
-    var customControlViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "CustomControlViewController", bundle: bundle) }
-
     /// Nib `CustomTableViewCell`.
     var customTableViewCell: RswiftResources.NibReference<CustomTableViewCell> { .init(name: "CustomTableViewCell", bundle: bundle) }
-
-    /// Nib `CustomViewController`.
-    var customViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "CustomViewController", bundle: bundle) }
-
-    /// Nib `DifferentViewController`.
-    var differentViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "DifferentViewController", bundle: bundle) }
-
-    /// Nib `DRHTextFieldViewController`.
-    var drhTextFieldViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "DRHTextFieldViewController", bundle: bundle) }
-
-    /// Nib `FaveButtonViewController`.
-    var faveButtonViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "FaveButtonViewController", bundle: bundle) }
-
-    /// Nib `FilmTableViewCell`.
-    var filmTableViewCell: RswiftResources.NibReference<FilmTableViewCell> { .init(name: "FilmTableViewCell", bundle: bundle) }
-
-    /// Nib `FlagViewController`.
-    var flagViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "FlagViewController", bundle: bundle) }
 
     /// Nib `FSPageViewController`.
     var fsPageViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "FSPageViewController", bundle: bundle) }
 
     /// Nib `GameViewController`.
     var gameViewController: RswiftResources.NibReference<GameView> { .init(name: "GameViewController", bundle: bundle) }
-
-    /// Nib `GradientViewController`.
-    var gradientViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "GradientViewController", bundle: bundle) }
-
-    /// Nib `GrowingCell`.
-    var growingCell: RswiftResources.NibReference<GrowingCell> { .init(name: "GrowingCell", bundle: bundle) }
 
     /// Nib `IconCollectionViewCell`.
     var iconCollectionViewCell: RswiftResources.NibReference<IconCollectionViewCell> { .init(name: "IconCollectionViewCell", bundle: bundle) }
@@ -552,9 +474,6 @@ struct _R {
     /// Nib `MultipleSelectionViewController`.
     var multipleSelectionViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "MultipleSelectionViewController", bundle: bundle) }
 
-    /// Nib `MyFirstView`.
-    var myFirstView: RswiftResources.NibReference<UIKit.UIView> { .init(name: "MyFirstView", bundle: bundle) }
-
     /// Nib `PhotoDetailViewController`.
     var photoDetailViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "PhotoDetailViewController", bundle: bundle) }
 
@@ -570,17 +489,11 @@ struct _R {
     /// Nib `PlayerViewController`.
     var playerViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "PlayerViewController", bundle: bundle) }
 
-    /// Nib `ProgramaticallyCreateViewController`.
-    var programaticallyCreateViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "ProgramaticallyCreateViewController", bundle: bundle) }
-
     /// Nib `RealnameCell`.
     var realnameCell: RswiftResources.NibReference<RealnameCell> { .init(name: "RealnameCell", bundle: bundle) }
 
     /// Nib `RecordVideoViewController`.
     var recordVideoViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "RecordVideoViewController", bundle: bundle) }
-
-    /// Nib `SlideViewController`.
-    var slideViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "SlideViewController", bundle: bundle) }
 
     /// Nib `SuperHeroNameCell`.
     var superHeroNameCell: RswiftResources.NibReference<SuperHeroNameCell> { .init(name: "SuperHeroNameCell", bundle: bundle) }
@@ -592,21 +505,12 @@ struct _R {
     var videoNinjaViewController: RswiftResources.NibReference<UIKit.UIView> { .init(name: "VideoNinjaViewController", bundle: bundle) }
 
     func validate() throws {
-      if UIKit.UIColor(named: "AuteursBackground", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Color named 'AuteursBackground' is used in nib 'AuteurTableViewCell', but couldn't be loaded.") }
-      if UIKit.UIImage(named: "background_Bayleaf", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'background_Bayleaf' is used in nib 'BayleafLoginViewController', but couldn't be loaded.") }
       if UIKit.UIImage(named: "play", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'play' is used in nib 'BirdSoundTableViewCell', but couldn't be loaded.") }
-      if UIKit.UIImage(named: "heart", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'heart' is used in nib 'FaveButtonViewController', but couldn't be loaded.") }
-      if UIKit.UIImage(named: "like", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'like' is used in nib 'FaveButtonViewController', but couldn't be loaded.") }
-      if UIKit.UIImage(named: "smile", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'smile' is used in nib 'FaveButtonViewController', but couldn't be loaded.") }
-      if UIKit.UIImage(named: "star", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'star' is used in nib 'FaveButtonViewController', but couldn't be loaded.") }
-      if UIKit.UIColor(named: "AuteursBackground", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Color named 'AuteursBackground' is used in nib 'FilmTableViewCell', but couldn't be loaded.") }
-      if UIKit.UIImage(named: "us", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'us' is used in nib 'FlagViewController', but couldn't be loaded.") }
       if UIKit.UIImage(named: "se-icon", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'se-icon' is used in nib 'ModeratorsSearchViewController', but couldn't be loaded.") }
       if UIKit.UIImage(named: "mascot_swifty-birthday-party", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'mascot_swifty-birthday-party' is used in nib 'PickerViewController', but couldn't be loaded.") }
       if UIKit.UIColor(named: "rw-dark", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Color named 'rw-dark' is used in nib 'PickerViewController', but couldn't be loaded.") }
       if UIKit.UIColor(named: "rw-green", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Color named 'rw-green' is used in nib 'PickerViewController', but couldn't be loaded.") }
       if UIKit.UIColor(named: "rw-dark", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Color named 'rw-dark' is used in nib 'PlayerViewController', but couldn't be loaded.") }
-      if UIKit.UIImage(named: "background_Bayleaf", in: bundle, compatibleWith: nil) == nil { throw RswiftResources.ValidationError("[R.swift] Image named 'background_Bayleaf' is used in nib 'SlideViewController', but couldn't be loaded.") }
     }
   }
 

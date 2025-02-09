@@ -18,7 +18,8 @@ strings:
      params:
        # 将生成的枚举的访问修饰符更改为 public
        publicAccess: true
-       # 将默认生成的枚举类型名称从 L10n 更改为 Strings
+       # 'L10n' 是 'localization' 的缩写，而 'i18n' 是 ' internationalization ' 的缩写，尽管这种缩写方式有其合理性，但在为顶级字符串类型命名时，使用不同的名称可能会更加清晰和易于理解。
+       # 将默认生成的枚举类型名称从 'L10n' 更改为 'Strings'
        enumName: Strings
      output: Strings+Generated.swift
 
@@ -36,9 +37,9 @@ xcassets:
     # 注释上方代码，使用自定义模版
     - templatePath: Templates/xcassets/assets_swift5_swiftui.stencil
       params:
-        # 维护你在 Assets.xcassets 中的命名空间
+        # 维持你在 Assets.xcassets 中的命名空间
         forceProvidesNamespaces: true
-        # 确保无论您在输入中提供多少文件名，SwiftGen 都将维护单独的枚举来表示每个资产目录
+        # 确保无论你在 inputs 中提供了多少个文件名，SwiftGen 都将维护单独的枚举来表示每个资产目录
         forceFileNameEnum: true
       output: XCAssets+Generated.swift
 
