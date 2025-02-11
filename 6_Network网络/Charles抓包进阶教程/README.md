@@ -1,4 +1,4 @@
-> [Advanced Charles Proxy Tutorial for iOS](https://www.raywenderlich.com/22070831-advanced-charles-proxy-tutorial-for-ios)
+> 原文：[Advanced Charles Proxy Tutorial for iOS](https://www.kodeco.com/22070831-advanced-charles-proxy-tutorial-for-ios)
 >
 > 通过学习高级功能，如将响应映射到本地文件、自动请求和记录日志，从 Charles Proxy 中获得更多技能。
 
@@ -51,7 +51,7 @@ StarCharles 列出了由 SWAPI 提供的《星球大战》的电影和人物。�
 * 让 Charles 自动配置你的网络设置。
 * 在你想观察加密网络通信的每个模拟器或设备上下载并安装 SSL 证书。
 
-首先，下载最新版本的 MacOS 版 Charles Proxy，在写这篇文章的时候是 v4.6.1。双击 DMG 文件，接受许可协议，并将 Charles 图标拖到你的应用程序文件夹中进行安装。
+首先，下载最新版本的 MacOS 版 Charles Proxy，在写这篇文章的时候是 v4.6.7。双击 DMG 文件，接受许可协议，并将 Charles 图标拖到你的应用程序文件夹中进行安装。
 
 Charles Proxy不是免费的，但它确实提供了30天的免费试用。因为 Charles 在试用模式下只运行 30 分钟，所以你可能需要在整个教程中经常重新启动它。
 
@@ -72,9 +72,9 @@ Charles Proxy不是免费的，但它确实提供了30天的免费试用。因�
 Charles 工作于网络浏览器和 API 之间。它使用自己的根证书，也被称为证书颁发机构（CA），动态地创建和签署发送到本地浏览器的证书，让你以纯文本形式查看网络流量。
 
 要做到这一点，你必须在你想查看网络请求和响应的设备或模拟器上安装并信任 Charles 根证书。
-到正在运行 StarCharles 的模拟器上。打开 Safari 浏览器，然后输入 chls.pro/ssl。
+到正在运行 StarCharles 的模拟器上。打开 Safari 浏览器，然后输入 `chls.pro/ssl`（译者注：这个网址需要翻墙访问！）。
 
-<img src="https://koenig-media.raywenderlich.com/uploads/2021/04/4-1.png" style="zoom:25%;" />
+<img src="https://koenig-media.raywenderlich.com/uploads/2021/04/4-1-231x500.png" style="zoom:80%;" />
 
 
 
@@ -82,19 +82,17 @@ Charles 工作于网络浏览器和 API 之间。它使用自己的根证书，�
 
 ![](https://koenig-media.raywenderlich.com/uploads/2021/04/4-2-231x500.png)
 
-
-
-接下来，打开设置。导航到常规▸配置文件，点选 Charles Proxy CA。
+接下来，打开设置。导航到常规 > 配置文件，点选 Charles Proxy CA。
 
 ![](https://koenig-media.raywenderlich.com/uploads/2021/04/4-3-231x500.png)
 
 点右上角的蓝色安装按钮，然后在下面的警告屏幕上再点安装。一旦你完全安装了包含 Charles 代理 CA 的配置文件，你的模拟器屏幕将看起来像这样：
 
-<img src="https://koenig-media.raywenderlich.com/uploads/2021/04/4-4.png" style="zoom:25%;" />
+![](https://koenig-media.raywenderlich.com/uploads/2021/04/4-4-231x500.png)
 
 最后，你需要完全信任这个证书。在模拟器的设置中，进入常规▸关于▸证书信任设置：
 
-<img src="https://koenig-media.raywenderlich.com/uploads/2021/04/4-5.png" style="zoom:25%;" />
+![](https://koenig-media.raywenderlich.com/uploads/2021/04/4-5-231x500.png)
 
 在 "启用对根证书的完全信任" 下，将 Charles 代理 CA 切换为 "打开"，并在阅读完根证书提示后点 "继续"。
 
@@ -132,23 +130,21 @@ Charles 工作于网络浏览器和 API 之间。它使用自己的根证书，�
 
 看一看 swapi.dev 请求中的内容。选择任何请求，然后点击屏幕下部的 Contents 标签。哇，那是什么？
 
-<img src="https://koenig-media.raywenderlich.com/uploads/2021/05/garbledNoSSL-1.png" style="zoom:50%;" />
+![](https://koenig-media.raywenderlich.com/uploads/2021/05/garbledNoSSL-1.png)
 
 
 
 > 注意：如果你看到的是 Request 和 Response，而不是 Contents，请点击其中之一。这只是意味着你在 Charles 偏好对话框的查看器选项卡中取消了合并请求和响应。
 
-
-
 如果一个请求的内容出现乱码，你需要启用 SSL 代理。这将告诉 Charles 使用你之前安装的根证书，与你启用了 SSL 代理的域进行通信。要做到这一点。
 
 1. 右键单击任何 swapi.dev 请求，然后从下拉菜单中选择 **Enable SSL Proxying**。
 
-   <img src="https://koenig-media.raywenderlich.com/uploads/2021/04/9.png" style="zoom: 67%;" />
+   ![](https://koenig-media.raywenderlich.com/uploads/2021/04/9.png)
 
 2. 退出并重新启动 Charles。
 
-3. 打开 Proxy ▸ SSL Proxying Settings。确认 swapi.dev 在 SSL 代理选项卡中作为一个包含的位置出现。
+3. 打开 Proxy > SSL Proxying Settings。确认 swapi.dev 在 SSL 代理选项卡中作为一个包含的位置出现。
 
 4. 点击 Charles 主窗口中的小扫帚，扫除现有的流量。然后，在 StarCharles 周围导航，进行网络通话。
 
@@ -156,13 +152,13 @@ Charles 工作于网络浏览器和 API 之间。它使用自己的根证书，�
 
 啊，好多了！
 
-<img src="https://koenig-media.raywenderlich.com/uploads/2021/05/exploreContentPane.png" style="zoom:67%;" />
+![](https://koenig-media.raywenderlich.com/uploads/2021/05/exploreContentPane.png)
 
 探索所有的内容窗格标签，更深入地了解《星球大战》的内部。
 
 ## 操纵数据
 
-Charles提供了各种处理请求和响应数据的工具，包括：
+Charles 提供了各种处理请求和响应数据的工具，包括：
 
 * 本地映射（使用本地 JSON 文件替换远程服务器的返回数据）
 * 远程映射（重定向远程服务器的端口路径地址）
@@ -173,8 +169,6 @@ Charles提供了各种处理请求和响应数据的工具，包括：
 * 高级重放
 
 > 注意：你可以在Charles文档中看到所有的工具。
-
-
 
 ## 将请求映射到本地和远程响应
 
@@ -202,7 +196,7 @@ Map Local 工具映射了一个请求，从你的本地而不是通常的端点�
 
 ### 远程映射工具
 
-正如 SWAPI 的粉丝已经知道的那样，没有人维护原始的 swapi.co。然而，幸运的是，SWAPI 的副本在银河系的其他地方继续存在。在本节中，你将使用 **Map Remote** 工具在 StarCharles 使用swapi.dev 的副本 swapi.tech 进行映射。
+正如 SWAPI 的粉丝已经知道的那样，没有人维护原始的 swapi.co。然而，幸运的是，SWAPI 的副本在银河系的其他地方继续存在。在本节中，你将使用 **Map Remote** 工具在 StarCharles 使用 swapi.dev 的副本 swapi.tech 进行映射。
 
 使用下面的步骤来映射 <https://swapi.dev/api/people/> 的请求，以便从 <https://www.swapi.tech/api/people/> 得到它的响应。
 
@@ -333,7 +327,7 @@ Fetch character completed: failure(StarCharles.NetworkError.jsonDecodingError(er
 在这一节中，你将重写该请求，以便不再从 swapi.tech 中获取 people，而是获取 planets。
 
 * 删除占位符集（如果有的话）。
-* 在Charles，打开 Tools ▸ Rewrite。
+* 在 Charles，打开 Tools ▸ Rewrite。
 * 勾选启用重写。
 * 点击 "Add"，添加一个新的集合，并将其命名为 "People"。
   ![](https://koenig-media.raywenderlich.com/uploads/2021/05/peopleRewriteSettings.png)

@@ -1,8 +1,6 @@
-> 原文：[Charles Proxy Tutorial for iOS](https://www.raywenderlich.com/21931256-charles-proxy-tutorial-for-ios)
+> 原文：[Charles Proxy Tutorial for iOS](https://www.kodeco.com/21931256-charles-proxy-tutorial-for-ios)
 >
 > 了解如何使用 Charles for iOS 和 macOS 来检查自己的应用程序和第三方应用程序的加密和未加密的网络通信流量。
-
-
 
 让我们面对现实吧——我们都写过无法正常运行的代码，而调试可能很困难。当你通过网络与其他系统交互时，就更难了。
 
@@ -26,7 +24,7 @@ Charles Proxy 工作于你的应用程序和网络之间。你配置你的模拟
 
 点击教程顶部或底部的下载材料按钮，下载初始化项目。
 
-然后，下载最新版本的 Mac 版 Charles Proxy（在撰写本文时为 v4.6.1）。双击 DMG 文件，将 Charles 图标拖到你的应用程序文件夹中进行安装。
+然后，下载最新版本的 Mac 版 Charles Proxy（在撰写本文时为 v4.6.7）。双击 DMG 文件，将 Charles 图标拖到你的应用程序文件夹中进行安装。
 
 Charles  Proxy 不是免费的，但有 30 天的免费试用期。Charles 在试用模式下每次只能运行 30 分钟，所以你可能需要在整个教程中不断重新启动它。
 
@@ -52,7 +50,7 @@ Charles  Proxy 不是免费的，但有 30 天的免费试用期。Charles 在�
 
 ![](https://koenig-media.raywenderlich.com/uploads/2021/04/Screenshot-2021-04-09-at-18.23.36.png)
 
-许多好东西都隐藏在按钮和菜单后面，而工具栏上有几个项目你应该知道：
+许多好东西都隐藏在按钮和菜单后面，而工具栏上有几个元素你应该知道：
 
 * "扫帚" 清除当前会话和所有记录的活动。
 * "记录/暂停" 在 Charles 记录事件时为红色，停止时为灰色。
@@ -202,8 +200,6 @@ Charles 很强大！
 
 如果你想在模拟器上检查流量，或者你没有 Charles Proxy for iOS 应用程序，那怎么办？没问题! 设置 Charles 代理网络上任何电脑或设备的流量也很简单，包括你的 iOS 设备。
 
-
-
 ### 设置你的设备
 
 在你的 Mac 上打开 Charles Proxy，通过点击 **Proxy**（下拉菜单）▸ 取消选中 **macOS Proxy** 来关闭 macOS 代理。这样，你将只看到来自你的 iOS 设备的流量。
@@ -243,6 +239,12 @@ Charles 很强大！
 
 像以前一样，打开 "设置 "应用程序，浏览 通用 ▸ 关于本机 ▸ 证书信任设置。信任你刚刚安装的证书。
 
+> **需要执行以下 2 个重要步骤！**
+>
+> 安装下载的配置描述文件：设置 > 通用 > VPN 与设备管理 > 配置描述文件
+>
+> 开启证书信任设置：设置 > 通用 > 关于本机 > 证书信任设置
+
 接下来，在 macOS Charles 应用程序中，选择 **Proxy** ▸ **SSL Proxying Settings**。确保勾选 **Enable SSL Proxying**，并为你要检查的流量添加一个值。
 
 <img src="https://koenig-media.raywenderlich.com/uploads/2019/03/enable-SSL-proxying.png" style="zoom:50%;" />
@@ -255,8 +257,6 @@ Charles 很强大！
 
 现在你会看到该连接的完整请求和响应体。
 
-
-
 ## 窥探他人的应用程序
 
 如果你和大多数开发者一样，对事物的工作原理很好奇。Charles 通过给你提供一个检查任何应用程序通信的工具来实现这种好奇心。
@@ -267,7 +267,7 @@ Charles 很强大！
 
 一旦应用程序安装完毕，启动该应用程序，点击 Charles 的扫帚图标，清除最近的活动。
 
-点击搜索，输入邮编90210，选择比佛利山庄作为你的位置。然后点击查看。如果你要使用你目前的位置，如果你的位置发生变化，应用程序获取的 URL 可能会改变，这可能会使本 Charles Proxy 教程的一些后面的步骤更难遵循。
+点击搜索，输入邮编 90210，选择比佛利山庄作为你的位置。然后点击查看。如果你要使用你目前的位置，如果你的位置发生变化，应用程序获取的 URL 可能会改变，这可能会使本 Charles Proxy 教程的一些后面的步骤更难遵循。
 
 在 Structure 项卡中列出了大量的网站! 这是一份来自你的 iOS 设备的所有活动的列表。
 
@@ -286,7 +286,7 @@ Charles 很强大！
 
 回到 Weather Underground 应用程序中，下拉刷新并重新获取数据。如果应用程序没有刷新，你可能需要从多任务视图中杀死它，然后再试一次。
 
-欢呼吧! Charles 显示了未加密的请求!
+哇哦! Charles 显示了未加密的请求!
 
 <img src="https://koenig-media.raywenderlich.com/uploads/2021/04/Screenshot-2021-04-09-at-20.21.09.png" style="zoom: 50%;" />
 
@@ -423,7 +423,7 @@ case code = "alpha2Code"
 过去，Charles 在所有使用它的设备上创建的是同一个共享证书。幸运的是，Charles 现在创建了独特的证书。这大大减少了基于该证书的中间人攻击的机会，但在技术上仍有可能。因此，当你用完 Charles 的证书后，你应该始终记得删除它。
 首先，从 macOS 中删除证书。打开 Keychain Access，它位于应用程序▸实用工具中。在搜索框中，输入 Charles Proxy，删除搜索到的所有证书。很可能只有一个要删除。完成后，关闭该应用程序。
 
-接下来，从你的 iOS 设备上删除这些证书。打开 "设置" 应用程序，导航到 "通用▸VPN与设备管理"。在配置描述文件下，你会看到一个或多个 Charles 代理的条目。点击然后点删除配置文件。输入你的密码（如果需要），确认删除。对每个 Charles Proxy 的证书重复这一步骤。
+接下来，从你的 iOS 设备上删除这些证书。打开 "设置" 应用程序，导航到 "通用 > VPN与设备管理"。在配置描述文件下，你会看到一个或多个 Charles 代理的条目。点击然后点删除配置文件。输入你的密码（如果需要），确认删除。对每个 Charles Proxy 的证书重复这一步骤。
 
 配置文件和设备管理在iOS模拟器中不可用。要删除 Charles Proxy 证书，请重置模拟器，点击硬件菜单，然后删除所有内容和设置....。
 

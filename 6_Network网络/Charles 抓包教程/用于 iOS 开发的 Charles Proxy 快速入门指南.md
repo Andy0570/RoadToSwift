@@ -59,21 +59,19 @@ Charles 记录对当前会话的请求和响应以供我们检查。我们可以
 
 为了能够看到加密的流量，我们还需要将相同的端点添加到 Proxy -> SSL Proxying Settings。
 
-
-
 ### Structure 和 Sequence 视图
 
 在 Charles 应用程序的左侧窗格中，我们可以在 Structure 视图和 Sequence 视图之间切换。
 
-结构视图让我们在按主机名和主机内目录组织的树中查看请求。
+Structure 视图让我们在按主机名和主机内目录组织的树中查看请求。
 
 ![](https://tanaschita.com/static/6077cdd4128d82b5c51e2253e20e6849/360ab/20220228_charles_structure.png)
 
-序列视图让我们按照它们发生的顺序查看请求。
+Sequence 视图让我们按照它们发生的顺序查看请求。
 
 ![](https://tanaschita.com/static/1a0fc248dcc1583a9f66a56ee772bc30/d2b1d/20220228_charles_sequence.png)
 
-注意：如果您在序列视图中没有看到任何请求，请取消选中 Focused 复选标记或通过在结构视图中右键单击要查看的端点将它们标记为焦点。
+注意：如果你在序列视图中没有看到任何请求，请取消选中 Focused 复选标记或通过在结构视图中右键单击要查看的端点将它们标记为焦点。
 
 ### 请求和响应视图
 
@@ -81,7 +79,7 @@ Charles 记录对当前会话的请求和响应以供我们检查。我们可以
 
 ![](https://tanaschita.com/static/ecfac156311009587988bd51d8c15dc1/b5233/20220228_charles_request_response.png)
 
-正如我们在上面看到的，顶部区域显示了带有查询参数、表单参数、cookie、身份验证和 JSON 标头的请求。底部区域显示响应。对于这两者，我们可以在相同数据的不同视图之间切换，例如文本、原始数据、json 等。
+正如我们在上面看到的，顶部区域显示了带有查询参数、表单参数、cookie、身份验证和 JSON 标头的请求。底部区域显示响应。对于这两者，我们可以在相同数据的不同视图之间切换，例如文本、原始数据、JSON 等。
 
 ### Chart View（图表视图）
 
