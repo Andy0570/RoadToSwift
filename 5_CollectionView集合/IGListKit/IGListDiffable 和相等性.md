@@ -15,10 +15,12 @@ See also: [#509](https://github.com/Instagram/IGListKit/issues/509)
 使用 diffable 模型的最快方法是使用对象本身作为标识符，并使用父类的 `-[NSObject isEqual:]` 实现相等性判断：
 
 ```objc
+// 唯一性要求
 - (id<NSObject>)diffIdentifier {
   return self;
 }
 
+// 等同性要求
 - (BOOL)isEqualToDiffableObject:(id<IGListDiffable>)object {
   return [self isEqual:object];
 }
@@ -26,7 +28,7 @@ See also: [#509](https://github.com/Instagram/IGListKit/issues/509)
 
 ## 编写更好的等价判断方法
 
-尽管 `IGListKit` 使用了方法 `-isEqualToDiffableObject:`，但编写一个好的相等性检查的概念也适用于一般情况。下面是编写好的 `-isEqual:` 和 `-hash` 函数的基本知识。注意这都是 Objective-C，但也适用于 Swift。
+尽管 `IGListKit` 使用了方法 `-isEqualToDiffableObject:`，但编写一个好的相等性检查的概念也适用于一般情况。下面是编写好的 `-isEqual:` 和 `-hash` 函数的基本知识。注意这里都是 Objective-C 示例，但也适用于 Swift 语言。
 
 * 如果你重写了 `-isEqual:` 方法，那么你必须同时重写 `-hash` 方法。请看 [Mike Ash 的这篇文章](https://www.mikeash.com/pyblog/friday-qa-2010-06-18-implementing-equality-and-hashing.html)，了解详情。
 * 总是先比较指针。如果检查同一个实例，这可以节省很多浪费的 `objc_msgSend(...)` 调用和值比较。
@@ -60,6 +62,7 @@ See also: [#509](https://github.com/Instagram/IGListKit/issues/509)
       return YES;
   }
   
+  // 再比较是否为空值
   if (![object isKindOfClass:[User class]]) {
       return NO;
   }
