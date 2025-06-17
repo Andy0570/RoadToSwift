@@ -3,7 +3,7 @@ import Alamofire
 
 /// 自定义请求拦截器，在请求中添加 Authorization 授权头信息
 class GitRequestInterceptor: RequestInterceptor {
-    // 限制重试网络请求次数、重试网络请求的持续时间
+    // 限制重试网络请求次数、重试网络请求的时间间隔
     let retryLimit = 5
     let retryDelay: TimeInterval = 10
     
