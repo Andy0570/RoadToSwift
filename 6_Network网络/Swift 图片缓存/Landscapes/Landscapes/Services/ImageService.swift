@@ -11,8 +11,8 @@ final class ImageService {
     
     // MARK: - Public API
     
-    func image(for url: URL, completion: @escaping(UIImage?) -> Void) {
-        URLSession.shared.dataTask(with: url) { data, _, _ in
+    func image(for url: URL, completion: @escaping(UIImage?) -> Void) -> Cancellable {
+        let dataTask = URLSession.shared.dataTask(with: url) { data, _, _ in
             // Helper
             var image: UIImage?
             
@@ -28,6 +28,11 @@ final class ImageService {
                 // Create Image from Data
                 image = UIImage(data: data)
             }
-        }.resume()
+        }
+        
+        // Resume Data Task
+        dataTask.resume()
+        
+        return dataTask
     }
 }
