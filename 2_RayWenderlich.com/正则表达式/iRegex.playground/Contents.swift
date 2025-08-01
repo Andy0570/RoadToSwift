@@ -40,6 +40,7 @@
 
 import UIKit
 
+/// 为给定字符串中匹配到的子字符串添加黄色高亮属性
 func highlightMatches(for pattern: String, inString string: String) -> NSAttributedString {
   guard let regex = try? NSRegularExpression(pattern: pattern, options: []) else {
     return NSMutableAttributedString(string: string)
@@ -57,6 +58,7 @@ func highlightMatches(for pattern: String, inString string: String) -> NSAttribu
   return attributedText.copy() as! NSAttributedString
 }
 
+/// 返回所有完整匹配的子串（即：整个正则表达式匹配的内容，不管有没有使用捕获组）
 func listMatches(for pattern: String, inString string: String) -> [String] {
   guard let regex = try? NSRegularExpression(pattern: pattern, options: []) else {
     return []
@@ -71,6 +73,7 @@ func listMatches(for pattern: String, inString string: String) -> [String] {
   }
 }
 
+/// 返回所有捕获组（Capture Groups）中匹配到的子串，不包含整个匹配（match[0]）。即只返回 match[1], match[2] 等。
 func listGroups(for pattern: String, inString string: String) -> [String] {
   guard let regex = try? NSRegularExpression(pattern: pattern, options: []) else {
     return []
@@ -96,6 +99,7 @@ func listGroups(for pattern: String, inString string: String) -> [String] {
   return groupMatches
 }
 
+/// 判断给定字符串是否满足正则表达式要求
 func containsMatch(of pattern: String, inString string: String) -> Bool {
   guard let regex = try? NSRegularExpression(pattern: pattern, options: []) else {
     return false
@@ -104,6 +108,7 @@ func containsMatch(of pattern: String, inString string: String) -> Bool {
   return regex.firstMatch(in: string, options: [], range: range) != nil
 }
 
+/// 使用正则表达式替换子字符串
 func replaceMatches(for pattern: String, inString string: String, withString replacementString: String) -> String? {
   guard let regex = try? NSRegularExpression(pattern: pattern, options: []) else {
     return string
@@ -120,6 +125,7 @@ func replaceMatches(for pattern: String, inString string: String, withString rep
 let quickFox = "The quick brown fox jumps over the lazy dog."
 
 listMatches(for: "jump", inString: quickFox)
+let contain = containsMatch(of: "jump", inString: quickFox)
 
 //: This next example uses some special characters that are available in regular expressions. The parenthesis create a group, and the question mark says "match the previous element (the group in this case) 0 or 1 times". It matches either 'jump' or 'jumps':
 
@@ -197,6 +203,16 @@ highlightMatches(for:"He[Ll]{2,}", inString: numberExample2)
 let cinema = "Are we going to the cinema at 3 pm or 5 pm?"
 listMatches(for:"\\d (am|pm)", inString: cinema)
 listGroups(for:"(\\d (am|pm))", inString: cinema)
+
+let pattern = "(\\d+)-(\\w+)"
+// let pattern = "((\\d+)-(\\w+))"
+let input = "123-abc 456-def"
+
+let listMatchesResult = listMatches(for: pattern, inString: input)
+// ["123-abc", "456-def"]
+
+let listGroupsResult = listGroups(for: pattern, inString: input)
+// ["123", "abc", "456", "def"]
 
 //: You can include as many pipe characters in your regular expression as you would like. As an example, `(Tom|Dick|Harry)` is a valid pattern.
 

@@ -87,7 +87,6 @@
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
-
 #pragma mark - Override
 
 /**
@@ -165,6 +164,5 @@
     [super containerViewWillLayoutSubviews];
     self.dimmingView.frame = self.containerView.bounds;
 }
-
 
 @end

@@ -22,7 +22,6 @@
     // Do any additional setup after loading the view from its nib.
 }
 
-
 - (IBAction)presentPasswordViewController:(id)sender {
     
     // 1.初始化 HQLPresentationViewController 实例
@@ -38,6 +37,5 @@
     // 4.模态呈现
     [self presentViewController:passwordViewController animated:YES completion:NULL];
 }
-
 
 @end

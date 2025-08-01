@@ -17,7 +17,7 @@
 
 首先，你需要自定义一个 `UIPresentationController` 子类对象。
 
-```objective-c
+```objc
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
@@ -29,15 +29,13 @@ NS_ASSUME_NONNULL_BEGIN
 NS_ASSUME_NONNULL_END
 ```
 
-
-
 等一下，`UIPresentationController` 是何许人也？
 
 `UIPresentationController` 对象为所呈现的视图控制器提供高级视图转换管理功能，我们通过它实现视图控制器之间的转场动画。
 
 通过模态方式呈现视图控制器的常用方法是：
 
-```objective-c
+```objc
 UIViewController *viewControllerA = [[UIViewController alloc] init];
 UIViewController *viewControllerB = [[UIViewController alloc] init];
 [viewControllerA presentViewController:viewControllerB animated:YES completion:NULL];
@@ -61,9 +59,11 @@ UIViewController *viewControllerB = [[UIViewController alloc] init];
 
 
 
-> 💡 为方便起见，本教程中会把 `UIPresentationController`  命名为「呈现控制器」。
+> [!NOTE]
+>
+> 为方便起见，本教程中会把 `UIPresentationController`  翻译为「呈现控制器」。
 
-我们需要创建一个继承 `UIPresentationController` 的子类，负责「被呈现」及「负责呈现」的控制器以外的 controller, 比如显示带渐变效果的黑色半透明背景视图，还可以在其中创建带有阴影或者圆角的中间层视图，本教程中会教大家如何在密码输入框的左上角和右上角设置圆角。
+我们需要创建一个继承 `UIPresentationController` 的子类，负责「被呈现」及「负责呈现」的控制器以外的 controller，比如显示带渐变效果的黑色半透明背景视图，还可以在其中创建带有阴影或者圆角的中间层视图，本教程中会教大家如何在密码输入框的左上角和右上角设置圆角。
 
  在此步骤中，起码需要重写以下 5 个方法：
 
@@ -77,7 +77,7 @@ UIViewController *viewControllerB = [[UIViewController alloc] init];
 
 其中，`frameOfPresentedViewInContainerView` 是一个只读属性，用于在过渡动画呈现结束时，设置被呈现的视图在容器视图中的位置。
 
-```objective-c
+```objc
 @property(nonatomic, readonly) CGRect frameOfPresentedViewInContainerView;
 ```
 
@@ -87,11 +87,11 @@ UIViewController *viewControllerB = [[UIViewController alloc] init];
 
 在该头文件中，我们还需要声明该类遵守并实现 `<UIViewControllerTransitioningDelegate>` 协议。
 
-遵守 `<UIViewControllerTransitioningDelegate>` 协议的作用：告诉控制器，谁是动画主管 (`UIPresentationController`)，哪个类负责开始动画的具体细节、哪个类负责结束动画的具体细节、是否需要实现可交互的转场动画。
+遵守并实现 `<UIViewControllerTransitioningDelegate>` 协议的作用：告诉控制器，谁是动画主管 (`UIPresentationController`)，哪个类负责开始动画的具体细节、哪个类负责结束动画的具体细节、是否需要实现可交互的转场动画。
 
 这个协议中一共有 5 个可选的实现方法，大致浏览一下：
 
-```objective-c
+```objc
 @protocol UIViewControllerTransitioningDelegate <NSObject>
 
 @optional
@@ -117,7 +117,7 @@ UIViewController *viewControllerB = [[UIViewController alloc] init];
 
 在呈现密码输入框视图时，我们需要在密码输入框和 presenting View Controller 之间显示一个半透明的遮罩层，这个遮罩层视图我们称之为 `dimmingView`，它就可以被添加到我们创建的 `UIPresentationController` 子类对象中。因此，我们会在 `HQLVerticalPresentationController.m` 的类扩展中创建一个属性：
 
-```objective-c
+```objc
 @interface HQLVerticalPresentationController () 
 @property (nonatomic, strong) UIView *dimmingView;
 @end
@@ -125,7 +125,7 @@ UIViewController *viewControllerB = [[UIViewController alloc] init];
 
 另外，我们还需要通过一个容器视图来显示密码输入框左上角和右上角的圆角，因此再添加一个带圆角的包装视图：
 
-```objective-c
+```objc
 @interface HQLVerticalPresentationController ()
 @property (nonatomic, strong) UIView *dimmingView;
 @property (nonatomic, strong) UIView *presentationRoundedCornerWrappingView;
@@ -134,24 +134,24 @@ UIViewController *viewControllerB = [[UIViewController alloc] init];
 
 实现 `UIPresentationController` 子类对象的指定初始化方法：
 
-```objective-c
+```objc
 - (instancetype)initWithPresentedViewController:(UIViewController *)presentedViewController presentingViewController:(UIViewController *)presentingViewController {
     self = [super initWithPresentedViewController:presentedViewController presentingViewController:presentingViewController];
-    if (self) {
-        presentedViewController.modalPresentationStyle = UIModalPresentationCustom;
-    }
+    if (!self) { return nil; }
+    
+    // 当使用 UIPresentationController 子类来自定义呈现控制器时，presented view controller 的 modalPresentationStyle 属性必须设置为 UIModalPresentationCustom。
+    presentedViewController.modalPresentationStyle = UIModalPresentationCustom;
     return self;
 }
 ```
 
 对于使用 `UIPresentationController` 子类来自定义呈现控制器时，presented view controller 的 `modalPresentationStyle` 属性必须设置为 `UIModalPresentationCustom`。
 
-在实现文件中，需要重载的几个父类方法如下，几乎每一处代码都有注释说明：
+在实现文件中，需要重载的几个父类方法如下：
 
-```objective-c
+```objc
 //  这是 presentation controller 在呈现视图之初时首先被调用的方法之一。
-//  当这个方法被调用时，containerView 已经在视图层次结构中被创建。
-//  但是，presentedView 还没有被检索到。
+//  当这个方法被调用时，containerView 已经在视图层次结构中被创建。但是 presentedView 还没有被检索到。
 - (void)presentationTransitionWillBegin
 {
     // presentedView 属性的 Getter 方法默认返回 self.presentedViewController.view
@@ -228,7 +228,7 @@ UIViewController *viewControllerB = [[UIViewController alloc] init];
      
      就是说，在呈现动画发生时，异常终止了动画，这时我们需要手动释放未正常添加的视图
      */
-    if (completed == NO)
+    if (!completed)
     {
         /**
          系统会将 presented view controller 的视图从它的 superview 中移除，并同时处理 containerView。
@@ -269,33 +269,33 @@ UIViewController *viewControllerB = [[UIViewController alloc] init];
 }
 ```
 
-你会注意到，我们在 dimmingView 上添加了一个手势识别器，当点击密码输入框上方的半透明视图时，可以实现密码输入框的 dismiss 效果，手势识别器处理程序如下：
+你会注意到，我们在 `dimmingView` 上添加了一个手势识别器，当点击密码输入框上方的半透明视图时，可以实现密码输入框的 dismiss 效果，手势识别器处理程序如下：
 
-```objective-c
+```objc
 //  IBAction for the tap gesture recognizer added to the dimmingView.
 //  Dismisses the presented view controller.
 //
-- (IBAction)dimmingViewTapped:(UITapGestureRecognizer*)sender
-{
+- (void)dimmingViewTapped:(UITapGestureRecognizer *)sender {
     [self.presentingViewController dismissViewControllerAnimated:YES completion:NULL];
 }
 ```
 
 动态方式实现四个布局方法：
 
-```objective-c
+```objc
 //  This method is invoked whenever the presentedViewController's
 //  preferredContentSize property changes.  It is also invoked just before the
 //  presentation transition begins (prior to -presentationTransitionWillBegin).
 //
-//  当 presentedViewController 控制器内容大小变化时，就会调用这个方法， 比如适配横竖屏幕时，翻转屏幕时
+//  当 presentedViewController 控制器内容大小变化时，就会调用这个方法，比如适配横竖屏幕时，翻转屏幕时
 //  可以使用 UIContentContainer 的方法来调整任何子视图控制器的大小或位置。
 - (void)preferredContentSizeDidChangeForChildContentContainer:(id<UIContentContainer>)container
 {
     [super preferredContentSizeDidChangeForChildContentContainer:container];
     
-    if (container == self.presentedViewController)
+    if (container == self.presentedViewController) {
         [self.containerView setNeedsLayout];
+    }
 }
 
 //  When the presentation controller receives a
@@ -311,12 +311,14 @@ UIViewController *viewControllerB = [[UIViewController alloc] init];
 //
 - (CGSize)sizeForChildContentContainer:(id<UIContentContainer>)container withParentContainerSize:(CGSize)parentSize
 {
-    if (container == self.presentedViewController)
-        return ((UIViewController*)container).preferredContentSize;
-    else
+    if (container == self.presentedViewController) {
+        return ((UIViewController *)container).preferredContentSize;
+    } else {
         return [super sizeForChildContentContainer:container withParentContainerSize:parentSize];
+    }
 }
 
+// 返回在过渡动画呈现结束时，被呈现视图在容器视图中的位置
 - (CGRect)frameOfPresentedViewInContainerView
 {
     CGRect containerViewBounds = self.containerView.bounds;
@@ -347,7 +349,7 @@ UIViewController *viewControllerB = [[UIViewController alloc] init];
 
 这里我们在`UIPresentationController` 子类对象的扩展中设置让它遵守`<UIViewControllerAnimatedTransitioning>` 协议：
 
-```objective-c
+```objc
 @interface HQLVerticalPresentationController () <UIViewControllerAnimatedTransitioning>
 @property (nonatomic, strong) UIView *dimmingView;
 @property (nonatomic, strong) UIView *presentationRoundedCornerWrappingView;
@@ -356,7 +358,7 @@ UIViewController *viewControllerB = [[UIViewController alloc] init];
 
 实现两个动画转换的核心方法：
 
-```objective-c
+```objc
 // This is used for percent driven interactive transitions, as well as for
 // container controllers that have companion animations that might need to
 // synchronize with the main animation.
@@ -441,11 +443,11 @@ UIViewController *viewControllerB = [[UIViewController alloc] init];
     NSTimeInterval transitionDuration = [self transitionDuration:transitionContext];
     
     [UIView animateWithDuration:transitionDuration animations:^{
-        if (isPresenting)
+        if (isPresenting) {
             toView.frame = toViewFinalFrame;
-        else
+        } else {
             fromView.frame = fromViewFinalFrame;
-        
+        }
     } completion:^(BOOL finished) {
         /**
          当我们的动画执行完成后，需要给 transition context 传递一个 BOOL 值
@@ -464,7 +466,7 @@ UIViewController *viewControllerB = [[UIViewController alloc] init];
 
 因为创建的被呈现视图控制器并不是全屏显示的，所以需要用一个指定初始化方法来传递当前视图控制器视图的 `frame` 属性。
 
-```objective-c
+```objc
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
@@ -480,7 +482,7 @@ NS_ASSUME_NONNULL_END
 
 在实现文件中，核心代码就是通过 `frame` 属性的值更新被呈现视图控制器的尺寸。
 
-```objective-c
+```objc
 #import "HQLVerticalPresentedViewController.h"
 #import <YYKit/YYCGUtilities.h>
 #import "HQLVerticalPresentationController.h"
@@ -540,13 +542,13 @@ NS_ASSUME_NONNULL_END
 
 1. 初始化 `HQLVerticalPresentedViewController` 或其子类实例：
 
-   ```objective-c
+   ```objc
    HQLVerticalPresentedViewController *presentationViewController = [[HQLVerticalPresentedViewController alloc] init];
    ```
 
 2. 初始化 `HQLPresentationController` 实例：
 
-   ```objective-c
+   ```objc
    HQLVerticalPresentationController *presentationController NS_VALID_UNTIL_END_OF_SCOPE;
    
    presentationController = [[HQLVerticalPresentationController alloc] initWithPresentedViewController:presentationViewController presentingViewController:self];
@@ -554,13 +556,13 @@ NS_ASSUME_NONNULL_END
 
 3. 设置 `UIViewControllerTransitioningDelegate`：
 
-   ```objective-c
+   ```objc
    presentationViewController.transitioningDelegate = presentationController;
    ```
 
 4. 模态呈现：
 
-   ```objective-c
+   ```objc
    [self presentViewController:presentationViewController animated:YES completion:NULL];
    ```
 
@@ -590,7 +592,7 @@ NS_ASSUME_NONNULL_END
 
 实现代码中，把密码输入框视图 `HQLPasswordsView` 作为该视图控制器的属性引入即可，然后通过 Block 方式实现了交互回调：
 
-```objective-c
+```objc
 #import "HQLPasswordViewController.h"
 #import "HQLPasswordsView.h"
 
@@ -599,7 +601,6 @@ NS_ASSUME_NONNULL_END
 @end
 
 @implementation HQLPasswordViewController
-
 
 #pragma mark - View life cycle
 
@@ -625,7 +626,6 @@ NS_ASSUME_NONNULL_END
     }
     return _passwordView;
 }
-
 
 #pragma mark - Private
 
@@ -673,13 +673,13 @@ NS_ASSUME_NONNULL_END
 
 在你所需要的业务场景中，呈现密码输入框视图控制器：
 
-```objective-c
+```objc
 - (IBAction)presentPasswordViewController:(id)sender {
     
     // 1.初始化 HQLPresentationViewController 实例
     HQLPasswordViewController *passwordViewController = [[HQLPasswordViewController alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 455)];
     
-    // 2.初始化 HQLPresentationController 实例
+    // 2.初始化 HQLVerticalPresentationController 实例
     HQLVerticalPresentationController *presentationController NS_VALID_UNTIL_END_OF_SCOPE;
     presentationController = [[HQLVerticalPresentationController alloc] initWithPresentedViewController:passwordViewController presentingViewController:self];
     
@@ -696,7 +696,5 @@ NS_ASSUME_NONNULL_END
 🎉🎉🎉 效果就是你在文章最开始看见的样子。
 
 千呼万唤始出来，源码也不能少，该示例代码可以在 [RoadToSwift/2_ViewControllerTransition/UIPresentationController](https://github.com/Andy0570/RoadToSwift/tree/main/2_ViewControllerTransition/UIPresentationController) 中找到。可能是藏得比较深了，为了避免 iOS Demo 过多，并且分散在 GitHub 的多个仓库下，使得 repositories 变得臃肿，而且也造成了项目污染，所以我把它们都归档在一个仓库下了。
-
-
 
 Anyway，Have Fun！
