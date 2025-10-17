@@ -72,7 +72,15 @@ Charles Proxy不是免费的，但它确实提供了30天的免费试用。因�
 Charles 工作于网络浏览器和 API 之间。它使用自己的根证书，也被称为证书颁发机构（CA），动态地创建和签署发送到本地浏览器的证书，让你以纯文本形式查看网络流量。
 
 要做到这一点，你必须在你想查看网络请求和响应的设备或模拟器上安装并信任 Charles 根证书。
-到正在运行 StarCharles 的模拟器上。打开 Safari 浏览器，然后输入 `chls.pro/ssl`（译者注：这个网址需要翻墙访问！）。
+到正在运行 StarCharles 的模拟器上。打开 Safari 浏览器，然后输入 `chls.pro/ssl`。
+
+> [!IMPORTANT]
+>
+> 临时操作项：
+>
+> 在 iOS 系统设置中，关闭 Safari 浏览器中的「阻止弹出式窗口」开关、打开「欺骗性网站警告」、「不安全连接警告」开关。
+>
+> 在 Safari 浏览器中打开 <http://chls.pro/ssl> 链接（如果打不开链接，可能需要翻墙）。
 
 <img src="https://koenig-media.raywenderlich.com/uploads/2021/04/4-1-231x500.png" style="zoom:80%;" />
 

@@ -14,8 +14,6 @@ Instagram 创建了 [IGListKit](https://github.com/Instagram/IGListKit)，以解
 
 在本教程中，你将使用 IGListKit 重构一个原始的 `UICollectionView` ，然后扩展该应用，让它超凡脱俗！
 
-
-
 ## 开始
 
 现在，假设你是 NASA 的顶尖软件工程师之一，也是最新火星载人飞行任务空间站的工作人员。该团队已经开发了 Marslink 应用的第一个版本。
@@ -79,7 +77,7 @@ IGListKit 会自动对你的对象进行差异化处理，并对 `UICollectionVi
 
 IGListKit 负责识别所有 collection 变更，并以动画方式刷新对应的 row 行。它还能够轻易处理针对不同的 section 使用不同的 data 和 UI 的情况。考虑到这一点，它是满足最新需求的完美解决方案——让我们开始吧。
 
-在 `Marslink.xcworkspace` 仍然打开的情况下，右击 `ViewControllers` 文件夹，选择**New File**。添加一个新的 Cocoa Touch 类，它是 `UIViewController` 的子类，并命名为`FeedViewController`，确保编程语言为 `Swift`。
+在 `Marslink.xcworkspace` 仍然打开的情况下，右击 `ViewControllers` 文件夹，选择 **New File**。添加一个新的 Cocoa Touch 类，它是 `UIViewController` 的子类，并命名为`FeedViewController`，确保编程语言为 `Swift`。
 
 打开 `AppDelegate.swift`，找到 `application(_:didFinishLaunchingWithOptions:)` 方法。找到将 `ClassicFeedViewController()` push 到导航控制器上的那一行代码，并将其替换成这样：
 
@@ -140,7 +138,7 @@ let collectionView: UICollectionView = {
 以下是这段代码的描述：
 
 1. IGListKit 使用一个常规的 `UICollectionView`，并在其上添加了自己的功能，你将在后面看到。
-2. 一开始用 size 尺寸为 0 的矩形初始化集合视图，因为此时视图还没有创建。它也使用 `UICollectionViewFlowLayout`，就像`ClassicFeedViewController` 中那样。
+2. 一开始用 size 尺寸为 0 的矩形（`CGRect.zero`）初始化集合视图，因为此时视图还没有创建。它也使用 `UICollectionViewFlowLayout`，就像`ClassicFeedViewController` 中那样。
 3. 背景色设为 NASA 认可的黑色。
 
 在 `viewDidLoad()` 的底部添加以下代码：
@@ -215,7 +213,9 @@ extension FeedViewController: ListAdapterDataSource {
 }
 ```
 
-> **注意**: IGListKit 大量使用了 required 协议方法。但在这些方法中你可以空实现，或者返回 `nil`，以免收到 “缺少方法” 的警告或运行时报错。这样，在使用 IGListKit 时就不容易出错。
+> [!NOTE]
+>
+> IGListKit 大量使用了 required 协议方法。但在这些方法中你可以空实现，或者返回 `nil`，以免收到 “缺少方法” 的警告或运行时报错。这样，在使用 IGListKit 时就不容易出错。
 
 `FeedViewController` 现在遵守了 `ListAdapterDataSource` 协议并实现了三个必要方法：
 
@@ -335,7 +335,7 @@ if index == 0 {
 
 这段代码的作用：
 
-1. `collectionContext` 是一个弱引用变量，同时是 `nullabel` 的。虽然它永远不可能为空，但最好是添加一个前置条件判断，使用 Swift 的 `guard` 语句就行了。
+1. `collectionContext` 是一个弱引用变量，同时是 `nullable` 的。虽然它永远不可能为空，但最好是添加一个前置条件判断，使用 Swift 的 `guard` 语句就行了。
 2. `ListCollectionContext` 是一个上下文对象，保存了这个 section Controller 中用到的 adapter、collecton view、以及 view controller 信息。这里我们需要获取 container 容器的宽度。
 3. 如果是第一个索引（一个日期单元），返回一个与容器一样宽、30-point 高的尺寸。否则，使用单元格辅助方法来计算单元格的动态文本大小。
 
@@ -382,8 +382,6 @@ return items
 你可能还记得，这个方法负责将数据源对象提供给 `ListAdapter` 。这里进行了一些修改，将 `pathfinder.messages` 添加到 items 数组中，以便为新的 section Controller 提供消息数据。
 
 > 注意：你必须转换消息数组以免编译器报错。这些对象已经实现了 `IGListDiffable` 协议。
-
-
 
 在 SectionControllers 文件夹上右击，创建一个新的 `ListSectionController` 子类，并命名为 `MessageSectionController`。在文件头部引入 IGListKit：
 

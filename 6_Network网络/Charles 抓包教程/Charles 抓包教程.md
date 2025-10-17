@@ -229,6 +229,14 @@ Charles 很强大！
 
 仍然在你的 iOS 设备上，打开 Safari 浏览器并导航到 <http://www.charlesproxy.com/getssl> 。在弹出的窗口中，点击允许。
 
+> [!IMPORTANT]
+>
+> 临时操作项：
+>
+> 在 iOS 系统设置中，关闭 Safari 浏览器中的「阻止弹出式窗口」开关、打开「欺骗性网站警告」、「不安全连接警告」开关。
+>
+> 在 Safari 浏览器中打开 <http://chls.pro/ssl> 链接（如果打不开链接，可能需要翻墙）。
+
 <img src="https://koenig-media.raywenderlich.com/uploads/2019/03/Install-a-certificate-from-the-charles-website.png" style="zoom:25%;" />
 
 

@@ -149,8 +149,11 @@ extension User: ListDiffable {
 
 该算法将跳过更新两个具有相同 `primaryKey` 和 `name` 的 `User` 对象，即使它们是不同的实例！你现在可以避免在集合视图中进行不必要的 UI 更新，即使是在提供新的实例时。
 
+> [!NOTE]
+>
+> 记住，当你想重新加载相应 section controller 中的 cell 时，`isEqual(toDiffableObject:)` 应该返回 `false`。
 
-> 注意：记住，当你想重新加载相应 section controller 中的 cell 时，`isEqual(toDiffableObject:)` 应该返回 `false`。
+
 
 
 ### 在 IGListKit 以外的地方使用 Diffing 算法
