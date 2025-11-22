@@ -78,7 +78,7 @@ See also: [#509](https://github.com/Instagram/IGListKit/issues/509)
 
 ## 同时使用 `IGListDiffable` 和 `-isEqual:`
 
-一旦你实现了 `-isEqual:` 和 `-hash` 方法，使你的对象普遍适用于 Objective-C 容器和`IGListKit` 就很容易了：
+一旦你实现了 `-isEqual:` 和 `-hash` 方法，使你的对象普遍适用于 Objective-C 容器和 `IGListKit`  就很容易了：
 
 ```objc
 @interface User <IGListDiffable>
