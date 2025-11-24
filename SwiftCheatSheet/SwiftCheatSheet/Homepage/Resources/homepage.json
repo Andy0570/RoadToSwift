@@ -38,54 +38,6 @@
         "className": "ModeratorsSearchViewController"
     }]
 }, {
-    "title": "集合视图",
-    "cells": [{
-        "image": "image",
-        "title": "使用 UICollectionView.CellRegistration 配置集合视图",
-        "description": "",
-        "className": "MyCollectionViewController"
-    },{
-        "image": "image",
-        "title": "可折叠展开的集合视图",
-        "description": "",
-        "className": "CollaspibleCollectionViewController"
-    },{
-        "image": "image",
-        "title": "Diffable Data Source with UICollectionView",
-        "description": "",
-        "className": "IconCollectionViewController"
-    },{
-        "image": "image",
-        "title": "IGListKit_建模和绑定",
-        "description": "",
-        "className": "ModelAndBingViewController"
-    },{
-        "image": "image",
-        "title": "IGListKit_Example",
-        "description": "",
-        "className": "SuperHeroViewController"
-    },{
-        "image": "image",
-        "title": "IGListKit_Example2",
-        "description": "",
-        "className": "PublishImageViewController"
-    },{
-        "image": "image",
-        "title": "FSPagerView",
-        "description": "",
-        "className": "FSPageViewController"
-    },{
-        "image": "image",
-        "title": "ZoomableViewController",
-        "description": "",
-        "className": "ZoomableViewController"
-    },{
-        "image": "image",
-        "title": "Fluid Photo",
-        "description": "",
-        "className": "PhotoCollectionViewController"
-    }]
-}, {
     "title": "动画",
     "cells": [{
         "image": "image",
