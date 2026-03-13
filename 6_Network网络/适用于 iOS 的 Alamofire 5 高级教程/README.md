@@ -55,10 +55,7 @@ Alamofire 是最流行和广泛使用的 Swift 网络框架之一。它建立在
 打开 GitAPIManager.swift 并找到 `searchRepositories(query:completion:)`。搜索 GitHub 存储库的实现已经到位。你将利用这个机会了解该方法的内部工作原理。
 
 ```swift
-func searchRepositories(
-  query: String,
-  completion: @escaping ([Repository]) -> Void
-) {
+func searchRepositories(query: String, completion: @escaping ([Repository]) -> Void) {
   // 1
   let url = "https://api.github.com/search/repositories"
   // 2
@@ -83,9 +80,9 @@ func searchRepositories(
 
 1. 你定义搜索存储库的 URL。
 2. 然后，你创建一个查询参数数组来获取存储库。你可以根据存储库的星数指定降序排序。
-3. 接下来，你使用 Alamofire 的默认会话 AF 发出网络请求。该方法解码接收到的响应并将其作为存储库数组（你的自定义模型）在完成块中返回。
+3. 接下来，你使用 Alamofire 的默认会话 AF 发出网络请求。该方法解码接收到的响应并将其作为存储库数组（你的自定义模型）在 completion block 块中返回。
 
-每个请求的默认超时时间为 60 秒。要将超时间隔更新为 30 秒，你可以指定 `requestModifier` 作为请求的一部分，如下所示作为参考：
+**每个请求的默认超时时间为 60 秒**。要将超时间隔更新为 30 秒，你可以指定 `requestModifier` 作为请求的一部分，如下所示作为参考：
 
 ```swift
 AF.request(url, parameters: queryParameters) { urlRequest in

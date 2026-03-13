@@ -7,6 +7,7 @@
  - 20220810
  - 20230510
  - 20250617
+ - 20260312
  */
 
 import UIKit
@@ -89,12 +90,14 @@ extension MainTableViewController {
     func searchStarships(for name: String) {
         let url = "https://swapi.dev/api/starships"
         let parameters: [String: String] = ["search": name]
-        AF.request(url, parameters: parameters).validate().responseDecodable(of: Starships.self) { response in
-            guard let starships = response.value else {
-                return
+        AF.request(url, parameters: parameters)
+            .validate()
+            .responseDecodable(of: Starships.self) { response in
+                guard let starships = response.value else {
+                    return
+                }
+                self.items = starships.all
+                self.tableView.reloadData()
             }
-            self.items = starships.all
-            self.tableView.reloadData()
-        }
     }
 }
